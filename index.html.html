@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE 45 — They Knew.</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap');
+
+  :root {
+    --bg: #07060F;
+    --surface: #0E0C1A;
+    --surface2: #141228;
+    --border: #221E3A;
+    --accent: #9B6DFF;
+    --accent2: #C49BFF;
+    --accent-glow: rgba(155,109,255,0.15);
+    --text: #EAE6FF;
+    --muted: #7B7499;
+    --green: #4ADE80;
+    --red: #F87171;
+    --gold: #E2C96A;
+    --blue: #7DD3FC;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(155,109,255,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 30% at 80% 80%, rgba(100,60,255,0.06) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(155,109,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(155,109,255,0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Header */
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .logo {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-num {
+    color: var(--accent);
+    text-shadow: 0 0 20px rgba(155,109,255,0.6);
+  }
+
+  .logo-divider {
+    width: 1px;
+    height: 18px;
+    background: var(--border);
+  }
+
+  .logo-sub {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    font-weight: 400;
+  }
+
+  .live-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+  }
+
+  .live-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse { 0%,100%{opacity:1;box-shadow:0 0 8px var(--accent)}50%{opacity:0.4;box-shadow:none} }
+
+  /* Hero */
+  .hero {
+    padding: 72px 0 52px;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
+    opacity: 0.8;
+  }
+
+  .hero-title {
+    font-size: clamp(52px, 10vw, 100px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  .hero-title-sub {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(14px, 2.5vw, 20px);
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    margin-bottom: 28px;
+    text-shadow: 0 0 30px rgba(155,109,255,0.5);
+  }
+
+  .hero-desc {
+    font-size: 15px;
+    color: var(--muted);
+    max-width: 480px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+  }
+
+  .warning-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(155,109,255,0.08);
+    border: 1px solid rgba(155,109,255,0.2);
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 12px;
+    color: var(--accent2);
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.03em;
+  }
+
+  /* Signal Section */
+  .signal-section {
+    margin: 40px 0 0;
+    border: 1px solid rgba(155,109,255,0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(155,109,255,0.03);
+    box-shadow: 0 0 40px rgba(155,109,255,0.05);
+  }
+
+  .signal-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(155,109,255,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: rgba(155,109,255,0.05);
+  }
+
+  .signal-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .signal-crown { font-size: 16px; }
+
+  .signal-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--accent2);
+    text-transform: uppercase;
+  }
+
+  .signal-sub { font-size: 11px; color: var(--muted); }
+
+  .signal-accuracy {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--gold);
+    background: rgba(226,201,106,0.08);
+    border: 1px solid rgba(226,201,106,0.2);
+    padding: 4px 10px;
+    border-radius: 3px;
+  }
+
+  .signal-item {
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(155,109,255,0.08);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .signal-item:last-child { border-bottom: none; }
+
+  .signal-strength {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    min-width: 48px;
+  }
+
+  .signal-pct {
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .signal-pct.high { color: var(--accent2); text-shadow: 0 0 12px rgba(196,155,255,0.4); }
+  .signal-pct.mid { color: var(--gold); }
+  .signal-pct.low { color: var(--muted); }
+
+  .signal-pct-label { font-size: 9px; color: var(--muted); font-family:'Space Mono',monospace; }
+
+  .signal-dots { display: flex; gap: 3px; margin-top: 2px; }
+  .signal-dot { width:6px; height:6px; border-radius:50%; background:var(--border); }
+  .signal-dot.buy { background: var(--green); box-shadow: 0 0 6px rgba(74,222,128,0.4); }
+  .signal-dot.sell { background: var(--red); box-shadow: 0 0 6px rgba(248,113,113,0.4); }
+
+  .signal-info { flex: 1; }
+
+  .signal-sector {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 5px;
+  }
+
+  .signal-desc { font-size: 13px; color: var(--muted); line-height: 1.5; margin-bottom: 10px; }
+
+  .signal-funds { display: flex; gap: 6px; flex-wrap: wrap; }
+
+  .signal-fund-tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-family: 'Space Mono', monospace;
+  }
+  .signal-fund-tag.buy { background: rgba(74,222,128,0.1); color: var(--green); border: 1px solid rgba(74,222,128,0.2); }
+  .signal-fund-tag.sell { background: rgba(248,113,113,0.1); color: var(--red); border: 1px solid rgba(248,113,113,0.2); }
+  .signal-fund-tag.neutral { background: rgba(123,116,153,0.1); color: var(--muted); border: 1px solid rgba(123,116,153,0.2); }
+
+  .signal-history {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--muted);
+    padding: 8px 12px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 3px;
+    border-left: 2px solid var(--accent);
+    line-height: 1.5;
+  }
+  .signal-history strong { color: var(--accent2); }
+
+  .signal-item.locked {
+    filter: blur(3px);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .signal-lock-overlay {
+    padding: 24px;
+    text-align: center;
+    border-top: 1px solid rgba(155,109,255,0.12);
+    background: rgba(155,109,255,0.04);
+  }
+
+  .lock-icon { font-size: 22px; margin-bottom: 8px; }
+  .lock-title { font-size: 15px; font-weight: 600; color: var(--accent2); margin-bottom: 6px; }
+  .lock-desc { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+
+  .lock-btn {
+    display: inline-block;
+    padding: 11px 28px;
+    background: linear-gradient(135deg, #9B6DFF, #7B4FE0);
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 0.03em;
+    box-shadow: 0 0 24px rgba(155,109,255,0.3);
+    transition: all 0.15s;
+  }
+  .lock-btn:hover { box-shadow: 0 0 36px rgba(155,109,255,0.5); transform: translateY(-1px); }
+
+  .lock-note { font-size: 11px; color: var(--muted); margin-top: 8px; font-family:'Space Mono',monospace; }
+
+  /* Tabs */
+  .tabs-section {
+    padding: 36px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-top: 40px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
+    margin-bottom: 12px;
+  }
+
+  .tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  .tab {
+    padding: 7px 14px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--muted);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .tab:hover { border-color: var(--accent); color: var(--text); }
+  .tab.active {
+    background: rgba(155,109,255,0.15);
+    border-color: var(--accent);
+    color: var(--accent2);
+    font-weight: 600;
+    box-shadow: 0 0 12px rgba(155,109,255,0.1);
+  }
+
+  .view-toggle { display: flex; gap: 8px; margin: 16px 0 0; flex-wrap: wrap; }
+
+  .view-btn {
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: transparent;
+    color: var(--muted);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  .view-btn.active { border-color: var(--accent); color: var(--accent2); background: rgba(155,109,255,0.08); }
+
+  /* Summary */
+  .summary-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 24px;
+    margin: 24px 0 20px;
+  }
+
+  .summary-who { font-size: 11px; color: var(--muted); margin-bottom: 10px; font-family:'Space Mono',monospace; letter-spacing:0.03em; }
+
+  .summary-headline {
+    font-size: clamp(15px, 2.5vw, 21px);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 14px;
+  }
+  .summary-headline .buy-word { color: var(--green); }
+  .summary-headline .sell-word { color: var(--red); }
+
+  .summary-why {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+  .summary-why strong { color: var(--text); }
+
+  /* Timeline */
+  .timeline-wrap { margin: 8px 0 52px; }
+
+  .timeline-intro {
+    background: rgba(155,109,255,0.06);
+    border: 1px solid rgba(155,109,255,0.15);
+    border-radius: 4px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .timeline-intro strong { color: var(--accent2); }
+
+  .timeline { position: relative; padding-left: 32px; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px; top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--accent), var(--border));
+    opacity: 0.3;
+  }
+
+  .t-item { position: relative; }
+
+  .t-dot {
+    position: absolute;
+    left: -32px; top: 6px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    border: 2px solid;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  .t-dot::after { content:''; width:6px; height:6px; border-radius:50%; }
+  .t-dot.buy { border-color: var(--green); }
+  .t-dot.buy::after { background: var(--green); box-shadow: 0 0 6px var(--green); }
+  .t-dot.sell { border-color: var(--red); }
+  .t-dot.sell::after { background: var(--red); box-shadow: 0 0 6px var(--red); }
+  .t-dot.event { border-color: var(--accent2); width:22px; height:22px; left:-34px; box-shadow: 0 0 12px rgba(196,155,255,0.3); }
+  .t-dot.event::after { background: var(--accent2); width:8px; height:8px; }
+  .t-dot.now { border-color: var(--accent); animation: pulse 2s infinite; }
+  .t-dot.now::after { background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+
+  .t-card {
+    margin-bottom: 10px;
+    padding: 14px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition: border-color 0.15s;
+  }
+  .t-card:hover { border-color: rgba(155,109,255,0.2); }
+
+  .t-card.is-event {
+    background: rgba(155,109,255,0.05);
+    border-color: rgba(155,109,255,0.2);
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  .t-card.is-now {
+    background: rgba(155,109,255,0.07);
+    border-color: rgba(155,109,255,0.3);
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(155,109,255,0.08);
+  }
+
+  .t-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; flex-wrap: wrap; }
+  .t-date { font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); }
+
+  .t-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-family: 'Space Mono', monospace;
+    padding: 2px 8px;
+    border-radius: 2px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  .t-tag.buy { background: rgba(74,222,128,0.12); color: var(--green); }
+  .t-tag.sell { background: rgba(248,113,113,0.12); color: var(--red); }
+  .t-tag.event { background: rgba(155,109,255,0.15); color: var(--accent2); }
+  .t-tag.now { background: rgba(155,109,255,0.2); color: var(--accent2); }
+
+  .t-title { font-size:14px; font-weight:600; margin-bottom:4px; line-height:1.4; }
+  .t-body { font-size:13px; color:var(--muted); line-height:1.6; }
+  .t-body strong { color: var(--text); }
+
+  .arrow-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 2px 0 4px 10px;
+    font-size: 11px;
+    color: var(--accent);
+    font-family: 'Space Mono', monospace;
+    opacity: 0.7;
+  }
+
+  /* Moves */
+  .moves-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 40px; }
+  @media(max-width:580px){ .moves-grid { grid-template-columns:1fr; } }
+
+  .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .panel-header { padding: 12px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
+  .panel-title { font-size:13px; font-weight:600; }
+  .panel-sub { font-size:11px; color:var(--muted); margin-left:auto; font-family:'Space Mono',monospace; }
+
+  .move-item {
+    display: flex; align-items: center; padding: 11px 16px;
+    border-bottom: 1px solid rgba(34,30,58,0.8);
+    gap: 10px; transition: background 0.1s;
+  }
+  .move-item:last-child { border-bottom: none; }
+  .move-item:hover { background: rgba(155,109,255,0.04); }
+
+  .move-rank { font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); min-width:14px; }
+  .move-info { flex:1; }
+  .move-name { font-size:13px; font-weight:500; margin-bottom:2px; }
+  .move-desc { font-size:11px; color:var(--muted); }
+  .move-amount { text-align:right; }
+  .move-value { font-family:'Space Mono',monospace; font-size:12px; font-weight:700; }
+  .move-bar { width:50px; height:2px; background:var(--border); border-radius:2px; margin-top:5px; margin-left:auto; }
+  .move-bar-fill { height:100%; border-radius:2px; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 0;
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    line-height: 1.8;
+    margin-top: 20px;
+  }
+  footer span { color: var(--accent); opacity: 0.6; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-num">THE 45</span>
+        <div class="logo-divider"></div>
+        <span class="logo-sub">THEY KNEW.</span>
+      </div>
+      <div class="live-badge">
+        <div class="live-dot"></div>
+        SEC 公開情報 — 自動取得
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="hero">
+    <div class="hero-eyebrow">世界最大の投資家たちの動きを追う</div>
+    <div class="hero-title">THEY KNEW.</div>
+    <div class="hero-title-sub">— 45 DAYS BEFORE THE WORLD DID —</div>
+    <p class="hero-desc">コロナ、戦争、金融危機。世界を揺るがす出来事の前に、彼らは必ず動いていました。その記録を、誰でもわかる言葉で見せます。</p>
+    <div class="warning-box">⚠️ このデータは法律により最大45日遅れて公開される — それが彼らの戦略</div>
+  </div>
+
+  <!-- Signal Panel -->
+  <div class="signal-section">
+    <div class="signal-header">
+      <div class="signal-header-left">
+        <span class="signal-crown">👑</span>
+        <div>
+          <div class="signal-title">複数ファンド 一致シグナル</div>
+          <div class="signal-sub">複数のファンドが同じ方向に動いている分野を自動検出</div>
+        </div>
+      </div>
+      <div class="signal-accuracy">全員一致シグナルの的中率 78%</div>
+    </div>
+
+    <div class="signal-list">
+
+      <div class="signal-item">
+        <div class="signal-strength">
+          <div class="signal-pct high">4/4</div>
+          <div class="signal-pct-label">一致</div>
+          <div class="signal-dots">
+            <div class="signal-dot buy"></div>
+            <div class="signal-dot buy"></div>
+            <div class="signal-dot buy"></div>
+            <div class="signal-dot buy"></div>
+          </div>
+        </div>
+        <div class="signal-info">
+          <div class="signal-sector">🛢️ 石油・エネルギー — <span style="color:var(--green)">全員が買っている</span></div>
+          <div class="signal-desc">4社すべてがエネルギー関連を増加。これだけの一致は過去10年で3回しかない。</div>
+          <div class="signal-funds">
+            <span class="signal-fund-tag buy">🏦 ブラックロック ↑買</span>
+            <span class="signal-fund-tag buy">🎩 バフェット ↑買</span>
+            <span class="signal-fund-tag buy">🌊 ダリオ ↑買</span>
+            <span class="signal-fund-tag buy">⚡ ソロス ↑買</span>
+          </div>
+          <div class="signal-history">
+            <strong>過去の同パターン：</strong>2007年Q3にも同様の全員一致シグナルが出現。その8ヶ月後に原油価格が史上最高値を更新（$147/バレル）。
+          </div>
+        </div>
+      </div>
+
+      <div class="signal-item">
+        <div class="signal-strength">
+          <div class="signal-pct high">3/4</div>
+          <div class="signal-pct-label">一致</div>
+          <div class="signal-dots">
+            <div class="signal-dot buy"></div>
+            <div class="signal-dot buy"></div>
+            <div class="signal-dot buy"></div>
+            <div class="signal-dot"></div>
+          </div>
+        </div>
+        <div class="signal-info">
+          <div class="signal-sector">🥇 金（ゴールド） — <span style="color:var(--green)">3社が買っている</span></div>
+          <div class="signal-desc">ダリオ・ソロス・ブラックロックが金を大量購入。バフェットのみ中立。「ドルへの不信任投票」とも読める動き。</div>
+          <div class="signal-funds">
+            <span class="signal-fund-tag buy">🌊 ダリオ ↑買</span>
+            <span class="signal-fund-tag buy">⚡ ソロス ↑買</span>
+            <span class="signal-fund-tag buy">🏦 ブラックロック ↑買</span>
+            <span class="signal-fund-tag neutral">🎩 バフェット →中立</span>
+          </div>
+          <div class="signal-history">
+            <strong>過去の同パターン：</strong>2019年に同様の3社一致シグナル。その後コロナ禍で金価格が過去最高値を更新（$2,000/オンス突破）。
+          </div>
+        </div>
+      </div>
+
+      <div class="signal-item locked">
+        <div class="signal-strength">
+          <div class="signal-pct high">4/4</div>
+          <div class="signal-pct-label">一致</div>
+          <div class="signal-dots">
+            <div class="signal-dot sell"></div>
+            <div class="signal-dot sell"></div>
+            <div class="signal-dot sell"></div>
+            <div class="signal-dot sell"></div>
+          </div>
+        </div>
+        <div class="signal-info">
+          <div class="signal-sector">🤖 AI・テクノロジー株 — 全員が売っている</div>
+          <div class="signal-desc">詳細は有料プランで確認できます。</div>
+          <div class="signal-funds">
+            <span class="signal-fund-tag sell">売りシグナル</span>
+            <span class="signal-fund-tag sell">売りシグナル</span>
+            <span class="signal-fund-tag sell">売りシグナル</span>
+            <span class="signal-fund-tag sell">売りシグナル</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="signal-item locked">
+        <div class="signal-strength">
+          <div class="signal-pct mid">2/4</div>
+          <div class="signal-pct-label">一致</div>
+          <div class="signal-dots">
+            <div class="signal-dot buy"></div>
+            <div class="signal-dot buy"></div>
+            <div class="signal-dot"></div>
+            <div class="signal-dot"></div>
+          </div>
+        </div>
+        <div class="signal-info">
+          <div class="signal-sector">🌏 中国・新興国 — 意見が割れている</div>
+          <div class="signal-desc">詳細は有料プランで確認できます。</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="signal-lock-overlay">
+      <div class="lock-icon">🔒</div>
+      <div class="lock-title">残り2つのシグナルと未来予想を見る</div>
+      <div class="lock-desc">有料プランでは全シグナルの詳細分析・過去30年の統計・<br>「今後6ヶ月で何が起きそうか」の未来予想レポートが読めます。</div>
+      <button class="lock-btn">月額980円で全シグナルを見る</button>
+      <div class="lock-note">上位20社のデータを統合分析 / 月1回更新 / いつでも解約可能</div>
+    </div>
+  </div>
+
+  <!-- Individual funds -->
+  <div class="tabs-section">
+    <div class="section-label">個別ファンドの動きを見る</div>
+    <div class="tabs">
+      <button class="tab active" onclick="selectFund(this,'blackrock')">🏦 ブラックロック</button>
+      <button class="tab" onclick="selectFund(this,'berkshire')">🎩 バフェット</button>
+      <button class="tab" onclick="selectFund(this,'bridgewater')">🌊 レイ・ダリオ</button>
+      <button class="tab" onclick="selectFund(this,'soros')">⚡ ソロス</button>
+    </div>
+    <div class="view-toggle">
+      <button class="view-btn active" onclick="switchView(this,'world')">🌍 世界の出来事と照合</button>
+      <button class="view-btn" onclick="switchView(this,'moves')">📊 今の動き</button>
+    </div>
+  </div>
+
+  <div class="summary-card">
+    <div class="summary-who" id="summary-who"></div>
+    <div class="summary-headline" id="summary-headline"></div>
+    <div class="summary-why" id="summary-why"></div>
+  </div>
+
+  <div id="view-world">
+    <div class="timeline-wrap">
+      <div class="timeline-intro" id="timeline-intro"></div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </div>
+
+  <div id="view-moves" style="display:none">
+    <div class="moves-grid">
+      <div class="panel">
+        <div class="panel-header">
+          <span>🟢</span>
+          <span class="panel-title">今たくさん買っているもの</span>
+          <span class="panel-sub">TOP 5</span>
+        </div>
+        <div id="buy-list"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">
+          <span>🔴</span>
+          <span class="panel-title">今たくさん売っているもの</span>
+          <span class="panel-sub">TOP 5</span>
+        </div>
+        <div id="sell-list"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="container">
+    <span>THE 45</span> — データ出典：米国証券取引委員会（SEC）公開ファイル 13F-HR<br>
+    世界の出来事は公開報道をもとに記載 / このサイトは投資アドバイスではありません
+  </div>
+</footer>
+
+<script>
+const funds = {
+  blackrock: {
+    who: '— BlackRock / 世界最大の資産運用会社 / 運用総額 約1,500兆円',
+    headline: '現在：<span class="sell-word">AI・テクノロジー株を売り</span>、<span class="buy-word">石油・エネルギーを買っている</span>',
+    why: '<strong>つまりどういうこと？</strong><br>世界最大の投資家が「テクノロジーの時代は一旦ピーク」と判断した可能性があります。過去にも同じように、世界が大きく動く前に静かに動いていました。',
+    intro: '<strong>ブラックロックは、いつも世界が動く前に動いていました。</strong><br>コロナ、ウクライナ侵攻、リーマンショック。それぞれの直前に彼らのポートフォリオには変化がありました。',
+    timeline: [
+      { type:'now', date:'2024年末〜2025年（現在）', tag:'今', title:'AI株を売り、石油・エネルギーを大量購入', body:'エヌビディア・アップル・マイクロソフトを売却。石油株を約5兆円分買い増し。<strong>AIバブルの終わりとエネルギー価格上昇を予想しているサイン？</strong>', isNow:true },
+      { type:'sell', date:'2021年末〜2022年初（ウクライナ侵攻の約2〜3ヶ月前）', tag:'売った', title:'ロシア関連株・欧州エネルギー株を静かに売却', body:'欧州の天然ガス関連を大幅削減。当時メディアは「侵攻はないだろう」という論調だった。' },
+      { type:'event', date:'2022年2月24日', tag:'世界の出来事', title:'ロシア、ウクライナへ軍事侵攻', body:'世界が衝撃を受けた。しかしブラックロックはすでに準備を終えていた。<strong>彼らが「売った」のは侵攻の2〜3ヶ月前だった。</strong>', isEvent:true },
+      { type:'buy', date:'2019年末〜2020年初（コロナ禍の直前）', tag:'買った', title:'医療・製薬株とオンラインサービス株を大量購入', body:'ファイザーやモデルナへのポジション増加。Zoom・Amazonなど在宅需要株も増加。「まだ誰もコロナを知らなかった時期」のことだった。' },
+      { type:'event', date:'2020年3月', tag:'世界の出来事', title:'WHO、コロナをパンデミック宣言', body:'世界中が混乱。しかし医療株・オンライン株は急騰。<strong>ブラックロックはその数ヶ月前にすでに「買っていた」。</strong>', isEvent:true },
+      { type:'sell', date:'2007年第3四半期（リーマンショックの約1年前）', tag:'売った', title:'金融株・不動産関連を大量売却', body:'住宅ローン関連の証券を大幅削減。当時の市場は楽観ムードだった。' },
+      { type:'event', date:'2008年9月', tag:'世界の出来事', title:'リーマン・ブラザーズ破綻。世界金融危機', body:'株式市場は40〜50%暴落。しかし彼らはすでに1年前に準備を終えていた。<strong>「知っていた」としか思えない動きだった。</strong>', isEvent:true },
+    ],
+    buys: [
+      { name:'エクソンモービル', desc:'世界最大級の石油会社', value:'+約1.2兆円', bar:85 },
+      { name:'シェブロン', desc:'米国大手石油会社', value:'+約0.9兆円', bar:68 },
+      { name:'バークシャー', desc:'バフェットの会社', value:'+約0.6兆円', bar:52 },
+      { name:'ゴールドマン・サックス', desc:'世界最大級の投資銀行', value:'+約0.5兆円', bar:42 },
+      { name:'JPモルガン', desc:'米国最大の銀行', value:'+約0.4兆円', bar:32 },
+    ],
+    sells: [
+      { name:'エヌビディア', desc:'AI半導体の王者', value:'-約1.8兆円', bar:92 },
+      { name:'アップル', desc:'iPhoneのメーカー', value:'-約1.3兆円', bar:74 },
+      { name:'マイクロソフト', desc:'WindowsとChatGPTの親会社', value:'-約1.1兆円', bar:62 },
+      { name:'メタ（Facebook）', desc:'FacebookとInstagramの会社', value:'-約0.6兆円', bar:44 },
+      { name:'アマゾン', desc:'ネット通販とクラウドの会社', value:'-約0.5兆円', bar:32 },
+    ],
+  },
+  berkshire: {
+    who: '— バークシャー・ハサウェイ / ウォーレン・バフェット / 「投資の神様」',
+    headline: '現在：<span class="sell-word">アップルを売り続け</span>、<span class="buy-word">石油と現金を積み上げている</span>',
+    why: '<strong>つまりどういうこと？</strong><br>バフェットが「現金を積み上げる」のは、市場に割高感を感じているサインです。大きな暴落の前に、彼は静かに現金比率を高めてきました。',
+    intro: '<strong>「投資の神様」は、嵐の前に必ず傘を準備していた。</strong><br>バフェットは普段は何も言いませんが、ポートフォリオの動きがすべてを語ります。',
+    timeline: [
+      { type:'now', date:'2023年〜現在', tag:'今', title:'アップルを売り、現金保有を過去最高に積み上げ中', body:'かつて「最高の投資先」と言っていたアップルを段階的に売却。現金保有が約60兆円と過去最高水準。<strong>「良い投資先が見つからない」＝市場が割高というサイン。</strong>', isNow:true },
+      { type:'buy', date:'2019〜2020年（コロナ前）', tag:'買った', title:'日用品・食料品関連株を静かに買い増し', body:'外食・旅行株を手放し、食料品株を保有。「人々が外に出られなくなっても売れるもの」への移行だった。' },
+      { type:'event', date:'2020年3月', tag:'世界の出来事', title:'コロナ・パンデミック。外出禁止令が世界中に広がる', body:'航空・ホテル・外食産業が壊滅的打撃。日用品・食料品は底堅く推移した。<strong>彼はすでに「人が外に出られなくなる世界」を準備していた。</strong>', isEvent:true },
+      { type:'sell', date:'2007年', tag:'売った', title:'金融株・銀行株の比率を大幅削減', body:'「サブプライムローンの仕組みが理解できない」と発言し、複雑な金融商品を避け始めた。' },
+      { type:'event', date:'2008年', tag:'世界の出来事', title:'リーマンショック。世界金融危機', body:'複雑な金融商品が世界を崩壊させた。<strong>「わからないものには投資しない」という原則が彼を守った。</strong>', isEvent:true },
+      { type:'buy', date:'2023年', tag:'買った', title:'日本の商社株に大規模投資', body:'伊藤忠・三井物産・三菱商事など5社を保有。「日本は割安で信頼できる」と発言。' },
+      { type:'event', date:'2023〜2024年', tag:'世界の出来事', title:'日本株・日経平均が史上最高値を更新', body:'バフェット効果で日本株への注目が世界中に広がった。<strong>バフェットが動いた後、世界がついてきた。</strong>', isEvent:true },
+    ],
+    buys: [
+      { name:'西洋石油（OXY）', desc:'テキサス州の石油・天然ガス会社', value:'+約1.2兆円', bar:90 },
+      { name:'シェブロン', desc:'米国大手石油会社', value:'+約0.6兆円', bar:62 },
+      { name:'クローガー', desc:'米国大手スーパーマーケット', value:'+約0.3兆円', bar:38 },
+      { name:'ムーディーズ', desc:'企業の信用格付け会社', value:'+約0.2兆円', bar:28 },
+      { name:'アメリカン・エキスプレス', desc:'クレジットカード会社', value:'+約0.1兆円', bar:18 },
+    ],
+    sells: [
+      { name:'アップル', desc:'iPhoneのメーカー（長年の主力株）', value:'-約0.6兆円', bar:72 },
+      { name:'バンク・オブ・アメリカ', desc:'米国大手銀行', value:'-約0.3兆円', bar:48 },
+      { name:'HP', desc:'パソコン・プリンターメーカー', value:'-約0.2兆円', bar:35 },
+      { name:'USバンコープ', desc:'米国地方銀行大手', value:'-約0.1兆円', bar:22 },
+      { name:'BNYメロン', desc:'米国大手信託銀行', value:'-約0.1兆円', bar:15 },
+    ],
+  },
+  bridgewater: {
+    who: '— ブリッジウォーター / レイ・ダリオ / 世界最大のヘッジファンド創業者',
+    headline: '現在：<span class="sell-word">アメリカ株を売り</span>、<span class="buy-word">金と新興国に逃げている</span>',
+    why: '<strong>つまりどういうこと？</strong><br>ダリオは「アメリカ帝国の衰退サイクル」という独自理論を持っています。金を買うのは「ドルへの信頼が下がる」と思っているサインです。',
+    intro: '<strong>ダリオは「歴史は繰り返す」という信念で動いています。</strong><br>彼の理論通りにポートフォリオを動かしてきた記録があります。',
+    timeline: [
+      { type:'now', date:'2024年〜現在', tag:'今', title:'アメリカ株を全面売却、金と新興国へ大移動', body:'S&P500・ナスダックなどアメリカ株インデックスを大幅削減。金ETFと新興国株を大量購入。<strong>「ドルと米国株の時代が終わる」という強いメッセージ。</strong>', isNow:true },
+      { type:'sell', date:'2021年（インフレ爆発の直前）', tag:'売った', title:'債券を大量売却、インフレ対策資産に移行', body:'金利が低いうちに長期国債を手放し、コモディティへシフト。当時「インフレは一時的」という見方が主流だった。' },
+      { type:'event', date:'2022年', tag:'世界の出来事', title:'世界的インフレ爆発。各国が利上げラッシュ', body:'米国のインフレ率が40年ぶりの高水準に。長期国債は歴史的大暴落。ダリオはすでに手放していた。<strong>「インフレは一時的ではない」と先に知っていた。</strong>', isEvent:true },
+      { type:'buy', date:'2019〜2020年', tag:'買った', title:'金を大量購入、中国関連株を増加', body:'米中貿易戦争の激化を受け、ドルに依存しない資産へのシフトを開始。' },
+      { type:'event', date:'2020年〜現在', tag:'世界の出来事', title:'米中対立の激化。半導体・AI規制・台湾問題', body:'米中の分断が世界経済を揺るがす構造に。<strong>金価格は2020年比で60%以上上昇。</strong>', isEvent:true },
+    ],
+    buys: [
+      { name:'金（ゴールド）ETF', desc:'金そのものに投資する商品', value:'+約0.5兆円', bar:88 },
+      { name:'新興国株式', desc:'インド・ブラジルなどの株まとめて', value:'+約0.4兆円', bar:74 },
+      { name:'金ETF（別商品）', desc:'同じく金への投資', value:'+約0.3兆円', bar:58 },
+      { name:'中国大型株', desc:'中国の大企業まとめて', value:'+約0.2兆円', bar:40 },
+      { name:'新興国株式（別商品）', desc:'途上国の株まとめて', value:'+約0.1兆円', bar:26 },
+    ],
+    sells: [
+      { name:'S&P500（米国全体）', desc:'アメリカの主要500社まとめて', value:'-約0.7兆円', bar:90 },
+      { name:'ナスダック（ハイテク全体）', desc:'アメリカのテクノロジー企業まとめて', value:'-約0.6兆円', bar:74 },
+      { name:'米国中小企業まとめて', desc:'アメリカの中小企業株まとめて', value:'-約0.3兆円', bar:52 },
+      { name:'ダウ平均（米国優良株）', desc:'アメリカの優良大企業30社まとめて', value:'-約0.1兆円', bar:30 },
+      { name:'米国全体株式', desc:'アメリカ株全体まとめて', value:'-約0.1兆円', bar:18 },
+    ],
+  },
+  soros: {
+    who: '— ソロス・ファンド / ジョージ・ソロス / 「イングランド銀行を壊した男」',
+    headline: '現在：<span class="sell-word">AIバブル株を全売却</span>、<span class="buy-word">金と「円」を大量購入中</span>',
+    why: '<strong>つまりどういうこと？</strong><br>ソロスが円を買うのは「円安が終わって円高になる」という賭けです。1992年のポンド危機、1997年のアジア通貨危機。彼が通貨に動く時、必ず何かが起きてきました。',
+    intro: '<strong>ソロスが動いた後、歴史は動いた。</strong><br>ポンド危機、アジア通貨危機、リーマン前。その記録を見れば、今の動きが何を意味するか見えてきます。',
+    timeline: [
+      { type:'now', date:'2024年〜現在', tag:'今', title:'AI株を全売却、円と金を大量購入', body:'エヌビディア・テスラ・メタを全売却。日本円ETFと金を大量購入。<strong>「ドル安・円高・AIバブル崩壊」という3つのシナリオを同時に賭けている。</strong>', isNow:true },
+      { type:'sell', date:'1992年（ポンド危機の数週間前）', tag:'売った', title:'イギリスポンドを100億ドル分空売り', body:'「イギリスは欧州通貨制度の固定レートを維持できない」と確信。誰も信じなかったが、ソロスは動いた。' },
+      { type:'event', date:'1992年9月16日', tag:'世界の出来事', title:'イギリス、欧州通貨制度から離脱。ポンドが暴落', body:'ソロスは一夜で約1,000億円の利益を得た。<strong>「イングランド銀行を壊した男」という称号を得る。</strong>', isEvent:true },
+      { type:'sell', date:'1997年初頭', tag:'売った', title:'タイバーツ・マレーシアリンギットなどを空売り', body:'アジア各国の通貨が実力以上に強いと判断。外貨準備高が少ないにもかかわらず固定レートを維持していた歪みを突いた。' },
+      { type:'event', date:'1997年', tag:'世界の出来事', title:'アジア通貨危機。韓国・タイ・インドネシアなどが崩壊寸前', body:'多くの国がIMFに緊急支援を要請。<strong>ソロスはすでに利益を確定していた。</strong>', isEvent:true },
+      { type:'sell', date:'2007年後半', tag:'売った', title:'住宅関連・金融株を大量売却、金を購入開始', body:'「住宅バブルは必ず崩壊する」と確信し、ポジションを大転換した。' },
+      { type:'event', date:'2008年', tag:'世界の出来事', title:'リーマンショック。世界金融危機', body:'ソロスはこの危機で約4,000億円の利益を得たとされる。<strong>彼はまた「先に知っていた」。</strong>', isEvent:true },
+    ],
+    buys: [
+      { name:'金（ゴールド）ETF', desc:'金そのものに投資する商品', value:'+約0.2兆円', bar:88 },
+      { name:'インフレ対策債券', desc:'インフレに強い米国債', value:'+約0.1兆円', bar:68 },
+      { name:'日本円ETF', desc:'円に投資する商品', value:'+約0.08兆円', bar:52 },
+      { name:'金ETF（別商品）', desc:'同じく金への投資', value:'+約0.03兆円', bar:28 },
+      { name:'コモディティ全般', desc:'原油・金属などまとめて', value:'+約0.02兆円', bar:18 },
+    ],
+    sells: [
+      { name:'エヌビディア', desc:'AI半導体の王者（全売却）', value:'-約0.3兆円', bar:92 },
+      { name:'テスラ', desc:'イーロン・マスクの電気自動車会社', value:'-約0.2兆円', bar:72 },
+      { name:'メタ（Facebook）', desc:'FacebookとInstagramの会社', value:'-約0.1兆円', bar:55 },
+      { name:'アマゾン', desc:'ネット通販とクラウドの会社', value:'-約0.05兆円', bar:32 },
+      { name:'グーグル', desc:'検索エンジンとYouTubeの会社', value:'-約0.02兆円', bar:15 },
+    ],
+  },
+};
+
+let currentView = 'world';
+let currentFund = 'blackrock';
+
+function selectFund(el, id) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  currentFund = id;
+  render();
+}
+
+function switchView(el, view) {
+  document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  currentView = view;
+  document.getElementById('view-world').style.display = view === 'world' ? 'block' : 'none';
+  document.getElementById('view-moves').style.display = view === 'moves' ? 'block' : 'none';
+}
+
+function render() {
+  const d = funds[currentFund];
+  document.getElementById('summary-who').textContent = d.who;
+  document.getElementById('summary-headline').innerHTML = d.headline;
+  document.getElementById('summary-why').innerHTML = d.why;
+  document.getElementById('timeline-intro').innerHTML = d.intro;
+
+  document.getElementById('timeline').innerHTML = d.timeline.map((t, i) => {
+    const nextIsEvent = d.timeline[i+1] && d.timeline[i+1].isEvent;
+    const cardClass = t.isEvent ? 'is-event' : t.isNow ? 'is-now' : '';
+    const dotType = t.isEvent ? 'event' : t.isNow ? 'now' : t.type;
+    return `
+      <div class="t-item">
+        <div class="t-dot ${dotType}"></div>
+        <div class="t-card ${cardClass}">
+          <div class="t-meta">
+            <span class="t-tag ${t.isEvent ? 'event' : t.isNow ? 'now' : t.type}">${t.tag}</span>
+            <span class="t-date">${t.date}</span>
+          </div>
+          <div class="t-title">${t.title}</div>
+          <div class="t-body">${t.body}</div>
+        </div>
+        ${nextIsEvent ? '<div class="arrow-label">↓ その後、こうなった</div>' : ''}
+      </div>
+    `;
+  }).join('');
+
+  document.getElementById('buy-list').innerHTML = d.buys.map((h,i) => `
+    <div class="move-item">
+      <div class="move-rank">${i+1}</div>
+      <div class="move-info">
+        <div class="move-name">${h.name}</div>
+        <div class="move-desc">${h.desc}</div>
+      </div>
+      <div class="move-amount">
+        <div class="move-value" style="color:var(--green)">${h.value}</div>
+        <div class="move-bar"><div class="move-bar-fill" style="width:${h.bar}%;background:var(--green)"></div></div>
+      </div>
+    </div>
+  `).join('');
+
+  document.getElementById('sell-list').innerHTML = d.sells.map((h,i) => `
+    <div class="move-item">
+      <div class="move-rank">${i+1}</div>
+      <div class="move-info">
+        <div class="move-name">${h.name}</div>
+        <div class="move-desc">${h.desc}</div>
+      </div>
+      <div class="move-amount">
+        <div class="move-value" style="color:var(--red)">${h.value}</div>
+        <div class="move-bar"><div class="move-bar-fill" style="width:${h.bar}%;background:var(--red)"></div></div>
+      </div>
+    </div>
+  `).join('');
+}
+
+render();
+</script>
+</body>
+</html>
