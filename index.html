@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>THE 45 — They Knew.</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
   :root {
-    --bg: #07060F; --surface: #0E0C1A; --surface2: #141228; --border: #221E3A;
-    --accent: #9B6DFF; --accent2: #C49BFF; --text: #EAE6FF; --muted: #7B7499;
-    --green: #4ADE80; --red: #F87171; --gold: #E2C96A; --blue: #7DD3FC;
+    --bg: #0D1113; --surface: #141A1C; --surface2: #1B2325; --border: #263033;
+    --accent: #4FB8B8; --accent2: #6FD0D0; --text: #D8E6E6; --muted: #6B8585;
+    --green: #5BC98A; --red: #D9697E; --gold: #C9A24F; --blue: #4FB8B8;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:var(--bg); color:var(--text); font-family:'Space Grotesk',sans-serif; min-height:100vh; overflow-x:hidden; }
-  body::before { content:''; position:fixed; inset:0; background:radial-gradient(ellipse 80% 50% at 50% -10%, rgba(155,109,255,0.12) 0%, transparent 60%); pointer-events:none; z-index:0; }
-  body::after { content:''; position:fixed; inset:0; background-image:linear-gradient(rgba(155,109,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(155,109,255,0.04) 1px,transparent 1px); background-size:48px 48px; pointer-events:none; z-index:0; }
+  body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; min-height:100vh; overflow-x:hidden; }
+  body::before { content:''; position:fixed; inset:0; background:radial-gradient(ellipse 80% 50% at 50% -10%, rgba(79,184,184,0.06) 0%, transparent 60%); pointer-events:none; z-index:0; }
+  body::after { content:''; position:fixed; inset:0; background-image:linear-gradient(rgba(79,184,184,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(79,184,184,0.02) 1px,transparent 1px); background-size:48px 48px; pointer-events:none; z-index:0; }
   .container { max-width:900px; margin:0 auto; padding:0 20px; position:relative; z-index:1; }
 
   header { padding:28px 0 20px; border-bottom:1px solid var(--border); }
   .header-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
-  .logo { font-family:'Orbitron',sans-serif; font-size:19px; font-weight:700; letter-spacing:0.12em; color:var(--text); display:flex; align-items:center; gap:10px; }
-  .logo-num { color:var(--accent); text-shadow:0 0 20px rgba(155,109,255,0.6); }
+  .logo { font-family:'Inter',sans-serif; font-size:19px; font-weight:700; letter-spacing:0.12em; color:var(--text); display:flex; align-items:center; gap:10px; }
+  .logo-num { color:var(--accent); }
   .logo-divider { width:1px; height:18px; background:var(--border); }
   .logo-sub { font-size:10px; color:var(--muted); letter-spacing:0.15em; font-weight:500; font-family:'JetBrains Mono',monospace; }
   .live-badge { display:flex; align-items:center; gap:8px; font-size:11px; color:var(--muted); font-family:'JetBrains Mono',monospace; }
@@ -29,21 +29,21 @@
 
   .hero { padding:64px 0 36px; text-align:center; }
   .hero-eyebrow { font-size:11px; letter-spacing:0.25em; color:var(--accent); margin-bottom:24px; text-transform:uppercase; font-family:'JetBrains Mono',monospace; }
-  .hero-title { font-family:'Orbitron',sans-serif; font-size:clamp(44px,9vw,88px); font-weight:900; line-height:1; letter-spacing:-0.01em; margin-bottom:10px; text-shadow: 0 0 40px rgba(155,109,255,0.25); }
+  .hero-title { font-family:'Inter',sans-serif; font-size:clamp(44px,9vw,88px); font-weight:700; line-height:1; letter-spacing:-0.02em; margin-bottom:10px; }
   .hero-title-sub { font-family:'JetBrains Mono',monospace; font-size:clamp(11px,2vw,16px); color:var(--accent); letter-spacing:0.2em; margin-bottom:28px; }
   .hero-desc { font-size:15px; color:var(--muted); max-width:520px; margin:0 auto 28px; line-height:1.8; }
   .hero-desc strong { color: var(--accent2); }
-  .warning-box { display:inline-flex; align-items:center; gap:10px; background:rgba(155,109,255,0.08); border:1px solid rgba(155,109,255,0.2); border-radius:4px; padding:10px 20px; font-size:12px; color:var(--accent2); font-family:'JetBrains Mono',monospace; }
+  .warning-box { display:inline-flex; align-items:center; gap:10px; background:rgba(79,184,184,0.08); border:1px solid rgba(79,184,184,0.2); border-radius:4px; padding:10px 20px; font-size:12px; color:var(--accent2); font-family:'JetBrains Mono',monospace; }
 
   .predict-section { margin: 32px 0 0; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
   @media(max-width:620px){ .predict-section{ grid-template-columns:1fr; } }
   .predict-card { border-radius: 8px; padding: 18px 20px; position: relative; overflow: hidden; border: 1px solid; }
-  .predict-card.danger { background: linear-gradient(135deg, rgba(248,113,113,0.1), rgba(155,109,255,0.04)); border-color: rgba(248,113,113,0.35); }
-  .predict-card.warn { background: linear-gradient(135deg, rgba(226,201,106,0.1), rgba(155,109,255,0.04)); border-color: rgba(226,201,106,0.35); }
+  .predict-card.danger { background: linear-gradient(135deg, rgba(217,105,126,0.1), rgba(79,184,184,0.04)); border-color: rgba(217,105,126,0.35); }
+  .predict-card.warn { background: linear-gradient(135deg, rgba(201,162,79,0.1), rgba(79,184,184,0.04)); border-color: rgba(201,162,79,0.35); }
   .predict-card::before { content:''; position:absolute; inset:0; background: repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 2px, transparent 2px, transparent 8px); pointer-events:none; }
   .predict-tag { display:inline-flex; align-items:center; gap:6px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em; padding: 3px 9px; border-radius: 3px; margin-bottom: 10px; text-transform: uppercase; font-weight:700; }
-  .predict-card.danger .predict-tag { background: rgba(248,113,113,0.18); color: var(--red); }
-  .predict-card.warn .predict-tag { background: rgba(226,201,106,0.18); color: var(--gold); }
+  .predict-card.danger .predict-tag { background: rgba(217,105,126,0.18); color: var(--red); }
+  .predict-card.warn .predict-tag { background: rgba(201,162,79,0.18); color: var(--gold); }
   .predict-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; line-height:1.4; position:relative; z-index:1; }
   .predict-card.danger .predict-title { color: #FFD3D3; }
   .predict-card.warn .predict-title { color: #F5E6B8; }
@@ -54,13 +54,13 @@
   .predict-meter-fill { height:100%; border-radius:3px; }
   .predict-meter-label { font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; min-width:38px; text-align:right; }
 
-  .signal-section { margin:36px 0 0; border:1px solid rgba(155,109,255,0.2); border-radius:8px; overflow:hidden; background:rgba(155,109,255,0.03); }
-  .signal-header { padding:16px 20px; border-bottom:1px solid rgba(155,109,255,0.12); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; background:rgba(155,109,255,0.05); }
+  .signal-section { margin:36px 0 0; border:1px solid rgba(79,184,184,0.2); border-radius:8px; overflow:hidden; background:rgba(79,184,184,0.03); }
+  .signal-header { padding:16px 20px; border-bottom:1px solid rgba(79,184,184,0.12); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; background:rgba(79,184,184,0.05); }
   .signal-header-left { display:flex; align-items:center; gap:10px; }
   .signal-title { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.15em; color:var(--accent2); text-transform:uppercase; }
   .signal-sub { font-size:11px; color:var(--muted); }
-  .signal-accuracy { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--gold); background:rgba(226,201,106,0.08); border:1px solid rgba(226,201,106,0.2); padding:4px 10px; border-radius:3px; }
-  .signal-item { padding:18px 20px; border-bottom:1px solid rgba(155,109,255,0.08); display:flex; align-items:flex-start; gap:16px; position:relative; }
+  .signal-accuracy { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--gold); background:rgba(201,162,79,0.08); border:1px solid rgba(201,162,79,0.2); padding:4px 10px; border-radius:3px; }
+  .signal-item { padding:18px 20px; border-bottom:1px solid rgba(79,184,184,0.08); display:flex; align-items:flex-start; gap:16px; position:relative; }
   .signal-item:last-child { border-bottom:none; }
   .signal-strength { display:flex; flex-direction:column; align-items:center; gap:5px; min-width:48px; }
   .signal-pct { font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; line-height:1; }
@@ -77,23 +77,23 @@
   .signal-funds { display:flex; gap:6px; flex-wrap:wrap; }
   .signal-fund-tag { font-size:11px; padding:2px 8px; border-radius:3px; font-family:'JetBrains Mono',monospace; }
   .signal-fund-tag.buy { background:rgba(74,222,128,0.1); color:var(--green); border:1px solid rgba(74,222,128,0.2); }
-  .signal-fund-tag.sell { background:rgba(248,113,113,0.1); color:var(--red); border:1px solid rgba(248,113,113,0.2); }
+  .signal-fund-tag.sell { background:rgba(217,105,126,0.1); color:var(--red); border:1px solid rgba(217,105,126,0.2); }
   .signal-fund-tag.neutral { background:rgba(123,116,153,0.1); color:var(--muted); border:1px solid rgba(123,116,153,0.2); }
   .signal-history { margin-top:10px; font-size:12px; color:var(--muted); padding:8px 12px; background:rgba(0,0,0,0.2); border-radius:3px; border-left:2px solid var(--accent); line-height:1.5; }
   .signal-history strong { color:var(--accent2); }
   .signal-item.locked { cursor: pointer; }
   .signal-item.locked .signal-info { filter:blur(3px); user-select:none; }
   .signal-item.locked:hover .signal-info { filter:blur(4px); }
-  .lure-popup { position: absolute; inset: 8px 16px; background: rgba(7,6,15,0.95); border: 1px solid rgba(248,113,113,0.4); border-radius: 6px; display: none; align-items: center; justify-content: center; text-align: center; padding: 16px; z-index: 5; backdrop-filter: blur(2px); }
+  .lure-popup { position: absolute; inset: 8px 16px; background: rgba(7,6,15,0.95); border: 1px solid rgba(217,105,126,0.4); border-radius: 6px; display: none; align-items: center; justify-content: center; text-align: center; padding: 16px; z-index: 5; backdrop-filter: blur(2px); }
   .signal-item.locked:hover .lure-popup, .signal-item.locked:focus-within .lure-popup { display: flex; flex-direction: column; gap: 8px; }
   .lure-text { font-size: 13px; font-weight: 700; color: #FFD3D3; line-height: 1.5; }
   .lure-sub { font-size: 11px; color: var(--muted); }
-  .lure-btn { display:inline-block; margin-top:4px; padding: 9px 22px; background: linear-gradient(135deg, #F87171, #9B6DFF); color: white; font-weight:700; font-size:12.5px; border-radius:4px; border:none; cursor:pointer; font-family:'Space Grotesk',sans-serif; box-shadow: 0 0 20px rgba(248,113,113,0.3); }
-  .signal-lock-overlay { padding:24px; text-align:center; border-top:1px solid rgba(155,109,255,0.12); background:rgba(155,109,255,0.04); }
-  .lock-icon { font-size:22px; margin-bottom:8px; }
+  .lure-btn { display:inline-block; margin-top:4px; padding: 9px 22px; background: linear-gradient(135deg, #D9697E, #4FB8B8); color: white; font-weight:700; font-size:12.5px; border-radius:4px; border:none; cursor:pointer; font-family:'Inter',sans-serif; box-shadow: 0 0 10px rgba(217,105,126,0.18); }
+  .signal-lock-overlay { padding:24px; text-align:center; border-top:1px solid rgba(79,184,184,0.12); background:rgba(79,184,184,0.04); }
+  .lock-icon { font-size:11px; font-weight:700; letter-spacing:0.15em; color:var(--accent); margin-bottom:10px; font-family:'JetBrains Mono',monospace; }
   .lock-title { font-size:15px; font-weight:600; color:var(--accent2); margin-bottom:6px; }
   .lock-desc { font-size:13px; color:var(--muted); margin-bottom:16px; line-height:1.6; }
-  .lock-btn { display:inline-block; padding:11px 28px; background:linear-gradient(135deg,#9B6DFF,#7B4FE0); color:white; font-weight:700; font-size:13px; border-radius:4px; cursor:pointer; border:none; font-family:'Space Grotesk',sans-serif; box-shadow:0 0 24px rgba(155,109,255,0.3); }
+  .lock-btn { display:inline-block; padding:11px 28px; background:linear-gradient(135deg,#4FB8B8,#3A8A8A); color:white; font-weight:700; font-size:13px; border-radius:4px; cursor:pointer; border:none; font-family:'Inter',sans-serif; box-shadow:0 0 12px rgba(79,184,184,0.18); }
   .lock-note { font-size:11px; color:var(--muted); margin-top:8px; font-family:'JetBrains Mono',monospace; }
 
   .whale-section { margin: 36px 0 0; border:1px solid var(--border); border-radius:8px; overflow:hidden; background: var(--surface); }
@@ -114,8 +114,8 @@
   @keyframes shimmer { 0%{transform:translateX(-100%)} 100%{transform:translateX(100%)} }
   .whale-bar-label { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted); min-width: 70px; text-align:right; }
   .whale-tag { display:inline-flex; align-items:center; gap:5px; font-family:'JetBrains Mono',monospace; font-size:10px; padding:2px 8px; border-radius:3px; font-weight:700; letter-spacing:0.05em; margin-bottom:8px; }
-  .whale-tag.gold { background: rgba(226,201,106,0.15); color: var(--gold); border: 1px solid rgba(226,201,106,0.2); }
-  .whale-tag.red { background: rgba(248,113,113,0.15); color: var(--red); border: 1px solid rgba(248,113,113,0.2); }
+  .whale-tag.gold { background: rgba(201,162,79,0.15); color: var(--gold); border: 1px solid rgba(201,162,79,0.2); }
+  .whale-tag.red { background: rgba(217,105,126,0.15); color: var(--red); border: 1px solid rgba(217,105,126,0.2); }
   .whale-tag.green { background: rgba(74,222,128,0.15); color: var(--green); border: 1px solid rgba(74,222,128,0.2); }
 
   /* ===== Sector Map Panel ===== */
@@ -141,24 +141,24 @@
   @media(max-width:560px){ .sector-locked-grid { grid-template-columns:1fr; } }
   .sector-locked-card { position:relative; background:rgba(255,255,255,0.02); border:1px solid var(--border); border-radius:6px; padding:14px 16px; overflow:hidden; cursor:pointer; }
   .sector-locked-card .sector-name, .sector-locked-card .sector-split, .sector-locked-card .sector-counts { filter:blur(4px); user-select:none; }
-  .sector-lock-badge { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(7,6,15,0.55); font-size:18px; }
+  .sector-lock-badge { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(13,17,19,0.75); font-size:10px; font-weight:700; letter-spacing:0.15em; color:var(--accent2); font-family:'JetBrains Mono',monospace; }
 
   .sector-cta { text-align:center; padding-top:6px; }
   .sector-cta-text { font-size:13px; color:var(--muted); margin-bottom:12px; line-height:1.6; }
   .sector-cta-text strong { color:var(--accent2); }
-  .sector-cta-btn { display:inline-block; padding:11px 28px; background:linear-gradient(135deg,#9B6DFF,#7B4FE0); color:white; font-weight:700; font-size:13px; border-radius:4px; cursor:pointer; border:none; font-family:'Space Grotesk',sans-serif; box-shadow:0 0 24px rgba(155,109,255,0.3); }
+  .sector-cta-btn { display:inline-block; padding:11px 28px; background:linear-gradient(135deg,#4FB8B8,#3A8A8A); color:white; font-weight:700; font-size:13px; border-radius:4px; cursor:pointer; border:none; font-family:'Inter',sans-serif; box-shadow:0 0 12px rgba(79,184,184,0.18); }
 
 
   /* Fund tabs */
   .tabs-section { padding:36px 0 20px; border-bottom:1px solid var(--border); margin-top:40px; }
   .section-label { font-size:10px; letter-spacing:0.2em; color:var(--muted); text-transform:uppercase; font-family:'JetBrains Mono',monospace; margin-bottom:12px; }
   .tabs { display:flex; gap:8px; flex-wrap:wrap; }
-  .tab { padding:7px 14px; border:1px solid var(--border); border-radius:4px; background:transparent; color:var(--muted); font-family:'Space Grotesk',sans-serif; font-size:13px; cursor:pointer; transition:all 0.15s; }
+  .tab { padding:7px 14px; border:1px solid var(--border); border-radius:4px; background:transparent; color:var(--muted); font-family:'Inter',sans-serif; font-size:13px; cursor:pointer; transition:all 0.15s; }
   .tab:hover { border-color:var(--accent); color:var(--text); }
-  .tab.active { background:rgba(155,109,255,0.15); border-color:var(--accent); color:var(--accent2); font-weight:600; }
+  .tab.active { background:rgba(79,184,184,0.15); border-color:var(--accent); color:var(--accent2); font-weight:600; }
   .view-toggle { display:flex; gap:8px; margin:16px 0 0; flex-wrap:wrap; }
-  .view-btn { padding:6px 14px; border:1px solid var(--border); border-radius:20px; background:transparent; color:var(--muted); font-size:12px; cursor:pointer; font-family:'Space Grotesk',sans-serif; }
-  .view-btn.active { border-color:var(--accent); color:var(--accent2); background:rgba(155,109,255,0.08); }
+  .view-btn { padding:6px 14px; border:1px solid var(--border); border-radius:20px; background:transparent; color:var(--muted); font-size:12px; cursor:pointer; font-family:'Inter',sans-serif; }
+  .view-btn.active { border-color:var(--accent); color:var(--accent2); background:rgba(79,184,184,0.08); }
 
   .summary-card { background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:24px; margin:24px 0 20px; }
   .summary-who { font-size:11px; color:var(--muted); margin-bottom:10px; font-family:'JetBrains Mono',monospace; }
@@ -169,7 +169,7 @@
   .summary-why strong { color:var(--text); }
 
   .fund-timeline-wrap { margin:8px 0 48px; }
-  .fund-timeline-intro { background:rgba(155,109,255,0.06); border:1px solid rgba(155,109,255,0.15); border-radius:4px; padding:14px 18px; margin-bottom:24px; font-size:14px; color:var(--text); line-height:1.6; }
+  .fund-timeline-intro { background:rgba(79,184,184,0.06); border:1px solid rgba(79,184,184,0.15); border-radius:4px; padding:14px 18px; margin-bottom:24px; font-size:14px; color:var(--text); line-height:1.6; }
   .fund-timeline-intro strong { color:var(--accent2); }
 
   .timeline { position:relative; padding-left:32px; }
@@ -184,17 +184,17 @@
   .t-dot.now { border-color:var(--accent); animation:pulse 2s infinite; }
   .t-dot.now::after { background:var(--accent); }
   .t-card { padding:14px 16px; border-radius:4px; border:1px solid var(--border); background:var(--surface); transition: border-color 0.15s; margin-bottom:10px; }
-  .t-card:hover { border-color: rgba(155,109,255,0.2); }
-  .t-card.is-event { background:rgba(155,109,255,0.05); border-color:rgba(155,109,255,0.2); margin-left:10px; }
-  .t-card.is-now { background:rgba(155,109,255,0.07); border-color:rgba(155,109,255,0.3); box-shadow: 0 0 20px rgba(155,109,255,0.08); }
+  .t-card:hover { border-color: rgba(79,184,184,0.2); }
+  .t-card.is-event { background:rgba(79,184,184,0.05); border-color:rgba(79,184,184,0.2); margin-left:10px; }
+  .t-card.is-now { background:rgba(79,184,184,0.07); border-color:rgba(79,184,184,0.3); box-shadow: 0 0 10px rgba(79,184,184,0.05); }
   .t-meta { display:flex; align-items:center; gap:8px; margin-bottom:7px; flex-wrap:wrap; }
   .t-date { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted); }
   .t-region { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--blue); background: rgba(125,211,252,0.1); border:1px solid rgba(125,211,252,0.2); padding:1px 7px; border-radius:2px; }
   .t-tag { display:inline-block; font-size:10px; font-family:'JetBrains Mono',monospace; padding:2px 8px; border-radius:2px; font-weight:700; }
   .t-tag.buy { background:rgba(74,222,128,0.12); color:var(--green); }
-  .t-tag.sell { background:rgba(248,113,113,0.12); color:var(--red); }
-  .t-tag.event { background:rgba(155,109,255,0.15); color:var(--accent2); }
-  .t-tag.now { background:rgba(155,109,255,0.2); color:var(--accent2); }
+  .t-tag.sell { background:rgba(217,105,126,0.12); color:var(--red); }
+  .t-tag.event { background:rgba(79,184,184,0.15); color:var(--accent2); }
+  .t-tag.now { background:rgba(79,184,184,0.2); color:var(--accent2); }
   .t-title { font-size:14px; font-weight:600; margin-bottom:4px; line-height:1.4; }
   .t-body { font-size:13px; color:var(--muted); line-height:1.6; }
   .t-body strong { color:var(--text); }
@@ -204,11 +204,11 @@
   .timeline-expand-btn {
     display:flex; align-items:center; justify-content:center; gap:8px;
     width:100%; margin-top:4px; padding:12px;
-    background: rgba(155,109,255,0.06); border:1px dashed rgba(155,109,255,0.3);
+    background: rgba(79,184,184,0.06); border:1px dashed rgba(79,184,184,0.3);
     border-radius:6px; color:var(--accent2); font-size:13px; font-weight:600;
-    cursor:pointer; font-family:'Space Grotesk',sans-serif; transition: background 0.15s;
+    cursor:pointer; font-family:'Inter',sans-serif; transition: background 0.15s;
   }
-  .timeline-expand-btn:hover { background: rgba(155,109,255,0.12); }
+  .timeline-expand-btn:hover { background: rgba(79,184,184,0.12); }
   .timeline-expand-btn .arrow-icon { transition: transform 0.3s; display:inline-block; }
   .timeline-expand-btn.is-open .arrow-icon { transform: rotate(180deg); }
 
@@ -217,6 +217,10 @@
   .panel { background:var(--surface); border:1px solid var(--border); border-radius:6px; overflow:hidden; }
   .panel-header { padding:12px 16px; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:8px; }
   .panel-title { font-size:13px; font-weight:600; }
+  .panel-dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:2px; }
+  .panel-dot.buy { background:var(--green); }
+  .panel-dot.sell { background:var(--red); }
+  .panel-dot.pending { background:var(--muted); }
   .panel-sub { font-size:11px; color:var(--muted); margin-left:auto; }
   .move-item { display:flex; align-items:center; padding:11px 16px; border-bottom:1px solid rgba(34,30,58,0.8); gap:10px; }
   .move-item:last-child { border-bottom:none; }
@@ -231,7 +235,7 @@
 
   /* Fixed 9-event timeline */
   .fixed-timeline-wrap { margin:40px 0 52px; }
-  .fixed-timeline-intro { background:rgba(155,109,255,0.06); border:1px solid rgba(155,109,255,0.15); border-radius:4px; padding:14px 18px; margin-bottom:24px; font-size:14px; color:var(--text); line-height:1.6; }
+  .fixed-timeline-intro { background:rgba(79,184,184,0.06); border:1px solid rgba(79,184,184,0.15); border-radius:4px; padding:14px 18px; margin-bottom:24px; font-size:14px; color:var(--text); line-height:1.6; }
   .fixed-timeline-intro strong { color:var(--accent2); }
 
   /* History accordion - show first 3, expand for rest */
@@ -240,26 +244,26 @@
   .history-expand-btn {
     display:flex; align-items:center; justify-content:center; gap:8px;
     width:100%; margin-top:14px; margin-left:0; padding:13px;
-    background: rgba(155,109,255,0.06); border:1px dashed rgba(155,109,255,0.3);
+    background: rgba(79,184,184,0.06); border:1px dashed rgba(79,184,184,0.3);
     border-radius:6px; color:var(--accent2); font-size:13.5px; font-weight:600;
-    cursor:pointer; font-family:'Space Grotesk',sans-serif; transition: background 0.15s;
+    cursor:pointer; font-family:'Inter',sans-serif; transition: background 0.15s;
   }
-  .history-expand-btn:hover { background: rgba(155,109,255,0.12); }
+  .history-expand-btn:hover { background: rgba(79,184,184,0.12); }
   .history-expand-btn .arrow-icon { transition: transform 0.3s; display:inline-block; }
   .history-expand-btn.is-open .arrow-icon { transform: rotate(180deg); }
-  .history-count-badge { font-family:'JetBrains Mono',monospace; font-size:11px; background:rgba(155,109,255,0.15); color:var(--accent2); padding:2px 8px; border-radius:10px; }
+  .history-count-badge { font-family:'JetBrains Mono',monospace; font-size:11px; background:rgba(79,184,184,0.15); color:var(--accent2); padding:2px 8px; border-radius:10px; }
 
   footer { border-top:1px solid var(--border); padding:28px 0; text-align:center; font-size:11px; color:var(--muted); font-family:'JetBrains Mono',monospace; line-height:1.8; margin-top:20px; }
   footer span { color:var(--accent); opacity:0.6; }
 
   .modal-backdrop { position: fixed; inset:0; background: rgba(0,0,0,0.7); display:none; align-items:center; justify-content:center; z-index:100; padding:20px; backdrop-filter: blur(4px); }
   .modal-backdrop.show { display:flex; }
-  .modal-box { background: var(--surface2); border:1px solid rgba(248,113,113,0.3); border-radius:10px; padding:28px; max-width:380px; text-align:center; box-shadow: 0 0 60px rgba(155,109,255,0.2); }
-  .modal-icon { font-size: 30px; margin-bottom: 10px; }
+  .modal-box { background: var(--surface2); border:1px solid rgba(217,105,126,0.3); border-radius:10px; padding:28px; max-width:380px; text-align:center; box-shadow: 0 0 24px rgba(79,184,184,0.12); }
+  .modal-icon { font-size: 11px; font-weight:700; letter-spacing:0.2em; color:var(--accent); margin-bottom: 14px; font-family:'JetBrains Mono',monospace; }
   .modal-title { font-size:17px; font-weight:700; color:#FFD3D3; margin-bottom:10px; line-height:1.5; }
   .modal-body { font-size:13px; color:var(--muted); line-height:1.7; margin-bottom:18px; }
-  .modal-btn { width:100%; padding:12px; background:linear-gradient(135deg,#F87171,#9B6DFF); color:white; font-weight:700; border:none; border-radius:5px; font-size:14px; cursor:pointer; margin-bottom:10px; font-family:'Space Grotesk',sans-serif; }
-  .modal-close { background:none; border:none; color:var(--muted); font-size:12px; cursor:pointer; font-family:'Space Grotesk',sans-serif; }
+  .modal-btn { width:100%; padding:12px; background:linear-gradient(135deg,#D9697E,#4FB8B8); color:white; font-weight:700; border:none; border-radius:5px; font-size:14px; cursor:pointer; margin-bottom:10px; font-family:'Inter',sans-serif; }
+  .modal-close { background:none; border:none; color:var(--muted); font-size:12px; cursor:pointer; font-family:'Inter',sans-serif; }
 </style>
 </head>
 <body>
@@ -284,7 +288,7 @@
     <div class="hero-title">THEY KNEW.</div>
     <div class="hero-title-sub">— 45 DAYS BEFORE THE WORLD DID —</div>
     <p class="hero-desc">世界を揺るがす危機や大転換の裏で、巨頭たちは常に法律の壁（45日以内の報告）に守られながら先回りを完了していた。<strong>公式データに基づく、言い逃れのできない足跡。</strong></p>
-    <div class="warning-box">⚠️ 米連邦法に基づき最大45日遅れで開示される大口保有データを解析</div>
+    <div class="warning-box">米連邦法に基づき最大45日遅れで開示される大口保有データを解析</div>
   </div>
 
   <!-- Fixed 9-event global timeline -->
@@ -307,7 +311,7 @@
 
   <div class="predict-section">
     <div class="predict-card danger">
-      <div class="predict-tag">🚨 流動性危機の予兆</div>
+      <div class="predict-tag">流動性危機の予兆</div>
       <div class="predict-title">世界的な「現金比率」の異常な積み上げ</div>
       <div class="predict-body">主要な巨頭たちのポートフォリオで、かつてない規模の<strong>利確および現金退避</strong>を検知。このパターンは2008年のリーマン前、2020年のコロナショック直前の配置と88%一致しています。</div>
       <div class="predict-meter">
@@ -316,7 +320,7 @@
       </div>
     </div>
     <div class="predict-card warn">
-      <div class="predict-tag">⚠️ 地政学リスクの予兆</div>
+      <div class="predict-tag">地政学リスクの予兆</div>
       <div class="predict-title">エネルギー・インフラ資源への資金集中</div>
       <div class="predict-body">ブラックロックを筆頭に、複数の巨頭がコモディティ先物の比率を急激に増加。<strong>サプライチェーン分断を事前に織り込んでいる</strong>可能性。</div>
       <div class="predict-meter">
@@ -329,7 +333,6 @@
   <div class="signal-section">
     <div class="signal-header">
       <div class="signal-header-left">
-        <span style="font-size:16px;">👑</span>
         <div>
           <div class="signal-title">複数巨頭 一致シグナル</div>
           <div class="signal-sub">機関投資家たちが同じ方向に動いているセクターを自動検出</div>
@@ -346,13 +349,13 @@
           <div class="signal-dots"><div class="signal-dot buy"></div><div class="signal-dot buy"></div><div class="signal-dot buy"></div><div class="signal-dot buy"></div></div>
         </div>
         <div class="signal-info">
-          <div class="signal-sector">🛢️ 石油・エネルギーセクター — <span style="color:var(--green)">「買い」で完全一致</span></div>
+          <div class="signal-sector">石油・エネルギーセクター — <span style="color:var(--green)">「買い」で完全一致</span></div>
           <div class="signal-desc">主要4大ファンドすべてが保有比率を前月比で増加。これほどの一致は過去10年で数回しかありません。</div>
           <div class="signal-funds">
-            <span class="signal-fund-tag buy">🏦 ブラックロック ↑増配</span>
-            <span class="signal-fund-tag buy">🎩 バフェット ↑買い増し</span>
-            <span class="signal-fund-tag buy">📈 バンガード ↑増加</span>
-            <span class="signal-fund-tag buy">⚡ ソロス ↑新規取得</span>
+            <span class="signal-fund-tag buy">ブラックロック ↑増配</span>
+            <span class="signal-fund-tag buy">バフェット ↑買い増し</span>
+            <span class="signal-fund-tag buy">バンガード ↑増加</span>
+            <span class="signal-fund-tag buy">ソロス ↑新規取得</span>
           </div>
           <div class="signal-history"><strong>過去の同パターン：</strong>2007年の全員一致シグナルの出現後、原油相場は史上最高値に向けて急上昇。</div>
         </div>
@@ -360,7 +363,7 @@
 
       <div class="signal-item locked" onclick="openModal('AI・テクノロジー株の大量売り抜けシグナル')">
         <div class="lure-popup">
-          <div class="lure-text">⚠️ 巨頭たちの「一斉売り抜け」に巻き込まれて大損したくないですか？</div>
+          <div class="lure-text">巨頭たちの「一斉売り抜け」に巻き込まれて大損したくないですか？</div>
           <div class="lure-sub">4社すべてが仕込んだポジションの全貌を解放する</div>
           <button class="lure-btn">シグナルを閲覧する</button>
         </div>
@@ -370,7 +373,7 @@
           <div class="signal-dots"><div class="signal-dot sell"></div><div class="signal-dot sell"></div><div class="signal-dot sell"></div><div class="signal-dot sell"></div></div>
         </div>
         <div class="signal-info">
-          <div class="signal-sector">🤖 ハイテク・AIセクター — 「大量売り」を検知</div>
+          <div class="signal-sector">ハイテク・AIセクター — 「大量売り」を検知</div>
           <div class="signal-desc">一般の個人投資家が熱狂している裏で、巨頭たちが完了した驚異のポジション縮小。</div>
           <div class="signal-funds">
             <span class="signal-fund-tag sell">非公開</span><span class="signal-fund-tag sell">非公開</span><span class="signal-fund-tag sell">非公開</span>
@@ -380,7 +383,7 @@
     </div>
 
     <div class="signal-lock-overlay">
-      <div class="lock-icon">🔒</div>
+      <div class="lock-icon">PREMIUM</div>
       <div class="lock-title">インテリジェンス・プレミアム</div>
       <div class="lock-desc">新興国市場のエグジット、半導体セクターの平均取得単価など、巨頭たちのすべての「本音」をリアルタイムでアンロック。</div>
       <button class="lock-btn" onclick="openModal('プレミアムプラン全機能解放')">すべてのシグナルを解放</button>
@@ -391,7 +394,7 @@
   <!-- Whale Portfolio Panel -->
   <div class="whale-section">
     <div class="whale-header">
-      <div class="whale-title">📊 巨頭たちの最新配置（ポートフォリオ構成）</div>
+      <div class="whale-title">巨頭たちの最新配置（ポートフォリオ構成）</div>
       <div class="whale-sub">更新: 最新13F報告書ベース</div>
     </div>
 
@@ -400,7 +403,7 @@
         <span class="whale-name">バークシャー・ハサウェイ（バフェット）</span>
         <span class="whale-metric" style="color:var(--gold);">CASH: 28.5%</span>
       </div>
-      <div class="whale-tag gold">⚠️ 歴史的異常値</div>
+      <div class="whale-tag gold">歴史的異常値</div>
       <div class="whale-desc">全ポートフォリオにおける<strong>現金比率が過去最高水準</strong>へ上昇。株高に追随せず、市場の調整局面を待つ構えとも読める。</div>
       <div class="whale-bar-wrap">
         <div class="whale-bar-track"><div class="whale-bar-fill" style="width: 85%; background: var(--gold);"></div></div>
@@ -413,7 +416,7 @@
         <span class="whale-name">ブラックロック（世界最大の資産運用ファンド）</span>
         <span class="whale-metric" style="color:var(--red);">TECH: -4.2%</span>
       </div>
-      <div class="whale-tag red">📉 利益確定の足跡</div>
+      <div class="whale-tag red">利益確定の足跡</div>
       <div class="whale-desc">過熱気味だった<strong>半導体・大手AIテクノロジー銘柄を一部売却</strong>。得た資金をコモディティやインフラなど別セクターへローテーション中。</div>
       <div class="whale-bar-wrap">
         <div class="whale-bar-track"><div class="whale-bar-fill" style="width: 45%; background: var(--red);"></div></div>
@@ -426,7 +429,7 @@
         <span class="whale-name">バンガード（世界第2位の資産運用ファンド）</span>
         <span class="whale-metric" style="color:var(--green);">INDEX: 継続買い</span>
       </div>
-      <div class="whale-tag green">📈 一貫した分散投資</div>
+      <div class="whale-tag green">一貫した分散投資</div>
       <div class="whale-desc">市場全体への分散投資を<strong>一貫して継続</strong>。特定セクターへの偏りは小さいが、ヘルスケアなど一部セクターはわずかに減少傾向。</div>
       <div class="whale-bar-wrap">
         <div class="whale-bar-track"><div class="whale-bar-fill" style="width: 90%; background: var(--green);"></div></div>
@@ -438,13 +441,13 @@
   <!-- Sector Map Panel -->
   <div class="sector-section">
     <div class="sector-header">
-      <div class="sector-title">🗺️ 分野別マップ（誰が何を買い・売っているか）</div>
+      <div class="sector-title">分野別マップ（誰が何を買い・売っているか）</div>
       <div class="sector-sub">主要45社のうち集計</div>
     </div>
 
     <div class="sector-grid" style="grid-template-columns:1fr;">
       <div class="sector-card">
-        <div class="sector-name">🤖 ハイテク・AI</div>
+        <div class="sector-name">ハイテク・AI</div>
         <div class="sector-split"><div class="sector-split-buy" style="width:22%"></div><div class="sector-split-sell" style="width:78%"></div></div>
         <div class="sector-counts"><span class="sector-count-buy">買い：10社</span><span class="sector-count-sell">売り：35社</span></div>
       </div>
@@ -453,46 +456,46 @@
     <div class="sector-locked-wrap">
       <div class="sector-locked-grid">
         <div class="sector-locked-card" onclick="openModal('全分野マップ解放')">
-          <div class="sector-name">🛢️ 石油・エネルギー</div>
+          <div class="sector-name">石油・エネルギー</div>
           <div class="sector-split"><div class="sector-split-buy" style="width:82%"></div><div class="sector-split-sell" style="width:18%"></div></div>
           <div class="sector-counts"><span class="sector-count-buy">買い：?社</span><span class="sector-count-sell">売り：?社</span></div>
-          <div class="sector-lock-badge">🔒</div>
+          <div class="sector-lock-badge">LOCKED</div>
         </div>
         <div class="sector-locked-card" onclick="openModal('全分野マップ解放')">
-          <div class="sector-name">🏦 金融・銀行</div>
+          <div class="sector-name">金融・銀行</div>
           <div class="sector-split"><div class="sector-split-buy" style="width:64%"></div><div class="sector-split-sell" style="width:36%"></div></div>
           <div class="sector-counts"><span class="sector-count-buy">買い：?社</span><span class="sector-count-sell">売り：?社</span></div>
-          <div class="sector-lock-badge">🔒</div>
+          <div class="sector-lock-badge">LOCKED</div>
         </div>
         <div class="sector-locked-card" onclick="openModal('全分野マップ解放')">
-          <div class="sector-name">🥇 金（ゴールド）</div>
+          <div class="sector-name">金（ゴールド）</div>
           <div class="sector-split"><div class="sector-split-buy" style="width:71%"></div><div class="sector-split-sell" style="width:29%"></div></div>
           <div class="sector-counts"><span class="sector-count-buy">買い：?社</span><span class="sector-count-sell">売り：?社</span></div>
-          <div class="sector-lock-badge">🔒</div>
+          <div class="sector-lock-badge">LOCKED</div>
         </div>
         <div class="sector-locked-card" onclick="openModal('全分野マップ解放')">
-          <div class="sector-name">🏠 不動産・REIT</div>
+          <div class="sector-name">不動産・REIT</div>
           <div class="sector-split"><div class="sector-split-buy" style="width:40%"></div><div class="sector-split-sell" style="width:60%"></div></div>
           <div class="sector-counts"><span class="sector-count-buy">買い：?社</span><span class="sector-count-sell">売り：?社</span></div>
-          <div class="sector-lock-badge">🔒</div>
+          <div class="sector-lock-badge">LOCKED</div>
         </div>
         <div class="sector-locked-card" onclick="openModal('全分野マップ解放')">
-          <div class="sector-name">🌏 中国・新興国</div>
+          <div class="sector-name">中国・新興国</div>
           <div class="sector-split"><div class="sector-split-buy" style="width:55%"></div><div class="sector-split-sell" style="width:45%"></div></div>
           <div class="sector-counts"><span class="sector-count-buy">買い：?社</span><span class="sector-count-sell">売り：?社</span></div>
-          <div class="sector-lock-badge">🔒</div>
+          <div class="sector-lock-badge">LOCKED</div>
         </div>
         <div class="sector-locked-card" onclick="openModal('全分野マップ解放')">
-          <div class="sector-name">💊 ヘルスケア・製薬</div>
+          <div class="sector-name">ヘルスケア・製薬</div>
           <div class="sector-split"><div class="sector-split-buy" style="width:60%"></div><div class="sector-split-sell" style="width:40%"></div></div>
           <div class="sector-counts"><span class="sector-count-buy">買い：?社</span><span class="sector-count-sell">売り：?社</span></div>
-          <div class="sector-lock-badge">🔒</div>
+          <div class="sector-lock-badge">LOCKED</div>
         </div>
         <div class="sector-locked-card" onclick="openModal('全分野マップ解放')">
-          <div class="sector-name">⚔️ 防衛・軍事関連</div>
+          <div class="sector-name">防衛・軍事関連</div>
           <div class="sector-split"><div class="sector-split-buy" style="width:75%"></div><div class="sector-split-sell" style="width:25%"></div></div>
           <div class="sector-counts"><span class="sector-count-buy">買い：?社</span><span class="sector-count-sell">売り：?社</span></div>
-          <div class="sector-lock-badge">🔒</div>
+          <div class="sector-lock-badge">LOCKED</div>
         </div>
       </div>
       <div class="sector-cta">
@@ -510,8 +513,8 @@
       <button class="tab" onclick="selectFund(this,'soros')">ソロス</button>
     </div>
     <div class="view-toggle">
-      <button class="view-btn active" onclick="switchView(this,'moves')">📊 今の動き</button>
-      <button class="view-btn" onclick="switchView(this,'world')">🌍 個別の動きと出来事</button>
+      <button class="view-btn active" onclick="switchView(this,'moves')">今の動き</button>
+      <button class="view-btn" onclick="switchView(this,'world')">個別の動きと出来事</button>
     </div>
   </div>
 
@@ -522,14 +525,14 @@
   </div>
 
   <div id="view-moves">
-    <div id="moves-notice" style="display:none; background:rgba(155,109,255,0.06); border:1px solid rgba(155,109,255,0.2); border-radius:4px; padding:11px 15px; margin-bottom:14px; font-size:12.5px; color:var(--accent2); line-height:1.6;"></div>
+    <div id="moves-notice" style="display:none; background:rgba(79,184,184,0.06); border:1px solid rgba(79,184,184,0.2); border-radius:4px; padding:11px 15px; margin-bottom:14px; font-size:12.5px; color:var(--accent2); line-height:1.6;"></div>
     <div class="moves-grid">
       <div class="panel">
-        <div class="panel-header"><span id="buy-icon">🟢</span><span class="panel-title" id="buy-panel-title">今たくさん買っているもの</span><span class="panel-sub">TOP 5</span></div>
+        <div class="panel-header"><span id="buy-icon" class="panel-dot buy"></span><span class="panel-title" id="buy-panel-title">今たくさん買っているもの</span><span class="panel-sub">TOP 5</span></div>
         <div id="buy-list"></div>
       </div>
       <div class="panel">
-        <div class="panel-header"><span id="sell-icon">🔴</span><span class="panel-title" id="sell-panel-title">今たくさん売っているもの</span><span class="panel-sub">TOP 5</span></div>
+        <div class="panel-header"><span id="sell-icon" class="panel-dot sell"></span><span class="panel-title" id="sell-panel-title">今たくさん売っているもの</span><span class="panel-sub">TOP 5</span></div>
         <div id="sell-list"></div>
       </div>
     </div>
@@ -547,7 +550,7 @@
 
 <div class="modal-backdrop" id="paidModal">
   <div class="modal-box">
-    <div class="modal-icon">👁️</div>
+    <div class="modal-icon">PREMIUM</div>
     <div class="modal-title" id="modalTitle">プレミアム・インテリジェンス</div>
     <div class="modal-body">巨頭たちの「45日前の足跡」を先回り検知する、すべての自動追跡アラートと完全ポートフォリオを解放します。<br><br><span style="color:var(--gold); font-weight:700;">月額480円 / いつでも解約可能</span></div>
     <button class="modal-btn" onclick="closeModal()">アクセス権を取得する</button>
@@ -718,15 +721,15 @@ function render() {
 
   if (hasComparison) {
     notice.style.display = 'none';
-    buyIcon.textContent = '🟢';
-    sellIcon.textContent = '🔴';
+    buyIcon.className = 'panel-dot buy';
+    sellIcon.className = 'panel-dot sell';
     buyTitle.textContent = '前四半期から買い増した銘柄';
     sellTitle.textContent = '前四半期から売却・縮小した銘柄';
   } else {
     notice.style.display = 'block';
-    notice.innerHTML = '📌 <strong>このファンドは初回データ取得直後のため、前四半期との比較ができていません。</strong>次回SECに新しい13F-HRが提出された後の更新から、本当の「買い増し / 売り」が表示されます。それまでは <strong>現在の主要保有銘柄</strong>（保有額の大きい順）を表示しています。';
-    buyIcon.textContent = '📊';
-    sellIcon.textContent = '⏳';
+    notice.innerHTML = '<strong>このファンドは初回データ取得直後のため、前四半期との比較ができていません。</strong>次回SECに新しい13F-HRが提出された後の更新から、本当の「買い増し / 売り」が表示されます。それまでは <strong>現在の主要保有銘柄</strong>（保有額の大きい順）を表示しています。';
+    buyIcon.className = 'panel-dot pending';
+    sellIcon.className = 'panel-dot pending';
     buyTitle.textContent = '現在の主要保有銘柄';
     sellTitle.textContent = '売り情報は次回比較後に表示';
   }
