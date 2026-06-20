@@ -1,0 +1,45 @@
+name: Update 13F Data from SEC EDGAR
+
+# 実行タイミング:
+#   - 毎月1日 09:00 UTC (日本時間 18:00) に自動実行
+#   - リポジトリのActionsタブから手動実行も可能 (workflow_dispatch)
+"on":
+  schedule:
+    - cron: '0 9 1 * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: SEC EDGAR から13Fデータを取得して data.json を更新
+        env:
+          # SECのルール上、連絡先メールアドレスを含む User-Agent が必須。
+          # リポジトリの Settings > Secrets and variables > Actions で
+          # SEC_USER_AGENT を "THE45Project your-email@example.com" の形式で設定すること。
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: |
+          python3 scripts/fetch_13f.py
+
+      - name: 変更があればコミット&プッシュ
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data.json; then
+            echo "data.json に変更はありませんでした。"
+          else
+            git add data.json
+            git commit -m "chore: SEC EDGAR 13Fデータを自動更新 ($(date -u +%Y-%m-%d))"
+            git push
+          fi
