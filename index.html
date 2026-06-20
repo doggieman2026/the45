@@ -612,30 +612,6 @@
 </footer>
 
 <script>
-function openModal(title) {
-  document.getElementById('modalTitle').innerText = title;
-  document.getElementById('paidModal').classList.add('show');
-}
-function closeModal() {
-  document.getElementById('paidModal').classList.remove('show');
-}
-
-function toggleHistory() {
-  const group = document.getElementById('history-hidden-group');
-  const btn = document.getElementById('history-expand-btn');
-  const label = document.getElementById('history-expand-label');
-  const badge = document.getElementById('history-count-badge');
-  const isOpen = group.classList.toggle('expanded');
-  btn.classList.toggle('is-open', isOpen);
-  if (isOpen) {
-    label.textContent = '閉じる';
-    badge.style.display = 'none';
-  } else {
-    label.textContent = '残り6事件を見る';
-    badge.style.display = 'inline-block';
-  }
-}
-
 // ===== Data-driven rendering (loads from data.json) =====
 let SITE_DATA = null;
 let currentFund = 'blackrock';
