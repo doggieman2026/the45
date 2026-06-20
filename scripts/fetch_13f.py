@@ -6,7 +6,12 @@ THE 45 PROJECT — SEC EDGAR 13F-HR 自動取得スクリプト
 概要:
   data.sec.gov の無料・APIキー不要のRESTful APIを使って、
   主要ファンドの最新13F-HR（四半期保有報告書）から保有銘柄データを取得し、
+  前四半期との比較に基づいて「本当の買い増し/売り」を算出し、
   data.json の "funds[].buys" "funds[].sells" を自動生成・更新する。
+
+  各実行で取得した保有データは data/history/{fund_id}/{filing_date}.json に
+  スナップショットとして保存され、次回実行時の比較に使われる。
+  リポジトリ自体が時系列データベースを兼ねる設計。
 
 実行方法:
   python3 fetch_13f.py
@@ -17,6 +22,8 @@ THE 45 PROJECT — SEC EDGAR 13F-HR 自動取得スクリプト
     例: export SEC_USER_AGENT="THE45Project contact@example.com"
   - レート制限: 10 requests/sec を超えないこと（このスクリプトは安全マージンを取って実装）
   - GitHub Actions上で実行する想定（ネットワークアクセスが必要）
+  - data/history/ 配下のスナップショットはリポジトリにコミットされ続ける必要がある
+    （これが無いと毎回「初回」判定になり、買い/売りの比較ができない）
 
 注意:
   - 13F-HRはCUSIPでしか銘柄を識別しないため、CUSIP→ティッカー変換が必要。
@@ -24,6 +31,9 @@ THE 45 PROJECT — SEC EDGAR 13F-HR 自動取得スクリプト
     (TICKER_OVERRIDES) を併用する。本格運用では CUSIP マスタの整備を推奨。
   - 出力する日本円換算額はその時点のドル円レートで概算するため、
     厳密な金額ではなく「規模感」を示す目的の表示であることに留意。
+  - 初回実行時（その四半期のスナップショットがまだ存在しない場合）は比較ができないため、
+    保有額ランキングを buys の代理として表示する（has_quarter_comparison=false）。
+    2回目以降の実行から、本当の増減比較に切り替わる。
 """
 
 import json
@@ -55,7 +65,9 @@ FUNDS = [
 ]
 
 DATA_JSON_PATH = Path(__file__).parent.parent / "data.json"
+SNAPSHOT_DIR = Path(__file__).parent.parent / "data" / "history"
 REQUEST_DELAY_SEC = 0.15  # 10 req/sec制限に対する安全マージン
+TOP_N_DEFAULT = 5
 
 # 会社名の日本語表示・desc・セクター絵文字を補完する簡易マスタ
 # (本格運用ではこの部分を companies テーブルとして data.json 側に出すのが理想)
@@ -265,42 +277,163 @@ def aggregate_by_cusip(holdings: list[dict]) -> list[dict]:
     return list(merged.values())
 
 
-def build_fund_holdings(holdings: list[dict], top_n: int = 5) -> tuple[list[dict], list[dict]]:
-    """
-    保有銘柄リストから「買い（上位）」「売り（下位/縮小）」を構築する。
-    NOTE: 本来は「前期比の増減」が必要。今回のスニペットは保有額の大きい順を
-    'buys' の代理として扱う簡易版。本格運用では前四半期データとの差分を取ること。
-    """
-    holdings = aggregate_by_cusip(holdings)
-    sorted_holdings = sorted(holdings, key=lambda h: h.get("value_usd", 0), reverse=True)
-    top = sorted_holdings[:top_n]
+def snapshot_path(fund_id: str, filing_date: str) -> Path:
+    """フォルダ data/history/{fund_id}/{filing_date}.json のパスを返す。"""
+    return SNAPSHOT_DIR / fund_id / f"{filing_date}.json"
 
-    max_value = top[0]["value_usd"] if top else 1
 
-    buys = []
-    for h in top:
+def save_snapshot(fund_id: str, filing_date: str, holdings: list[dict]):
+    """今回取得した保有データ（CUSIP単位に集約済み）をスナップショットとして保存する。"""
+    path = snapshot_path(fund_id, filing_date)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(
+            {"fund_id": fund_id, "filing_date": filing_date, "holdings": holdings},
+            f, ensure_ascii=False, indent=2
+        )
+
+
+def load_previous_snapshot(fund_id: str, current_filing_date: str) -> dict | None:
+    """
+    指定ファンドの過去スナップショットのうち、current_filing_date より前で
+    最も新しいものを読み込む。無ければ None。
+    """
+    fund_dir = SNAPSHOT_DIR / fund_id
+    if not fund_dir.exists():
+        return None
+
+    candidates = []
+    for p in fund_dir.glob("*.json"):
+        date_str = p.stem  # ファイル名 = filing_date (YYYY-MM-DD)
+        if date_str < current_filing_date:
+            candidates.append((date_str, p))
+
+    if not candidates:
+        return None
+
+    candidates.sort(key=lambda x: x[0], reverse=True)
+    _, latest_path = candidates[0]
+    with open(latest_path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def compute_diff(current_holdings: list[dict], previous_holdings: list[dict] | None) -> list[dict]:
+    """
+    前回スナップショットとの比較で、各銘柄の増減額(delta_usd)を計算する。
+    前回データが無い場合は delta_usd = value_usd（全額が「新規」扱い）として返す
+    （= 比較データがないことを呼び出し側で判定できるよう is_first_snapshot を付与）。
+    """
+    prev_map = {}
+    if previous_holdings:
+        for h in previous_holdings:
+            cusip = h.get("cusip", "")
+            if cusip:
+                prev_map[cusip] = h.get("value_usd", 0)
+
+    diffs = []
+    current_cusips = set()
+    for h in current_holdings:
         cusip = h.get("cusip", "")
-        name_raw = h.get("name_of_issuer", "UNKNOWN")
-        override = TICKER_OVERRIDES.get(cusip, None)  # CUSIPベースの上書きは将来拡張用
-        display_name = override["name"] if override else name_raw.title()
-        desc = override["desc"] if override else "SEC 13F-HR 開示銘柄"
-        bar = round((h.get("value_usd", 0) / max_value) * 100) if max_value else 0
-        buys.append({
-            "name": display_name,
-            "ticker": cusip,  # CUSIP→ティッカー変換は別途整備が必要
-            "desc": desc,
-            "value": f"+約{to_jpy_label(h.get('value_usd', 0))}",
-            "bar": max(bar, 5),
+        if not cusip:
+            continue
+        current_cusips.add(cusip)
+        prev_value = prev_map.get(cusip, 0)
+        delta = h.get("value_usd", 0) - prev_value
+        diffs.append({
+            **h,
+            "delta_usd": delta,
+            "is_new_position": cusip not in prev_map,
         })
 
-    # 売りは「前期比較データ」が無いと正確に出せないため、空配列で返す。
-    # TODO: 前四半期のholdingsをキャッシュし、減少額の大きい銘柄をsellsとして構築する。
-    sells = []
+    # 前回あったが今回完全に消えた銘柄 = 全売却
+    if previous_holdings:
+        for cusip, prev_value in prev_map.items():
+            if cusip not in current_cusips:
+                # 元の銘柄名を前回データから引く
+                name = next(
+                    (h.get("name_of_issuer", "UNKNOWN") for h in previous_holdings if h.get("cusip") == cusip),
+                    "UNKNOWN"
+                )
+                diffs.append({
+                    "name_of_issuer": name,
+                    "cusip": cusip,
+                    "value_usd": 0,
+                    "shares": 0,
+                    "delta_usd": -prev_value,
+                    "is_exited_position": True,
+                })
 
-    return buys, sells
+    return diffs
 
 
-def update_data_json(fund_id: str, buys: list[dict], sells: list[dict], filing_date: str):
+def build_fund_holdings(
+    holdings: list[dict],
+    previous_holdings: list[dict] | None,
+    top_n: int = TOP_N_DEFAULT,
+) -> tuple[list[dict], list[dict], bool]:
+    """
+    保有銘柄リストから「買い（増加上位）」「売り（減少上位）」を構築する。
+
+    previous_holdings が None の場合（初回実行・履歴なし）は、
+    比較ができないため "保有額が大きい銘柄" を buys の代理として返し、
+    sells は空にする。戻り値の3番目 (has_comparison) が False になる。
+    """
+    holdings = aggregate_by_cusip(holdings)
+
+    if previous_holdings is None:
+        # 初回実行: 比較不可。保有額ベースの簡易表示にフォールバック。
+        sorted_holdings = sorted(holdings, key=lambda h: h.get("value_usd", 0), reverse=True)
+        top = sorted_holdings[:top_n]
+        max_value = top[0]["value_usd"] if top else 1
+        buys = [_format_holding_row(h, max_value, is_increase=True) for h in top]
+        return buys, [], False
+
+    diffs = compute_diff(holdings, previous_holdings)
+
+    increases = sorted([d for d in diffs if d["delta_usd"] > 0], key=lambda d: d["delta_usd"], reverse=True)
+    decreases = sorted([d for d in diffs if d["delta_usd"] < 0], key=lambda d: d["delta_usd"])
+
+    top_buys = increases[:top_n]
+    top_sells = decreases[:top_n]
+
+    max_buy = top_buys[0]["delta_usd"] if top_buys else 1
+    max_sell = abs(top_sells[0]["delta_usd"]) if top_sells else 1
+
+    buys = [_format_holding_row(h, max_buy, is_increase=True, use_delta=True) for h in top_buys]
+    sells = [_format_holding_row(h, max_sell, is_increase=False, use_delta=True) for h in top_sells]
+
+    return buys, sells, True
+
+
+def _format_holding_row(h: dict, max_value: int, is_increase: bool, use_delta: bool = False) -> dict:
+    """保有/増減データ1件を、サイト表示用のdict形式に整形する。"""
+    cusip = h.get("cusip", "")
+    name_raw = h.get("name_of_issuer", "UNKNOWN")
+    override = TICKER_OVERRIDES.get(cusip, None)
+    display_name = override["name"] if override else name_raw.title()
+    desc = override["desc"] if override else "SEC 13F-HR 開示銘柄"
+
+    amount = h.get("delta_usd", h.get("value_usd", 0)) if use_delta else h.get("value_usd", 0)
+    amount_abs = abs(amount)
+    bar = round((amount_abs / max_value) * 100) if max_value else 0
+
+    sign = "+" if is_increase else "-"
+    tag_note = ""
+    if h.get("is_new_position"):
+        tag_note = "（新規）"
+    elif h.get("is_exited_position"):
+        tag_note = "（全売却）"
+
+    return {
+        "name": display_name,
+        "ticker": cusip,
+        "desc": desc + tag_note,
+        "value": f"{sign}約{to_jpy_label(amount_abs)}",
+        "bar": max(bar, 5),
+    }
+
+
+def update_data_json(fund_id: str, buys: list[dict], sells: list[dict], filing_date: str, has_comparison: bool):
     """data.json の該当ファンドの buys/sells を更新する。"""
     with open(DATA_JSON_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -312,6 +445,7 @@ def update_data_json(fund_id: str, buys: list[dict], sells: list[dict], filing_d
             if sells:
                 fund["sells"] = sells
             fund["last_filing_date"] = filing_date
+            fund["has_quarter_comparison"] = has_comparison
             break
 
     data["_meta"]["last_updated"] = time.strftime("%Y-%m-%d")
@@ -344,25 +478,48 @@ def main():
                 print(f"  13F-HR が見つかりませんでした。スキップします。")
                 continue
 
-            print(f"  最新13F-HR: accession={latest['accession']} filed={latest['filing_date']}")
+            filing_date = latest["filing_date"]
+            print(f"  最新13F-HR: accession={latest['accession']} filed={filing_date}")
 
             xml_text = fetch_information_table_xml(cik, latest["accession"])
             time.sleep(REQUEST_DELAY_SEC)
 
-            holdings = parse_holdings(xml_text, filing_date=latest["filing_date"])
+            holdings = parse_holdings(xml_text, filing_date=filing_date)
             print(f"  保有銘柄数: {len(holdings)}")
 
             if not holdings:
                 print(f"  保有データが空でした。スキップします。")
                 continue
 
-            buys, sells = build_fund_holdings(holdings, top_n=5)
-            print(f"  上位{len(buys)}銘柄を取得:")
+            holdings_agg = aggregate_by_cusip(holdings)
+
+            # 既にこの filing_date のスナップショットが保存済みなら、
+            # 今回の実行が「同じ四半期の再実行」である可能性が高い。
+            # その場合は「1つ前」のスナップショットと比較する（後述のload_previous_snapshotが処理）。
+            previous = load_previous_snapshot(fund_id, filing_date)
+            previous_holdings = previous["holdings"] if previous else None
+
+            if previous_holdings:
+                print(f"  前回スナップショット: {previous['filing_date']} と比較します。")
+            else:
+                print(f"  ⚠️ 前回スナップショットが見つかりません。今回が初回データとして保存されます。")
+                print(f"     （次回実行時から「買い/売り」の本当の判定が始まります）")
+
+            buys, sells, has_comparison = build_fund_holdings(holdings_agg, previous_holdings, top_n=TOP_N_DEFAULT)
+
+            label = "増加上位" if has_comparison else "保有額上位（初回・比較不可）"
+            print(f"  {label}{len(buys)}銘柄:")
             for b in buys:
                 print(f"    - {b['name']} ({b['ticker']}): {b['value']}")
 
-            update_data_json(fund_id, buys, sells, latest["filing_date"])
-            print(f"  data.json を更新しました。")
+            if sells:
+                print(f"  減少上位{len(sells)}銘柄:")
+                for s in sells:
+                    print(f"    - {s['name']} ({s['ticker']}): {s['value']}")
+
+            update_data_json(fund_id, buys, sells, filing_date, has_comparison)
+            save_snapshot(fund_id, filing_date, holdings_agg)
+            print(f"  data.json を更新し、スナップショットを保存しました。")
 
         except Exception as e:
             print(f"  ❌ エラー: {e}")
@@ -372,9 +529,11 @@ def main():
 
     print("=== 完了 ===")
     print()
-    print("【重要】このスクリプトは「上位保有額ランキング」を 'buys' として出力します。")
-    print("実際の「新規購入・買い増し」を判定するには、前四半期との比較が必要です。")
-    print("次のステップ: 前期データをキャッシュして増減差分を計算する処理を追加してください。")
+    print("【データの見方】")
+    print("・ has_quarter_comparison が true のファンドは、前四半期との比較に基づく")
+    print("  本当の「買い増し/売り」が data.json に反映されています。")
+    print("・ false の場合は、前回データがまだ無いため保有額ランキングで代用しています。")
+    print("  次回の四半期提出後、自動的に本当の比較に切り替わります。")
 
 
 if __name__ == "__main__":
