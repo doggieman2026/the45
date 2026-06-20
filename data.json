@@ -62,39 +62,39 @@
       ],
       "buys": [
         {
-          "name": "エクソンモービル",
-          "ticker": "XOM",
-          "desc": "世界最大級の石油会社",
-          "value": "+約1.2兆円",
-          "bar": 85
+          "name": "Microsoft Corp",
+          "ticker": "594918104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約37.2兆円",
+          "bar": 100
         },
         {
-          "name": "シェブロン",
-          "ticker": "CVX",
-          "desc": "米国大手石油会社",
-          "value": "+約0.9兆円",
-          "bar": 68
+          "name": "Nvidia Corporation",
+          "ticker": "67066G104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約34.1兆円",
+          "bar": 92
         },
         {
-          "name": "バークシャー",
-          "ticker": "BRK.B",
-          "desc": "バフェットの会社",
-          "value": "+約0.6兆円",
-          "bar": 52
+          "name": "Apple Inc",
+          "ticker": "037833100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約33.4兆円",
+          "bar": 90
         },
         {
-          "name": "ゴールドマン・サックス",
-          "ticker": "GS",
-          "desc": "世界最大級の投資銀行",
-          "value": "+約0.5兆円",
-          "bar": 42
+          "name": "Amazon Com Inc",
+          "ticker": "023135106",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約18.8兆円",
+          "bar": 51
         },
         {
-          "name": "JPモルガン",
-          "ticker": "JPM",
-          "desc": "米国最大の銀行",
-          "value": "+約0.4兆円",
-          "bar": 32
+          "name": "Meta Platforms Inc",
+          "ticker": "30303M102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約12.2兆円",
+          "bar": 33
         }
       ],
       "sells": [
@@ -133,7 +133,8 @@
           "value": "-約0.5兆円",
           "bar": 32
         }
-      ]
+      ],
+      "last_filing_date": "2024-08-13"
     },
     {
       "id": "berkshire",
@@ -181,39 +182,39 @@
       ],
       "buys": [
         {
+          "name": "Apple Inc",
+          "ticker": "037833100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約8.7兆円",
+          "bar": 100
+        },
+        {
           "name": "American Express Co",
           "ticker": "025816109",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約6763.2兆円",
-          "bar": 100
+          "value": "+約6.9兆円",
+          "bar": 79
         },
         {
           "name": "Coca Cola Co",
           "ticker": "191216100",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約3225.2兆円",
-          "bar": 48
+          "value": "+約4.6兆円",
+          "bar": 53
         },
         {
-          "name": "Apple Inc",
-          "ticker": "037833100",
+          "name": "Bank America Corp",
+          "ticker": "060505104",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約3070.8兆円",
-          "bar": 45
+          "value": "+約3.8兆円",
+          "bar": 43
         },
         {
-          "name": "Occidental Pete Corp",
-          "ticker": "674599105",
+          "name": "Chevron Corporation",
+          "ticker": "166764100",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約2583.2兆円",
-          "bar": 38
-        },
-        {
-          "name": "Apple Inc",
-          "ticker": "037833100",
-          "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約2342.8兆円",
-          "bar": 35
+          "value": "+約2.6兆円",
+          "bar": 30
         }
       ],
       "sells": [
@@ -296,35 +297,35 @@
           "name": "Nvidia Corporation",
           "ticker": "67066G104",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約56697.7兆円",
+          "value": "+約63.4兆円",
           "bar": 100
         },
         {
           "name": "Apple Inc",
           "ticker": "037833100",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約52158.4兆円",
+          "value": "+約58.2兆円",
           "bar": 92
         },
         {
           "name": "Microsoft Corp",
           "ticker": "594918104",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約46720.6兆円",
+          "value": "+約52.1兆円",
           "bar": 82
         },
         {
           "name": "Amazon Com Inc",
           "ticker": "023135106",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約25933.3兆円",
+          "value": "+約29.3兆円",
           "bar": 46
         },
         {
           "name": "Broadcom Inc",
           "ticker": "11135F101",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約22627.5兆円",
+          "value": "+約25.1兆円",
           "bar": 40
         }
       ],
@@ -422,39 +423,39 @@
       ],
       "buys": [
         {
-          "name": "金（ゴールド）ETF",
-          "ticker": "GLD",
-          "desc": "金そのものに投資する商品",
-          "value": "+約0.2兆円",
-          "bar": 88
+          "name": "State Str Spdr S&P 500 Etf T",
+          "ticker": "78462F103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約1184億円",
+          "bar": 100
         },
         {
-          "name": "インフレ対策債券",
-          "ticker": "TIP",
-          "desc": "インフレに強い米国債",
-          "value": "+約0.1兆円",
-          "bar": 68
+          "name": "Amazon Com Inc",
+          "ticker": "023135106",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約608億円",
+          "bar": 51
         },
         {
-          "name": "日本円ETF",
-          "ticker": "FXY",
-          "desc": "円に投資する商品",
-          "value": "+約0.08兆円",
-          "bar": 52
+          "name": "Taiwan Semiconductor Manufac",
+          "ticker": "874039100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約455億円",
+          "bar": 38
         },
         {
-          "name": "金ETF（別商品）",
-          "ticker": "IAU",
-          "desc": "同じく金への投資",
-          "value": "+約0.03兆円",
-          "bar": 28
+          "name": "Select Sector Spdr Tr",
+          "ticker": "81369Y506",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約455億円",
+          "bar": 38
         },
         {
-          "name": "コモディティ全般",
-          "ticker": "DBC",
-          "desc": "原油・金属などまとめて",
-          "value": "+約0.02兆円",
-          "bar": 18
+          "name": "Coreweave Inc",
+          "ticker": "21873S108",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約381億円",
+          "bar": 32
         }
       ],
       "sells": [
@@ -493,7 +494,8 @@
           "value": "-約0.02兆円",
           "bar": 15
         }
-      ]
+      ],
+      "last_filing_date": "2026-05-15"
     }
   ],
   "history_events_main": [
