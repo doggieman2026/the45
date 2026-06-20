@@ -138,6 +138,72 @@ def get_latest_13f_accession(cik: str) -> dict | None:
     return None
 
 
+def get_all_13f_accessions(cik: str, max_extra_pages: int = 10) -> list[dict]:
+    """
+    指定CIKの「過去すべて」の13F-HR（修正版/A以外）を取得する。
+
+    SEC EDGARの submissions API は、直近の提出物を "filings.recent" に持つが、
+    提出件数が多いファイラー（BlackRock等）では古いものが
+    "filings.files" に列挙される別ページ（CIK{cik}-submissions-{N}.json）に
+    分割されていることがある。この関数はそれらも辿って、可能な限り過去の
+    13F-HR提出をすべて収集する。
+
+    戻り値: filing_date 昇順（古い→新しい）の dict のリスト
+            [{accession, filing_date, primary_document}, ...]
+
+    max_extra_pages: filings.files を辿る上限（無限ループ防止の安全装置）
+    """
+    cik_padded = cik.zfill(10)
+    url = f"https://data.sec.gov/submissions/CIK{cik_padded}.json"
+    raw = http_get(url)
+    data = json.loads(raw)
+
+    results = []
+
+    def extract_13f(block: dict):
+        forms = block.get("form", [])
+        accessions = block.get("accessionNumber", [])
+        dates = block.get("filingDate", [])
+        primary_docs = block.get("primaryDocument", [])
+        for i, form in enumerate(forms):
+            if form == "13F-HR":
+                results.append({
+                    "accession": accessions[i],
+                    "filing_date": dates[i],
+                    "primary_document": primary_docs[i] if i < len(primary_docs) else "",
+                })
+
+    # 1. 直近分 (filings.recent)
+    extract_13f(data.get("filings", {}).get("recent", {}))
+
+    # 2. 古い分 (filings.files に列挙された追加ページ)
+    extra_files = data.get("filings", {}).get("files", [])
+    for idx, file_ref in enumerate(extra_files[:max_extra_pages]):
+        file_name = file_ref.get("name")
+        if not file_name:
+            continue
+        page_url = f"https://data.sec.gov/submissions/{file_name}"
+        try:
+            time.sleep(REQUEST_DELAY_SEC)
+            page_raw = http_get(page_url)
+            page_data = json.loads(page_raw)
+            extract_13f(page_data)
+        except Exception as e:
+            print(f"    （追加ページ取得でエラー、スキップ: {file_name}: {e}）")
+            continue
+
+    # 重複排除（同じaccessionが複数ページに出ることは無いはずだが念のため）
+    seen = set()
+    unique_results = []
+    for r in results:
+        if r["accession"] not in seen:
+            seen.add(r["accession"])
+            unique_results.append(r)
+
+    unique_results.sort(key=lambda r: r["filing_date"])
+    return unique_results
+
+
 def fetch_information_table_xml(cik: str, accession: str) -> str:
     """
     13F-HR提出フォルダから Information Table (XML) を取得する。
@@ -317,6 +383,68 @@ def load_previous_snapshot(fund_id: str, current_filing_date: str) -> dict | Non
         return json.load(f)
 
 
+def load_all_snapshots(fund_id: str) -> list[dict]:
+    """
+    指定ファンドの全スナップショットを filing_date の昇順（古い→新しい）で読み込む。
+    トレンド計算（四半期を跨いだ推移）の元データとして使う。
+    """
+    fund_dir = SNAPSHOT_DIR / fund_id
+    if not fund_dir.exists():
+        return []
+
+    snapshots = []
+    for p in sorted(fund_dir.glob("*.json"), key=lambda x: x.stem):
+        with open(p, "r", encoding="utf-8") as f:
+            snapshots.append(json.load(f))
+    return snapshots
+
+
+def compute_fund_trend(fund_id: str) -> dict:
+    """
+    指定ファンドの全スナップショットから、四半期ごとの集計指標（トレンド）を計算する。
+
+    各四半期について以下を計算:
+      - total_value_usd: 報告された保有銘柄の合計額（13F記載分のみ。現金等は含まれない）
+      - position_count: 保有銘柄数（CUSIP単位で集約後）
+      - top5_concentration_pct: 上位5銘柄が合計額の何%を占めるか（集中度の指標）
+
+    NOTE: 13F-HRはロング・エクイティ・ポジションのみを開示するものであり、
+    現金やショートポジションは含まれない。「現金比率」のような指標は13Fだけからは
+    算出できないため、ここでは計算可能な指標（集中度・銘柄数・合計額）のみを扱う。
+
+    戻り値: { "fund_id": ..., "quarters": [ {filing_date, total_value_usd, position_count,
+              top5_concentration_pct}, ... ], "has_enough_history": bool }
+      has_enough_history は2四半期以上のデータが無いと False
+      （トレンド＝変化を見せるには最低2点が必要なため）
+    """
+    snapshots = load_all_snapshots(fund_id)
+    quarters = []
+
+    for snap in snapshots:
+        holdings = snap.get("holdings", [])
+        if not holdings:
+            continue
+        total_value = sum(h.get("value_usd", 0) for h in holdings)
+        position_count = len(holdings)
+        sorted_h = sorted(holdings, key=lambda h: h.get("value_usd", 0), reverse=True)
+        top5_value = sum(h.get("value_usd", 0) for h in sorted_h[:5])
+        top5_pct = round((top5_value / total_value) * 100, 1) if total_value else 0.0
+
+        quarters.append({
+            "filing_date": snap.get("filing_date", ""),
+            "total_value_usd": total_value,
+            "total_value_label": to_jpy_label(total_value),
+            "position_count": position_count,
+            "top5_concentration_pct": top5_pct,
+        })
+
+    return {
+        "fund_id": fund_id,
+        "quarters": quarters,
+        "has_enough_history": len(quarters) >= 2,
+    }
+
+
 def compute_diff(current_holdings: list[dict], previous_holdings: list[dict] | None) -> list[dict]:
     """
     前回スナップショットとの比較で、各銘柄の増減額(delta_usd)を計算する。
@@ -366,17 +494,26 @@ def compute_diff(current_holdings: list[dict], previous_holdings: list[dict] | N
     return diffs
 
 
+EXTENDED_N_DEFAULT = 30  # 有料解放時に見せる拡張リストの件数
+
+
 def build_fund_holdings(
     holdings: list[dict],
     previous_holdings: list[dict] | None,
     top_n: int = TOP_N_DEFAULT,
-) -> tuple[list[dict], list[dict], bool]:
+    extended_n: int = EXTENDED_N_DEFAULT,
+) -> dict:
     """
     保有銘柄リストから「買い（増加上位）」「売り（減少上位）」を構築する。
 
+    戻り値は dict:
+      - buys / sells: 無料表示用 (top_n件、通常5件)
+      - buys_extended / sells_extended: 有料解放用の拡張リスト (extended_n件、通常30件)
+      - has_comparison: 前四半期比較ができたかどうか
+
     previous_holdings が None の場合（初回実行・履歴なし）は、
     比較ができないため "保有額が大きい銘柄" を buys の代理として返し、
-    sells は空にする。戻り値の3番目 (has_comparison) が False になる。
+    sells は空にする。
     """
     holdings = aggregate_by_cusip(holdings)
 
@@ -384,9 +521,20 @@ def build_fund_holdings(
         # 初回実行: 比較不可。保有額ベースの簡易表示にフォールバック。
         sorted_holdings = sorted(holdings, key=lambda h: h.get("value_usd", 0), reverse=True)
         top = sorted_holdings[:top_n]
+        extended = sorted_holdings[:extended_n]
         max_value = top[0]["value_usd"] if top else 1
+        max_value_ext = extended[0]["value_usd"] if extended else 1
+
         buys = [_format_holding_row(h, max_value, is_increase=True) for h in top]
-        return buys, [], False
+        buys_extended = [_format_holding_row(h, max_value_ext, is_increase=True) for h in extended]
+
+        return {
+            "buys": buys,
+            "sells": [],
+            "buys_extended": buys_extended,
+            "sells_extended": [],
+            "has_comparison": False,
+        }
 
     diffs = compute_diff(holdings, previous_holdings)
 
@@ -395,14 +543,26 @@ def build_fund_holdings(
 
     top_buys = increases[:top_n]
     top_sells = decreases[:top_n]
+    ext_buys = increases[:extended_n]
+    ext_sells = decreases[:extended_n]
 
     max_buy = top_buys[0]["delta_usd"] if top_buys else 1
     max_sell = abs(top_sells[0]["delta_usd"]) if top_sells else 1
+    max_buy_ext = ext_buys[0]["delta_usd"] if ext_buys else 1
+    max_sell_ext = abs(ext_sells[0]["delta_usd"]) if ext_sells else 1
 
     buys = [_format_holding_row(h, max_buy, is_increase=True, use_delta=True) for h in top_buys]
     sells = [_format_holding_row(h, max_sell, is_increase=False, use_delta=True) for h in top_sells]
+    buys_extended = [_format_holding_row(h, max_buy_ext, is_increase=True, use_delta=True) for h in ext_buys]
+    sells_extended = [_format_holding_row(h, max_sell_ext, is_increase=False, use_delta=True) for h in ext_sells]
 
-    return buys, sells, True
+    return {
+        "buys": buys,
+        "sells": sells,
+        "buys_extended": buys_extended,
+        "sells_extended": sells_extended,
+        "has_comparison": True,
+    }
 
 
 def _format_holding_row(h: dict, max_value: int, is_increase: bool, use_delta: bool = False) -> dict:
@@ -433,19 +593,24 @@ def _format_holding_row(h: dict, max_value: int, is_increase: bool, use_delta: b
     }
 
 
-def update_data_json(fund_id: str, buys: list[dict], sells: list[dict], filing_date: str, has_comparison: bool):
-    """data.json の該当ファンドの buys/sells を更新する。"""
+def update_data_json(fund_id: str, result: dict, filing_date: str, trend: dict | None = None):
+    """data.json の該当ファンドの buys/sells/buys_extended/sells_extended/trend を更新する。"""
     with open(DATA_JSON_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
 
     for fund in data["funds"]:
         if fund["id"] == fund_id:
-            if buys:
-                fund["buys"] = buys
-            if sells:
-                fund["sells"] = sells
+            if result["buys"]:
+                fund["buys"] = result["buys"]
+            if result["sells"]:
+                fund["sells"] = result["sells"]
+            # 拡張リストは空でも上書きする（「データが無い」状態を正しく反映するため）
+            fund["buys_extended"] = result["buys_extended"]
+            fund["sells_extended"] = result["sells_extended"]
             fund["last_filing_date"] = filing_date
-            fund["has_quarter_comparison"] = has_comparison
+            fund["has_quarter_comparison"] = result["has_comparison"]
+            if trend is not None:
+                fund["trend"] = trend
             break
 
     data["_meta"]["last_updated"] = time.strftime("%Y-%m-%d")
@@ -505,7 +670,9 @@ def main():
                 print(f"  ⚠️ 前回スナップショットが見つかりません。今回が初回データとして保存されます。")
                 print(f"     （次回実行時から「買い/売り」の本当の判定が始まります）")
 
-            buys, sells, has_comparison = build_fund_holdings(holdings_agg, previous_holdings, top_n=TOP_N_DEFAULT)
+            result = build_fund_holdings(holdings_agg, previous_holdings, top_n=TOP_N_DEFAULT, extended_n=EXTENDED_N_DEFAULT)
+            has_comparison = result["has_comparison"]
+            buys, sells = result["buys"], result["sells"]
 
             label = "増加上位" if has_comparison else "保有額上位（初回・比較不可）"
             print(f"  {label}{len(buys)}銘柄:")
@@ -517,8 +684,21 @@ def main():
                 for s in sells:
                     print(f"    - {s['name']} ({s['ticker']}): {s['value']}")
 
-            update_data_json(fund_id, buys, sells, filing_date, has_comparison)
+            print(f"  拡張リスト: buys_extended={len(result['buys_extended'])}件, sells_extended={len(result['sells_extended'])}件")
+
+            # トレンド計算: スナップショットを保存する前に、保存後の状態を見越して計算する
+            # （save_snapshotの後に計算すれば「今回分」も含めたトレンドになる）
             save_snapshot(fund_id, filing_date, holdings_agg)
+            trend = compute_fund_trend(fund_id)
+
+            if trend["has_enough_history"]:
+                print(f"  トレンド: {len(trend['quarters'])}四半期分のデータが揃いました。")
+                for q in trend["quarters"]:
+                    print(f"    - {q['filing_date']}: 合計{q['total_value_label']} / {q['position_count']}銘柄 / 上位5集中度{q['top5_concentration_pct']}%")
+            else:
+                print(f"  トレンド: まだ{len(trend['quarters'])}四半期分のみ。2四半期以上集まると表示開始されます。")
+
+            update_data_json(fund_id, result, filing_date, trend=trend)
             print(f"  data.json を更新し、スナップショットを保存しました。")
 
         except Exception as e:
