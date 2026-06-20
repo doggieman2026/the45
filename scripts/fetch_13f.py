@@ -158,37 +158,75 @@ def fetch_information_table_xml(cik: str, accession: str) -> str:
     return raw_xml.decode("utf-8", errors="replace")
 
 
-def parse_holdings(xml_text: str) -> list[dict]:
+def parse_holdings(xml_text: str, filing_date: str = "") -> list[dict]:
     """
     13F Information Table XML をパースして保有銘柄リストを返す。
-    各 infoTable には nameOfIssuer, cusip, value (千ドル単位), shrsOrPrnAmt が含まれる。
+    各 infoTable には nameOfIssuer, cusip, value, shrsOrPrnAmt が含まれる。
+
+    重要: SECの仕様変更により、<value>の単位が提出日によって異なる。
+      - 2023年1月3日より前の提出: value は「千ドル」単位 (×1000 が必要)
+      - 2023年1月3日以降の提出:   value は「ドル」そのまま (変換不要)
+      参考: SEC Form 13F Data Sets README
+      (https://www.sec.gov/files/form_13f_readme.pdf)
+
+    NOTE: SECのXMLは名前空間の書き方がファイルごとに揺れる
+    （xmlns="...", xmlns:n1="...", タグに n1:infoTable のような接頭辞がつく等）。
+    そのため、テキストレベルで全ての名前空間宣言とタグの接頭辞を除去してから
+    パースする方式にしている（ElementTreeのns対応に頼らない）。
     """
-    # 名前空間がファイルにより異なることがあるため、タグ名のローカル部分でマッチさせる
-    ns_strip = re.sub(r'xmlns(:\w+)?="[^"]+"', "", xml_text)
-    root = ET.fromstring(ns_strip)
+    # 2023-01-03 以降は value がドル単位そのもの。それより前は千ドル単位。
+    value_multiplier = 1
+    if filing_date:
+        try:
+            cutoff = "2023-01-03"
+            if filing_date < cutoff:
+                value_multiplier = 1000
+        except Exception:
+            value_multiplier = 1
+
+    text = xml_text
+
+    # BOMやXML宣言の前の余分な空白を除去
+    text = text.lstrip("\ufeff").strip()
+
+    # 1. xmlns="..." および xmlns:接頭辞="..." の属性を全て除去
+    text = re.sub(r'\s+xmlns(:\w+)?="[^"]*"', "", text)
+
+    # 2. 残った属性の "接頭辞:属性名=" から接頭辞を除去 (例: xsi:schemaLocation= -> schemaLocation=)
+    #    ※ xmlns除去後に残る xsi: などの属性接頭辞に対応。値はそのまま保持する。
+    text = re.sub(r'(\s)\w+:(\w+)=', r'\1\2=', text)
+
+    # 3. 開始/終了タグの "接頭辞:" を除去 (例: <n1:infoTable> -> <infoTable>)
+    text = re.sub(r'<(/?)\w+:(\w+)', r'<\1\2', text)
+
+    try:
+        root = ET.fromstring(text)
+    except ET.ParseError as e:
+        raise RuntimeError(f"XML parse error after namespace stripping: {e}")
 
     holdings = []
     for info_table in root.iter():
-        if info_table.tag.split("}")[-1] != "infoTable":
+        tag_local = info_table.tag.split("}")[-1]
+        if tag_local != "infoTable":
             continue
         row = {}
         for child in info_table:
             tag = child.tag.split("}")[-1]
             if tag == "nameOfIssuer":
-                row["name_of_issuer"] = child.text
+                row["name_of_issuer"] = (child.text or "").strip()
             elif tag == "cusip":
-                row["cusip"] = child.text
+                row["cusip"] = (child.text or "").strip()
             elif tag == "value":
-                # 13Fのvalueは「千ドル」単位
                 try:
-                    row["value_usd"] = int(child.text) * 1000
+                    row["value_usd"] = int((child.text or "0").strip()) * value_multiplier
                 except (TypeError, ValueError):
                     row["value_usd"] = 0
             elif tag == "shrsOrPrnAmt":
                 for sub in child:
-                    if sub.tag.split("}")[-1] == "sshPrnamt":
+                    sub_tag = sub.tag.split("}")[-1]
+                    if sub_tag == "sshPrnamt":
                         try:
-                            row["shares"] = int(sub.text)
+                            row["shares"] = int((sub.text or "0").strip())
                         except (TypeError, ValueError):
                             row["shares"] = 0
         if row.get("name_of_issuer"):
@@ -205,12 +243,35 @@ def to_jpy_label(value_usd: int) -> str:
         return f"{jpy / 1_0000_0000:.0f}億円"
 
 
+def aggregate_by_cusip(holdings: list[dict]) -> list[dict]:
+    """
+    同じ銘柄(CUSIP)が複数行に分かれて報告されている場合（株式クラス違い・
+    複数口座区分など）、value_usd と shares を合算して1行にまとめる。
+    """
+    merged: dict[str, dict] = {}
+    for h in holdings:
+        cusip = h.get("cusip", "")
+        if not cusip:
+            continue
+        if cusip not in merged:
+            merged[cusip] = {
+                "name_of_issuer": h.get("name_of_issuer", "UNKNOWN"),
+                "cusip": cusip,
+                "value_usd": 0,
+                "shares": 0,
+            }
+        merged[cusip]["value_usd"] += h.get("value_usd", 0)
+        merged[cusip]["shares"] += h.get("shares", 0)
+    return list(merged.values())
+
+
 def build_fund_holdings(holdings: list[dict], top_n: int = 5) -> tuple[list[dict], list[dict]]:
     """
     保有銘柄リストから「買い（上位）」「売り（下位/縮小）」を構築する。
     NOTE: 本来は「前期比の増減」が必要。今回のスニペットは保有額の大きい順を
     'buys' の代理として扱う簡易版。本格運用では前四半期データとの差分を取ること。
     """
+    holdings = aggregate_by_cusip(holdings)
     sorted_holdings = sorted(holdings, key=lambda h: h.get("value_usd", 0), reverse=True)
     top = sorted_holdings[:top_n]
 
@@ -288,7 +349,7 @@ def main():
             xml_text = fetch_information_table_xml(cik, latest["accession"])
             time.sleep(REQUEST_DELAY_SEC)
 
-            holdings = parse_holdings(xml_text)
+            holdings = parse_holdings(xml_text, filing_date=latest["filing_date"])
             print(f"  保有銘柄数: {len(holdings)}")
 
             if not holdings:
