@@ -1,0 +1,50 @@
+name: Backfill Historical 13F Data (One-time)
+
+# このワークフローは「手動実行のみ」。月次の自動実行(update-13f-data.yml)とは別。
+# 過去のSEC 13F-HR提出をすべて遡って取得し、data/history/ に保存する。
+# 一度実行すれば、以後は不要（既存スナップショットは自動でスキップされる）。
+"on":
+  workflow_dispatch:
+    inputs:
+      fund:
+        description: '特定のファンドだけ実行する場合はID（blackrock/berkshire/vanguard/soros）を入力。空なら全ファンド対象。'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 過去の13F-HRデータをバックフィル
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: |
+          if [ -n "${{ github.event.inputs.fund }}" ]; then
+            python3 scripts/backfill_history.py --fund "${{ github.event.inputs.fund }}"
+          else
+            python3 scripts/backfill_history.py
+          fi
+
+      - name: 取得したスナップショットをコミット&プッシュ
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "新しいスナップショットはありませんでした。"
+          else
+            git commit -m "chore: 過去13F-HRデータをバックフィル ($(date -u +%Y-%m-%d))"
+            git push
+          fi
