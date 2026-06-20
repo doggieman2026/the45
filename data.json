@@ -134,7 +134,8 @@
           "bar": 32
         }
       ],
-      "last_filing_date": "2024-08-13"
+      "last_filing_date": "2024-08-13",
+      "has_quarter_comparison": false
     },
     {
       "id": "berkshire",
@@ -254,7 +255,8 @@
           "bar": 15
         }
       ],
-      "last_filing_date": "2026-05-15"
+      "last_filing_date": "2026-05-15",
+      "has_quarter_comparison": false
     },
     {
       "id": "vanguard",
@@ -366,7 +368,8 @@
           "bar": 18
         }
       ],
-      "last_filing_date": "2026-01-29"
+      "last_filing_date": "2026-01-29",
+      "has_quarter_comparison": false
     },
     {
       "id": "soros",
@@ -495,7 +498,8 @@
           "bar": 15
         }
       ],
-      "last_filing_date": "2026-05-15"
+      "last_filing_date": "2026-05-15",
+      "has_quarter_comparison": false
     }
   ],
   "history_events_main": [
