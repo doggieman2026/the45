@@ -1,0 +1,1146 @@
+{
+  "fund_id": "soros",
+  "filing_date": "2018-02-14",
+  "holdings": [
+    {
+      "name_of_issuer": "3M CO",
+      "cusip": "88579Y101",
+      "value_usd": 588000,
+      "shares": 2500
+    },
+    {
+      "name_of_issuer": "ACTIVISION BLIZZARD INC",
+      "cusip": "00507V109",
+      "value_usd": 374000,
+      "shares": 5900
+    },
+    {
+      "name_of_issuer": "ADTALEM GLOBAL ED INC",
+      "cusip": "00737L103",
+      "value_usd": 5206000,
+      "shares": 123810
+    },
+    {
+      "name_of_issuer": "ADVANCED MICRO DEVICES INC",
+      "cusip": "007903107",
+      "value_usd": 270000,
+      "shares": 26300
+    },
+    {
+      "name_of_issuer": "AETNA INC NEW",
+      "cusip": "00817Y108",
+      "value_usd": 35898000,
+      "shares": 199000
+    },
+    {
+      "name_of_issuer": "AIRGAIN INC",
+      "cusip": "00938A104",
+      "value_usd": 1815000,
+      "shares": 201939
+    },
+    {
+      "name_of_issuer": "ALLIANCE ONE INTL INC",
+      "cusip": "018772301",
+      "value_usd": 478000,
+      "shares": 36099
+    },
+    {
+      "name_of_issuer": "ALLISON TRANSMISSION HLDGS I",
+      "cusip": "01973R101",
+      "value_usd": 736000,
+      "shares": 17100
+    },
+    {
+      "name_of_issuer": "ALLOT COMMUNICATIONS LTD",
+      "cusip": "M0854Q105",
+      "value_usd": 28175000,
+      "shares": 5286063
+    },
+    {
+      "name_of_issuer": "ALPHABET INC",
+      "cusip": "02079K305",
+      "value_usd": 4846000,
+      "shares": 4600
+    },
+    {
+      "name_of_issuer": "ALPS ETF TR",
+      "cusip": "00162Q866",
+      "value_usd": 86547000,
+      "shares": 8021000
+    },
+    {
+      "name_of_issuer": "ALTABA INC",
+      "cusip": "021346101",
+      "value_usd": 180448000,
+      "shares": 2583369
+    },
+    {
+      "name_of_issuer": "AMERICAN EAGLE OUTFITTERS NE",
+      "cusip": "02553E106",
+      "value_usd": 24029000,
+      "shares": 1278162
+    },
+    {
+      "name_of_issuer": "AMERISOURCEBERGEN CORP",
+      "cusip": "03073E105",
+      "value_usd": 459000,
+      "shares": 5000
+    },
+    {
+      "name_of_issuer": "ANAPTYSBIO INC",
+      "cusip": "032724106",
+      "value_usd": 6275000,
+      "shares": 62300
+    },
+    {
+      "name_of_issuer": "ANSYS INC",
+      "cusip": "03662Q105",
+      "value_usd": 915000,
+      "shares": 6200
+    },
+    {
+      "name_of_issuer": "ARCONIC INC",
+      "cusip": "03965L100",
+      "value_usd": 662000,
+      "shares": 24300
+    },
+    {
+      "name_of_issuer": "AT&T INC",
+      "cusip": "00206R102",
+      "value_usd": 2430000,
+      "shares": 62500
+    },
+    {
+      "name_of_issuer": "ATHENAHEALTH INC",
+      "cusip": "04685W103",
+      "value_usd": 399000,
+      "shares": 3000
+    },
+    {
+      "name_of_issuer": "ATHENE HLDG LTD",
+      "cusip": "G0684D107",
+      "value_usd": 202000,
+      "shares": 3900
+    },
+    {
+      "name_of_issuer": "ATMOS ENERGY CORP",
+      "cusip": "049560105",
+      "value_usd": 387000,
+      "shares": 4500
+    },
+    {
+      "name_of_issuer": "BANK AMER CORP",
+      "cusip": "060505104",
+      "value_usd": 7811000,
+      "shares": 264600
+    },
+    {
+      "name_of_issuer": "BAXTER INTL INC",
+      "cusip": "071813109",
+      "value_usd": 12928000,
+      "shares": 200000
+    },
+    {
+      "name_of_issuer": "BECTON DICKINSON & CO",
+      "cusip": "075887109",
+      "value_usd": 450000,
+      "shares": 2100
+    },
+    {
+      "name_of_issuer": "BROOKFIELD BUSINESS PARTNERS",
+      "cusip": "G16234109",
+      "value_usd": 7276000,
+      "shares": 210769
+    },
+    {
+      "name_of_issuer": "CAESARS ENTMT CORP",
+      "cusip": "127686103",
+      "value_usd": 436405000,
+      "shares": 34498395
+    },
+    {
+      "name_of_issuer": "CAESARS ENTMT CORP",
+      "cusip": "127686AA1",
+      "value_usd": 133455000,
+      "shares": 68813433
+    },
+    {
+      "name_of_issuer": "CALIFORNIA RES CORP",
+      "cusip": "13057Q206",
+      "value_usd": 31682000,
+      "shares": 1629724
+    },
+    {
+      "name_of_issuer": "CANADIAN NAT RES LTD",
+      "cusip": "136385101",
+      "value_usd": 10952000,
+      "shares": 306600
+    },
+    {
+      "name_of_issuer": "CAVIUM INC",
+      "cusip": "14964U108",
+      "value_usd": 2800000,
+      "shares": 33400
+    },
+    {
+      "name_of_issuer": "CBS CORP NEW",
+      "cusip": "124857202",
+      "value_usd": 26550000,
+      "shares": 450000
+    },
+    {
+      "name_of_issuer": "CDK GLOBAL INC",
+      "cusip": "12508E101",
+      "value_usd": 364000,
+      "shares": 5100
+    },
+    {
+      "name_of_issuer": "CEMEX SAB DE CV",
+      "cusip": "151290BT9",
+      "value_usd": 17765000,
+      "shares": 17000000
+    },
+    {
+      "name_of_issuer": "CEMEX SAB DE CV",
+      "cusip": "151290BR3",
+      "value_usd": 15563000,
+      "shares": 15000000
+    },
+    {
+      "name_of_issuer": "CENOVUS ENERGY INC",
+      "cusip": "15135U109",
+      "value_usd": 4565000,
+      "shares": 500000
+    },
+    {
+      "name_of_issuer": "CENTURYLINK INC",
+      "cusip": "156700106",
+      "value_usd": 18393000,
+      "shares": 1102725
+    },
+    {
+      "name_of_issuer": "CHARTER COMMUNICATIONS INC N",
+      "cusip": "16119P108",
+      "value_usd": 24962000,
+      "shares": 74300
+    },
+    {
+      "name_of_issuer": "CHURCHILL DOWNS INC",
+      "cusip": "171484108",
+      "value_usd": 27518000,
+      "shares": 118254
+    },
+    {
+      "name_of_issuer": "CIENA CORP",
+      "cusip": "171779AK7",
+      "value_usd": 6538000,
+      "shares": 5000000
+    },
+    {
+      "name_of_issuer": "CIENA CORP",
+      "cusip": "171779AJ0",
+      "value_usd": 11650000,
+      "shares": 10000000
+    },
+    {
+      "name_of_issuer": "CIGNA CORPORATION",
+      "cusip": "125509109",
+      "value_usd": 24736000,
+      "shares": 121800
+    },
+    {
+      "name_of_issuer": "CME GROUP INC",
+      "cusip": "12572Q105",
+      "value_usd": 4382000,
+      "shares": 30000
+    },
+    {
+      "name_of_issuer": "COMCAST CORP NEW",
+      "cusip": "20030N101",
+      "value_usd": 37046000,
+      "shares": 925000
+    },
+    {
+      "name_of_issuer": "COMERICA INC",
+      "cusip": "200340107",
+      "value_usd": 17868000,
+      "shares": 205824
+    },
+    {
+      "name_of_issuer": "COOPER COS INC",
+      "cusip": "216648402",
+      "value_usd": 545000,
+      "shares": 2500
+    },
+    {
+      "name_of_issuer": "CORNERSTONE ONDEMAND INC",
+      "cusip": "21925Y103",
+      "value_usd": 1666000,
+      "shares": 47143
+    },
+    {
+      "name_of_issuer": "COTY INC",
+      "cusip": "222070203",
+      "value_usd": 2588000,
+      "shares": 130100
+    },
+    {
+      "name_of_issuer": "CROWN CASTLE INTL CORP NEW",
+      "cusip": "22822V309",
+      "value_usd": 16932000,
+      "shares": 15000
+    },
+    {
+      "name_of_issuer": "CROWN CASTLE INTL CORP NEW",
+      "cusip": "22822V101",
+      "value_usd": 22391000,
+      "shares": 201700
+    },
+    {
+      "name_of_issuer": "DAVE & BUSTERS ENTMT INC",
+      "cusip": "238337109",
+      "value_usd": 32572000,
+      "shares": 590400
+    },
+    {
+      "name_of_issuer": "DELL TECHNOLOGIES INC",
+      "cusip": "24703L103",
+      "value_usd": 4763000,
+      "shares": 58600
+    },
+    {
+      "name_of_issuer": "DENBURY RES INC",
+      "cusip": "247916208",
+      "value_usd": 15422000,
+      "shares": 6978405
+    },
+    {
+      "name_of_issuer": "DEXCOM INC",
+      "cusip": "252131107",
+      "value_usd": 218000,
+      "shares": 3800
+    },
+    {
+      "name_of_issuer": "DISH NETWORK CORP",
+      "cusip": "25470MAB5",
+      "value_usd": 33809000,
+      "shares": 31000000
+    },
+    {
+      "name_of_issuer": "DISNEY WALT CO",
+      "cusip": "254687106",
+      "value_usd": 26878000,
+      "shares": 250000
+    },
+    {
+      "name_of_issuer": "DOMINOS PIZZA INC",
+      "cusip": "25754A201",
+      "value_usd": 472000,
+      "shares": 2500
+    },
+    {
+      "name_of_issuer": "DONALDSON INC",
+      "cusip": "257651109",
+      "value_usd": 303000,
+      "shares": 6200
+    },
+    {
+      "name_of_issuer": "EASTMAN KODAK CO",
+      "cusip": "277461141",
+      "value_usd": 0,
+      "shares": 8383
+    },
+    {
+      "name_of_issuer": "EASTMAN KODAK CO",
+      "cusip": "277461133",
+      "value_usd": 0,
+      "shares": 8383
+    },
+    {
+      "name_of_issuer": "EASTMAN KODAK CO",
+      "cusip": "277461406",
+      "value_usd": 75000,
+      "shares": 24123
+    },
+    {
+      "name_of_issuer": "EDGEWELL PERS CARE CO",
+      "cusip": "28035Q102",
+      "value_usd": 4116000,
+      "shares": 69300
+    },
+    {
+      "name_of_issuer": "EMERSON ELEC CO",
+      "cusip": "291011104",
+      "value_usd": 321000,
+      "shares": 4600
+    },
+    {
+      "name_of_issuer": "ENDO INTL PLC",
+      "cusip": "G30401106",
+      "value_usd": 15500000,
+      "shares": 2000000
+    },
+    {
+      "name_of_issuer": "ENERGEN CORP",
+      "cusip": "29265N108",
+      "value_usd": 14105000,
+      "shares": 245000
+    },
+    {
+      "name_of_issuer": "EQT CORP",
+      "cusip": "26884L109",
+      "value_usd": 74897000,
+      "shares": 1315816
+    },
+    {
+      "name_of_issuer": "EXFO INC",
+      "cusip": "302046107",
+      "value_usd": 4757000,
+      "shares": 1093500
+    },
+    {
+      "name_of_issuer": "EXTRA SPACE STORAGE INC",
+      "cusip": "30225T102",
+      "value_usd": 22903000,
+      "shares": 261894
+    },
+    {
+      "name_of_issuer": "EXTRACTION OIL AND GAS INC",
+      "cusip": "30227M105",
+      "value_usd": 4150000,
+      "shares": 290000
+    },
+    {
+      "name_of_issuer": "FGL HLDGS",
+      "cusip": "G3402M102",
+      "value_usd": 35355000,
+      "shares": 3510938
+    },
+    {
+      "name_of_issuer": "FGL HLDGS",
+      "cusip": "G3402M110",
+      "value_usd": 0,
+      "shares": 1000000
+    },
+    {
+      "name_of_issuer": "FIAT CHRYSLER AUTOMOBILES N",
+      "cusip": "N31738102",
+      "value_usd": 9896000,
+      "shares": 554731
+    },
+    {
+      "name_of_issuer": "FIREEYE INC",
+      "cusip": "31816QAB7",
+      "value_usd": 193075000,
+      "shares": 205672000
+    },
+    {
+      "name_of_issuer": "FIRST INDUSTRIAL REALTY TRUS",
+      "cusip": "32054K103",
+      "value_usd": 387000,
+      "shares": 12300
+    },
+    {
+      "name_of_issuer": "FORTINET INC",
+      "cusip": "34959E109",
+      "value_usd": 896000,
+      "shares": 20500
+    },
+    {
+      "name_of_issuer": "GAP INC DEL",
+      "cusip": "364760108",
+      "value_usd": 34005000,
+      "shares": 998391
+    },
+    {
+      "name_of_issuer": "GENCO SHIPPING & TRADING LTD",
+      "cusip": "Y2685T131",
+      "value_usd": 996000,
+      "shares": 74783
+    },
+    {
+      "name_of_issuer": "GENERAL ELECTRIC CO",
+      "cusip": "369604103",
+      "value_usd": 749000,
+      "shares": 42900
+    },
+    {
+      "name_of_issuer": "GENERAL MTRS CO",
+      "cusip": "37045V100",
+      "value_usd": 24598000,
+      "shares": 600109
+    },
+    {
+      "name_of_issuer": "GRIDSUM HLDG INC",
+      "cusip": "398132100",
+      "value_usd": 1373000,
+      "shares": 150000
+    },
+    {
+      "name_of_issuer": "GRUBHUB INC",
+      "cusip": "400110102",
+      "value_usd": 12687000,
+      "shares": 176700
+    },
+    {
+      "name_of_issuer": "HALLIBURTON CO",
+      "cusip": "406216101",
+      "value_usd": 80269000,
+      "shares": 1642500
+    },
+    {
+      "name_of_issuer": "HANESBRANDS INC",
+      "cusip": "410345102",
+      "value_usd": 293000,
+      "shares": 14000
+    },
+    {
+      "name_of_issuer": "HEICO CORP NEW",
+      "cusip": "422806109",
+      "value_usd": 745000,
+      "shares": 7900
+    },
+    {
+      "name_of_issuer": "HERITAGE INS HLDGS INC",
+      "cusip": "42727J102",
+      "value_usd": 11200000,
+      "shares": 621647
+    },
+    {
+      "name_of_issuer": "HP INC",
+      "cusip": "40434L105",
+      "value_usd": 347000,
+      "shares": 16500
+    },
+    {
+      "name_of_issuer": "IDENTIV INC",
+      "cusip": "45170X205",
+      "value_usd": 496000,
+      "shares": 148500
+    },
+    {
+      "name_of_issuer": "IDEXX LABS INC",
+      "cusip": "45168D104",
+      "value_usd": 391000,
+      "shares": 2500
+    },
+    {
+      "name_of_issuer": "IHS MARKIT LTD",
+      "cusip": "G47567105",
+      "value_usd": 348000,
+      "shares": 7700
+    },
+    {
+      "name_of_issuer": "ILG INC",
+      "cusip": "44967H101",
+      "value_usd": 776000,
+      "shares": 27234
+    },
+    {
+      "name_of_issuer": "INSEEGO CORP",
+      "cusip": "45782BAA2",
+      "value_usd": 39320000,
+      "shares": 47769000
+    },
+    {
+      "name_of_issuer": "INTERXION HOLDING N.V",
+      "cusip": "N47279109",
+      "value_usd": 23867000,
+      "shares": 405000
+    },
+    {
+      "name_of_issuer": "INVITATION HOMES INC",
+      "cusip": "46187W107",
+      "value_usd": 5072000,
+      "shares": 215200
+    },
+    {
+      "name_of_issuer": "ISHARES TR",
+      "cusip": "464287556",
+      "value_usd": 2210000,
+      "shares": 20700
+    },
+    {
+      "name_of_issuer": "ISHARES TR",
+      "cusip": "464287655",
+      "value_usd": 83762000,
+      "shares": 549400
+    },
+    {
+      "name_of_issuer": "JDS UNIPHASE CORP",
+      "cusip": "46612JAF8",
+      "value_usd": 11874000,
+      "shares": 11500000
+    },
+    {
+      "name_of_issuer": "KENNEDY-WILSON HLDGS INC",
+      "cusip": "489398107",
+      "value_usd": 106865000,
+      "shares": 6159366
+    },
+    {
+      "name_of_issuer": "KEY ENERGY SVCS INC DEL",
+      "cusip": "49309J103",
+      "value_usd": 5422000,
+      "shares": 459917
+    },
+    {
+      "name_of_issuer": "LABORATORY CORP AMER HLDGS",
+      "cusip": "50540R409",
+      "value_usd": 17387000,
+      "shares": 109000
+    },
+    {
+      "name_of_issuer": "LAM RESEARCH CORP",
+      "cusip": "512807108",
+      "value_usd": 49631000,
+      "shares": 269632
+    },
+    {
+      "name_of_issuer": "LEIDOS HLDGS INC",
+      "cusip": "525327102",
+      "value_usd": 368000,
+      "shares": 5700
+    },
+    {
+      "name_of_issuer": "LIBERTY BROADBAND CORP",
+      "cusip": "530307305",
+      "value_usd": 659482000,
+      "shares": 7744036
+    },
+    {
+      "name_of_issuer": "LIBERTY GLOBAL PLC",
+      "cusip": "G5480U104",
+      "value_usd": 10752000,
+      "shares": 300000
+    },
+    {
+      "name_of_issuer": "LIBERTY INTERACTIVE CORP",
+      "cusip": "53071M856",
+      "value_usd": 21804000,
+      "shares": 402000
+    },
+    {
+      "name_of_issuer": "LIBERTY MEDIA CORP DELAWARE",
+      "cusip": "531229AE2",
+      "value_usd": 20925000,
+      "shares": 20000000
+    },
+    {
+      "name_of_issuer": "LIONS GATE ENTMNT CORP",
+      "cusip": "535919401",
+      "value_usd": 13524000,
+      "shares": 400000
+    },
+    {
+      "name_of_issuer": "LIVANOVA PLC",
+      "cusip": "G5509L101",
+      "value_usd": 23830000,
+      "shares": 298168
+    },
+    {
+      "name_of_issuer": "LPL FINL HLDGS INC",
+      "cusip": "50212V100",
+      "value_usd": 8462000,
+      "shares": 148100
+    },
+    {
+      "name_of_issuer": "MARKETAXESS HLDGS INC",
+      "cusip": "57060D108",
+      "value_usd": 646000,
+      "shares": 3200
+    },
+    {
+      "name_of_issuer": "MARTIN MARIETTA MATLS INC",
+      "cusip": "573284106",
+      "value_usd": 4730000,
+      "shares": 21400
+    },
+    {
+      "name_of_issuer": "MARVELL TECHNOLOGY GROUP LTD",
+      "cusip": "G5876H105",
+      "value_usd": 6441000,
+      "shares": 300000
+    },
+    {
+      "name_of_issuer": "MAXIM INTEGRATED PRODS INC",
+      "cusip": "57772K101",
+      "value_usd": 706000,
+      "shares": 13500
+    },
+    {
+      "name_of_issuer": "MCKESSON CORP",
+      "cusip": "58155Q103",
+      "value_usd": 8811000,
+      "shares": 56500
+    },
+    {
+      "name_of_issuer": "METROPOLITAN BK HLDG CORP",
+      "cusip": "591774104",
+      "value_usd": 1878000,
+      "shares": 44600
+    },
+    {
+      "name_of_issuer": "MGIC INVT CORP WIS",
+      "cusip": "552848103",
+      "value_usd": 2877000,
+      "shares": 203900
+    },
+    {
+      "name_of_issuer": "MICROSOFT CORP",
+      "cusip": "594918104",
+      "value_usd": 4936000,
+      "shares": 57700
+    },
+    {
+      "name_of_issuer": "MODEL N INC",
+      "cusip": "607525102",
+      "value_usd": 6091000,
+      "shares": 386761
+    },
+    {
+      "name_of_issuer": "MOLINA HEALTHCARE INC",
+      "cusip": "60855R100",
+      "value_usd": 2400000,
+      "shares": 31300
+    },
+    {
+      "name_of_issuer": "MONSANTO CO NEW",
+      "cusip": "61166W101",
+      "value_usd": 20405000,
+      "shares": 174729
+    },
+    {
+      "name_of_issuer": "MOTOROLA SOLUTIONS INC",
+      "cusip": "620076307",
+      "value_usd": 678000,
+      "shares": 7500
+    },
+    {
+      "name_of_issuer": "NATIONAL BEVERAGE CORP",
+      "cusip": "635017106",
+      "value_usd": 429000,
+      "shares": 4400
+    },
+    {
+      "name_of_issuer": "NETFLIX INC",
+      "cusip": "64110L106",
+      "value_usd": 13725000,
+      "shares": 71500
+    },
+    {
+      "name_of_issuer": "NOBLE ENERGY INC",
+      "cusip": "655044105",
+      "value_usd": 2914000,
+      "shares": 100000
+    },
+    {
+      "name_of_issuer": "NOMAD FOODS LTD",
+      "cusip": "G6564A105",
+      "value_usd": 15526000,
+      "shares": 918132
+    },
+    {
+      "name_of_issuer": "NORDSON CORP",
+      "cusip": "655663102",
+      "value_usd": 747000,
+      "shares": 5100
+    },
+    {
+      "name_of_issuer": "NUANCE COMMUNICATIONS INC",
+      "cusip": "67020YAK6",
+      "value_usd": 8883000,
+      "shares": 9259000
+    },
+    {
+      "name_of_issuer": "NXP SEMICONDUCTORS N V",
+      "cusip": "N6596X109",
+      "value_usd": 61219000,
+      "shares": 522840
+    },
+    {
+      "name_of_issuer": "OASIS PETE INC NEW",
+      "cusip": "674215108",
+      "value_usd": 6728000,
+      "shares": 800000
+    },
+    {
+      "name_of_issuer": "OCEAN RIG UDW INC",
+      "cusip": "G66964118",
+      "value_usd": 7420000,
+      "shares": 276875
+    },
+    {
+      "name_of_issuer": "ONEOK INC NEW",
+      "cusip": "682680103",
+      "value_usd": 10690000,
+      "shares": 200000
+    },
+    {
+      "name_of_issuer": "ORBITAL ATK INC",
+      "cusip": "68557N103",
+      "value_usd": 3261000,
+      "shares": 24800
+    },
+    {
+      "name_of_issuer": "OVERSTOCK COM INC DEL",
+      "cusip": "690370101",
+      "value_usd": 157973000,
+      "shares": 2472188
+    },
+    {
+      "name_of_issuer": "PACKAGING CORP AMER",
+      "cusip": "695156109",
+      "value_usd": 386000,
+      "shares": 3200
+    },
+    {
+      "name_of_issuer": "PAMPA ENERGIA S A",
+      "cusip": "697660207",
+      "value_usd": 6728000,
+      "shares": 100000
+    },
+    {
+      "name_of_issuer": "PAYCHEX INC",
+      "cusip": "704326107",
+      "value_usd": 300000,
+      "shares": 4400
+    },
+    {
+      "name_of_issuer": "PEABODY ENERGY CORP NEW",
+      "cusip": "704551407",
+      "value_usd": 3925000,
+      "shares": 52963
+    },
+    {
+      "name_of_issuer": "PEABODY ENERGY CORP NEW",
+      "cusip": "704551100",
+      "value_usd": 574000,
+      "shares": 14582
+    },
+    {
+      "name_of_issuer": "PLAINS GP HLDGS L P",
+      "cusip": "72651A207",
+      "value_usd": 3293000,
+      "shares": 150000
+    },
+    {
+      "name_of_issuer": "PRA GROUP INC",
+      "cusip": "69354N106",
+      "value_usd": 4735000,
+      "shares": 142615
+    },
+    {
+      "name_of_issuer": "PRICELINE GRP INC",
+      "cusip": "741503403",
+      "value_usd": 521000,
+      "shares": 300
+    },
+    {
+      "name_of_issuer": "PUMA BIOTECHNOLOGY INC",
+      "cusip": "74587V107",
+      "value_usd": 6682000,
+      "shares": 67600
+    },
+    {
+      "name_of_issuer": "QUALCOMM INC",
+      "cusip": "747525103",
+      "value_usd": 9910000,
+      "shares": 154800
+    },
+    {
+      "name_of_issuer": "REGAL ENTMT GROUP",
+      "cusip": "758766109",
+      "value_usd": 3058000,
+      "shares": 132900
+    },
+    {
+      "name_of_issuer": "REGIONS FINL CORP NEW",
+      "cusip": "7591EP100",
+      "value_usd": 5250000,
+      "shares": 303800
+    },
+    {
+      "name_of_issuer": "REX ENERGY CORPORATION",
+      "cusip": "761565506",
+      "value_usd": 23000,
+      "shares": 16500
+    },
+    {
+      "name_of_issuer": "RINGCENTRAL INC",
+      "cusip": "76680R206",
+      "value_usd": 12100000,
+      "shares": 250000
+    },
+    {
+      "name_of_issuer": "ROCKWELL COLLINS INC",
+      "cusip": "774341101",
+      "value_usd": 28385000,
+      "shares": 209300
+    },
+    {
+      "name_of_issuer": "ROVI CORP",
+      "cusip": "779376AD4",
+      "value_usd": 153943000,
+      "shares": 162687000
+    },
+    {
+      "name_of_issuer": "SABRE CORP",
+      "cusip": "78573M104",
+      "value_usd": 344000,
+      "shares": 16800
+    },
+    {
+      "name_of_issuer": "SBA COMMUNICATIONS CORP NEW",
+      "cusip": "78410G104",
+      "value_usd": 24504000,
+      "shares": 150000
+    },
+    {
+      "name_of_issuer": "SCHWAB CHARLES CORP NEW",
+      "cusip": "808513105",
+      "value_usd": 3457000,
+      "shares": 67300
+    },
+    {
+      "name_of_issuer": "SELECT SECTOR SPDR TR",
+      "cusip": "81369Y506",
+      "value_usd": 542000,
+      "shares": 7500
+    },
+    {
+      "name_of_issuer": "SELECT SECTOR SPDR TR",
+      "cusip": "81369Y605",
+      "value_usd": 29272000,
+      "shares": 1048811
+    },
+    {
+      "name_of_issuer": "SERVICEMASTER GLOBAL HLDGS I",
+      "cusip": "81761R109",
+      "value_usd": 2755000,
+      "shares": 53743
+    },
+    {
+      "name_of_issuer": "SERVICESOURCE INTL INC",
+      "cusip": "81763U100",
+      "value_usd": 695000,
+      "shares": 225015
+    },
+    {
+      "name_of_issuer": "SERVICESOURCE INTL INC",
+      "cusip": "81763UAB6",
+      "value_usd": 118815000,
+      "shares": 121085000
+    },
+    {
+      "name_of_issuer": "SIGMA DESIGNS INC",
+      "cusip": "826565103",
+      "value_usd": 35576000,
+      "shares": 5118789
+    },
+    {
+      "name_of_issuer": "SNAP INC",
+      "cusip": "83304A106",
+      "value_usd": 2072000,
+      "shares": 141800
+    },
+    {
+      "name_of_issuer": "SOLAREDGE TECHNOLOGIES INC",
+      "cusip": "83417M104",
+      "value_usd": 37918000,
+      "shares": 1009793
+    },
+    {
+      "name_of_issuer": "SOUTHWEST AIRLS CO",
+      "cusip": "844741108",
+      "value_usd": 609000,
+      "shares": 9300
+    },
+    {
+      "name_of_issuer": "SPDR S&P 500 ETF TR",
+      "cusip": "78462F103",
+      "value_usd": 3763000,
+      "shares": 14100
+    },
+    {
+      "name_of_issuer": "SPDR SERIES TRUST",
+      "cusip": "78464A730",
+      "value_usd": 25738000,
+      "shares": 692250
+    },
+    {
+      "name_of_issuer": "SPDR SERIES TRUST",
+      "cusip": "78464A698",
+      "value_usd": 37164000,
+      "shares": 631507
+    },
+    {
+      "name_of_issuer": "STERIS PLC",
+      "cusip": "G84720104",
+      "value_usd": 227000,
+      "shares": 2600
+    },
+    {
+      "name_of_issuer": "SWITCH INC",
+      "cusip": "87105L104",
+      "value_usd": 4093000,
+      "shares": 225000
+    },
+    {
+      "name_of_issuer": "TAKE-TWO INTERACTIVE SOFTWAR",
+      "cusip": "874054109",
+      "value_usd": 23043000,
+      "shares": 209900
+    },
+    {
+      "name_of_issuer": "TARGA RES CORP",
+      "cusip": "87612G101",
+      "value_usd": 3217000,
+      "shares": 66430
+    },
+    {
+      "name_of_issuer": "TARGET CORP",
+      "cusip": "87612E106",
+      "value_usd": 36440000,
+      "shares": 558460
+    },
+    {
+      "name_of_issuer": "TAYLOR MORRISON HOME CORP",
+      "cusip": "87724P106",
+      "value_usd": 11508000,
+      "shares": 470300
+    },
+    {
+      "name_of_issuer": "TEVA PHARMACEUTICAL INDS LTD",
+      "cusip": "881624209",
+      "value_usd": 22551000,
+      "shares": 1190000
+    },
+    {
+      "name_of_issuer": "THERMO FISHER SCIENTIFIC INC",
+      "cusip": "883556102",
+      "value_usd": 10918000,
+      "shares": 57500
+    },
+    {
+      "name_of_issuer": "TIME WARNER INC",
+      "cusip": "887317303",
+      "value_usd": 36135000,
+      "shares": 395042
+    },
+    {
+      "name_of_issuer": "TIVO CORP",
+      "cusip": "88870P106",
+      "value_usd": 60060000,
+      "shares": 3850000
+    },
+    {
+      "name_of_issuer": "TRANSDIGM GROUP INC",
+      "cusip": "893641100",
+      "value_usd": 577000,
+      "shares": 2100
+    },
+    {
+      "name_of_issuer": "TRIBUNE MEDIA CO",
+      "cusip": "896047503",
+      "value_usd": 5444000,
+      "shares": 128175
+    },
+    {
+      "name_of_issuer": "TWITTER INC",
+      "cusip": "90184L102",
+      "value_usd": 819000,
+      "shares": 34100
+    },
+    {
+      "name_of_issuer": "UGI CORP NEW",
+      "cusip": "902681105",
+      "value_usd": 540000,
+      "shares": 11500
+    },
+    {
+      "name_of_issuer": "ULTIMATE SOFTWARE GROUP INC",
+      "cusip": "90385D107",
+      "value_usd": 349000,
+      "shares": 1600
+    },
+    {
+      "name_of_issuer": "ULTRA CLEAN HLDGS INC",
+      "cusip": "90385V107",
+      "value_usd": 2489000,
+      "shares": 107800
+    },
+    {
+      "name_of_issuer": "UNIVERSAL HLTH SVCS INC",
+      "cusip": "913903100",
+      "value_usd": 14747000,
+      "shares": 130100
+    },
+    {
+      "name_of_issuer": "URBAN OUTFITTERS INC",
+      "cusip": "917047102",
+      "value_usd": 35868000,
+      "shares": 1023055
+    },
+    {
+      "name_of_issuer": "VALEANT PHARMACEUTICALS INTL",
+      "cusip": "91911K102",
+      "value_usd": 31170000,
+      "shares": 1500000
+    },
+    {
+      "name_of_issuer": "VALERO ENERGY CORP NEW",
+      "cusip": "91913Y100",
+      "value_usd": 11948000,
+      "shares": 130000
+    },
+    {
+      "name_of_issuer": "VANECK VECTORS ETF TR",
+      "cusip": "92189F718",
+      "value_usd": 5325000,
+      "shares": 204400
+    },
+    {
+      "name_of_issuer": "VARIAN MED SYS INC",
+      "cusip": "92220P105",
+      "value_usd": 233000,
+      "shares": 2100
+    },
+    {
+      "name_of_issuer": "VIAVI SOLUTIONS INC",
+      "cusip": "925550105",
+      "value_usd": 3878000,
+      "shares": 443700
+    },
+    {
+      "name_of_issuer": "VISA INC",
+      "cusip": "92826C839",
+      "value_usd": 2497000,
+      "shares": 21900
+    },
+    {
+      "name_of_issuer": "WALGREENS BOOTS ALLIANCE INC",
+      "cusip": "931427108",
+      "value_usd": 3094000,
+      "shares": 42600
+    },
+    {
+      "name_of_issuer": "ZAYO GROUP HLDGS INC",
+      "cusip": "98919V105",
+      "value_usd": 30360000,
+      "shares": 825000
+    },
+    {
+      "name_of_issuer": "ZIMMER BIOMET HLDGS INC",
+      "cusip": "98956P102",
+      "value_usd": 15747000,
+      "shares": 130500
+    },
+    {
+      "name_of_issuer": "ZIONS BANCORPORATION",
+      "cusip": "989701107",
+      "value_usd": 9886000,
+      "shares": 194500
+    }
+  ]
+}

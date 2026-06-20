@@ -1,0 +1,306 @@
+{
+  "fund_id": "berkshire",
+  "filing_date": "2020-05-15",
+  "holdings": [
+    {
+      "name_of_issuer": "AMAZON COM INC",
+      "cusip": "023135106",
+      "value_usd": 1039786000,
+      "shares": 533300
+    },
+    {
+      "name_of_issuer": "AMERICAN AIRLS GROUP INC",
+      "cusip": "02376R102",
+      "value_usd": 510871000,
+      "shares": 41909000
+    },
+    {
+      "name_of_issuer": "AMERICAN EXPRESS CO",
+      "cusip": "025816109",
+      "value_usd": 12979391000,
+      "shares": 151610700
+    },
+    {
+      "name_of_issuer": "APPLE INC",
+      "cusip": "037833100",
+      "value_usd": 62340609000,
+      "shares": 245155566
+    },
+    {
+      "name_of_issuer": "BANK AMER CORP",
+      "cusip": "060505104",
+      "value_usd": 19637932000,
+      "shares": 925008600
+    },
+    {
+      "name_of_issuer": "BANK OF NEW YORK MELLON CORP",
+      "cusip": "064058100",
+      "value_usd": 2686487000,
+      "shares": 79765057
+    },
+    {
+      "name_of_issuer": "BIOGEN INC",
+      "cusip": "09062X103",
+      "value_usd": 203440000,
+      "shares": 643022
+    },
+    {
+      "name_of_issuer": "CHARTER COMMUNICATIONS INC N",
+      "cusip": "16119P108",
+      "value_usd": 2367684000,
+      "shares": 5426609
+    },
+    {
+      "name_of_issuer": "COCA COLA CO",
+      "cusip": "191216100",
+      "value_usd": 17700001000,
+      "shares": 400000000
+    },
+    {
+      "name_of_issuer": "COSTCO WHSL CORP NEW",
+      "cusip": "22160K105",
+      "value_usd": 1235572000,
+      "shares": 4333363
+    },
+    {
+      "name_of_issuer": "DAVITA HEALTHCARE PARTNERS I",
+      "cusip": "23918K108",
+      "value_usd": 2897549000,
+      "shares": 38095570
+    },
+    {
+      "name_of_issuer": "DELTA AIR LINES INC DEL",
+      "cusip": "247361702",
+      "value_usd": 2050935000,
+      "shares": 71886963
+    },
+    {
+      "name_of_issuer": "GENERAL MTRS CO",
+      "cusip": "37045V100",
+      "value_usd": 1551872000,
+      "shares": 74681000
+    },
+    {
+      "name_of_issuer": "GLOBE LIFE INC",
+      "cusip": "37959E102",
+      "value_usd": 457278000,
+      "shares": 6353727
+    },
+    {
+      "name_of_issuer": "GOLDMAN SACHS GROUP INC",
+      "cusip": "38141G104",
+      "value_usd": 296841000,
+      "shares": 1920180
+    },
+    {
+      "name_of_issuer": "JPMORGAN CHASE & CO",
+      "cusip": "46625H100",
+      "value_usd": 5196030000,
+      "shares": 57714433
+    },
+    {
+      "name_of_issuer": "JOHNSON & JOHNSON",
+      "cusip": "478160104",
+      "value_usd": 42893000,
+      "shares": 327100
+    },
+    {
+      "name_of_issuer": "KRAFT HEINZ CO",
+      "cusip": "500754106",
+      "value_usd": 8056205000,
+      "shares": 325634818
+    },
+    {
+      "name_of_issuer": "KROGER CO",
+      "cusip": "501044101",
+      "value_usd": 570475000,
+      "shares": 18940079
+    },
+    {
+      "name_of_issuer": "LIBERTY MEDIA CORP DELAWARE",
+      "cusip": "531229409",
+      "value_usd": 470925000,
+      "shares": 14860360
+    },
+    {
+      "name_of_issuer": "LIBERTY MEDIA CORP DELAWARE",
+      "cusip": "531229607",
+      "value_usd": 975508000,
+      "shares": 30850985
+    },
+    {
+      "name_of_issuer": "M & T BK CORP",
+      "cusip": "55261F104",
+      "value_usd": 556665000,
+      "shares": 5382040
+    },
+    {
+      "name_of_issuer": "MASTERCARD INC",
+      "cusip": "57636Q104",
+      "value_usd": 1192040000,
+      "shares": 4934756
+    },
+    {
+      "name_of_issuer": "MONDELEZ INTL INC",
+      "cusip": "609207105",
+      "value_usd": 28946000,
+      "shares": 578000
+    },
+    {
+      "name_of_issuer": "MOODYS CORP",
+      "cusip": "615369105",
+      "value_usd": 5217658000,
+      "shares": 24669778
+    },
+    {
+      "name_of_issuer": "OCCIDENTAL PETE CORP",
+      "cusip": "674599105",
+      "value_usd": 219245000,
+      "shares": 18933054
+    },
+    {
+      "name_of_issuer": "PNC FINL SVCS GROUP INC",
+      "cusip": "693475105",
+      "value_usd": 880431000,
+      "shares": 9197984
+    },
+    {
+      "name_of_issuer": "PROCTER & GAMBLE CO",
+      "cusip": "742718109",
+      "value_usd": 34694000,
+      "shares": 315400
+    },
+    {
+      "name_of_issuer": "RH",
+      "cusip": "74967X103",
+      "value_usd": 171638000,
+      "shares": 1708348
+    },
+    {
+      "name_of_issuer": "RESTAURANT BRANDS INTL INC",
+      "cusip": "76131D103",
+      "value_usd": 337782000,
+      "shares": 8438225
+    },
+    {
+      "name_of_issuer": "SPDR S&P 500 ETF TR",
+      "cusip": "78462F103",
+      "value_usd": 10155000,
+      "shares": 39400
+    },
+    {
+      "name_of_issuer": "SIRIUS XM HLDGS INC",
+      "cusip": "82968B103",
+      "value_usd": 654149000,
+      "shares": 132418729
+    },
+    {
+      "name_of_issuer": "SOUTHWEST AIRLS CO",
+      "cusip": "844741108",
+      "value_usd": 1910218000,
+      "shares": 53642713
+    },
+    {
+      "name_of_issuer": "STORE CAP CORP",
+      "cusip": "862121100",
+      "value_usd": 337425000,
+      "shares": 18621674
+    },
+    {
+      "name_of_issuer": "SUNCOR ENERGY INC NEW",
+      "cusip": "867224107",
+      "value_usd": 236195000,
+      "shares": 14949031
+    },
+    {
+      "name_of_issuer": "SYNCHRONY FINL",
+      "cusip": "87165B103",
+      "value_usd": 323860000,
+      "shares": 20128000
+    },
+    {
+      "name_of_issuer": "TEVA PHARMACEUTICAL INDS LTD",
+      "cusip": "881624209",
+      "value_usd": 384248000,
+      "shares": 42789295
+    },
+    {
+      "name_of_issuer": "US BANCORP DEL",
+      "cusip": "902973304",
+      "value_usd": 4563233000,
+      "shares": 132459618
+    },
+    {
+      "name_of_issuer": "UNITED CONTL HLDGS INC",
+      "cusip": "910047109",
+      "value_usd": 699073000,
+      "shares": 22157608
+    },
+    {
+      "name_of_issuer": "UNITED PARCEL SERVICE INC",
+      "cusip": "911312106",
+      "value_usd": 5549000,
+      "shares": 59400
+    },
+    {
+      "name_of_issuer": "VANGUARD INDEX FDS",
+      "cusip": "922908363",
+      "value_usd": 10183000,
+      "shares": 43000
+    },
+    {
+      "name_of_issuer": "VERISIGN INC",
+      "cusip": "92343E102",
+      "value_usd": 2307964000,
+      "shares": 12815613
+    },
+    {
+      "name_of_issuer": "VISA INC",
+      "cusip": "92826C839",
+      "value_usd": 1701823000,
+      "shares": 10562460
+    },
+    {
+      "name_of_issuer": "WELLS FARGO & CO NEW",
+      "cusip": "949746101",
+      "value_usd": 9276210000,
+      "shares": 323212918
+    },
+    {
+      "name_of_issuer": "AXALTA COATING SYS LTD",
+      "cusip": "G0750C108",
+      "value_usd": 415689000,
+      "shares": 24070000
+    },
+    {
+      "name_of_issuer": "LIBERTY GLOBAL PLC",
+      "cusip": "G5480U104",
+      "value_usd": 318808000,
+      "shares": 19310000
+    },
+    {
+      "name_of_issuer": "LIBERTY GLOBAL PLC",
+      "cusip": "G5480U120",
+      "value_usd": 115421000,
+      "shares": 7346968
+    },
+    {
+      "name_of_issuer": "STONECO LTD",
+      "cusip": "G85158106",
+      "value_usd": 308410000,
+      "shares": 14166748
+    },
+    {
+      "name_of_issuer": "LIBERTY LATIN AMERICA LTD",
+      "cusip": "G9001E102",
+      "value_usd": 27676000,
+      "shares": 2630792
+    },
+    {
+      "name_of_issuer": "LIBERTY LATIN AMERICA LTD",
+      "cusip": "G9001E128",
+      "value_usd": 13174000,
+      "shares": 1284020
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "fund_id": "berkshire",
+  "filing_date": "2023-11-14",
+  "holdings": [
+    {
+      "name_of_issuer": "ALLY FINL INC",
+      "cusip": "02005N100",
+      "value_usd": 773720000,
+      "shares": 29000000
+    },
+    {
+      "name_of_issuer": "AMAZON COM INC",
+      "cusip": "023135106",
+      "value_usd": 1271200000,
+      "shares": 10000000
+    },
+    {
+      "name_of_issuer": "AMERICAN EXPRESS CO",
+      "cusip": "025816109",
+      "value_usd": 22618800333,
+      "shares": 151610700
+    },
+    {
+      "name_of_issuer": "APPLE INC",
+      "cusip": "037833100",
+      "value_usd": 156753093002,
+      "shares": 915560382
+    },
+    {
+      "name_of_issuer": "ATLANTA BRAVES HLDGS INC",
+      "cusip": "047726302",
+      "value_usd": 7990835,
+      "shares": 223645
+    },
+    {
+      "name_of_issuer": "BANK AMER CORP",
+      "cusip": "060505104",
+      "value_usd": 28279487924,
+      "shares": 1032852006
+    },
+    {
+      "name_of_issuer": "CAPITAL ONE FINL CORP",
+      "cusip": "14040H105",
+      "value_usd": 1210313462,
+      "shares": 12471030
+    },
+    {
+      "name_of_issuer": "CHARTER COMMUNICATIONS INC N",
+      "cusip": "16119P108",
+      "value_usd": 1684044831,
+      "shares": 3828941
+    },
+    {
+      "name_of_issuer": "CHEVRON CORP NEW",
+      "cusip": "166764100",
+      "value_usd": 18590066491,
+      "shares": 110248289
+    },
+    {
+      "name_of_issuer": "CITIGROUP INC",
+      "cusip": "172967424",
+      "value_usd": 2272218501,
+      "shares": 55244797
+    },
+    {
+      "name_of_issuer": "COCA COLA CO",
+      "cusip": "191216100",
+      "value_usd": 22392000000,
+      "shares": 400000000
+    },
+    {
+      "name_of_issuer": "D R HORTON INC",
+      "cusip": "23331A109",
+      "value_usd": 641565163,
+      "shares": 5969714
+    },
+    {
+      "name_of_issuer": "DAVITA INC",
+      "cusip": "23918K108",
+      "value_usd": 3412114232,
+      "shares": 36095570
+    },
+    {
+      "name_of_issuer": "DIAGEO P L C",
+      "cusip": "25243Q205",
+      "value_usd": 33975745,
+      "shares": 227750
+    },
+    {
+      "name_of_issuer": "FLOOR & DECOR HLDGS INC",
+      "cusip": "339750101",
+      "value_usd": 432590000,
+      "shares": 4780000
+    },
+    {
+      "name_of_issuer": "GLOBE LIFE INC",
+      "cusip": "37959E102",
+      "value_usd": 90356152,
+      "shares": 831014
+    },
+    {
+      "name_of_issuer": "HP INC",
+      "cusip": "40434L105",
+      "value_usd": 2634739200,
+      "shares": 102519035
+    },
+    {
+      "name_of_issuer": "JEFFERIES FINL GROUP INC",
+      "cusip": "47233W109",
+      "value_usd": 15881230,
+      "shares": 433558
+    },
+    {
+      "name_of_issuer": "KRAFT HEINZ CO",
+      "cusip": "500754106",
+      "value_usd": 10954355278,
+      "shares": 325634818
+    },
+    {
+      "name_of_issuer": "KROGER CO",
+      "cusip": "501044101",
+      "value_usd": 2237500000,
+      "shares": 50000000
+    },
+    {
+      "name_of_issuer": "LENNAR CORP",
+      "cusip": "526057302",
+      "value_usd": 15597436,
+      "shares": 152572
+    },
+    {
+      "name_of_issuer": "LIBERTY MEDIA CORP DEL",
+      "cusip": "531229722",
+      "value_usd": 357356140,
+      "shares": 11132590
+    },
+    {
+      "name_of_issuer": "LIBERTY MEDIA CORP DEL",
+      "cusip": "531229748",
+      "value_usd": 161257223,
+      "shares": 5051918
+    },
+    {
+      "name_of_issuer": "LIBERTY MEDIA CORP DEL",
+      "cusip": "531229789",
+      "value_usd": 1100083089,
+      "shares": 43208291
+    },
+    {
+      "name_of_issuer": "LIBERTY MEDIA CORP DEL",
+      "cusip": "531229813",
+      "value_usd": 514285456,
+      "shares": 20207680
+    },
+    {
+      "name_of_issuer": "LIBERTY MEDIA CORP DEL",
+      "cusip": "531229854",
+      "value_usd": 481108697,
+      "shares": 7722451
+    },
+    {
+      "name_of_issuer": "LOUISIANA PAC CORP",
+      "cusip": "546347105",
+      "value_usd": 389372120,
+      "shares": 7044909
+    },
+    {
+      "name_of_issuer": "MARKEL CORP",
+      "cusip": "570535104",
+      "value_usd": 233706251,
+      "shares": 158715
+    },
+    {
+      "name_of_issuer": "MASTERCARD INC",
+      "cusip": "57636Q104",
+      "value_usd": 1578353810,
+      "shares": 3986648
+    },
+    {
+      "name_of_issuer": "MOODYS CORP",
+      "cusip": "615369105",
+      "value_usd": 7799843711,
+      "shares": 24669778
+    },
+    {
+      "name_of_issuer": "NVR INC",
+      "cusip": "62944T105",
+      "value_usd": 66264190,
+      "shares": 11112
+    },
+    {
+      "name_of_issuer": "OCCIDENTAL PETE CORP",
+      "cusip": "674599105",
+      "value_usd": 14541501977,
+      "shares": 224129192
+    },
+    {
+      "name_of_issuer": "SPDR S&P 500 ETF TR",
+      "cusip": "78462F103",
+      "value_usd": 16842712,
+      "shares": 39400
+    },
+    {
+      "name_of_issuer": "SIRIUS XM HOLDINGS INC",
+      "cusip": "82968B103",
+      "value_usd": 43768172,
+      "shares": 9683224
+    },
+    {
+      "name_of_issuer": "SNOWFLAKE INC",
+      "cusip": "833445109",
+      "value_usd": 935773692,
+      "shares": 6125376
+    },
+    {
+      "name_of_issuer": "T-MOBILE US INC",
+      "cusip": "872590104",
+      "value_usd": 734142100,
+      "shares": 5242000
+    },
+    {
+      "name_of_issuer": "VANGUARD INDEX FDS",
+      "cusip": "922908363",
+      "value_usd": 16886100,
+      "shares": 43000
+    },
+    {
+      "name_of_issuer": "VERISIGN INC",
+      "cusip": "92343E102",
+      "value_usd": 2595546101,
+      "shares": 12815613
+    },
+    {
+      "name_of_issuer": "PARAMOUNT GLOBAL",
+      "cusip": "92556H206",
+      "value_usd": 1209129578,
+      "shares": 93730975
+    },
+    {
+      "name_of_issuer": "VISA INC",
+      "cusip": "92826C839",
+      "value_usd": 1908498775,
+      "shares": 8297460
+    },
+    {
+      "name_of_issuer": "AON PLC",
+      "cusip": "G0403H108",
+      "value_usd": 1329302000,
+      "shares": 4100000
+    },
+    {
+      "name_of_issuer": "NU HLDGS LTD",
+      "cusip": "G6683N103",
+      "value_usd": 776611184,
+      "shares": 107118784
+    },
+    {
+      "name_of_issuer": "STONECO LTD",
+      "cusip": "G85158106",
+      "value_usd": 114120430,
+      "shares": 10695448
+    },
+    {
+      "name_of_issuer": "LIBERTY LATIN AMERICA LTD",
+      "cusip": "G9001E102",
+      "value_usd": 21467263,
+      "shares": 2630792
+    },
+    {
+      "name_of_issuer": "LIBERTY LATIN AMERICA LTD",
+      "cusip": "G9001E128",
+      "value_usd": 10477603,
+      "shares": 1284020
+    }
+  ]
+}
