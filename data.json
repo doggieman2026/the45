@@ -62,80 +62,699 @@
       ],
       "buys": [
         {
-          "name": "Microsoft Corp",
-          "ticker": "594918104",
-          "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約37.2兆円",
-          "bar": 100
-        },
-        {
           "name": "Nvidia Corporation",
           "ticker": "67066G104",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約34.1兆円",
-          "bar": 92
+          "value": "+約9.3兆円",
+          "bar": 100
         },
         {
           "name": "Apple Inc",
           "ticker": "037833100",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約33.4兆円",
-          "bar": 90
+          "value": "+約6.6兆円",
+          "bar": 70
+        },
+        {
+          "name": "Microsoft Corp",
+          "ticker": "594918104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約2.7兆円",
+          "bar": 29
+        },
+        {
+          "name": "Alphabet Inc",
+          "ticker": "02079K305",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約2.1兆円",
+          "bar": 22
+        },
+        {
+          "name": "Alphabet Inc",
+          "ticker": "02079K107",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約1.6兆円",
+          "bar": 18
+        }
+      ],
+      "sells": [
+        {
+          "name": "Spdr S&P 500 Etf Tr",
+          "ticker": "78462F103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1.4兆円",
+          "bar": 100
+        },
+        {
+          "name": "Pioneer Nat Res Co",
+          "ticker": "723787107",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約6339億円",
+          "bar": 45
+        },
+        {
+          "name": "Intel Corp",
+          "ticker": "458140100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約5986億円",
+          "bar": 42
+        },
+        {
+          "name": "Disney Walt Co",
+          "ticker": "254687106",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約4553億円",
+          "bar": 32
+        },
+        {
+          "name": "Salesforce Inc",
+          "ticker": "79466L302",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約4280億円",
+          "bar": 30
+        }
+      ],
+      "last_filing_date": "2024-08-13",
+      "has_quarter_comparison": true,
+      "buys_extended": [
+        {
+          "name": "Nvidia Corporation",
+          "ticker": "67066G104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約9.3兆円",
+          "bar": 100
+        },
+        {
+          "name": "Apple Inc",
+          "ticker": "037833100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約6.6兆円",
+          "bar": 70
+        },
+        {
+          "name": "Microsoft Corp",
+          "ticker": "594918104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約2.7兆円",
+          "bar": 29
+        },
+        {
+          "name": "Alphabet Inc",
+          "ticker": "02079K305",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約2.1兆円",
+          "bar": 22
+        },
+        {
+          "name": "Alphabet Inc",
+          "ticker": "02079K107",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約1.6兆円",
+          "bar": 18
         },
         {
           "name": "Amazon Com Inc",
           "ticker": "023135106",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約18.8兆円",
-          "bar": 51
+          "value": "+約1.5兆円",
+          "bar": 16
+        },
+        {
+          "name": "Eli Lilly & Co",
+          "ticker": "532457108",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約1.3兆円",
+          "bar": 14
+        },
+        {
+          "name": "Broadcom Inc",
+          "ticker": "11135F101",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約1.3兆円",
+          "bar": 14
+        },
+        {
+          "name": "Costco Whsl Corp New",
+          "ticker": "22160K105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約6608億円",
+          "bar": 7
+        },
+        {
+          "name": "Tesla Inc",
+          "ticker": "88160R101",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約6507億円",
+          "bar": 7
         },
         {
           "name": "Meta Platforms Inc",
           "ticker": "30303M102",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約12.2兆円",
-          "bar": 33
+          "value": "+約5882億円",
+          "bar": 6
+        },
+        {
+          "name": "Applied Matls Inc",
+          "ticker": "038222105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約4941億円",
+          "bar": 5
+        },
+        {
+          "name": "Qualcomm Inc",
+          "ticker": "747525103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約4841億円",
+          "bar": 5
+        },
+        {
+          "name": "Ge Vernova Inc",
+          "ticker": "36828A101",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約4648億円",
+          "bar": 5
+        },
+        {
+          "name": "Exxon Mobil Corp",
+          "ticker": "30231G102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約4628億円",
+          "bar": 5
+        },
+        {
+          "name": "Ishares Tr",
+          "ticker": "464287200",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約4382億円",
+          "bar": 5
+        },
+        {
+          "name": "Oracle Corp",
+          "ticker": "68389X105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約3779億円",
+          "bar": 5
+        },
+        {
+          "name": "Walmart Inc",
+          "ticker": "931142103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約3638億円",
+          "bar": 5
+        },
+        {
+          "name": "Crh Plc",
+          "ticker": "G25508105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約3574億円",
+          "bar": 5
+        },
+        {
+          "name": "Netflix Inc",
+          "ticker": "64110L106",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約3406億円",
+          "bar": 5
+        },
+        {
+          "name": "Labcorp Holdings Inc",
+          "ticker": "504922105",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約2898億円",
+          "bar": 5
+        },
+        {
+          "name": "Crowdstrike Hldgs Inc",
+          "ticker": "22788C105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約2865億円",
+          "bar": 5
+        },
+        {
+          "name": "Lam Research Corp",
+          "ticker": "512807108",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約2829億円",
+          "bar": 5
+        },
+        {
+          "name": "Adobe Inc",
+          "ticker": "00724F101",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約2723億円",
+          "bar": 5
+        },
+        {
+          "name": "Texas Instrs Inc",
+          "ticker": "882508104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約2455億円",
+          "bar": 5
+        },
+        {
+          "name": "Palo Alto Networks Inc",
+          "ticker": "697435105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約2453億円",
+          "bar": 5
+        },
+        {
+          "name": "Kla Corp",
+          "ticker": "482480100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約2419億円",
+          "bar": 5
+        },
+        {
+          "name": "Arista Networks Inc",
+          "ticker": "040413106",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約2241億円",
+          "bar": 5
+        },
+        {
+          "name": "Micron Technology Inc",
+          "ticker": "595112103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約2197億円",
+          "bar": 5
+        },
+        {
+          "name": "Tjx Cos Inc New",
+          "ticker": "872540109",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約1981億円",
+          "bar": 5
         }
       ],
-      "sells": [
+      "sells_extended": [
         {
-          "name": "エヌビディア",
-          "ticker": "NVDA",
-          "desc": "AI半導体の王者",
-          "value": "-約1.8兆円",
-          "bar": 92
+          "name": "Spdr S&P 500 Etf Tr",
+          "ticker": "78462F103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1.4兆円",
+          "bar": 100
         },
         {
-          "name": "アップル",
-          "ticker": "AAPL",
-          "desc": "iPhoneのメーカー",
-          "value": "-約1.3兆円",
-          "bar": 74
+          "name": "Pioneer Nat Res Co",
+          "ticker": "723787107",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約6339億円",
+          "bar": 45
         },
         {
-          "name": "マイクロソフト",
-          "ticker": "MSFT",
-          "desc": "WindowsとChatGPTの親会社",
-          "value": "-約1.1兆円",
-          "bar": 62
+          "name": "Intel Corp",
+          "ticker": "458140100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約5986億円",
+          "bar": 42
         },
         {
-          "name": "メタ（Facebook）",
-          "ticker": "META",
-          "desc": "FacebookとInstagramの会社",
-          "value": "-約0.6兆円",
-          "bar": 44
-        },
-        {
-          "name": "アマゾン",
-          "ticker": "AMZN",
-          "desc": "ネット通販とクラウドの会社",
-          "value": "-約0.5兆円",
+          "name": "Disney Walt Co",
+          "ticker": "254687106",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約4553億円",
           "bar": 32
+        },
+        {
+          "name": "Salesforce Inc",
+          "ticker": "79466L302",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約4280億円",
+          "bar": 30
+        },
+        {
+          "name": "Abbvie Inc",
+          "ticker": "00287Y109",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約3948億円",
+          "bar": 28
+        },
+        {
+          "name": "Home Depot Inc",
+          "ticker": "437076102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約3938億円",
+          "bar": 28
+        },
+        {
+          "name": "Mastercard Incorporated",
+          "ticker": "57636Q104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約3364億円",
+          "bar": 24
+        },
+        {
+          "name": "Bristol-Myers Squibb Co",
+          "ticker": "110122108",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約3340億円",
+          "bar": 23
+        },
+        {
+          "name": "Super Micro Computer Inc",
+          "ticker": "86800U104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約3226億円",
+          "bar": 23
+        },
+        {
+          "name": "Accenture Plc Ireland",
+          "ticker": "G1151C101",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約3114億円",
+          "bar": 22
+        },
+        {
+          "name": "Laboratory Corp Amer Hldgs",
+          "ticker": "50540R409",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約3092億円",
+          "bar": 22
+        },
+        {
+          "name": "Visa Inc",
+          "ticker": "92826C839",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2977億円",
+          "bar": 21
+        },
+        {
+          "name": "Prologis Inc.",
+          "ticker": "74340W103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2736億円",
+          "bar": 19
+        },
+        {
+          "name": "Merck & Co Inc",
+          "ticker": "58933Y105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2688億円",
+          "bar": 19
+        },
+        {
+          "name": "Lowes Cos Inc",
+          "ticker": "548661107",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2487億円",
+          "bar": 17
+        },
+        {
+          "name": "Berkshire Hathaway Inc Del",
+          "ticker": "084670702",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2365億円",
+          "bar": 17
+        },
+        {
+          "name": "Abbott Labs",
+          "ticker": "002824100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2335億円",
+          "bar": 16
+        },
+        {
+          "name": "Mcdonalds Corp",
+          "ticker": "580135101",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2298億円",
+          "bar": 16
+        },
+        {
+          "name": "Nike Inc",
+          "ticker": "654106103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2219億円",
+          "bar": 16
+        },
+        {
+          "name": "Conocophillips",
+          "ticker": "20825C104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1985億円",
+          "bar": 14
+        },
+        {
+          "name": "International Business Machs",
+          "ticker": "459200101",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1960億円",
+          "bar": 14
+        },
+        {
+          "name": "Advanced Micro Devices Inc",
+          "ticker": "007903107",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1946億円",
+          "bar": 14
+        },
+        {
+          "name": "Pepsico Inc",
+          "ticker": "713448108",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1899億円",
+          "bar": 13
+        },
+        {
+          "name": "Shockwave Med Inc",
+          "ticker": "82489T104",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約1848億円",
+          "bar": 13
+        },
+        {
+          "name": "Phillips 66",
+          "ticker": "718546104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1827億円",
+          "bar": 13
+        },
+        {
+          "name": "Marathon Pete Corp",
+          "ticker": "56585A102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1737億円",
+          "bar": 12
+        },
+        {
+          "name": "Old Dominion Freight Line In",
+          "ticker": "679580100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1712億円",
+          "bar": 12
+        },
+        {
+          "name": "Medtronic Plc",
+          "ticker": "G5960L103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1690億円",
+          "bar": 12
+        },
+        {
+          "name": "Builders Firstsource Inc",
+          "ticker": "12008R107",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1643億円",
+          "bar": 12
         }
       ],
-      "last_filing_date": "2024-08-13",
-      "has_quarter_comparison": false
+      "trend": {
+        "fund_id": "blackrock",
+        "quarters": [
+          {
+            "filing_date": "2018-02-09",
+            "total_value_usd": 2101760765000,
+            "total_value_label": "315.3兆円",
+            "position_count": 4921,
+            "top5_concentration_pct": 8.3
+          },
+          {
+            "filing_date": "2018-05-09",
+            "total_value_usd": 2091890580000,
+            "total_value_label": "313.8兆円",
+            "position_count": 4929,
+            "top5_concentration_pct": 8.8
+          },
+          {
+            "filing_date": "2018-08-09",
+            "total_value_usd": 2170576650000,
+            "total_value_label": "325.6兆円",
+            "position_count": 5014,
+            "top5_concentration_pct": 9.4
+          },
+          {
+            "filing_date": "2018-11-09",
+            "total_value_usd": 2311120189000,
+            "total_value_label": "346.7兆円",
+            "position_count": 4989,
+            "top5_concentration_pct": 9.7
+          },
+          {
+            "filing_date": "2019-02-08",
+            "total_value_usd": 1981033110000,
+            "total_value_label": "297.2兆円",
+            "position_count": 5018,
+            "top5_concentration_pct": 9.2
+          },
+          {
+            "filing_date": "2019-05-09",
+            "total_value_usd": 2239796050000,
+            "total_value_label": "336.0兆円",
+            "position_count": 4924,
+            "top5_concentration_pct": 9.4
+          },
+          {
+            "filing_date": "2019-08-13",
+            "total_value_usd": 2357938994000,
+            "total_value_label": "353.7兆円",
+            "position_count": 5009,
+            "top5_concentration_pct": 9.7
+          },
+          {
+            "filing_date": "2019-11-08",
+            "total_value_usd": 2381047321000,
+            "total_value_label": "357.2兆円",
+            "position_count": 4981,
+            "top5_concentration_pct": 9.8
+          },
+          {
+            "filing_date": "2020-02-13",
+            "total_value_usd": 2608040392000,
+            "total_value_label": "391.2兆円",
+            "position_count": 4974,
+            "top5_concentration_pct": 10.5
+          },
+          {
+            "filing_date": "2020-05-01",
+            "total_value_usd": 2044379405000,
+            "total_value_label": "306.7兆円",
+            "position_count": 4943,
+            "top5_concentration_pct": 12.5
+          },
+          {
+            "filing_date": "2020-08-14",
+            "total_value_usd": 2505351103000,
+            "total_value_label": "375.8兆円",
+            "position_count": 4966,
+            "top5_concentration_pct": 14.0
+          },
+          {
+            "filing_date": "2020-11-06",
+            "total_value_usd": 2709936827000,
+            "total_value_label": "406.5兆円",
+            "position_count": 4976,
+            "top5_concentration_pct": 14.5
+          },
+          {
+            "filing_date": "2021-02-05",
+            "total_value_usd": 3134881697000,
+            "total_value_label": "470.2兆円",
+            "position_count": 5004,
+            "top5_concentration_pct": 13.5
+          },
+          {
+            "filing_date": "2021-05-07",
+            "total_value_usd": 3402618485000,
+            "total_value_label": "510.4兆円",
+            "position_count": 5241,
+            "top5_concentration_pct": 12.6
+          },
+          {
+            "filing_date": "2021-08-11",
+            "total_value_usd": 3592696047000,
+            "total_value_label": "538.9兆円",
+            "position_count": 5454,
+            "top5_concentration_pct": 13.3
+          },
+          {
+            "filing_date": "2021-11-09",
+            "total_value_usd": 3571779650000,
+            "total_value_label": "535.8兆円",
+            "position_count": 5581,
+            "top5_concentration_pct": 13.7
+          },
+          {
+            "filing_date": "2022-02-10",
+            "total_value_usd": 3927761904000,
+            "total_value_label": "589.2兆円",
+            "position_count": 5745,
+            "top5_concentration_pct": 14.4
+          },
+          {
+            "filing_date": "2022-05-12",
+            "total_value_usd": 3712036268000,
+            "total_value_label": "556.8兆円",
+            "position_count": 5765,
+            "top5_concentration_pct": 14.9
+          },
+          {
+            "filing_date": "2022-08-12",
+            "total_value_usd": 3117359647000,
+            "total_value_label": "467.6兆円",
+            "position_count": 5832,
+            "top5_concentration_pct": 13.6
+          },
+          {
+            "filing_date": "2022-11-14",
+            "total_value_usd": 2940257865000,
+            "total_value_label": "441.0兆円",
+            "position_count": 5787,
+            "top5_concentration_pct": 14.1
+          },
+          {
+            "filing_date": "2023-02-13",
+            "total_value_usd": 3191567492438,
+            "total_value_label": "478.7兆円",
+            "position_count": 5684,
+            "top5_concentration_pct": 12.1
+          },
+          {
+            "filing_date": "2023-05-12",
+            "total_value_usd": 3390181936767,
+            "total_value_label": "508.5兆円",
+            "position_count": 5483,
+            "top5_concentration_pct": 14.3
+          },
+          {
+            "filing_date": "2023-08-11",
+            "total_value_usd": 3627977394535,
+            "total_value_label": "544.2兆円",
+            "position_count": 5416,
+            "top5_concentration_pct": 16.3
+          },
+          {
+            "filing_date": "2023-11-13",
+            "total_value_usd": 3477455768419,
+            "total_value_label": "521.6兆円",
+            "position_count": 5384,
+            "top5_concentration_pct": 16.0
+          },
+          {
+            "filing_date": "2024-02-13",
+            "total_value_usd": 3921945848459,
+            "total_value_label": "588.3兆円",
+            "position_count": 5300,
+            "top5_concentration_pct": 16.5
+          },
+          {
+            "filing_date": "2024-05-10",
+            "total_value_usd": 4295718804000,
+            "total_value_label": "644.4兆円",
+            "position_count": 5222,
+            "top5_concentration_pct": 17.9
+          },
+          {
+            "filing_date": "2024-08-13",
+            "total_value_usd": 4418304733920,
+            "total_value_label": "662.7兆円",
+            "position_count": 5230,
+            "top5_concentration_pct": 20.5
+          }
+        ],
+        "has_enough_history": true
+      }
     },
     {
       "id": "berkshire",
@@ -183,80 +802,769 @@
       ],
       "buys": [
         {
-          "name": "Apple Inc",
-          "ticker": "037833100",
+          "name": "Alphabet Inc",
+          "ticker": "02079K305",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約8.7兆円",
+          "value": "+約1.5兆円",
           "bar": 100
         },
         {
-          "name": "American Express Co",
-          "ticker": "025816109",
+          "name": "Occidental Pete Corp",
+          "ticker": "674599105",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約6.9兆円",
-          "bar": 79
+          "value": "+約9490億円",
+          "bar": 63
+        },
+        {
+          "name": "Delta Air Lines Inc",
+          "ticker": "247361702",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約3970億円",
+          "bar": 26
         },
         {
           "name": "Coca Cola Co",
           "ticker": "191216100",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約4.6兆円",
-          "bar": 53
+          "value": "+約3684億円",
+          "bar": 25
+        },
+        {
+          "name": "Alphabet Inc",
+          "ticker": "02079K107",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約1543億円",
+          "bar": 10
+        }
+      ],
+      "sells": [
+        {
+          "name": "American Express Co",
+          "ticker": "025816109",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1.5兆円",
+          "bar": 100
+        },
+        {
+          "name": "Apple Inc",
+          "ticker": "037833100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約6178億円",
+          "bar": 40
         },
         {
           "name": "Bank America Corp",
           "ticker": "060505104",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約3.8兆円",
-          "bar": 43
+          "value": "-約5118億円",
+          "bar": 33
+        },
+        {
+          "name": "Visa Inc",
+          "ticker": "92826C839",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約4365億円",
+          "bar": 28
         },
         {
           "name": "Chevron Corporation",
           "ticker": "166764100",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約2.6兆円",
-          "bar": 30
-        }
-      ],
-      "sells": [
-        {
-          "name": "アップル",
-          "ticker": "AAPL",
-          "desc": "iPhoneのメーカー（長年の主力株）",
-          "value": "-約0.6兆円",
-          "bar": 72
-        },
-        {
-          "name": "バンク・オブ・アメリカ",
-          "ticker": "BAC",
-          "desc": "米国大手銀行",
-          "value": "-約0.3兆円",
-          "bar": 48
-        },
-        {
-          "name": "HP",
-          "ticker": "HPQ",
-          "desc": "パソコン・プリンターメーカー",
-          "value": "-約0.2兆円",
-          "bar": 35
-        },
-        {
-          "name": "USバンコープ",
-          "ticker": "USB",
-          "desc": "米国地方銀行大手",
-          "value": "-約0.1兆円",
-          "bar": 22
-        },
-        {
-          "name": "BNYメロン",
-          "ticker": "BK",
-          "desc": "米国大手信託銀行",
-          "value": "-約0.1兆円",
-          "bar": 15
+          "value": "-約3570億円",
+          "bar": 23
         }
       ],
       "last_filing_date": "2026-05-15",
-      "has_quarter_comparison": false
+      "has_quarter_comparison": true,
+      "buys_extended": [
+        {
+          "name": "Alphabet Inc",
+          "ticker": "02079K305",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約1.5兆円",
+          "bar": 100
+        },
+        {
+          "name": "Occidental Pete Corp",
+          "ticker": "674599105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約9490億円",
+          "bar": 63
+        },
+        {
+          "name": "Delta Air Lines Inc",
+          "ticker": "247361702",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約3970億円",
+          "bar": 26
+        },
+        {
+          "name": "Coca Cola Co",
+          "ticker": "191216100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約3684億円",
+          "bar": 25
+        },
+        {
+          "name": "Alphabet Inc",
+          "ticker": "02079K107",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約1543億円",
+          "bar": 10
+        },
+        {
+          "name": "Davita Inc",
+          "ticker": "23918K108",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約1527億円",
+          "bar": 10
+        },
+        {
+          "name": "New York Times Co Mtn Be",
+          "ticker": "650111107",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約1375億円",
+          "bar": 9
+        },
+        {
+          "name": "Kroger Co",
+          "ticker": "501044101",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約741億円",
+          "bar": 5
+        },
+        {
+          "name": "Chubb Ltd Switz",
+          "ticker": "H1467J104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約709億円",
+          "bar": 5
+        },
+        {
+          "name": "Siriusxm Holdings Inc",
+          "ticker": "829933100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約578億円",
+          "bar": 5
+        },
+        {
+          "name": "Lennar Corp",
+          "ticker": "526057104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約228億円",
+          "bar": 5
+        },
+        {
+          "name": "Liberty Live Holdings Inc",
+          "ticker": "530909308",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約133億円",
+          "bar": 5
+        },
+        {
+          "name": "Macys Inc",
+          "ticker": "55616P104",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約82億円",
+          "bar": 5
+        },
+        {
+          "name": "Liberty Live Holdings Inc",
+          "ticker": "530909100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約76億円",
+          "bar": 5
+        },
+        {
+          "name": "Verisign Inc",
+          "ticker": "92343E102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約73億円",
+          "bar": 5
+        },
+        {
+          "name": "Lennar Corp",
+          "ticker": "526057302",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約4億円",
+          "bar": 5
+        }
+      ],
+      "sells_extended": [
+        {
+          "name": "American Express Co",
+          "ticker": "025816109",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1.5兆円",
+          "bar": 100
+        },
+        {
+          "name": "Apple Inc",
+          "ticker": "037833100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約6178億円",
+          "bar": 40
+        },
+        {
+          "name": "Bank America Corp",
+          "ticker": "060505104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約5118億円",
+          "bar": 33
+        },
+        {
+          "name": "Visa Inc",
+          "ticker": "92826C839",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約4365億円",
+          "bar": 28
+        },
+        {
+          "name": "Chevron Corporation",
+          "ticker": "166764100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約3570億円",
+          "bar": 23
+        },
+        {
+          "name": "Mastercard Incorporated",
+          "ticker": "57636Q104",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約3414億円",
+          "bar": 22
+        },
+        {
+          "name": "Moodys Corp",
+          "ticker": "615369105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2761億円",
+          "bar": 18
+        },
+        {
+          "name": "Constellation Brands Inc",
+          "ticker": "21036P108",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2548億円",
+          "bar": 17
+        },
+        {
+          "name": "Unitedhealth Group Inc",
+          "ticker": "91324P102",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約2495億円",
+          "bar": 16
+        },
+        {
+          "name": "Dominos Pizza Inc",
+          "ticker": "25754A201",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約2095億円",
+          "bar": 14
+        },
+        {
+          "name": "Aon Plc",
+          "ticker": "G0403H108",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約1907億円",
+          "bar": 12
+        },
+        {
+          "name": "Pool Corp",
+          "ticker": "73278L105",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約1053億円",
+          "bar": 7
+        },
+        {
+          "name": "Kraft Heinz Co",
+          "ticker": "500754106",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約860億円",
+          "bar": 6
+        },
+        {
+          "name": "Amazon Com Inc",
+          "ticker": "023135106",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約788億円",
+          "bar": 5
+        },
+        {
+          "name": "Capital One Finl Corp",
+          "ticker": "14040H105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約643億円",
+          "bar": 5
+        },
+        {
+          "name": "Nucor Corp",
+          "ticker": "670346105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約577億円",
+          "bar": 5
+        },
+        {
+          "name": "Heico Corp New",
+          "ticker": "422806208",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約490億円",
+          "bar": 5
+        },
+        {
+          "name": "Liberty Media Corp Del",
+          "ticker": "531229755",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約446億円",
+          "bar": 5
+        },
+        {
+          "name": "Charter Communications Inc N",
+          "ticker": "16119P108",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約332億円",
+          "bar": 5
+        },
+        {
+          "name": "Ally Finl Inc",
+          "ticker": "02005N100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約264億円",
+          "bar": 5
+        },
+        {
+          "name": "Lamar Advertising Co New",
+          "ticker": "512816109",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約228億円",
+          "bar": 5
+        },
+        {
+          "name": "Allegion Plc",
+          "ticker": "G0176J109",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約186億円",
+          "bar": 5
+        },
+        {
+          "name": "Louisiana Pac Corp",
+          "ticker": "546347105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約68億円",
+          "bar": 5
+        },
+        {
+          "name": "Diageo Plc",
+          "ticker": "25243Q205",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約29億円",
+          "bar": 5
+        },
+        {
+          "name": "Liberty Latin America Ltd",
+          "ticker": "G9001E102",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約27億円",
+          "bar": 5
+        },
+        {
+          "name": "Liberty Latin America Ltd",
+          "ticker": "G9001E128",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約14億円",
+          "bar": 5
+        },
+        {
+          "name": "Jefferies Financial Group In",
+          "ticker": "47233W109",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約13億円",
+          "bar": 5
+        },
+        {
+          "name": "Nvr Inc",
+          "ticker": "62944T105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約12億円",
+          "bar": 5
+        },
+        {
+          "name": "Atlanta Braves Hldgs Inc",
+          "ticker": "047726302",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約7億円",
+          "bar": 5
+        }
+      ],
+      "trend": {
+        "fund_id": "berkshire",
+        "quarters": [
+          {
+            "filing_date": "2013-08-15",
+            "total_value_usd": 89031205000,
+            "total_value_label": "13.4兆円",
+            "position_count": 42,
+            "top5_concentration_pct": 71.4
+          },
+          {
+            "filing_date": "2013-11-14",
+            "total_value_usd": 92035233000,
+            "total_value_label": "13.8兆円",
+            "position_count": 43,
+            "top5_concentration_pct": 67.7
+          },
+          {
+            "filing_date": "2014-02-14",
+            "total_value_usd": 104836593000,
+            "total_value_label": "15.7兆円",
+            "position_count": 43,
+            "top5_concentration_pct": 65.2
+          },
+          {
+            "filing_date": "2014-05-15",
+            "total_value_usd": 105772705000,
+            "total_value_label": "15.9兆円",
+            "position_count": 45,
+            "top5_concentration_pct": 66.0
+          },
+          {
+            "filing_date": "2014-08-14",
+            "total_value_usd": 107580386000,
+            "total_value_label": "16.1兆円",
+            "position_count": 46,
+            "top5_concentration_pct": 67.7
+          },
+          {
+            "filing_date": "2014-11-14",
+            "total_value_usd": 107785377000,
+            "total_value_label": "16.2兆円",
+            "position_count": 47,
+            "top5_concentration_pct": 67.1
+          },
+          {
+            "filing_date": "2015-02-17",
+            "total_value_usd": 109365274000,
+            "total_value_label": "16.4兆円",
+            "position_count": 47,
+            "top5_concentration_pct": 67.6
+          },
+          {
+            "filing_date": "2015-05-15",
+            "total_value_usd": 107133479000,
+            "total_value_label": "16.1兆円",
+            "position_count": 47,
+            "top5_concentration_pct": 66.6
+          },
+          {
+            "filing_date": "2015-08-14",
+            "total_value_usd": 107182425000,
+            "total_value_label": "16.1兆円",
+            "position_count": 46,
+            "top5_concentration_pct": 66.4
+          },
+          {
+            "filing_date": "2015-11-16",
+            "total_value_usd": 127407562000,
+            "total_value_label": "19.1兆円",
+            "position_count": 48,
+            "top5_concentration_pct": 67.6
+          },
+          {
+            "filing_date": "2016-02-16",
+            "total_value_usd": 131855536000,
+            "total_value_label": "19.8兆円",
+            "position_count": 48,
+            "top5_concentration_pct": 67.2
+          },
+          {
+            "filing_date": "2016-05-16",
+            "total_value_usd": 128569639000,
+            "total_value_label": "19.3兆円",
+            "position_count": 47,
+            "top5_concentration_pct": 69.2
+          },
+          {
+            "filing_date": "2016-08-15",
+            "total_value_usd": 129704731000,
+            "total_value_label": "19.5兆円",
+            "position_count": 49,
+            "top5_concentration_pct": 70.3
+          },
+          {
+            "filing_date": "2016-11-14",
+            "total_value_usd": 128787110000,
+            "total_value_label": "19.3兆円",
+            "position_count": 50,
+            "top5_concentration_pct": 69.8
+          },
+          {
+            "filing_date": "2017-02-14",
+            "total_value_usd": 147985198000,
+            "total_value_label": "22.2兆円",
+            "position_count": 47,
+            "top5_concentration_pct": 65.0
+          },
+          {
+            "filing_date": "2017-05-15",
+            "total_value_usd": 161873831000,
+            "total_value_label": "24.3兆円",
+            "position_count": 46,
+            "top5_concentration_pct": 64.1
+          },
+          {
+            "filing_date": "2017-08-14",
+            "total_value_usd": 162143689000,
+            "total_value_label": "24.3兆円",
+            "position_count": 47,
+            "top5_concentration_pct": 63.7
+          },
+          {
+            "filing_date": "2017-11-14",
+            "total_value_usd": 177678767000,
+            "total_value_label": "26.7兆円",
+            "position_count": 47,
+            "top5_concentration_pct": 60.1
+          },
+          {
+            "filing_date": "2018-02-14",
+            "total_value_usd": 191242697000,
+            "total_value_label": "28.7兆円",
+            "position_count": 48,
+            "top5_concentration_pct": 62.5
+          },
+          {
+            "filing_date": "2018-05-15",
+            "total_value_usd": 188943876000,
+            "total_value_label": "28.3兆円",
+            "position_count": 46,
+            "top5_concentration_pct": 64.6
+          },
+          {
+            "filing_date": "2018-08-14",
+            "total_value_usd": 195615793000,
+            "total_value_label": "29.3兆円",
+            "position_count": 44,
+            "top5_concentration_pct": 65.9
+          },
+          {
+            "filing_date": "2018-11-14",
+            "total_value_usd": 221020177000,
+            "total_value_label": "33.2兆円",
+            "position_count": 46,
+            "top5_concentration_pct": 64.5
+          },
+          {
+            "filing_date": "2019-02-14",
+            "total_value_usd": 183066067000,
+            "total_value_label": "27.5兆円",
+            "position_count": 48,
+            "top5_concentration_pct": 62.6
+          },
+          {
+            "filing_date": "2019-05-15",
+            "total_value_usd": 199483708000,
+            "total_value_label": "29.9兆円",
+            "position_count": 48,
+            "top5_concentration_pct": 63.8
+          },
+          {
+            "filing_date": "2019-08-14",
+            "total_value_usd": 208101077000,
+            "total_value_label": "31.2兆円",
+            "position_count": 47,
+            "top5_concentration_pct": 64.8
+          },
+          {
+            "filing_date": "2019-11-14",
+            "total_value_usd": 214673311000,
+            "total_value_label": "32.2兆円",
+            "position_count": 48,
+            "top5_concentration_pct": 65.9
+          },
+          {
+            "filing_date": "2020-02-14",
+            "total_value_usd": 242050717000,
+            "total_value_label": "36.3兆円",
+            "position_count": 52,
+            "top5_concentration_pct": 67.3
+          },
+          {
+            "filing_date": "2020-05-15",
+            "total_value_usd": 175526846000,
+            "total_value_label": "26.3兆円",
+            "position_count": 50,
+            "top5_concentration_pct": 69.5
+          },
+          {
+            "filing_date": "2020-08-14",
+            "total_value_usd": 202411166000,
+            "total_value_label": "30.4兆円",
+            "position_count": 44,
+            "top5_concentration_pct": 76.1
+          },
+          {
+            "filing_date": "2020-11-16",
+            "total_value_usd": 228890673000,
+            "total_value_label": "34.3兆円",
+            "position_count": 49,
+            "top5_concentration_pct": 77.9
+          },
+          {
+            "filing_date": "2021-02-16",
+            "total_value_usd": 269927528000,
+            "total_value_label": "40.5兆円",
+            "position_count": 47,
+            "top5_concentration_pct": 74.1
+          },
+          {
+            "filing_date": "2021-05-17",
+            "total_value_usd": 270435200000,
+            "total_value_label": "40.6兆円",
+            "position_count": 46,
+            "top5_concentration_pct": 75.1
+          },
+          {
+            "filing_date": "2021-08-16",
+            "total_value_usd": 293023412000,
+            "total_value_label": "44.0兆円",
+            "position_count": 44,
+            "top5_concentration_pct": 76.1
+          },
+          {
+            "filing_date": "2021-11-15",
+            "total_value_usd": 293447417000,
+            "total_value_label": "44.0兆円",
+            "position_count": 43,
+            "top5_concentration_pct": 77.3
+          },
+          {
+            "filing_date": "2022-02-14",
+            "total_value_usd": 330952724000,
+            "total_value_label": "49.6兆円",
+            "position_count": 44,
+            "top5_concentration_pct": 79.4
+          },
+          {
+            "filing_date": "2022-05-16",
+            "total_value_usd": 363553518000,
+            "total_value_label": "54.5兆円",
+            "position_count": 49,
+            "top5_concentration_pct": 76.0
+          },
+          {
+            "filing_date": "2022-08-15",
+            "total_value_usd": 300130772000,
+            "total_value_label": "45.0兆円",
+            "position_count": 47,
+            "top5_concentration_pct": 74.4
+          },
+          {
+            "filing_date": "2022-11-14",
+            "total_value_usd": 296096640000,
+            "total_value_label": "44.4兆円",
+            "position_count": 49,
+            "top5_concentration_pct": 74.6
+          },
+          {
+            "filing_date": "2023-02-14",
+            "total_value_usd": 299007622119,
+            "total_value_label": "44.9兆円",
+            "position_count": 49,
+            "top5_concentration_pct": 75.9
+          },
+          {
+            "filing_date": "2023-05-15",
+            "total_value_usd": 325108752692,
+            "total_value_label": "48.8兆円",
+            "position_count": 48,
+            "top5_concentration_pct": 77.5
+          },
+          {
+            "filing_date": "2023-08-14",
+            "total_value_usd": 348194055552,
+            "total_value_label": "52.2兆円",
+            "position_count": 48,
+            "top5_concentration_pct": 79.6
+          },
+          {
+            "filing_date": "2023-11-14",
+            "total_value_usd": 313257308189,
+            "total_value_label": "47.0兆円",
+            "position_count": 45,
+            "top5_concentration_pct": 79.4
+          },
+          {
+            "filing_date": "2024-02-14",
+            "total_value_usd": 347358074461,
+            "total_value_label": "52.1兆円",
+            "position_count": 41,
+            "top5_concentration_pct": 80.6
+          },
+          {
+            "filing_date": "2024-05-15",
+            "total_value_usd": 331680406332,
+            "total_value_label": "49.8兆円",
+            "position_count": 41,
+            "top5_concentration_pct": 76.3
+          },
+          {
+            "filing_date": "2024-08-14",
+            "total_value_usd": 279969062343,
+            "total_value_label": "42.0兆円",
+            "position_count": 41,
+            "top5_concentration_pct": 73.0
+          },
+          {
+            "filing_date": "2024-11-14",
+            "total_value_usd": 266378900503,
+            "total_value_label": "40.0兆円",
+            "position_count": 40,
+            "top5_concentration_pct": 70.9
+          },
+          {
+            "filing_date": "2025-02-14",
+            "total_value_usd": 267175474249,
+            "total_value_label": "40.1兆円",
+            "position_count": 38,
+            "top5_concentration_pct": 71.9
+          },
+          {
+            "filing_date": "2025-05-15",
+            "total_value_usd": 258701144516,
+            "total_value_label": "38.8兆円",
+            "position_count": 36,
+            "top5_concentration_pct": 70.5
+          },
+          {
+            "filing_date": "2025-08-14",
+            "total_value_usd": 257521776925,
+            "total_value_label": "38.6兆円",
+            "position_count": 41,
+            "top5_concentration_pct": 70.0
+          },
+          {
+            "filing_date": "2025-11-14",
+            "total_value_usd": 267334501955,
+            "total_value_label": "40.1兆円",
+            "position_count": 41,
+            "top5_concentration_pct": 69.5
+          },
+          {
+            "filing_date": "2026-02-17",
+            "total_value_usd": 274160086701,
+            "total_value_label": "41.1兆円",
+            "position_count": 42,
+            "top5_concentration_pct": 70.9
+          },
+          {
+            "filing_date": "2026-05-15",
+            "total_value_usd": 263095703570,
+            "total_value_label": "39.5兆円",
+            "position_count": 29,
+            "top5_concentration_pct": 67.1
+          }
+        ],
+        "has_enough_history": true
+      }
     },
     {
       "id": "vanguard",
@@ -296,80 +1604,853 @@
       ],
       "buys": [
         {
-          "name": "Nvidia Corporation",
-          "ticker": "67066G104",
+          "name": "Alphabet Inc",
+          "ticker": "02079K305",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約63.4兆円",
+          "value": "+約6.0兆円",
           "bar": 100
+        },
+        {
+          "name": "Alphabet Inc",
+          "ticker": "02079K107",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約4.7兆円",
+          "bar": 79
         },
         {
           "name": "Apple Inc",
           "ticker": "037833100",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約58.2兆円",
-          "bar": 92
+          "value": "+約4.7兆円",
+          "bar": 78
         },
+        {
+          "name": "Eli Lilly & Co",
+          "ticker": "532457108",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約3.9兆円",
+          "bar": 66
+        },
+        {
+          "name": "Micron Technology Inc",
+          "ticker": "595112103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約1.9兆円",
+          "bar": 32
+        }
+      ],
+      "sells": [
         {
           "name": "Microsoft Corp",
           "ticker": "594918104",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約52.1兆円",
+          "value": "-約2.5兆円",
+          "bar": 100
+        },
+        {
+          "name": "Oracle Corp",
+          "ticker": "68389X105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2.0兆円",
           "bar": 82
         },
         {
-          "name": "Amazon Com Inc",
-          "ticker": "023135106",
+          "name": "Netflix Inc",
+          "ticker": "64110L106",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約29.3兆円",
-          "bar": 46
+          "value": "-約1.4兆円",
+          "bar": 59
+        },
+        {
+          "name": "Meta Platforms Inc",
+          "ticker": "30303M102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1.4兆円",
+          "bar": 58
+        },
+        {
+          "name": "Home Depot Inc",
+          "ticker": "437076102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約8324億円",
+          "bar": 34
+        }
+      ],
+      "last_filing_date": "2026-01-29",
+      "has_quarter_comparison": true,
+      "buys_extended": [
+        {
+          "name": "Alphabet Inc",
+          "ticker": "02079K305",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約6.0兆円",
+          "bar": 100
+        },
+        {
+          "name": "Alphabet Inc",
+          "ticker": "02079K107",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約4.7兆円",
+          "bar": 79
+        },
+        {
+          "name": "Apple Inc",
+          "ticker": "037833100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約4.7兆円",
+          "bar": 78
+        },
+        {
+          "name": "Eli Lilly & Co",
+          "ticker": "532457108",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約3.9兆円",
+          "bar": 66
+        },
+        {
+          "name": "Micron Technology Inc",
+          "ticker": "595112103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約1.9兆円",
+          "bar": 32
         },
         {
           "name": "Broadcom Inc",
           "ticker": "11135F101",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約25.1兆円",
-          "bar": 40
+          "value": "+約1.4兆円",
+          "bar": 23
+        },
+        {
+          "name": "Advanced Micro Devices Inc",
+          "ticker": "007903107",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約1.3兆円",
+          "bar": 22
+        },
+        {
+          "name": "Amazon Com Inc",
+          "ticker": "023135106",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約1.3兆円",
+          "bar": 21
+        },
+        {
+          "name": "Nvidia Corporation",
+          "ticker": "67066G104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約1.2兆円",
+          "bar": 20
+        },
+        {
+          "name": "Johnson & Johnson",
+          "ticker": "478160104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約8800億円",
+          "bar": 15
+        },
+        {
+          "name": "Merck & Co Inc",
+          "ticker": "58933Y105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約8412億円",
+          "bar": 14
+        },
+        {
+          "name": "Totalenergies Se",
+          "ticker": "F92124100",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約8006億円",
+          "bar": 13
+        },
+        {
+          "name": "Lam Research Corp",
+          "ticker": "512807306",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約7378億円",
+          "bar": 12
+        },
+        {
+          "name": "Caterpillar Inc",
+          "ticker": "149123101",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約6976億円",
+          "bar": 12
+        },
+        {
+          "name": "Tesla Inc",
+          "ticker": "88160R101",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約6304億円",
+          "bar": 11
+        },
+        {
+          "name": "Walmart Inc",
+          "ticker": "931142103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約6176億円",
+          "bar": 10
+        },
+        {
+          "name": "Applied Matls Inc",
+          "ticker": "038222105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約6119億円",
+          "bar": 10
+        },
+        {
+          "name": "Intuitive Surgical Inc",
+          "ticker": "46120E602",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約6016億円",
+          "bar": 10
+        },
+        {
+          "name": "Cisco Sys Inc",
+          "ticker": "17275R102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約5568億円",
+          "bar": 9
+        },
+        {
+          "name": "Bank America Corp",
+          "ticker": "060505104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約5137億円",
+          "bar": 9
+        },
+        {
+          "name": "Thermo Fisher Scientific Inc",
+          "ticker": "883556102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約5045億円",
+          "bar": 8
+        },
+        {
+          "name": "Exxon Mobil Corp",
+          "ticker": "30231G102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約4942億円",
+          "bar": 8
+        },
+        {
+          "name": "Citigroup Inc",
+          "ticker": "172967424",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約4471億円",
+          "bar": 7
+        },
+        {
+          "name": "Amgen Inc",
+          "ticker": "031162100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約4118億円",
+          "bar": 7
+        },
+        {
+          "name": "Goldman Sachs Group Inc",
+          "ticker": "38141G104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約4097億円",
+          "bar": 7
+        },
+        {
+          "name": "Warner Bros Discovery Inc",
+          "ticker": "934423104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約4004億円",
+          "bar": 7
+        },
+        {
+          "name": "Wells Fargo Co New",
+          "ticker": "949746101",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約3906億円",
+          "bar": 7
+        },
+        {
+          "name": "Salesforce Inc",
+          "ticker": "79466L302",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約3858億円",
+          "bar": 6
+        },
+        {
+          "name": "Morgan Stanley",
+          "ticker": "617446448",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約3659億円",
+          "bar": 6
+        },
+        {
+          "name": "Rtx Corporation",
+          "ticker": "75513E101",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約3568億円",
+          "bar": 6
         }
       ],
-      "sells": [
+      "sells_extended": [
         {
-          "name": "ヘルスケア関連株",
-          "ticker": "VHT",
-          "desc": "医療・製薬会社のセクター",
-          "value": "-約1.3兆円",
-          "bar": 72
+          "name": "Microsoft Corp",
+          "ticker": "594918104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2.5兆円",
+          "bar": 100
         },
         {
-          "name": "電力・ガス関連株",
-          "ticker": "VPU",
-          "desc": "公共事業セクター",
-          "value": "-約0.9兆円",
-          "bar": 55
+          "name": "Oracle Corp",
+          "ticker": "68389X105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2.0兆円",
+          "bar": 82
         },
         {
-          "name": "不動産関連株",
-          "ticker": "VNQ",
-          "desc": "不動産投資セクター",
-          "value": "-約0.6兆円",
-          "bar": 40
+          "name": "Netflix Inc",
+          "ticker": "64110L106",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1.4兆円",
+          "bar": 59
         },
         {
-          "name": "素材・資源関連株",
-          "ticker": "VAW",
-          "desc": "鉄鋼・化学セクター",
-          "value": "-約0.1兆円",
+          "name": "Meta Platforms Inc",
+          "ticker": "30303M102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1.4兆円",
+          "bar": 58
+        },
+        {
+          "name": "Home Depot Inc",
+          "ticker": "437076102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約8324億円",
+          "bar": 34
+        },
+        {
+          "name": "Roblox Corp",
+          "ticker": "771049103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約5260億円",
+          "bar": 21
+        },
+        {
+          "name": "Servicenow Inc",
+          "ticker": "81762P102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約4470億円",
           "bar": 18
         },
         {
-          "name": "工業・製造業関連株",
-          "ticker": "VIS",
-          "desc": "工業セクター",
-          "value": "-約0.1兆円",
+          "name": "Uber Technologies Inc",
+          "ticker": "90353T100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約4450億円",
           "bar": 18
+        },
+        {
+          "name": "Coinbase Global Inc",
+          "ticker": "19260Q107",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約4316億円",
+          "bar": 18
+        },
+        {
+          "name": "Strategy Inc",
+          "ticker": "594972408",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約4126億円",
+          "bar": 17
+        },
+        {
+          "name": "Fiserv Inc",
+          "ticker": "337738108",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約4122億円",
+          "bar": 17
+        },
+        {
+          "name": "Kellanova",
+          "ticker": "487836108",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約4112億円",
+          "bar": 17
+        },
+        {
+          "name": "Robinhood Mkts Inc",
+          "ticker": "770700102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約4035億円",
+          "bar": 16
+        },
+        {
+          "name": "Costco Whsl Corp New",
+          "ticker": "22160K105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約3912億円",
+          "bar": 16
+        },
+        {
+          "name": "At&T Inc",
+          "ticker": "00206R102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約3235億円",
+          "bar": 13
+        },
+        {
+          "name": "Procter And Gamble Co",
+          "ticker": "742718109",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約3031億円",
+          "bar": 12
+        },
+        {
+          "name": "Linde Plc",
+          "ticker": "G54950103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約3025億円",
+          "bar": 12
+        },
+        {
+          "name": "Eaton Corp Plc",
+          "ticker": "G29183103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約3018億円",
+          "bar": 12
+        },
+        {
+          "name": "Dupont De Nemours Inc",
+          "ticker": "26614N102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2881億円",
+          "bar": 12
+        },
+        {
+          "name": "Doordash Inc",
+          "ticker": "25809K105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2673億円",
+          "bar": 11
+        },
+        {
+          "name": "Motorola Solutions Inc",
+          "ticker": "620076307",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2465億円",
+          "bar": 10
+        },
+        {
+          "name": "Autozone Inc",
+          "ticker": "053332102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2432億円",
+          "bar": 10
+        },
+        {
+          "name": "T-Mobile Us Inc",
+          "ticker": "872590104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2327億円",
+          "bar": 9
+        },
+        {
+          "name": "Automatic Data Processing In",
+          "ticker": "053015103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2310億円",
+          "bar": 9
+        },
+        {
+          "name": "Gallagher Arthur J & Co",
+          "ticker": "363576109",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2298億円",
+          "bar": 9
+        },
+        {
+          "name": "Mr Cooper Group Inc",
+          "ticker": "62482R107",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約2114億円",
+          "bar": 9
+        },
+        {
+          "name": "Axon Enterprise Inc",
+          "ticker": "05464C101",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2046億円",
+          "bar": 8
+        },
+        {
+          "name": "Vistra Corp",
+          "ticker": "92840M102",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2043億円",
+          "bar": 8
+        },
+        {
+          "name": "Fastenal Co",
+          "ticker": "311900104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約2029億円",
+          "bar": 8
+        },
+        {
+          "name": "Arista Networks Inc",
+          "ticker": "040413205",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約1968億円",
+          "bar": 8
         }
       ],
-      "last_filing_date": "2026-01-29",
-      "has_quarter_comparison": false
+      "trend": {
+        "fund_id": "vanguard",
+        "quarters": [
+          {
+            "filing_date": "2014-02-12",
+            "total_value_usd": 1137153301000,
+            "total_value_label": "170.6兆円",
+            "position_count": 3898,
+            "top5_concentration_pct": 8.0
+          },
+          {
+            "filing_date": "2014-05-13",
+            "total_value_usd": 1188978890000,
+            "total_value_label": "178.3兆円",
+            "position_count": 3937,
+            "top5_concentration_pct": 7.9
+          },
+          {
+            "filing_date": "2014-08-11",
+            "total_value_usd": 1269219749000,
+            "total_value_label": "190.4兆円",
+            "position_count": 3968,
+            "top5_concentration_pct": 7.9
+          },
+          {
+            "filing_date": "2014-11-12",
+            "total_value_usd": 1282781133000,
+            "total_value_label": "192.4兆円",
+            "position_count": 4014,
+            "top5_concentration_pct": 8.2
+          },
+          {
+            "filing_date": "2015-02-12",
+            "total_value_usd": 1388485575000,
+            "total_value_label": "208.3兆円",
+            "position_count": 4048,
+            "top5_concentration_pct": 8.0
+          },
+          {
+            "filing_date": "2015-05-14",
+            "total_value_usd": 1614610849000,
+            "total_value_label": "242.2兆円",
+            "position_count": 4146,
+            "top5_concentration_pct": 8.6
+          },
+          {
+            "filing_date": "2015-08-13",
+            "total_value_usd": 1479345105000,
+            "total_value_label": "221.9兆円",
+            "position_count": 4192,
+            "top5_concentration_pct": 7.7
+          },
+          {
+            "filing_date": "2015-11-12",
+            "total_value_usd": 1292777792000,
+            "total_value_label": "193.9兆円",
+            "position_count": 2305,
+            "top5_concentration_pct": 7.7
+          },
+          {
+            "filing_date": "2016-02-08",
+            "total_value_usd": 1487143607000,
+            "total_value_label": "223.1兆円",
+            "position_count": 4198,
+            "top5_concentration_pct": 7.8
+          },
+          {
+            "filing_date": "2016-05-13",
+            "total_value_usd": 1543503172000,
+            "total_value_label": "231.5兆円",
+            "position_count": 4140,
+            "top5_concentration_pct": 8.0
+          },
+          {
+            "filing_date": "2016-08-10",
+            "total_value_usd": 1610198961000,
+            "total_value_label": "241.5兆円",
+            "position_count": 4134,
+            "top5_concentration_pct": 7.7
+          },
+          {
+            "filing_date": "2016-11-14",
+            "total_value_usd": 1702307730000,
+            "total_value_label": "255.3兆円",
+            "position_count": 4084,
+            "top5_concentration_pct": 7.9
+          },
+          {
+            "filing_date": "2017-02-14",
+            "total_value_usd": 1792632770000,
+            "total_value_label": "268.9兆円",
+            "position_count": 4079,
+            "top5_concentration_pct": 7.8
+          },
+          {
+            "filing_date": "2017-05-12",
+            "total_value_usd": 1945199816000,
+            "total_value_label": "291.8兆円",
+            "position_count": 4069,
+            "top5_concentration_pct": 8.1
+          },
+          {
+            "filing_date": "2017-08-11",
+            "total_value_usd": 2028670422000,
+            "total_value_label": "304.3兆円",
+            "position_count": 4073,
+            "top5_concentration_pct": 8.2
+          },
+          {
+            "filing_date": "2017-11-14",
+            "total_value_usd": 2139448908000,
+            "total_value_label": "320.9兆円",
+            "position_count": 4074,
+            "top5_concentration_pct": 8.3
+          },
+          {
+            "filing_date": "2018-02-14",
+            "total_value_usd": 2286847178000,
+            "total_value_label": "343.0兆円",
+            "position_count": 4063,
+            "top5_concentration_pct": 8.7
+          },
+          {
+            "filing_date": "2018-05-15",
+            "total_value_usd": 2286627689000,
+            "total_value_label": "343.0兆円",
+            "position_count": 4097,
+            "top5_concentration_pct": 9.2
+          },
+          {
+            "filing_date": "2018-08-14",
+            "total_value_usd": 2390611653000,
+            "total_value_label": "358.6兆円",
+            "position_count": 4129,
+            "top5_concentration_pct": 9.6
+          },
+          {
+            "filing_date": "2018-11-14",
+            "total_value_usd": 2559300079000,
+            "total_value_label": "383.9兆円",
+            "position_count": 4126,
+            "top5_concentration_pct": 11.1
+          },
+          {
+            "filing_date": "2019-02-14",
+            "total_value_usd": 2225644416000,
+            "total_value_label": "333.8兆円",
+            "position_count": 4151,
+            "top5_concentration_pct": 9.7
+          },
+          {
+            "filing_date": "2019-05-15",
+            "total_value_usd": 2549073227000,
+            "total_value_label": "382.4兆円",
+            "position_count": 4118,
+            "top5_concentration_pct": 9.9
+          },
+          {
+            "filing_date": "2019-08-14",
+            "total_value_usd": 2657985145000,
+            "total_value_label": "398.7兆円",
+            "position_count": 4168,
+            "top5_concentration_pct": 10.3
+          },
+          {
+            "filing_date": "2019-11-14",
+            "total_value_usd": 2696491415000,
+            "total_value_label": "404.5兆円",
+            "position_count": 4153,
+            "top5_concentration_pct": 10.3
+          },
+          {
+            "filing_date": "2020-02-14",
+            "total_value_usd": 2932327794000,
+            "total_value_label": "439.8兆円",
+            "position_count": 4124,
+            "top5_concentration_pct": 11.1
+          },
+          {
+            "filing_date": "2020-05-15",
+            "total_value_usd": 2346437348000,
+            "total_value_label": "352.0兆円",
+            "position_count": 4081,
+            "top5_concentration_pct": 13.3
+          },
+          {
+            "filing_date": "2020-08-14",
+            "total_value_usd": 2819342194000,
+            "total_value_label": "422.9兆円",
+            "position_count": 4074,
+            "top5_concentration_pct": 14.7
+          },
+          {
+            "filing_date": "2020-11-16",
+            "total_value_usd": 3021796626000,
+            "total_value_label": "453.3兆円",
+            "position_count": 4108,
+            "top5_concentration_pct": 15.4
+          },
+          {
+            "filing_date": "2021-02-12",
+            "total_value_usd": 3447554067000,
+            "total_value_label": "517.1兆円",
+            "position_count": 4205,
+            "top5_concentration_pct": 14.5
+          },
+          {
+            "filing_date": "2021-05-14",
+            "total_value_usd": 3696790000000,
+            "total_value_label": "554.5兆円",
+            "position_count": 4333,
+            "top5_concentration_pct": 13.5
+          },
+          {
+            "filing_date": "2021-08-13",
+            "total_value_usd": 4018369935000,
+            "total_value_label": "602.8兆円",
+            "position_count": 4424,
+            "top5_concentration_pct": 14.2
+          },
+          {
+            "filing_date": "2021-11-12",
+            "total_value_usd": 4026194255000,
+            "total_value_label": "603.9兆円",
+            "position_count": 4546,
+            "top5_concentration_pct": 14.5
+          },
+          {
+            "filing_date": "2022-02-14",
+            "total_value_usd": 4404582353000,
+            "total_value_label": "660.7兆円",
+            "position_count": 4635,
+            "top5_concentration_pct": 15.3
+          },
+          {
+            "filing_date": "2022-05-13",
+            "total_value_usd": 4227459554000,
+            "total_value_label": "634.1兆円",
+            "position_count": 4626,
+            "top5_concentration_pct": 15.6
+          },
+          {
+            "filing_date": "2022-08-12",
+            "total_value_usd": 3557246201000,
+            "total_value_label": "533.6兆円",
+            "position_count": 4621,
+            "top5_concentration_pct": 14.3
+          },
+          {
+            "filing_date": "2022-11-14",
+            "total_value_usd": 3400029211000,
+            "total_value_label": "510.0兆円",
+            "position_count": 4604,
+            "top5_concentration_pct": 14.9
+          },
+          {
+            "filing_date": "2023-02-10",
+            "total_value_usd": 3672651228217,
+            "total_value_label": "550.9兆円",
+            "position_count": 4526,
+            "top5_concentration_pct": 12.7
+          },
+          {
+            "filing_date": "2023-05-15",
+            "total_value_usd": 3926392807163,
+            "total_value_label": "589.0兆円",
+            "position_count": 4494,
+            "top5_concentration_pct": 14.9
+          },
+          {
+            "filing_date": "2023-08-14",
+            "total_value_usd": 4217440406083,
+            "total_value_label": "632.6兆円",
+            "position_count": 4548,
+            "top5_concentration_pct": 16.9
+          },
+          {
+            "filing_date": "2023-11-14",
+            "total_value_usd": 4070960988179,
+            "total_value_label": "610.6兆円",
+            "position_count": 4536,
+            "top5_concentration_pct": 16.6
+          },
+          {
+            "filing_date": "2024-02-14",
+            "total_value_usd": 4569610310498,
+            "total_value_label": "685.4兆円",
+            "position_count": 4484,
+            "top5_concentration_pct": 17.3
+          },
+          {
+            "filing_date": "2024-05-10",
+            "total_value_usd": 5048704865614,
+            "total_value_label": "757.3兆円",
+            "position_count": 4449,
+            "top5_concentration_pct": 18.5
+          },
+          {
+            "filing_date": "2024-08-13",
+            "total_value_usd": 5205557821184,
+            "total_value_label": "780.8兆円",
+            "position_count": 4413,
+            "top5_concentration_pct": 20.9
+          },
+          {
+            "filing_date": "2024-11-13",
+            "total_value_usd": 5584478889705,
+            "total_value_label": "837.7兆円",
+            "position_count": 4351,
+            "top5_concentration_pct": 20.1
+          },
+          {
+            "filing_date": "2025-02-11",
+            "total_value_usd": 5741207245727,
+            "total_value_label": "861.2兆円",
+            "position_count": 4293,
+            "top5_concentration_pct": 21.3
+          },
+          {
+            "filing_date": "2025-05-09",
+            "total_value_usd": 5531119721493,
+            "total_value_label": "829.7兆円",
+            "position_count": 4280,
+            "top5_concentration_pct": 19.5
+          },
+          {
+            "filing_date": "2025-08-11",
+            "total_value_usd": 6178129573955,
+            "total_value_label": "926.7兆円",
+            "position_count": 4274,
+            "top5_concentration_pct": 21.4
+          },
+          {
+            "filing_date": "2025-11-07",
+            "total_value_usd": 6680394025516,
+            "total_value_label": "1002.1兆円",
+            "position_count": 4344,
+            "top5_concentration_pct": 22.1
+          },
+          {
+            "filing_date": "2026-01-29",
+            "total_value_usd": 6897676080637,
+            "total_value_label": "1034.7兆円",
+            "position_count": 4329,
+            "top5_concentration_pct": 22.0
+          }
+        ],
+        "has_enough_history": true
+      }
     },
     {
       "id": "soros",
@@ -429,77 +2510,871 @@
           "name": "State Str Spdr S&P 500 Etf T",
           "ticker": "78462F103",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約1184億円",
+          "value": "+約885億円",
+          "bar": 100
+        },
+        {
+          "name": "Taiwan Semiconductor Manufac",
+          "ticker": "874039100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約295億円",
+          "bar": 33
+        },
+        {
+          "name": "Select Sector Spdr Tr",
+          "ticker": "81369Y506",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約211億円",
+          "bar": 24
+        },
+        {
+          "name": "Coreweave Inc",
+          "ticker": "21873S108",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約196億円",
+          "bar": 22
+        },
+        {
+          "name": "Linde Plc",
+          "ticker": "G54950103",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約193億円",
+          "bar": 22
+        }
+      ],
+      "sells": [
+        {
+          "name": "Spotify Usa Inc",
+          "ticker": "84921RAB6",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約332億円",
           "bar": 100
         },
         {
           "name": "Amazon Com Inc",
           "ticker": "023135106",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約608億円",
-          "bar": 51
+          "value": "-約313億円",
+          "bar": 94
+        },
+        {
+          "name": "Spdr Series Trust",
+          "ticker": "78468R556",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約297億円",
+          "bar": 89
+        },
+        {
+          "name": "Confluent Inc",
+          "ticker": "20717MAB9",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約241億円",
+          "bar": 73
+        },
+        {
+          "name": "Dropbox Inc",
+          "ticker": "26210CAC8",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約206億円",
+          "bar": 62
+        }
+      ],
+      "last_filing_date": "2026-05-15",
+      "has_quarter_comparison": true,
+      "buys_extended": [
+        {
+          "name": "State Str Spdr S&P 500 Etf T",
+          "ticker": "78462F103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約885億円",
+          "bar": 100
         },
         {
           "name": "Taiwan Semiconductor Manufac",
           "ticker": "874039100",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約455億円",
-          "bar": 38
+          "value": "+約295億円",
+          "bar": 33
         },
         {
           "name": "Select Sector Spdr Tr",
           "ticker": "81369Y506",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約455億円",
-          "bar": 38
+          "value": "+約211億円",
+          "bar": 24
         },
         {
           "name": "Coreweave Inc",
           "ticker": "21873S108",
           "desc": "SEC 13F-HR 開示銘柄",
-          "value": "+約381億円",
-          "bar": 32
+          "value": "+約196億円",
+          "bar": 22
+        },
+        {
+          "name": "Linde Plc",
+          "ticker": "G54950103",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約193億円",
+          "bar": 22
+        },
+        {
+          "name": "Electronic Arts Inc",
+          "ticker": "285512109",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約164億円",
+          "bar": 19
+        },
+        {
+          "name": "Jd.Com Inc",
+          "ticker": "47215PAJ5",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約163億円",
+          "bar": 18
+        },
+        {
+          "name": "Bill Holdings Inc",
+          "ticker": "090043AF7",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約155億円",
+          "bar": 17
+        },
+        {
+          "name": "Lumentum Hldgs Inc",
+          "ticker": "55024UAF6",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約150億円",
+          "bar": 17
+        },
+        {
+          "name": "Blackline Inc",
+          "ticker": "09239BAF6",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約142億円",
+          "bar": 16
+        },
+        {
+          "name": "Sealed Air Corp New",
+          "ticker": "81211K100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約141億円",
+          "bar": 16
+        },
+        {
+          "name": "H2O America",
+          "ticker": "784305104",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約108億円",
+          "bar": 12
+        },
+        {
+          "name": "Snap Inc",
+          "ticker": "83304AAK2",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約107億円",
+          "bar": 12
+        },
+        {
+          "name": "Honeywell Intl Inc",
+          "ticker": "438516106",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約101億円",
+          "bar": 11
+        },
+        {
+          "name": "Penumbra Inc",
+          "ticker": "70975L107",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約100億円",
+          "bar": 11
+        },
+        {
+          "name": "Berkshire Hathaway Inc Del",
+          "ticker": "084670702",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約96億円",
+          "bar": 11
+        },
+        {
+          "name": "Itron Inc",
+          "ticker": "465741106",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約95億円",
+          "bar": 11
+        },
+        {
+          "name": "Nvidia Corporation",
+          "ticker": "67066G104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約95億円",
+          "bar": 11
+        },
+        {
+          "name": "Nextera Energy Inc",
+          "ticker": "65339F655",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約91億円",
+          "bar": 10
+        },
+        {
+          "name": "Varonis Sys Inc",
+          "ticker": "922280AD4",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約89億円",
+          "bar": 10
+        },
+        {
+          "name": "Dexcom Inc",
+          "ticker": "252131AM9",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約87億円",
+          "bar": 10
+        },
+        {
+          "name": "Wix Com Ltd",
+          "ticker": "M98068105",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約76億円",
+          "bar": 9
+        },
+        {
+          "name": "Webster Finl Corp",
+          "ticker": "947890109",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約74億円",
+          "bar": 8
+        },
+        {
+          "name": "Wec Energy Group Inc",
+          "ticker": "92939U106",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約74億円",
+          "bar": 8
+        },
+        {
+          "name": "Tri Pointe Homes Inc",
+          "ticker": "87265H109",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約73億円",
+          "bar": 8
+        },
+        {
+          "name": "Pg&E Corp",
+          "ticker": "69331CAL2",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約66億円",
+          "bar": 7
+        },
+        {
+          "name": "Global Pmts Inc",
+          "ticker": "37940XAU6",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約64億円",
+          "bar": 7
+        },
+        {
+          "name": "Apellis Pharmaceuticals Inc",
+          "ticker": "03753U106",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約64億円",
+          "bar": 7
+        },
+        {
+          "name": "Mcdonalds Corp",
+          "ticker": "580135101",
+          "desc": "SEC 13F-HR 開示銘柄（新規）",
+          "value": "+約58億円",
+          "bar": 7
+        },
+        {
+          "name": "Chart Inds Inc",
+          "ticker": "16115Q308",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "+約57億円",
+          "bar": 6
         }
       ],
-      "sells": [
+      "sells_extended": [
         {
-          "name": "エヌビディア",
-          "ticker": "NVDA",
-          "desc": "AI半導体の王者（全売却）",
-          "value": "-約0.3兆円",
-          "bar": 92
+          "name": "Spotify Usa Inc",
+          "ticker": "84921RAB6",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約332億円",
+          "bar": 100
         },
         {
-          "name": "テスラ",
-          "ticker": "TSLA",
-          "desc": "イーロン・マスクの電気自動車会社",
-          "value": "-約0.2兆円",
-          "bar": 72
+          "name": "Amazon Com Inc",
+          "ticker": "023135106",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約313億円",
+          "bar": 94
         },
         {
-          "name": "メタ（Facebook）",
-          "ticker": "META",
-          "desc": "FacebookとInstagramの会社",
-          "value": "-約0.1兆円",
-          "bar": 55
+          "name": "Spdr Series Trust",
+          "ticker": "78468R556",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約297億円",
+          "bar": 89
         },
         {
-          "name": "アマゾン",
-          "ticker": "AMZN",
-          "desc": "ネット通販とクラウドの会社",
-          "value": "-約0.05兆円",
+          "name": "Confluent Inc",
+          "ticker": "20717MAB9",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約241億円",
+          "bar": 73
+        },
+        {
+          "name": "Dropbox Inc",
+          "ticker": "26210CAC8",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約206億円",
+          "bar": 62
+        },
+        {
+          "name": "Confluent Inc",
+          "ticker": "20717M103",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約159億円",
+          "bar": 48
+        },
+        {
+          "name": "Dayforce Inc",
+          "ticker": "15677J108",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約154億円",
+          "bar": 47
+        },
+        {
+          "name": "Exact Sciences Corp",
+          "ticker": "30063P105",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約132億円",
+          "bar": 40
+        },
+        {
+          "name": "Disney Walt Co",
+          "ticker": "254687106",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約131億円",
+          "bar": 40
+        },
+        {
+          "name": "Cyberark Software Ltd",
+          "ticker": "M2682V108",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約131億円",
+          "bar": 40
+        },
+        {
+          "name": "New Gold Inc Cda",
+          "ticker": "644535106",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約127億円",
+          "bar": 38
+        },
+        {
+          "name": "Marriott Vacations Worldwide",
+          "ticker": "57164YAD9",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約125億円",
+          "bar": 38
+        },
+        {
+          "name": "Vaneck Etf Trust",
+          "ticker": "92189F676",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約119億円",
+          "bar": 36
+        },
+        {
+          "name": "Sunrun Inc",
+          "ticker": "86771W105",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約116億円",
+          "bar": 35
+        },
+        {
+          "name": "Rapid7 Inc",
+          "ticker": "753422AF1",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約110億円",
+          "bar": 33
+        },
+        {
+          "name": "Synovus Finl Corp",
+          "ticker": "87161C501",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約108億円",
+          "bar": 33
+        },
+        {
+          "name": "Air Lease Corp",
+          "ticker": "00912X302",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約107億円",
           "bar": 32
         },
         {
-          "name": "グーグル",
-          "ticker": "GOOGL",
-          "desc": "検索エンジンとYouTubeの会社",
-          "value": "-約0.02兆円",
-          "bar": 15
+          "name": "Salesforce Inc",
+          "ticker": "79466L302",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約105億円",
+          "bar": 32
+        },
+        {
+          "name": "Comerica Inc",
+          "ticker": "200340107",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約98億円",
+          "bar": 29
+        },
+        {
+          "name": "Cidara Therapeutics Inc",
+          "ticker": "171757206",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約91億円",
+          "bar": 27
+        },
+        {
+          "name": "Avidity Biosciences Inc",
+          "ticker": "05370A108",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約91億円",
+          "bar": 27
+        },
+        {
+          "name": "Figure Technology Solutio",
+          "ticker": "349381103",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約78億円",
+          "bar": 23
+        },
+        {
+          "name": "Etsy Inc",
+          "ticker": "29786AAJ5",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約74億円",
+          "bar": 22
+        },
+        {
+          "name": "Microsoft Corp",
+          "ticker": "594918104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約73億円",
+          "bar": 22
+        },
+        {
+          "name": "Ally Finl Inc",
+          "ticker": "02005N100",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約72億円",
+          "bar": 22
+        },
+        {
+          "name": "Janus Henderson Group Plc",
+          "ticker": "G4474Y214",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約71億円",
+          "bar": 21
+        },
+        {
+          "name": "Huntsman Corp",
+          "ticker": "447011107",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約70億円",
+          "bar": 21
+        },
+        {
+          "name": "Hillenbrand Inc",
+          "ticker": "431571108",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約66億円",
+          "bar": 20
+        },
+        {
+          "name": "Indivior Plc",
+          "ticker": "G4766E116",
+          "desc": "SEC 13F-HR 開示銘柄（全売却）",
+          "value": "-約62億円",
+          "bar": 19
+        },
+        {
+          "name": "Kodiak Ai Inc.",
+          "ticker": "500081104",
+          "desc": "SEC 13F-HR 開示銘柄",
+          "value": "-約62億円",
+          "bar": 19
         }
       ],
-      "last_filing_date": "2026-05-15",
-      "has_quarter_comparison": false
+      "trend": {
+        "fund_id": "soros",
+        "quarters": [
+          {
+            "filing_date": "2013-08-14",
+            "total_value_usd": 9220403000,
+            "total_value_label": "1.4兆円",
+            "position_count": 191,
+            "top5_concentration_pct": 27.4
+          },
+          {
+            "filing_date": "2013-11-14",
+            "total_value_usd": 9144373000,
+            "total_value_label": "1.4兆円",
+            "position_count": 217,
+            "top5_concentration_pct": 20.1
+          },
+          {
+            "filing_date": "2014-02-14",
+            "total_value_usd": 11774807000,
+            "total_value_label": "1.8兆円",
+            "position_count": 216,
+            "top5_concentration_pct": 24.1
+          },
+          {
+            "filing_date": "2014-05-15",
+            "total_value_usd": 10116816000,
+            "total_value_label": "1.5兆円",
+            "position_count": 297,
+            "top5_concentration_pct": 17.4
+          },
+          {
+            "filing_date": "2014-08-14",
+            "total_value_usd": 13270885000,
+            "total_value_label": "2.0兆円",
+            "position_count": 351,
+            "top5_concentration_pct": 31.0
+          },
+          {
+            "filing_date": "2014-11-14",
+            "total_value_usd": 13398547000,
+            "total_value_label": "2.0兆円",
+            "position_count": 257,
+            "top5_concentration_pct": 28.7
+          },
+          {
+            "filing_date": "2015-02-17",
+            "total_value_usd": 9159135000,
+            "total_value_label": "1.4兆円",
+            "position_count": 182,
+            "top5_concentration_pct": 16.4
+          },
+          {
+            "filing_date": "2015-05-15",
+            "total_value_usd": 10162378000,
+            "total_value_label": "1.5兆円",
+            "position_count": 220,
+            "top5_concentration_pct": 22.6
+          },
+          {
+            "filing_date": "2015-08-14",
+            "total_value_usd": 10745503000,
+            "total_value_label": "1.6兆円",
+            "position_count": 255,
+            "top5_concentration_pct": 32.3
+          },
+          {
+            "filing_date": "2015-11-16",
+            "total_value_usd": 6613286000,
+            "total_value_label": "9920億円",
+            "position_count": 221,
+            "top5_concentration_pct": 16.2
+          },
+          {
+            "filing_date": "2016-02-16",
+            "total_value_usd": 6047070000,
+            "total_value_label": "9071億円",
+            "position_count": 239,
+            "top5_concentration_pct": 19.1
+          },
+          {
+            "filing_date": "2016-05-16",
+            "total_value_usd": 4530368000,
+            "total_value_label": "6796億円",
+            "position_count": 220,
+            "top5_concentration_pct": 28.1
+          },
+          {
+            "filing_date": "2016-08-15",
+            "total_value_usd": 4675713000,
+            "total_value_label": "7014億円",
+            "position_count": 168,
+            "top5_concentration_pct": 43.6
+          },
+          {
+            "filing_date": "2016-11-14",
+            "total_value_usd": 3998356000,
+            "total_value_label": "5998億円",
+            "position_count": 219,
+            "top5_concentration_pct": 36.2
+          },
+          {
+            "filing_date": "2017-02-14",
+            "total_value_usd": 4321285000,
+            "total_value_label": "6482億円",
+            "position_count": 202,
+            "top5_concentration_pct": 37.1
+          },
+          {
+            "filing_date": "2017-05-15",
+            "total_value_usd": 4960582000,
+            "total_value_label": "7441億円",
+            "position_count": 257,
+            "top5_concentration_pct": 38.0
+          },
+          {
+            "filing_date": "2017-08-14",
+            "total_value_usd": 5622846000,
+            "total_value_label": "8434億円",
+            "position_count": 196,
+            "top5_concentration_pct": 48.8
+          },
+          {
+            "filing_date": "2017-11-14",
+            "total_value_usd": 4202756000,
+            "total_value_label": "6304億円",
+            "position_count": 220,
+            "top5_concentration_pct": 36.1
+          },
+          {
+            "filing_date": "2018-02-14",
+            "total_value_usd": 4371934000,
+            "total_value_label": "6558億円",
+            "position_count": 190,
+            "top5_concentration_pct": 37.2
+          },
+          {
+            "filing_date": "2018-05-15",
+            "total_value_usd": 6156738000,
+            "total_value_label": "9235億円",
+            "position_count": 207,
+            "top5_concentration_pct": 32.2
+          },
+          {
+            "filing_date": "2018-08-14",
+            "total_value_usd": 6247044000,
+            "total_value_label": "9371億円",
+            "position_count": 193,
+            "top5_concentration_pct": 38.2
+          },
+          {
+            "filing_date": "2018-11-14",
+            "total_value_usd": 4558278000,
+            "total_value_label": "6837億円",
+            "position_count": 184,
+            "top5_concentration_pct": 39.4
+          },
+          {
+            "filing_date": "2019-02-14",
+            "total_value_usd": 3300433000,
+            "total_value_label": "4951億円",
+            "position_count": 162,
+            "top5_concentration_pct": 42.4
+          },
+          {
+            "filing_date": "2019-05-15",
+            "total_value_usd": 4309281000,
+            "total_value_label": "6464億円",
+            "position_count": 164,
+            "top5_concentration_pct": 42.4
+          },
+          {
+            "filing_date": "2019-08-14",
+            "total_value_usd": 4271049000,
+            "total_value_label": "6407億円",
+            "position_count": 147,
+            "top5_concentration_pct": 46.8
+          },
+          {
+            "filing_date": "2019-11-14",
+            "total_value_usd": 3609217000,
+            "total_value_label": "5414億円",
+            "position_count": 173,
+            "top5_concentration_pct": 41.7
+          },
+          {
+            "filing_date": "2020-02-14",
+            "total_value_usd": 3090045000,
+            "total_value_label": "4635億円",
+            "position_count": 170,
+            "top5_concentration_pct": 37.5
+          },
+          {
+            "filing_date": "2020-05-15",
+            "total_value_usd": 1975128000,
+            "total_value_label": "2963億円",
+            "position_count": 118,
+            "top5_concentration_pct": 45.2
+          },
+          {
+            "filing_date": "2020-08-14",
+            "total_value_usd": 4482062000,
+            "total_value_label": "6723億円",
+            "position_count": 139,
+            "top5_concentration_pct": 37.9
+          },
+          {
+            "filing_date": "2020-11-13",
+            "total_value_usd": 4084028000,
+            "total_value_label": "6126億円",
+            "position_count": 129,
+            "top5_concentration_pct": 40.5
+          },
+          {
+            "filing_date": "2021-02-16",
+            "total_value_usd": 5295069000,
+            "total_value_label": "7943億円",
+            "position_count": 143,
+            "top5_concentration_pct": 40.8
+          },
+          {
+            "filing_date": "2021-05-14",
+            "total_value_usd": 5333818000,
+            "total_value_label": "8001億円",
+            "position_count": 226,
+            "top5_concentration_pct": 36.1
+          },
+          {
+            "filing_date": "2021-08-13",
+            "total_value_usd": 5934380000,
+            "total_value_label": "8902億円",
+            "position_count": 253,
+            "top5_concentration_pct": 35.2
+          },
+          {
+            "filing_date": "2021-11-12",
+            "total_value_usd": 5416602000,
+            "total_value_label": "8125億円",
+            "position_count": 245,
+            "top5_concentration_pct": 36.6
+          },
+          {
+            "filing_date": "2022-02-11",
+            "total_value_usd": 7307846000,
+            "total_value_label": "1.1兆円",
+            "position_count": 273,
+            "top5_concentration_pct": 50.1
+          },
+          {
+            "filing_date": "2022-05-13",
+            "total_value_usd": 6573626000,
+            "total_value_label": "9860億円",
+            "position_count": 267,
+            "top5_concentration_pct": 38.6
+          },
+          {
+            "filing_date": "2022-08-12",
+            "total_value_usd": 5615445000,
+            "total_value_label": "8423億円",
+            "position_count": 262,
+            "top5_concentration_pct": 22.7
+          },
+          {
+            "filing_date": "2022-11-14",
+            "total_value_usd": 5856482000,
+            "total_value_label": "8785億円",
+            "position_count": 264,
+            "top5_concentration_pct": 27.1
+          },
+          {
+            "filing_date": "2023-02-13",
+            "total_value_usd": 7260544641,
+            "total_value_label": "1.1兆円",
+            "position_count": 195,
+            "top5_concentration_pct": 19.1
+          },
+          {
+            "filing_date": "2023-05-12",
+            "total_value_usd": 6486898936,
+            "total_value_label": "9730億円",
+            "position_count": 166,
+            "top5_concentration_pct": 19.9
+          },
+          {
+            "filing_date": "2023-08-11",
+            "total_value_usd": 6411506004,
+            "total_value_label": "9617億円",
+            "position_count": 155,
+            "top5_concentration_pct": 21.9
+          },
+          {
+            "filing_date": "2023-11-14",
+            "total_value_usd": 7046620776,
+            "total_value_label": "1.1兆円",
+            "position_count": 179,
+            "top5_concentration_pct": 22.6
+          },
+          {
+            "filing_date": "2024-02-14",
+            "total_value_usd": 7646370171,
+            "total_value_label": "1.1兆円",
+            "position_count": 192,
+            "top5_concentration_pct": 22.2
+          },
+          {
+            "filing_date": "2024-05-15",
+            "total_value_usd": 6015386149,
+            "total_value_label": "9023億円",
+            "position_count": 186,
+            "top5_concentration_pct": 19.2
+          },
+          {
+            "filing_date": "2024-08-14",
+            "total_value_usd": 5565794990,
+            "total_value_label": "8349億円",
+            "position_count": 171,
+            "top5_concentration_pct": 21.0
+          },
+          {
+            "filing_date": "2024-11-14",
+            "total_value_usd": 6921988610,
+            "total_value_label": "1.0兆円",
+            "position_count": 170,
+            "top5_concentration_pct": 32.1
+          },
+          {
+            "filing_date": "2025-02-14",
+            "total_value_usd": 6645608141,
+            "total_value_label": "9968億円",
+            "position_count": 177,
+            "top5_concentration_pct": 21.3
+          },
+          {
+            "filing_date": "2025-05-15",
+            "total_value_usd": 6704904664,
+            "total_value_label": "1.0兆円",
+            "position_count": 196,
+            "top5_concentration_pct": 18.6
+          },
+          {
+            "filing_date": "2025-08-14",
+            "total_value_usd": 7966042757,
+            "total_value_label": "1.2兆円",
+            "position_count": 185,
+            "top5_concentration_pct": 19.5
+          },
+          {
+            "filing_date": "2025-11-14",
+            "total_value_usd": 7020738956,
+            "total_value_label": "1.1兆円",
+            "position_count": 178,
+            "top5_concentration_pct": 21.5
+          },
+          {
+            "filing_date": "2026-02-13",
+            "total_value_usd": 8630929364,
+            "total_value_label": "1.3兆円",
+            "position_count": 237,
+            "top5_concentration_pct": 19.1
+          },
+          {
+            "filing_date": "2026-05-15",
+            "total_value_usd": 9119078018,
+            "total_value_label": "1.4兆円",
+            "position_count": 255,
+            "top5_concentration_pct": 22.5
+          }
+        ],
+        "has_enough_history": true
+      }
     }
   ],
   "history_events_main": [
