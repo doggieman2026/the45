@@ -292,6 +292,8 @@ def parse_holdings(xml_text: str, filing_date: str = "") -> list[dict]:
             tag = child.tag.split("}")[-1]
             if tag == "nameOfIssuer":
                 row["name_of_issuer"] = (child.text or "").strip()
+            elif tag == "titleOfClass":
+                row["title_of_class"] = (child.text or "").strip()
             elif tag == "cusip":
                 row["cusip"] = (child.text or "").strip()
             elif tag == "value":
@@ -334,6 +336,7 @@ def aggregate_by_cusip(holdings: list[dict]) -> list[dict]:
         if cusip not in merged:
             merged[cusip] = {
                 "name_of_issuer": h.get("name_of_issuer", "UNKNOWN"),
+                "title_of_class": h.get("title_of_class", ""),
                 "cusip": cusip,
                 "value_usd": 0,
                 "shares": 0,
@@ -482,8 +485,13 @@ def compute_diff(current_holdings: list[dict], previous_holdings: list[dict] | N
                     (h.get("name_of_issuer", "UNKNOWN") for h in previous_holdings if h.get("cusip") == cusip),
                     "UNKNOWN"
                 )
+                title_of_class = next(
+                    (h.get("title_of_class", "") for h in previous_holdings if h.get("cusip") == cusip),
+                    ""
+                )
                 diffs.append({
                     "name_of_issuer": name,
+                    "title_of_class": title_of_class,
                     "cusip": cusip,
                     "value_usd": 0,
                     "shares": 0,
@@ -565,12 +573,34 @@ def build_fund_holdings(
     }
 
 
+def extract_class_suffix(title_of_class: str) -> str:
+    """
+    titleOfClass文字列から、株式クラス（A/B/C等）の表示用サフィックスを抽出する。
+    例: "COM CL A" -> "Class A", "COM" -> "" (無印の普通株はサフィックス不要)
+
+    これは Alphabet (GOOGL/Class A, GOOG/Class C) のように、同じ会社が
+    複数のCUSIPで別クラスの株式を発行している場合に、表示上「同じ名前が
+    重複しているように見える」問題（バグに見える）を解消するために使う。
+    """
+    if not title_of_class:
+        return ""
+    match = re.search(r'\bCL\s*([A-Z])\b', title_of_class.upper())
+    if match:
+        return f"Class {match.group(1)}"
+    return ""
+
+
 def _format_holding_row(h: dict, max_value: int, is_increase: bool, use_delta: bool = False) -> dict:
     """保有/増減データ1件を、サイト表示用のdict形式に整形する。"""
     cusip = h.get("cusip", "")
     name_raw = h.get("name_of_issuer", "UNKNOWN")
     override = TICKER_OVERRIDES.get(cusip, None)
     display_name = override["name"] if override else name_raw.title()
+
+    class_suffix = extract_class_suffix(h.get("title_of_class", ""))
+    if class_suffix:
+        display_name = f"{display_name} ({class_suffix})"
+
     desc = override["desc"] if override else "SEC 13F-HR 開示銘柄"
 
     amount = h.get("delta_usd", h.get("value_usd", 0)) if use_delta else h.get("value_usd", 0)
