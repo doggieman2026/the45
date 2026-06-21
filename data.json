@@ -83,14 +83,14 @@
           "bar": 29
         },
         {
-          "name": "Alphabet Inc",
+          "name": "Alphabet Inc (Class A)",
           "ticker": "02079K305",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約2.1兆円",
           "bar": 22
         },
         {
-          "name": "Alphabet Inc",
+          "name": "Alphabet Inc (Class C)",
           "ticker": "02079K107",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約1.6兆円",
@@ -159,14 +159,14 @@
           "bar": 29
         },
         {
-          "name": "Alphabet Inc",
+          "name": "Alphabet Inc (Class A)",
           "ticker": "02079K305",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約2.1兆円",
           "bar": 22
         },
         {
-          "name": "Alphabet Inc",
+          "name": "Alphabet Inc (Class C)",
           "ticker": "02079K107",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約1.6兆円",
@@ -208,7 +208,7 @@
           "bar": 7
         },
         {
-          "name": "Meta Platforms Inc",
+          "name": "Meta Platforms Inc (Class A)",
           "ticker": "30303M102",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約5882億円",
@@ -285,7 +285,7 @@
           "bar": 5
         },
         {
-          "name": "Crowdstrike Hldgs Inc",
+          "name": "Crowdstrike Hldgs Inc (Class A)",
           "ticker": "22788C105",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約2865億円",
@@ -399,7 +399,7 @@
           "bar": 28
         },
         {
-          "name": "Mastercard Incorporated",
+          "name": "Mastercard Incorporated (Class A)",
           "ticker": "57636Q104",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "-約3364億円",
@@ -434,7 +434,7 @@
           "bar": 22
         },
         {
-          "name": "Visa Inc",
+          "name": "Visa Inc (Class A)",
           "ticker": "92826C839",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "-約2977億円",
@@ -462,7 +462,7 @@
           "bar": 17
         },
         {
-          "name": "Berkshire Hathaway Inc Del",
+          "name": "Berkshire Hathaway Inc Del (Class B)",
           "ticker": "084670702",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "-約2365億円",
@@ -483,7 +483,7 @@
           "bar": 16
         },
         {
-          "name": "Nike Inc",
+          "name": "Nike Inc (Class B)",
           "ticker": "654106103",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "-約2219億円",
@@ -802,7 +802,7 @@
       ],
       "buys": [
         {
-          "name": "Alphabet Inc",
+          "name": "Alphabet Inc (Class A)",
           "ticker": "02079K305",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約1.5兆円",
@@ -830,7 +830,7 @@
           "bar": 25
         },
         {
-          "name": "Alphabet Inc",
+          "name": "Alphabet Inc (Class C)",
           "ticker": "02079K107",
           "desc": "SEC 13F-HR 開示銘柄（新規）",
           "value": "+約1543億円",
@@ -878,7 +878,7 @@
       "has_quarter_comparison": true,
       "buys_extended": [
         {
-          "name": "Alphabet Inc",
+          "name": "Alphabet Inc (Class A)",
           "ticker": "02079K305",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約1.5兆円",
@@ -906,7 +906,7 @@
           "bar": 25
         },
         {
-          "name": "Alphabet Inc",
+          "name": "Alphabet Inc (Class C)",
           "ticker": "02079K107",
           "desc": "SEC 13F-HR 開示銘柄（新規）",
           "value": "+約1543億円",
@@ -920,7 +920,7 @@
           "bar": 10
         },
         {
-          "name": "New York Times Co Mtn Be",
+          "name": "New York Times Co Mtn Be (Class A)",
           "ticker": "650111107",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約1375億円",
@@ -948,7 +948,7 @@
           "bar": 5
         },
         {
-          "name": "Lennar Corp",
+          "name": "Lennar Corp (Class A)",
           "ticker": "526057104",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約228億円",
@@ -983,7 +983,7 @@
           "bar": 5
         },
         {
-          "name": "Lennar Corp",
+          "name": "Lennar Corp (Class B)",
           "ticker": "526057302",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約4億円",
@@ -1041,7 +1041,7 @@
           "bar": 18
         },
         {
-          "name": "Constellation Brands Inc",
+          "name": "Constellation Brands Inc (Class A)",
           "ticker": "21036P108",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "-約2548億円",
@@ -1604,14 +1604,14 @@
       ],
       "buys": [
         {
-          "name": "Alphabet Inc",
+          "name": "Alphabet Inc (Class A)",
           "ticker": "02079K305",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約6.0兆円",
           "bar": 100
         },
         {
-          "name": "Alphabet Inc",
+          "name": "Alphabet Inc (Class C)",
           "ticker": "02079K107",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約4.7兆円",
@@ -1662,7 +1662,7 @@
           "bar": 59
         },
         {
-          "name": "Meta Platforms Inc",
+          "name": "Meta Platforms Inc (Class A)",
           "ticker": "30303M102",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "-約1.4兆円",
@@ -1680,14 +1680,14 @@
       "has_quarter_comparison": true,
       "buys_extended": [
         {
-          "name": "Alphabet Inc",
+          "name": "Alphabet Inc (Class A)",
           "ticker": "02079K305",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約6.0兆円",
           "bar": 100
         },
         {
-          "name": "Alphabet Inc",
+          "name": "Alphabet Inc (Class C)",
           "ticker": "02079K107",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約4.7兆円",
@@ -1913,7 +1913,7 @@
           "bar": 59
         },
         {
-          "name": "Meta Platforms Inc",
+          "name": "Meta Platforms Inc (Class A)",
           "ticker": "30303M102",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "-約1.4兆円",
@@ -1927,7 +1927,7 @@
           "bar": 34
         },
         {
-          "name": "Roblox Corp",
+          "name": "Roblox Corp (Class A)",
           "ticker": "771049103",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "-約5260億円",
@@ -1948,14 +1948,14 @@
           "bar": 18
         },
         {
-          "name": "Coinbase Global Inc",
+          "name": "Coinbase Global Inc (Class A)",
           "ticker": "19260Q107",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "-約4316億円",
           "bar": 18
         },
         {
-          "name": "Strategy Inc",
+          "name": "Strategy Inc (Class A)",
           "ticker": "594972408",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "-約4126億円",
@@ -1976,7 +1976,7 @@
           "bar": 17
         },
         {
-          "name": "Robinhood Mkts Inc",
+          "name": "Robinhood Mkts Inc (Class A)",
           "ticker": "770700102",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "-約4035億円",
@@ -2025,7 +2025,7 @@
           "bar": 12
         },
         {
-          "name": "Doordash Inc",
+          "name": "Doordash Inc (Class A)",
           "ticker": "25809K105",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "-約2673億円",
@@ -2528,7 +2528,7 @@
           "bar": 24
         },
         {
-          "name": "Coreweave Inc",
+          "name": "Coreweave Inc (Class A)",
           "ticker": "21873S108",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約196億円",
@@ -2604,7 +2604,7 @@
           "bar": 24
         },
         {
-          "name": "Coreweave Inc",
+          "name": "Coreweave Inc (Class A)",
           "ticker": "21873S108",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "+約196億円",
@@ -2688,7 +2688,7 @@
           "bar": 11
         },
         {
-          "name": "Berkshire Hathaway Inc Del",
+          "name": "Berkshire Hathaway Inc Del (Class B)",
           "ticker": "084670702",
           "desc": "SEC 13F-HR 開示銘柄（新規）",
           "value": "+約96億円",
@@ -2942,7 +2942,7 @@
           "bar": 27
         },
         {
-          "name": "Figure Technology Solutio",
+          "name": "Figure Technology Solutio (Class A)",
           "ticker": "349381103",
           "desc": "SEC 13F-HR 開示銘柄",
           "value": "-約78億円",
@@ -3447,7 +3447,7 @@
   "consensus_signals_computed": [
     {
       "cusip": "02079K107",
-      "name": "Alphabet Inc",
+      "name": "Alphabet Inc (Class C)",
       "desc": "SEC 13F-HR 開示銘柄",
       "direction": "buy",
       "fund_count": 3,
@@ -3457,14 +3457,14 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約1.6兆円",
+        "vanguard": "+約4.7兆円",
         "berkshire": "+約1543億円",
-        "vanguard": "+約4.7兆円"
+        "blackrock": "+約1.6兆円"
       }
     },
     {
       "cusip": "02079K305",
-      "name": "Alphabet Inc",
+      "name": "Alphabet Inc (Class A)",
       "desc": "SEC 13F-HR 開示銘柄",
       "direction": "buy",
       "fund_count": 3,
@@ -3474,9 +3474,9 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約2.1兆円",
+        "vanguard": "+約6.0兆円",
         "berkshire": "+約1.5兆円",
-        "vanguard": "+約6.0兆円"
+        "blackrock": "+約2.1兆円"
       }
     },
     {
@@ -3491,9 +3491,9 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約9.3兆円",
+        "vanguard": "+約1.2兆円",
         "soros": "+約95億円",
-        "vanguard": "+約1.2兆円"
+        "blackrock": "+約9.3兆円"
       }
     },
     {
@@ -3507,8 +3507,8 @@
         "soros"
       ],
       "fund_values": {
-        "berkshire": "-約264億円",
-        "soros": "-約72億円"
+        "soros": "-約72億円",
+        "berkshire": "-約264億円"
       }
     },
     {
@@ -3522,8 +3522,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約4941億円",
-        "vanguard": "+約6119億円"
+        "vanguard": "+約6119億円",
+        "blackrock": "+約4941億円"
       }
     },
     {
@@ -3537,8 +3537,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約1.3兆円",
-        "vanguard": "+約1.4兆円"
+        "vanguard": "+約1.4兆円",
+        "blackrock": "+約1.3兆円"
       }
     },
     {
@@ -3552,8 +3552,8 @@
         "soros"
       ],
       "fund_values": {
-        "blackrock": "-約4553億円",
-        "soros": "-約131億円"
+        "soros": "-約131億円",
+        "blackrock": "-約4553億円"
       }
     },
     {
@@ -3567,8 +3567,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約4628億円",
-        "vanguard": "+約4942億円"
+        "vanguard": "+約4942億円",
+        "blackrock": "+約4628億円"
       }
     },
     {
@@ -3582,8 +3582,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "-約3938億円",
-        "vanguard": "-約8324億円"
+        "vanguard": "-約8324億円",
+        "blackrock": "-約3938億円"
       }
     },
     {
@@ -3597,13 +3597,13 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約1.3兆円",
-        "vanguard": "+約3.9兆円"
+        "vanguard": "+約3.9兆円",
+        "blackrock": "+約1.3兆円"
       }
     },
     {
       "cusip": "57636Q104",
-      "name": "Mastercard Incorporated",
+      "name": "Mastercard Incorporated (Class A)",
       "desc": "SEC 13F-HR 開示銘柄",
       "direction": "sell",
       "fund_count": 2,
@@ -3612,8 +3612,8 @@
         "blackrock"
       ],
       "fund_values": {
-        "blackrock": "-約3364億円",
-        "berkshire": "-約3414億円"
+        "berkshire": "-約3414億円",
+        "blackrock": "-約3364億円"
       }
     },
     {
@@ -3627,8 +3627,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約2197億円",
-        "vanguard": "+約1.9兆円"
+        "vanguard": "+約1.9兆円",
+        "blackrock": "+約2197億円"
       }
     },
     {
@@ -3642,13 +3642,13 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約6507億円",
-        "vanguard": "+約6304億円"
+        "vanguard": "+約6304億円",
+        "blackrock": "+約6507億円"
       }
     },
     {
       "cusip": "92826C839",
-      "name": "Visa Inc",
+      "name": "Visa Inc (Class A)",
       "desc": "SEC 13F-HR 開示銘柄",
       "direction": "sell",
       "fund_count": 2,
@@ -3657,8 +3657,8 @@
         "blackrock"
       ],
       "fund_values": {
-        "blackrock": "-約2977億円",
-        "berkshire": "-約4365億円"
+        "berkshire": "-約4365億円",
+        "blackrock": "-約2977億円"
       }
     },
     {
@@ -3672,8 +3672,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約3638億円",
-        "vanguard": "+約6176億円"
+        "vanguard": "+約6176億円",
+        "blackrock": "+約3638億円"
       }
     }
   ],
