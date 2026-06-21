@@ -593,6 +593,100 @@ def _format_holding_row(h: dict, max_value: int, is_increase: bool, use_delta: b
     }
 
 
+def compute_consensus_signals(top_n: int = 45) -> dict:
+    """
+    data.json の各ファンドの buys_extended / sells_extended を突き合わせて、
+    「何ファンドが同じ銘柄を同じ方向（買い or 売り）に動かしているか」を集計する。
+
+    これは「複数巨頭一致シグナル」パネル用のデータで、固定の作り話ではなく
+    実際の直近四半期の増減データに基づく、計算可能な指標。
+
+    戻り値: {
+      "signals": [一致ファンド数の多い順のリスト],
+      "total_companies_tracked": 集計対象になった銘柄の総数（重複除去後）
+    }
+
+    NOTE: 4ファンドのうち has_quarter_comparison が false（初回データ取得直後）の
+    ファンドは「買い増し/売り」の判定ができないため、この集計から除外される。
+
+    NOTE: total_companies_tracked は固定の「45」ではなく、実際に各ファンドの
+    buys_extended/sells_extended に出現した銘柄を重複除去した実数。
+    サイト名の「45」とは独立した、誠実さを優先した実測値。
+    """
+    with open(DATA_JSON_PATH, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    # cusip -> { buy: set(fund_ids), sell: set(fund_ids), name, desc, values: {fund_id: value_str} }
+    tracker: dict[str, dict] = {}
+
+    for fund in data["funds"]:
+        if not fund.get("has_quarter_comparison"):
+            continue  # 比較不可のファンドはこの集計に参加させない（誠実さのため）
+
+        fund_id = fund["id"]
+        for h in fund.get("buys_extended", []):
+            cusip = h.get("ticker", "")
+            if not cusip:
+                continue
+            entry = tracker.setdefault(cusip, {"name": h["name"], "desc": h["desc"], "buy": set(), "sell": set(), "values": {}})
+            entry["buy"].add(fund_id)
+            entry["values"][fund_id] = h["value"]
+        for h in fund.get("sells_extended", []):
+            cusip = h.get("ticker", "")
+            if not cusip:
+                continue
+            entry = tracker.setdefault(cusip, {"name": h["name"], "desc": h["desc"], "buy": set(), "sell": set(), "values": {}})
+            entry["sell"].add(fund_id)
+            entry["values"][fund_id] = h["value"]
+
+    total_companies_tracked = len(tracker)
+
+    signals = []
+    for cusip, entry in tracker.items():
+        # 「買い」「売り」どちらか一方にのみ複数ファンドが一致している場合のみシグナルとして採用
+        # （買いと売りが両方ついている銘柄は、ファンド間で意見が割れているので「一致」ではない）
+        if len(entry["buy"]) >= 2 and len(entry["sell"]) == 0:
+            direction, fund_ids = "buy", entry["buy"]
+        elif len(entry["sell"]) >= 2 and len(entry["buy"]) == 0:
+            direction, fund_ids = "sell", entry["sell"]
+        else:
+            continue
+
+        signals.append({
+            "cusip": cusip,
+            "name": entry["name"],
+            "desc": entry["desc"],
+            "direction": direction,
+            "fund_count": len(fund_ids),
+            "fund_ids": sorted(fund_ids),
+            "fund_values": {fid: entry["values"][fid] for fid in fund_ids},
+        })
+
+    # 一致ファンド数が多い順 → 同数ならCUSIPで安定ソート
+    signals.sort(key=lambda s: (-s["fund_count"], s["cusip"]))
+    return {
+        "signals": signals[:top_n],
+        "total_companies_tracked": total_companies_tracked,
+    }
+
+
+def update_consensus_signals_in_data_json():
+    """compute_consensus_signals() の結果を data.json のトップレベルに保存する。"""
+    result = compute_consensus_signals()
+
+    with open(DATA_JSON_PATH, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    data["consensus_signals_computed"] = result["signals"]
+    data["consensus_signals_total_tracked"] = result["total_companies_tracked"]
+    data["_meta"]["last_updated"] = time.strftime("%Y-%m-%d")
+
+    with open(DATA_JSON_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+    return result
+
+
 def update_data_json(fund_id: str, result: dict, filing_date: str, trend: dict | None = None):
     """data.json の該当ファンドの buys/sells/buys_extended/sells_extended/trend を更新する。"""
     with open(DATA_JSON_PATH, "r", encoding="utf-8") as f:
@@ -707,6 +801,25 @@ def main():
 
         print()
 
+    # ===== クロスファンド集計: 複数巨頭一致シグナル =====
+    print("--- 複数巨頭一致シグナルを集計中 ---")
+    try:
+        result = update_consensus_signals_in_data_json()
+        signals = result["signals"]
+        total_tracked = result["total_companies_tracked"]
+        print(f"  追跡対象の銘柄総数: {total_tracked}社")
+        if signals:
+            pct = round(len(signals) / total_tracked * 100, 1) if total_tracked else 0
+            print(f"  {len(signals)}件の一致シグナルを検出しました（全{total_tracked}社中 {pct}%）:")
+            for s in signals[:10]:
+                direction_label = "買い" if s["direction"] == "buy" else "売り"
+                print(f"    - {s['name']}: {s['fund_count']}ファンド一致（{direction_label}） [{', '.join(s['fund_ids'])}]")
+        else:
+            print("  一致シグナルは検出されませんでした（比較可能なファンドが2社未満、または一致なし）。")
+    except Exception as e:
+        print(f"  ❌ 一致シグナル集計でエラー: {e}")
+
+    print()
     print("=== 完了 ===")
     print()
     print("【データの見方】")
