@@ -1,0 +1,62 @@
+{
+  "fund_id": "burry",
+  "filing_date": "2025-11-03",
+  "holdings": [
+    {
+      "name_of_issuer": "BRUKER CORP",
+      "title_of_class": "6.375 PREF SER A",
+      "cusip": "116794207",
+      "value_usd": 13137181,
+      "shares": 48334
+    },
+    {
+      "name_of_issuer": "HALLIBURTON CO",
+      "title_of_class": "COM",
+      "cusip": "406216101",
+      "value_usd": 61500000,
+      "shares": 2500000
+    },
+    {
+      "name_of_issuer": "LULULEMON ATHLETICA INC",
+      "title_of_class": "COM",
+      "cusip": "550021109",
+      "value_usd": 17793000,
+      "shares": 100000
+    },
+    {
+      "name_of_issuer": "MOLINA HEALTHCARE INC",
+      "title_of_class": "COM",
+      "cusip": "60855R100",
+      "value_usd": 23920000,
+      "shares": 125000
+    },
+    {
+      "name_of_issuer": "NVIDIA CORPORATION",
+      "title_of_class": "COM",
+      "cusip": "67066G104",
+      "value_usd": 186580000,
+      "shares": 1000000
+    },
+    {
+      "name_of_issuer": "PALANTIR TECHNOLOGIES INC",
+      "title_of_class": "CL A",
+      "cusip": "69608A108",
+      "value_usd": 912100000,
+      "shares": 5000000
+    },
+    {
+      "name_of_issuer": "PFIZER INC",
+      "title_of_class": "COM",
+      "cusip": "717081103",
+      "value_usd": 152880000,
+      "shares": 6000000
+    },
+    {
+      "name_of_issuer": "SLM CORP",
+      "title_of_class": "COM",
+      "cusip": "78442P106",
+      "value_usd": 13287895,
+      "shares": 480054
+    }
+  ]
+}

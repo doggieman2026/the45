@@ -1,0 +1,2652 @@
+{
+  "fund_id": "jpmorgan",
+  "filing_date": "2026-05-13",
+  "holdings": [
+    {
+      "name_of_issuer": "A PARADISE ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G04819101",
+      "value_usd": 17520306,
+      "shares": 1722744
+    },
+    {
+      "name_of_issuer": "A PARADISE ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G04819119",
+      "value_usd": 263328,
+      "shares": 598472
+    },
+    {
+      "name_of_issuer": "A SPAC III ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G0544A145",
+      "value_usd": 51316,
+      "shares": 427278
+    },
+    {
+      "name_of_issuer": "AA MISSION ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G1000S109",
+      "value_usd": 3212,
+      "shares": 319
+    },
+    {
+      "name_of_issuer": "ACTIVATE ENERGY ACQUISIT COR",
+      "title_of_class": "COMMON",
+      "cusip": "G0081J103",
+      "value_usd": 3369775,
+      "shares": 339353
+    },
+    {
+      "name_of_issuer": "ACTIVATE ENERGY ACQUISIT COR",
+      "title_of_class": "WARRANT",
+      "cusip": "G0081J111",
+      "value_usd": 82948,
+      "shares": 251359
+    },
+    {
+      "name_of_issuer": "AERIES TECHNOLOGY INC",
+      "title_of_class": "WARRANT",
+      "cusip": "G0136H110",
+      "value_usd": 6269,
+      "shares": 290215
+    },
+    {
+      "name_of_issuer": "AES CORP",
+      "title_of_class": "COMMON",
+      "cusip": "00130H105",
+      "value_usd": 18745217,
+      "shares": 1337034
+    },
+    {
+      "name_of_issuer": "AGRICULTURE & NAT SOL ACQ CO",
+      "title_of_class": "COMMON",
+      "cusip": "G0131Y100",
+      "value_usd": 6284250,
+      "shares": 558600
+    },
+    {
+      "name_of_issuer": "AI INFRASTRUCTURE ACQUISI",
+      "title_of_class": "COMMON",
+      "cusip": "G01336109",
+      "value_usd": 245223,
+      "shares": 24449
+    },
+    {
+      "name_of_issuer": "AI INFRASTRUCTURE ACQUISI",
+      "title_of_class": "RIGHT",
+      "cusip": "G01336117",
+      "value_usd": 180169,
+      "shares": 732393
+    },
+    {
+      "name_of_issuer": "AIMEI HEALTH TECHNOLOGY CO L",
+      "title_of_class": "RIGHT",
+      "cusip": "G01341133",
+      "value_usd": 275009,
+      "shares": 873044
+    },
+    {
+      "name_of_issuer": "AIRSHIP AI HLDGS INC",
+      "title_of_class": "OPTION",
+      "cusip": "008940908",
+      "value_usd": 13041,
+      "shares": 6300
+    },
+    {
+      "name_of_issuer": "AIRSHIP AI HLDGS INC",
+      "title_of_class": "WARRANT",
+      "cusip": "008940116",
+      "value_usd": 573989,
+      "shares": 956648
+    },
+    {
+      "name_of_issuer": "ALCHEMY INVTS ACQUISITN CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G0232F133",
+      "value_usd": 102668,
+      "shares": 675006
+    },
+    {
+      "name_of_issuer": "ALDEL FINL II INC",
+      "title_of_class": "COMMON",
+      "cusip": "G01558108",
+      "value_usd": 1056,
+      "shares": 100
+    },
+    {
+      "name_of_issuer": "ALIBABA GROUP HLDG LTD",
+      "title_of_class": "BOND",
+      "cusip": "01609WBG6",
+      "value_usd": 68497000,
+      "shares": 50000000
+    },
+    {
+      "name_of_issuer": "ALPHA MODUS HLDGS INC",
+      "title_of_class": "COMMON",
+      "cusip": "020952107",
+      "value_usd": 38408,
+      "shares": 112500
+    },
+    {
+      "name_of_issuer": "AMERICAN EXCEPTIONALISM ACQU",
+      "title_of_class": "COMMON",
+      "cusip": "G0273J101",
+      "value_usd": 10853255,
+      "shares": 1000300
+    },
+    {
+      "name_of_issuer": "ANDRETTI ACQUISITION CORP II",
+      "title_of_class": "COMMON",
+      "cusip": "G26745102",
+      "value_usd": 1878729,
+      "shares": 176241
+    },
+    {
+      "name_of_issuer": "APEX TECH ACQUISITION INC",
+      "title_of_class": "UNIT",
+      "cusip": "G0R21F121",
+      "value_usd": 10590450,
+      "shares": 1057987
+    },
+    {
+      "name_of_issuer": "APEX TREAS CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G04104124",
+      "value_usd": 190587,
+      "shares": 794114
+    },
+    {
+      "name_of_issuer": "ARCHIMEDES TECH SPAC PARTNER",
+      "title_of_class": "WARRANT",
+      "cusip": "G04537125",
+      "value_usd": 4953,
+      "shares": 10109
+    },
+    {
+      "name_of_issuer": "ARMADA ACQUISITION CORP II",
+      "title_of_class": "COMMON",
+      "cusip": "G0R38G104",
+      "value_usd": 2835203,
+      "shares": 274729
+    },
+    {
+      "name_of_issuer": "ARMADA ACQUISITION CORP III",
+      "title_of_class": "COMMON",
+      "cusip": "G0R38M101",
+      "value_usd": 269754,
+      "shares": 27303
+    },
+    {
+      "name_of_issuer": "ART TECHNOLOGY ACQUISITION C",
+      "title_of_class": "COMMON",
+      "cusip": "G0579E103",
+      "value_usd": 14707500,
+      "shares": 1500000
+    },
+    {
+      "name_of_issuer": "ART TECHNOLOGY ACQUISITION C",
+      "title_of_class": "WARRANT",
+      "cusip": "G0579E111",
+      "value_usd": 108825,
+      "shares": 375000
+    },
+    {
+      "name_of_issuer": "ASPIRE BIOPHARMA HLDGS INC",
+      "title_of_class": "WARRANT",
+      "cusip": "738920115",
+      "value_usd": 4013,
+      "shares": 273000
+    },
+    {
+      "name_of_issuer": "ATLANTA BRAVES HLDGS INC",
+      "title_of_class": "COMMON",
+      "cusip": "047726302",
+      "value_usd": 13032132,
+      "shares": 310215
+    },
+    {
+      "name_of_issuer": "ATRIUM THERAPEUTICS INC",
+      "title_of_class": "COMMON",
+      "cusip": "04965N104",
+      "value_usd": 555360,
+      "shares": 40986
+    },
+    {
+      "name_of_issuer": "AVIS BUDGET GROUP INC",
+      "title_of_class": "OPTION",
+      "cusip": "053774955",
+      "value_usd": 23790780,
+      "shares": 175500
+    },
+    {
+      "name_of_issuer": "AXIOM INTELLIGENCE AC CORP 1",
+      "title_of_class": "COMMON",
+      "cusip": "G0750N104",
+      "value_usd": 7091,
+      "shares": 700
+    },
+    {
+      "name_of_issuer": "AXIOM INTELLIGENCE AC CORP 1",
+      "title_of_class": "RIGHT",
+      "cusip": "G0750N112",
+      "value_usd": 111587,
+      "shares": 557937
+    },
+    {
+      "name_of_issuer": "BAIN CAP GSS INVT CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G0R78B106",
+      "value_usd": 3030000,
+      "shares": 300000
+    },
+    {
+      "name_of_issuer": "BAIRD MED INVT HLDGS LTD",
+      "title_of_class": "COMMON",
+      "cusip": "G0705H103",
+      "value_usd": 230000,
+      "shares": 125000
+    },
+    {
+      "name_of_issuer": "BAYVIEW ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "07323B118",
+      "value_usd": 121788,
+      "shares": 726228
+    },
+    {
+      "name_of_issuer": "BED BATH & BEYOND INC",
+      "title_of_class": "WARRANT",
+      "cusip": "075896159",
+      "value_usd": 5688,
+      "shares": 10157
+    },
+    {
+      "name_of_issuer": "BEL FUSE INC",
+      "title_of_class": "COMMON",
+      "cusip": "077347201",
+      "value_usd": 24950729,
+      "shares": 138469
+    },
+    {
+      "name_of_issuer": "BERTO ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G1051H101",
+      "value_usd": 5110000,
+      "shares": 500000
+    },
+    {
+      "name_of_issuer": "BERTO ACQUISITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G1051H119",
+      "value_usd": 71812,
+      "shares": 264988
+    },
+    {
+      "name_of_issuer": "BEST SPAC I ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G1069P129",
+      "value_usd": 54231,
+      "shares": 301285
+    },
+    {
+      "name_of_issuer": "BHAV ACQUISITION CORP",
+      "title_of_class": "UNIT",
+      "cusip": "G1R59W127",
+      "value_usd": 9476250,
+      "shares": 950000
+    },
+    {
+      "name_of_issuer": "BILL HOLDINGS INC",
+      "title_of_class": "BOND",
+      "cusip": "090043AD2",
+      "value_usd": 6872153,
+      "shares": 7103000
+    },
+    {
+      "name_of_issuer": "BILL HOLDINGS INC",
+      "title_of_class": "BOND",
+      "cusip": "090043AF7",
+      "value_usd": 889330,
+      "shares": 1000000
+    },
+    {
+      "name_of_issuer": "BITCOIN INFRASTRUCTURE ACQUI",
+      "title_of_class": "WARRANT",
+      "cusip": "G1143H119",
+      "value_usd": 9595,
+      "shares": 31983
+    },
+    {
+      "name_of_issuer": "BITDEER TECHNOLOGIES GROUP",
+      "title_of_class": "COMMON",
+      "cusip": "G11448100",
+      "value_usd": 2233980,
+      "shares": 283500
+    },
+    {
+      "name_of_issuer": "BITFUFU INC",
+      "title_of_class": "COMMON",
+      "cusip": "G1152A104",
+      "value_usd": 1358,
+      "shares": 742
+    },
+    {
+      "name_of_issuer": "BITFUFU INC",
+      "title_of_class": "WARRANT",
+      "cusip": "G1152A120",
+      "value_usd": 35891,
+      "shares": 254543
+    },
+    {
+      "name_of_issuer": "BLACK HAWK ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G1148A119",
+      "value_usd": 192434,
+      "shares": 142544
+    },
+    {
+      "name_of_issuer": "BLAIZE HLDGS INC",
+      "title_of_class": "WARRANT",
+      "cusip": "092915115",
+      "value_usd": 1009,
+      "shares": 2967
+    },
+    {
+      "name_of_issuer": "BLEICHROEDER ACQUISITI CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G1170E112",
+      "value_usd": 30758,
+      "shares": 33252
+    },
+    {
+      "name_of_issuer": "BLUE ACQUISITION CORP.",
+      "title_of_class": "RIGHT",
+      "cusip": "G1331A116",
+      "value_usd": 162222,
+      "shares": 540740
+    },
+    {
+      "name_of_issuer": "BLUEPORT ACQUISITION LTD",
+      "title_of_class": "COMMON",
+      "cusip": "G1196A102",
+      "value_usd": 55720,
+      "shares": 5572
+    },
+    {
+      "name_of_issuer": "BLUEPORT ACQUISITION LTD",
+      "title_of_class": "RIGHT",
+      "cusip": "G1196A110",
+      "value_usd": 77789,
+      "shares": 420481
+    },
+    {
+      "name_of_issuer": "BLUEROCK ACQUISITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G1352R113",
+      "value_usd": 47541,
+      "shares": 144064
+    },
+    {
+      "name_of_issuer": "BOFA FIN LLC",
+      "title_of_class": "BOND",
+      "cusip": "09709UV70",
+      "value_usd": 48894401,
+      "shares": 41235000
+    },
+    {
+      "name_of_issuer": "BOLD EAGLE ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G2003N105",
+      "value_usd": 8089919,
+      "shares": 765366
+    },
+    {
+      "name_of_issuer": "BRIGHTHOUSE FINL INC",
+      "title_of_class": "COMMON",
+      "cusip": "10922N103",
+      "value_usd": 26267250,
+      "shares": 438372
+    },
+    {
+      "name_of_issuer": "BTC DEV CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G0701G109",
+      "value_usd": 3000000,
+      "shares": 300000
+    },
+    {
+      "name_of_issuer": "CAL REDWOOD ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G17564108",
+      "value_usd": 12190,
+      "shares": 1201
+    },
+    {
+      "name_of_issuer": "CAL REDWOOD ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G17564116",
+      "value_usd": 42000,
+      "shares": 200000
+    },
+    {
+      "name_of_issuer": "CALIDI BIOTHERAPEUTICS INC",
+      "title_of_class": "COMMON",
+      "cusip": "320703408",
+      "value_usd": 248,
+      "shares": 1042
+    },
+    {
+      "name_of_issuer": "CANTOR EQUITY PARTNERS I INC",
+      "title_of_class": "COMMON",
+      "cusip": "G1827K107",
+      "value_usd": 90185,
+      "shares": 8589
+    },
+    {
+      "name_of_issuer": "CANTOR EQUITY PARTNERS II IN",
+      "title_of_class": "COMMON",
+      "cusip": "G1827P106",
+      "value_usd": 5934538,
+      "shares": 546962
+    },
+    {
+      "name_of_issuer": "CANTOR EQUITY PARTNERS III I",
+      "title_of_class": "COMMON",
+      "cusip": "G1828A108",
+      "value_usd": 8897264,
+      "shares": 863812
+    },
+    {
+      "name_of_issuer": "CANTOR EQUITY PARTNERS IV IN",
+      "title_of_class": "COMMON",
+      "cusip": "G1828E100",
+      "value_usd": 3861292,
+      "shares": 378558
+    },
+    {
+      "name_of_issuer": "CANTOR EQUITY PARTNERS V INC",
+      "title_of_class": "COMMON",
+      "cusip": "G1828S109",
+      "value_usd": 6060000,
+      "shares": 600000
+    },
+    {
+      "name_of_issuer": "CANTOR EQUITY PARTNERS VI IN",
+      "title_of_class": "COMMON",
+      "cusip": "G1828R101",
+      "value_usd": 10080,
+      "shares": 1000
+    },
+    {
+      "name_of_issuer": "CAPTIVISION INC",
+      "title_of_class": "WARRANT",
+      "cusip": "G18932114",
+      "value_usd": 131032,
+      "shares": 2187510
+    },
+    {
+      "name_of_issuer": "CARTESIAN GROWTH CORP III",
+      "title_of_class": "COMMON",
+      "cusip": "G19307100",
+      "value_usd": 20756250,
+      "shares": 2025000
+    },
+    {
+      "name_of_issuer": "CARTESIAN GROWTH CORP III",
+      "title_of_class": "WARRANT",
+      "cusip": "G19307126",
+      "value_usd": 498455,
+      "shares": 712078
+    },
+    {
+      "name_of_issuer": "CAYSON ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G1993W117",
+      "value_usd": 118986,
+      "shares": 540845
+    },
+    {
+      "name_of_issuer": "CENTURION ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G20315100",
+      "value_usd": 2859318,
+      "shares": 264997
+    },
+    {
+      "name_of_issuer": "CENTURION ACQUISITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G20315118",
+      "value_usd": 44396,
+      "shares": 246779
+    },
+    {
+      "name_of_issuer": "CHAMPIONSGATE ACQUISITION CO",
+      "title_of_class": "RIGHT",
+      "cusip": "G2124S116",
+      "value_usd": 103929,
+      "shares": 583541
+    },
+    {
+      "name_of_issuer": "CHARLTON ARIA ACQUISITION CO",
+      "title_of_class": "RIGHT",
+      "cusip": "G9877L115",
+      "value_usd": 141266,
+      "shares": 1007600
+    },
+    {
+      "name_of_issuer": "CHURCHILL CAPITAL CORP IX",
+      "title_of_class": "COMMON",
+      "cusip": "G21301109",
+      "value_usd": 10740296,
+      "shares": 1004705
+    },
+    {
+      "name_of_issuer": "CHURCHILL CAPITAL CORP IX",
+      "title_of_class": "WARRANT",
+      "cusip": "G21301117",
+      "value_usd": 142626,
+      "shares": 271566
+    },
+    {
+      "name_of_issuer": "CID HOLDCO INC",
+      "title_of_class": "COMMON",
+      "cusip": "171756109",
+      "value_usd": 17200,
+      "shares": 100000
+    },
+    {
+      "name_of_issuer": "CID HOLDCO INC",
+      "title_of_class": "WARRANT",
+      "cusip": "171756117",
+      "value_usd": 2060,
+      "shares": 119782
+    },
+    {
+      "name_of_issuer": "CLASSOVER HLDGS INC",
+      "title_of_class": "WARRANT",
+      "cusip": "182744110",
+      "value_usd": 21324,
+      "shares": 1603307
+    },
+    {
+      "name_of_issuer": "CLEARTHINK 1 ACQUISITION COR",
+      "title_of_class": "UNIT",
+      "cusip": "G2294A127",
+      "value_usd": 6793296,
+      "shares": 680691
+    },
+    {
+      "name_of_issuer": "CLEARWATER ANALYTICS HLDGS I",
+      "title_of_class": "COMMON",
+      "cusip": "185123106",
+      "value_usd": 37800976,
+      "shares": 1605137
+    },
+    {
+      "name_of_issuer": "CLOUDFLARE INC",
+      "title_of_class": "BOND",
+      "cusip": "18915MAC1",
+      "value_usd": 5688500,
+      "shares": 5000000
+    },
+    {
+      "name_of_issuer": "CN HEALTHY FOOD TECH GROUP C",
+      "title_of_class": "WARRANT",
+      "cusip": "462837113",
+      "value_usd": 14185,
+      "shares": 140447
+    },
+    {
+      "name_of_issuer": "CO2 ENERGY TRANSITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "12664M111",
+      "value_usd": 57641,
+      "shares": 524009
+    },
+    {
+      "name_of_issuer": "CO2 ENERGY TRANSITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "12664M129",
+      "value_usd": 88316,
+      "shares": 588770
+    },
+    {
+      "name_of_issuer": "COINCHECK GROUP NV",
+      "title_of_class": "WARRANT",
+      "cusip": "N20967100",
+      "value_usd": 27902,
+      "shares": 164127
+    },
+    {
+      "name_of_issuer": "COINCHECK GROUP NV",
+      "title_of_class": "COMMON",
+      "cusip": "N20967118",
+      "value_usd": 8852,
+      "shares": 5464
+    },
+    {
+      "name_of_issuer": "COLOMBIER ACQUISITION CORP I",
+      "title_of_class": "COMMON",
+      "cusip": "G2284A103",
+      "value_usd": 10030,
+      "shares": 1000
+    },
+    {
+      "name_of_issuer": "COLOMBIER ACQUISITION CORP I",
+      "title_of_class": "WARRANT",
+      "cusip": "G2284A111",
+      "value_usd": 124,
+      "shares": 125
+    },
+    {
+      "name_of_issuer": "COLUMBUS ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G2295P115",
+      "value_usd": 32237,
+      "shares": 111163
+    },
+    {
+      "name_of_issuer": "COLUMBUS CIRCLE CAP CORP II",
+      "title_of_class": "WARRANT",
+      "cusip": "G2296M129",
+      "value_usd": 17715,
+      "shares": 49209
+    },
+    {
+      "name_of_issuer": "COPLEY ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G24243100",
+      "value_usd": 786725,
+      "shares": 76233
+    },
+    {
+      "name_of_issuer": "CORE SCIENTIFIC INC NEW",
+      "title_of_class": "WARRANT",
+      "cusip": "21874A114",
+      "value_usd": 144529,
+      "shares": 18770
+    },
+    {
+      "name_of_issuer": "CRANE HBR ACQUISITION CORP I",
+      "title_of_class": "COMMON",
+      "cusip": "G25014104",
+      "value_usd": 11892000,
+      "shares": 1200000
+    },
+    {
+      "name_of_issuer": "CRANE HBR ACQUISITION CORP I",
+      "title_of_class": "RIGHT",
+      "cusip": "G25014112",
+      "value_usd": 54414,
+      "shares": 319895
+    },
+    {
+      "name_of_issuer": "CROWN RESV ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G2574F119",
+      "value_usd": 5008010,
+      "shares": 500801
+    },
+    {
+      "name_of_issuer": "CROWN RESV ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G2574F127",
+      "value_usd": 122436,
+      "shares": 679070
+    },
+    {
+      "name_of_issuer": "CROWN RESV ACQUISITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G2574S103",
+      "value_usd": 10578,
+      "shares": 162988
+    },
+    {
+      "name_of_issuer": "CYABRA INC",
+      "title_of_class": "COMMON",
+      "cusip": "23249H105",
+      "value_usd": 270988,
+      "shares": 113384
+    },
+    {
+      "name_of_issuer": "D BORAL ACQUISITION I CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G2616T119",
+      "value_usd": 52320,
+      "shares": 199999
+    },
+    {
+      "name_of_issuer": "D. BORAL ARC ACQ I CORP.",
+      "title_of_class": "COMMON",
+      "cusip": "G2616F101",
+      "value_usd": 15449263,
+      "shares": 1525100
+    },
+    {
+      "name_of_issuer": "D. BORAL ARC ACQ I CORP.",
+      "title_of_class": "WARRANT",
+      "cusip": "G2616F119",
+      "value_usd": 89262,
+      "shares": 165300
+    },
+    {
+      "name_of_issuer": "DAEDALUS SPL ACQUISITION COR",
+      "title_of_class": "COMMON",
+      "cusip": "G2616C108",
+      "value_usd": 192809,
+      "shares": 19456
+    },
+    {
+      "name_of_issuer": "DAEDALUS SPL ACQUISITION COR",
+      "title_of_class": "WARRANT",
+      "cusip": "G2616C116",
+      "value_usd": 1916,
+      "shares": 4864
+    },
+    {
+      "name_of_issuer": "DAUCH CORP",
+      "title_of_class": "COMMON",
+      "cusip": "024061103",
+      "value_usd": 3161000,
+      "shares": 580000
+    },
+    {
+      "name_of_issuer": "DELEK US HLDGS INC NEW",
+      "title_of_class": "COMMON",
+      "cusip": "24665A103",
+      "value_usd": 45730,
+      "shares": 1000
+    },
+    {
+      "name_of_issuer": "DIGITAL ASSET ACQUISITION CO",
+      "title_of_class": "WARRANT",
+      "cusip": "G2868C111",
+      "value_usd": 38,
+      "shares": 100
+    },
+    {
+      "name_of_issuer": "DRUGS MADE IN AMER ACQ II CO",
+      "title_of_class": "COMMON",
+      "cusip": "G2851K104",
+      "value_usd": 2245540,
+      "shares": 225004
+    },
+    {
+      "name_of_issuer": "DRUGS MADE IN AMER ACQ II CO",
+      "title_of_class": "RIGHT",
+      "cusip": "G2851K112",
+      "value_usd": 89125,
+      "shares": 919760
+    },
+    {
+      "name_of_issuer": "DRUGS MADE IN AMER ACQUTN CO",
+      "title_of_class": "COMMON",
+      "cusip": "G2847J104",
+      "value_usd": 13881952,
+      "shares": 1323351
+    },
+    {
+      "name_of_issuer": "DRUGS MADE IN AMER ACQUTN CO",
+      "title_of_class": "RIGHT",
+      "cusip": "G2847J112",
+      "value_usd": 62555,
+      "shares": 1044319
+    },
+    {
+      "name_of_issuer": "DT CLOUD STAR ACQUISITION CO",
+      "title_of_class": "RIGHT",
+      "cusip": "G2853N114",
+      "value_usd": 58480,
+      "shares": 449500
+    },
+    {
+      "name_of_issuer": "DUNE ACQUISITION CORP II",
+      "title_of_class": "COMMON",
+      "cusip": "G2867S109",
+      "value_usd": 8256,
+      "shares": 800
+    },
+    {
+      "name_of_issuer": "DUNE ACQUISITION CORP II",
+      "title_of_class": "WARRANT",
+      "cusip": "G2867S117",
+      "value_usd": 62000,
+      "shares": 273128
+    },
+    {
+      "name_of_issuer": "DYNAMIX CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G2949D104",
+      "value_usd": 2279014,
+      "shares": 217879
+    },
+    {
+      "name_of_issuer": "DYNAMIX CORP III",
+      "title_of_class": "WARRANT",
+      "cusip": "G2949T117",
+      "value_usd": 189598,
+      "shares": 631993
+    },
+    {
+      "name_of_issuer": "ELECTRA BATTERY MATERIALS CO",
+      "title_of_class": "COMMON",
+      "cusip": "28474P706",
+      "value_usd": 4391938,
+      "shares": 7842747
+    },
+    {
+      "name_of_issuer": "ELECTRONIC ARTS INC",
+      "title_of_class": "COMMON",
+      "cusip": "285512109",
+      "value_usd": 110586002,
+      "shares": 545915
+    },
+    {
+      "name_of_issuer": "ELECTRONIC ARTS INC",
+      "title_of_class": "OPTION",
+      "cusip": "285512959",
+      "value_usd": 81028000,
+      "shares": 400000
+    },
+    {
+      "name_of_issuer": "ELME COMMUNITIES",
+      "title_of_class": "COMMON",
+      "cusip": "939653101",
+      "value_usd": 14917112,
+      "shares": 7496036
+    },
+    {
+      "name_of_issuer": "EMMIS ACQUISITION CORP.",
+      "title_of_class": "COMMON",
+      "cusip": "G3037D105",
+      "value_usd": 47235,
+      "shares": 4700
+    },
+    {
+      "name_of_issuer": "EMMIS ACQUISITION CORP.",
+      "title_of_class": "RIGHT",
+      "cusip": "G3037D113",
+      "value_usd": 29452,
+      "shares": 200493
+    },
+    {
+      "name_of_issuer": "EMPERY DIGITAL INC",
+      "title_of_class": "COMMON",
+      "cusip": "92864V608",
+      "value_usd": 12130100,
+      "shares": 2867636
+    },
+    {
+      "name_of_issuer": "ENVIRI CORP",
+      "title_of_class": "COMMON",
+      "cusip": "415864107",
+      "value_usd": 34279743,
+      "shares": 1818554
+    },
+    {
+      "name_of_issuer": "EQV VENTURES AC CORP. II",
+      "title_of_class": "COMMON",
+      "cusip": "G3106Q102",
+      "value_usd": 84843,
+      "shares": 8417
+    },
+    {
+      "name_of_issuer": "ESH ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "296424112",
+      "value_usd": 137983,
+      "shares": 811666
+    },
+    {
+      "name_of_issuer": "EUREKA ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G32168125",
+      "value_usd": 138035,
+      "shares": 492982
+    },
+    {
+      "name_of_issuer": "EVOLUTION GLOBAL ACQUISITION",
+      "title_of_class": "WARRANT",
+      "cusip": "G3226F119",
+      "value_usd": 9019,
+      "shares": 25054
+    },
+    {
+      "name_of_issuer": "FG IMPERII ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G3R41C102",
+      "value_usd": 8759614,
+      "shares": 888399
+    },
+    {
+      "name_of_issuer": "FG IMPERII ACQUISITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G3R41C110",
+      "value_usd": 81042,
+      "shares": 450232
+    },
+    {
+      "name_of_issuer": "FG MERGER II CORP",
+      "title_of_class": "COMMON",
+      "cusip": "30334J102",
+      "value_usd": 7080498,
+      "shares": 700346
+    },
+    {
+      "name_of_issuer": "FIFTH ERA ACQUISITION CORP I",
+      "title_of_class": "COMMON",
+      "cusip": "G3415K101",
+      "value_usd": 27789,
+      "shares": 2698
+    },
+    {
+      "name_of_issuer": "FLAG SHIP ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G3530C117",
+      "value_usd": 49113,
+      "shares": 446481
+    },
+    {
+      "name_of_issuer": "FOLD HLDGS INC",
+      "title_of_class": "COMMON",
+      "cusip": "29103K100",
+      "value_usd": 12525,
+      "shares": 10020
+    },
+    {
+      "name_of_issuer": "FOLD HLDGS INC",
+      "title_of_class": "WARRANT",
+      "cusip": "29103K118",
+      "value_usd": 29196,
+      "shares": 265421
+    },
+    {
+      "name_of_issuer": "FORAFRIC GLOBAL PLC",
+      "title_of_class": "WARRANT",
+      "cusip": "X3R81D110",
+      "value_usd": 241682,
+      "shares": 402804
+    },
+    {
+      "name_of_issuer": "FREIGHTOS LTD",
+      "title_of_class": "WARRANT",
+      "cusip": "G51405119",
+      "value_usd": 49714,
+      "shares": 310713
+    },
+    {
+      "name_of_issuer": "FUTURE MONEY ACQUISITION COR",
+      "title_of_class": "UNIT",
+      "cusip": "G3700S124",
+      "value_usd": 9490500,
+      "shares": 950000
+    },
+    {
+      "name_of_issuer": "FUTURE VISION II ACQUISITION",
+      "title_of_class": "RIGHT",
+      "cusip": "G37068114",
+      "value_usd": 63674,
+      "shares": 489797
+    },
+    {
+      "name_of_issuer": "GALATA ACQUISITION CORP II",
+      "title_of_class": "COMMON",
+      "cusip": "G3R25N108",
+      "value_usd": 275000,
+      "shares": 27500
+    },
+    {
+      "name_of_issuer": "GALAXYEDGE ACQUISITION CORP",
+      "title_of_class": "UNIT",
+      "cusip": "G3710B129",
+      "value_usd": 9076339,
+      "shares": 906700
+    },
+    {
+      "name_of_issuer": "GAMESTOP CORP NEW",
+      "title_of_class": "WARRANT",
+      "cusip": "36467W117",
+      "value_usd": 17448,
+      "shares": 4820
+    },
+    {
+      "name_of_issuer": "GCI LIBERTY INC",
+      "title_of_class": "COMMON",
+      "cusip": "36164V602",
+      "value_usd": 785457,
+      "shares": 21315
+    },
+    {
+      "name_of_issuer": "GCI LIBERTY INC",
+      "title_of_class": "COMMON",
+      "cusip": "36164V800",
+      "value_usd": 5607125,
+      "shares": 152866
+    },
+    {
+      "name_of_issuer": "GEN DIGITAL INC",
+      "title_of_class": "RIGHT",
+      "cusip": "668771116",
+      "value_usd": 60710,
+      "shares": 137602
+    },
+    {
+      "name_of_issuer": "GENERAL PURP ACQUISITION COR",
+      "title_of_class": "WARRANT",
+      "cusip": "G3810N114",
+      "value_usd": 48098,
+      "shares": 200410
+    },
+    {
+      "name_of_issuer": "GIBO HOLDINGS LTD.",
+      "title_of_class": "WARRANT",
+      "cusip": "G38617117",
+      "value_usd": 18550,
+      "shares": 669680
+    },
+    {
+      "name_of_issuer": "GIGCAPITAL7 CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G38648104",
+      "value_usd": 18453505,
+      "shares": 1734352
+    },
+    {
+      "name_of_issuer": "GIGCAPITAL7 CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G38648120",
+      "value_usd": 31244,
+      "shares": 93266
+    },
+    {
+      "name_of_issuer": "GIGCAPITAL8 CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G3864J118",
+      "value_usd": 209426,
+      "shares": 747951
+    },
+    {
+      "name_of_issuer": "GIGCAPITAL9 CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G3865B114",
+      "value_usd": 12061140,
+      "shares": 1228222
+    },
+    {
+      "name_of_issuer": "GIGCAPITAL9 CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G3865B122",
+      "value_usd": 224723,
+      "shares": 898892
+    },
+    {
+      "name_of_issuer": "GLOBA TERRA ACQUISITION COR",
+      "title_of_class": "COMMON",
+      "cusip": "G3933N116",
+      "value_usd": 738925,
+      "shares": 72020
+    },
+    {
+      "name_of_issuer": "GLOBA TERRA ACQUISITION COR",
+      "title_of_class": "RIGHT",
+      "cusip": "G3933N132",
+      "value_usd": 132931,
+      "shares": 1048348
+    },
+    {
+      "name_of_issuer": "GORES HLDGS X INC",
+      "title_of_class": "COMMON",
+      "cusip": "G4002F109",
+      "value_usd": 1022000,
+      "shares": 100000
+    },
+    {
+      "name_of_issuer": "GOSSAMER BIO INC",
+      "title_of_class": "BOND",
+      "cusip": "38341PAA0",
+      "value_usd": 2355000,
+      "shares": 6000000
+    },
+    {
+      "name_of_issuer": "GP-ACT III ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G4035N103",
+      "value_usd": 4891419,
+      "shares": 452072
+    },
+    {
+      "name_of_issuer": "GRAF GLOBAL CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G4036C106",
+      "value_usd": 16201253,
+      "shares": 1512722
+    },
+    {
+      "name_of_issuer": "GRAF GLOBAL CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G4036C122",
+      "value_usd": 53150,
+      "shares": 408848
+    },
+    {
+      "name_of_issuer": "GREENLAND MINES LTD",
+      "title_of_class": "WARRANT",
+      "cusip": "49876K111",
+      "value_usd": 85432,
+      "shares": 590000
+    },
+    {
+      "name_of_issuer": "HALL CHADWICK ACQUISITION CO",
+      "title_of_class": "RIGHT",
+      "cusip": "G42386113",
+      "value_usd": 70484,
+      "shares": 293685
+    },
+    {
+      "name_of_issuer": "HCM III ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G4365E103",
+      "value_usd": 10080000,
+      "shares": 1000000
+    },
+    {
+      "name_of_issuer": "HCM III ACQUISITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G4365E111",
+      "value_usd": 752,
+      "shares": 1849
+    },
+    {
+      "name_of_issuer": "HCM IV ACQUISITION CORP",
+      "title_of_class": "UNIT",
+      "cusip": "G4365S128",
+      "value_usd": 10045000,
+      "shares": 1000000
+    },
+    {
+      "name_of_issuer": "HELPORT AI LTD",
+      "title_of_class": "COMMON",
+      "cusip": "G4R52R103",
+      "value_usd": 75498,
+      "shares": 37375
+    },
+    {
+      "name_of_issuer": "HENNESSY CAP INVT CORP VII",
+      "title_of_class": "COMMON",
+      "cusip": "G4405D107",
+      "value_usd": 17166756,
+      "shares": 1661835
+    },
+    {
+      "name_of_issuer": "HERTZ GLOBAL HLDGS INC",
+      "title_of_class": "WARRANT",
+      "cusip": "42806J148",
+      "value_usd": 2416120,
+      "shares": 1093267
+    },
+    {
+      "name_of_issuer": "HERTZ GLOBAL HLDGS INC",
+      "title_of_class": "COMMON",
+      "cusip": "42806J700",
+      "value_usd": 1294353,
+      "shares": 288918
+    },
+    {
+      "name_of_issuer": "HIGHVIEW MERGER CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G4569C119",
+      "value_usd": 161692,
+      "shares": 646510
+    },
+    {
+      "name_of_issuer": "HOLOGIC INC",
+      "title_of_class": "COMMON",
+      "cusip": "436440101",
+      "value_usd": 62038411,
+      "shares": 821157
+    },
+    {
+      "name_of_issuer": "HORIZON SPACE ACQUISITION II",
+      "title_of_class": "RIGHT",
+      "cusip": "G4627B111",
+      "value_usd": 117396,
+      "shares": 404814
+    },
+    {
+      "name_of_issuer": "IAC INC",
+      "title_of_class": "COMMON",
+      "cusip": "44891N208",
+      "value_usd": 22237999,
+      "shares": 568456
+    },
+    {
+      "name_of_issuer": "IB ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "44934N116",
+      "value_usd": 68356,
+      "shares": 621421
+    },
+    {
+      "name_of_issuer": "INDIGO ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G4791J106",
+      "value_usd": 2547041,
+      "shares": 249955
+    },
+    {
+      "name_of_issuer": "INDIGO ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G4791J114",
+      "value_usd": 77473,
+      "shares": 610501
+    },
+    {
+      "name_of_issuer": "INFLECTION PT ACQUISIT CORP",
+      "title_of_class": "UNIT",
+      "cusip": "G4790S123",
+      "value_usd": 3588451,
+      "shares": 354240
+    },
+    {
+      "name_of_issuer": "INFLECTION PT ACQUISITION CO",
+      "title_of_class": "COMMON",
+      "cusip": "G47875102",
+      "value_usd": 4499804,
+      "shares": 439434
+    },
+    {
+      "name_of_issuer": "INOTIV INC",
+      "title_of_class": "BOND",
+      "cusip": "45783QAB6",
+      "value_usd": 6709375,
+      "shares": 28250000
+    },
+    {
+      "name_of_issuer": "INSIGHT DIGITAL PARTNERS II",
+      "title_of_class": "WARRANT",
+      "cusip": "G4814G113",
+      "value_usd": 201391,
+      "shares": 694451
+    },
+    {
+      "name_of_issuer": "INVEST GREEN ACQUISITION COR",
+      "title_of_class": "COMMON",
+      "cusip": "G4924G102",
+      "value_usd": 10,
+      "shares": 1
+    },
+    {
+      "name_of_issuer": "INVEST GREEN ACQUISITION COR",
+      "title_of_class": "RIGHT",
+      "cusip": "G4924G110",
+      "value_usd": 25672,
+      "shares": 162587
+    },
+    {
+      "name_of_issuer": "IRIS ACQUISITION CORP II",
+      "title_of_class": "WARRANT",
+      "cusip": "G4940M117",
+      "value_usd": 40194,
+      "shares": 130499
+    },
+    {
+      "name_of_issuer": "IRON HORSE ACQUISIT II CORP",
+      "title_of_class": "COMMON",
+      "cusip": "46283H103",
+      "value_usd": 1138376,
+      "shares": 115454
+    },
+    {
+      "name_of_issuer": "IRONWOOD PHARMACEUTICALS INC",
+      "title_of_class": "BOND",
+      "cusip": "46333XAH1",
+      "value_usd": 46120515,
+      "shares": 46942000
+    },
+    {
+      "name_of_issuer": "ISHARES BITCOIN TRUST ETF",
+      "title_of_class": "OPTION",
+      "cusip": "46438F951",
+      "value_usd": 21760200,
+      "shares": 577500
+    },
+    {
+      "name_of_issuer": "ISHARES SILVER TR",
+      "title_of_class": "OPTION",
+      "cusip": "46428Q959",
+      "value_usd": 12704000,
+      "shares": 200000
+    },
+    {
+      "name_of_issuer": "ISHARES TR",
+      "title_of_class": "OPTION",
+      "cusip": "464287902",
+      "value_usd": 65085000,
+      "shares": 750000
+    },
+    {
+      "name_of_issuer": "ISHARES TR",
+      "title_of_class": "OPTION",
+      "cusip": "464287952",
+      "value_usd": 60746000,
+      "shares": 700000
+    },
+    {
+      "name_of_issuer": "ISHARES TR",
+      "title_of_class": "OPTION",
+      "cusip": "464287905",
+      "value_usd": 31048000,
+      "shares": 400000
+    },
+    {
+      "name_of_issuer": "ISHARES TR",
+      "title_of_class": "OPTION",
+      "cusip": "464287955",
+      "value_usd": 186895800,
+      "shares": 780000
+    },
+    {
+      "name_of_issuer": "ISHARES TR",
+      "title_of_class": "OPTION",
+      "cusip": "464288953",
+      "value_usd": 433455000,
+      "shares": 5500000
+    },
+    {
+      "name_of_issuer": "JACKSON ACQUISITION CO II",
+      "title_of_class": "COMMON",
+      "cusip": "G4992A110",
+      "value_usd": 1285243,
+      "shares": 121824
+    },
+    {
+      "name_of_issuer": "JACKSON ACQUISITION CO II",
+      "title_of_class": "RIGHT",
+      "cusip": "G4992A136",
+      "value_usd": 26308,
+      "shares": 227575
+    },
+    {
+      "name_of_issuer": "JBS N.V.",
+      "title_of_class": "COMMON",
+      "cusip": "N4732M103",
+      "value_usd": 182070,
+      "shares": 10500
+    },
+    {
+      "name_of_issuer": "JENA ACQUISITION CORP II",
+      "title_of_class": "RIGHT",
+      "cusip": "G5093B113",
+      "value_usd": 95608,
+      "shares": 562398
+    },
+    {
+      "name_of_issuer": "K&F GROWTH ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G52258111",
+      "value_usd": 1105197,
+      "shares": 106065
+    },
+    {
+      "name_of_issuer": "K2 CAP ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G5226B105",
+      "value_usd": 12217678,
+      "shares": 1237860
+    },
+    {
+      "name_of_issuer": "K2 CAP ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G5226B113",
+      "value_usd": 167109,
+      "shares": 879522
+    },
+    {
+      "name_of_issuer": "KENSINGTON CAP ACQUIST CORP",
+      "title_of_class": "UNIT",
+      "cusip": "G5235S123",
+      "value_usd": 4154741,
+      "shares": 415059
+    },
+    {
+      "name_of_issuer": "KENVUE INC",
+      "title_of_class": "COMMON",
+      "cusip": "49177J102",
+      "value_usd": 20245846,
+      "shares": 1174353
+    },
+    {
+      "name_of_issuer": "KOCHAV DEFENSE ACQUI CO",
+      "title_of_class": "RIGHT",
+      "cusip": "G5304D114",
+      "value_usd": 141683,
+      "shares": 596561
+    },
+    {
+      "name_of_issuer": "KODIAK AI INC.",
+      "title_of_class": "WARRANT",
+      "cusip": "500081112",
+      "value_usd": 1900324,
+      "shares": 1881509
+    },
+    {
+      "name_of_issuer": "KRAKACQUISITION CORPORATION",
+      "title_of_class": "COMMON",
+      "cusip": "G5315G106",
+      "value_usd": 9860,
+      "shares": 1000
+    },
+    {
+      "name_of_issuer": "LAKE SUPERIOR ACQUISITION CO",
+      "title_of_class": "COMMON",
+      "cusip": "G5354C107",
+      "value_usd": 2658225,
+      "shares": 264500
+    },
+    {
+      "name_of_issuer": "LAKE SUPERIOR ACQUISITION CO",
+      "title_of_class": "RIGHT",
+      "cusip": "G5354C115",
+      "value_usd": 68350,
+      "shares": 59435
+    },
+    {
+      "name_of_issuer": "LAKESHORE ACQUISITION III CO",
+      "title_of_class": "COMMON",
+      "cusip": "G5353S103",
+      "value_usd": 4563,
+      "shares": 443
+    },
+    {
+      "name_of_issuer": "LAKESHORE ACQUISITION III CO",
+      "title_of_class": "RIGHT",
+      "cusip": "G5353S137",
+      "value_usd": 70839,
+      "shares": 337328
+    },
+    {
+      "name_of_issuer": "LANVIN GROUP HOLDINGS LIMITE",
+      "title_of_class": "WARRANT",
+      "cusip": "G5380J118",
+      "value_usd": 46003,
+      "shares": 4600266
+    },
+    {
+      "name_of_issuer": "LAUNCH ONE ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G5S86M100",
+      "value_usd": 323080,
+      "shares": 30110
+    },
+    {
+      "name_of_issuer": "LAUNCH ONE ACQUISITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G5S86M126",
+      "value_usd": 72680,
+      "shares": 519141
+    },
+    {
+      "name_of_issuer": "LAUNCH TWO ACQUISITION CORP.",
+      "title_of_class": "COMMON",
+      "cusip": "G5S87A105",
+      "value_usd": 1225675,
+      "shares": 115412
+    },
+    {
+      "name_of_issuer": "LAUNCHPAD CADENZA ACQU CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G6001S115",
+      "value_usd": 31832,
+      "shares": 132632
+    },
+    {
+      "name_of_issuer": "LEAPFROG ACQUISITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G5414D111",
+      "value_usd": 27678,
+      "shares": 95442
+    },
+    {
+      "name_of_issuer": "LEGATO MERGER CORP III",
+      "title_of_class": "COMMON",
+      "cusip": "G5451A103",
+      "value_usd": 7805438,
+      "shares": 712175
+    },
+    {
+      "name_of_issuer": "LEGATO MERGER CORP III",
+      "title_of_class": "WARRANT",
+      "cusip": "G5451A111",
+      "value_usd": 284585,
+      "shares": 569169
+    },
+    {
+      "name_of_issuer": "LEGATO MERGER CORP IV",
+      "title_of_class": "COMMON",
+      "cusip": "G7318R105",
+      "value_usd": 9860,
+      "shares": 1000
+    },
+    {
+      "name_of_issuer": "LEGATO MERGER CORP IV",
+      "title_of_class": "WARRANT",
+      "cusip": "G7318R113",
+      "value_usd": 17007,
+      "shares": 52850
+    },
+    {
+      "name_of_issuer": "LIBERTY LIVE HOLDINGS INC",
+      "title_of_class": "COMMON",
+      "cusip": "530909308",
+      "value_usd": 6832775,
+      "shares": 75886
+    },
+    {
+      "name_of_issuer": "LIFEZONE METALS LIMITED",
+      "title_of_class": "WARRANT",
+      "cusip": "G5568L117",
+      "value_usd": 89177,
+      "shares": 178353
+    },
+    {
+      "name_of_issuer": "LIONHEART HOLDINGS",
+      "title_of_class": "COMMON",
+      "cusip": "G5501C109",
+      "value_usd": 1976535,
+      "shares": 183352
+    },
+    {
+      "name_of_issuer": "LIONHEART HOLDINGS",
+      "title_of_class": "WARRANT",
+      "cusip": "G5501C117",
+      "value_usd": 55699,
+      "shares": 278495
+    },
+    {
+      "name_of_issuer": "LUMEN TECHNOLOGIES INC",
+      "title_of_class": "COMMON",
+      "cusip": "550241103",
+      "value_usd": 670950,
+      "shares": 105000
+    },
+    {
+      "name_of_issuer": "M EVO GBL ACQUISITION CORP I",
+      "title_of_class": "WARRANT",
+      "cusip": "G6071J110",
+      "value_usd": 204888,
+      "shares": 602612
+    },
+    {
+      "name_of_issuer": "M3-BRIGADE ACQUISITION VI CO",
+      "title_of_class": "COMMON",
+      "cusip": "G63221108",
+      "value_usd": 14788200,
+      "shares": 1470000
+    },
+    {
+      "name_of_issuer": "M3-BRIGADE ACQUISITION VI CO",
+      "title_of_class": "WARRANT",
+      "cusip": "G63221116",
+      "value_usd": 170697,
+      "shares": 533260
+    },
+    {
+      "name_of_issuer": "M3BRIGADE ACQUISITION V CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G63212107",
+      "value_usd": 73516,
+      "shares": 6826
+    },
+    {
+      "name_of_issuer": "M3BRIGADE ACQUISITION V CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G63212115",
+      "value_usd": 252999,
+      "shares": 845020
+    },
+    {
+      "name_of_issuer": "MARA HOLDINGS INC",
+      "title_of_class": "BOND",
+      "cusip": "565788AB2",
+      "value_usd": 3360000,
+      "shares": 3500000
+    },
+    {
+      "name_of_issuer": "MARA HOLDINGS INC",
+      "title_of_class": "BOND",
+      "cusip": "565788AF3",
+      "value_usd": 31380544,
+      "shares": 35313000
+    },
+    {
+      "name_of_issuer": "MCKINLEY ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G6005T101",
+      "value_usd": 168777,
+      "shares": 16844
+    },
+    {
+      "name_of_issuer": "MCKINLEY ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G6005T119",
+      "value_usd": 110507,
+      "shares": 1004608
+    },
+    {
+      "name_of_issuer": "MELAR ACQUISITION CORP. I",
+      "title_of_class": "COMMON",
+      "cusip": "G6004G100",
+      "value_usd": 3116195,
+      "shares": 288804
+    },
+    {
+      "name_of_issuer": "MELAR ACQUISITION CORP. I",
+      "title_of_class": "WARRANT",
+      "cusip": "G6004G118",
+      "value_usd": 27690,
+      "shares": 212999
+    },
+    {
+      "name_of_issuer": "MESHFLOW ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G6032N101",
+      "value_usd": 812879,
+      "shares": 82192
+    },
+    {
+      "name_of_issuer": "MICROCHIP TECHNOLOGY INC.",
+      "title_of_class": "PREF CONV",
+      "cusip": "595017302",
+      "value_usd": 8612430,
+      "shares": 150000
+    },
+    {
+      "name_of_issuer": "MILUNA ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G6180J100",
+      "value_usd": 2016,
+      "shares": 201
+    },
+    {
+      "name_of_issuer": "MOUNTAIN LAKE ACQUISIT CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G6301L109",
+      "value_usd": 2727095,
+      "shares": 277003
+    },
+    {
+      "name_of_issuer": "MOZAYYX ACQUISITION CORP",
+      "title_of_class": "UNIT",
+      "cusip": "G63113123",
+      "value_usd": 9950,
+      "shares": 1000
+    },
+    {
+      "name_of_issuer": "MURANO GLOBAL INVTS PLC",
+      "title_of_class": "COMMON",
+      "cusip": "G63369105",
+      "value_usd": 88,
+      "shares": 200
+    },
+    {
+      "name_of_issuer": "MURANO GLOBAL INVTS PLC",
+      "title_of_class": "WARRANT",
+      "cusip": "G63369113",
+      "value_usd": 130481,
+      "shares": 2712701
+    },
+    {
+      "name_of_issuer": "MUZERO ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G8775A106",
+      "value_usd": 9840,
+      "shares": 1000
+    },
+    {
+      "name_of_issuer": "MUZERO ACQUISITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G8775A114",
+      "value_usd": 123,
+      "shares": 500
+    },
+    {
+      "name_of_issuer": "NAVIENT CORPORATION",
+      "title_of_class": "COMMON",
+      "cusip": "63938C108",
+      "value_usd": 2138108,
+      "shares": 263964
+    },
+    {
+      "name_of_issuer": "NEW PROVIDENCE ACQUISITION C",
+      "title_of_class": "COMMON",
+      "cusip": "G6476A102",
+      "value_usd": 3773486,
+      "shares": 368145
+    },
+    {
+      "name_of_issuer": "NEWBRIDGE ACQUISITION LTD",
+      "title_of_class": "COMMON",
+      "cusip": "G6464L102",
+      "value_usd": 5248836,
+      "shares": 530990
+    },
+    {
+      "name_of_issuer": "NEWELL BRANDS INC",
+      "title_of_class": "COMMON",
+      "cusip": "651229106",
+      "value_usd": 2367750,
+      "shares": 717500
+    },
+    {
+      "name_of_issuer": "NEXTERA ENERGY INC",
+      "title_of_class": "PREF CONV",
+      "cusip": "65339F655",
+      "value_usd": 40120001,
+      "shares": 800000
+    },
+    {
+      "name_of_issuer": "NIO INC",
+      "title_of_class": "OPTION",
+      "cusip": "62914V956",
+      "value_usd": 17799504,
+      "shares": 3230400
+    },
+    {
+      "name_of_issuer": "NIO INC",
+      "title_of_class": "BOND",
+      "cusip": "62914VAK2",
+      "value_usd": 36937900,
+      "shares": 38000000
+    },
+    {
+      "name_of_issuer": "NMP ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G6375X104",
+      "value_usd": 2351868,
+      "shares": 232398
+    },
+    {
+      "name_of_issuer": "NMP ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G6375X112",
+      "value_usd": 146256,
+      "shares": 731280
+    },
+    {
+      "name_of_issuer": "NORTHWESTERN ENERGY GROUP IN",
+      "title_of_class": "COMMON",
+      "cusip": "668074305",
+      "value_usd": 18914144,
+      "shares": 287318
+    },
+    {
+      "name_of_issuer": "NOVANTA INC",
+      "title_of_class": "PREF CONV",
+      "cusip": "67000B203",
+      "value_usd": 2409119,
+      "shares": 45000
+    },
+    {
+      "name_of_issuer": "NVIDIA CORPORATION",
+      "title_of_class": "OPTION",
+      "cusip": "67066G954",
+      "value_usd": 29367226,
+      "shares": 177800
+    },
+    {
+      "name_of_issuer": "ORIGIN INVT CORP I",
+      "title_of_class": "COMMON",
+      "cusip": "G67751100",
+      "value_usd": 1625299,
+      "shares": 159187
+    },
+    {
+      "name_of_issuer": "ORIGIN INVT CORP I",
+      "title_of_class": "WARRANT",
+      "cusip": "G67751126",
+      "value_usd": 40128,
+      "shares": 206206
+    },
+    {
+      "name_of_issuer": "OSR HLDGS INC",
+      "title_of_class": "WARRANT",
+      "cusip": "68840D110",
+      "value_usd": 38663,
+      "shares": 644377
+    },
+    {
+      "name_of_issuer": "OTG ACQUISITION CORP. I",
+      "title_of_class": "WARRANT",
+      "cusip": "G6791A118",
+      "value_usd": 29394,
+      "shares": 113054
+    },
+    {
+      "name_of_issuer": "OXLEY BRIDGE ACQ LTD",
+      "title_of_class": "WARRANT",
+      "cusip": "G6858G115",
+      "value_usd": 140554,
+      "shares": 702771
+    },
+    {
+      "name_of_issuer": "PERFECT CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G7006A117",
+      "value_usd": 16811,
+      "shares": 1664503
+    },
+    {
+      "name_of_issuer": "PLUM ACQUISITION CORP IV",
+      "title_of_class": "COMMON",
+      "cusip": "G7134A104",
+      "value_usd": 1830298,
+      "shares": 173488
+    },
+    {
+      "name_of_issuer": "PONO CAP FOUR INC",
+      "title_of_class": "UNIT",
+      "cusip": "G71702123",
+      "value_usd": 5614439,
+      "shares": 562569
+    },
+    {
+      "name_of_issuer": "PPL CORP",
+      "title_of_class": "PREF CONV",
+      "cusip": "69351T866",
+      "value_usd": 2046000,
+      "shares": 40000
+    },
+    {
+      "name_of_issuer": "PRESIDIO PRODTN CO",
+      "title_of_class": "WARRANT",
+      "cusip": "74102N119",
+      "value_usd": 37620,
+      "shares": 45600
+    },
+    {
+      "name_of_issuer": "PROCAP ACQUISITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G7257A121",
+      "value_usd": 77319,
+      "shares": 245456
+    },
+    {
+      "name_of_issuer": "PROCAP FINL INC",
+      "title_of_class": "WARRANT",
+      "cusip": "74277P113",
+      "value_usd": 60973,
+      "shares": 225825
+    },
+    {
+      "name_of_issuer": "QDRO ACQUISITION CORP",
+      "title_of_class": "UNIT",
+      "cusip": "G7310E128",
+      "value_usd": 6633435,
+      "shares": 668693
+    },
+    {
+      "name_of_issuer": "QUANTUMSPHERE ACQUISITION CO",
+      "title_of_class": "COMMON",
+      "cusip": "G7387B106",
+      "value_usd": 1225309,
+      "shares": 121078
+    },
+    {
+      "name_of_issuer": "QUANTUMSPHERE ACQUISITION CO",
+      "title_of_class": "RIGHT",
+      "cusip": "G7387B114",
+      "value_usd": 172601,
+      "shares": 690404
+    },
+    {
+      "name_of_issuer": "QUARTZSEA ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G7314B120",
+      "value_usd": 64000,
+      "shares": 400000
+    },
+    {
+      "name_of_issuer": "QUETTA ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "74841A113",
+      "value_usd": 189710,
+      "shares": 140526
+    },
+    {
+      "name_of_issuer": "RANGE CAP ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G7375C108",
+      "value_usd": 1455673,
+      "shares": 138372
+    },
+    {
+      "name_of_issuer": "RANGE CAP ACQUISITION CORP I",
+      "title_of_class": "COMMON",
+      "cusip": "G7375J103",
+      "value_usd": 3743830,
+      "shares": 374383
+    },
+    {
+      "name_of_issuer": "REAL ASSET ACQUISITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G73944111",
+      "value_usd": 38475,
+      "shares": 31028
+    },
+    {
+      "name_of_issuer": "RF ACQUISITION CORP II",
+      "title_of_class": "RIGHT",
+      "cusip": "G75389117",
+      "value_usd": 216926,
+      "shares": 1936837
+    },
+    {
+      "name_of_issuer": "RF ACQUISITION CORP III",
+      "title_of_class": "COMMON",
+      "cusip": "G7537X107",
+      "value_usd": 786576,
+      "shares": 80427
+    },
+    {
+      "name_of_issuer": "RIBBON ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G7552W117",
+      "value_usd": 81724,
+      "shares": 430125
+    },
+    {
+      "name_of_issuer": "RIVIAN AUTOMOTIVE INC",
+      "title_of_class": "BOND",
+      "cusip": "76954AAB9",
+      "value_usd": 5239000,
+      "shares": 5000000
+    },
+    {
+      "name_of_issuer": "ROMAN DBDR ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G7633M104",
+      "value_usd": 18001678,
+      "shares": 1719358
+    },
+    {
+      "name_of_issuer": "ROMAN DBDR ACQUISITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G7633M112",
+      "value_usd": 28680,
+      "shares": 124750
+    },
+    {
+      "name_of_issuer": "SAFEGUARD ACQUISITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G77676115",
+      "value_usd": 8726,
+      "shares": 21814
+    },
+    {
+      "name_of_issuer": "SANDRIDGE ENERGY INC",
+      "title_of_class": "COMMON",
+      "cusip": "80007P869",
+      "value_usd": 9787,
+      "shares": 575
+    },
+    {
+      "name_of_issuer": "SAREPTA THERAPEUTICS INC",
+      "title_of_class": "COMMON",
+      "cusip": "803607100",
+      "value_usd": 5120000,
+      "shares": 250000
+    },
+    {
+      "name_of_issuer": "SAREPTA THERAPEUTICS INC",
+      "title_of_class": "BOND",
+      "cusip": "803607AD2",
+      "value_usd": 54727230,
+      "shares": 57306000
+    },
+    {
+      "name_of_issuer": "SC II ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G7866D110",
+      "value_usd": 101445,
+      "shares": 460903
+    },
+    {
+      "name_of_issuer": "SCAGE FUTURE",
+      "title_of_class": "WARRANT",
+      "cusip": "G7840J118",
+      "value_usd": 48900,
+      "shares": 976051
+    },
+    {
+      "name_of_issuer": "SHARPLINK INC",
+      "title_of_class": "COMMON",
+      "cusip": "820014405",
+      "value_usd": 4140608,
+      "shares": 688953
+    },
+    {
+      "name_of_issuer": "SHIFT4 PMTS INC",
+      "title_of_class": "OPTION",
+      "cusip": "82452J909",
+      "value_usd": 763350,
+      "shares": 17500
+    },
+    {
+      "name_of_issuer": "SHIFT4 PMTS INC",
+      "title_of_class": "PREF CONV",
+      "cusip": "82452J307",
+      "value_usd": 8034360,
+      "shares": 150000
+    },
+    {
+      "name_of_issuer": "SIDDHI ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G8118C116",
+      "value_usd": 99587,
+      "shares": 483666
+    },
+    {
+      "name_of_issuer": "SIDDHI ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G8118C124",
+      "value_usd": 609285,
+      "shares": 58925
+    },
+    {
+      "name_of_issuer": "SILICON VY ACQUISITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G81306113",
+      "value_usd": 84374,
+      "shares": 263668
+    },
+    {
+      "name_of_issuer": "SILVERBOX CORP IV",
+      "title_of_class": "COMMON",
+      "cusip": "G81354105",
+      "value_usd": 556534,
+      "shares": 51964
+    },
+    {
+      "name_of_issuer": "SIM ACQUISITION CORP. I",
+      "title_of_class": "WARRANT",
+      "cusip": "G8431T119",
+      "value_usd": 89969,
+      "shares": 359877
+    },
+    {
+      "name_of_issuer": "SIZZLE ACQUISITION CORP. II",
+      "title_of_class": "RIGHT",
+      "cusip": "G8193F133",
+      "value_usd": 15851,
+      "shares": 93240
+    },
+    {
+      "name_of_issuer": "SM ENERGY COMPANY",
+      "title_of_class": "COMMON",
+      "cusip": "78454L100",
+      "value_usd": 771120,
+      "shares": 24000
+    },
+    {
+      "name_of_issuer": "SOCIAL COMM PARTNERS CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G8254P111",
+      "value_usd": 135,
+      "shares": 500
+    },
+    {
+      "name_of_issuer": "SOLARIUS CAPITAL ACQU CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G82617104",
+      "value_usd": 17221,
+      "shares": 1700
+    },
+    {
+      "name_of_issuer": "SOULPOWER ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G82745103",
+      "value_usd": 657671,
+      "shares": 64163
+    },
+    {
+      "name_of_issuer": "SOULPOWER ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G82745137",
+      "value_usd": 103688,
+      "shares": 576043
+    },
+    {
+      "name_of_issuer": "SPACE ASSET ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G8375S101",
+      "value_usd": 9940,
+      "shares": 1000
+    },
+    {
+      "name_of_issuer": "SPACSPHERE ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G8T088109",
+      "value_usd": 13748316,
+      "shares": 1390123
+    },
+    {
+      "name_of_issuer": "SPACSPHERE ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G8T088117",
+      "value_usd": 188521,
+      "shares": 1108298
+    },
+    {
+      "name_of_issuer": "SPARTACUS ACQUISITION CORP I",
+      "title_of_class": "UNIT",
+      "cusip": "G8303R126",
+      "value_usd": 10035,
+      "shares": 1000
+    },
+    {
+      "name_of_issuer": "SPDR SERIES TRUST",
+      "title_of_class": "OPTION",
+      "cusip": "78468R956",
+      "value_usd": 151258940,
+      "shares": 815500
+    },
+    {
+      "name_of_issuer": "STAR HLDGS",
+      "title_of_class": "COMMON",
+      "cusip": "85512G106",
+      "value_usd": 8386883,
+      "shares": 1137976
+    },
+    {
+      "name_of_issuer": "STARDUST PWR INC",
+      "title_of_class": "WARRANT",
+      "cusip": "854936119",
+      "value_usd": 15951,
+      "shares": 97204
+    },
+    {
+      "name_of_issuer": "STARRY SEA ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G8559L112",
+      "value_usd": 957419,
+      "shares": 94420
+    },
+    {
+      "name_of_issuer": "STARRY SEA ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G8559L120",
+      "value_usd": 127161,
+      "shares": 669269
+    },
+    {
+      "name_of_issuer": "STATE STR SPDR S&P 500 ETF T",
+      "title_of_class": "OPTION",
+      "cusip": "78462F953",
+      "value_usd": 315985000,
+      "shares": 500000
+    },
+    {
+      "name_of_issuer": "STONEBRIDGE ACQUISITION II C",
+      "title_of_class": "RIGHT",
+      "cusip": "G85096116",
+      "value_usd": 74310,
+      "shares": 616167
+    },
+    {
+      "name_of_issuer": "STRATEGY INC",
+      "title_of_class": "BOND",
+      "cusip": "594972AJ0",
+      "value_usd": 18058715,
+      "shares": 15892000
+    },
+    {
+      "name_of_issuer": "STRATEGY INC",
+      "title_of_class": "BOND",
+      "cusip": "594972AS0",
+      "value_usd": 12491550,
+      "shares": 15000000
+    },
+    {
+      "name_of_issuer": "STRATEGY INC",
+      "title_of_class": "BOND",
+      "cusip": "594972AU5",
+      "value_usd": 4955000,
+      "shares": 5000000
+    },
+    {
+      "name_of_issuer": "SUMA ACQUISITION CORP",
+      "title_of_class": "UNIT",
+      "cusip": "G8557R129",
+      "value_usd": 7145460,
+      "shares": 714546
+    },
+    {
+      "name_of_issuer": "SUPER MICRO COMPUTER INC",
+      "title_of_class": "OPTION",
+      "cusip": "86800U952",
+      "value_usd": 67242474,
+      "shares": 3192900
+    },
+    {
+      "name_of_issuer": "SUPER MICRO COMPUTER INC",
+      "title_of_class": "BOND",
+      "cusip": "86800UAB0",
+      "value_usd": 21064055,
+      "shares": 26500000
+    },
+    {
+      "name_of_issuer": "SUPER MICRO COMPUTER INC",
+      "title_of_class": "BOND",
+      "cusip": "86800UAD6",
+      "value_usd": 18850920,
+      "shares": 22000000
+    },
+    {
+      "name_of_issuer": "TAILWIND 2.0 ACQUISITION COR",
+      "title_of_class": "RIGHT",
+      "cusip": "G8662J129",
+      "value_usd": 86221,
+      "shares": 507182
+    },
+    {
+      "name_of_issuer": "TAVIA ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G86880104",
+      "value_usd": 1986734,
+      "shares": 187782
+    },
+    {
+      "name_of_issuer": "TAVIA ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G86880146",
+      "value_usd": 46989,
+      "shares": 362573
+    },
+    {
+      "name_of_issuer": "TELEPHONE & DATA SYS INC",
+      "title_of_class": "COMMON",
+      "cusip": "879433829",
+      "value_usd": 417900,
+      "shares": 10000
+    },
+    {
+      "name_of_issuer": "TEXAS VENTURES ACQUISITION I",
+      "title_of_class": "COMMON",
+      "cusip": "G8772L105",
+      "value_usd": 7660817,
+      "shares": 738748
+    },
+    {
+      "name_of_issuer": "TEXAS VENTURES ACQUISITION I",
+      "title_of_class": "WARRANT",
+      "cusip": "G8772L113",
+      "value_usd": 32779,
+      "shares": 68289
+    },
+    {
+      "name_of_issuer": "TGE VALUE CREATIVE SOLUTIONS",
+      "title_of_class": "WARRANT",
+      "cusip": "G8773E118",
+      "value_usd": 159801,
+      "shares": 551037
+    },
+    {
+      "name_of_issuer": "THAYER VENTURES ACQ CORP II",
+      "title_of_class": "COMMON",
+      "cusip": "G87890102",
+      "value_usd": 1892730,
+      "shares": 185380
+    },
+    {
+      "name_of_issuer": "THAYER VENTURES ACQ CORP II",
+      "title_of_class": "RIGHT",
+      "cusip": "G87890110",
+      "value_usd": 112983,
+      "shares": 564913
+    },
+    {
+      "name_of_issuer": "TRANSLATIONAL DEV ACQUISITIO",
+      "title_of_class": "COMMON",
+      "cusip": "G9008W105",
+      "value_usd": 408028,
+      "shares": 38639
+    },
+    {
+      "name_of_issuer": "TRIP COM GROUP LTD",
+      "title_of_class": "BOND",
+      "cusip": "89677QAB3",
+      "value_usd": 15466650,
+      "shares": 15000000
+    },
+    {
+      "name_of_issuer": "TWELVE SEAS INVT CO III",
+      "title_of_class": "RIGHT",
+      "cusip": "G9145D119",
+      "value_usd": 80050,
+      "shares": 500000
+    },
+    {
+      "name_of_issuer": "UY SCUTI ACQUISITION CORP.",
+      "title_of_class": "RIGHT",
+      "cusip": "G93Y0A112",
+      "value_usd": 64236,
+      "shares": 422329
+    },
+    {
+      "name_of_issuer": "VENDOME ACQUISITION CORP I",
+      "title_of_class": "COMMON",
+      "cusip": "G9580A109",
+      "value_usd": 11099,
+      "shares": 1100
+    },
+    {
+      "name_of_issuer": "VENDOME ACQUISITION CORP I",
+      "title_of_class": "WARRANT",
+      "cusip": "G9580A117",
+      "value_usd": 221973,
+      "shares": 822122
+    },
+    {
+      "name_of_issuer": "VERDE CLEAN FUELS INC",
+      "title_of_class": "COMMON",
+      "cusip": "923372106",
+      "value_usd": 10988,
+      "shares": 6502
+    },
+    {
+      "name_of_issuer": "VERDE CLEAN FUELS INC",
+      "title_of_class": "WARRANT",
+      "cusip": "923372114",
+      "value_usd": 2515,
+      "shares": 121503
+    },
+    {
+      "name_of_issuer": "VIKING ACQUISITION CORP I",
+      "title_of_class": "WARRANT",
+      "cusip": "G9582G112",
+      "value_usd": 2458,
+      "shares": 8333
+    },
+    {
+      "name_of_issuer": "VINE HILL CAP INVT CORP.",
+      "title_of_class": "WARRANT",
+      "cusip": "G93Y09115",
+      "value_usd": 172105,
+      "shares": 137684
+    },
+    {
+      "name_of_issuer": "VINE HILL CAP INVTS CORP II",
+      "title_of_class": "WARRANT",
+      "cusip": "G9709D117",
+      "value_usd": 98822,
+      "shares": 260057
+    },
+    {
+      "name_of_issuer": "VINFAST AUTO LTD",
+      "title_of_class": "WARRANT",
+      "cusip": "Y9390M111",
+      "value_usd": 78693,
+      "shares": 264782
+    },
+    {
+      "name_of_issuer": "VISIONWAVE HOLDINGS INC",
+      "title_of_class": "WARRANT",
+      "cusip": "927950113",
+      "value_usd": 475140,
+      "shares": 452514
+    },
+    {
+      "name_of_issuer": "VOYAGER ACQUISITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G93A7H112",
+      "value_usd": 63993,
+      "shares": 532384
+    },
+    {
+      "name_of_issuer": "WALDENCAST PLC",
+      "title_of_class": "WARRANT",
+      "cusip": "G9503X111",
+      "value_usd": 7121,
+      "shares": 158605
+    },
+    {
+      "name_of_issuer": "WARNER BROS DISCOVERY INC",
+      "title_of_class": "COMMON",
+      "cusip": "934423104",
+      "value_usd": 14718268,
+      "shares": 543310
+    },
+    {
+      "name_of_issuer": "WEN ACQUISITION CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "G9R39C111",
+      "value_usd": 178936,
+      "shares": 511245
+    },
+    {
+      "name_of_issuer": "WESTIN ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G9584S106",
+      "value_usd": 1451537,
+      "shares": 145299
+    },
+    {
+      "name_of_issuer": "WESTIN ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G9584S114",
+      "value_usd": 52500,
+      "shares": 250000
+    },
+    {
+      "name_of_issuer": "WHIRLPOOL CORP",
+      "title_of_class": "COMMON",
+      "cusip": "963320106",
+      "value_usd": 2670675,
+      "shares": 52500
+    },
+    {
+      "name_of_issuer": "WHITE PEARL ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G96193126",
+      "value_usd": 75270,
+      "shares": 289500
+    },
+    {
+      "name_of_issuer": "WHITEFIBER INC",
+      "title_of_class": "COMMON",
+      "cusip": "G96115103",
+      "value_usd": 734720,
+      "shares": 65600
+    },
+    {
+      "name_of_issuer": "WILLOW LANE ACQUISITION CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G9675P102",
+      "value_usd": 6125941,
+      "shares": 573590
+    },
+    {
+      "name_of_issuer": "WILLOW LANE ACQUISITION CRP",
+      "title_of_class": "UNIT",
+      "cusip": "G9675K129",
+      "value_usd": 10140,
+      "shares": 1000
+    },
+    {
+      "name_of_issuer": "WINTERGREEN ACQUISITION CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G9717M117",
+      "value_usd": 38862,
+      "shares": 259077
+    },
+    {
+      "name_of_issuer": "WIX COM LTD",
+      "title_of_class": "COMMON",
+      "cusip": "M98068105",
+      "value_usd": 38245883,
+      "shares": 424624
+    },
+    {
+      "name_of_issuer": "WIX COM LTD",
+      "title_of_class": "OPTION",
+      "cusip": "M98068955",
+      "value_usd": 10972500,
+      "shares": 125000
+    },
+    {
+      "name_of_issuer": "WOLFSPEED INC",
+      "title_of_class": "BOND",
+      "cusip": "977852AP7",
+      "value_usd": 5904629,
+      "shares": 3775000
+    },
+    {
+      "name_of_issuer": "WORKIVA INC",
+      "title_of_class": "BOND",
+      "cusip": "98139AAD7",
+      "value_usd": 14234040,
+      "shares": 15234000
+    },
+    {
+      "name_of_issuer": "X3 ACQUISITION CORP LTD",
+      "title_of_class": "COMMON",
+      "cusip": "G9831H101",
+      "value_usd": 182917,
+      "shares": 18608
+    },
+    {
+      "name_of_issuer": "XEROX HOLDINGS CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "98421M114",
+      "value_usd": 118912,
+      "shares": 1258325
+    },
+    {
+      "name_of_issuer": "XEROX HOLDINGS CORP",
+      "title_of_class": "BOND",
+      "cusip": "98421MAE6",
+      "value_usd": 9934000,
+      "shares": 10000000
+    },
+    {
+      "name_of_issuer": "XFLH CAP CORP",
+      "title_of_class": "COMMON",
+      "cusip": "G9834D107",
+      "value_usd": 9297386,
+      "shares": 941031
+    },
+    {
+      "name_of_issuer": "XFLH CAP CORP",
+      "title_of_class": "RIGHT",
+      "cusip": "G9834D115",
+      "value_usd": 81575,
+      "shares": 815751
+    },
+    {
+      "name_of_issuer": "XSOLLA SPAC 1",
+      "title_of_class": "COMMON",
+      "cusip": "G9833K102",
+      "value_usd": 84809,
+      "shares": 8610
+    },
+    {
+      "name_of_issuer": "YHN ACQUISITION I LTD",
+      "title_of_class": "RIGHT",
+      "cusip": "G1514D127",
+      "value_usd": 91328,
+      "shares": 759800
+    },
+    {
+      "name_of_issuer": "ZENAS BIOPHARMA INC",
+      "title_of_class": "BOND",
+      "cusip": "98937LAA3",
+      "value_usd": 19792600,
+      "shares": 20000000
+    },
+    {
+      "name_of_issuer": "ZEO ENERGY CORP",
+      "title_of_class": "WARRANT",
+      "cusip": "98944F117",
+      "value_usd": 87512,
+      "shares": 2129249
+    },
+    {
+      "name_of_issuer": "1OXX",
+      "title_of_class": "Stock Warrant",
+      "cusip": "351665112",
+      "value_usd": 15232,
+      "shares": 154956
+    },
+    {
+      "name_of_issuer": "i-80 Gold Corp. 0.70 --  20271116",
+      "title_of_class": "Stock Warrant",
+      "cusip": "44955L155",
+      "value_usd": 605990,
+      "shares": 700000
+    },
+    {
+      "name_of_issuer": "NUBURU INC",
+      "title_of_class": "Common Stock",
+      "cusip": "67021W400",
+      "value_usd": 420142,
+      "shares": 2369666
+    },
+    {
+      "name_of_issuer": "REVIVA PHARMACEUTICALS HOLDI",
+      "title_of_class": "Common Stock",
+      "cusip": "76152G209",
+      "value_usd": 556204,
+      "shares": 762236
+    },
+    {
+      "name_of_issuer": "ART TECHNOLOGY ACQUISITION C",
+      "title_of_class": "Private Common Stock",
+      "cusip": "G0579E129",
+      "value_usd": 316800,
+      "shares": 40000
+    },
+    {
+      "name_of_issuer": "BLACK SPADE ACQUISITION III",
+      "title_of_class": "Stock Warrant",
+      "cusip": "G1154S111",
+      "value_usd": 92822,
+      "shares": 273006
+    },
+    {
+      "name_of_issuer": "FIGX CAPITAL ACQUISITION COR - CLASS B",
+      "title_of_class": "Unit",
+      "cusip": "G3473K126",
+      "value_usd": 184434,
+      "shares": 22470
+    },
+    {
+      "name_of_issuer": "MCKINLEY ACQUISITION CORP",
+      "title_of_class": "Unit",
+      "cusip": "G6005T127",
+      "value_usd": 263380,
+      "shares": 32500
+    },
+    {
+      "name_of_issuer": "NEWBURY STREET II ACQUISITIO",
+      "title_of_class": "Unit",
+      "cusip": "G6439S125",
+      "value_usd": 314038,
+      "shares": 330948
+    },
+    {
+      "name_of_issuer": "SILVERBOX CORP IV",
+      "title_of_class": "Private Common Stock",
+      "cusip": "G81354113",
+      "value_usd": 34183,
+      "shares": 35000
+    },
+    {
+      "name_of_issuer": "YOULIFE GROUP INC-30",
+      "title_of_class": "Stock Warrant",
+      "cusip": "G9878M112",
+      "value_usd": 36,
+      "shares": 355974
+    }
+  ]
+}
