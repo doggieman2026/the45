@@ -848,9 +848,9 @@
       },
       "history_profile": {
         "fund_id": "blackrock",
-        "led_count": 8316,
+        "led_count": 3051,
         "followed_count": 4558,
-        "avg_lag_days": 1354,
+        "avg_lag_days": 252,
         "sector_lead_counts": {
           "tech": 2,
           "media": 1
@@ -1744,9 +1744,9 @@
       },
       "history_profile": {
         "fund_id": "berkshire",
-        "led_count": 158,
+        "led_count": 87,
         "followed_count": 113,
-        "avg_lag_days": 2588,
+        "avg_lag_days": 905,
         "sector_lead_counts": {
           "finance": 2,
           "retail": 1,
@@ -2732,9 +2732,9 @@
       },
       "history_profile": {
         "fund_id": "vanguard",
-        "led_count": 13637,
+        "led_count": 5722,
         "followed_count": 2875,
-        "avg_lag_days": 2460,
+        "avg_lag_days": 1093,
         "sector_lead_counts": {
           "tech": 6,
           "finance": 1,
@@ -3759,9 +3759,9 @@
       },
       "history_profile": {
         "fund_id": "soros",
-        "led_count": 1328,
-        "followed_count": 1915,
-        "avg_lag_days": 2270,
+        "led_count": 662,
+        "followed_count": 1912,
+        "avg_lag_days": 780,
         "sector_lead_counts": {
           "tech": 8,
           "energy": 3,
@@ -3916,9 +3916,9 @@
       "pattern_similarity": null,
       "history_profile": {
         "fund_id": "burry",
-        "led_count": 2,
-        "followed_count": 7,
-        "avg_lag_days": 193,
+        "led_count": 0,
+        "followed_count": 0,
+        "avg_lag_days": null,
         "sector_lead_counts": {}
       }
     },
@@ -4243,9 +4243,9 @@
       "pattern_similarity": null,
       "history_profile": {
         "fund_id": "jpmorgan",
-        "led_count": 99,
-        "followed_count": 54,
-        "avg_lag_days": 2,
+        "led_count": 0,
+        "followed_count": 0,
+        "avg_lag_days": null,
         "sector_lead_counts": {}
       }
     },
@@ -4561,7 +4561,7 @@
       "history_profile": {
         "fund_id": "statestreet",
         "led_count": 0,
-        "followed_count": 4093,
+        "followed_count": 0,
         "avg_lag_days": null,
         "sector_lead_counts": {}
       }
@@ -4878,7 +4878,7 @@
       "history_profile": {
         "fund_id": "goldmansachs",
         "led_count": 0,
-        "followed_count": 4488,
+        "followed_count": 0,
         "avg_lag_days": null,
         "sector_lead_counts": {}
       }
@@ -5195,7 +5195,7 @@
       "history_profile": {
         "fund_id": "fidelity",
         "led_count": 0,
-        "followed_count": 4441,
+        "followed_count": 0,
         "avg_lag_days": null,
         "sector_lead_counts": {}
       }
@@ -5511,9 +5511,9 @@
       "pattern_similarity": null,
       "history_profile": {
         "fund_id": "capitalgroup",
-        "led_count": 29,
-        "followed_count": 448,
-        "avg_lag_days": 2,
+        "led_count": 0,
+        "followed_count": 0,
+        "avg_lag_days": null,
         "sector_lead_counts": {}
       }
     }
@@ -5619,9 +5619,9 @@
         ],
         "leader_track_record": {
           "fund_id": "vanguard",
-          "led_count": 13637,
+          "led_count": 5722,
           "followed_count": 2875,
-          "avg_lag_days": 2460
+          "avg_lag_days": 1093
         }
       },
       "filing_date": "2026-05-15",
@@ -5867,9 +5867,9 @@
         ],
         "leader_track_record": {
           "fund_id": "vanguard",
-          "led_count": 13637,
+          "led_count": 5722,
           "followed_count": 2875,
-          "avg_lag_days": 2460
+          "avg_lag_days": 1093
         }
       },
       "filing_date": "2026-05-15",
@@ -6095,8 +6095,8 @@
       ],
       "fund_values": {
         "blackrock": "+約9.3兆円",
-        "vanguard": "+約1.2兆円",
-        "soros": "+約95億円"
+        "soros": "+約95億円",
+        "vanguard": "+約1.2兆円"
       },
       "first_mover": {
         "fund_id": "vanguard",
@@ -6115,9 +6115,9 @@
         ],
         "leader_track_record": {
           "fund_id": "vanguard",
-          "led_count": 13637,
+          "led_count": 5722,
           "followed_count": 2875,
-          "avg_lag_days": 2460
+          "avg_lag_days": 1093
         }
       },
       "filing_date": "2026-05-15",
@@ -6341,8 +6341,8 @@
         "soros"
       ],
       "fund_values": {
-        "berkshire": "-約264億円",
-        "soros": "-約72億円"
+        "soros": "-約72億円",
+        "berkshire": "-約264億円"
       },
       "first_mover": {
         "fund_id": "soros",
@@ -6356,9 +6356,9 @@
         ],
         "leader_track_record": {
           "fund_id": "soros",
-          "led_count": 1328,
-          "followed_count": 1915,
-          "avg_lag_days": 2270
+          "led_count": 662,
+          "followed_count": 1912,
+          "avg_lag_days": 780
         }
       },
       "filing_date": "2026-05-15",
@@ -6590,9 +6590,9 @@
         ],
         "leader_track_record": {
           "fund_id": "vanguard",
-          "led_count": 13637,
+          "led_count": 5722,
           "followed_count": 2875,
-          "avg_lag_days": 2460
+          "avg_lag_days": 1093
         }
       },
       "filing_date": "2026-01-29",
@@ -6824,9 +6824,9 @@
         ],
         "leader_track_record": {
           "fund_id": "blackrock",
-          "led_count": 8316,
+          "led_count": 3051,
           "followed_count": 4558,
-          "avg_lag_days": 1354
+          "avg_lag_days": 252
         }
       },
       "filing_date": "2026-01-29",
@@ -7061,9 +7061,9 @@
         ],
         "leader_track_record": {
           "fund_id": "soros",
-          "led_count": 1328,
-          "followed_count": 1915,
-          "avg_lag_days": 2270
+          "led_count": 662,
+          "followed_count": 1912,
+          "avg_lag_days": 780
         }
       },
       "filing_date": "2026-05-15",
@@ -7291,9 +7291,9 @@
         ],
         "leader_track_record": {
           "fund_id": "vanguard",
-          "led_count": 13637,
+          "led_count": 5722,
           "followed_count": 2875,
-          "avg_lag_days": 2460
+          "avg_lag_days": 1093
         }
       },
       "filing_date": "2026-01-29",
@@ -7529,9 +7529,9 @@
         ],
         "leader_track_record": {
           "fund_id": "vanguard",
-          "led_count": 13637,
+          "led_count": 5722,
           "followed_count": 2875,
-          "avg_lag_days": 2460
+          "avg_lag_days": 1093
         }
       },
       "filing_date": "2026-01-29",
@@ -7763,9 +7763,9 @@
         ],
         "leader_track_record": {
           "fund_id": "vanguard",
-          "led_count": 13637,
+          "led_count": 5722,
           "followed_count": 2875,
-          "avg_lag_days": 2460
+          "avg_lag_days": 1093
         }
       },
       "filing_date": "2026-01-29",
@@ -7997,9 +7997,9 @@
         ],
         "leader_track_record": {
           "fund_id": "berkshire",
-          "led_count": 158,
+          "led_count": 87,
           "followed_count": 113,
-          "avg_lag_days": 2588
+          "avg_lag_days": 905
         }
       },
       "filing_date": "2026-05-15",
@@ -8235,9 +8235,9 @@
         ],
         "leader_track_record": {
           "fund_id": "vanguard",
-          "led_count": 13637,
+          "led_count": 5722,
           "followed_count": 2875,
-          "avg_lag_days": 2460
+          "avg_lag_days": 1093
         }
       },
       "filing_date": "2026-01-29",
@@ -8469,9 +8469,9 @@
         ],
         "leader_track_record": {
           "fund_id": "vanguard",
-          "led_count": 13637,
+          "led_count": 5722,
           "followed_count": 2875,
-          "avg_lag_days": 2460
+          "avg_lag_days": 1093
         }
       },
       "filing_date": "2026-01-29",
@@ -8703,9 +8703,9 @@
         ],
         "leader_track_record": {
           "fund_id": "berkshire",
-          "led_count": 158,
+          "led_count": 87,
           "followed_count": 113,
-          "avg_lag_days": 2588
+          "avg_lag_days": 905
         }
       },
       "filing_date": "2026-05-15",
@@ -8941,9 +8941,9 @@
         ],
         "leader_track_record": {
           "fund_id": "vanguard",
-          "led_count": 13637,
+          "led_count": 5722,
           "followed_count": 2875,
-          "avg_lag_days": 2460
+          "avg_lag_days": 1093
         }
       },
       "filing_date": "2026-01-29",
