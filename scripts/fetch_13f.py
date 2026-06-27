@@ -681,13 +681,23 @@ def compute_diff(current_holdings: list[dict], previous_holdings: list[dict] | N
     前回スナップショットとの比較で、各銘柄の増減額(delta_usd)を計算する。
     前回データが無い場合は delta_usd = value_usd（全額が「新規」扱い）として返す
     （= 比較データがないことを呼び出し側で判定できるよう is_first_snapshot を付与）。
+
+    NOTE（パフォーマンス）: 「全売却された銘柄」の名前・クラスを引く処理は、
+    以前は previous_holdings 全体を毎回線形探索していた（全売却銘柄数 ×
+    previous_holdings件数 の計算量）。保有銘柄数が数万件規模の大型ファンドで、
+    かつ多数の日付・ファンドに対して繰り返し呼ばれると、これが致命的に
+    遅くなる原因になっていた。事前に1回だけ辞書を作ることでO(1)ルックアップに
+    変更している。
     """
     prev_map = {}
+    prev_meta = {}  # cusip -> (name_of_issuer, title_of_class) の事前構築済み辞書
     if previous_holdings:
         for h in previous_holdings:
             cusip = h.get("cusip", "")
             if cusip:
                 prev_map[cusip] = h.get("value_usd", 0)
+                if cusip not in prev_meta:
+                    prev_meta[cusip] = (h.get("name_of_issuer", "UNKNOWN"), h.get("title_of_class", ""))
 
     diffs = []
     current_cusips = set()
@@ -708,15 +718,7 @@ def compute_diff(current_holdings: list[dict], previous_holdings: list[dict] | N
     if previous_holdings:
         for cusip, prev_value in prev_map.items():
             if cusip not in current_cusips:
-                # 元の銘柄名を前回データから引く
-                name = next(
-                    (h.get("name_of_issuer", "UNKNOWN") for h in previous_holdings if h.get("cusip") == cusip),
-                    "UNKNOWN"
-                )
-                title_of_class = next(
-                    (h.get("title_of_class", "") for h in previous_holdings if h.get("cusip") == cusip),
-                    ""
-                )
+                name, title_of_class = prev_meta.get(cusip, ("UNKNOWN", ""))
                 diffs.append({
                     "name_of_issuer": name,
                     "title_of_class": title_of_class,
@@ -1040,7 +1042,7 @@ def _date_diff_days(date_a: str, date_b: str) -> int | None:
         return None
 
 
-def compute_first_movers(signals: list[dict]) -> list[dict]:
+def compute_first_movers(signals: list[dict], history_depth_map: dict | None = None) -> list[dict]:
     """
     一致シグナル（compute_consensus_signalsの出力）それぞれについて、
     関与している各ファンドの「この銘柄を最初に保有し始めた四半期」を比較し、
@@ -1048,6 +1050,12 @@ def compute_first_movers(signals: list[dict]) -> list[dict]:
 
     これは「Early Movement Detection」（THE45 Premium機能の核）の計算ロジック。
     断定的な「予測」ではなく、確定済みの過去の保有履歴の比較である点に留意。
+
+    NOTE（重要・データ品質）: history_depth_map が渡された場合、バックフィルが
+    MIN_SNAPSHOTS_FOR_LEADERSHIP_COMPARISON 未満のファンドは比較対象から除外する。
+    理由：新規追加直後のファンドは「今回の1四半期分」しかデータが無く、その
+    「初出現日」は単に「追跡を開始した日」でしかない。これを古くからバックフィル
+    済みのファンドと比較すると、「何年も先行していた」という誤った結果になる。
 
     戻り値: signals の各要素に "first_mover" フィールドを追加したリスト。
       first_mover: {
@@ -1061,6 +1069,8 @@ def compute_first_movers(signals: list[dict]) -> list[dict]:
     for s in signals:
         entries = []
         for fid in s["fund_ids"]:
+            if history_depth_map is not None and history_depth_map.get(fid, 0) < MIN_SNAPSHOTS_FOR_LEADERSHIP_COMPARISON:
+                continue
             first = find_first_appearance(fid, s["cusip"])
             if first:
                 entries.append({"fund_id": fid, "since": first["filing_date"]})
@@ -1114,13 +1124,41 @@ def build_global_first_appearance_map() -> dict[str, dict[str, str]]:
     return result
 
 
-def compute_fund_leadership_track_record(fund_id: str, first_appearance_map: dict) -> dict:
+# 「先行/追随」比較に参加できるとみなす最小スナップショット数。
+# これより少ないファンド（=バックフィルが浅い、または今回初めて追加された
+# ばかりのファンド）は、比較対象から除外する。1四半期分しかないファンドは
+# 「過去に保有していなかった」のか「単にデータが無いだけ」なのかを区別
+# できないため、先行/追随の判定材料として使うと誤解を招く数字になる。
+MIN_SNAPSHOTS_FOR_LEADERSHIP_COMPARISON = 4
+
+
+def build_fund_history_depth_map() -> dict[str, int]:
+    """
+    追跡対象の各ファンドについて、保有している全スナップショット数を返す。
+    { fund_id: スナップショット数, ... }
+
+    Fund History / Early Movement Detectionの「先行/追随」判定で、
+    バックフィルの深さが異なるファンド同士を誤って比較しないために使う
+    （MIN_SNAPSHOTS_FOR_LEADERSHIP_COMPARISON 未満のファンドは比較から除外）。
+    """
+    return {fund["id"]: len(load_all_snapshots(fund["id"])) for fund in FUNDS}
+
+
+def compute_fund_leadership_track_record(fund_id: str, first_appearance_map: dict, history_depth_map: dict) -> dict:
     """
     指定ファンドについて、過去に他の追跡対象ファンドより先に銘柄の保有を
     始めていた（その後他のファンドも追随した）ケースを集計する。
 
     「Has this pattern happened before?」に答える、Premium機能の核。
     断定的な予測ではなく、すでに確定している過去の保有開始タイミングの比較。
+
+    NOTE（重要・データ品質）: バックフィルの深さ（保有しているスナップショット数）
+    が MIN_SNAPSHOTS_FOR_LEADERSHIP_COMPARISON 未満のファンドは、比較対象から
+    完全に除外する。理由：新規追加直後のファンドは「今回の1四半期分」しか
+    データが無く、その「初出現日」は単に「追跡を開始した日」でしかない。
+    これを古くからバックフィル済みのファンドと比較すると、「何年も先行していた」
+    という誤った（実際には無意味な）結果になってしまう。
+    自分自身がこの基準を満たさない場合も、計算を行わずゼロ件を返す。
 
     戻り値: {
       "fund_id": ...,
@@ -1132,12 +1170,24 @@ def compute_fund_leadership_track_record(fund_id: str, first_appearance_map: dic
     led_lags: list[float] = []
     followed_count = 0
 
+    # 自分自身のバックフィルが浅すぎる場合、この比較自体が無意味なのでゼロ件を返す
+    if history_depth_map.get(fund_id, 0) < MIN_SNAPSHOTS_FOR_LEADERSHIP_COMPARISON:
+        return {"fund_id": fund_id, "led_count": 0, "followed_count": 0, "avg_lag_days": None}
+
     for cusip, fund_dates in first_appearance_map.items():
-        if fund_id not in fund_dates or len(fund_dates) < 2:
+        if fund_id not in fund_dates:
+            continue
+
+        # 比較相手も、十分なバックフィル深さを持つファンドだけに限定する
+        comparable_dates = {
+            fid: d for fid, d in fund_dates.items()
+            if fid != fund_id and history_depth_map.get(fid, 0) >= MIN_SNAPSHOTS_FOR_LEADERSHIP_COMPARISON
+        }
+        if len(comparable_dates) == 0:
             continue
 
         my_date = fund_dates[fund_id]
-        other_dates = [d for fid, d in fund_dates.items() if fid != fund_id]
+        other_dates = list(comparable_dates.values())
 
         is_earliest = all(my_date <= d for d in other_dates)
         if is_earliest:
@@ -1157,7 +1207,7 @@ def compute_fund_leadership_track_record(fund_id: str, first_appearance_map: dic
     }
 
 
-def compute_fund_history_profile(fund_id: str, first_appearance_map: dict) -> dict:
+def compute_fund_history_profile(fund_id: str, first_appearance_map: dict, history_depth_map: dict) -> dict:
     """
     指定ファンドの「行動履歴プロフィール」を計算する。Fund History機能の核。
 
@@ -1170,6 +1220,10 @@ def compute_fund_history_profile(fund_id: str, first_appearance_map: dict) -> di
     先行傾向を追加したもの。断定的な評価（「優れている」等）は行わず、
     観測された傾向の記述にとどめる。
 
+    NOTE（重要・データ品質）: history_depth_map に基づき、バックフィルの
+    浅いファンド同士の比較は除外する（理由はcompute_fund_leadership_track_record
+    のNOTEを参照）。
+
     戻り値: {
       "fund_id": ...,
       "led_count": 先行していた回数,
@@ -1178,34 +1232,43 @@ def compute_fund_history_profile(fund_id: str, first_appearance_map: dict) -> di
       "sector_lead_counts": { sector_id: 先行回数, ... }  # 分野別の先行傾向
     }
     """
-    base = compute_fund_leadership_track_record(fund_id, first_appearance_map)
+    base = compute_fund_leadership_track_record(fund_id, first_appearance_map, history_depth_map)
 
-    # 分野別の先行傾向: このファンドが先行していた銘柄を分野ごとに数える
     sector_lead_counts: dict[str, int] = {}
-    for cusip, fund_dates in first_appearance_map.items():
-        if fund_id not in fund_dates or len(fund_dates) < 2:
-            continue
-        my_date = fund_dates[fund_id]
-        other_dates = [d for fid, d in fund_dates.items() if fid != fund_id]
-        is_earliest = all(my_date <= d for d in other_dates)
-        if not is_earliest:
-            continue
-        sector_id = SECTOR_MAP.get(cusip)
-        if sector_id is None:
-            continue
-        sector_lead_counts[sector_id] = sector_lead_counts.get(sector_id, 0) + 1
+
+    # 自分自身のバックフィルが浅すぎる場合、分野別集計も行わない
+    if history_depth_map.get(fund_id, 0) >= MIN_SNAPSHOTS_FOR_LEADERSHIP_COMPARISON:
+        # 分野別の先行傾向: このファンドが先行していた銘柄を分野ごとに数える
+        for cusip, fund_dates in first_appearance_map.items():
+            if fund_id not in fund_dates:
+                continue
+            comparable_dates = {
+                fid: d for fid, d in fund_dates.items()
+                if fid != fund_id and history_depth_map.get(fid, 0) >= MIN_SNAPSHOTS_FOR_LEADERSHIP_COMPARISON
+            }
+            if len(comparable_dates) == 0:
+                continue
+            my_date = fund_dates[fund_id]
+            other_dates = list(comparable_dates.values())
+            is_earliest = all(my_date <= d for d in other_dates)
+            if not is_earliest:
+                continue
+            sector_id = SECTOR_MAP.get(cusip)
+            if sector_id is None:
+                continue
+            sector_lead_counts[sector_id] = sector_lead_counts.get(sector_id, 0) + 1
 
     return {**base, "sector_lead_counts": sector_lead_counts}
 
 
-def update_fund_history_profiles_in_data_json(first_appearance_map: dict, data: dict) -> None:
+def update_fund_history_profiles_in_data_json(first_appearance_map: dict, history_depth_map: dict, data: dict) -> None:
     """
     全追跡対象ファンドについて compute_fund_history_profile() を計算し、
     data["funds"] の各ファンドオブジェクトに "history_profile" として保存する。
     """
     for fund in FUNDS:
         fid = fund["id"]
-        profile = compute_fund_history_profile(fid, first_appearance_map)
+        profile = compute_fund_history_profile(fid, first_appearance_map, history_depth_map)
         for f_entry in data["funds"]:
             if f_entry["id"] == fid:
                 f_entry["history_profile"] = profile
@@ -1374,14 +1437,21 @@ def compute_historical_consensus_signals(target_filing_date: str, top_n: int = 4
 # 各判定項目（criteria）は必ずデータとして保持し、後から項目追加・重み変更・
 # 高度化（特にholding patternの分類）が容易な構造にする。
 
-def determine_signal_leader(fund_ids: list[str], cusip: str, first_appearance_map: dict) -> str | None:
+def determine_signal_leader(fund_ids: list[str], cusip: str, first_appearance_map: dict, history_depth_map: dict | None = None) -> str | None:
     """
     シグナルに関与しているファンドのうち、この銘柄を最も早くから保有して
     いた（追跡履歴内で）ファンドを返す。current/historical どちらの
     シグナルにも同じロジックを適用できる共通関数。
+
+    NOTE: history_depth_map が渡された場合、バックフィルが浅い
+    （MIN_SNAPSHOTS_FOR_LEADERSHIP_COMPARISON 未満の）ファンドは候補から
+    除外する。理由は compute_fund_leadership_track_record のNOTEを参照。
     """
     dates = first_appearance_map.get(cusip, {})
-    candidates = [(fid, dates[fid]) for fid in fund_ids if fid in dates]
+    candidates = [
+        (fid, dates[fid]) for fid in fund_ids if fid in dates
+        and (history_depth_map is None or history_depth_map.get(fid, 0) >= MIN_SNAPSHOTS_FOR_LEADERSHIP_COMPARISON)
+    ]
     if not candidates:
         return None
     candidates.sort(key=lambda c: c[1])
@@ -1424,7 +1494,7 @@ def classify_holding_trend(fund_id: str, cusip: str, filing_date: str, max_dista
     return None
 
 
-def compare_signals_breakdown(current: dict, historical: dict, first_appearance_map: dict) -> dict:
+def compare_signals_breakdown(current: dict, historical: dict, first_appearance_map: dict, history_depth_map: dict | None = None) -> dict:
     """
     現在のシグナルと、過去のあるシグナルを5つの観点で比較し、
     ○（一致）/ △（部分一致）/ ×（不一致）/ N/A（判定不可）を判定する。
@@ -1441,8 +1511,8 @@ def compare_signals_breakdown(current: dict, historical: dict, first_appearance_
     criteria = []
 
     # 1. Same leading fund
-    cur_leader = determine_signal_leader(current["fund_ids"], current["cusip"], first_appearance_map)
-    hist_leader = determine_signal_leader(historical["fund_ids"], historical["cusip"], first_appearance_map)
+    cur_leader = determine_signal_leader(current["fund_ids"], current["cusip"], first_appearance_map, history_depth_map)
+    hist_leader = determine_signal_leader(historical["fund_ids"], historical["cusip"], first_appearance_map, history_depth_map)
     if cur_leader is None or hist_leader is None:
         criteria.append({"key": "leading_fund", "label": "Same leading fund", "verdict": "N/A", "detail": "先行ファンドを判定できませんでした。"})
     elif cur_leader == hist_leader:
@@ -1582,7 +1652,7 @@ def compute_aftermath_for_signal(signal_with_date: dict, max_distance_days: int 
     }
 
 
-def find_similar_historical_cases(current_signal: dict, first_appearance_map: dict, historical_pool: list[dict], top_n: int = 3, similarity_threshold: int = 50) -> dict:
+def find_similar_historical_cases(current_signal: dict, first_appearance_map: dict, historical_pool: list[dict], history_depth_map: dict | None = None, top_n: int = 3, similarity_threshold: int = 50) -> dict:
     """
     現在のシグナルについて、過去の一致シグナルプールの中から似ているケースを
     探し、上位 top_n 件の詳細（Breakdown・スコア・その後の変化）に加えて、
@@ -1632,7 +1702,7 @@ def find_similar_historical_cases(current_signal: dict, first_appearance_map: di
     # 銘柄(cusip)ごとに最高スコアの1件だけを残す
     best_per_cusip: dict[str, tuple] = {}
     for hist in pool:
-        breakdown = compare_signals_breakdown(current_signal, hist, first_appearance_map)
+        breakdown = compare_signals_breakdown(current_signal, hist, first_appearance_map, history_depth_map)
         if breakdown["score_pct"] is None:
             continue
         cusip = hist["cusip"]
@@ -1833,7 +1903,15 @@ def update_consensus_signals_in_data_json():
     保有を始めたか、その先行者の過去の実績）の計算結果も付与する。
     """
     result = compute_consensus_signals()
-    enriched_signals = compute_first_movers(result["signals"])
+
+    # 先行/追随の比較で、バックフィルの深さが異なるファンド同士を
+    # 誤って比較しないための、各ファンドの履歴深さマップ。
+    # （新規追加直後のファンドは1四半期分しかデータが無く、古くからバックフィル
+    # 済みのファンドと比較すると「何年も先行していた」という誤った結果になるため、
+    # ここで先に計算し、関連する全ての計算に一貫して適用する）
+    history_depth_map = build_fund_history_depth_map()
+
+    enriched_signals = compute_first_movers(result["signals"], history_depth_map)
 
     with open(DATA_JSON_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -1860,14 +1938,14 @@ def update_consensus_signals_in_data_json():
         if fm:
             fid = fm["fund_id"]
             if fid not in track_record_cache:
-                track_record_cache[fid] = compute_fund_leadership_track_record(fid, first_appearance_map)
+                track_record_cache[fid] = compute_fund_leadership_track_record(fid, first_appearance_map, history_depth_map)
             fm["leader_track_record"] = track_record_cache[fid]
 
         # Similar Event Archive: この銘柄に過去どのファンドがどの順で参入したか
         s["adoption_archive"] = compute_company_adoption_archive(s["cusip"], first_appearance_map)
 
         # Similarity Score: 今回のシグナルと最も似ている過去ケース(TOP3)＋参照統計
-        similarity_result = find_similar_historical_cases(s, first_appearance_map, historical_pool, top_n=3)
+        similarity_result = find_similar_historical_cases(s, first_appearance_map, historical_pool, history_depth_map, top_n=3)
         s["similar_historical_cases"] = similarity_result["top_cases"]
         s["similarity_reference"] = similarity_result["reference"]
 
@@ -1875,7 +1953,7 @@ def update_consensus_signals_in_data_json():
     data["consensus_signals_total_tracked"] = result["total_companies_tracked"]
 
     # Fund History: 全ファンドの行動履歴プロフィールを計算・保存
-    update_fund_history_profiles_in_data_json(first_appearance_map, data)
+    update_fund_history_profiles_in_data_json(first_appearance_map, history_depth_map, data)
 
     data["_meta"]["last_updated"] = time.strftime("%Y-%m-%d")
 
