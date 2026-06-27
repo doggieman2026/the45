@@ -431,19 +431,36 @@ def load_previous_snapshot(fund_id: str, current_filing_date: str) -> dict | Non
         return json.load(f)
 
 
+_SNAPSHOT_CACHE: dict[str, list[dict]] = {}
+
+
 def load_all_snapshots(fund_id: str) -> list[dict]:
     """
     指定ファンドの全スナップショットを filing_date の昇順（古い→新しい）で読み込む。
     トレンド計算（四半期を跨いだ推移）の元データとして使う。
+
+    NOTE（パフォーマンス）: この関数は呼び出される頻度が非常に高い
+    （Similarity Score・Early Movement Detection等、複数の機能から
+    同じファンドのデータを何百回も参照する）。スクリプト実行中は
+    スナップショットファイルの内容が変わらないため、プロセス内メモリに
+    キャッシュし、同じファンドのディスク読み込み・JSON解析を1回だけに
+    抑える（以前はキャッシュが無く、これが原因で実行時間が大幅に
+    膨らんでいた）。
     """
+    if fund_id in _SNAPSHOT_CACHE:
+        return _SNAPSHOT_CACHE[fund_id]
+
     fund_dir = SNAPSHOT_DIR / fund_id
     if not fund_dir.exists():
+        _SNAPSHOT_CACHE[fund_id] = []
         return []
 
     snapshots = []
     for p in sorted(fund_dir.glob("*.json"), key=lambda x: x.stem):
         with open(p, "r", encoding="utf-8") as f:
             snapshots.append(json.load(f))
+
+    _SNAPSHOT_CACHE[fund_id] = snapshots
     return snapshots
 
 
