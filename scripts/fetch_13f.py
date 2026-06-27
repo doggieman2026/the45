@@ -1565,7 +1565,7 @@ def compute_aftermath_for_signal(signal_with_date: dict, max_distance_days: int 
     }
 
 
-def find_similar_historical_cases(current_signal: dict, first_appearance_map: dict, top_n: int = 3, similarity_threshold: int = 50) -> dict:
+def find_similar_historical_cases(current_signal: dict, first_appearance_map: dict, historical_pool: list[dict], top_n: int = 3, similarity_threshold: int = 50) -> dict:
     """
     現在のシグナルについて、過去の一致シグナルプールの中から似ているケースを
     探し、上位 top_n 件の詳細（Breakdown・スコア・その後の変化）に加えて、
@@ -1582,6 +1582,12 @@ def find_similar_historical_cases(current_signal: dict, first_appearance_map: di
 
     NOTE: 同じ銘柄(cusip)が複数の過去四半期で候補になることがあるが、
     重複を避けるため銘柄ごとに最もスコアが高い時点のみを候補として残す。
+
+    NOTE（パフォーマンス）: historical_pool は呼び出し側で1回だけ
+    generate_historical_signal_pool() を実行した結果を渡すこと。
+    この関数自体は重い全履歴スキャンを行わない（以前はシグナルごとに
+    再計算していたため、一致シグナル数が多いと実行時間が線形に膨らんで
+    いた。プールを共有することで、全履歴スキャンは1回だけになる）。
 
     戻り値: {
       "top_cases": [
@@ -1601,7 +1607,8 @@ def find_similar_historical_cases(current_signal: dict, first_appearance_map: di
     """
     empty_reference = {"similar_cases_found": 0, "followed_count": 0, "limited_count": 0, "threshold_pct": similarity_threshold}
 
-    pool = generate_historical_signal_pool(exclude_cusips={current_signal["cusip"]})
+    # 渡されたプールから、今回のシグナル自身の銘柄だけを除外する（軽い操作）
+    pool = [h for h in historical_pool if h["cusip"] != current_signal["cusip"]]
     if not pool:
         return {"top_cases": [], "reference": empty_reference}
 
@@ -1821,6 +1828,12 @@ def update_consensus_signals_in_data_json():
     # 「Has this pattern happened before?」用の先行実績トラックレコードを付与。
     # 同じファンドが複数シグナルの先行者になることがあるため、重複計算を避ける。
     first_appearance_map = build_global_first_appearance_map()
+
+    # Similarity Score用の過去シグナルプールは、全シグナルで共有するため
+    # ここで1回だけ計算する（以前はシグナルごとに再計算し、実行時間が
+    # シグナル数に比例して膨らんでいた）。
+    historical_pool = generate_historical_signal_pool()
+
     track_record_cache: dict[str, dict] = {}
     for s in enriched_signals:
         dates = [fund_last_filing_date.get(fid, "") for fid in s["fund_ids"] if fund_last_filing_date.get(fid)]
@@ -1837,7 +1850,7 @@ def update_consensus_signals_in_data_json():
         s["adoption_archive"] = compute_company_adoption_archive(s["cusip"], first_appearance_map)
 
         # Similarity Score: 今回のシグナルと最も似ている過去ケース(TOP3)＋参照統計
-        similarity_result = find_similar_historical_cases(s, first_appearance_map, top_n=3)
+        similarity_result = find_similar_historical_cases(s, first_appearance_map, historical_pool, top_n=3)
         s["similar_historical_cases"] = similarity_result["top_cases"]
         s["similarity_reference"] = similarity_result["reference"]
 
