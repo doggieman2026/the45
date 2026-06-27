@@ -62,7 +62,52 @@ FUNDS = [
     {"id": "berkshire",  "name": "バフェット",     "cik": "1067983"},
     {"id": "vanguard",   "name": "バンガード",     "cik": "102909"},
     {"id": "soros",      "name": "ソロス",         "cik": "1029160"},
+    {"id": "burry",      "name": "マイケル・バーリー", "cik": "1649339"},
+    {"id": "jpmorgan",   "name": "JPモルガン",      "cik": "19617"},
+    {"id": "statestreet", "name": "ステートストリート", "cik": "93751"},
+    {"id": "goldmansachs", "name": "ゴールドマン・サックス", "cik": "886982"},
+    {"id": "fidelity",   "name": "フィデリティ",     "cik": "315066"},
+    {"id": "capitalgroup", "name": "キャピタル・グループ", "cik": "1422848"},
 ]
+
+# fund_id -> 表示名（日本語）。Similarity Score等の説明文生成に使う。
+FUND_DISPLAY_NAME: dict[str, str] = {f["id"]: f["name"] for f in FUNDS}
+
+# 新規ファンド追加時、初回スタブ作成時に使う「調査済みの歴史エピソード」。
+# これは断定的な未来予測ではなく、すでに確定している実際の出来事に基づく記述。
+# 出典: SEC 8-K（プレスリリース）、連邦準備制度理事会の公式発表等。
+NEW_FUND_TIMELINES = {
+    "burry": {
+        "who": "— Michael Burry / Scion Asset Management / 「世界金融危機を予見した男」",
+        "intro": "<strong>バーリーは、2008年の世界金融危機が起きる2年以上前から、その崩壊を見抜いていた人物。</strong>主要9事件以外にも、こんな個別の足跡が残っています。",
+        "timeline": [
+            {
+                "type": "event",
+                "date": "2005年〜2007年",
+                "region": "米国",
+                "tag": "出来事",
+                "title": "誰も見向きもしなかったサブプライム崩壊に、2年以上前から賭け続けた",
+                "body": "2005年頃、無名のヘッジファンド運用者だったマイケル・バーリーは、米国の住宅ローン市場の質的劣化（サブプライムローン）に異常な危うさを見出した。当時、住宅市場は絶好調で、彼の警告は「頭がおかしい」と業界から嘲笑された。<strong>それでもバーリーは、住宅ローン担保証券の値下がりに賭けるクレジット・デフォルト・スワップ（CDS）を大量に購入し続けた。</strong>2007年にサブプライム問題が表面化し、2008年に世界金融危機が本格化すると、この賭けは投資家に7億ドル超、本人に1億ドル超の利益をもたらした。この実話は後に映画『マネー・ショート 華麗なる大逆転』として描かれている。<br><br><strong>※この取引はCDS（クレジット・デフォルト・スワップ）によるものであり、後述する13F報告書（株式保有のみを開示）には反映されない。</strong>以下の保有株データは、その後バーリーが運用する別の口座・別の時期の、ロング・エクイティ・ポジションに基づくもの。",
+                "isEvent": True,
+            },
+        ],
+    },
+    "jpmorgan": {
+        "who": "— JPMorgan Chase & Co. / 米国最大の銀行・世界的な金融グループ",
+        "intro": "<strong>JPモルガンは、リーマン破綻の6ヶ月前にすでに次の危機の現場にいた会社。</strong>主要9事件以外にも、こんな個別の足跡が残っています。",
+        "timeline": [
+            {
+                "type": "event",
+                "date": "2008年3月16日",
+                "region": "米国",
+                "tag": "出来事",
+                "title": "リーマン破綻の6ヶ月前、JPモルガンは次の危機の現場にいた",
+                "body": "サブプライム問題が深刻化する中、大手投資銀行ベア・スターンズが資金繰りに行き詰まり、わずか数日でほぼ破綻状態に陥った。<strong>連邦準備制度理事会（FRB）の支援を受けながら、JPモルガンがベア・スターンズを買収・救済</strong>。この出来事は、半年後の2008年9月に起きるリーマン・ブラザーズ破綻の「前哨戦」として歴史に記録されている。リーマンが実際に破綻する6ヶ月前、JPモルガンはすでに金融システムの危うさのただ中で動いていた。",
+                "isEvent": True,
+            },
+        ],
+    },
+}
 
 DATA_JSON_PATH = Path(__file__).parent.parent / "data.json"
 SNAPSHOT_DIR = Path(__file__).parent.parent / "data" / "history"
@@ -448,6 +493,172 @@ def compute_fund_trend(fund_id: str) -> dict:
     }
 
 
+# ===== 過去の参照局面（類似度計算用） =====
+# NOTE: 2013年より前の事件（2008年リーマン等）はSECがXML構造化13F-HRを
+# 義務化する前のデータ形式のため、parse_holdings()では取得できない。
+# よって参照局面は2013年以降に実際に起きた、データ取得可能な事件に限定する。
+REFERENCE_EVENTS = [
+    {
+        "id": "covid_2020",
+        "label": "2020年のコロナショック直前",
+        "before_hint": "2020-02",
+        "after_hint": "2020-08",
+    },
+    {
+        "id": "svb_2023",
+        "label": "2023年のSVB破綻直前",
+        "before_hint": "2023-02",
+        "after_hint": "2023-08",
+    },
+    {
+        "id": "yen_carry_2024",
+        "label": "2024年の円キャリートレード巻き戻し直前",
+        "before_hint": "2024-05",
+        "after_hint": "2024-11",
+    },
+]
+
+
+def find_closest_snapshot(fund_id: str, target_date_hint: str) -> dict | None:
+    """
+    指定ファンドのスナップショットの中で、target_date_hint（"YYYY-MM"形式）に
+    最も近い filing_date を持つものを返す。
+    """
+    snapshots = load_all_snapshots(fund_id)
+    if not snapshots:
+        return None
+
+    target_ym = target_date_hint[:7]  # "YYYY-MM"
+
+    def date_distance(snap):
+        fd = snap.get("filing_date", "")
+        if not fd:
+            return float("inf")
+        # 文字列としての日付差（YYYY-MM-DD同士の比較なので、月単位の近さを文字列差で近似）
+        try:
+            from datetime import date
+            y1, m1 = int(target_ym[:4]), int(target_ym[5:7])
+            y2, m2 = int(fd[:4]), int(fd[5:7])
+            return abs((y1 * 12 + m1) - (y2 * 12 + m2))
+        except (ValueError, IndexError):
+            return float("inf")
+
+    closest = min(snapshots, key=date_distance)
+    # 半年以上離れていたら「近い」とは言えないので None を返す
+    if date_distance(closest) > 6:
+        return None
+    return closest
+
+
+def compute_historical_event_moves(fund_id: str, event: dict, top_n: int = 1) -> dict | None:
+    """
+    指定の過去事件（event）の前後で、ファンドが実際に何を買い・売りしたかを計算する。
+    これは「予測」ではなく、すでに確定した過去の実際の行動の記録。
+
+    戻り値: {
+      "event_id", "event_label",
+      "before_filing_date", "after_filing_date",
+      "before_concentration_pct",  # 類似度計算に使う、当時の集中度
+      "top_buy": {name, cusip, value_label} or None,
+      "top_sell": {name, cusip, value_label} or None,
+    }
+    十分なデータが無い場合は None。
+    """
+    before_snap = find_closest_snapshot(fund_id, event["before_hint"])
+    after_snap = find_closest_snapshot(fund_id, event["after_hint"])
+
+    if not before_snap or not after_snap:
+        return None
+    if before_snap["filing_date"] == after_snap["filing_date"]:
+        return None  # 同じスナップショットしか見つからなかった場合は無効
+
+    before_holdings = before_snap.get("holdings", [])
+    after_holdings = after_snap.get("holdings", [])
+    if not before_holdings or not after_holdings:
+        return None
+
+    diffs = compute_diff(after_holdings, before_holdings)
+    increases = sorted([d for d in diffs if d["delta_usd"] > 0], key=lambda d: d["delta_usd"], reverse=True)
+    decreases = sorted([d for d in diffs if d["delta_usd"] < 0], key=lambda d: d["delta_usd"])
+
+    # 当時の集中度（類似度比較に使う）
+    total_value = sum(h.get("value_usd", 0) for h in before_holdings)
+    sorted_before = sorted(before_holdings, key=lambda h: h.get("value_usd", 0), reverse=True)
+    top5_value = sum(h.get("value_usd", 0) for h in sorted_before[:5])
+    before_concentration = round((top5_value / total_value) * 100, 1) if total_value else 0.0
+
+    def pick_top(lst):
+        if not lst:
+            return None
+        h = lst[0]
+        class_suffix = extract_class_suffix(h.get("title_of_class", ""))
+        name = h.get("name_of_issuer", "UNKNOWN").title()
+        if class_suffix:
+            name = f"{name} ({class_suffix})"
+        return {
+            "name": name,
+            "cusip": h.get("cusip", ""),
+            "value_label": to_jpy_label(abs(h.get("delta_usd", 0))),
+        }
+
+    return {
+        "event_id": event["id"],
+        "event_label": event["label"],
+        "before_filing_date": before_snap["filing_date"],
+        "after_filing_date": after_snap["filing_date"],
+        "before_concentration_pct": before_concentration,
+        "top_buy": pick_top(increases),
+        "top_sell": pick_top(decreases),
+    }
+
+
+def compute_pattern_similarity(fund_id: str) -> dict | None:
+    """
+    現在のファンドの配置（直近の集中度）と、過去の参照局面（REFERENCE_EVENTS）の
+    集中度を比較し、最も近い局面を「類似度」として返す。
+
+    NOTE: これは「将来の予測」ではなく、「過去のパターンとの統計的な近さ」のみを
+    示す。表示の際は「○○の確率で危機が起きる」という解釈を加えてはならない。
+
+    類似度の計算: 集中度の差をシンプルな割合で近似（1 - |差| / 基準値）。
+    本格的なZ-score正規化・コサイン類似度は、より多くの指標（セクター別配分等）が
+    揃ってから拡張する。現時点では「集中度」という1指標での簡易近似。
+
+    戻り値: { "most_similar_event": {...}, "similarity_pct": float,
+              "current_concentration_pct": float } または None
+    """
+    trend = compute_fund_trend(fund_id)
+    if not trend["has_enough_history"]:
+        return None
+
+    current_concentration = trend["quarters"][-1]["top5_concentration_pct"]
+
+    best_match = None
+    best_similarity = -1
+
+    for event in REFERENCE_EVENTS:
+        moves = compute_historical_event_moves(fund_id, event)
+        if not moves:
+            continue
+
+        diff = abs(current_concentration - moves["before_concentration_pct"])
+        # 差が0%なら100%類似、差が大きいほど類似度が下がる（差20%で0%類似になるよう線形近似）
+        similarity = max(0, 100 - (diff / 20 * 100))
+
+        if similarity > best_similarity:
+            best_similarity = similarity
+            best_match = moves
+
+    if best_match is None:
+        return None
+
+    return {
+        "most_similar_event": best_match,
+        "similarity_pct": round(best_similarity, 1),
+        "current_concentration_pct": current_concentration,
+    }
+
+
 def compute_diff(current_holdings: list[dict], previous_holdings: list[dict] | None) -> list[dict]:
     """
     前回スナップショットとの比較で、各銘柄の増減額(delta_usd)を計算する。
@@ -620,7 +831,822 @@ def _format_holding_row(h: dict, max_value: int, is_increase: bool, use_delta: b
         "desc": desc + tag_note,
         "value": f"{sign}約{to_jpy_label(amount_abs)}",
         "bar": max(bar, 5),
+        "amount_usd_raw": amount,  # 符号付きの生のUSD額。複数ファンド間での集計計算に使う。
     }
+
+
+# ===== セクター分類マスタ =====
+# CUSIP -> セクターID。実際に各ファンドの保有データに出現が確認できた企業のみ、
+# 手動で分類している（推測・拡大解釈はしない）。
+# 未分類のCUSIPは集計から「未分類」として正直に除外・件数表示する。
+SECTOR_MAP: dict[str, str] = {
+    # テクノロジー（ソフトウェア・ハードウェア・半導体・インターネット）
+    "67066G104": "tech",   # Nvidia
+    "037833100": "tech",   # Apple
+    "594918104": "tech",   # Microsoft
+    "02079K305": "tech",   # Alphabet Class A
+    "02079K107": "tech",   # Alphabet Class C
+    "458140100": "tech",   # Intel
+    "79466L302": "tech",   # Salesforce
+    "595112103": "tech",   # Micron
+    "68389X105": "tech",   # Oracle
+    "30303M102": "tech",   # Meta Platforms
+    "874039100": "tech",   # Taiwan Semiconductor
+    "21873S108": "tech",   # Coreweave
+    "023135106": "tech",   # Amazon
+    "20717MAB9": "tech",   # Confluent
+    "26210CAC8": "tech",   # Dropbox
+
+    # 石油・エネルギー
+    "723787107": "energy", # Pioneer Natural Resources
+    "674599105": "energy", # Occidental Petroleum
+    "166764100": "energy", # Chevron
+    "30231G102": "energy", # Exxon Mobil
+
+    # 金融
+    "025816109": "finance", # American Express
+    "060505104": "finance", # Bank of America
+    "92826C839": "finance", # Visa
+
+    # ヘルスケア・製薬
+    "532457108": "healthcare", # Eli Lilly
+
+    # メディア・エンタメ（ストリーミング・配信）
+    "254687106": "media",   # Disney
+    "64110L106": "media",   # Netflix
+    "84921RAB6": "media",   # Spotify
+
+    # 消費財・小売
+    "437076102": "retail",  # Home Depot
+    "191216100": "retail",  # Coca-Cola（消費財として分類）
+
+    # 航空・運輸
+    "247361702": "transport", # Delta Air Lines
+}
+
+# 表示用ラベル。「将来追加予定」のカテゴリも設計上は残しておくが、
+# 実データが無い間は表示しない（is_active=Falseのものは非表示対象）。
+SECTOR_LABELS: dict[str, dict] = {
+    "tech":      {"label": "テクノロジー", "is_active": True},
+    "energy":    {"label": "石油・エネルギー", "is_active": True},
+    "finance":   {"label": "金融", "is_active": True},
+    "healthcare": {"label": "ヘルスケア・製薬", "is_active": True},
+    "media":     {"label": "メディア・エンタメ", "is_active": True},
+    "retail":    {"label": "消費財・小売", "is_active": True},
+    "transport":  {"label": "航空・運輸", "is_active": True},
+    # 将来、実データが確認された場合に追加するカテゴリ（現時点では非表示）
+    "gold":      {"label": "金（ゴールド）", "is_active": False},
+    "realestate": {"label": "不動産・REIT", "is_active": False},
+    "emerging":  {"label": "中国・新興国", "is_active": False},
+    "defense":   {"label": "防衛・軍事関連", "is_active": False},
+}
+
+
+def compute_sector_breakdown() -> dict:
+    """
+    SECTOR_MAP に基づき、各ファンドの buys_extended / sells_extended を
+    セクター単位で集計する。「無料エリアで今の市場全体の傾向を見せる」ための、
+    実データに基づくセクターマップ用の計算。
+
+    NOTE: SECTOR_MAP に存在しないCUSIPは「未分類」として件数のみ集計し、
+    セクター別の内訳には含めない（誤った分類を避けるための誠実さ優先）。
+
+    戻り値: {
+      "sectors": [ {sector_id, label, company_count, buy_count, sell_count, buy_pct}, ... ],
+      "unclassified_count": 未分類の銘柄数,
+      "total_classified": 分類済みの銘柄数,
+    }
+    """
+    with open(DATA_JSON_PATH, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    # sector_id -> { companies: set(cusip), buy_count: int, sell_count: int }
+    sector_tally: dict[str, dict] = {}
+    unclassified_cusips: set[str] = set()
+    classified_cusips: set[str] = set()
+
+    for fund in data["funds"]:
+        for h in fund.get("buys_extended", []):
+            cusip = h.get("ticker", "")
+            if not cusip:
+                continue
+            sector_id = SECTOR_MAP.get(cusip)
+            if sector_id is None:
+                unclassified_cusips.add(cusip)
+                continue
+            classified_cusips.add(cusip)
+            t = sector_tally.setdefault(sector_id, {"companies": set(), "buy_count": 0, "sell_count": 0})
+            t["companies"].add(cusip)
+            t["buy_count"] += 1
+        for h in fund.get("sells_extended", []):
+            cusip = h.get("ticker", "")
+            if not cusip:
+                continue
+            sector_id = SECTOR_MAP.get(cusip)
+            if sector_id is None:
+                unclassified_cusips.add(cusip)
+                continue
+            classified_cusips.add(cusip)
+            t = sector_tally.setdefault(sector_id, {"companies": set(), "buy_count": 0, "sell_count": 0})
+            t["companies"].add(cusip)
+            t["sell_count"] += 1
+
+    sectors = []
+    for sector_id, t in sector_tally.items():
+        meta = SECTOR_LABELS.get(sector_id, {"label": sector_id, "is_active": True})
+        total = t["buy_count"] + t["sell_count"]
+        buy_pct = round((t["buy_count"] / total) * 100) if total else 0
+        sectors.append({
+            "sector_id": sector_id,
+            "label": meta["label"],
+            "company_count": len(t["companies"]),
+            "buy_count": t["buy_count"],
+            "sell_count": t["sell_count"],
+            "buy_pct": buy_pct,
+        })
+
+    # 該当社数が多い順
+    sectors.sort(key=lambda s: -s["company_count"])
+
+    return {
+        "sectors": sectors,
+        "unclassified_count": len(unclassified_cusips),
+        "total_classified": len(classified_cusips),
+    }
+
+
+def update_sector_breakdown_in_data_json():
+    """compute_sector_breakdown() の結果を data.json のトップレベルに保存する。"""
+    result = compute_sector_breakdown()
+
+    with open(DATA_JSON_PATH, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    data["sector_breakdown_computed"] = result
+    data["_meta"]["last_updated"] = time.strftime("%Y-%m-%d")
+
+    with open(DATA_JSON_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+    return result
+
+
+def find_first_appearance(fund_id: str, cusip: str) -> dict | None:
+    """
+    指定ファンドが、追跡履歴の中で初めて指定銘柄(CUSIP)を保有した
+    （value_usd > 0で記録された）四半期を返す。
+
+    NOTE: これは「絶対的に最初に買った日」ではなく、「このサイトが追跡している
+    履歴の範囲内で、最初に確認できた時点」。SEC EDGARの構造化13F-HRは2013年頃
+    以降のものしか取得できないため、それより前から保有していた可能性は排除できない。
+    この前提を表示時に明示する必要がある。
+
+    戻り値: {"filing_date": "YYYY-MM-DD"} または None（一度も保有が確認できない場合）
+    """
+    snapshots = load_all_snapshots(fund_id)  # 古い→新しい の順
+    for snap in snapshots:
+        holdings = snap.get("holdings", [])
+        for h in holdings:
+            if h.get("cusip") == cusip and h.get("value_usd", 0) > 0:
+                return {"filing_date": snap.get("filing_date", "")}
+    return None
+
+
+def _date_diff_days(date_a: str, date_b: str) -> int | None:
+    """'YYYY-MM-DD'形式の2つの日付の差（日数、date_b - date_a）を返す。"""
+    try:
+        from datetime import date
+        y1, m1, d1 = int(date_a[:4]), int(date_a[5:7]), int(date_a[8:10])
+        y2, m2, d2 = int(date_b[:4]), int(date_b[5:7]), int(date_b[8:10])
+        return (date(y2, m2, d2) - date(y1, m1, d1)).days
+    except (ValueError, IndexError):
+        return None
+
+
+def compute_first_movers(signals: list[dict]) -> list[dict]:
+    """
+    一致シグナル（compute_consensus_signalsの出力）それぞれについて、
+    関与している各ファンドの「この銘柄を最初に保有し始めた四半期」を比較し、
+    最も早く保有を始めていたファンドを特定する。
+
+    これは「Early Movement Detection」（THE45 Premium機能の核）の計算ロジック。
+    断定的な「予測」ではなく、確定済みの過去の保有履歴の比較である点に留意。
+
+    戻り値: signals の各要素に "first_mover" フィールドを追加したリスト。
+      first_mover: {
+        "fund_id": 最も早く保有開始していたファンドのID,
+        "since": そのファンドの初出現日,
+        "others": [{"fund_id":..., "since":..., "lag_days": 先行者からの遅れ日数}, ...]
+      }
+      初出現データが計算できなかった場合は None。
+    """
+    enriched = []
+    for s in signals:
+        entries = []
+        for fid in s["fund_ids"]:
+            first = find_first_appearance(fid, s["cusip"])
+            if first:
+                entries.append({"fund_id": fid, "since": first["filing_date"]})
+
+        first_mover = None
+        if len(entries) >= 2:
+            entries.sort(key=lambda e: e["since"])
+            earliest = entries[0]
+            others = []
+            for e in entries[1:]:
+                lag_days = _date_diff_days(earliest["since"], e["since"])
+                others.append({"fund_id": e["fund_id"], "since": e["since"], "lag_days": lag_days})
+            first_mover = {
+                "fund_id": earliest["fund_id"],
+                "since": earliest["since"],
+                "others": others,
+            }
+
+        enriched.append({**s, "first_mover": first_mover})
+
+    return enriched
+
+
+def build_global_first_appearance_map() -> dict[str, dict[str, str]]:
+    """
+    追跡中の全ファンド × 全銘柄について、「いつ初めてその銘柄の保有が
+    確認されたか」を一括計算する。「Has this pattern happened before?」
+    （そのファンドの先行実績そのもの）を計算するための基礎データ。
+
+    戻り値: { cusip: { fund_id: filing_date, ... }, ... }
+
+    NOTE: 計算コストを抑えるため、各ファンドのスナップショットを古い順に
+    1回だけ走査し、銘柄ごとに「最初に出てきた時点」だけを記録する
+    （2回目以降の出現は無視する）。
+    """
+    result: dict[str, dict[str, str]] = {}
+    for fund in FUNDS:
+        fund_id = fund["id"]
+        snapshots = load_all_snapshots(fund_id)  # 古い→新しい
+        seen_cusips: set[str] = set()
+        for snap in snapshots:
+            filing_date = snap.get("filing_date", "")
+            for h in snap.get("holdings", []):
+                cusip = h.get("cusip", "")
+                if not cusip or h.get("value_usd", 0) <= 0:
+                    continue
+                if cusip in seen_cusips:
+                    continue
+                seen_cusips.add(cusip)
+                result.setdefault(cusip, {})[fund_id] = filing_date
+    return result
+
+
+def compute_fund_leadership_track_record(fund_id: str, first_appearance_map: dict) -> dict:
+    """
+    指定ファンドについて、過去に他の追跡対象ファンドより先に銘柄の保有を
+    始めていた（その後他のファンドも追随した）ケースを集計する。
+
+    「Has this pattern happened before?」に答える、Premium機能の核。
+    断定的な予測ではなく、すでに確定している過去の保有開始タイミングの比較。
+
+    戻り値: {
+      "fund_id": ...,
+      "led_count": 自分が最も早く保有を始めていた回数（他社が後から追随した回数）,
+      "followed_count": 他社が先に保有し、自分が後から入った回数,
+      "avg_lag_days": 自分が先行した場合、他社が平均何日後に追随したか（None可）,
+    }
+    """
+    led_lags: list[float] = []
+    followed_count = 0
+
+    for cusip, fund_dates in first_appearance_map.items():
+        if fund_id not in fund_dates or len(fund_dates) < 2:
+            continue
+
+        my_date = fund_dates[fund_id]
+        other_dates = [d for fid, d in fund_dates.items() if fid != fund_id]
+
+        is_earliest = all(my_date <= d for d in other_dates)
+        if is_earliest:
+            lags = [lag for d in other_dates if (lag := _date_diff_days(my_date, d)) is not None and lag > 0]
+            led_lags.extend(lags)
+        else:
+            followed_count += 1
+
+    led_count = len(led_lags)
+    avg_lag = round(sum(led_lags) / led_count) if led_count else None
+
+    return {
+        "fund_id": fund_id,
+        "led_count": led_count,
+        "followed_count": followed_count,
+        "avg_lag_days": avg_lag,
+    }
+
+
+def compute_fund_history_profile(fund_id: str, first_appearance_map: dict) -> dict:
+    """
+    指定ファンドの「行動履歴プロフィール」を計算する。Fund History機能の核。
+
+    単に「過去の保有変更履歴を一覧表示する」のではなく、このファンドが
+    過去どのような行動パターンを取ってきたか（先行する傾向があるか、
+    どの分野で先行することが多いか）という、比較から意味を読み取れる
+    形にまとめる。
+
+    NOTE: compute_fund_leadership_track_record() を土台に、分野別の
+    先行傾向を追加したもの。断定的な評価（「優れている」等）は行わず、
+    観測された傾向の記述にとどめる。
+
+    戻り値: {
+      "fund_id": ...,
+      "led_count": 先行していた回数,
+      "followed_count": 他社が先行し、後から入った回数,
+      "avg_lag_days": 先行した場合、他社が平均何日後に追随したか,
+      "sector_lead_counts": { sector_id: 先行回数, ... }  # 分野別の先行傾向
+    }
+    """
+    base = compute_fund_leadership_track_record(fund_id, first_appearance_map)
+
+    # 分野別の先行傾向: このファンドが先行していた銘柄を分野ごとに数える
+    sector_lead_counts: dict[str, int] = {}
+    for cusip, fund_dates in first_appearance_map.items():
+        if fund_id not in fund_dates or len(fund_dates) < 2:
+            continue
+        my_date = fund_dates[fund_id]
+        other_dates = [d for fid, d in fund_dates.items() if fid != fund_id]
+        is_earliest = all(my_date <= d for d in other_dates)
+        if not is_earliest:
+            continue
+        sector_id = SECTOR_MAP.get(cusip)
+        if sector_id is None:
+            continue
+        sector_lead_counts[sector_id] = sector_lead_counts.get(sector_id, 0) + 1
+
+    return {**base, "sector_lead_counts": sector_lead_counts}
+
+
+def update_fund_history_profiles_in_data_json(first_appearance_map: dict, data: dict) -> None:
+    """
+    全追跡対象ファンドについて compute_fund_history_profile() を計算し、
+    data["funds"] の各ファンドオブジェクトに "history_profile" として保存する。
+    """
+    for fund in FUNDS:
+        fid = fund["id"]
+        profile = compute_fund_history_profile(fid, first_appearance_map)
+        for f_entry in data["funds"]:
+            if f_entry["id"] == fid:
+                f_entry["history_profile"] = profile
+                break
+
+
+def get_fund_cusip_value_at(fund_id: str, cusip: str, filing_date: str) -> int:
+    """指定ファンドの、指定日時点での指定銘柄の保有額(USD)を返す。保有が無ければ0。"""
+    snapshots = load_all_snapshots(fund_id)
+    for snap in snapshots:
+        if snap.get("filing_date") == filing_date:
+            for h in snap.get("holdings", []):
+                if h.get("cusip") == cusip:
+                    return h.get("value_usd", 0)
+    return 0
+
+
+def get_fund_cusip_value_history(fund_id: str, cusip: str) -> list[dict]:
+    """
+    指定ファンドの、指定銘柄(CUSIP)についての保有額の時系列を返す。
+    [{"filing_date": ..., "value_usd": ...}, ...]  古い→新しい順。
+    保有していない四半期は value_usd=0 として記録される。
+    """
+    snapshots = load_all_snapshots(fund_id)  # 古い→新しい
+    history = []
+    for snap in snapshots:
+        filing_date = snap.get("filing_date", "")
+        value = 0
+        for h in snap.get("holdings", []):
+            if h.get("cusip") == cusip:
+                value = h.get("value_usd", 0)
+                break
+        history.append({"filing_date": filing_date, "value_usd": value})
+    return history
+
+
+def compute_company_adoption_archive(cusip: str, first_appearance_map: dict) -> dict:
+    """
+    指定銘柄(CUSIP)について、追跡対象の全ファンドが「いつ初めて保有を
+    始めたか」を時系列で並べた、企業単位の採用順アーカイブ。
+
+    「Similar Event Archive」（Has this pattern happened before?）の核。
+    今回の一致シグナルに関与している2〜4ファンドだけでなく、過去に同じ
+    銘柄へ参入した全ファンドの順序を示すことで、「このパターンが過去にも
+    あったか」「他にどのファンドが関わっていたか」を確認できるようにする。
+
+    NOTE: 因果関係は主張しない。「関連した動き」「その後確認された変化」
+    という事実の提示にとどめる。
+
+    戻り値: {
+      "cusip": ...,
+      "entries": [{"fund_id":..., "since":...}, ...],  # 参入順（古い→新しい）
+      "total_funds_ever_held": この銘柄を保有したことがある追跡対象ファンドの総数,
+    }
+    """
+    fund_dates = first_appearance_map.get(cusip, {})
+    entries = sorted(
+        [{"fund_id": fid, "since": d} for fid, d in fund_dates.items()],
+        key=lambda e: e["since"]
+    )
+    return {
+        "cusip": cusip,
+        "entries": entries,
+        "total_funds_ever_held": len(entries),
+    }
+
+
+# ===== Similarity Score 基盤（Step 1: 過去の任意時点の一致シグナルを再現する） =====
+# NOTE: これは Similarity Score 自体の計算ではなく、その比較対象となる
+# 「過去のある時点で、何が一致シグナルとして検出されていたか」を作るための
+# 土台。スコア自体（Step 2）は、この関数の出力同士を比較して構築する。
+
+def get_snapshot_and_previous(fund_id: str, near_date: str, max_distance_months: int = 4) -> tuple[dict | None, dict | None]:
+    """
+    指定ファンドの、near_date に最も近いスナップショットと、その直前
+    （前四半期比較用）のスナップショットを返す。
+
+    戻り値: (該当スナップショット, その直前のスナップショット)
+            該当が見つからない、または直前データが無い場合は None を含む。
+    """
+    snapshots = load_all_snapshots(fund_id)  # 古い→新しい
+    if not snapshots:
+        return None, None
+
+    def dist(snap):
+        d = _date_diff_days(near_date, snap.get("filing_date", ""))
+        return abs(d) if d is not None else float("inf")
+
+    closest_idx = min(range(len(snapshots)), key=lambda i: dist(snapshots[i]))
+    if dist(snapshots[closest_idx]) > max_distance_months * 31:
+        return None, None  # near_dateから離れすぎている場合は無効
+
+    if closest_idx == 0:
+        return snapshots[closest_idx], None
+
+    return snapshots[closest_idx], snapshots[closest_idx - 1]
+
+
+def compute_historical_consensus_signals(target_filing_date: str, top_n: int = 45) -> dict:
+    """
+    指定した過去の時点（target_filing_date付近）における「複数ファンド
+    一致シグナル」を、compute_consensus_signals() と同じロジックで再計算する。
+
+    これにより「今回の一致シグナルと、過去のある四半期の一致シグナルが
+    どれだけ似ていたか」を比較できるようになる（Similarity Scoreの土台）。
+
+    NOTE: 各ファンドについて target_filing_date 付近のスナップショットと
+    その直前のスナップショットの差分から、買い増し/売りを判定する。
+    該当データが無いファンドは、その時点の集計から除外する。
+
+    戻り値: {
+      "target_filing_date": ...,
+      "participating_funds": 計算に参加できたファンドのリスト,
+      "signals": [当時の一致シグナルのリスト],
+    }
+    """
+    tracker: dict[str, dict] = {}
+    participating_funds = []
+
+    for fund in FUNDS:
+        fund_id = fund["id"]
+        current_snap, previous_snap = get_snapshot_and_previous(fund_id, target_filing_date)
+        if not current_snap or not previous_snap:
+            continue
+        participating_funds.append(fund_id)
+
+        diffs = compute_diff(current_snap.get("holdings", []), previous_snap.get("holdings", []))
+        for d in diffs:
+            cusip = d.get("cusip", "")
+            delta = d.get("delta_usd", 0)
+            if not cusip or delta == 0:
+                continue
+            entry = tracker.setdefault(cusip, {"name": d.get("name_of_issuer", "UNKNOWN"), "buy": set(), "sell": set()})
+            if delta > 0:
+                entry["buy"].add(fund_id)
+            else:
+                entry["sell"].add(fund_id)
+
+    signals = []
+    for cusip, entry in tracker.items():
+        if len(entry["buy"]) >= 2 and len(entry["sell"]) == 0:
+            direction, fund_ids = "buy", entry["buy"]
+        elif len(entry["sell"]) >= 2 and len(entry["buy"]) == 0:
+            direction, fund_ids = "sell", entry["sell"]
+        else:
+            continue
+        signals.append({
+            "cusip": cusip,
+            "name": entry["name"].title(),
+            "direction": direction,
+            "fund_count": len(fund_ids),
+            "fund_ids": sorted(fund_ids),
+        })
+
+    signals.sort(key=lambda s: (-s["fund_count"], s["cusip"]))
+    return {
+        "target_filing_date": target_filing_date,
+        "participating_funds": participating_funds,
+        "signals": signals[:top_n],
+    }
+
+
+# ===== Similarity Score（Step 2: ○/△/×判定 → スコア化 → 過去ケース比較） =====
+# NOTE: Similarity Score は「投資判断」「将来予測」ではなく、「今回のファンド
+# 行動パターンが、過去のどのケースとどの程度似ているか」を示す指標。
+# 各判定項目（criteria）は必ずデータとして保持し、後から項目追加・重み変更・
+# 高度化（特にholding patternの分類）が容易な構造にする。
+
+def determine_signal_leader(fund_ids: list[str], cusip: str, first_appearance_map: dict) -> str | None:
+    """
+    シグナルに関与しているファンドのうち、この銘柄を最も早くから保有して
+    いた（追跡履歴内で）ファンドを返す。current/historical どちらの
+    シグナルにも同じロジックを適用できる共通関数。
+    """
+    dates = first_appearance_map.get(cusip, {})
+    candidates = [(fid, dates[fid]) for fid in fund_ids if fid in dates]
+    if not candidates:
+        return None
+    candidates.sort(key=lambda c: c[1])
+    return candidates[0][0]
+
+
+def classify_holding_trend(fund_id: str, cusip: str, filing_date: str, max_distance_days: int = 45) -> str | None:
+    """
+    指定ファンドの、指定時点前後における保有額の推移を、簡易的な
+    トレンド分類で返す（"accumulating" = 増加傾向 / "distributing" = 減少傾向 /
+    None = 判定不可）。
+
+    NOTE: これは将来拡張するholding pattern分類
+    （Initial/Continuous/Accelerated accumulation, Re-entry, Distribution等）
+    の現時点での簡易プロキシ。今は「直前→直後で増えたか減ったか」の
+    二値判定にとどめ、将来的に分類を細分化する余地を残す。
+
+    NOTE: filing_date は「完全一致」ではなく「最も近い日付」でマッチングする。
+    ファンドごとに同じ四半期でも提出日が数日ズレることがあるため
+    （例: ブラックロック8/13、バンガード8/14）、厳密な文字列一致だと
+    本来は同じ四半期のはずのデータが見つからず誤ってN/A判定になってしまう。
+    """
+    history = get_fund_cusip_value_history(fund_id, cusip)
+    if not history:
+        return None
+
+    def dist(h):
+        d = _date_diff_days(filing_date, h["filing_date"])
+        return abs(d) if d is not None else float("inf")
+
+    idx = min(range(len(history)), key=lambda i: dist(history[i]))
+    if dist(history[idx]) > max_distance_days or idx == 0:
+        return None
+    before = history[idx - 1]["value_usd"]
+    after = history[idx]["value_usd"]
+    if after > before:
+        return "accumulating"
+    elif after < before:
+        return "distributing"
+    return None
+
+
+def compare_signals_breakdown(current: dict, historical: dict, first_appearance_map: dict) -> dict:
+    """
+    現在のシグナルと、過去のあるシグナルを5つの観点で比較し、
+    ○（一致）/ △（部分一致）/ ×（不一致）/ N/A（判定不可）を判定する。
+    各項目の判定理由（detail）も保持し、スコアをブラックボックスにしない。
+
+    戻り値: {
+      "criteria": [
+        {"key": "leading_fund", "label": "Same leading fund", "verdict": "○"|"△"|"×"|"N/A", "detail": "..."},
+        ... (5項目)
+      ],
+      "score_pct": 0-100の類似度スコア（N/A項目は分母から除外して計算）,
+    }
+    """
+    criteria = []
+
+    # 1. Same leading fund
+    cur_leader = determine_signal_leader(current["fund_ids"], current["cusip"], first_appearance_map)
+    hist_leader = determine_signal_leader(historical["fund_ids"], historical["cusip"], first_appearance_map)
+    if cur_leader is None or hist_leader is None:
+        criteria.append({"key": "leading_fund", "label": "Same leading fund", "verdict": "N/A", "detail": "先行ファンドを判定できませんでした。"})
+    elif cur_leader == hist_leader:
+        criteria.append({"key": "leading_fund", "label": "Same leading fund", "verdict": "○", "detail": f"{FUND_DISPLAY_NAME.get(cur_leader, cur_leader)} が両ケースで先行していました。"})
+    else:
+        criteria.append({"key": "leading_fund", "label": "Same leading fund", "verdict": "×", "detail": f"先行ファンドが異なります（今回: {cur_leader} / 過去: {hist_leader}）。"})
+
+    # 2. Same sector
+    cur_sector = SECTOR_MAP.get(current["cusip"])
+    hist_sector = SECTOR_MAP.get(historical["cusip"])
+    if cur_sector is None or hist_sector is None:
+        criteria.append({"key": "sector", "label": "Same sector", "verdict": "N/A", "detail": "分野が未分類のため判定できませんでした。"})
+    elif cur_sector == hist_sector:
+        label = SECTOR_LABELS.get(cur_sector, {}).get("label", cur_sector)
+        criteria.append({"key": "sector", "label": "Same sector", "verdict": "○", "detail": f"両ケースとも「{label}」分野でした。"})
+    else:
+        criteria.append({"key": "sector", "label": "Same sector", "verdict": "×", "detail": "分野が異なります。"})
+
+    # 3. Similar fund participation（関与ファンド数の近さ）
+    diff = abs(current["fund_count"] - historical["fund_count"])
+    if diff == 0:
+        criteria.append({"key": "participation", "label": "Similar fund participation", "verdict": "○", "detail": f"関与ファンド数が同じです（{current['fund_count']}社）。"})
+    elif diff == 1:
+        criteria.append({"key": "participation", "label": "Similar fund participation", "verdict": "△", "detail": f"関与ファンド数が近いです（今回{current['fund_count']}社 / 過去{historical['fund_count']}社）。"})
+    else:
+        criteria.append({"key": "participation", "label": "Similar fund participation", "verdict": "×", "detail": f"関与ファンド数が大きく異なります（今回{current['fund_count']}社 / 過去{historical['fund_count']}社）。"})
+
+    # 4. Similar capital flow pattern（買い/売りの方向）
+    if current["direction"] == historical["direction"]:
+        flow_label = "買い（積み増し）" if current["direction"] == "buy" else "売り（縮小）"
+        criteria.append({"key": "capital_flow", "label": "Similar capital flow pattern", "verdict": "○", "detail": f"両ケースとも{flow_label}方向でした。"})
+    else:
+        criteria.append({"key": "capital_flow", "label": "Similar capital flow pattern", "verdict": "×", "detail": "資金の方向（買い/売り）が異なります。"})
+
+    # 5. Similar holding increase pattern（簡易プロキシ：先行ファンドの保有トレンド）
+    cur_trend = classify_holding_trend(cur_leader, current["cusip"], current.get("filing_date", "")) if cur_leader else None
+    hist_trend = classify_holding_trend(hist_leader, historical["cusip"], historical.get("target_filing_date", historical.get("filing_date", ""))) if hist_leader else None
+    if cur_trend is None or hist_trend is None:
+        criteria.append({"key": "holding_pattern", "label": "Similar holding increase pattern", "verdict": "N/A", "detail": "保有トレンドを判定できませんでした。"})
+    elif cur_trend == hist_trend:
+        criteria.append({"key": "holding_pattern", "label": "Similar holding increase pattern", "verdict": "○", "detail": f"両ケースとも「{cur_trend}」傾向でした。"})
+    else:
+        criteria.append({"key": "holding_pattern", "label": "Similar holding increase pattern", "verdict": "×", "detail": "保有トレンドの傾向が異なります。"})
+
+    # スコア計算: ○=1.0, △=0.5, ×=0.0、N/Aは分母から除外
+    verdict_points = {"○": 1.0, "△": 0.5, "×": 0.0}
+    scored = [verdict_points[c["verdict"]] for c in criteria if c["verdict"] in verdict_points]
+    score_pct = round((sum(scored) / len(scored)) * 100) if scored else None
+
+    return {"criteria": criteria, "score_pct": score_pct}
+
+
+def generate_historical_signal_pool(exclude_cusips: set[str] | None = None) -> list[dict]:
+    """
+    追跡履歴内の様々な四半期について compute_historical_consensus_signals() を
+    実行し、過去に発生した一致シグナルを集めたプール（比較対象データ）を作る。
+
+    NOTE: exclude_cusips に含まれる銘柄（=今回のシグナル自身の銘柄）は
+    除外する。「同じ銘柄の過去」はAdoption Archiveで別途扱っており、
+    Similarity Scoreでは「異なる銘柄でも似た行動パターンだったか」を見たい。
+    """
+    exclude_cusips = exclude_cusips or set()
+
+    # 追跡対象の全ファンドの全filing_dateを集めて、比較対象の日付候補とする
+    all_dates: set[str] = set()
+    for fund in FUNDS:
+        for snap in load_all_snapshots(fund["id"]):
+            fd = snap.get("filing_date", "")
+            if fd:
+                all_dates.add(fd)
+
+    pool = []
+    for d in sorted(all_dates):
+        result = compute_historical_consensus_signals(d)
+        for s in result["signals"]:
+            if s["cusip"] in exclude_cusips:
+                continue
+            pool.append({**s, "filing_date": d})
+    return pool
+
+
+def compute_aftermath_for_signal(signal_with_date: dict, max_distance_days: int = 45) -> dict:
+    """
+    指定の過去シグナルについて、その後数四半期で確認された変化を集計する。
+    断定的な因果関係（「これが原因で発生した」）は主張せず、
+    「その後、関連する変化が確認された」という事実の提示にとどめる。
+
+    NOTE: 「成功した過去ケースだけを集める」設計を避けるため、ここでは
+    outcome_label として「followed（その後の追随が観測された）」と
+    「limited（その後の追随は観測されなかった）」を中立的に分類するのみで、
+    どちらが「良い結果」かという価値判断は行わない。将来的に
+    Similar positive cases / Similar but limited outcome cases として
+    UI側で分けて見せる拡張がしやすいよう、この中立ラベルだけ用意しておく。
+
+    戻り値: {
+      "funds_increased_after": その後さらに保有を増やしたファンドの数,
+      "new_entrants_after": その後新たに参入したファンドの数,
+      "outcome_label": "followed" | "limited"  # 中立的な観測結果ラベル
+    }
+    """
+    cusip = signal_with_date["cusip"]
+    base_date = signal_with_date["filing_date"]
+
+    funds_increased = 0
+    new_entrants = 0
+
+    for fund in FUNDS:
+        fund_id = fund["id"]
+        history = get_fund_cusip_value_history(fund_id, cusip)
+        if not history:
+            continue
+
+        def dist(h):
+            d = _date_diff_days(base_date, h["filing_date"])
+            return abs(d) if d is not None else float("inf")
+
+        idx = min(range(len(history)), key=lambda i: dist(history[i]))
+        if dist(history[idx]) > max_distance_days:
+            continue
+
+        base_value = history[idx]["value_usd"]
+        later_values = [h["value_usd"] for h in history[idx + 1: idx + 3]]  # 直後2四半期分
+        if not later_values:
+            continue
+
+        if base_value == 0 and any(v > 0 for v in later_values):
+            new_entrants += 1
+        elif any(v > base_value for v in later_values):
+            funds_increased += 1
+
+    outcome_label = "followed" if (funds_increased > 0 or new_entrants > 0) else "limited"
+
+    return {
+        "funds_increased_after": funds_increased,
+        "new_entrants_after": new_entrants,
+        "outcome_label": outcome_label,
+    }
+
+
+def find_similar_historical_cases(current_signal: dict, first_appearance_map: dict, top_n: int = 3, similarity_threshold: int = 50) -> dict:
+    """
+    現在のシグナルについて、過去の一致シグナルプールの中から似ているケースを
+    探し、上位 top_n 件の詳細（Breakdown・スコア・その後の変化）に加えて、
+    「類似度○%以上のケースが全体で何件あったか」という参照統計
+    （Historical reference）も返す。
+
+    これにより、単一の「最も似ている1件」だけでなく、「このパターン自体が
+    過去データの中でどれくらい一般的か」を、ユーザーが判断できるようにする。
+    「成功率」「予測精度」のような言葉は使わず、あくまで観測件数の提示にとどめる。
+
+    TOP1だけを提示すると「都合の良いケースだけ選んでいるのでは」という
+    印象を与えかねないため、複数件を並べてユーザー自身が比較・判断できる
+    ようにする。
+
+    NOTE: 同じ銘柄(cusip)が複数の過去四半期で候補になることがあるが、
+    重複を避けるため銘柄ごとに最もスコアが高い時点のみを候補として残す。
+
+    戻り値: {
+      "top_cases": [
+        {
+          "historical_signal": {cusip, name, direction, fund_count, fund_ids, filing_date},
+          "breakdown": compare_signals_breakdownの結果,
+          "aftermath": compute_aftermath_for_signalの結果,
+        }, ...
+      ]（スコアの高い順、最大 top_n 件）,
+      "reference": {
+        "similar_cases_found": 類似度がthreshold以上だった過去ケースの総数,
+        "followed_count": そのうち、その後の追随・増加が観測された件数,
+        "limited_count": そのうち、その後の大きな変化が観測されなかった件数,
+        "threshold_pct": 「類似」と数える閾値（%）,
+      }
+    }
+    """
+    empty_reference = {"similar_cases_found": 0, "followed_count": 0, "limited_count": 0, "threshold_pct": similarity_threshold}
+
+    pool = generate_historical_signal_pool(exclude_cusips={current_signal["cusip"]})
+    if not pool:
+        return {"top_cases": [], "reference": empty_reference}
+
+    # 銘柄(cusip)ごとに最高スコアの1件だけを残す
+    best_per_cusip: dict[str, tuple] = {}
+    for hist in pool:
+        breakdown = compare_signals_breakdown(current_signal, hist, first_appearance_map)
+        if breakdown["score_pct"] is None:
+            continue
+        cusip = hist["cusip"]
+        if cusip not in best_per_cusip or breakdown["score_pct"] > best_per_cusip[cusip][1]["score_pct"]:
+            best_per_cusip[cusip] = (hist, breakdown)
+
+    ranked = sorted(best_per_cusip.values(), key=lambda pair: -pair[1]["score_pct"])
+
+    # 閾値以上の全候補について、その後の変化（aftermath）を計算しキャッシュする
+    aftermath_cache: dict[int, dict] = {}
+    above_threshold = [(hist, bd) for hist, bd in ranked if bd["score_pct"] >= similarity_threshold]
+    followed_count = 0
+    limited_count = 0
+    for hist, bd in above_threshold:
+        am = compute_aftermath_for_signal(hist)
+        aftermath_cache[id(hist)] = am
+        if am["outcome_label"] == "followed":
+            followed_count += 1
+        else:
+            limited_count += 1
+
+    reference = {
+        "similar_cases_found": len(above_threshold),
+        "followed_count": followed_count,
+        "limited_count": limited_count,
+        "threshold_pct": similarity_threshold,
+    }
+
+    top_cases = []
+    for hist, breakdown in ranked[:top_n]:
+        aftermath = aftermath_cache.get(id(hist)) or compute_aftermath_for_signal(hist)
+        top_cases.append({
+            "historical_signal": hist,
+            "breakdown": breakdown,
+            "aftermath": aftermath,
+        })
+
+    return {"top_cases": top_cases, "reference": reference}
 
 
 def compute_consensus_signals(top_n: int = 45) -> dict:
@@ -700,15 +1726,74 @@ def compute_consensus_signals(top_n: int = 45) -> dict:
     }
 
 
-def update_consensus_signals_in_data_json():
-    """compute_consensus_signals() の結果を data.json のトップレベルに保存する。"""
-    result = compute_consensus_signals()
+def compute_aggregate_flows(top_n: int = 10) -> dict:
+    """
+    追跡中の全ファンドの buys_extended / sells_extended を、銘柄（CUSIP）単位で
+    金額を合算する。これは「何ファンドが一致しているか」（compute_consensus_signals）
+    とは異なる指標で、「ファンドの規模に関わらず、全体としてどの銘柄に
+    最も大きな資金が動いたか」を見る。
+
+    例: 1ファンドだけが超大口で買った銘柄も、ここでは上位に出てくる
+    （consensus_signalsでは2ファンド以上の一致が必要なため出てこない）。
+
+    NOTE: has_quarter_comparison が false のファンドは、正確な増減（delta）が
+    計算できないため、この集計から除外する。
+
+    戻り値: {
+      "top_buys": [...], "top_sells": [...], "fund_count": 集計に使ったファンド数
+    }
+    """
+    with open(DATA_JSON_PATH, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    # cusip -> { name, desc, total_usd, fund_ids: set() }
+    tracker: dict[str, dict] = {}
+    fund_count = 0
+
+    for fund in data["funds"]:
+        if not fund.get("has_quarter_comparison"):
+            continue
+        fund_count += 1
+        fund_id = fund["id"]
+
+        for h in fund.get("buys_extended", []) + fund.get("sells_extended", []):
+            cusip = h.get("ticker", "")
+            if not cusip:
+                continue
+            raw = h.get("amount_usd_raw")
+            if raw is None:
+                continue  # 旧データ（amount_usd_rawが無い）はスキップ
+            entry = tracker.setdefault(cusip, {"name": h["name"], "desc": h["desc"], "total_usd": 0, "fund_ids": set()})
+            entry["total_usd"] += raw
+            entry["fund_ids"].add(fund_id)
+
+    all_entries = list(tracker.values())
+    buys = sorted([e for e in all_entries if e["total_usd"] > 0], key=lambda e: e["total_usd"], reverse=True)
+    sells = sorted([e for e in all_entries if e["total_usd"] < 0], key=lambda e: e["total_usd"])
+
+    def fmt(e):
+        return {
+            "name": e["name"],
+            "desc": e["desc"],
+            "value_label": to_jpy_label(abs(e["total_usd"])),
+            "fund_count": len(e["fund_ids"]),
+        }
+
+    return {
+        "top_buys": [fmt(e) for e in buys[:top_n]],
+        "top_sells": [fmt(e) for e in sells[:top_n]],
+        "fund_count": fund_count,
+    }
+
+
+def update_aggregate_flows_in_data_json():
+    """compute_aggregate_flows() の結果を data.json のトップレベルに保存する。"""
+    result = compute_aggregate_flows()
 
     with open(DATA_JSON_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    data["consensus_signals_computed"] = result["signals"]
-    data["consensus_signals_total_tracked"] = result["total_companies_tracked"]
+    data["aggregate_flows_computed"] = result
     data["_meta"]["last_updated"] = time.strftime("%Y-%m-%d")
 
     with open(DATA_JSON_PATH, "w", encoding="utf-8") as f:
@@ -717,25 +1802,111 @@ def update_consensus_signals_in_data_json():
     return result
 
 
-def update_data_json(fund_id: str, result: dict, filing_date: str, trend: dict | None = None):
-    """data.json の該当ファンドの buys/sells/buys_extended/sells_extended/trend を更新する。"""
+def update_consensus_signals_in_data_json():
+    """
+    compute_consensus_signals() の結果を data.json のトップレベルに保存する。
+    各シグナルには、Premium向けの Early Movement Detection（誰が最初に
+    保有を始めたか、その先行者の過去の実績）の計算結果も付与する。
+    """
+    result = compute_consensus_signals()
+    enriched_signals = compute_first_movers(result["signals"])
+
     with open(DATA_JSON_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
 
+    # 各シグナルに、関与ファンドの最新提出日のうち最も新しいものを filing_date として付与。
+    # （Similarity Score計算でのトレンド比較に必要）
+    fund_last_filing_date = {f["id"]: f.get("last_filing_date", "") for f in data["funds"]}
+
+    # 「Has this pattern happened before?」用の先行実績トラックレコードを付与。
+    # 同じファンドが複数シグナルの先行者になることがあるため、重複計算を避ける。
+    first_appearance_map = build_global_first_appearance_map()
+    track_record_cache: dict[str, dict] = {}
+    for s in enriched_signals:
+        dates = [fund_last_filing_date.get(fid, "") for fid in s["fund_ids"] if fund_last_filing_date.get(fid)]
+        s["filing_date"] = max(dates) if dates else ""
+
+        fm = s.get("first_mover")
+        if fm:
+            fid = fm["fund_id"]
+            if fid not in track_record_cache:
+                track_record_cache[fid] = compute_fund_leadership_track_record(fid, first_appearance_map)
+            fm["leader_track_record"] = track_record_cache[fid]
+
+        # Similar Event Archive: この銘柄に過去どのファンドがどの順で参入したか
+        s["adoption_archive"] = compute_company_adoption_archive(s["cusip"], first_appearance_map)
+
+        # Similarity Score: 今回のシグナルと最も似ている過去ケース(TOP3)＋参照統計
+        similarity_result = find_similar_historical_cases(s, first_appearance_map, top_n=3)
+        s["similar_historical_cases"] = similarity_result["top_cases"]
+        s["similarity_reference"] = similarity_result["reference"]
+
+    data["consensus_signals_computed"] = enriched_signals
+    data["consensus_signals_total_tracked"] = result["total_companies_tracked"]
+
+    # Fund History: 全ファンドの行動履歴プロフィールを計算・保存
+    update_fund_history_profiles_in_data_json(first_appearance_map, data)
+
+    data["_meta"]["last_updated"] = time.strftime("%Y-%m-%d")
+
+    with open(DATA_JSON_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+    return {"signals": enriched_signals, "total_companies_tracked": result["total_companies_tracked"]}
+
+
+def update_data_json(fund_id: str, result: dict, filing_date: str, trend: dict | None = None, pattern_similarity: dict | None = None):
+    """
+    data.json の該当ファンドの buys/sells/buys_extended/sells_extended/trend/pattern_similarity を更新する。
+
+    NOTE: fund_id が data.json にまだ存在しない場合（新しくFUNDSに追加したファンドの
+    初回実行時など）は、最小限のフィールドを持つ新規ファンドオブジェクトを自動生成して
+    data["funds"] に追加する。これにより、新ファンド追加時に data.json を手動編集する
+    必要がない（index.html 側の表示用フィールド who/intro/timeline は空のまま保存され、
+    UIは後述のフォールバック処理で「データ準備中」として扱う）。
+    """
+    with open(DATA_JSON_PATH, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    fund_name = next((f["name"] for f in FUNDS if f["id"] == fund_id), fund_id)
+
+    target_fund = None
     for fund in data["funds"]:
         if fund["id"] == fund_id:
-            if result["buys"]:
-                fund["buys"] = result["buys"]
-            if result["sells"]:
-                fund["sells"] = result["sells"]
-            # 拡張リストは空でも上書きする（「データが無い」状態を正しく反映するため）
-            fund["buys_extended"] = result["buys_extended"]
-            fund["sells_extended"] = result["sells_extended"]
-            fund["last_filing_date"] = filing_date
-            fund["has_quarter_comparison"] = result["has_comparison"]
-            if trend is not None:
-                fund["trend"] = trend
+            target_fund = fund
             break
+
+    if target_fund is None:
+        # 新規ファンド: 最小限のスタブを作成して追加
+        # NEW_FUND_TIMELINES に定義済みの場合は、調査済みの実話エピソードを使う
+        preset = NEW_FUND_TIMELINES.get(fund_id)
+        target_fund = {
+            "id": fund_id,
+            "name": fund_name,
+            "cik": next((f["cik"] for f in FUNDS if f["id"] == fund_id), ""),
+            "who": preset["who"] if preset else f"— {fund_name} / SEC 13F-HR開示ベース",
+            "intro": preset["intro"] if preset else f"<strong>{fund_name}の個別の動き。</strong>過去の出来事との関連は今後追加されます。",
+            "timeline": preset["timeline"] if preset else [],
+            "buys": [],
+            "sells": [],
+        }
+        data["funds"].append(target_fund)
+        print(f"  ※ data.json に新規ファンド「{fund_name}」のエントリを作成しました。"
+              f"{'（調査済みの歴史エピソードを含む）' if preset else ''}")
+
+    fund = target_fund
+    if result["buys"]:
+        fund["buys"] = result["buys"]
+    if result["sells"]:
+        fund["sells"] = result["sells"]
+    # 拡張リストは空でも上書きする（「データが無い」状態を正しく反映するため）
+    fund["buys_extended"] = result["buys_extended"]
+    fund["sells_extended"] = result["sells_extended"]
+    fund["last_filing_date"] = filing_date
+    fund["has_quarter_comparison"] = result["has_comparison"]
+    if trend is not None:
+        fund["trend"] = trend
+    fund["pattern_similarity"] = pattern_similarity  # Noneの場合も明示的に保存（データなし状態を反映）
 
     data["_meta"]["last_updated"] = time.strftime("%Y-%m-%d")
 
@@ -822,7 +1993,24 @@ def main():
             else:
                 print(f"  トレンド: まだ{len(trend['quarters'])}四半期分のみ。2四半期以上集まると表示開始されます。")
 
-            update_data_json(fund_id, result, filing_date, trend=trend)
+            # 過去の参照局面との類似度計算
+            pattern_similarity = None
+            try:
+                pattern_similarity = compute_pattern_similarity(fund_id)
+                if pattern_similarity:
+                    ev = pattern_similarity["most_similar_event"]
+                    print(f"  類似度: 現在の集中度{pattern_similarity['current_concentration_pct']}% は「{ev['event_label']}」"
+                          f"（当時{ev['before_concentration_pct']}%）と{pattern_similarity['similarity_pct']}%類似")
+                    if ev["top_buy"]:
+                        print(f"    当時の実際の買い: {ev['top_buy']['name']} (+{ev['top_buy']['value_label']})")
+                    if ev["top_sell"]:
+                        print(f"    当時の実際の売り: {ev['top_sell']['name']} (-{ev['top_sell']['value_label']})")
+                else:
+                    print(f"  類似度: 参照局面のデータが不足しているため計算できませんでした。")
+            except Exception as e:
+                print(f"  ❌ 類似度計算でエラー: {e}")
+
+            update_data_json(fund_id, result, filing_date, trend=trend, pattern_similarity=pattern_similarity)
             print(f"  data.json を更新し、スナップショットを保存しました。")
 
         except Exception as e:
@@ -843,11 +2031,55 @@ def main():
             print(f"  {len(signals)}件の一致シグナルを検出しました（全{total_tracked}社中 {pct}%）:")
             for s in signals[:10]:
                 direction_label = "買い" if s["direction"] == "buy" else "売り"
-                print(f"    - {s['name']}: {s['fund_count']}ファンド一致（{direction_label}） [{', '.join(s['fund_ids'])}]")
+                fm = s.get("first_mover")
+                fm_note = f" / 最速: {fm['fund_id']}({fm['since']}〜)" if fm else ""
+                print(f"    - {s['name']}: {s['fund_count']}ファンド一致（{direction_label}） [{', '.join(s['fund_ids'])}]{fm_note}")
         else:
             print("  一致シグナルは検出されませんでした（比較可能なファンドが2社未満、または一致なし）。")
     except Exception as e:
         print(f"  ❌ 一致シグナル集計でエラー: {e}")
+
+    print()
+    print("--- Fund History（ファンド別の行動履歴プロフィール）---")
+    try:
+        with open(DATA_JSON_PATH, "r", encoding="utf-8") as f:
+            current_data = json.load(f)
+        for f_entry in current_data["funds"]:
+            profile = f_entry.get("history_profile")
+            if not profile:
+                continue
+            sectors_note = ", ".join(f"{SECTOR_LABELS.get(sid, {}).get('label', sid)}:{c}件" for sid, c in profile.get("sector_lead_counts", {}).items())
+            lag_note = f" / 平均{profile['avg_lag_days']}日後に追随" if profile.get("avg_lag_days") else ""
+            sector_part = f" / 先行分野: {sectors_note}" if sectors_note else ""
+            print(f"  {f_entry['name']}: 先行{profile['led_count']}件 / 追随{profile['followed_count']}件{lag_note}{sector_part}")
+    except Exception as e:
+        print(f"  ❌ Fund History集計でエラー: {e}")
+
+    # ===== クロスファンド集計: 45社全体の資金フロー =====
+    print()
+    print("--- 全ファンド合算の資金フローを集計中 ---")
+    try:
+        flow_result = update_aggregate_flows_in_data_json()
+        print(f"  集計対象ファンド数: {flow_result['fund_count']}")
+        print(f"  合算 買い上位:")
+        for b in flow_result["top_buys"][:5]:
+            print(f"    - {b['name']}: +約{b['value_label']}（{b['fund_count']}ファンドが関与）")
+        print(f"  合算 売り上位:")
+        for s in flow_result["top_sells"][:5]:
+            print(f"    - {s['name']}: -約{s['value_label']}（{s['fund_count']}ファンドが関与）")
+    except Exception as e:
+        print(f"  ❌ 資金フロー集計でエラー: {e}")
+
+    # ===== クロスファンド集計: セクター別の傾向 =====
+    print()
+    print("--- セクター別の傾向を集計中 ---")
+    try:
+        sector_result = update_sector_breakdown_in_data_json()
+        print(f"  分類済み銘柄数: {sector_result['total_classified']} / 未分類: {sector_result['unclassified_count']}")
+        for s in sector_result["sectors"]:
+            print(f"    - {s['label']}: {s['company_count']}社（買い{s['buy_count']}件・売り{s['sell_count']}件、買い比率{s['buy_pct']}%）")
+    except Exception as e:
+        print(f"  ❌ セクター集計でエラー: {e}")
 
     print()
     print("=== 完了 ===")
