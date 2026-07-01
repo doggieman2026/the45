@@ -2,7 +2,7 @@
   "_meta": {
     "schema_version": "1.0",
     "description": "THE 45 PROJECT データファイル。SEC EDGAR 13F-HR から GitHub Actions で自動更新される想定。",
-    "last_updated": "2026-06-27",
+    "last_updated": "2026-07-01",
     "data_source": "SEC EDGAR Form 13F-HR (https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany)",
     "disclaimer": "投資勧誘目的ではありません。歴史のファクトチェックを目的としています。"
   },
@@ -5598,9 +5598,9 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約1.6兆円",
         "vanguard": "+約4.7兆円",
-        "berkshire": "+約1543億円"
+        "berkshire": "+約1543億円",
+        "blackrock": "+約1.6兆円"
       },
       "first_mover": {
         "fund_id": "vanguard",
@@ -5846,9 +5846,9 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約2.1兆円",
         "vanguard": "+約6.0兆円",
-        "berkshire": "+約1.5兆円"
+        "berkshire": "+約1.5兆円",
+        "blackrock": "+約2.1兆円"
       },
       "first_mover": {
         "fund_id": "vanguard",
@@ -6094,9 +6094,9 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約9.3兆円",
+        "vanguard": "+約1.2兆円",
         "soros": "+約95億円",
-        "vanguard": "+約1.2兆円"
+        "blackrock": "+約9.3兆円"
       },
       "first_mover": {
         "fund_id": "vanguard",
@@ -6575,8 +6575,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約4941億円",
-        "vanguard": "+約6119億円"
+        "vanguard": "+約6119億円",
+        "blackrock": "+約4941億円"
       },
       "first_mover": {
         "fund_id": "vanguard",
@@ -6809,8 +6809,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約1.3兆円",
-        "vanguard": "+約1.4兆円"
+        "vanguard": "+約1.4兆円",
+        "blackrock": "+約1.3兆円"
       },
       "first_mover": {
         "fund_id": "blackrock",
@@ -7046,8 +7046,8 @@
         "soros"
       ],
       "fund_values": {
-        "blackrock": "-約4553億円",
-        "soros": "-約131億円"
+        "soros": "-約131億円",
+        "blackrock": "-約4553億円"
       },
       "first_mover": {
         "fund_id": "soros",
@@ -7276,8 +7276,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約4628億円",
-        "vanguard": "+約4942億円"
+        "vanguard": "+約4942億円",
+        "blackrock": "+約4628億円"
       },
       "first_mover": {
         "fund_id": "vanguard",
@@ -7514,8 +7514,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "-約3938億円",
-        "vanguard": "-約8324億円"
+        "vanguard": "-約8324億円",
+        "blackrock": "-約3938億円"
       },
       "first_mover": {
         "fund_id": "vanguard",
@@ -7748,8 +7748,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約1.3兆円",
-        "vanguard": "+約3.9兆円"
+        "vanguard": "+約3.9兆円",
+        "blackrock": "+約1.3兆円"
       },
       "first_mover": {
         "fund_id": "vanguard",
@@ -7982,8 +7982,8 @@
         "blackrock"
       ],
       "fund_values": {
-        "blackrock": "-約3364億円",
-        "berkshire": "-約3414億円"
+        "berkshire": "-約3414億円",
+        "blackrock": "-約3364億円"
       },
       "first_mover": {
         "fund_id": "berkshire",
@@ -8220,8 +8220,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約2197億円",
-        "vanguard": "+約1.9兆円"
+        "vanguard": "+約1.9兆円",
+        "blackrock": "+約2197億円"
       },
       "first_mover": {
         "fund_id": "vanguard",
@@ -8454,8 +8454,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約6507億円",
-        "vanguard": "+約6304億円"
+        "vanguard": "+約6304億円",
+        "blackrock": "+約6507億円"
       },
       "first_mover": {
         "fund_id": "vanguard",
@@ -8688,8 +8688,8 @@
         "blackrock"
       ],
       "fund_values": {
-        "blackrock": "-約2977億円",
-        "berkshire": "-約4365億円"
+        "berkshire": "-約4365億円",
+        "blackrock": "-約2977億円"
       },
       "first_mover": {
         "fund_id": "berkshire",
@@ -8926,8 +8926,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "blackrock": "+約3638億円",
-        "vanguard": "+約6176億円"
+        "vanguard": "+約6176億円",
+        "blackrock": "+約3638億円"
       },
       "first_mover": {
         "fund_id": "vanguard",
