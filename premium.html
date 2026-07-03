@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OBSERVER — THE 45</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+  :root {
+    --bg: #0D1113; --surface: #141A1C; --surface2: #1B2325; --border: #263033;
+    --accent: #4FB8B8; --accent2: #6FD0D0; --text: #D8E6E6; --muted: #6B8585;
+    --violet: #9B8FFF; --violet-dim: #6B62A8;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    background:var(--bg); color:var(--text); font-family:'Inter',sans-serif;
+    min-height:100vh; overflow-x:hidden; line-height:1.7;
+  }
+  body::before {
+    content:''; position:fixed; inset:0;
+    background:radial-gradient(ellipse 80% 50% at 50% -10%, rgba(79,184,184,0.06) 0%, transparent 60%);
+    pointer-events:none; z-index:0;
+  }
+  body::after {
+    content:''; position:fixed; inset:0;
+    background-image:linear-gradient(rgba(79,184,184,0.018) 1px,transparent 1px),linear-gradient(90deg,rgba(79,184,184,0.018) 1px,transparent 1px);
+    background-size:48px 48px; pointer-events:none; z-index:0;
+  }
+  .container { max-width:760px; margin:0 auto; padding:0 20px; position:relative; z-index:1; }
+
+  header { padding:22px 0; border-bottom:1px solid var(--border); }
+  .header-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+  .logo { font-size:16px; font-weight:700; letter-spacing:0.1em; display:flex; align-items:center; gap:10px; }
+  .logo-num { color:var(--accent); }
+  .logo-divider { width:1px; height:14px; background:var(--border); }
+  .logo-sub { font-size:10px; color:var(--violet); letter-spacing:0.2em; font-family:'JetBrains Mono',monospace; }
+  .back-link { font-size:11.5px; color:var(--muted); text-decoration:none; font-family:'JetBrains Mono',monospace; }
+  .back-link:hover { color:var(--accent2); }
+
+  .file-stamp {
+    display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace;
+    font-size:10px; letter-spacing:0.12em; color:var(--muted); margin-bottom:10px;
+  }
+  .redact-box {
+    display:inline-block; width:54px; height:11px; background:#0a0a0a;
+    border-radius:1px; vertical-align:middle;
+  }
+
+  .access-level {
+    display:flex; align-items:center; font-family:'JetBrains Mono',monospace;
+    font-size:10px; letter-spacing:0.12em; color:var(--muted); margin-bottom:34px;
+  }
+  .access-value-wrap { position:relative; display:inline-block; height:1.3em; min-width:64px; }
+  .access-value { position:absolute; left:0; top:0; }
+  .access-value.public {
+    color:var(--muted); opacity:1; animation: access-fade-out 0.6s ease forwards; animation-delay:1.1s;
+  }
+  .access-value.observer {
+    color:var(--violet); opacity:0; animation: access-fade-in 0.6s ease forwards; animation-delay:1.3s;
+  }
+  @keyframes access-fade-out { from { opacity:1; } to { opacity:0; } }
+  @keyframes access-fade-in { from { opacity:0; } to { opacity:1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .access-value.public { opacity:0; animation:none; }
+    .access-value.observer { opacity:1; animation:none; }
+  }
+
+  .hero { padding:60px 0 30px; }
+  .hero-lines { margin-bottom:36px; }
+  .hero-line {
+    font-size:clamp(20px,4vw,28px); font-weight:700; line-height:1.6; letter-spacing:-0.01em;
+    opacity:0; animation: line-in 0.7s ease forwards;
+  }
+  .hero-line:nth-child(1) { animation-delay:0.1s; }
+  .hero-line + .hero-line { margin-top:8px; }
+  .hero-line:nth-child(2) { animation-delay:1.0s; }
+  .hero-line:nth-child(3) { animation-delay:2.1s; }
+  @keyframes line-in { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
+  @media (prefers-reduced-motion: reduce) { .hero-line { animation:none; opacity:1; } }
+
+  .hero-cta-wrap { margin-top:40px; }
+  .cta-btn {
+    display:inline-block; padding:13px 32px; background:transparent;
+    color:var(--accent2); font-weight:600; font-size:13px; letter-spacing:0.04em;
+    border-radius:3px; cursor:pointer; border:1px solid var(--accent);
+    font-family:'JetBrains Mono',monospace; text-decoration:none;
+    transition: border-color 0.4s ease, color 0.4s ease, background 0.4s ease;
+  }
+  .cta-btn:hover { background:rgba(79,184,184,0.05); border-color:var(--accent2); color:var(--accent2); }
+  .cta-fine { font-size:10.5px; color:var(--muted); margin-top:14px; font-family:'JetBrains Mono',monospace; opacity:0.7; }
+  .cta-access {
+    display:block; font-size:10.5px; letter-spacing:0.14em; color:var(--violet);
+    font-family:'JetBrains Mono',monospace; margin-bottom:5px; opacity:0.85;
+  }
+  .cta-price {
+    display:block; font-size:10px; color:var(--muted); font-family:'JetBrains Mono',monospace;
+    opacity:0.6; margin-top:2px;
+  }
+
+  .stance-section { padding:54px 0 0; border-top:1px solid var(--border); }
+  .stance-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; }
+  @media (max-width:600px) { .stance-grid { grid-template-columns:1fr; gap:32px; } }
+  .stance-label {
+    font-size:10px; letter-spacing:0.18em; font-family:'JetBrains Mono',monospace;
+    text-transform:uppercase; margin-bottom:12px;
+  }
+  .stance-col.reader .stance-label { color:var(--muted); }
+  .stance-col.observer .stance-label { color:var(--violet); }
+  .stance-statement { font-size:17px; font-weight:600; line-height:1.7; margin-bottom:14px; }
+  .stance-col.observer .stance-statement { color:var(--text); }
+  .stance-fine { font-size:11px; color:var(--muted); line-height:1.8; }
+
+  .means-section { padding:64px 0 0; }
+  .means-heading {
+    font-size:11px; letter-spacing:0.18em; color:var(--violet); text-transform:uppercase;
+    font-family:'JetBrains Mono',monospace; margin-bottom:22px;
+  }
+  .means-list { display:flex; flex-direction:column; gap:0; font-family:'JetBrains Mono',monospace; }
+  .log-row {
+    display:flex; align-items:baseline; gap:14px; padding:15px 0;
+    border-top:1px solid rgba(38,48,51,0.55);
+  }
+  .log-row:first-child { border-top:none; }
+  .log-id { font-size:11px; color:var(--muted); letter-spacing:0.08em; min-width:62px; }
+  .log-date { font-size:11px; color:var(--muted); letter-spacing:0.04em; opacity:0.65; flex:1; }
+  .log-status {
+    font-size:10.5px; color:var(--text); letter-spacing:0.14em; opacity:0.8;
+    text-align:right; min-width:84px;
+  }
+
+  .future-section { padding:64px 0 0; }
+  .future-box {
+    border:1px solid var(--violet-dim); border-radius:10px; padding:26px 28px;
+    background:linear-gradient(160deg, rgba(155,143,255,0.04), rgba(79,184,184,0.01));
+    font-family:'JetBrains Mono',monospace;
+  }
+  .future-row { display:flex; align-items:baseline; gap:14px; }
+  .future-row .log-id { color:var(--violet); opacity:0.85; }
+  .future-row .log-date { color:var(--violet); opacity:0.7; }
+  .log-status.locked { color:var(--violet); opacity:1; }
+
+  .final-section { padding:70px 0 30px; text-align:center; border-top:1px solid var(--border); margin-top:54px; }
+  .final-note { font-size:10.5px; color:var(--muted); margin-top:14px; font-family:'JetBrains Mono',monospace; }
+
+  .signature-line {
+    text-align:center; font-size:13.5px; color:var(--muted);
+    letter-spacing:0.03em; padding:60px 0 10px; opacity:0.85;
+  }
+
+  footer {
+    border-top:1px solid var(--border); padding:20px 0 26px; text-align:center; font-size:10.5px;
+    color:var(--muted); font-family:'JetBrains Mono',monospace; line-height:1.8;
+  }
+  footer span { color:var(--violet); opacity:0.7; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">
+      <span class="logo-num">THE 45</span>
+      <div class="logo-divider"></div>
+      <span class="logo-sub">OBSERVER</span>
+    </div>
+    <a class="back-link" href="index.html">← 観測トップへ戻る</a>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="hero">
+    <div class="file-stamp">FILE NO. 045 ／ STATUS：<span class="redact-box"></span></div>
+    <div class="access-level">
+      ACCESS LEVEL：<span class="access-value-wrap"><span class="access-value public">PUBLIC</span><span class="access-value observer">OBSERVER</span></span>
+    </div>
+
+    <div class="hero-lines">
+      <p class="hero-line">偶然だったのか。</p>
+      <p class="hero-line">それとも、</p>
+      <p class="hero-line">伏線だったのか。</p>
+    </div>
+
+    <div class="hero-cta-wrap">
+      <button class="cta-btn" onclick="window.location.href='index.html'">OBSERVER ACCESS</button>
+      <div class="cta-fine">
+        <span class="cta-access">ACCESS LEVEL : OBSERVER</span>
+        <span class="cta-price">Monthly ¥480</span>
+        <span class="cta-price">Revoke Anytime</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="stance-section">
+    <div class="stance-grid">
+      <div class="stance-col reader">
+        <div class="stance-label">傍観者</div>
+        <p class="stance-statement">ニュースになった後、世界を知る。</p>
+        <p class="stance-fine">出来事は、もう終わっている。あとに残るのは、結果だけ。</p>
+      </div>
+      <div class="stance-col observer">
+        <div class="stance-label">Observer</div>
+        <p class="stance-statement">ニュースになる前の、痕跡を見ている。</p>
+        <p class="stance-fine">出来事は、まだ起きていない。残っているのは、気配だけ。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="means-section">
+    <div class="means-heading">RECORD LOG</div>
+    <div class="means-list">
+      <div class="log-row">
+        <div class="log-id">ENTRY 01</div>
+        <div class="log-date">2018.██.██</div>
+        <div class="log-status">LOGGED</div>
+      </div>
+      <div class="log-row">
+        <div class="log-id">ENTRY 02</div>
+        <div class="log-date">2019.██.██</div>
+        <div class="log-status">OBSERVED</div>
+      </div>
+      <div class="log-row">
+        <div class="log-id">ENTRY 03</div>
+        <div class="log-date">2019.██.██</div>
+        <div class="log-status">CROSSCHECKED</div>
+      </div>
+      <div class="log-row">
+        <div class="log-id">ENTRY 04</div>
+        <div class="log-date">2020.██.██</div>
+        <div class="log-status">ARCHIVED</div>
+      </div>
+      <div class="log-row">
+        <div class="log-id">ENTRY 05</div>
+        <div class="log-date">2021.██.██</div>
+        <div class="log-status">REDACTED</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="future-section">
+    <div class="future-box">
+      <div class="future-row">
+        <div class="log-id">ENTRY 06</div>
+        <div class="log-date">2026.██.██</div>
+        <div class="log-status locked">REDACTED</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="final-section">
+    <button class="cta-btn" onclick="window.location.href='index.html'">OBSERVER ACCESS</button>
+    <div class="final-note">
+      <span class="cta-access">ACCESS LEVEL : OBSERVER</span>
+      <span class="cta-price">Monthly ¥480</span>
+      <span class="cta-price">Revoke Anytime</span>
+    </div>
+  </div>
+
+  <!-- THE45のシグネチャー：全ページ共通で最後に置く一文。ページの唯一の締めとして余白を広く取る -->
+  <p class="signature-line">今日もまた、誰かの足跡が残る。</p>
+
+</div>
+
+<footer>
+  <div class="container">
+    <p>© 2026 THE 45 PROJECT. <span>OBSERVER ARCHIVE</span></p>
+    <p style="font-size:9.5px; margin-top:4px; opacity:0.5;">当サイトのデータはSEC公開書類および公開報道に基づいています。投資勧誘を目的としたものではなく、歴史の記録を目的としています。</p>
+  </div>
+</footer>
+
+</body>
+</html>
