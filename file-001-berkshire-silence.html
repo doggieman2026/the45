@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FILE-001 バークシャーの沈黙 — THE 45</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --bg: #0D1113; --surface: #141A1C; --surface2: #1B2325; --border: #263033;
+  --accent: #4FB8B8; --accent2: #6FD0D0; --text: #D8E6E6; --muted: #6B8585;
+  --red: #D9697E; --violet: #9B8FFF; --violet-dim: #6B62A8;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text);
+  font-family:'Inter',sans-serif; min-height:100vh; overflow-x:hidden; line-height:1.7;
+}
+body::before {
+  content:''; position:fixed; inset:0;
+  background:radial-gradient(ellipse 80% 50% at 50% -10%, rgba(79,184,184,0.06) 0%, transparent 60%);
+  pointer-events:none; z-index:0;
+}
+body::after {
+  content:''; position:fixed; inset:0;
+  background-image:linear-gradient(rgba(79,184,184,0.02) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(79,184,184,0.02) 1px,transparent 1px);
+  background-size:48px 48px; pointer-events:none; z-index:0;
+}
+
+/* ── FILE NAV BAR ── */
+.file-nav {
+  position:sticky; top:0; z-index:100;
+  background:rgba(13,17,19,0.95); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border); height:34px; display:flex; align-items:center;
+}
+.file-nav-inner {
+  max-width:900px; margin:0 auto; padding:0 20px; width:100%;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.nav-left {
+  font-family:'JetBrains Mono',monospace; font-size:9.5px;
+  letter-spacing:0.12em; color:var(--muted); display:flex; align-items:center; gap:12px;
+}
+.nav-left .nav-fileid { color:var(--text); opacity:0.65; }
+.nav-center {
+  font-family:'JetBrains Mono',monospace; font-size:9.5px;
+  letter-spacing:0.14em; color:var(--muted); opacity:0.5;
+  transition:color 0.25s, opacity 0.25s;
+}
+.nav-center.lit { color:var(--text); opacity:1; }
+.nav-right {
+  font-family:'JetBrains Mono',monospace; font-size:9px;
+  letter-spacing:0.16em; color:var(--muted); opacity:0.4;
+}
+@media(max-width:600px){ .nav-right,.nav-center{ display:none; } }
+
+/* ── PAGE HEADER ── */
+.page-header { padding:28px 0 20px; border-bottom:1px solid var(--border); }
+.page-header-inner {
+  max-width:900px; margin:0 auto; padding:0 20px;
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;
+}
+.logo { font-family:'Inter',sans-serif; font-size:19px; font-weight:700; letter-spacing:0.12em; color:var(--text); display:flex; align-items:center; gap:10px; }
+.logo-num { color:var(--accent); }
+.logo-divider { width:1px; height:18px; background:var(--border); }
+.logo-sub { font-size:10px; color:var(--muted); letter-spacing:0.15em; font-weight:500; font-family:'JetBrains Mono',monospace; }
+.back-link { font-size:11px; color:var(--muted); text-decoration:none; font-family:'JetBrains Mono',monospace; letter-spacing:0.06em; transition:color 0.2s; }
+.back-link:hover { color:var(--accent2); }
+
+/* ── CONTAINER ── */
+.container { max-width:900px; margin:0 auto; padding:0 20px; position:relative; z-index:1; }
+
+/* ── FILE STATUS BADGE ── */
+.file-status {
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:'JetBrains Mono',monospace; font-size:10px;
+  letter-spacing:0.2em; padding:5px 13px; border-radius:3px; margin-bottom:16px;
+}
+.status-dot { width:5px; height:5px; border-radius:50%; flex-shrink:0; }
+.file-status.monitoring {
+  color:var(--accent2); background:rgba(79,184,184,0.08); border:1px solid rgba(79,184,184,0.2);
+}
+.file-status.monitoring .status-dot { background:var(--accent); animation:pulse 2s infinite; }
+.file-status.archived { color:var(--muted); background:transparent; border:1px solid var(--border); }
+.file-status.archived .status-dot { background:var(--muted); }
+.file-status.active {
+  color:var(--accent2); background:rgba(79,184,184,0.06); border:1px solid rgba(79,184,184,0.18);
+}
+.file-status.active .status-dot { background:var(--accent2); }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
+
+/* ── UPDATE LOG ── */
+.update-log {
+  margin-top:20px; border:1px solid var(--border);
+  border-radius:6px; overflow:hidden; background:var(--surface); max-width:460px;
+}
+.update-log-head {
+  padding:10px 16px; border-bottom:1px solid var(--border);
+  background:rgba(255,255,255,0.01);
+  font-family:'JetBrains Mono',monospace; font-size:9px;
+  letter-spacing:0.2em; color:var(--muted); opacity:0.65;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.update-entry {
+  display:flex; align-items:baseline; gap:16px; padding:9px 16px;
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  font-family:'JetBrains Mono',monospace; font-size:10.5px;
+}
+.update-entry:last-child { border-bottom:none; }
+.update-date { color:var(--muted); opacity:0.45; min-width:80px; flex-shrink:0; }
+.update-desc { color:var(--text); opacity:0.7; line-height:1.5; }
+
+/* ── FILE COVER ── */
+.file-cover { padding:52px 0 56px; border-bottom:1px solid var(--border); opacity:0; animation:fadein 0.55s ease 0.1s forwards; }
+
+.cover-stamp {
+  display:inline-flex; align-items:center; gap:10px;
+  background:rgba(79,184,184,0.08); border:1px solid rgba(79,184,184,0.2);
+  border-radius:4px; padding:8px 16px; margin-bottom:26px;
+  font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.12em; color:var(--accent2);
+}
+.cover-meta-row {
+  display:flex; flex-wrap:wrap; gap:5px 24px; margin-bottom:32px;
+  font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em; color:var(--muted);
+}
+.meta-pair { display:flex; gap:6px; }
+.meta-k { opacity:0.5; }
+.meta-v { color:var(--text); opacity:0.8; }
+
+.cover-title {
+  font-size:clamp(22px,4.5vw,32px); font-weight:700;
+  line-height:1.45; letter-spacing:-0.02em; margin-bottom:20px; max-width:580px;
+}
+.cover-desc {
+  font-size:14.5px; line-height:1.9; color:var(--muted);
+  max-width:540px; margin-bottom:8px; opacity:0.85;
+}
+
+/* ── 事件概要 ── */
+.incident-wrap {
+  background:rgba(79,184,184,0.04); border:1px solid rgba(79,184,184,0.12);
+  border-radius:6px; padding:22px 24px; margin-bottom:28px;
+}
+.incident-label {
+  font-family:'JetBrains Mono',monospace; font-size:9px;
+  letter-spacing:0.22em; color:var(--muted); opacity:0.55;
+  text-transform:uppercase; margin-bottom:12px;
+}
+.incident-text {
+  font-size:15px; line-height:1.9; color:var(--text); opacity:0.88;
+}
+.incident-text p + p { margin-top:10px; }
+
+/* ── 主人公紹介 ── */
+.cast-section {
+  display:flex; gap:12px; flex-wrap:wrap; margin-bottom:32px;
+}
+.cast-card {
+  border:1px solid var(--border); border-radius:6px;
+  padding:14px 16px; background:var(--surface); flex:1; min-width:200px;
+}
+.cast-name { font-size:13px; font-weight:600; color:var(--text); margin-bottom:3px; }
+.cast-role {
+  font-family:'JetBrains Mono',monospace; font-size:9px;
+  letter-spacing:0.14em; color:var(--muted); opacity:0.55; margin-bottom:7px;
+}
+.cast-desc { font-size:12px; color:var(--muted); line-height:1.7; }
+
+/* ── TOC ── */
+.toc { border:1px solid var(--border); border-radius:8px; overflow:hidden; background:var(--surface); max-width:460px; }
+.toc-head {
+  padding:12px 18px; border-bottom:1px solid var(--border);
+  background:rgba(255,255,255,0.01);
+  font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.18em; color:var(--muted); opacity:0.7;
+}
+.toc-row {
+  display:flex; align-items:center; padding:10px 18px;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  font-family:'JetBrains Mono',monospace; font-size:10.5px;
+}
+.toc-row:last-child { border-bottom:none; }
+.toc-num { color:var(--muted); opacity:0.6; min-width:56px; letter-spacing:0.1em; }
+.toc-name { color:var(--text); opacity:0.7; flex:1; letter-spacing:0.04em; }
+.toc-access { font-size:9px; letter-spacing:0.16em; }
+.toc-access.free { color:var(--muted); opacity:0.4; }
+.toc-access.obs { color:var(--violet); opacity:0.8; }
+
+/* ── CHAPTER LIST (cover — titles only) ── */
+.chapter-list { margin-top:28px; border-top:1px solid var(--border); }
+.chapter-item {
+  padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.04);
+  font-size:14.5px; color:var(--text); opacity:0.65; line-height:1.4;
+}
+.chapter-item.restricted {
+  color:var(--violet); opacity:0.38;
+  font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.2em;
+}
+.chapter-sep {
+  padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.04);
+  color:var(--border); font-size:18px; letter-spacing:0.1em;
+}
+.chapter-item.final {
+  font-size:15px; font-weight:500; opacity:0.88;
+  border-bottom:none; padding-top:16px;
+}
+.chapter-lock { display:none; } /* no longer needed */
+
+/* ── OBSERVATION LOG LABEL (above chapter title) ── */
+.rec-obs-label {
+  font-family:'JetBrains Mono',monospace; font-size:9px;
+  letter-spacing:0.24em; color:var(--muted); opacity:0.38;
+  text-transform:uppercase; margin-bottom:8px;
+}
+
+/* ── YOUR READ — final question gets its own weight ── */
+.yr-rule { width:36px; height:1px; background:var(--border); margin:30px 0; }
+.yr-final {
+  font-size:clamp(22px,4vw,30px); font-weight:700;
+  color:var(--text); letter-spacing:-0.015em; line-height:1.4;
+}
+
+/* Observer gate fine-line (access level indicator) */
+.ogl-fine-line {
+  font-family:'JetBrains Mono',monospace; font-size:9px;
+  letter-spacing:0.14em; color:var(--muted); opacity:0.45;
+}
+
+/* ── RECORD ── */
+.record {
+  padding:52px 0; border-bottom:1px solid var(--border);
+  opacity:0; transform:translateY(8px);
+  transition:opacity 0.5s ease, transform 0.5s ease;
+}
+.record.visible { opacity:1; transform:translateY(0); }
+
+/* Record system header (small, mono) */
+.rec-header {
+  display:flex; align-items:center; gap:12px; margin-bottom:14px;
+  font-family:'JetBrains Mono',monospace; font-size:10px;
+  letter-spacing:0.18em; text-transform:uppercase; flex-wrap:wrap;
+}
+.rh-num { color:var(--muted); opacity:0.55; }
+.rh-sep { color:var(--muted); opacity:0.2; }
+.rh-date { color:var(--muted); opacity:0.4; flex:1; }
+.rh-badge { font-size:9px; letter-spacing:0.18em; padding:2px 7px; border-radius:3px; }
+.rh-badge.verified { color:var(--muted); border:1px solid var(--border); opacity:0.7; }
+.rh-badge.observer { color:var(--violet); border:1px solid rgba(155,143,255,0.25); }
+@media(max-width:600px){ .rh-date{ display:none; } }
+
+/* Chapter title — the human-readable headline */
+.rec-chapter {
+  font-size:clamp(18px,3.2vw,22px); font-weight:700;
+  color:var(--text); letter-spacing:-0.01em;
+  margin-bottom:18px; line-height:1.45;
+}
+
+/* Story — 2〜4 lines, no jargon */
+.rec-story {
+  font-size:15px; line-height:1.9; color:var(--text);
+  opacity:0.85; margin-bottom:20px; max-width:580px;
+}
+.rec-story p + p { margin-top:12px; }
+
+/* Data toggle button — matches index detail-page-btn */
+.data-toggle {
+  width:100%; padding:9px 14px; margin:16px 0 0;
+  background:rgba(79,184,184,0.06); border:1px dashed rgba(79,184,184,0.28);
+  border-radius:4px; color:var(--muted); font-size:11.5px;
+  text-align:center; font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.08em; cursor:pointer;
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  transition:border-color 0.2s, color 0.2s;
+}
+.data-toggle:hover { border-color:rgba(79,184,184,0.45); color:var(--text); }
+.dt-arrow { font-size:10px; transition:transform 0.25s; }
+.data-toggle.open .dt-arrow { transform:rotate(180deg); }
+
+.data-collapsible { display:none; margin-top:2px; }
+.data-collapsible.open { display:block; }
+
+/* Data rows */
+.data-rows { margin-bottom:4px; }
+.dr {
+  display:flex; align-items:baseline; justify-content:space-between; gap:14px;
+  padding:9px 0; border-bottom:1px solid rgba(255,255,255,0.04);
+  font-family:'JetBrains Mono',monospace; font-size:11px;
+}
+.dr:first-child { border-top:1px solid rgba(255,255,255,0.04); }
+.dr-k { color:var(--muted); opacity:0.72; letter-spacing:0.04em; flex:1; }
+.dr-v { color:var(--text); letter-spacing:0.03em; text-align:right; flex-shrink:0; }
+.dr-v.neg { color:var(--red); }
+.dr-v.dim { color:var(--muted); opacity:0.65; }
+
+/* Context timeline */
+.ctx-list { margin:4px 0 6px; }
+.ctx-row {
+  display:flex; gap:14px; padding:12px 0;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  font-family:'JetBrains Mono',monospace; font-size:10.5px; align-items:baseline;
+}
+.ctx-row:first-child { border-top:1px solid rgba(255,255,255,0.04); }
+.ctx-date { color:var(--muted); opacity:0.5; min-width:84px; letter-spacing:0.04em; flex-shrink:0; }
+.ctx-text { color:var(--text); opacity:0.8; flex:1; line-height:1.65; }
+.ctx-src { color:var(--muted); opacity:0.3; font-size:9.5px; letter-spacing:0.1em; text-align:right; min-width:52px; flex-shrink:0; }
+@media(max-width:600px){ .ctx-src{ display:none; } }
+
+/* Annotation */
+.ann {
+  background:rgba(79,184,184,0.06); border-left:2px solid var(--accent);
+  border-radius:0 4px 4px 0; padding:12px 16px; margin:18px 0 0;
+  font-size:13px; color:var(--muted); line-height:1.75;
+}
+.ann-tag {
+  display:block; font-family:'JetBrains Mono',monospace;
+  font-size:9.5px; letter-spacing:0.18em; color:var(--accent2);
+  margin-bottom:5px; opacity:0.85;
+}
+
+/* SIGNATURE ELEMENT: $128.2B peel reveal */
+.reveal-wrap { position:relative; display:inline-block; }
+.reveal-mask {
+  position:absolute; top:-1px; right:0; bottom:-1px; left:0;
+  background:var(--muted); opacity:0.6; border-radius:1px;
+  transform-origin:right center;
+  animation:peel 0.5s cubic-bezier(0.4,0,0.2,1) 2.8s forwards;
+}
+@keyframes peel { to { transform:scaleX(0); } }
+
+/* Observer gate */
+.obs-gate { position:relative; min-height:200px; }
+.obs-gate-content { filter:blur(4px); pointer-events:none; user-select:none; opacity:0.3; }
+.obs-gate-overlay {
+  position:absolute; inset:0;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:14px; z-index:5;
+}
+.ogl { font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.22em; color:var(--violet); opacity:0.8; }
+.ogl-line { width:36px; height:1px; background:var(--violet-dim); opacity:0.4; }
+.obs-btn {
+  display:inline-block; padding:10px 26px;
+  border:1px solid var(--accent); color:var(--accent2);
+  font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em;
+  background:transparent; cursor:pointer; border-radius:4px; text-decoration:none;
+  transition:background 0.2s;
+}
+.obs-btn:hover { background:rgba(79,184,184,0.08); }
+.obs-fine { font-family:'JetBrains Mono',monospace; font-size:9.5px; color:var(--muted); opacity:0.5; letter-spacing:0.06em; }
+
+/* YOUR READ */
+.your-read { padding:72px 0 60px; border-bottom:1px solid var(--border); }
+.yr-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); margin-bottom:28px; opacity:0.5; }
+.yr-question { font-size:clamp(18px,3.5vw,24px); font-weight:600; line-height:1.75; color:var(--text); max-width:480px; margin-bottom:22px; }
+.yr-sub { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted); letter-spacing:0.06em; line-height:1.9; opacity:0.6; }
+
+/* File footer note */
+.file-footer-note {
+  padding:24px 0 20px; border-bottom:1px solid var(--border);
+  font-family:'JetBrains Mono',monospace; font-size:9.5px;
+  color:var(--muted); letter-spacing:0.05em; line-height:2; opacity:0.4;
+}
+
+/* Signature */
+.signature-line { text-align:center; font-size:13px; color:var(--muted); letter-spacing:0.03em; padding:44px 0 14px; opacity:0.8; }
+
+footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:center; font-size:10px; color:var(--muted); font-family:'JetBrains Mono',monospace; line-height:1.9; }
+footer span { color:var(--violet); opacity:0.65; }
+
+@keyframes fadein { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+@media(prefers-reduced-motion:reduce){ .record{ opacity:1; transform:none; transition:none; } .file-cover{ opacity:1; animation:none; } .reveal-mask{ animation:none; transform:scaleX(0); } }
+</style>
+</head>
+<body>
+
+<!-- ═══ FILE NAV ═══ -->
+<nav class="file-nav">
+  <div class="file-nav-inner">
+    <div class="nav-left">
+      <span>THE 45</span>
+      <span style="opacity:0.3">/</span>
+      <span>PREDICT</span>
+      <span style="opacity:0.3">/</span>
+      <span class="nav-fileid">FILE-001</span>
+    </div>
+    <div class="nav-center" id="navRecord">RECORD — / 06</div>
+    <div class="nav-right">PARTIAL CLASSIFICATION</div>
+  </div>
+</nav>
+
+<!-- ═══ PAGE HEADER ═══ -->
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="logo"><span class="logo-num">THE 45</span><div class="logo-divider"></div><span class="logo-sub">PREDICT</span></div>
+    <a class="back-link" href="index.html">← 観測トップへ戻る</a>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ═══ FILE COVER ═══ -->
+  <div class="file-cover">
+
+    <!-- FILE STATUS -->
+    <div class="file-status monitoring">
+      <span class="status-dot"></span>
+      STATUS : MONITORING
+    </div>
+
+    <div class="cover-stamp">FILE-001 &nbsp;／&nbsp; 2019.Q3 → 2020.Q1</div>
+
+    <h1 class="cover-title">バークシャーの沈黙</h1>
+
+    <p class="cover-desc">
+      2019年の秋、世界的に有名な投資家が「動くことをやめた」。<br>
+      株式市場が史上最高値を更新し続ける中、彼の会社は現金を積み上げ、何も買わなかった。<br>
+      そして数ヶ月後、世界は大混乱に陥った。
+    </p>
+
+    <div class="chapter-list">
+      <div class="chapter-item">最初の違和感</div>
+      <div class="chapter-item">熱狂の中で</div>
+      <div class="chapter-item">静かに進んでいたもの</div>
+      <div class="chapter-item restricted">OBSERVER ONLY</div>
+      <div class="chapter-sep">—</div>
+      <div class="chapter-item final">あなたは、何を見た。</div>
+    </div>
+
+  </div><!-- /file-cover -->
+
+
+  <!-- ═══ REC 01: 最初の違和感 ═══ -->
+  <div class="record" data-num="01" id="rec01">
+    <div class="rec-header">
+      <span class="rh-num">REC 01</span>
+      <span class="rh-sep">—</span>
+      <span class="rh-date">2019.11.14</span>
+      <span class="rh-badge verified">ARCHIVED</span>
+    </div>
+
+    <div class="rec-obs-label">観測記録 — 01 / 06</div>
+    <h2 class="rec-chapter">最初の違和感。</h2>
+
+    <div class="rec-story">
+      <p>世界が強気だった頃、ある投資家が「動くことをやめた」。</p>
+      <p>ウォーレン・バフェット——彼が率いるバークシャー・ハサウェイは、株が上がり続ける相場の中で、何も買わなかった。その代わりに積み上がったのは、約13兆円に相当する現金。史上最大の規模で。</p>
+      <p>株価が上がっている時に、投資家が現金を持ち続けるのは珍しいことだ。本来なら、使うはずだから。</p>
+    </div>
+
+    <button class="data-toggle" onclick="toggleData(this)">
+      <span>記録を見る</span><span class="dt-arrow">▼</span>
+    </button>
+    <div class="data-collapsible">
+      <div class="data-rows">
+        <div class="dr"><span class="dr-k">FILING TYPE</span><span class="dr-v">13F-HR（機関投資家の保有開示書類）</span></div>
+        <div class="dr"><span class="dr-k">FILER</span><span class="dr-v">BERKSHIRE HATHAWAY INC</span></div>
+        <div class="dr"><span class="dr-k">PERIOD OF REPORT</span><span class="dr-v">2019-09-30</span></div>
+        <div class="dr"><span class="dr-k">FILING DATE</span><span class="dr-v">2019-11-14</span></div>
+        <div class="dr">
+          <span class="dr-k">CASH &amp; EQUIVALENTS（現金および同等物）</span>
+          <span class="dr-v">
+            <!-- SIGNATURE ELEMENT -->
+            <span class="reveal-wrap">$128.2B<span class="reveal-mask"></span></span>
+          </span>
+        </div>
+        <div class="dr"><span class="dr-k">NET EQUITY POSITION CHANGE</span><span class="dr-v neg">NET REDUCTION — 3期連続で保有株を削減</span></div>
+        <div class="dr"><span class="dr-k">新規の大型投資</span><span class="dr-v dim">なし</span></div>
+      </div>
+    </div>
+
+    <div class="ann">
+      <span class="ann-tag">NOTE</span>
+      当時、市場のコンセンサスは「バフェットは買う機会を待っている」だった。
+    </div>
+  </div>
+
+
+  <!-- ═══ REC 02: 世界は、熱狂していた ═══ -->
+  <div class="record" data-num="02" id="rec02">
+    <div class="rec-header">
+      <span class="rh-num">REC 02</span>
+      <span class="rh-sep">—</span>
+      <span class="rh-date">2019.Q4 — 2020.02</span>
+      <span class="rh-badge verified">ARCHIVED</span>
+    </div>
+
+    <div class="rec-obs-label">観測記録 — 02 / 06</div>
+    <h2 class="rec-chapter">世界は、熱狂していた。</h2>
+
+    <div class="rec-story">
+      <p>バークシャーが静かに現金を積み上げていたその頃、世界は全く別の景色の中にいた。</p>
+      <p>株価は史上最高値を更新し続け、失業率は50年ぶりの低水準。「この好景気はまだ続く」という楽観が、あらゆるメディアを支配していた。</p>
+      <p>2020年2月19日、アメリカの株価指数は過去最高値を記録した。その3週間後、世界の市場は史上最大級の速度で暴落を始めた。</p>
+    </div>
+
+    <div class="ctx-list">
+      <div class="ctx-row">
+        <span class="ctx-date">2019.10.31</span>
+        <span class="ctx-text">アメリカの中央銀行が政策金利を引き下げ。市場は「これで安心」と評価し、混乱なく吸収</span>
+        <span class="ctx-src">FRB</span>
+      </div>
+      <div class="ctx-row">
+        <span class="ctx-date">2019.11.27</span>
+        <span class="ctx-text">ダウ平均が史上初めて28,000ドルを突破。「最長の強気相場が続く」と主要メディアが一斉報道</span>
+        <span class="ctx-src">DJIA</span>
+      </div>
+      <div class="ctx-row">
+        <span class="ctx-date">2019.12.31</span>
+        <span class="ctx-text">アメリカの株式市場、年間+28.9%で着地。失業率3.5%——50年ぶりの低水準を記録</span>
+        <span class="ctx-src">BLS</span>
+      </div>
+      <div class="ctx-row">
+        <span class="ctx-date">2020.01.09</span>
+        <span class="ctx-text">WHO（世界保健機関）が声明。「武漢の新型肺炎、人から人への感染の明確な証拠なし」</span>
+        <span class="ctx-src">WHO</span>
+      </div>
+      <div class="ctx-row">
+        <span class="ctx-date">2020.02.12</span>
+        <span class="ctx-text">ダウ平均が29,551ドルで史上最高値を更新。市場の「恐怖指数」は14以下と、極めて落ち着いた状態</span>
+        <span class="ctx-src">CBOE</span>
+      </div>
+      <div class="ctx-row">
+        <span class="ctx-date">2020.02.19</span>
+        <span class="ctx-text">S&amp;P500が3,386ポイントで過去最高値を更新。——後に「コロナ前最後の高値」と記録される日</span>
+        <span class="ctx-src">S&amp;P</span>
+      </div>
+    </div>
+
+    <div class="ann">
+      <span class="ann-tag">NOTE</span>
+      バークシャーの記録に変化が現れていたのは、この最高値のさらに数ヶ月前だった。
+    </div>
+  </div>
+
+
+  <!-- ═══ REC 03: 静かな売りは、始まっていた ═══ -->
+  <div class="record" data-num="03" id="rec03">
+    <div class="rec-header">
+      <span class="rh-num">REC 03</span>
+      <span class="rh-sep">—</span>
+      <span class="rh-date">2019.Q1 — Q3</span>
+      <span class="rh-badge verified">ARCHIVED</span>
+    </div>
+
+    <div class="rec-obs-label">観測記録 — 03 / 06</div>
+    <h2 class="rec-chapter">静かな売りは、始まっていた。</h2>
+
+    <div class="rec-story">
+      <p>これは突然起きた変化ではなかった。</p>
+      <p>記録を遡ると、バークシャーは2019年のはじめから、大手銀行株を少しずつ売り続けていた。大きな買いを入れることもなく、ただ静かに、縮小しながら。</p>
+      <p>景気が良い時ほど、銀行は利益を出す。なのに、バークシャーは銀行株を手放していた。</p>
+    </div>
+
+    <button class="data-toggle" onclick="toggleData(this)">
+      <span>記録を見る</span><span class="dt-arrow">▼</span>
+    </button>
+    <div class="data-collapsible">
+      <div class="data-rows">
+        <div class="dr"><span class="dr-k">ウェルズ・ファーゴ（大手銀行）— 保有推移</span><span class="dr-v neg">4四半期連続で段階的に縮小（SEC公開記録）</span></div>
+        <div class="dr"><span class="dr-k">ゴールドマン・サックス（投資銀行）— 保有推移</span><span class="dr-v neg">2019年Q3に大幅削減（13F公開記録）</span></div>
+        <div class="dr"><span class="dr-k">JPモルガン・チェース（大手銀行）— 保有推移</span><span class="dr-v neg">2019年Q2→Q3に削減（13F公開記録）</span></div>
+        <div class="dr"><span class="dr-k">新規の大型投資（2019年Q1〜Q3）</span><span class="dr-v dim">なし</span></div>
+        <div class="dr"><span class="dr-k">バフェット年次書簡（2020年2月22日 公開）</span><span class="dr-v dim">「合理的な価格で投資できるものが見つからない」</span></div>
+      </div>
+    </div>
+
+    <div class="ann">
+      <span class="ann-tag">NOTE</span>
+      この書簡が公開された同じ日、アメリカの株価指数（S&amp;P500）は3,300を超えていた。
+    </div>
+  </div>
+
+
+  <!-- ═══ REC 04: そして、何が起きたのか（Observer） ═══ -->
+  <div class="record" data-num="04" id="rec04">
+    <div class="rec-header">
+      <span class="rh-num">REC 04</span>
+      <span class="rh-sep">—</span>
+      <span class="rh-date">2019.Q4 — 2020.Q1</span>
+      <span class="rh-badge observer">RESTRICTED</span>
+    </div>
+
+    <div class="rec-obs-label">観測記録 — 04 / 06 — RESTRICTED</div>
+    <h2 class="rec-chapter">そして、何が起きたのか。</h2>
+
+    <div class="obs-gate">
+      <div class="obs-gate-content">
+        <div class="rec-story">
+          <p>その後、バークシャーはさらに現金を積み上げ続けた。市場が暴落したとき、バフェットは動かなかった——と後に認めた。</p>
+          <p>そして2020年4月、ある発表が世界を驚かせた。</p>
+        </div>
+        <div class="data-rows" style="margin-top:8px;">
+          <div class="dr"><span class="dr-k">保有航空株4銘柄（2019年Q4時点）</span><span class="dr-v">デルタ / サウスウェスト / ユナイテッド / アメリカン</span></div>
+          <div class="dr"><span class="dr-k">現金推移：2019年Q3 → 2020年Q1</span><span class="dr-v">$128.2B → $137.3B（さらに増加）</span></div>
+          <div class="dr"><span class="dr-k">暴落前後（2020年2月〜3月）の行動</span><span class="dr-v neg">新規の大型投資なし</span></div>
+          <div class="dr"><span class="dr-k">2020年4月 緊急発表</span><span class="dr-v neg">航空4銘柄を全売却。損失を確定。</span></div>
+        </div>
+      </div>
+      <div class="obs-gate-overlay">
+        <span class="ogl">OBSERVER CLEARANCE REQUIRED</span>
+        <span class="ogl-fine-line">CURRENT : PUBLIC &nbsp;／&nbsp; REQUIRED : OBSERVER</span>
+        <div class="ogl-line"></div>
+        <a class="obs-btn" href="premium.html">OBSERVER ACCESS</a>
+        <span class="obs-fine">Monthly ¥480 ／ Revoke Anytime</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══ REC 05: その先に何があったのか（Observer） ═══ -->
+  <div class="record" data-num="05" id="rec05">
+    <div class="rec-header">
+      <span class="rh-num">REC 05</span>
+      <span class="rh-sep">—</span>
+      <span class="rh-date">2020 → PRESENT</span>
+      <span class="rh-badge observer">RESTRICTED</span>
+    </div>
+
+    <div class="rec-obs-label">観測記録 — 05 / 06 — RESTRICTED</div>
+    <h2 class="rec-chapter">その先に、何があったのか。</h2>
+
+    <div class="obs-gate">
+      <div class="obs-gate-content">
+        <div class="rec-story">
+          <p>航空株を手放したバークシャーは、その後、別の動きを見せた。石油会社、日本の商社、自社株買い。積み上げた現金は、少しずつ動き始めた。</p>
+          <p>後から振り返ると、2019年秋の「沈黙」は、ここへ向かう準備だったのかもしれない。</p>
+        </div>
+        <div class="data-rows" style="margin-top:8px;">
+          <div class="dr"><span class="dr-k">2020年以降の主な投資先</span><span class="dr-v">石油メジャー / 日本五大商社 / 自社株買い拡大</span></div>
+          <div class="dr"><span class="dr-k">四半期別の詳細な資金移動</span><span class="dr-v dim">Observer記録に含む</span></div>
+        </div>
+      </div>
+      <div class="obs-gate-overlay">
+        <span class="ogl">OBSERVER CLEARANCE REQUIRED</span>
+        <span class="ogl-fine-line">CURRENT : PUBLIC &nbsp;／&nbsp; REQUIRED : OBSERVER</span>
+        <div class="ogl-line"></div>
+        <a class="obs-btn" href="premium.html">OBSERVER ACCESS</a>
+        <span class="obs-fine">Monthly ¥480 ／ Revoke Anytime</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══ REC 06: あなたは、何を見た ═══ -->
+  <div class="your-read">
+    <div class="yr-label">観測記録 — 06 / 06</div>
+
+    <div class="yr-question">
+      記録は、ここで終わる。<br>
+      残っているのは、事実だけ。
+    </div>
+
+    <div class="yr-rule"></div>
+
+    <p class="yr-final">あなたは、何を見た。</p>
+  </div>
+
+
+  <!-- ═══ UPDATE LOG（管理情報・折りたたみ） ═══ -->
+  <div style="padding:24px 0 0; border-top:1px solid var(--border);">
+    <button class="data-toggle" onclick="toggleData(this)" style="max-width:460px;">
+      <span>UPDATE LOG</span><span class="dt-arrow">▼</span>
+    </button>
+    <div class="data-collapsible" style="max-width:460px;">
+      <div class="update-log" style="margin-top:0; border-top:none; border-radius:0 0 6px 6px;">
+        <div class="update-entry">
+          <span class="update-date">2026.07.03</span>
+          <span class="update-desc">FILE Created — Initial publication (REC 01–06)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FILE FOOTER NOTE ═══ -->
+  <div class="file-footer-note">
+    <p>SOURCES: SEC EDGAR Form 13F-HR (Berkshire Hathaway Inc) ／ Berkshire Hathaway Annual Reports ／ WHO Disease Outbreak News (archived) ／ Federal Reserve Board press releases ／ Bloomberg Market Data (index levels, publicly reported)</p>
+    <p style="margin-top:5px;">当記録はSECおよび公開報道に基づく事実の整理です。投資判断の提供、将来予測、売買推奨を目的としたものではありません。</p>
+  </div>
+
+  <p class="signature-line">今日もまた、誰かの足跡が残る。</p>
+
+</div><!-- /container -->
+
+<footer>
+  <div class="container">
+    <p>© 2026 THE 45 PROJECT. <span>PREDICT ARCHIVE</span></p>
+    <p style="font-size:9px;margin-top:4px;opacity:0.4;">当サイトのデータはSEC公開書類および公開報道に基づいています。投資勧誘を目的としたものではなく、歴史の記録を目的としています。</p>
+  </div>
+</footer>
+
+<script>
+// Data toggle
+function toggleData(btn) {
+  var c = btn.nextElementSibling;
+  var open = c.classList.toggle('open');
+  btn.classList.toggle('open', open);
+  btn.querySelector('span:first-child').textContent = open ? '記録を閉じる' : '記録を見る';
+}
+
+// Scroll-in + nav update (record count is dynamic)
+(function(){
+  var records = document.querySelectorAll('.record');
+  var total = records.length;
+  var nav = document.getElementById('navRecord');
+  var cur = null;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        var n = e.target.dataset.num;
+        if(n && n !== cur){
+          cur = n;
+          nav.textContent = 'RECORD ' + n + ' / ' + total;
+          nav.classList.add('lit');
+          setTimeout(function(){ nav.classList.remove('lit'); }, 700);
+        }
+      }
+    });
+  },{threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+  records.forEach(function(r){ io.observe(r); });
+})();
+</script>
+</body>
+</html>
