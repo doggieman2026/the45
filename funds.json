@@ -33,9 +33,9 @@
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/blackrock.json",
-        "total_count": 0,
-        "new_count": 0,
-        "exited_count": 0
+        "total_count": 139358,
+        "new_count": 6149,
+        "exited_count": 5781
       }
     },
     {
@@ -64,9 +64,9 @@
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/vanguard.json",
-        "total_count": 0,
-        "new_count": 0,
-        "exited_count": 0
+        "total_count": 209964,
+        "new_count": 8424,
+        "exited_count": 7993
       }
     },
     {
@@ -299,7 +299,11 @@
       "observation_characteristic": "巨大集中ポジションが四半期を通じて静止し続け、稀に起きる大幅な入れ替えとの対比が明確に現れる。",
       "filing_status": "active",
       "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_fetch_status": {
+        "status": "skipped",
+        "checked_at": "2026-07-29T12:49:16Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
         "first_available_quarter": null,
@@ -314,9 +318,9 @@
       ],
       "observed_changes_summary": {
         "path": "data/observed_changes/berkshire.json",
-        "total_count": 0,
-        "new_count": 0,
-        "exited_count": 0
+        "total_count": 2441,
+        "new_count": 116,
+        "exited_count": 129
       }
     },
     {
@@ -469,9 +473,9 @@
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/soros.json",
-        "total_count": 0,
-        "new_count": 0,
-        "exited_count": 0
+        "total_count": 14512,
+        "new_count": 4129,
+        "exited_count": 4065
       }
     },
     {

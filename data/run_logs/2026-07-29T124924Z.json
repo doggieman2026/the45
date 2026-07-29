@@ -1,0 +1,6 @@
+{
+  "run_at": "2026-07-29T12:49:24Z",
+  "trigger": "workflow_dispatch",
+  "fetch_funds_status": "success",
+  "compute_changes_status": "success"
+}
