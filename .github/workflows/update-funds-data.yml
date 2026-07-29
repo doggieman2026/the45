@@ -1,0 +1,132 @@
+name: Update Funds Data (Quarterly)
+# 実行タイミング:
+#   - 13F-HRの45日提出期限の翌日を目安に、年4回自動実行
+#     （期末: 12/31, 3/31, 6/30, 9/30 → 期限: 2/14, 5/15, 8/14, 11/14 のおおよそ翌日）
+#   - リポジトリのActionsタブから手動実行も可能 (workflow_dispatch)
+#
+# 重要: このワークフローは data-staging ブランチにのみコミットする。
+#       main（GitHub Pagesの公開元）には一切触れない。
+#       取得したデータを確認・FILE制作の検討期間を経てから、
+#       別ワークフロー（publish-funds-data.yml）で明示的に公開する。
+"on":
+  schedule:
+    - cron: '0 9 15 2,5,8,11 *'   # 2/15, 5/15, 8/15, 11/15 の 09:00 UTC（日本時間18:00）
+  workflow_dispatch:
+    inputs:
+      fund_id:
+        description: '特定のfund idのみ実行する場合に指定（空なら45主体すべて対象）'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: リポジトリをチェックアウト（data-stagingブランチ、無ければmainから作成）
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: data-stagingブランチを準備
+        run: |
+          git fetch origin data-staging 2>/dev/null || true
+          if git show-ref --verify --quiet refs/remotes/origin/data-staging; then
+            git checkout data-staging
+            git merge main --no-edit -m "chore: mainの変更をdata-stagingへ反映"
+          else
+            git checkout -b data-staging
+          fi
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: ステータス初期化
+        id: init_status
+        run: |
+          echo "## THE45 データ取得ステータス" >> "$GITHUB_STEP_SUMMARY"
+          echo "実行日時（UTC）: $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+
+      # ── ステージ1: SEC EDGARから45主体分の13F-HRを取得 ──
+      - name: "[1/2] fetch_funds.py 実行"
+        id: fetch_funds
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: |
+          echo "### ステージ1: fetch_funds.py" >> "$GITHUB_STEP_SUMMARY"
+          if [ -n "${{ github.event.inputs.fund_id }}" ]; then
+            python3 scripts/fetch_funds.py --id "${{ github.event.inputs.fund_id }}" \
+              | tee fetch_funds_output.log
+          else
+            python3 scripts/fetch_funds.py | tee fetch_funds_output.log
+          fi
+          echo "ステージ1: 完了（詳細はログ参照）" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          tail -n 20 fetch_funds_output.log >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+        # fetch_funds.py は1主体の失敗で全体を止めない設計（fund単位で例外を握りつぶし、
+        # last_fetch_statusに記録する）。ここでワークフロー自体が失敗するのは、
+        # スクリプト自体が起動できない・funds.jsonが読めない等、致命的なケースのみ。
+
+      # ── ステージ2: 観測ログ（observed_changes）の再計算 ──
+      - name: "[2/2] compute_observed_changes.py 実行"
+        id: compute_changes
+        if: always() && steps.fetch_funds.outcome == 'success'
+        run: |
+          echo "### ステージ2: compute_observed_changes.py" >> "$GITHUB_STEP_SUMMARY"
+          python3 scripts/compute_observed_changes.py | tee compute_changes_output.log
+          echo "ステージ2: 完了" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          cat compute_changes_output.log >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: ステージ2がスキップされた場合の記録
+        if: steps.fetch_funds.outcome != 'success'
+        run: |
+          echo "### ステージ2: compute_observed_changes.py" >> "$GITHUB_STEP_SUMMARY"
+          echo "⚠️ ステージ1が失敗したため実行されませんでした。" >> "$GITHUB_STEP_SUMMARY"
+
+      # ── 実行ログをリポジトリにも残す（Actions実行履歴が消えても追跡できるように） ──
+      - name: 実行ログをdata/run_logs/へ保存
+        if: always()
+        run: |
+          mkdir -p data/run_logs
+          LOG_FILE="data/run_logs/$(date -u +%Y-%m-%dT%H%M%SZ).json"
+          python3 - <<'PYEOF'
+          import json, os, time
+          log = {
+              "run_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+              "trigger": os.environ.get("GITHUB_EVENT_NAME", "unknown"),
+              "fetch_funds_status": "${{ steps.fetch_funds.outcome }}",
+              "compute_changes_status": "${{ steps.compute_changes.outcome }}",
+          }
+          path = os.environ["LOG_FILE"]
+          with open(path, "w", encoding="utf-8") as f:
+              json.dump(log, f, ensure_ascii=False, indent=2)
+          PYEOF
+        env:
+          LOG_FILE: data/run_logs/${{ github.run_id }}.json
+
+      - name: data-stagingへコミット＆プッシュ
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add funds.json data/ fetch_funds_output.log compute_changes_output.log 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "変更はありませんでした。"
+          else
+            git commit -m "chore: 45主体データ取得 ($(date -u +%Y-%m-%d)) [data-staging]"
+            git push origin data-staging
+          fi
+
+      - name: 失敗時はワークフロー自体を失敗扱いにする
+        if: steps.fetch_funds.outcome != 'success' || steps.compute_changes.outcome == 'failure'
+        run: |
+          echo "致命的な失敗がありました。GITHUB_STEP_SUMMARYを確認してください。"
+          exit 1

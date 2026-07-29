@@ -1,0 +1,54 @@
+name: Publish Funds Data to Main
+# 手動実行専用。data-stagingブランチで取得・確認済みのデータを
+# mainへ反映する（＝GitHub Pagesでの公開を意味する）。
+#
+# 意図的にスケジュール実行にはしていない。SEC取得（update-funds-data.yml）と
+# 公開は別のタイミングであるべき、という設計判断のため。
+# 取得されたデータを確認し、FILE制作の要否を検討する期間を挟んでから、
+# このワークフローを手動で実行する。
+"on":
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'data-stagingの内容をmainへ反映して公開します。よろしければ "yes" と入力してください。'
+        required: true
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 確認入力のチェック
+        run: |
+          if [ "${{ github.event.inputs.confirm }}" != "yes" ]; then
+            echo "確認入力が 'yes' ではありません。公開を中止します。"
+            exit 1
+          fi
+
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: data-stagingが存在するか確認
+        run: |
+          if ! git show-ref --verify --quiet refs/remotes/origin/data-staging; then
+            echo "data-stagingブランチが見つかりません。先にupdate-funds-data.ymlを実行してください。"
+            exit 1
+          fi
+
+      - name: data-staging を main へマージ
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git merge origin/data-staging --no-edit -m "chore: data-stagingをmainへ公開 ($(date -u +%Y-%m-%d))"
+          git push origin main
+
+      - name: 公開完了サマリー
+        run: |
+          echo "## THE45 データ公開完了" >> "$GITHUB_STEP_SUMMARY"
+          echo "data-staging の内容が main へ反映されました。GitHub Pagesへの反映を待ってください。" >> "$GITHUB_STEP_SUMMARY"
