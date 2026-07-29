@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "schema_version": "1.1",
+    "schema_version": "1.2",
     "description": "THE45 PROJECT — funds.json（13F提出主体マスタ・45 CAPITAL MOVERS 完全版）。companies.jsonとは分離した、資金主体専用のデータ構造。",
-    "note": "quarters / observed_changes は fetch_13f.py 実行後に自動生成・追記される。data_coverage も取得後に実データで埋める。",
+    "note": "quarters は data/history/{fund_id}/*.json から、observed_changes_summary.path が指す data/observed_changes/{fund_id}.json は 同じくスナップショットから、それぞれ fetch_funds.py / compute_observed_changes.py 実行後に 生成・更新される。observed_changesの実データはfunds.json本体には保存しない（GitHubのファイルサイズ上限対策。1.1版でこの点が設計ミスだった）。",
     "editorial_rule": "observation_characteristic / inclusion_reason は、13F上で直接観測できる事実の記述にとどめる。断定的な評価語（買うべき／危険／シグナル等）は使用しない。observed_changesのtypeは increased / decreased / new / exited の4種類に限定し、重要度スコアや意味づけを持たせない。",
     "total_funds": 45
   },
@@ -30,8 +30,13 @@
       },
       "snapshot_dir": "data/history/blackrock/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/blackrock.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "vanguard",
@@ -56,8 +61,13 @@
       },
       "snapshot_dir": "data/history/vanguard/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/vanguard.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "jpmorgan",
@@ -82,8 +92,13 @@
       },
       "snapshot_dir": "data/history/jpmorgan/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/jpmorgan.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "statestreet",
@@ -108,8 +123,13 @@
       },
       "snapshot_dir": "data/history/statestreet/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/statestreet.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "goldmansachs",
@@ -134,8 +154,13 @@
       },
       "snapshot_dir": "data/history/goldmansachs/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/goldmansachs.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "fidelity",
@@ -160,8 +185,13 @@
       },
       "snapshot_dir": "data/history/fidelity/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/fidelity.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "capitalgroup",
@@ -186,8 +216,13 @@
       },
       "snapshot_dir": "data/history/capitalgroup/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/capitalgroup.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "geode",
@@ -212,8 +247,13 @@
       },
       "snapshot_dir": "data/history/geode/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/geode.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "norgesbank",
@@ -238,8 +278,13 @@
       },
       "snapshot_dir": "data/history/norgesbank/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/norgesbank.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "berkshire",
@@ -264,10 +309,15 @@
       },
       "snapshot_dir": "data/history/berkshire/",
       "quarters": [],
-      "observed_changes": [],
       "related_files": [
         "file-001-berkshire-silence"
-      ]
+      ],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/berkshire.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "baupost",
@@ -292,8 +342,13 @@
       },
       "snapshot_dir": "data/history/baupost/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/baupost.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "southeastern",
@@ -318,8 +373,13 @@
       },
       "snapshot_dir": "data/history/southeastern/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/southeastern.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "harris",
@@ -344,8 +404,13 @@
       },
       "snapshot_dir": "data/history/harris/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/harris.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "firsteagle",
@@ -370,8 +435,13 @@
       },
       "snapshot_dir": "data/history/firsteagle/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/firsteagle.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "soros",
@@ -396,8 +466,13 @@
       },
       "snapshot_dir": "data/history/soros/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/soros.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "bridgewater",
@@ -422,8 +497,13 @@
       },
       "snapshot_dir": "data/history/bridgewater/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/bridgewater.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "duquesne",
@@ -448,8 +528,13 @@
       },
       "snapshot_dir": "data/history/duquesne/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/duquesne.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "tudor",
@@ -474,8 +559,13 @@
       },
       "snapshot_dir": "data/history/tudor/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/tudor.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "renaissance",
@@ -500,8 +590,13 @@
       },
       "snapshot_dir": "data/history/renaissance/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/renaissance.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "citadel",
@@ -526,8 +621,13 @@
       },
       "snapshot_dir": "data/history/citadel/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/citadel.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "millennium",
@@ -552,8 +652,13 @@
       },
       "snapshot_dir": "data/history/millennium/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/millennium.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "twosigma",
@@ -578,8 +683,13 @@
       },
       "snapshot_dir": "data/history/twosigma/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/twosigma.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "aqr",
@@ -604,8 +714,13 @@
       },
       "snapshot_dir": "data/history/aqr/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/aqr.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "pershingsquare",
@@ -630,8 +745,13 @@
       },
       "snapshot_dir": "data/history/pershingsquare/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/pershingsquare.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "icahn",
@@ -656,8 +776,13 @@
       },
       "snapshot_dir": "data/history/icahn/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/icahn.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "valueact",
@@ -682,8 +807,13 @@
       },
       "snapshot_dir": "data/history/valueact/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/valueact.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "trian",
@@ -708,8 +838,13 @@
       },
       "snapshot_dir": "data/history/trian/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/trian.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "elliott",
@@ -734,8 +869,13 @@
       },
       "snapshot_dir": "data/history/elliott/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/elliott.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "thirdpoint",
@@ -760,8 +900,13 @@
       },
       "snapshot_dir": "data/history/thirdpoint/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/thirdpoint.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "starboard",
@@ -786,8 +931,13 @@
       },
       "snapshot_dir": "data/history/starboard/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/starboard.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "burry",
@@ -812,8 +962,13 @@
       },
       "snapshot_dir": "data/history/burry/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/burry.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "ark",
@@ -838,8 +993,13 @@
       },
       "snapshot_dir": "data/history/ark/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/ark.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "whalerock",
@@ -864,8 +1024,13 @@
       },
       "snapshot_dir": "data/history/whalerock/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/whalerock.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "altimeter",
@@ -890,8 +1055,13 @@
       },
       "snapshot_dir": "data/history/altimeter/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/altimeter.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "tigerglobal",
@@ -916,8 +1086,13 @@
       },
       "snapshot_dir": "data/history/tigerglobal/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/tigerglobal.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "coatue",
@@ -942,8 +1117,13 @@
       },
       "snapshot_dir": "data/history/coatue/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/coatue.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "softbank",
@@ -968,8 +1148,13 @@
       },
       "snapshot_dir": "data/history/softbank/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/softbank.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "cascade",
@@ -994,8 +1179,13 @@
       },
       "snapshot_dir": "data/history/cascade/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/cascade.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "temasek",
@@ -1020,8 +1210,13 @@
       },
       "snapshot_dir": "data/history/temasek/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/temasek.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "nomura",
@@ -1046,8 +1241,13 @@
       },
       "snapshot_dir": "data/history/nomura/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/nomura.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "calpers",
@@ -1072,8 +1272,13 @@
       },
       "snapshot_dir": "data/history/calpers/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/calpers.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "harvard",
@@ -1098,8 +1303,13 @@
       },
       "snapshot_dir": "data/history/harvard/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/harvard.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "markel",
@@ -1124,8 +1334,13 @@
       },
       "snapshot_dir": "data/history/markel/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/markel.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "loews",
@@ -1150,8 +1365,13 @@
       },
       "snapshot_dir": "data/history/loews/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/loews.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     },
     {
       "id": "oaktree",
@@ -1176,8 +1396,13 @@
       },
       "snapshot_dir": "data/history/oaktree/",
       "quarters": [],
-      "observed_changes": [],
-      "related_files": []
+      "related_files": [],
+      "observed_changes_summary": {
+        "path": "data/observed_changes/oaktree.json",
+        "total_count": 0,
+        "new_count": 0,
+        "exited_count": 0
+      }
     }
   ]
 }
