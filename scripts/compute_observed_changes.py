@@ -1,46 +1,43 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-THE45 PROJECT — compute_observed_changes.py（設計版）
+THE45 PROJECT — compute_observed_changes.py（修正版 v2）
 =====================================================
 
 概要:
   data/history/{fund_id}/*.json のスナップショット群（source of truth）から、
-  funds.json の各主体レコードに格納する observed_changes を完全に再計算する。
+  各主体の observed_changes を完全に再計算する。
 
-  fetch_funds.py が「取得」を担当するのに対し、このモジュールは
-  「取得済みデータからの事実抽出」だけを担当する。責務を分離することで、
-  観測ロジック側の変更（span計算式の調整等）がSEC取得処理に影響しないようにする。
+v2での重要な変更（GitHubのファイルサイズ上限対応）:
+  observed_changes は funds.json には保存しない。
+  代わりに data/observed_changes/{fund_id}.json という、スナップショットと
+  同じ「主体ごとの別ファイル」に保存する。
 
-生成するもの（固定・これ以上増やさない）:
+  理由: BlackRock・Citadelのように保有銘柄数千件規模の主体は、
+  数四半期分の比較だけでも変化イベントが大量に生成される。これを
+  全45主体分まとめて funds.json（1つの巨大ファイル）に書き込むと、
+  ファイルサイズがGitHubの上限（100MB）を容易に超えてしまう。
+
+  スナップショットと同じ「1主体1ファイル」の分割方式にすることで、
+  この問題を構造的に回避する。funds.json はマスタ情報（静的な主体情報 +
+  quarters という軽量な四半期サマリー）だけを持つ、常に小さいファイルのまま維持される。
+
+生成するもの（変更なし・固定）:
   - type: "new" | "increased" | "decreased" | "exited" の4種類のみ
   - 各変化の金額・株数・変化率（事実の数値）
   - span: 同方向の変化が何四半期連続しているかという「カウントのみ」
-    （increased / decreased にのみ付与。new / exited には付与しない）
 
-生成しないもの（意図的に含めない）:
+生成しないもの（変更なし・意図的に含めない）:
   - 重要度スコア・注目度ランキング
-  - 複数主体間の一致判定（consensus signal的なもの）
-  - 「意味のある変化」「注目すべき動き」等の解釈文言
-  - 断定的な評価（買い時／売り時等）
-
-  これらが必要になった場合も、observed_changes の生成ロジックには追加しない。
-  FILE制作またはObserver表示側の、別レイヤーの仕事として扱う。
-
-既存コードとの関係:
-  compute_diff()（fetch_13f.py）と同じ「前回スナップショットとの比較」という
-  発想を踏襲しているが、以下の点で役割が異なる：
-    - fetch_13f.py の compute_diff() は「直近1回の比較」のみを行い、
-      buys/sells（解釈済みの表示用データ）を作るための中間処理だった。
-    - このモジュールは「全四半期ペアの比較」を行い、span（連続性）を
-      含めた「事実データそのもの」を作る。buys/sellsという表示用の
-      ラベルには変換しない。
+  - 複数主体間の一致判定
+  - 解釈文言・断定的な評価
 """
 
 import json
 from pathlib import Path
 
 SNAPSHOT_DIR = Path(__file__).parent.parent / "data" / "history"
+OBSERVED_CHANGES_DIR = Path(__file__).parent.parent / "data" / "observed_changes"
 FUNDS_JSON_PATH = Path(__file__).parent.parent / "funds.json"
 
 
@@ -237,16 +234,39 @@ def compute_observed_changes_for_fund(fund_id: str) -> list[dict]:
     return changes
 
 
-# ===== funds.json への反映 =====
+# ===== 保存（主体ごとの別ファイル） =====
 
-def update_observed_changes_in_funds_json(fund_ids: list[str] | None = None) -> None:
+def save_observed_changes(fund_id: str, changes: list[dict]) -> None:
+    """data/observed_changes/{fund_id}.json へ保存する。
+    スナップショット（data/history/{fund_id}/*.json）と同じ考え方で、
+    主体ごとに独立したファイルにする。funds.jsonには埋め込まない。
     """
-    funds.json 内の指定主体（省略時は全45主体）について、
-    observed_changes をスナップショットから完全再計算し、書き戻す。
+    OBSERVED_CHANGES_DIR.mkdir(parents=True, exist_ok=True)
+    path = OBSERVED_CHANGES_DIR / f"{fund_id}.json"
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump({"fund_id": fund_id, "changes": changes}, f, ensure_ascii=False, indent=2)
 
-    quarters/data_coverage（fetch_funds.py側）と同様、差分追記ではなく
-    毎回の完全再構築。observed_changesの生成ロジック自体を後から
-    変更しても、次回実行時に自動的に全期間へ反映される。
+
+def load_observed_changes(fund_id: str) -> list[dict]:
+    """data/observed_changes/{fund_id}.json から読み込む。無ければ空配列。"""
+    path = OBSERVED_CHANGES_DIR / f"{fund_id}.json"
+    if not path.exists():
+        return []
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f).get("changes", [])
+
+
+# ===== funds.json への反映 =====
+# NOTE: funds.json には observed_changes の配列そのものは保存しない。
+# 代わりに、件数（事実の数）とファイルパスへの参照だけを軽量に持たせる。
+# これにより funds.json は常に小さいまま維持される
+# （保有銘柄数千件規模の主体が混ざっていてもファイルサイズが膨らまない）。
+
+def update_observed_changes(fund_ids: list[str] | None = None) -> None:
+    """
+    指定主体（省略時は全45主体）について、observed_changesを
+    スナップショットから完全再計算し、data/observed_changes/{fund_id}.json に保存する。
+    funds.json側には、件数と参照パスだけを軽量に反映する。
     """
     with open(FUNDS_JSON_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -256,8 +276,20 @@ def update_observed_changes_in_funds_json(fund_ids: list[str] | None = None) -> 
     for fund in data["funds"]:
         if fund["id"] not in targets:
             continue
-        fund["observed_changes"] = compute_observed_changes_for_fund(fund["id"])
-        print(f"{fund['display_name_ja']}: {len(fund['observed_changes'])}件の変化を記録")
+
+        changes = compute_observed_changes_for_fund(fund["id"])
+        save_observed_changes(fund["id"], changes)
+
+        # funds.json 側は、件数と参照パスのみ（事実の数のみで、解釈は含まない）
+        fund["observed_changes_summary"] = {
+            "path": f"data/observed_changes/{fund['id']}.json",
+            "total_count": len(changes),
+            "new_count": sum(1 for c in changes if c["type"] == "new"),
+            "exited_count": sum(1 for c in changes if c["type"] == "exited"),
+        }
+
+        print(f"{fund['display_name_ja']}: {len(changes)}件の変化を "
+              f"data/observed_changes/{fund['id']}.json に保存")
 
     with open(FUNDS_JSON_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
@@ -266,4 +298,4 @@ def update_observed_changes_in_funds_json(fund_ids: list[str] | None = None) -> 
 if __name__ == "__main__":
     import sys
     ids = sys.argv[1:] if len(sys.argv) > 1 else None
-    update_observed_changes_in_funds_json(ids)
+    update_observed_changes(ids)
