@@ -1,0 +1,251 @@
+{
+  "fund_id": "whalerock",
+  "filing_date": "2026-08-14",
+  "holdings": [
+    {
+      "name_of_issuer": "ADVANCED MICRO DEVICES INC",
+      "title_of_class": "COM",
+      "cusip": "007903107",
+      "value_usd": 876970782,
+      "shares": 1509650
+    },
+    {
+      "name_of_issuer": "ALPHABET INC",
+      "title_of_class": "CAP STK CL A",
+      "cusip": "02079K305",
+      "value_usd": 856384314,
+      "shares": 2396352
+    },
+    {
+      "name_of_issuer": "AMAZON COM INC",
+      "title_of_class": "COM",
+      "cusip": "023135106",
+      "value_usd": 583392445,
+      "shares": 2447732
+    },
+    {
+      "name_of_issuer": "APPLE INC",
+      "title_of_class": "COM",
+      "cusip": "037833100",
+      "value_usd": 28868290,
+      "shares": 99766
+    },
+    {
+      "name_of_issuer": "APPLOVIN CORP",
+      "title_of_class": "COM CL A",
+      "cusip": "03831W108",
+      "value_usd": 237835836,
+      "shares": 461611
+    },
+    {
+      "name_of_issuer": "ASTERA LABS INC",
+      "title_of_class": "COM",
+      "cusip": "04626A103",
+      "value_usd": 757318364,
+      "shares": 1567882
+    },
+    {
+      "name_of_issuer": "BLOOM ENERGY CORP",
+      "title_of_class": "COM CL A",
+      "cusip": "093712107",
+      "value_usd": 486833924,
+      "shares": 1608305
+    },
+    {
+      "name_of_issuer": "BROADCOM INC",
+      "title_of_class": "COM",
+      "cusip": "11135F101",
+      "value_usd": 22581895,
+      "shares": 59780
+    },
+    {
+      "name_of_issuer": "CARVANA CO",
+      "title_of_class": "CL A",
+      "cusip": "146869102",
+      "value_usd": 280859206,
+      "shares": 4267080
+    },
+    {
+      "name_of_issuer": "CELESTICA INC",
+      "title_of_class": "COM",
+      "cusip": "15101Q207",
+      "value_usd": 538601664,
+      "shares": 1476430
+    },
+    {
+      "name_of_issuer": "CEREBRAS SYSTEMS INC",
+      "title_of_class": "COM CL A",
+      "cusip": "15675D103",
+      "value_usd": 11203816,
+      "shares": 50696
+    },
+    {
+      "name_of_issuer": "COHERENT CORP",
+      "title_of_class": "COM",
+      "cusip": "19247G107",
+      "value_usd": 482056146,
+      "shares": 1222035
+    },
+    {
+      "name_of_issuer": "CORNING INC",
+      "title_of_class": "COM",
+      "cusip": "219350105",
+      "value_usd": 570630365,
+      "shares": 2233999
+    },
+    {
+      "name_of_issuer": "DUOLINGO INC",
+      "title_of_class": "CL A COM",
+      "cusip": "26603R106",
+      "value_usd": 54262295,
+      "shares": 471764
+    },
+    {
+      "name_of_issuer": "FABRINET",
+      "title_of_class": "SHS",
+      "cusip": "G3323L100",
+      "value_usd": 418617511,
+      "shares": 744765
+    },
+    {
+      "name_of_issuer": "IMPINJ INC",
+      "title_of_class": "COM",
+      "cusip": "453204109",
+      "value_usd": 58043098,
+      "shares": 405244
+    },
+    {
+      "name_of_issuer": "INTEL CORP",
+      "title_of_class": "COM",
+      "cusip": "458140100",
+      "value_usd": 36290256,
+      "shares": 259903
+    },
+    {
+      "name_of_issuer": "JFROG LTD",
+      "title_of_class": "ORD SHS",
+      "cusip": "M6191J100",
+      "value_usd": 405181482,
+      "shares": 4458423
+    },
+    {
+      "name_of_issuer": "KLAVIYO INC",
+      "title_of_class": "COM SER A",
+      "cusip": "49845K101",
+      "value_usd": 83475307,
+      "shares": 5528166
+    },
+    {
+      "name_of_issuer": "LAM RESEARCH CORP",
+      "title_of_class": "COM NEW",
+      "cusip": "512807306",
+      "value_usd": 321807325,
+      "shares": 742638
+    },
+    {
+      "name_of_issuer": "MACOM TECH SOLUTIONS HLDGS I",
+      "title_of_class": "COM",
+      "cusip": "55405Y100",
+      "value_usd": 376104150,
+      "shares": 988785
+    },
+    {
+      "name_of_issuer": "META PLATFORMS INC",
+      "title_of_class": "CL A",
+      "cusip": "30303M102",
+      "value_usd": 256850101,
+      "shares": 455982
+    },
+    {
+      "name_of_issuer": "MKS INC.",
+      "title_of_class": "COM",
+      "cusip": "55306N104",
+      "value_usd": 565506710,
+      "shares": 1271373
+    },
+    {
+      "name_of_issuer": "MONGODB INC",
+      "title_of_class": "CL A",
+      "cusip": "60937P106",
+      "value_usd": 75459263,
+      "shares": 224648
+    },
+    {
+      "name_of_issuer": "NVIDIA CORPORATION",
+      "title_of_class": "COM",
+      "cusip": "67066G104",
+      "value_usd": 75474748,
+      "shares": 377204
+    },
+    {
+      "name_of_issuer": "SANDISK CORP",
+      "title_of_class": "COM",
+      "cusip": "80004C200",
+      "value_usd": 1356382263,
+      "shares": 596545
+    },
+    {
+      "name_of_issuer": "SEAGATE TECHNOLOGY HLDNGS PL",
+      "title_of_class": "ORD SHS",
+      "cusip": "G7997R103",
+      "value_usd": 143343995,
+      "shares": 148543
+    },
+    {
+      "name_of_issuer": "SITIME CORP",
+      "title_of_class": "COM",
+      "cusip": "82982T106",
+      "value_usd": 418036238,
+      "shares": 560701
+    },
+    {
+      "name_of_issuer": "SNOWFLAKE INC",
+      "title_of_class": "COM SHS",
+      "cusip": "833445109",
+      "value_usd": 225153860,
+      "shares": 884691
+    },
+    {
+      "name_of_issuer": "SPACE EXPLORATION TECHN CORP",
+      "title_of_class": "CLASS A COM STK",
+      "cusip": "84615Q103",
+      "value_usd": 26059055,
+      "shares": 152517
+    },
+    {
+      "name_of_issuer": "TAIWAN SEMICONDUCTOR MANUFAC",
+      "title_of_class": "SPONSORED ADS",
+      "cusip": "874039100",
+      "value_usd": 281723796,
+      "shares": 589911
+    },
+    {
+      "name_of_issuer": "TTM TECHNOLOGIES INC",
+      "title_of_class": "COM",
+      "cusip": "87305R109",
+      "value_usd": 791202137,
+      "shares": 4230575
+    },
+    {
+      "name_of_issuer": "TWILIO INC",
+      "title_of_class": "CL A",
+      "cusip": "90138F102",
+      "value_usd": 169555391,
+      "shares": 821768
+    },
+    {
+      "name_of_issuer": "VIAVI SOLUTIONS INC",
+      "title_of_class": "COM",
+      "cusip": "925550105",
+      "value_usd": 328326231,
+      "shares": 6875942
+    },
+    {
+      "name_of_issuer": "WESTERN DIGITAL CORP",
+      "title_of_class": "COM",
+      "cusip": "958102105",
+      "value_usd": 255926801,
+      "shares": 400687
+    }
+  ]
+}

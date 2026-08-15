@@ -1,0 +1,139 @@
+{
+  "fund_id": "harvard",
+  "filing_date": "2026-08-14",
+  "holdings": [
+    {
+      "name_of_issuer": "10X GENOMICS INC",
+      "title_of_class": "CL A COM",
+      "cusip": "88025U109",
+      "value_usd": 6517800,
+      "shares": 170000
+    },
+    {
+      "name_of_issuer": "ALPHABET INC",
+      "title_of_class": "CAP STK CL A",
+      "cusip": "02079K305",
+      "value_usd": 165162119,
+      "shares": 462160
+    },
+    {
+      "name_of_issuer": "AMAZON COM INC",
+      "title_of_class": "COM",
+      "cusip": "023135106",
+      "value_usd": 234249847,
+      "shares": 982839
+    },
+    {
+      "name_of_issuer": "BOOKING HOLDINGS INC",
+      "title_of_class": "COM",
+      "cusip": "09857L108",
+      "value_usd": 73898304,
+      "shares": 414600
+    },
+    {
+      "name_of_issuer": "BROADCOM INC",
+      "title_of_class": "COM",
+      "cusip": "11135F101",
+      "value_usd": 127810202,
+      "shares": 338346
+    },
+    {
+      "name_of_issuer": "CEREBRAS SYSTEMS INC",
+      "title_of_class": "COM CL A",
+      "cusip": "15675D103",
+      "value_usd": 238963543,
+      "shares": 1081283
+    },
+    {
+      "name_of_issuer": "FERVO ENERGY CO",
+      "title_of_class": "CL A COM",
+      "cusip": "31556C106",
+      "value_usd": 36694319,
+      "shares": 1255365
+    },
+    {
+      "name_of_issuer": "GENERATE BIOMEDICINES INC",
+      "title_of_class": "COM SHS",
+      "cusip": "370920100",
+      "value_usd": 18744257,
+      "shares": 1111100
+    },
+    {
+      "name_of_issuer": "ISHARES BITCOIN TRUST ETF",
+      "title_of_class": "SHS BEN INT",
+      "cusip": "46438F101",
+      "value_usd": 101355133,
+      "shares": 3044612
+    },
+    {
+      "name_of_issuer": "ISHARES GOLD TR",
+      "title_of_class": "ISHARES NEW",
+      "cusip": "464285204",
+      "value_usd": 149516218,
+      "shares": 1980085
+    },
+    {
+      "name_of_issuer": "LUMENTUM HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "55024U109",
+      "value_usd": 23376129,
+      "shares": 27243
+    },
+    {
+      "name_of_issuer": "META PLATFORMS INC",
+      "title_of_class": "CL A",
+      "cusip": "30303M102",
+      "value_usd": 120827958,
+      "shares": 214504
+    },
+    {
+      "name_of_issuer": "MICROSOFT CORP",
+      "title_of_class": "COM",
+      "cusip": "594918104",
+      "value_usd": 146322690,
+      "shares": 392265
+    },
+    {
+      "name_of_issuer": "NETFLIX INC.",
+      "title_of_class": "COM",
+      "cusip": "64110L106",
+      "value_usd": 78825600,
+      "shares": 1104000
+    },
+    {
+      "name_of_issuer": "NVIDIA CORPORATION",
+      "title_of_class": "COM",
+      "cusip": "67066G104",
+      "value_usd": 157615095,
+      "shares": 787721
+    },
+    {
+      "name_of_issuer": "PURECYCLE TECHNOLOGIES INC",
+      "title_of_class": "*W EXP 03/17/202",
+      "cusip": "74623V111",
+      "value_usd": 1857141,
+      "shares": 714285
+    },
+    {
+      "name_of_issuer": "SPACE EXPLORATION TECHN CORP",
+      "title_of_class": "CLASS A COM STK",
+      "cusip": "84615Q103",
+      "value_usd": 2210091186,
+      "shares": 12935100
+    },
+    {
+      "name_of_issuer": "SPDR GOLD TR",
+      "title_of_class": "GOLD SHS",
+      "cusip": "78463V107",
+      "value_usd": 21683584,
+      "shares": 58862
+    },
+    {
+      "name_of_issuer": "TAIWAN SEMICONDUCTOR MANUFAC",
+      "title_of_class": "SPONSORED ADS",
+      "cusip": "874039100",
+      "value_usd": 349591747,
+      "shares": 732022
+    }
+  ]
+}

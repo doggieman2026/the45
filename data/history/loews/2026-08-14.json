@@ -1,0 +1,202 @@
+{
+  "fund_id": "loews",
+  "filing_date": "2026-08-14",
+  "holdings": [
+    {
+      "name_of_issuer": "ALLY FINL INC",
+      "title_of_class": "COM",
+      "cusip": "02005N100",
+      "value_usd": 16542000,
+      "shares": 360000
+    },
+    {
+      "name_of_issuer": "AMCOR PLC",
+      "title_of_class": "COM NEW",
+      "cusip": "G0250X149",
+      "value_usd": 15606000,
+      "shares": 360000
+    },
+    {
+      "name_of_issuer": "AMENTUM HOLDINGS INC",
+      "title_of_class": "COM",
+      "cusip": "023939101",
+      "value_usd": 10335000,
+      "shares": 500000
+    },
+    {
+      "name_of_issuer": "AMERICAN EXPRESS CO",
+      "title_of_class": "COM",
+      "cusip": "025816109",
+      "value_usd": 15221250,
+      "shares": 45000
+    },
+    {
+      "name_of_issuer": "ATLASSIAN CORPORATION",
+      "title_of_class": "CL A",
+      "cusip": "049468101",
+      "value_usd": 52897200,
+      "shares": 680000
+    },
+    {
+      "name_of_issuer": "AVANTOR INC",
+      "title_of_class": "COM",
+      "cusip": "05352A100",
+      "value_usd": 22077000,
+      "shares": 2230000
+    },
+    {
+      "name_of_issuer": "BROOKFIELD CORP",
+      "title_of_class": "CL A LTD VT SH",
+      "cusip": "11271J107",
+      "value_usd": 12777000,
+      "shares": 300000
+    },
+    {
+      "name_of_issuer": "BUILDERS FIRSTSOURCE INC",
+      "title_of_class": "COM",
+      "cusip": "12008R107",
+      "value_usd": 69794400,
+      "shares": 780000
+    },
+    {
+      "name_of_issuer": "CAPITAL ONE FINL CORP",
+      "title_of_class": "COM",
+      "cusip": "14040H105",
+      "value_usd": 16551150,
+      "shares": 82500
+    },
+    {
+      "name_of_issuer": "CHECK POINT SOFTWARE TECH LT",
+      "title_of_class": "ORD",
+      "cusip": "M22465104",
+      "value_usd": 23000250,
+      "shares": 175000
+    },
+    {
+      "name_of_issuer": "CHENIERE ENERGY INC",
+      "title_of_class": "COM NEW",
+      "cusip": "16411R208",
+      "value_usd": 16969710,
+      "shares": 71000
+    },
+    {
+      "name_of_issuer": "CNA FINL CORP",
+      "title_of_class": "COM",
+      "cusip": "126117100",
+      "value_usd": 12075440414,
+      "shares": 248414738
+    },
+    {
+      "name_of_issuer": "COMCAST CORP NEW",
+      "title_of_class": "CL A",
+      "cusip": "20030N101",
+      "value_usd": 9820000,
+      "shares": 400000
+    },
+    {
+      "name_of_issuer": "DANAHER CORP DEL",
+      "title_of_class": "COM",
+      "cusip": "235851102",
+      "value_usd": 14286000,
+      "shares": 75000
+    },
+    {
+      "name_of_issuer": "EATON CORP PLC",
+      "title_of_class": "SHS",
+      "cusip": "G29183103",
+      "value_usd": 11718300,
+      "shares": 27500
+    },
+    {
+      "name_of_issuer": "FAIR ISAAC CORP",
+      "title_of_class": "COM",
+      "cusip": "303250104",
+      "value_usd": 10155630,
+      "shares": 8500
+    },
+    {
+      "name_of_issuer": "GE AEROSPACE",
+      "title_of_class": "COM NEW",
+      "cusip": "369604301",
+      "value_usd": 13080550,
+      "shares": 35000
+    },
+    {
+      "name_of_issuer": "INGREDION INC",
+      "title_of_class": "COM",
+      "cusip": "457187102",
+      "value_usd": 6629700,
+      "shares": 70000
+    },
+    {
+      "name_of_issuer": "JBG SMITH PPTYS",
+      "title_of_class": "COM",
+      "cusip": "46590V100",
+      "value_usd": 7283948,
+      "shares": 496520
+    },
+    {
+      "name_of_issuer": "JBS N.V.",
+      "title_of_class": "CL A SHS",
+      "cusip": "N4732M103",
+      "value_usd": 15760500,
+      "shares": 1330000
+    },
+    {
+      "name_of_issuer": "MAGNERA CORP",
+      "title_of_class": "COM SHS",
+      "cusip": "55939A107",
+      "value_usd": 3525000,
+      "shares": 300000
+    },
+    {
+      "name_of_issuer": "META PLATFORMS INC",
+      "title_of_class": "CL A",
+      "cusip": "30303M102",
+      "value_usd": 15772120,
+      "shares": 28000
+    },
+    {
+      "name_of_issuer": "NRG ENERGY INC",
+      "title_of_class": "COM NEW",
+      "cusip": "629377508",
+      "value_usd": 18987800,
+      "shares": 130000
+    },
+    {
+      "name_of_issuer": "OLIN CORP",
+      "title_of_class": "COM PAR $1",
+      "cusip": "680665205",
+      "value_usd": 2973000,
+      "shares": 150000
+    },
+    {
+      "name_of_issuer": "OMNICOM GROUP INC",
+      "title_of_class": "COM",
+      "cusip": "681919106",
+      "value_usd": 20392400,
+      "shares": 280000
+    },
+    {
+      "name_of_issuer": "STANDARD BIOTOOLS INC",
+      "title_of_class": "COM",
+      "cusip": "34385P108",
+      "value_usd": 1028375,
+      "shares": 1250000
+    },
+    {
+      "name_of_issuer": "SUNBELT RENTALS HOLDINGS INC",
+      "title_of_class": "SHS",
+      "cusip": "866966104",
+      "value_usd": 14213900,
+      "shares": 190000
+    },
+    {
+      "name_of_issuer": "ZOETIS INC",
+      "title_of_class": "CL A",
+      "cusip": "98978V103",
+      "value_usd": 10060400,
+      "shares": 140000
+    }
+  ]
+}

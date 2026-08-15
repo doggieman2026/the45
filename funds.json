@@ -20,7 +20,11 @@
       "observation_characteristic": "保有銘柄数千件規模。個別銘柄の増減よりも、上位集中度やセクター配分比率の四半期推移に変化が現れやすい。",
       "filing_status": "active",
       "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_fetch_status": {
+        "status": "skipped",
+        "checked_at": "2026-08-15T09:21:32Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
         "first_available_quarter": null,
@@ -51,7 +55,11 @@
       "observation_characteristic": "保有銘柄数千件規模で、BlackRockと同様の傾向を持つが、ファンド構成比率に独自の差が出ることがある。",
       "filing_status": "active",
       "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_fetch_status": {
+        "status": "skipped",
+        "checked_at": "2026-08-15T09:21:32Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
         "first_available_quarter": null,
@@ -81,23 +89,40 @@
       "inclusion_reason": "THE45の既存基盤主体。銀行系資産運用という性格を持つ資金の代表。",
       "observation_characteristic": "保有銘柄は数千件規模。銀行本体の与信・投資姿勢の変化が間接的に反映される可能性がある。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-12",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:35Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q2",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 2,
         "backfilled": false
       },
       "snapshot_dir": "data/history/jpmorgan/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-05-13",
+          "total_value_usd": 3085467664,
+          "position_count": 378,
+          "top5_concentration_pct": 38.8
+        },
+        {
+          "filing_date": "2026-08-12",
+          "total_value_usd": 1807041234839,
+          "position_count": 7720,
+          "top5_concentration_pct": 16.1
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/jpmorgan.json",
-        "total_count": 0,
-        "new_count": 0,
-        "exited_count": 0
+        "total_count": 7964,
+        "new_count": 7586,
+        "exited_count": 252
       }
     },
     {
@@ -112,23 +137,40 @@
       "inclusion_reason": "THE45の既存基盤主体。ETFを通じた構造的な資金の流れを観測する代表。",
       "observation_characteristic": "保有銘柄数千件規模。ETF設定・解約に伴う機械的な資金移動が特徴。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-07",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:35Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q2",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 2,
         "backfilled": false
       },
       "snapshot_dir": "data/history/statestreet/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-05-15",
+          "total_value_usd": 2896359015041,
+          "position_count": 4269,
+          "top5_concentration_pct": 20.2
+        },
+        {
+          "filing_date": "2026-08-07",
+          "total_value_usd": 3371239854465,
+          "position_count": 4177,
+          "top5_concentration_pct": 20.1
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/statestreet.json",
-        "total_count": 0,
-        "new_count": 0,
-        "exited_count": 0
+        "total_count": 4326,
+        "new_count": 58,
+        "exited_count": 150
       }
     },
     {
@@ -143,23 +185,40 @@
       "inclusion_reason": "THE45の既存基盤主体。投資銀行系資金の代表として保持。",
       "observation_characteristic": "保有銘柄は数千件規模。マーケットメイク業務の影響で、他のパッシブ勢と異なる回転パターンを持つ可能性がある。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:37Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q2",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 2,
         "backfilled": false
       },
       "snapshot_dir": "data/history/goldmansachs/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-05-15",
+          "total_value_usd": 870939686922,
+          "position_count": 5539,
+          "top5_concentration_pct": 16.7
+        },
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 1151631766592,
+          "position_count": 5626,
+          "top5_concentration_pct": 16.6
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/goldmansachs.json",
-        "total_count": 0,
-        "new_count": 0,
-        "exited_count": 0
+        "total_count": 6155,
+        "new_count": 619,
+        "exited_count": 532
       }
     },
     {
@@ -174,23 +233,40 @@
       "inclusion_reason": "THE45の既存基盤主体。個人長期資金の集合体としての性格を持つ。",
       "observation_characteristic": "保有銘柄数千件規模。アクティブ運用部門とパッシブ運用部門が混在するため、変化の要因が複合的。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-13",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:38Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q2",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 2,
         "backfilled": false
       },
       "snapshot_dir": "data/history/fidelity/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-05-15",
+          "total_value_usd": 1898434661409,
+          "position_count": 5411,
+          "top5_concentration_pct": 24.5
+        },
+        {
+          "filing_date": "2026-08-13",
+          "total_value_usd": 2303878429723,
+          "position_count": 5571,
+          "top5_concentration_pct": 23.7
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/fidelity.json",
-        "total_count": 0,
-        "new_count": 0,
-        "exited_count": 0
+        "total_count": 5781,
+        "new_count": 391,
+        "exited_count": 235
       }
     },
     {
@@ -205,23 +281,40 @@
       "inclusion_reason": "THE45の既存基盤主体。非公開の巨大アクティブ運用会社という性格を追加。",
       "observation_characteristic": "保有銘柄数千件規模。他のパッシブ勢よりアクティブ運用色が強く、銘柄選好に独自性が出やすい。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-12",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:39Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q2",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 2,
         "backfilled": false
       },
       "snapshot_dir": "data/history/capitalgroup/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-05-13",
+          "total_value_usd": 644560214942,
+          "position_count": 459,
+          "top5_concentration_pct": 23.7
+        },
+        {
+          "filing_date": "2026-08-12",
+          "total_value_usd": 716871733902,
+          "position_count": 426,
+          "top5_concentration_pct": 24.1
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/capitalgroup.json",
-        "total_count": 0,
-        "new_count": 0,
-        "exited_count": 0
+        "total_count": 494,
+        "new_count": 35,
+        "exited_count": 68
       }
     },
     {
@@ -236,17 +329,28 @@
       "inclusion_reason": "パッシブ勢の中でも最大級の規模を持ち、他の巨大パッシブ主体との比較対象として追加。",
       "observation_characteristic": "保有銘柄4,000件超、運用資産1.6兆ドル規模。四半期ごとの評価額変化は市場全体の動きにほぼ連動する。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-12",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:40Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/geode/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-12",
+          "total_value_usd": 1875315674155,
+          "position_count": 4447,
+          "top5_concentration_pct": 21.7
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/geode.json",
@@ -268,7 +372,11 @@
       "observation_characteristic": "保有銘柄1,500件超、9,000億ドル超規模。ノルウェー政府の財政方針・倫理指針の変更が間接的に反映される可能性がある。",
       "filing_status": "active",
       "last_verified_filing_date": "2025-11-14",
-      "last_fetch_status": null,
+      "last_fetch_status": {
+        "status": "error",
+        "checked_at": "2026-08-15T09:21:40Z",
+        "error": "empty holdings"
+      },
       "data_quality_notes": null,
       "data_coverage": {
         "first_available_quarter": null,
@@ -298,29 +406,348 @@
       "inclusion_reason": "THE45の基準FILE（FILE-001「バークシャーの沈黙」）の主体。市場が過熱する局面で現金を積み上げ、何もしないという意思決定が痕跡として残った実績がある。",
       "observation_characteristic": "巨大集中ポジションが四半期を通じて静止し続け、稀に起きる大幅な入れ替えとの対比が明確に現れる。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
+      "last_verified_filing_date": "2026-08-14",
       "last_fetch_status": {
-        "status": "skipped",
-        "checked_at": "2026-07-29T12:49:16Z",
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:40Z",
         "error": null
       },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
-        "backfilled": false
+        "first_available_quarter": "2013-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 53,
+        "backfilled": true
       },
       "snapshot_dir": "data/history/berkshire/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2013-08-15",
+          "total_value_usd": 89031205000,
+          "position_count": 42,
+          "top5_concentration_pct": 71.4
+        },
+        {
+          "filing_date": "2013-11-14",
+          "total_value_usd": 92035233000,
+          "position_count": 43,
+          "top5_concentration_pct": 67.7
+        },
+        {
+          "filing_date": "2014-02-14",
+          "total_value_usd": 104836593000,
+          "position_count": 43,
+          "top5_concentration_pct": 65.2
+        },
+        {
+          "filing_date": "2014-05-15",
+          "total_value_usd": 105772705000,
+          "position_count": 45,
+          "top5_concentration_pct": 66.0
+        },
+        {
+          "filing_date": "2014-08-14",
+          "total_value_usd": 107580386000,
+          "position_count": 46,
+          "top5_concentration_pct": 67.7
+        },
+        {
+          "filing_date": "2014-11-14",
+          "total_value_usd": 107785377000,
+          "position_count": 47,
+          "top5_concentration_pct": 67.1
+        },
+        {
+          "filing_date": "2015-02-17",
+          "total_value_usd": 109365274000,
+          "position_count": 47,
+          "top5_concentration_pct": 67.6
+        },
+        {
+          "filing_date": "2015-05-15",
+          "total_value_usd": 107133479000,
+          "position_count": 47,
+          "top5_concentration_pct": 66.6
+        },
+        {
+          "filing_date": "2015-08-14",
+          "total_value_usd": 107182425000,
+          "position_count": 46,
+          "top5_concentration_pct": 66.4
+        },
+        {
+          "filing_date": "2015-11-16",
+          "total_value_usd": 127407562000,
+          "position_count": 48,
+          "top5_concentration_pct": 67.6
+        },
+        {
+          "filing_date": "2016-02-16",
+          "total_value_usd": 131855536000,
+          "position_count": 48,
+          "top5_concentration_pct": 67.2
+        },
+        {
+          "filing_date": "2016-05-16",
+          "total_value_usd": 128569639000,
+          "position_count": 47,
+          "top5_concentration_pct": 69.2
+        },
+        {
+          "filing_date": "2016-08-15",
+          "total_value_usd": 129704731000,
+          "position_count": 49,
+          "top5_concentration_pct": 70.3
+        },
+        {
+          "filing_date": "2016-11-14",
+          "total_value_usd": 128787110000,
+          "position_count": 50,
+          "top5_concentration_pct": 69.8
+        },
+        {
+          "filing_date": "2017-02-14",
+          "total_value_usd": 147985198000,
+          "position_count": 47,
+          "top5_concentration_pct": 65.0
+        },
+        {
+          "filing_date": "2017-05-15",
+          "total_value_usd": 161873831000,
+          "position_count": 46,
+          "top5_concentration_pct": 64.1
+        },
+        {
+          "filing_date": "2017-08-14",
+          "total_value_usd": 162143689000,
+          "position_count": 47,
+          "top5_concentration_pct": 63.7
+        },
+        {
+          "filing_date": "2017-11-14",
+          "total_value_usd": 177678767000,
+          "position_count": 47,
+          "top5_concentration_pct": 60.1
+        },
+        {
+          "filing_date": "2018-02-14",
+          "total_value_usd": 191242697000,
+          "position_count": 48,
+          "top5_concentration_pct": 62.5
+        },
+        {
+          "filing_date": "2018-05-15",
+          "total_value_usd": 188943876000,
+          "position_count": 46,
+          "top5_concentration_pct": 64.6
+        },
+        {
+          "filing_date": "2018-08-14",
+          "total_value_usd": 195615793000,
+          "position_count": 44,
+          "top5_concentration_pct": 65.9
+        },
+        {
+          "filing_date": "2018-11-14",
+          "total_value_usd": 221020177000,
+          "position_count": 46,
+          "top5_concentration_pct": 64.5
+        },
+        {
+          "filing_date": "2019-02-14",
+          "total_value_usd": 183066067000,
+          "position_count": 48,
+          "top5_concentration_pct": 62.6
+        },
+        {
+          "filing_date": "2019-05-15",
+          "total_value_usd": 199483708000,
+          "position_count": 48,
+          "top5_concentration_pct": 63.8
+        },
+        {
+          "filing_date": "2019-08-14",
+          "total_value_usd": 208101077000,
+          "position_count": 47,
+          "top5_concentration_pct": 64.8
+        },
+        {
+          "filing_date": "2019-11-14",
+          "total_value_usd": 214673311000,
+          "position_count": 48,
+          "top5_concentration_pct": 65.9
+        },
+        {
+          "filing_date": "2020-02-14",
+          "total_value_usd": 242050717000,
+          "position_count": 52,
+          "top5_concentration_pct": 67.3
+        },
+        {
+          "filing_date": "2020-05-15",
+          "total_value_usd": 175526846000,
+          "position_count": 50,
+          "top5_concentration_pct": 69.5
+        },
+        {
+          "filing_date": "2020-08-14",
+          "total_value_usd": 202411166000,
+          "position_count": 44,
+          "top5_concentration_pct": 76.1
+        },
+        {
+          "filing_date": "2020-11-16",
+          "total_value_usd": 228890673000,
+          "position_count": 49,
+          "top5_concentration_pct": 77.9
+        },
+        {
+          "filing_date": "2021-02-16",
+          "total_value_usd": 269927528000,
+          "position_count": 47,
+          "top5_concentration_pct": 74.1
+        },
+        {
+          "filing_date": "2021-05-17",
+          "total_value_usd": 270435200000,
+          "position_count": 46,
+          "top5_concentration_pct": 75.1
+        },
+        {
+          "filing_date": "2021-08-16",
+          "total_value_usd": 293023412000,
+          "position_count": 44,
+          "top5_concentration_pct": 76.1
+        },
+        {
+          "filing_date": "2021-11-15",
+          "total_value_usd": 293447417000,
+          "position_count": 43,
+          "top5_concentration_pct": 77.3
+        },
+        {
+          "filing_date": "2022-02-14",
+          "total_value_usd": 330952724000,
+          "position_count": 44,
+          "top5_concentration_pct": 79.4
+        },
+        {
+          "filing_date": "2022-05-16",
+          "total_value_usd": 363553518000,
+          "position_count": 49,
+          "top5_concentration_pct": 76.0
+        },
+        {
+          "filing_date": "2022-08-15",
+          "total_value_usd": 300130772000,
+          "position_count": 47,
+          "top5_concentration_pct": 74.4
+        },
+        {
+          "filing_date": "2022-11-14",
+          "total_value_usd": 296096640000,
+          "position_count": 49,
+          "top5_concentration_pct": 74.6
+        },
+        {
+          "filing_date": "2023-02-14",
+          "total_value_usd": 299007622119,
+          "position_count": 49,
+          "top5_concentration_pct": 75.9
+        },
+        {
+          "filing_date": "2023-05-15",
+          "total_value_usd": 325108752692,
+          "position_count": 48,
+          "top5_concentration_pct": 77.5
+        },
+        {
+          "filing_date": "2023-08-14",
+          "total_value_usd": 348194055552,
+          "position_count": 48,
+          "top5_concentration_pct": 79.6
+        },
+        {
+          "filing_date": "2023-11-14",
+          "total_value_usd": 313257308189,
+          "position_count": 45,
+          "top5_concentration_pct": 79.4
+        },
+        {
+          "filing_date": "2024-02-14",
+          "total_value_usd": 347358074461,
+          "position_count": 41,
+          "top5_concentration_pct": 80.6
+        },
+        {
+          "filing_date": "2024-05-15",
+          "total_value_usd": 331680406332,
+          "position_count": 41,
+          "top5_concentration_pct": 76.3
+        },
+        {
+          "filing_date": "2024-08-14",
+          "total_value_usd": 279969062343,
+          "position_count": 41,
+          "top5_concentration_pct": 73.0
+        },
+        {
+          "filing_date": "2024-11-14",
+          "total_value_usd": 266378900503,
+          "position_count": 40,
+          "top5_concentration_pct": 70.9
+        },
+        {
+          "filing_date": "2025-02-14",
+          "total_value_usd": 267175474249,
+          "position_count": 38,
+          "top5_concentration_pct": 71.9
+        },
+        {
+          "filing_date": "2025-05-15",
+          "total_value_usd": 258701144516,
+          "position_count": 36,
+          "top5_concentration_pct": 70.5
+        },
+        {
+          "filing_date": "2025-08-14",
+          "total_value_usd": 257521776925,
+          "position_count": 41,
+          "top5_concentration_pct": 70.0
+        },
+        {
+          "filing_date": "2025-11-14",
+          "total_value_usd": 267334501955,
+          "position_count": 41,
+          "top5_concentration_pct": 69.5
+        },
+        {
+          "filing_date": "2026-02-17",
+          "total_value_usd": 274160086701,
+          "position_count": 42,
+          "top5_concentration_pct": 70.9
+        },
+        {
+          "filing_date": "2026-05-15",
+          "total_value_usd": 263095703570,
+          "position_count": 29,
+          "top5_concentration_pct": 67.1
+        },
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 299253556246,
+          "position_count": 29,
+          "top5_concentration_pct": 68.7
+        }
+      ],
       "related_files": [
         "file-001-berkshire-silence"
       ],
       "observed_changes_summary": {
         "path": "data/observed_changes/berkshire.json",
-        "total_count": 2441,
-        "new_count": 116,
-        "exited_count": 129
+        "total_count": 2471,
+        "new_count": 117,
+        "exited_count": 130
       }
     },
     {
@@ -335,17 +762,28 @@
       "inclusion_reason": "バリュー投資の中でも極めて保守的・集中的な運用姿勢を持つ主体として選定。",
       "observation_characteristic": "保有銘柄20件程度の超集中。深い分析に基づく判断のため、入れ替え頻度が低く稀な変化に意味が出やすい。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-14",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-13",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:41Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/baupost/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-13",
+          "total_value_usd": 5415853,
+          "position_count": 23,
+          "top5_concentration_pct": 49.9
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/baupost.json",
@@ -366,17 +804,28 @@
       "inclusion_reason": "伝統的な長期集中投資の型を代表する主体として選定。20年以上の継続提出実績を持つ。",
       "observation_characteristic": "長期集中投資が特徴。四半期ごとの変化は穏やかだが、大きな相場転換点で明確な入れ替えが起きる傾向がある。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:41Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/southeastern/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 1917151885,
+          "position_count": 47,
+          "top5_concentration_pct": 41.3
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/southeastern.json",
@@ -397,17 +846,28 @@
       "inclusion_reason": "Baupostより広く分散した、別のバリュー投資の型を追加する目的で選定。",
       "observation_characteristic": "保有銘柄150件規模、750億ドル規模。中規模の集中度を持ち、セクター間の資金移動が観測しやすい。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:42Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/harris/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 75422839842,
+          "position_count": 161,
+          "top5_concentration_pct": 17.1
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/harris.json",
@@ -428,17 +888,28 @@
       "inclusion_reason": "バリュー勢の中でも国際分散・実物資産志向という独自の性格を持つ主体として選定。",
       "observation_characteristic": "保有銘柄400件超、570億ドル規模。金鉱株・資源株への配分比率の変化が特徴的に観測できる。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-02-04",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-05",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:42Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/firsteagle/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-05",
+          "total_value_usd": 59922860164,
+          "position_count": 424,
+          "top5_concentration_pct": 16.6
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/firsteagle.json",
@@ -459,23 +930,346 @@
       "inclusion_reason": "THE45の既存基盤主体。マクロ的な資金移動の代表格として維持。",
       "observation_characteristic": "保有銘柄は中規模。マクロ経済の見立てに基づく大胆なポジション転換が特徴。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:43Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
-        "backfilled": false
+        "first_available_quarter": "2013-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 53,
+        "backfilled": true
       },
       "snapshot_dir": "data/history/soros/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2013-08-14",
+          "total_value_usd": 9220403000,
+          "position_count": 191,
+          "top5_concentration_pct": 27.4
+        },
+        {
+          "filing_date": "2013-11-14",
+          "total_value_usd": 9144373000,
+          "position_count": 217,
+          "top5_concentration_pct": 20.1
+        },
+        {
+          "filing_date": "2014-02-14",
+          "total_value_usd": 11774807000,
+          "position_count": 216,
+          "top5_concentration_pct": 24.1
+        },
+        {
+          "filing_date": "2014-05-15",
+          "total_value_usd": 10116816000,
+          "position_count": 297,
+          "top5_concentration_pct": 17.4
+        },
+        {
+          "filing_date": "2014-08-14",
+          "total_value_usd": 13270885000,
+          "position_count": 351,
+          "top5_concentration_pct": 31.0
+        },
+        {
+          "filing_date": "2014-11-14",
+          "total_value_usd": 13398547000,
+          "position_count": 257,
+          "top5_concentration_pct": 28.7
+        },
+        {
+          "filing_date": "2015-02-17",
+          "total_value_usd": 9159135000,
+          "position_count": 182,
+          "top5_concentration_pct": 16.4
+        },
+        {
+          "filing_date": "2015-05-15",
+          "total_value_usd": 10162378000,
+          "position_count": 220,
+          "top5_concentration_pct": 22.6
+        },
+        {
+          "filing_date": "2015-08-14",
+          "total_value_usd": 10745503000,
+          "position_count": 255,
+          "top5_concentration_pct": 32.3
+        },
+        {
+          "filing_date": "2015-11-16",
+          "total_value_usd": 6613286000,
+          "position_count": 221,
+          "top5_concentration_pct": 16.2
+        },
+        {
+          "filing_date": "2016-02-16",
+          "total_value_usd": 6047070000,
+          "position_count": 239,
+          "top5_concentration_pct": 19.1
+        },
+        {
+          "filing_date": "2016-05-16",
+          "total_value_usd": 4530368000,
+          "position_count": 220,
+          "top5_concentration_pct": 28.1
+        },
+        {
+          "filing_date": "2016-08-15",
+          "total_value_usd": 4675713000,
+          "position_count": 168,
+          "top5_concentration_pct": 43.6
+        },
+        {
+          "filing_date": "2016-11-14",
+          "total_value_usd": 3998356000,
+          "position_count": 219,
+          "top5_concentration_pct": 36.2
+        },
+        {
+          "filing_date": "2017-02-14",
+          "total_value_usd": 4321285000,
+          "position_count": 202,
+          "top5_concentration_pct": 37.1
+        },
+        {
+          "filing_date": "2017-05-15",
+          "total_value_usd": 4960582000,
+          "position_count": 257,
+          "top5_concentration_pct": 38.0
+        },
+        {
+          "filing_date": "2017-08-14",
+          "total_value_usd": 5622846000,
+          "position_count": 196,
+          "top5_concentration_pct": 48.8
+        },
+        {
+          "filing_date": "2017-11-14",
+          "total_value_usd": 4202756000,
+          "position_count": 220,
+          "top5_concentration_pct": 36.1
+        },
+        {
+          "filing_date": "2018-02-14",
+          "total_value_usd": 4371934000,
+          "position_count": 190,
+          "top5_concentration_pct": 37.2
+        },
+        {
+          "filing_date": "2018-05-15",
+          "total_value_usd": 6156738000,
+          "position_count": 207,
+          "top5_concentration_pct": 32.2
+        },
+        {
+          "filing_date": "2018-08-14",
+          "total_value_usd": 6247044000,
+          "position_count": 193,
+          "top5_concentration_pct": 38.2
+        },
+        {
+          "filing_date": "2018-11-14",
+          "total_value_usd": 4558278000,
+          "position_count": 184,
+          "top5_concentration_pct": 39.4
+        },
+        {
+          "filing_date": "2019-02-14",
+          "total_value_usd": 3300433000,
+          "position_count": 162,
+          "top5_concentration_pct": 42.4
+        },
+        {
+          "filing_date": "2019-05-15",
+          "total_value_usd": 4309281000,
+          "position_count": 164,
+          "top5_concentration_pct": 42.4
+        },
+        {
+          "filing_date": "2019-08-14",
+          "total_value_usd": 4271049000,
+          "position_count": 147,
+          "top5_concentration_pct": 46.8
+        },
+        {
+          "filing_date": "2019-11-14",
+          "total_value_usd": 3609217000,
+          "position_count": 173,
+          "top5_concentration_pct": 41.7
+        },
+        {
+          "filing_date": "2020-02-14",
+          "total_value_usd": 3090045000,
+          "position_count": 170,
+          "top5_concentration_pct": 37.5
+        },
+        {
+          "filing_date": "2020-05-15",
+          "total_value_usd": 1975128000,
+          "position_count": 118,
+          "top5_concentration_pct": 45.2
+        },
+        {
+          "filing_date": "2020-08-14",
+          "total_value_usd": 4482062000,
+          "position_count": 139,
+          "top5_concentration_pct": 37.9
+        },
+        {
+          "filing_date": "2020-11-13",
+          "total_value_usd": 4084028000,
+          "position_count": 129,
+          "top5_concentration_pct": 40.5
+        },
+        {
+          "filing_date": "2021-02-16",
+          "total_value_usd": 5295069000,
+          "position_count": 143,
+          "top5_concentration_pct": 40.8
+        },
+        {
+          "filing_date": "2021-05-14",
+          "total_value_usd": 5333818000,
+          "position_count": 226,
+          "top5_concentration_pct": 36.1
+        },
+        {
+          "filing_date": "2021-08-13",
+          "total_value_usd": 5934380000,
+          "position_count": 253,
+          "top5_concentration_pct": 35.2
+        },
+        {
+          "filing_date": "2021-11-12",
+          "total_value_usd": 5416602000,
+          "position_count": 245,
+          "top5_concentration_pct": 36.6
+        },
+        {
+          "filing_date": "2022-02-11",
+          "total_value_usd": 7307846000,
+          "position_count": 273,
+          "top5_concentration_pct": 50.1
+        },
+        {
+          "filing_date": "2022-05-13",
+          "total_value_usd": 6573626000,
+          "position_count": 267,
+          "top5_concentration_pct": 38.6
+        },
+        {
+          "filing_date": "2022-08-12",
+          "total_value_usd": 5615445000,
+          "position_count": 262,
+          "top5_concentration_pct": 22.7
+        },
+        {
+          "filing_date": "2022-11-14",
+          "total_value_usd": 5856482000,
+          "position_count": 264,
+          "top5_concentration_pct": 27.1
+        },
+        {
+          "filing_date": "2023-02-13",
+          "total_value_usd": 7260544641,
+          "position_count": 195,
+          "top5_concentration_pct": 19.1
+        },
+        {
+          "filing_date": "2023-05-12",
+          "total_value_usd": 6486898936,
+          "position_count": 166,
+          "top5_concentration_pct": 19.9
+        },
+        {
+          "filing_date": "2023-08-11",
+          "total_value_usd": 6411506004,
+          "position_count": 155,
+          "top5_concentration_pct": 21.9
+        },
+        {
+          "filing_date": "2023-11-14",
+          "total_value_usd": 7046620776,
+          "position_count": 179,
+          "top5_concentration_pct": 22.6
+        },
+        {
+          "filing_date": "2024-02-14",
+          "total_value_usd": 7646370171,
+          "position_count": 192,
+          "top5_concentration_pct": 22.2
+        },
+        {
+          "filing_date": "2024-05-15",
+          "total_value_usd": 6015386149,
+          "position_count": 186,
+          "top5_concentration_pct": 19.2
+        },
+        {
+          "filing_date": "2024-08-14",
+          "total_value_usd": 5565794990,
+          "position_count": 171,
+          "top5_concentration_pct": 21.0
+        },
+        {
+          "filing_date": "2024-11-14",
+          "total_value_usd": 6921988610,
+          "position_count": 170,
+          "top5_concentration_pct": 32.1
+        },
+        {
+          "filing_date": "2025-02-14",
+          "total_value_usd": 6645608141,
+          "position_count": 177,
+          "top5_concentration_pct": 21.3
+        },
+        {
+          "filing_date": "2025-05-15",
+          "total_value_usd": 6704904664,
+          "position_count": 196,
+          "top5_concentration_pct": 18.6
+        },
+        {
+          "filing_date": "2025-08-14",
+          "total_value_usd": 7966042757,
+          "position_count": 185,
+          "top5_concentration_pct": 19.5
+        },
+        {
+          "filing_date": "2025-11-14",
+          "total_value_usd": 7020738956,
+          "position_count": 178,
+          "top5_concentration_pct": 21.5
+        },
+        {
+          "filing_date": "2026-02-13",
+          "total_value_usd": 8630929364,
+          "position_count": 237,
+          "top5_concentration_pct": 19.1
+        },
+        {
+          "filing_date": "2026-05-15",
+          "total_value_usd": 9119078018,
+          "position_count": 255,
+          "top5_concentration_pct": 22.5
+        },
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 8143628824,
+          "position_count": 258,
+          "top5_concentration_pct": 16.5
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/soros.json",
-        "total_count": 14512,
-        "new_count": 4129,
-        "exited_count": 4065
+        "total_count": 14861,
+        "new_count": 4223,
+        "exited_count": 4156
       }
     },
     {
@@ -490,17 +1284,28 @@
       "inclusion_reason": "マクロ型資金の代表として、世界経済の局面認識が資産配分の変化として現れるかを観測する。",
       "observation_characteristic": "保有銘柄約1,000件規模。個別銘柄選択よりも、株式・債券・コモディティ等の大まかな配分比率の変化に意味が出やすい。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:43Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/bridgewater/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 24376086530,
+          "position_count": 997,
+          "top5_concentration_pct": 32.7
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/bridgewater.json",
@@ -521,17 +1326,28 @@
       "inclusion_reason": "マクロ運用者の中でも大胆な入れ替えで知られる主体として選定。",
       "observation_characteristic": "保有銘柄70件規模。四半期ごとに新規建て・全売却が多数同時発生する、大胆な入れ替えが特徴。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:44Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/duquesne/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 5210856,
+          "position_count": 90,
+          "top5_concentration_pct": 37.3
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/duquesne.json",
@@ -552,17 +1368,28 @@
       "inclusion_reason": "マクロ×デリバティブ戦略の代表として選定。",
       "observation_characteristic": "保有銘柄3,500件規模。オプションを多用し、方向感だけでなくヘッジ構造の変化も観測できる。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:44Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/tudor/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 71912518398,
+          "position_count": 2192,
+          "top5_concentration_pct": 34.2
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/tudor.json",
@@ -584,7 +1411,11 @@
       "observation_characteristic": "保有銘柄3,000件超の極めて広い分散。個別の意思決定というより、モデル全体の再構築が数字の変化として現れる。",
       "filing_status": "active",
       "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_fetch_status": {
+        "status": "error",
+        "checked_at": "2026-08-15T09:21:45Z",
+        "error": "empty holdings"
+      },
       "data_quality_notes": null,
       "data_coverage": {
         "first_available_quarter": null,
@@ -614,17 +1445,28 @@
       "inclusion_reason": "最大規模のマルチストラテジー運用の代表として選定。",
       "observation_characteristic": "保有銘柄12,000件超、評価額6,000億ドル超。オプション（プット・コール）を多用する複雑な構造が特徴。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:46Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/citadel/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 875096281441,
+          "position_count": 7166,
+          "top5_concentration_pct": 22.4
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/citadel.json",
@@ -645,17 +1487,28 @@
       "inclusion_reason": "動きの速さそのものが観測対象になるマルチストラテジー主体として選定。",
       "observation_characteristic": "保有銘柄5,600件規模。極めて高い回転率で、新規建て・全売却が同一四半期に数百件単位で発生する。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:47Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/millennium/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 276293649404,
+          "position_count": 4182,
+          "top5_concentration_pct": 19.0
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/millennium.json",
@@ -676,17 +1529,28 @@
       "inclusion_reason": "クオンツ勢の中でも評価額の変動幅が極端に大きい主体として選定。",
       "observation_characteristic": "評価額が四半期で70%超変動することがある。保有銘柄数自体は他クオンツと近いが、評価額の振れ幅が突出している。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:47Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/twosigma/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 138117670065,
+          "position_count": 3963,
+          "top5_concentration_pct": 4.9
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/twosigma.json",
@@ -707,17 +1571,28 @@
       "inclusion_reason": "クオンツの中でも学術的ファクター運用という別の性格を持つ主体として選定。",
       "observation_characteristic": "保有銘柄3,700件規模、評価額2,000億ドル超。ファクター（割安・モメンタム等）のローテーションが銘柄群の入れ替えとして現れる。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:49Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/aqr/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 286847511937,
+          "position_count": 3900,
+          "top5_concentration_pct": 8.4
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/aqr.json",
@@ -739,16 +1614,27 @@
       "observation_characteristic": "保有銘柄10〜15件程度の超集中。上位5銘柄で資産の大半を占め、入れ替えが起きた四半期は変化が鮮明に現れる。",
       "filing_status": "active",
       "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:49Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q2",
+        "latest_available_quarter": "2026-Q2",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/pershingsquare/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-05-15",
+          "total_value_usd": 13714299861,
+          "position_count": 11,
+          "top5_concentration_pct": 78.2
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/pershingsquare.json",
@@ -769,17 +1655,28 @@
       "inclusion_reason": "自己保有比率が極端に高い独特の構造を持つ主体として選定。",
       "observation_characteristic": "保有銘柄10件程度。最大保有銘柄が本人の経営する上場会社自体という自己言及的な構造を持つ。平常時は静止し、稀な変化が目立つ。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:50Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/icahn/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 8264090525,
+          "position_count": 12,
+          "top5_concentration_pct": 92.6
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/icahn.json",
@@ -801,7 +1698,11 @@
       "observation_characteristic": "保有銘柄16件規模。少数集中ポジションの中で、新規建て・全売却が比較的明確に、かつ落ち着いた頻度で現れる。",
       "filing_status": "active",
       "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_fetch_status": {
+        "status": "error",
+        "checked_at": "2026-08-15T09:21:50Z",
+        "error": "empty holdings"
+      },
       "data_quality_notes": null,
       "data_coverage": {
         "first_available_quarter": null,
@@ -832,7 +1733,11 @@
       "observation_characteristic": "保有銘柄8件程度の超集中。上位5銘柄で資産の大半を占め、稀な入れ替えに強い意味が伴う。",
       "filing_status": "active",
       "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_fetch_status": {
+        "status": "error",
+        "checked_at": "2026-08-15T09:21:51Z",
+        "error": "empty holdings"
+      },
       "data_quality_notes": null,
       "data_coverage": {
         "first_available_quarter": null,
@@ -862,17 +1767,28 @@
       "inclusion_reason": "業界最古参のアクティビストとして、普段静か・キャンペーン時に急動という型を代表する主体として選定。",
       "observation_characteristic": "保有銘柄30件程度。回転率は低いが上位5銘柄で高い集中度を持ち、特定企業への働きかけの時期に大きな変化が起きる。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:51Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/elliott/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 22669814953,
+          "position_count": 28,
+          "top5_concentration_pct": 56.7
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/elliott.json",
@@ -893,17 +1809,28 @@
       "inclusion_reason": "イベント駆動型投資の代表として選定。",
       "observation_characteristic": "保有銘柄30件程度、20億ドル規模。特定のイベント（M&A・再編等）を見込んだポジションの入れ替えが特徴。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:51Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/thirdpoint/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 4679571988,
+          "position_count": 43,
+          "top5_concentration_pct": 38.1
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/thirdpoint.json",
@@ -924,17 +1851,28 @@
       "inclusion_reason": "中堅規模のアクティビストとして、アクティビスト陣の多様性を確保する目的で選定。",
       "observation_characteristic": "保有銘柄20件規模、53億ドル規模。中規模の集中投資で、キャンペーン対象企業への追加投資が観測しやすい。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-02-17",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:52Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/starboard/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 4523797468,
+          "position_count": 21,
+          "top5_concentration_pct": 54.3
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/starboard.json",
@@ -956,7 +1894,11 @@
       "observation_characteristic": "保有銘柄数件〜十数件の超集中。市場の楽観に対して懐疑的なポジションを取る傾向が過去に確認されている。",
       "filing_status": "active",
       "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_fetch_status": {
+        "status": "skipped",
+        "checked_at": "2026-08-15T09:21:52Z",
+        "error": null
+      },
       "data_quality_notes": "2005〜2007年のサブプライム関連の賭けはCDS（クレジット・デフォルト・スワップ）によるもので、13Fには反映されない。",
       "data_coverage": {
         "first_available_quarter": null,
@@ -986,17 +1928,28 @@
       "inclusion_reason": "グロース型資金の中でも回転率が極めて高く、四半期ごとの入れ替えが観測しやすい主体。",
       "observation_characteristic": "保有銘柄150〜200件規模。新規建て・全売却・大幅増減が同一四半期内に多数同時発生する傾向がある。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-12",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:53Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/ark/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 15402788184,
+          "position_count": 190,
+          "top5_concentration_pct": 25.0
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/ark.json",
@@ -1017,17 +1970,28 @@
       "inclusion_reason": "静かな長期グロース型として、ARKやTiger Globalとは異なる回転率を持つ主体を追加。",
       "observation_characteristic": "保有銘柄35件規模。テック株中心の集中投資で、他のグロース勢より落ち着いた回転率を持つ。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:53Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/whalerock/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 12456319060,
+          "position_count": 35,
+          "top5_concentration_pct": 37.2
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/whalerock.json",
@@ -1048,17 +2012,28 @@
       "inclusion_reason": "グロース×アクティビズムの中間的な性格を持つ主体として選定。",
       "observation_characteristic": "保有銘柄は大型テック株中心。四半期ごとの増減が既存ポジションの確信度の変化として現れやすい。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-02-17",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:53Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/altimeter/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 9829676383,
+          "position_count": 20,
+          "top5_concentration_pct": 56.3
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/altimeter.json",
@@ -1079,17 +2054,28 @@
       "inclusion_reason": "劇的な入れ替えとストーリー性を持つグロース型主体の代表として選定。",
       "observation_characteristic": "保有銘柄54件規模。前四半期比で20%超の評価額変動、複数銘柄の同時新規建て・全売却が起きる。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:54Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/tigerglobal/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 23981506027,
+          "position_count": 46,
+          "top5_concentration_pct": 44.0
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/tigerglobal.json",
@@ -1110,17 +2096,28 @@
       "inclusion_reason": "Tiger Globalとは異なる規模感・銘柄選好を持つ同系統資金として選定。",
       "observation_characteristic": "保有銘柄62件規模、290億ドル超。テックグロース勢の中でも最大級の評価額規模を持つ。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:54Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/coatue/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 48629053706,
+          "position_count": 66,
+          "top5_concentration_pct": 37.4
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/coatue.json",
@@ -1141,17 +2138,28 @@
       "inclusion_reason": "著名人物との紐づけが公式一次情報（役員紹介ページ）で確認できる主体。四半期ごとの変化が大きい点も選定理由。",
       "observation_characteristic": "保有銘柄28件規模。四半期ごとに20%を超える評価額変動があり、新規建てを伴う入れ替えが明確に現れる。",
       "filing_status": "active",
-      "last_verified_filing_date": "2025-11-14",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:54Z",
+        "error": null
+      },
       "data_quality_notes": "関連会社SB Investment Advisers (UK) Limited（Vision Fund運用）は別のCIKで13Fを提出しているが、保有銘柄が完全に別で、直接の運用責任者もSon氏本人ではないため観測対象には含めない。",
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/softbank/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 18174540337,
+          "position_count": 30,
+          "top5_concentration_pct": 89.7
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/softbank.json",
@@ -1173,7 +2181,11 @@
       "observation_characteristic": "保有銘柄十数件程度の集中構造。個々のポジションが超大型で、既存事業（Microsoft創業者）とは異なる領域（鉄道・廃棄物処理・重機等）への配分が特徴的。",
       "filing_status": "active",
       "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_fetch_status": {
+        "status": "error",
+        "checked_at": "2026-08-15T09:21:55Z",
+        "error": "No XML found in https://www.sec.gov/Archives/edgar/data/1052192/000104746909005752/"
+      },
       "data_quality_notes": "同一人物に紐づく別法人としてBill & Melinda Gates Foundation Trust（CIK 1166559）が存在するが、保有銘柄がCascadeとほぼ重複するため観測対象には含めない。",
       "data_coverage": {
         "first_available_quarter": null,
@@ -1203,17 +2215,28 @@
       "inclusion_reason": "アジア発の政府系資本の代表として選定。20年以上の継続提出実績を持つ。",
       "observation_characteristic": "保有銘柄118件規模。シンガポール政府の対外投資方針が間接的に反映される可能性がある。",
       "filing_status": "active",
-      "last_verified_filing_date": "2025-11-14",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-07",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:55Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/temasek/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-07",
+          "total_value_usd": 37253810301,
+          "position_count": 177,
+          "top5_concentration_pct": 35.4
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/temasek.json",
@@ -1234,17 +2257,28 @@
       "inclusion_reason": "日本発のグローバル資本移動を観測する代表として選定。",
       "observation_characteristic": "保有銘柄1,655件規模。Alibaba Group等アジア企業の直接保有や、オプション取引が目立つ。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-15",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:56Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/nomura/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 85358323156,
+          "position_count": 1216,
+          "top5_concentration_pct": 49.2
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/nomura.json",
@@ -1265,17 +2299,28 @@
       "inclusion_reason": "「私的資本」中心の構成に、公的年金という異質な資金の性格を追加する目的で選定。",
       "observation_characteristic": "保有銘柄数千件規模。超長期の受託者責任に基づく運用のため、変化は他の主体より緩やかな傾向がある。",
       "filing_status": "active",
-      "last_verified_filing_date": "要最終確認（2011年分までは確認済み）",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:57Z",
+        "error": null
+      },
       "data_quality_notes": "直近の提出状況の最終確認が必要。",
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/calpers/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 177384494361,
+          "position_count": 1061,
+          "top5_concentration_pct": 31.7
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/calpers.json",
@@ -1296,17 +2341,28 @@
       "inclusion_reason": "非営利・超長期という、他の44主体とは異なる資金の性格を追加する目的で選定。保有銘柄に新しい資産クラス（暗号資産関連ETF等）が含まれる点も観測価値がある。",
       "observation_characteristic": "保有銘柄20件前後の集中構造。伝統的に保守的とされる大学基金の資金が、どのような新しい資産に配分されているかが四半期ごとに確認できる。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-02-13",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:57Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/harvard/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 4263102872,
+          "position_count": 19,
+          "top5_concentration_pct": 75.0
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/harvard.json",
@@ -1327,17 +2383,28 @@
       "inclusion_reason": "Berkshireとは異なる保険資本として、業界内の資金連動を観測する目的で選定。",
       "observation_characteristic": "保有銘柄129件規模。最大保有銘柄がBerkshire Hathaway自身という入れ子構造を持つ。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-02-06",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-07-31",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:57Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/markel/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-07-31",
+          "total_value_usd": 13130490727,
+          "position_count": 130,
+          "top5_concentration_pct": 28.1
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/markel.json",
@@ -1358,17 +2425,28 @@
       "inclusion_reason": "Berkshire・Markel・Cascadeとは異なる、家族支配型コングロマリットという資金構造を追加する目的で選定。",
       "observation_characteristic": "保有銘柄26件規模。CNA Financialの持分（92%所有）を含む合算提出（Combination Report）という独自の構造を持つ。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-04",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:58Z",
+        "error": null
+      },
       "data_quality_notes": "CNA Financialとの合算提出のため、単体の投資判断とグループ全体の資金移動を区別して読む必要がある。",
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/loews/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 12522898997,
+          "position_count": 28,
+          "top5_concentration_pct": 97.8
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/loews.json",
@@ -1389,17 +2467,28 @@
       "inclusion_reason": "既存44主体のいずれとも資金性格が重複しない最後の主体。信用サイクル・企業再生という領域を観測対象に加える。",
       "observation_characteristic": "保有銘柄50件前後。海運・エネルギー・再生企業・貴金属など景気循環に敏感な業種への配分と、株価指数・セクターETFに対するプットオプションを同時に保有する傾向がある。",
       "filing_status": "active",
-      "last_verified_filing_date": "2026-05-20",
-      "last_fetch_status": null,
+      "last_verified_filing_date": "2026-08-14",
+      "last_fetch_status": {
+        "status": "success",
+        "checked_at": "2026-08-15T09:21:58Z",
+        "error": null
+      },
       "data_quality_notes": null,
       "data_coverage": {
-        "first_available_quarter": null,
-        "latest_available_quarter": null,
-        "quarter_count": 0,
+        "first_available_quarter": "2026-Q3",
+        "latest_available_quarter": "2026-Q3",
+        "quarter_count": 1,
         "backfilled": false
       },
       "snapshot_dir": "data/history/oaktree/",
-      "quarters": [],
+      "quarters": [
+        {
+          "filing_date": "2026-08-14",
+          "total_value_usd": 7206070520,
+          "position_count": 143,
+          "top5_concentration_pct": 40.8
+        }
+      ],
       "related_files": [],
       "observed_changes_summary": {
         "path": "data/observed_changes/oaktree.json",

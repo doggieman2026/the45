@@ -1,0 +1,2974 @@
+{
+  "fund_id": "firsteagle",
+  "filing_date": "2026-08-05",
+  "holdings": [
+    {
+      "name_of_issuer": "908 DEVICES INC",
+      "title_of_class": "COM",
+      "cusip": "65443P102",
+      "value_usd": 8090870,
+      "shares": 929985
+    },
+    {
+      "name_of_issuer": "AAR CORP",
+      "title_of_class": "COM",
+      "cusip": "000361105",
+      "value_usd": 11585763,
+      "shares": 81059
+    },
+    {
+      "name_of_issuer": "ABM INDS INC",
+      "title_of_class": "COM",
+      "cusip": "000957100",
+      "value_usd": 17699760,
+      "shares": 400085
+    },
+    {
+      "name_of_issuer": "ACCENTURE PLC IRELAND",
+      "title_of_class": "SHS CLASS A",
+      "cusip": "G1151C101",
+      "value_usd": 14757588,
+      "shares": 118592
+    },
+    {
+      "name_of_issuer": "ADTRAN HOLDINGS INC",
+      "title_of_class": "COM",
+      "cusip": "00486H105",
+      "value_usd": 17354247,
+      "shares": 1248507
+    },
+    {
+      "name_of_issuer": "ADVANCED ENERGY INDS",
+      "title_of_class": "COM",
+      "cusip": "007973100",
+      "value_usd": 34130656,
+      "shares": 91535
+    },
+    {
+      "name_of_issuer": "AEBI SCHMIDT HLDG AG",
+      "title_of_class": "COM",
+      "cusip": "H00501108",
+      "value_usd": 3078515,
+      "shares": 245300
+    },
+    {
+      "name_of_issuer": "AGNICO EAGLE MINES LTD",
+      "title_of_class": "COM",
+      "cusip": "008474108",
+      "value_usd": 805995828,
+      "shares": 5192638
+    },
+    {
+      "name_of_issuer": "AIR PRODUCTS AND CHEMICALS I",
+      "title_of_class": "COM",
+      "cusip": "009158106",
+      "value_usd": 13193,
+      "shares": 45
+    },
+    {
+      "name_of_issuer": "AIRGAIN INC",
+      "title_of_class": "COM",
+      "cusip": "00938A104",
+      "value_usd": 2169739,
+      "shares": 344403
+    },
+    {
+      "name_of_issuer": "ALAMOS GOLD INC",
+      "title_of_class": "COM CL A",
+      "cusip": "011532108",
+      "value_usd": 186874865,
+      "shares": 6169791
+    },
+    {
+      "name_of_issuer": "ALBANY INTL CORP",
+      "title_of_class": "CL A",
+      "cusip": "012348108",
+      "value_usd": 20273611,
+      "shares": 272129
+    },
+    {
+      "name_of_issuer": "ALKAMI TECHNOLOGY INC",
+      "title_of_class": "COM",
+      "cusip": "01644J108",
+      "value_usd": 7714191,
+      "shares": 425728
+    },
+    {
+      "name_of_issuer": "ALPHABET INC",
+      "title_of_class": "CAP STK CL C",
+      "cusip": "02079K107",
+      "value_usd": 2585051365,
+      "shares": 7316252
+    },
+    {
+      "name_of_issuer": "ALPHABET INC",
+      "title_of_class": "CAP STK CL A",
+      "cusip": "02079K305",
+      "value_usd": 185447155,
+      "shares": 518922
+    },
+    {
+      "name_of_issuer": "ALPHATEC HLDGS INC",
+      "title_of_class": "COM NEW",
+      "cusip": "02081G201",
+      "value_usd": 8620910,
+      "shares": 996637
+    },
+    {
+      "name_of_issuer": "ALTA EQUIPMENT GROUP INC",
+      "title_of_class": "COMMON STOCK",
+      "cusip": "02128L106",
+      "value_usd": 3364400,
+      "shares": 520000
+    },
+    {
+      "name_of_issuer": "ALTISOURCE PORTFOLIO SOLUTIO",
+      "title_of_class": "*W EXP 04/30/203",
+      "cusip": "L0175J112",
+      "value_usd": 1134,
+      "shares": 2834
+    },
+    {
+      "name_of_issuer": "ALTISOURCE PORTFOLIO SOLUTIO",
+      "title_of_class": "*W EXP 04/02/202",
+      "cusip": "L0175J120",
+      "value_usd": 794,
+      "shares": 2834
+    },
+    {
+      "name_of_issuer": "ALTISOURCE PORTFOLIO SOLUTIO",
+      "title_of_class": "SHS NEW",
+      "cusip": "L0175J138",
+      "value_usd": 3267645,
+      "shares": 435686
+    },
+    {
+      "name_of_issuer": "AMBEV SA",
+      "title_of_class": "SPONSORED ADR",
+      "cusip": "02319V103",
+      "value_usd": 1096874902,
+      "shares": 349323217
+    },
+    {
+      "name_of_issuer": "AMBIQ MICRO INC",
+      "title_of_class": "COMMON STOCK",
+      "cusip": "023193105",
+      "value_usd": 21579990,
+      "shares": 244394
+    },
+    {
+      "name_of_issuer": "AMERESCO INC",
+      "title_of_class": "CL A",
+      "cusip": "02361E108",
+      "value_usd": 20674636,
+      "shares": 749081
+    },
+    {
+      "name_of_issuer": "AMERICAN EXPRESS CO",
+      "title_of_class": "COM",
+      "cusip": "025816109",
+      "value_usd": 568309886,
+      "shares": 1680147
+    },
+    {
+      "name_of_issuer": "AMERICAN WTR WKS CO INC NEW",
+      "title_of_class": "COM",
+      "cusip": "030420103",
+      "value_usd": 79211,
+      "shares": 602
+    },
+    {
+      "name_of_issuer": "AMERIS BANCORP",
+      "title_of_class": "COM",
+      "cusip": "03076K108",
+      "value_usd": 29689131,
+      "shares": 328929
+    },
+    {
+      "name_of_issuer": "AMN HEALTHCARE SVCS INC",
+      "title_of_class": "COM",
+      "cusip": "001744101",
+      "value_usd": 6351382,
+      "shares": 196212
+    },
+    {
+      "name_of_issuer": "AMTECH SYS INC",
+      "title_of_class": "COM PAR $0.01N",
+      "cusip": "032332504",
+      "value_usd": 19581672,
+      "shares": 848426
+    },
+    {
+      "name_of_issuer": "ANGIODYNAMICS INC",
+      "title_of_class": "COM",
+      "cusip": "03475V101",
+      "value_usd": 3596419,
+      "shares": 276435
+    },
+    {
+      "name_of_issuer": "ANGLOGOLD ASHANTI PLC",
+      "title_of_class": "COM SHS",
+      "cusip": "G0378L100",
+      "value_usd": 120581024,
+      "shares": 1490679
+    },
+    {
+      "name_of_issuer": "APPLIED AEROSPACE & DEFENSE",
+      "title_of_class": "COMMON STOCK",
+      "cusip": "03815J107",
+      "value_usd": 2847500,
+      "shares": 125000
+    },
+    {
+      "name_of_issuer": "ARAMARK",
+      "title_of_class": "COM",
+      "cusip": "03852U106",
+      "value_usd": 853500,
+      "shares": 15000
+    },
+    {
+      "name_of_issuer": "ARCOSA INC",
+      "title_of_class": "COM",
+      "cusip": "039653100",
+      "value_usd": 18573874,
+      "shares": 127840
+    },
+    {
+      "name_of_issuer": "ARLO TECHNOLOGIES INC",
+      "title_of_class": "COM",
+      "cusip": "04206A101",
+      "value_usd": 10139656,
+      "shares": 752200
+    },
+    {
+      "name_of_issuer": "ARTIVION INC",
+      "title_of_class": "COM",
+      "cusip": "228903100",
+      "value_usd": 7787496,
+      "shares": 346573
+    },
+    {
+      "name_of_issuer": "ASTEC INDS INC",
+      "title_of_class": "COM",
+      "cusip": "046224101",
+      "value_usd": 16619204,
+      "shares": 271600
+    },
+    {
+      "name_of_issuer": "ASTRONICS CORP",
+      "title_of_class": "COM",
+      "cusip": "046433108",
+      "value_usd": 15660915,
+      "shares": 192726
+    },
+    {
+      "name_of_issuer": "ATRICURE INC",
+      "title_of_class": "COM",
+      "cusip": "04963C209",
+      "value_usd": 8328051,
+      "shares": 297643
+    },
+    {
+      "name_of_issuer": "AUTOMATIC DATA PROCESSING IN",
+      "title_of_class": "COM",
+      "cusip": "053015103",
+      "value_usd": 1158701418,
+      "shares": 5173929
+    },
+    {
+      "name_of_issuer": "AVEANNA HEALTHCARE HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "05356F105",
+      "value_usd": 6553196,
+      "shares": 764667
+    },
+    {
+      "name_of_issuer": "AVIAT NETWORKS INC",
+      "title_of_class": "COM NEW",
+      "cusip": "05366Y201",
+      "value_usd": 8002123,
+      "shares": 360456
+    },
+    {
+      "name_of_issuer": "AVIDBANK HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "05368J103",
+      "value_usd": 9381841,
+      "shares": 284040
+    },
+    {
+      "name_of_issuer": "AXCELIS TECHNOLOGIES INC",
+      "title_of_class": "COM NEW",
+      "cusip": "054540208",
+      "value_usd": 13626191,
+      "shares": 71925
+    },
+    {
+      "name_of_issuer": "AXIS CAP HLDGS LTD",
+      "title_of_class": "SHS",
+      "cusip": "G0692U109",
+      "value_usd": 16325401,
+      "shares": 151949
+    },
+    {
+      "name_of_issuer": "AXOGEN INC",
+      "title_of_class": "COM",
+      "cusip": "05463X106",
+      "value_usd": 15754346,
+      "shares": 341077
+    },
+    {
+      "name_of_issuer": "AXOS FINANCIAL INC",
+      "title_of_class": "COM",
+      "cusip": "05465C100",
+      "value_usd": 20774456,
+      "shares": 213312
+    },
+    {
+      "name_of_issuer": "B2GOLD CORP",
+      "title_of_class": "COM",
+      "cusip": "11777Q209",
+      "value_usd": 36359299,
+      "shares": 9702684
+    },
+    {
+      "name_of_issuer": "BAKER HUGHES COMPANY",
+      "title_of_class": "CL A",
+      "cusip": "05722G100",
+      "value_usd": 1221000,
+      "shares": 22000
+    },
+    {
+      "name_of_issuer": "BANK OF AMER CORP",
+      "title_of_class": "7.25%CNV PFD L",
+      "cusip": "060505682",
+      "value_usd": 37184635,
+      "shares": 29641
+    },
+    {
+      "name_of_issuer": "BANK OF NY MELLON CORP",
+      "title_of_class": "COM",
+      "cusip": "064058100",
+      "value_usd": 1340088594,
+      "shares": 9266915
+    },
+    {
+      "name_of_issuer": "BARRICK MNG CORP",
+      "title_of_class": "COM SHS",
+      "cusip": "06849F108",
+      "value_usd": 731599094,
+      "shares": 19918298
+    },
+    {
+      "name_of_issuer": "BECTON DICKINSON & CO",
+      "title_of_class": "COM",
+      "cusip": "075887109",
+      "value_usd": 2090674677,
+      "shares": 13815335
+    },
+    {
+      "name_of_issuer": "BELDEN INC",
+      "title_of_class": "COM",
+      "cusip": "077454106",
+      "value_usd": 17435994,
+      "shares": 145409
+    },
+    {
+      "name_of_issuer": "BENCHMARK ELECTRS INC",
+      "title_of_class": "COM",
+      "cusip": "08160H101",
+      "value_usd": 34629618,
+      "shares": 350964
+    },
+    {
+      "name_of_issuer": "BERKSHIRE HATHAWAY INC DEL",
+      "title_of_class": "CL A",
+      "cusip": "084670108",
+      "value_usd": 423100250,
+      "shares": 565
+    },
+    {
+      "name_of_issuer": "BERKSHIRE HATHAWAY INC DEL",
+      "title_of_class": "CL B NEW",
+      "cusip": "084670702",
+      "value_usd": 33839489,
+      "shares": 67626
+    },
+    {
+      "name_of_issuer": "BIO RAD LABS INC",
+      "title_of_class": "CL A",
+      "cusip": "090572207",
+      "value_usd": 765211916,
+      "shares": 2606219
+    },
+    {
+      "name_of_issuer": "BLACK HILLS CORP",
+      "title_of_class": "COM",
+      "cusip": "092113109",
+      "value_usd": 13242456,
+      "shares": 177990
+    },
+    {
+      "name_of_issuer": "BLACK STONE MINERALS L P",
+      "title_of_class": "COM UNIT",
+      "cusip": "09225M101",
+      "value_usd": 409111,
+      "shares": 29285
+    },
+    {
+      "name_of_issuer": "BOISE CASCADE CO DEL",
+      "title_of_class": "COM",
+      "cusip": "09739D100",
+      "value_usd": 14998737,
+      "shares": 193208
+    },
+    {
+      "name_of_issuer": "BOOKING HOLDINGS INC",
+      "title_of_class": "COM",
+      "cusip": "09857L108",
+      "value_usd": 876315960,
+      "shares": 4916494
+    },
+    {
+      "name_of_issuer": "BRAZE INC",
+      "title_of_class": "COM CL A",
+      "cusip": "10576N102",
+      "value_usd": 13226866,
+      "shares": 609814
+    },
+    {
+      "name_of_issuer": "BRC GROUP HOLDINGS INC",
+      "title_of_class": "COM",
+      "cusip": "05580M108",
+      "value_usd": 5474926,
+      "shares": 680961
+    },
+    {
+      "name_of_issuer": "BRITISH AMERN TOB PLC",
+      "title_of_class": "SPONSORED ADR",
+      "cusip": "110448107",
+      "value_usd": 106156304,
+      "shares": 1718852
+    },
+    {
+      "name_of_issuer": "BROOKDALE SR LIVING INC",
+      "title_of_class": "COM",
+      "cusip": "112463104",
+      "value_usd": 37012583,
+      "shares": 2300347
+    },
+    {
+      "name_of_issuer": "BROWN & BROWN INC",
+      "title_of_class": "COM",
+      "cusip": "115236101",
+      "value_usd": 752320040,
+      "shares": 11727514
+    },
+    {
+      "name_of_issuer": "BUILDERS FIRSTSOURCE INC",
+      "title_of_class": "COM",
+      "cusip": "12008R107",
+      "value_usd": 14943,
+      "shares": 167
+    },
+    {
+      "name_of_issuer": "BXP INC",
+      "title_of_class": "COM",
+      "cusip": "101121101",
+      "value_usd": 627773161,
+      "shares": 9467247
+    },
+    {
+      "name_of_issuer": "C H ROBINSON WORLDWIDE IN",
+      "title_of_class": "COM NEW",
+      "cusip": "12541W209",
+      "value_usd": 686019630,
+      "shares": 3642453
+    },
+    {
+      "name_of_issuer": "CABOT CORP",
+      "title_of_class": "COM",
+      "cusip": "127055101",
+      "value_usd": 18931429,
+      "shares": 208450
+    },
+    {
+      "name_of_issuer": "CADRE HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "12763L105",
+      "value_usd": 8737118,
+      "shares": 306458
+    },
+    {
+      "name_of_issuer": "CAE INC",
+      "title_of_class": "COM",
+      "cusip": "124765108",
+      "value_usd": 22994610,
+      "shares": 919313
+    },
+    {
+      "name_of_issuer": "CAL MAINE FOODS INC",
+      "title_of_class": "COM NEW",
+      "cusip": "128030202",
+      "value_usd": 5397520,
+      "shares": 67000
+    },
+    {
+      "name_of_issuer": "CANADIAN NATL RY CO",
+      "title_of_class": "COM",
+      "cusip": "136375102",
+      "value_usd": 279327,
+      "shares": 2343
+    },
+    {
+      "name_of_issuer": "CANADIAN PACIFIC KANSAS CITY",
+      "title_of_class": "COM",
+      "cusip": "13646K108",
+      "value_usd": 304537,
+      "shares": 3516
+    },
+    {
+      "name_of_issuer": "CARDINAL HEALTH INC",
+      "title_of_class": "COM",
+      "cusip": "14149Y108",
+      "value_usd": 1401604,
+      "shares": 5900
+    },
+    {
+      "name_of_issuer": "CAREDX INC",
+      "title_of_class": "COM",
+      "cusip": "14167L103",
+      "value_usd": 17057165,
+      "shares": 598497
+    },
+    {
+      "name_of_issuer": "CARLISLE COS INC",
+      "title_of_class": "COM",
+      "cusip": "142339100",
+      "value_usd": 447829385,
+      "shares": 1234540
+    },
+    {
+      "name_of_issuer": "CASEYS GEN STORES INC",
+      "title_of_class": "COM",
+      "cusip": "147528103",
+      "value_usd": 953748,
+      "shares": 1200
+    },
+    {
+      "name_of_issuer": "CECO ENVIRONMENTAL CORP",
+      "title_of_class": "COM",
+      "cusip": "125141101",
+      "value_usd": 24891979,
+      "shares": 274322
+    },
+    {
+      "name_of_issuer": "CELSIUS HLDGS INC",
+      "title_of_class": "COM NEW",
+      "cusip": "15118V207",
+      "value_usd": 1327936,
+      "shares": 45353
+    },
+    {
+      "name_of_issuer": "CENTRAL GARDEN & PET CO",
+      "title_of_class": "CL A NON-VTG",
+      "cusip": "153527205",
+      "value_usd": 11240896,
+      "shares": 289938
+    },
+    {
+      "name_of_issuer": "CENTURY ALUM CO",
+      "title_of_class": "COM",
+      "cusip": "156431108",
+      "value_usd": 16672184,
+      "shares": 362360
+    },
+    {
+      "name_of_issuer": "CERTARA INC",
+      "title_of_class": "COM",
+      "cusip": "15687V109",
+      "value_usd": 3405332,
+      "shares": 519898
+    },
+    {
+      "name_of_issuer": "CEVA INC",
+      "title_of_class": "COM",
+      "cusip": "157210105",
+      "value_usd": 9861958,
+      "shares": 209117
+    },
+    {
+      "name_of_issuer": "CHAMPION HOMES INC",
+      "title_of_class": "COM",
+      "cusip": "830830105",
+      "value_usd": 11947221,
+      "shares": 135579
+    },
+    {
+      "name_of_issuer": "CHARTER COMMUNICATIONS INC",
+      "title_of_class": "CL A",
+      "cusip": "16119P108",
+      "value_usd": 510156591,
+      "shares": 3587347
+    },
+    {
+      "name_of_issuer": "CHEESECAKE FACTORY INC",
+      "title_of_class": "COM",
+      "cusip": "163072101",
+      "value_usd": 10625828,
+      "shares": 133591
+    },
+    {
+      "name_of_issuer": "CHEFS WHSE INC",
+      "title_of_class": "COM",
+      "cusip": "163086101",
+      "value_usd": 17443976,
+      "shares": 181519
+    },
+    {
+      "name_of_issuer": "CIENA CORP",
+      "title_of_class": "COM NEW",
+      "cusip": "171779309",
+      "value_usd": 981120,
+      "shares": 2000
+    },
+    {
+      "name_of_issuer": "CITIZENS INC",
+      "title_of_class": "CL A",
+      "cusip": "174740100",
+      "value_usd": 3352447,
+      "shares": 584050
+    },
+    {
+      "name_of_issuer": "CLEAN HARBORS INC",
+      "title_of_class": "COM",
+      "cusip": "184496107",
+      "value_usd": 1157358,
+      "shares": 3874
+    },
+    {
+      "name_of_issuer": "COCA-COLA FEMSA SAB DE CV",
+      "title_of_class": "SPONS ADS REP",
+      "cusip": "191241108",
+      "value_usd": 41728519,
+      "shares": 392739
+    },
+    {
+      "name_of_issuer": "COEUR MNG INC",
+      "title_of_class": "COM NEW",
+      "cusip": "192108504",
+      "value_usd": 7411222,
+      "shares": 454119
+    },
+    {
+      "name_of_issuer": "COHEN & STEERS INC",
+      "title_of_class": "COM",
+      "cusip": "19247A100",
+      "value_usd": 20711,
+      "shares": 272
+    },
+    {
+      "name_of_issuer": "COHERENT CORP",
+      "title_of_class": "COM",
+      "cusip": "19247G107",
+      "value_usd": 1250075,
+      "shares": 3169
+    },
+    {
+      "name_of_issuer": "COHU INC",
+      "title_of_class": "COM",
+      "cusip": "192576106",
+      "value_usd": 40542074,
+      "shares": 548533
+    },
+    {
+      "name_of_issuer": "COLGATE PALMOLIVE CO",
+      "title_of_class": "COM",
+      "cusip": "194162103",
+      "value_usd": 752298466,
+      "shares": 8205699
+    },
+    {
+      "name_of_issuer": "COLLIERS INTL GROUP INC",
+      "title_of_class": "SUB VTG SHS",
+      "cusip": "194693107",
+      "value_usd": 294875,
+      "shares": 3144
+    },
+    {
+      "name_of_issuer": "COLUMBIA BKG SYS INC",
+      "title_of_class": "COM",
+      "cusip": "197236102",
+      "value_usd": 12326430,
+      "shares": 384600
+    },
+    {
+      "name_of_issuer": "COLUMBUS MCKINNON CORP N Y",
+      "title_of_class": "COM",
+      "cusip": "199333105",
+      "value_usd": 6234105,
+      "shares": 412036
+    },
+    {
+      "name_of_issuer": "COMCAST CORP NEW",
+      "title_of_class": "CL A",
+      "cusip": "20030N101",
+      "value_usd": 937146775,
+      "shares": 38172985
+    },
+    {
+      "name_of_issuer": "COMMERCIAL METALS CO",
+      "title_of_class": "COM",
+      "cusip": "201723103",
+      "value_usd": 21985466,
+      "shares": 350366
+    },
+    {
+      "name_of_issuer": "COMPANIA CERVECERIAS UNIDAS",
+      "title_of_class": "SPONSORED ADR",
+      "cusip": "204429104",
+      "value_usd": 180538759,
+      "shares": 16119532
+    },
+    {
+      "name_of_issuer": "CONCENTRA GROUP HOLDINGS PAR",
+      "title_of_class": "COMMON STOCK",
+      "cusip": "20603L102",
+      "value_usd": 19279755,
+      "shares": 648059
+    },
+    {
+      "name_of_issuer": "CONCRETE PUMPING HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "206704108",
+      "value_usd": 8874837,
+      "shares": 736501
+    },
+    {
+      "name_of_issuer": "COURSERA INC",
+      "title_of_class": "COM",
+      "cusip": "22266M104",
+      "value_usd": 5967120,
+      "shares": 1058000
+    },
+    {
+      "name_of_issuer": "COVENANT LOGISTICS GROUP INC",
+      "title_of_class": "CL A",
+      "cusip": "22284P105",
+      "value_usd": 15857616,
+      "shares": 358932
+    },
+    {
+      "name_of_issuer": "CRH PLC",
+      "title_of_class": "ORD",
+      "cusip": "G25508105",
+      "value_usd": 309658,
+      "shares": 2894
+    },
+    {
+      "name_of_issuer": "CROSS CTRY HEALTHCARE INC",
+      "title_of_class": "COM",
+      "cusip": "227483104",
+      "value_usd": 9871582,
+      "shares": 747281
+    },
+    {
+      "name_of_issuer": "CRYOPORT INC",
+      "title_of_class": "COM PAR $0.001",
+      "cusip": "229050307",
+      "value_usd": 19961357,
+      "shares": 1271424
+    },
+    {
+      "name_of_issuer": "CULLEN FROST BANKERS INC",
+      "title_of_class": "COM",
+      "cusip": "229899109",
+      "value_usd": 429203714,
+      "shares": 2777658
+    },
+    {
+      "name_of_issuer": "CUMMINS INC",
+      "title_of_class": "COM",
+      "cusip": "231021106",
+      "value_usd": 382899584,
+      "shares": 536868
+    },
+    {
+      "name_of_issuer": "CURTISS WRIGHT CORP",
+      "title_of_class": "COM",
+      "cusip": "231561101",
+      "value_usd": 872182,
+      "shares": 1151
+    },
+    {
+      "name_of_issuer": "CUSTOM TRUCK ONE SOURCE INC",
+      "title_of_class": "COM CL A",
+      "cusip": "23204X103",
+      "value_usd": 10177303,
+      "shares": 861753
+    },
+    {
+      "name_of_issuer": "DEERE & CO",
+      "title_of_class": "COM",
+      "cusip": "244199105",
+      "value_usd": 340558456,
+      "shares": 536879
+    },
+    {
+      "name_of_issuer": "DELTA AIR LINES INC",
+      "title_of_class": "COM NEW",
+      "cusip": "247361702",
+      "value_usd": 1424756,
+      "shares": 15212
+    },
+    {
+      "name_of_issuer": "DENTSPLY SIRONA INC",
+      "title_of_class": "COM",
+      "cusip": "24906P109",
+      "value_usd": 9032792,
+      "shares": 851347
+    },
+    {
+      "name_of_issuer": "DIAGEO PLC",
+      "title_of_class": "SPON ADR NEW",
+      "cusip": "25243Q205",
+      "value_usd": 44542940,
+      "shares": 554155
+    },
+    {
+      "name_of_issuer": "DIANA SHIPPING INC",
+      "title_of_class": "COM",
+      "cusip": "Y2066G104",
+      "value_usd": 4962882,
+      "shares": 2363277
+    },
+    {
+      "name_of_issuer": "DIGI INTL INC",
+      "title_of_class": "COM",
+      "cusip": "253798102",
+      "value_usd": 15234262,
+      "shares": 203259
+    },
+    {
+      "name_of_issuer": "DIME COML BANCSHARES INC",
+      "title_of_class": "COM",
+      "cusip": "25432X102",
+      "value_usd": 13481979,
+      "shares": 331660
+    },
+    {
+      "name_of_issuer": "DINE BRANDS GLOBAL INC",
+      "title_of_class": "COM",
+      "cusip": "254423106",
+      "value_usd": 10637995,
+      "shares": 296323
+    },
+    {
+      "name_of_issuer": "DISNEY WALT CO",
+      "title_of_class": "COM",
+      "cusip": "254687106",
+      "value_usd": 517371936,
+      "shares": 5375293
+    },
+    {
+      "name_of_issuer": "DNOW INC",
+      "title_of_class": "COM",
+      "cusip": "67011P100",
+      "value_usd": 7780781,
+      "shares": 599906
+    },
+    {
+      "name_of_issuer": "DOLLAR GEN CORP",
+      "title_of_class": "COM",
+      "cusip": "256677105",
+      "value_usd": 517995082,
+      "shares": 4500001
+    },
+    {
+      "name_of_issuer": "DONALDSON INC",
+      "title_of_class": "COM",
+      "cusip": "257651109",
+      "value_usd": 287264,
+      "shares": 3200
+    },
+    {
+      "name_of_issuer": "DORIAN LPG LTD",
+      "title_of_class": "SHS USD",
+      "cusip": "Y2106R110",
+      "value_usd": 19456802,
+      "shares": 559425
+    },
+    {
+      "name_of_issuer": "DORMAN PRODS INC",
+      "title_of_class": "COM",
+      "cusip": "258278100",
+      "value_usd": 21646701,
+      "shares": 158642
+    },
+    {
+      "name_of_issuer": "DOUBLEVERIFY HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "25862V105",
+      "value_usd": 12574400,
+      "shares": 1160000
+    },
+    {
+      "name_of_issuer": "DOUGLAS ELLIMAN INC",
+      "title_of_class": "COM",
+      "cusip": "25961D105",
+      "value_usd": 2904696,
+      "shares": 1641071
+    },
+    {
+      "name_of_issuer": "DOUGLAS EMMETT INC",
+      "title_of_class": "COM",
+      "cusip": "25960P109",
+      "value_usd": 164708270,
+      "shares": 13958328
+    },
+    {
+      "name_of_issuer": "DOW HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "260557103",
+      "value_usd": 1094400,
+      "shares": 40000
+    },
+    {
+      "name_of_issuer": "DPC HOLDINGS PLC",
+      "title_of_class": "ORDINARY SHARES",
+      "cusip": "G2R11M108",
+      "value_usd": 1198683,
+      "shares": 24433
+    },
+    {
+      "name_of_issuer": "DUCOMMUN INC DEL",
+      "title_of_class": "COM",
+      "cusip": "264147109",
+      "value_usd": 32666599,
+      "shares": 176376
+    },
+    {
+      "name_of_issuer": "DYCOM INDS INC",
+      "title_of_class": "COM",
+      "cusip": "267475101",
+      "value_usd": 14175227,
+      "shares": 28037
+    },
+    {
+      "name_of_issuer": "EASTGROUP PPTYS INC",
+      "title_of_class": "COM",
+      "cusip": "277276101",
+      "value_usd": 223188,
+      "shares": 1102
+    },
+    {
+      "name_of_issuer": "EASTMAN KODAK CO",
+      "title_of_class": "COM NEW",
+      "cusip": "277461406",
+      "value_usd": 2645500,
+      "shares": 286000
+    },
+    {
+      "name_of_issuer": "EL POLLO LOCO HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "268603107",
+      "value_usd": 16888751,
+      "shares": 995799
+    },
+    {
+      "name_of_issuer": "ELEMENT SOLUTIONS INC",
+      "title_of_class": "COM",
+      "cusip": "28618M106",
+      "value_usd": 17505150,
+      "shares": 366600
+    },
+    {
+      "name_of_issuer": "ELEVANCE HEALTH INC FORMERLY",
+      "title_of_class": "COM",
+      "cusip": "036752103",
+      "value_usd": 1619701186,
+      "shares": 4188196
+    },
+    {
+      "name_of_issuer": "ENPRO INC",
+      "title_of_class": "COM",
+      "cusip": "29355X107",
+      "value_usd": 33972701,
+      "shares": 90130
+    },
+    {
+      "name_of_issuer": "ENSIGN GROUP INC",
+      "title_of_class": "COM",
+      "cusip": "29358P101",
+      "value_usd": 10355380,
+      "shares": 64600
+    },
+    {
+      "name_of_issuer": "ENTEGRIS INC",
+      "title_of_class": "COM",
+      "cusip": "29362U104",
+      "value_usd": 1717483,
+      "shares": 9549
+    },
+    {
+      "name_of_issuer": "ENTERPRISE PRODS PARTNERS L",
+      "title_of_class": "COM",
+      "cusip": "293792107",
+      "value_usd": 71977403,
+      "shares": 1958036
+    },
+    {
+      "name_of_issuer": "ENVISTA HOLDINGS CORPORATION",
+      "title_of_class": "COM",
+      "cusip": "29415F104",
+      "value_usd": 9815375,
+      "shares": 372500
+    },
+    {
+      "name_of_issuer": "EQUINIX INC",
+      "title_of_class": "COM",
+      "cusip": "29444U700",
+      "value_usd": 567060,
+      "shares": 544
+    },
+    {
+      "name_of_issuer": "EQUITY RESIDENTIAL",
+      "title_of_class": "SH BEN INT",
+      "cusip": "29476L107",
+      "value_usd": 647312318,
+      "shares": 9529108
+    },
+    {
+      "name_of_issuer": "ESAB CORPORATION",
+      "title_of_class": "COM",
+      "cusip": "29605J106",
+      "value_usd": 5071357,
+      "shares": 51418
+    },
+    {
+      "name_of_issuer": "ETHAN ALLEN INTERIORS INC",
+      "title_of_class": "COM",
+      "cusip": "297602104",
+      "value_usd": 2574261,
+      "shares": 115231
+    },
+    {
+      "name_of_issuer": "EVERCORE INC",
+      "title_of_class": "CLASS A",
+      "cusip": "29977A105",
+      "value_usd": 1352103,
+      "shares": 3960
+    },
+    {
+      "name_of_issuer": "EVERQUOTE INC",
+      "title_of_class": "COM CL A",
+      "cusip": "30041R108",
+      "value_usd": 5465919,
+      "shares": 229757
+    },
+    {
+      "name_of_issuer": "EXAGEN INC",
+      "title_of_class": "COM",
+      "cusip": "30068X103",
+      "value_usd": 1427387,
+      "shares": 306965
+    },
+    {
+      "name_of_issuer": "EXELIXIS INC",
+      "title_of_class": "COM",
+      "cusip": "30161Q104",
+      "value_usd": 544100,
+      "shares": 10000
+    },
+    {
+      "name_of_issuer": "EXPEDITORS INTL WASH INC",
+      "title_of_class": "COM",
+      "cusip": "302130109",
+      "value_usd": 329380621,
+      "shares": 2020988
+    },
+    {
+      "name_of_issuer": "EXTRA SPACE STORAGE INC",
+      "title_of_class": "COM",
+      "cusip": "30225T102",
+      "value_usd": 563327680,
+      "shares": 3876997
+    },
+    {
+      "name_of_issuer": "EXTREME NETWORKS INC",
+      "title_of_class": "COM",
+      "cusip": "30226D106",
+      "value_usd": 18868991,
+      "shares": 582916
+    },
+    {
+      "name_of_issuer": "FABRINET",
+      "title_of_class": "SHS",
+      "cusip": "G3323L100",
+      "value_usd": 11565358,
+      "shares": 20576
+    },
+    {
+      "name_of_issuer": "FERGUSON ENTERPRISES INC",
+      "title_of_class": "COMMON STOCK NEW",
+      "cusip": "31488V107",
+      "value_usd": 156413286,
+      "shares": 659054
+    },
+    {
+      "name_of_issuer": "FIDELITY NATL FINL INC",
+      "title_of_class": "COM SHS",
+      "cusip": "31620R303",
+      "value_usd": 423355429,
+      "shares": 8977002
+    },
+    {
+      "name_of_issuer": "FIRST EAGLE ETF TR",
+      "title_of_class": "US EQUITY ETF",
+      "cusip": "32012B104",
+      "value_usd": 1014465,
+      "shares": 30000
+    },
+    {
+      "name_of_issuer": "FIRST EAGLE ETF TR",
+      "title_of_class": "MID CAP EQUI ETF",
+      "cusip": "32012B203",
+      "value_usd": 1152014,
+      "shares": 30001
+    },
+    {
+      "name_of_issuer": "FISERV INC",
+      "title_of_class": "COM",
+      "cusip": "337738108",
+      "value_usd": 532573753,
+      "shares": 10857773
+    },
+    {
+      "name_of_issuer": "FLEX LTD",
+      "title_of_class": "ORD",
+      "cusip": "Y2573F102",
+      "value_usd": 2685176,
+      "shares": 16568
+    },
+    {
+      "name_of_issuer": "FLEXSTEEL INDS INC",
+      "title_of_class": "COM",
+      "cusip": "339382103",
+      "value_usd": 1489600,
+      "shares": 20000
+    },
+    {
+      "name_of_issuer": "FLOTEK INDUSTRIES INC",
+      "title_of_class": "COM NEW",
+      "cusip": "343389409",
+      "value_usd": 6897052,
+      "shares": 293242
+    },
+    {
+      "name_of_issuer": "FLOWCO HLDGS INC",
+      "title_of_class": "COM CL A",
+      "cusip": "342909108",
+      "value_usd": 16614577,
+      "shares": 778565
+    },
+    {
+      "name_of_issuer": "FLOWSERVE CORP",
+      "title_of_class": "COM",
+      "cusip": "34354P105",
+      "value_usd": 13156652,
+      "shares": 177409
+    },
+    {
+      "name_of_issuer": "FLYWIRE CORPORATION",
+      "title_of_class": "COM VTG",
+      "cusip": "302492103",
+      "value_usd": 20269402,
+      "shares": 1153637
+    },
+    {
+      "name_of_issuer": "FOMENTO ECONOMICO MEXICANO S",
+      "title_of_class": "SPON ADR UNITS",
+      "cusip": "344419106",
+      "value_usd": 1663758488,
+      "shares": 13008276
+    },
+    {
+      "name_of_issuer": "FORBRIGHT INC",
+      "title_of_class": "CL A COM",
+      "cusip": "34520K105",
+      "value_usd": 4389600,
+      "shares": 240000
+    },
+    {
+      "name_of_issuer": "FORMFACTOR INC",
+      "title_of_class": "COM",
+      "cusip": "346375108",
+      "value_usd": 16974490,
+      "shares": 106137
+    },
+    {
+      "name_of_issuer": "FOSSIL GROUP INC",
+      "title_of_class": "COM",
+      "cusip": "34988V106",
+      "value_usd": 1407600,
+      "shares": 340000
+    },
+    {
+      "name_of_issuer": "FRANCO NEV CORP",
+      "title_of_class": "COM",
+      "cusip": "351858105",
+      "value_usd": 1099218812,
+      "shares": 5273317
+    },
+    {
+      "name_of_issuer": "FRONTVIEW REIT INC",
+      "title_of_class": "COM",
+      "cusip": "35922N100",
+      "value_usd": 13166210,
+      "shares": 650826
+    },
+    {
+      "name_of_issuer": "FTAI AVIATION LTD",
+      "title_of_class": "SHS",
+      "cusip": "G3730V105",
+      "value_usd": 1267704,
+      "shares": 4686
+    },
+    {
+      "name_of_issuer": "FTAI INFRASTRUCTURE INC",
+      "title_of_class": "COMMON STOCK",
+      "cusip": "35953C106",
+      "value_usd": 12748688,
+      "shares": 2747562
+    },
+    {
+      "name_of_issuer": "FULLER H B CO",
+      "title_of_class": "COM",
+      "cusip": "359694106",
+      "value_usd": 19780304,
+      "shares": 339343
+    },
+    {
+      "name_of_issuer": "GATES INDL CORP PLC",
+      "title_of_class": "ORD SHS",
+      "cusip": "G39108108",
+      "value_usd": 15014296,
+      "shares": 536800
+    },
+    {
+      "name_of_issuer": "GE HEALTHCARE TECHNOLOGIES I",
+      "title_of_class": "COMMON STOCK",
+      "cusip": "36266G107",
+      "value_usd": 15747,
+      "shares": 246
+    },
+    {
+      "name_of_issuer": "GENERAC HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "368736104",
+      "value_usd": 1431841,
+      "shares": 4890
+    },
+    {
+      "name_of_issuer": "GENERAL DYNAMICS CORP",
+      "title_of_class": "COM",
+      "cusip": "369550108",
+      "value_usd": 34361,
+      "shares": 97
+    },
+    {
+      "name_of_issuer": "GOLAR LNG LTD",
+      "title_of_class": "SHS",
+      "cusip": "G9456A100",
+      "value_usd": 17958448,
+      "shares": 360322
+    },
+    {
+      "name_of_issuer": "GOLD FIELDS LTD",
+      "title_of_class": "SPONSORED ADR",
+      "cusip": "38059T106",
+      "value_usd": 118767656,
+      "shares": 3535804
+    },
+    {
+      "name_of_issuer": "GRAHAM CORP",
+      "title_of_class": "COM",
+      "cusip": "384556106",
+      "value_usd": 24029248,
+      "shares": 194113
+    },
+    {
+      "name_of_issuer": "GRIFFON CORP",
+      "title_of_class": "COM",
+      "cusip": "398433102",
+      "value_usd": 16595412,
+      "shares": 170157
+    },
+    {
+      "name_of_issuer": "GROCERY OUTLET HLDG CORP",
+      "title_of_class": "COM",
+      "cusip": "39874R101",
+      "value_usd": 9840340,
+      "shares": 986006
+    },
+    {
+      "name_of_issuer": "HALEON PLC",
+      "title_of_class": "SPON ADS",
+      "cusip": "405552100",
+      "value_usd": 39417910,
+      "shares": 4224856
+    },
+    {
+      "name_of_issuer": "HARMONIC INC",
+      "title_of_class": "COM",
+      "cusip": "413160102",
+      "value_usd": 23615352,
+      "shares": 1446133
+    },
+    {
+      "name_of_issuer": "HCA HEALTHCARE INC",
+      "title_of_class": "COM",
+      "cusip": "40412C101",
+      "value_usd": 1284907912,
+      "shares": 3295565
+    },
+    {
+      "name_of_issuer": "HEALTHCARE SVCS GROUP INC",
+      "title_of_class": "COM",
+      "cusip": "421906108",
+      "value_usd": 13459740,
+      "shares": 548035
+    },
+    {
+      "name_of_issuer": "HEALTHSTREAM INC",
+      "title_of_class": "COM",
+      "cusip": "42222N103",
+      "value_usd": 16129221,
+      "shares": 591898
+    },
+    {
+      "name_of_issuer": "HECLA MINING COMPANY",
+      "title_of_class": "COM",
+      "cusip": "422704106",
+      "value_usd": 6202860,
+      "shares": 402000
+    },
+    {
+      "name_of_issuer": "HELIX ENERGY SOLUTIONS GRP I",
+      "title_of_class": "COM",
+      "cusip": "42330P107",
+      "value_usd": 4224549,
+      "shares": 483358
+    },
+    {
+      "name_of_issuer": "HERC HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "42704L104",
+      "value_usd": 22263425,
+      "shares": 155319
+    },
+    {
+      "name_of_issuer": "HF SINCLAIR CORP",
+      "title_of_class": "COM",
+      "cusip": "403949100",
+      "value_usd": 1162528,
+      "shares": 16691
+    },
+    {
+      "name_of_issuer": "HINGE HEALTH INC",
+      "title_of_class": "CL A",
+      "cusip": "433313103",
+      "value_usd": 35701786,
+      "shares": 430142
+    },
+    {
+      "name_of_issuer": "HOLLEY INC",
+      "title_of_class": "COM",
+      "cusip": "43538H103",
+      "value_usd": 1162282,
+      "shares": 455797
+    },
+    {
+      "name_of_issuer": "HOME DEPOT INC",
+      "title_of_class": "COM",
+      "cusip": "437076102",
+      "value_usd": 18613039,
+      "shares": 52776
+    },
+    {
+      "name_of_issuer": "HOOKER FURNISHINGS CORPORATI",
+      "title_of_class": "COM",
+      "cusip": "439038100",
+      "value_usd": 7489795,
+      "shares": 420067
+    },
+    {
+      "name_of_issuer": "HOULIHAN LOKEY INC",
+      "title_of_class": "CL A",
+      "cusip": "441593100",
+      "value_usd": 12072,
+      "shares": 90
+    },
+    {
+      "name_of_issuer": "HUNT J B TRANS SVCS INC",
+      "title_of_class": "COM",
+      "cusip": "445658107",
+      "value_usd": 1166982,
+      "shares": 4032
+    },
+    {
+      "name_of_issuer": "HUNTSMAN CORP",
+      "title_of_class": "COM",
+      "cusip": "447011107",
+      "value_usd": 11618461,
+      "shares": 1094017
+    },
+    {
+      "name_of_issuer": "HURCO CO",
+      "title_of_class": "COM",
+      "cusip": "447324104",
+      "value_usd": 686850,
+      "shares": 30000
+    },
+    {
+      "name_of_issuer": "I3 VERTICALS INC",
+      "title_of_class": "COM CL A",
+      "cusip": "46571Y107",
+      "value_usd": 15443472,
+      "shares": 723009
+    },
+    {
+      "name_of_issuer": "IDACORP INC",
+      "title_of_class": "COM",
+      "cusip": "451107106",
+      "value_usd": 6280160,
+      "shares": 41508
+    },
+    {
+      "name_of_issuer": "IMPERIAL OIL LTD",
+      "title_of_class": "COM NEW",
+      "cusip": "453038408",
+      "value_usd": 1524485876,
+      "shares": 13590697
+    },
+    {
+      "name_of_issuer": "INFUSYSTEM HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "45685K102",
+      "value_usd": 5983000,
+      "shares": 620000
+    },
+    {
+      "name_of_issuer": "INNIO NV",
+      "title_of_class": "ORDINARY SHARES",
+      "cusip": "N52A8C105",
+      "value_usd": 1285375,
+      "shares": 32500
+    },
+    {
+      "name_of_issuer": "INSEEGO CORP",
+      "title_of_class": "COM NEW",
+      "cusip": "45782B302",
+      "value_usd": 5204760,
+      "shares": 503849
+    },
+    {
+      "name_of_issuer": "INSTALLED BLDG PRODS INC",
+      "title_of_class": "COM",
+      "cusip": "45780R101",
+      "value_usd": 29319080,
+      "shares": 127563
+    },
+    {
+      "name_of_issuer": "INSTEEL INDS INC",
+      "title_of_class": "COM",
+      "cusip": "45774W108",
+      "value_usd": 15445911,
+      "shares": 511454
+    },
+    {
+      "name_of_issuer": "INTERFACE INC",
+      "title_of_class": "COM",
+      "cusip": "458665304",
+      "value_usd": 4485125,
+      "shares": 125143
+    },
+    {
+      "name_of_issuer": "INTERNATIONAL FLAVORS&FRAGRA",
+      "title_of_class": "COM",
+      "cusip": "459506101",
+      "value_usd": 745436275,
+      "shares": 9409698
+    },
+    {
+      "name_of_issuer": "INTEST CORP",
+      "title_of_class": "COM",
+      "cusip": "461147100",
+      "value_usd": 11130978,
+      "shares": 612602
+    },
+    {
+      "name_of_issuer": "INTREPID POTASH INC",
+      "title_of_class": "COM",
+      "cusip": "46121Y201",
+      "value_usd": 10606002,
+      "shares": 323551
+    },
+    {
+      "name_of_issuer": "IPG PHOTONICS CORP",
+      "title_of_class": "COM",
+      "cusip": "44980X109",
+      "value_usd": 391717575,
+      "shares": 3338881
+    },
+    {
+      "name_of_issuer": "ISHARES GOLD TR",
+      "title_of_class": "ISHARES NEW",
+      "cusip": "464285204",
+      "value_usd": 201461,
+      "shares": 2668
+    },
+    {
+      "name_of_issuer": "ITAU UNIBANCO HLDG S A",
+      "title_of_class": "SPON ADR REP PFD",
+      "cusip": "465562106",
+      "value_usd": 28890396,
+      "shares": 3536156
+    },
+    {
+      "name_of_issuer": "ITRON INC",
+      "title_of_class": "COM",
+      "cusip": "465741106",
+      "value_usd": 10815125,
+      "shares": 124987
+    },
+    {
+      "name_of_issuer": "JAMES HARDIE INDS PLC",
+      "title_of_class": "ORD SHS",
+      "cusip": "G4253H101",
+      "value_usd": 1261248,
+      "shares": 48176
+    },
+    {
+      "name_of_issuer": "JBT MAREL CORPORATION",
+      "title_of_class": "COM",
+      "cusip": "477839104",
+      "value_usd": 12223500,
+      "shares": 84300
+    },
+    {
+      "name_of_issuer": "JOHNSON OUTDOORS INC",
+      "title_of_class": "CL A",
+      "cusip": "479167108",
+      "value_usd": 7393472,
+      "shares": 160588
+    },
+    {
+      "name_of_issuer": "KAISER ALUMINIUM CORPORATION",
+      "title_of_class": "COM PAR $0.01",
+      "cusip": "483007704",
+      "value_usd": 27081256,
+      "shares": 138431
+    },
+    {
+      "name_of_issuer": "KINROSS GOLD CORP",
+      "title_of_class": "COM",
+      "cusip": "496902404",
+      "value_usd": 151522135,
+      "shares": 6414993
+    },
+    {
+      "name_of_issuer": "KVH INDS INC",
+      "title_of_class": "COM",
+      "cusip": "482738101",
+      "value_usd": 2807761,
+      "shares": 283326
+    },
+    {
+      "name_of_issuer": "LANTHEUS HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "516544103",
+      "value_usd": 887520,
+      "shares": 8000
+    },
+    {
+      "name_of_issuer": "LIFESTANCE HEALTH GROUP INC",
+      "title_of_class": "COM",
+      "cusip": "53228F101",
+      "value_usd": 16739366,
+      "shares": 1562966
+    },
+    {
+      "name_of_issuer": "LINCOLN EDL SVCS CORP",
+      "title_of_class": "COM",
+      "cusip": "533535100",
+      "value_usd": 30714947,
+      "shares": 615530
+    },
+    {
+      "name_of_issuer": "LINCOLN NATL CORP IND",
+      "title_of_class": "COM",
+      "cusip": "534187109",
+      "value_usd": 12328313,
+      "shares": 348750
+    },
+    {
+      "name_of_issuer": "LITHIA MTRS INC",
+      "title_of_class": "COM",
+      "cusip": "536797103",
+      "value_usd": 19165368,
+      "shares": 65976
+    },
+    {
+      "name_of_issuer": "LITTELFUSE INC",
+      "title_of_class": "COM",
+      "cusip": "537008104",
+      "value_usd": 1544024,
+      "shares": 3391
+    },
+    {
+      "name_of_issuer": "LLOYDS BANKING GROUP PLC",
+      "title_of_class": "SPONSORED ADR",
+      "cusip": "539439109",
+      "value_usd": 40820245,
+      "shares": 7001757
+    },
+    {
+      "name_of_issuer": "LOUISIANA PAC CORP",
+      "title_of_class": "COM",
+      "cusip": "546347105",
+      "value_usd": 22953224,
+      "shares": 291803
+    },
+    {
+      "name_of_issuer": "LSB INDS INC",
+      "title_of_class": "COM",
+      "cusip": "502160104",
+      "value_usd": 15338309,
+      "shares": 1418900
+    },
+    {
+      "name_of_issuer": "LSI INDS INC OHIO",
+      "title_of_class": "COM",
+      "cusip": "50216C108",
+      "value_usd": 9059102,
+      "shares": 340824
+    },
+    {
+      "name_of_issuer": "LUXFER HLDGS PLC",
+      "title_of_class": "SHS",
+      "cusip": "G5698W116",
+      "value_usd": 2841300,
+      "shares": 157500
+    },
+    {
+      "name_of_issuer": "MAGNITE INC",
+      "title_of_class": "COM",
+      "cusip": "55955D100",
+      "value_usd": 12731556,
+      "shares": 670788
+    },
+    {
+      "name_of_issuer": "MAGNUM ICE CREAM CO NV",
+      "title_of_class": "ORD SHS",
+      "cusip": "N5505D105",
+      "value_usd": 400636428,
+      "shares": 23021501
+    },
+    {
+      "name_of_issuer": "MAMAS CREATIONS INC",
+      "title_of_class": "COM",
+      "cusip": "56146T103",
+      "value_usd": 24620309,
+      "shares": 1379289
+    },
+    {
+      "name_of_issuer": "MANITOWOC CO INC",
+      "title_of_class": "COM NEW",
+      "cusip": "563571405",
+      "value_usd": 14720469,
+      "shares": 1059789
+    },
+    {
+      "name_of_issuer": "MARAVAI LIFESCIENCES HLDGS I",
+      "title_of_class": "COM CL A",
+      "cusip": "56600D107",
+      "value_usd": 22908831,
+      "shares": 3671287
+    },
+    {
+      "name_of_issuer": "MARINEMAX INC",
+      "title_of_class": "COM",
+      "cusip": "567908108",
+      "value_usd": 13858912,
+      "shares": 378452
+    },
+    {
+      "name_of_issuer": "MARKETAXESS HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "57060D108",
+      "value_usd": 5626494,
+      "shares": 49577
+    },
+    {
+      "name_of_issuer": "MATADOR RES CO",
+      "title_of_class": "COM",
+      "cusip": "576485205",
+      "value_usd": 1493400,
+      "shares": 30000
+    },
+    {
+      "name_of_issuer": "MATERION CORP",
+      "title_of_class": "COM",
+      "cusip": "576690101",
+      "value_usd": 35478627,
+      "shares": 119300
+    },
+    {
+      "name_of_issuer": "MATIV HOLDINGS INC",
+      "title_of_class": "COM",
+      "cusip": "808541106",
+      "value_usd": 2395822,
+      "shares": 316489
+    },
+    {
+      "name_of_issuer": "MATRIX SVC CO",
+      "title_of_class": "COM",
+      "cusip": "576853105",
+      "value_usd": 13565973,
+      "shares": 990217
+    },
+    {
+      "name_of_issuer": "MAYVILLE ENGR CO INC",
+      "title_of_class": "COM",
+      "cusip": "578605107",
+      "value_usd": 13844280,
+      "shares": 369575
+    },
+    {
+      "name_of_issuer": "MEDTRONIC PLC",
+      "title_of_class": "SHS",
+      "cusip": "G5960L103",
+      "value_usd": 1078321025,
+      "shares": 13783983
+    },
+    {
+      "name_of_issuer": "META PLATFORMS INC",
+      "title_of_class": "CL A",
+      "cusip": "30303M102",
+      "value_usd": 1812302580,
+      "shares": 3217353
+    },
+    {
+      "name_of_issuer": "MICROSOFT CORP",
+      "title_of_class": "COM",
+      "cusip": "594918104",
+      "value_usd": 723738832,
+      "shares": 1940215
+    },
+    {
+      "name_of_issuer": "MISTRAS GROUP INC",
+      "title_of_class": "COM",
+      "cusip": "60649T107",
+      "value_usd": 9675847,
+      "shares": 553855
+    },
+    {
+      "name_of_issuer": "MOELIS & CO",
+      "title_of_class": "CL A",
+      "cusip": "60786M105",
+      "value_usd": 7196200,
+      "shares": 110000
+    },
+    {
+      "name_of_issuer": "MURPHY OIL CORP",
+      "title_of_class": "COM",
+      "cusip": "626717102",
+      "value_usd": 16195344,
+      "shares": 497400
+    },
+    {
+      "name_of_issuer": "NATIONAL CINEMEDIA INC",
+      "title_of_class": "COM NEW",
+      "cusip": "635309206",
+      "value_usd": 1306113,
+      "shares": 343714
+    },
+    {
+      "name_of_issuer": "NATIONAL VISION HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "63845R107",
+      "value_usd": 8167038,
+      "shares": 429618
+    },
+    {
+      "name_of_issuer": "NATURAL GAS SVCS GROUP INC",
+      "title_of_class": "COM",
+      "cusip": "63886Q109",
+      "value_usd": 14999131,
+      "shares": 347685
+    },
+    {
+      "name_of_issuer": "NATURES SUNSHINE PRODS INC",
+      "title_of_class": "COM",
+      "cusip": "639027101",
+      "value_usd": 2153840,
+      "shares": 98800
+    },
+    {
+      "name_of_issuer": "NAVIGATOR HLDGS LTD",
+      "title_of_class": "SHS",
+      "cusip": "Y62132108",
+      "value_usd": 19204158,
+      "shares": 1030819
+    },
+    {
+      "name_of_issuer": "NETGEAR INC",
+      "title_of_class": "COM",
+      "cusip": "64111Q104",
+      "value_usd": 14272571,
+      "shares": 611245
+    },
+    {
+      "name_of_issuer": "NETSCOUT SYS INC",
+      "title_of_class": "COM",
+      "cusip": "64115T104",
+      "value_usd": 10817907,
+      "shares": 248402
+    },
+    {
+      "name_of_issuer": "NEWMONT CORP",
+      "title_of_class": "COM",
+      "cusip": "651639106",
+      "value_usd": 1080668406,
+      "shares": 11570326
+    },
+    {
+      "name_of_issuer": "NMI HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "629209305",
+      "value_usd": 11869627,
+      "shares": 288869
+    },
+    {
+      "name_of_issuer": "NOBLE CORP PLC",
+      "title_of_class": "ORD SHS A",
+      "cusip": "G65431127",
+      "value_usd": 520602144,
+      "shares": 13957162
+    },
+    {
+      "name_of_issuer": "NOV INC",
+      "title_of_class": "COM",
+      "cusip": "62955J103",
+      "value_usd": 569201026,
+      "shares": 30684691
+    },
+    {
+      "name_of_issuer": "NOVAGOLD RESOURCES INC",
+      "title_of_class": "COM NEW",
+      "cusip": "66987E206",
+      "value_usd": 44688011,
+      "shares": 7485429
+    },
+    {
+      "name_of_issuer": "NPK INTERNATIONAL INC",
+      "title_of_class": "COM SHS",
+      "cusip": "651718504",
+      "value_usd": 11471142,
+      "shares": 721002
+    },
+    {
+      "name_of_issuer": "NUTRIEN LTD",
+      "title_of_class": "COM",
+      "cusip": "67077M108",
+      "value_usd": 627690944,
+      "shares": 9971263
+    },
+    {
+      "name_of_issuer": "NVENT ELEC PLC",
+      "title_of_class": "SHS",
+      "cusip": "G6700G107",
+      "value_usd": 1759704,
+      "shares": 10375
+    },
+    {
+      "name_of_issuer": "OIL STS INTL INC",
+      "title_of_class": "COM",
+      "cusip": "678026105",
+      "value_usd": 16065473,
+      "shares": 2005677
+    },
+    {
+      "name_of_issuer": "OLD DOMINION FREIGHT LINE IN",
+      "title_of_class": "COM",
+      "cusip": "679580100",
+      "value_usd": 20577,
+      "shares": 95
+    },
+    {
+      "name_of_issuer": "OLD NATL BANCORP IND",
+      "title_of_class": "COM",
+      "cusip": "680033107",
+      "value_usd": 25563248,
+      "shares": 986998
+    },
+    {
+      "name_of_issuer": "OLD REP INTL CORP",
+      "title_of_class": "COM",
+      "cusip": "680223104",
+      "value_usd": 11366717,
+      "shares": 277779
+    },
+    {
+      "name_of_issuer": "OLIN CORP",
+      "title_of_class": "COM PAR $1",
+      "cusip": "680665205",
+      "value_usd": 796645,
+      "shares": 40194
+    },
+    {
+      "name_of_issuer": "OMNICOM GROUP INC",
+      "title_of_class": "COM",
+      "cusip": "681919106",
+      "value_usd": 534805905,
+      "shares": 7343209
+    },
+    {
+      "name_of_issuer": "ON HLDG AG",
+      "title_of_class": "NAMEN AKT A",
+      "cusip": "H5919C104",
+      "value_usd": 13460,
+      "shares": 380
+    },
+    {
+      "name_of_issuer": "ONE GAS INC",
+      "title_of_class": "COM",
+      "cusip": "68235P108",
+      "value_usd": 12390081,
+      "shares": 160764
+    },
+    {
+      "name_of_issuer": "ONEOK INC NEW",
+      "title_of_class": "COM",
+      "cusip": "682680103",
+      "value_usd": 1028919864,
+      "shares": 11834827
+    },
+    {
+      "name_of_issuer": "ONEWATER MARINE INC",
+      "title_of_class": "CL A COM",
+      "cusip": "68280L101",
+      "value_usd": 8538918,
+      "shares": 757668
+    },
+    {
+      "name_of_issuer": "ONTO INNOVATION INC",
+      "title_of_class": "COM",
+      "cusip": "683344105",
+      "value_usd": 30008815,
+      "shares": 79294
+    },
+    {
+      "name_of_issuer": "ORACLE CORP",
+      "title_of_class": "COM",
+      "cusip": "68389X105",
+      "value_usd": 1248148495,
+      "shares": 8516878
+    },
+    {
+      "name_of_issuer": "ORASURE TECHNOLOGIES INC",
+      "title_of_class": "COM",
+      "cusip": "68554V108",
+      "value_usd": 4739865,
+      "shares": 1062750
+    },
+    {
+      "name_of_issuer": "ORLA MNG LTD NEW",
+      "title_of_class": "COM",
+      "cusip": "68634K106",
+      "value_usd": 46581004,
+      "shares": 4767826
+    },
+    {
+      "name_of_issuer": "OSI SYSTEMS INC",
+      "title_of_class": "COM",
+      "cusip": "671044105",
+      "value_usd": 11407829,
+      "shares": 52162
+    },
+    {
+      "name_of_issuer": "OTIS WORLDWIDE CORP",
+      "title_of_class": "COM",
+      "cusip": "68902V107",
+      "value_usd": 14739775,
+      "shares": 205863
+    },
+    {
+      "name_of_issuer": "OUTDOOR HOLDING CO",
+      "title_of_class": "COM",
+      "cusip": "00175J107",
+      "value_usd": 4886884,
+      "shares": 2143370
+    },
+    {
+      "name_of_issuer": "OUTFRONT MEDIA INC",
+      "title_of_class": "COM NEW",
+      "cusip": "69007J304",
+      "value_usd": 14022427,
+      "shares": 428035
+    },
+    {
+      "name_of_issuer": "PAN AMERN SILVER CORP",
+      "title_of_class": "COM",
+      "cusip": "697900108",
+      "value_usd": 108262748,
+      "shares": 2417389
+    },
+    {
+      "name_of_issuer": "PARK-OHIO HLDGS CORP",
+      "title_of_class": "COM",
+      "cusip": "700666100",
+      "value_usd": 18373217,
+      "shares": 477847
+    },
+    {
+      "name_of_issuer": "PARSONS CORP DEL",
+      "title_of_class": "COM",
+      "cusip": "70202L102",
+      "value_usd": 9391274,
+      "shares": 179257
+    },
+    {
+      "name_of_issuer": "PENNANT GROUP INC",
+      "title_of_class": "COM",
+      "cusip": "70805E109",
+      "value_usd": 21079975,
+      "shares": 570500
+    },
+    {
+      "name_of_issuer": "PEPSICO INC",
+      "title_of_class": "COM",
+      "cusip": "713448108",
+      "value_usd": 6530478,
+      "shares": 48231
+    },
+    {
+      "name_of_issuer": "PERELLA WEINBERG PARTNERS",
+      "title_of_class": "CLASS A COM",
+      "cusip": "71367G102",
+      "value_usd": 14382977,
+      "shares": 901189
+    },
+    {
+      "name_of_issuer": "PERFORMANCE FOOD GROUP CO",
+      "title_of_class": "COM",
+      "cusip": "71377A103",
+      "value_usd": 1044789,
+      "shares": 9346
+    },
+    {
+      "name_of_issuer": "PERMIAN RESOURCES CORP",
+      "title_of_class": "CLASS A COM",
+      "cusip": "71424F105",
+      "value_usd": 1229457,
+      "shares": 66782
+    },
+    {
+      "name_of_issuer": "PHILIP MORRIS INTL INC",
+      "title_of_class": "COM",
+      "cusip": "718172109",
+      "value_usd": 1071976429,
+      "shares": 5925468
+    },
+    {
+      "name_of_issuer": "PHOENIX ED PARTNERS INC",
+      "title_of_class": "COM",
+      "cusip": "718968100",
+      "value_usd": 13649504,
+      "shares": 415510
+    },
+    {
+      "name_of_issuer": "PLEXUS CORP",
+      "title_of_class": "COM",
+      "cusip": "729132100",
+      "value_usd": 27684791,
+      "shares": 92077
+    },
+    {
+      "name_of_issuer": "PPG INDS INC",
+      "title_of_class": "COM",
+      "cusip": "693506107",
+      "value_usd": 789576554,
+      "shares": 6509824
+    },
+    {
+      "name_of_issuer": "PROFOUND MED CORP",
+      "title_of_class": "COM NEW",
+      "cusip": "74319B502",
+      "value_usd": 2927377,
+      "shares": 440207
+    },
+    {
+      "name_of_issuer": "PROGYNY INC",
+      "title_of_class": "COM",
+      "cusip": "74340E103",
+      "value_usd": 6146902,
+      "shares": 213212
+    },
+    {
+      "name_of_issuer": "PROPETRO HLDG CORP",
+      "title_of_class": "COM",
+      "cusip": "74347M108",
+      "value_usd": 11125445,
+      "shares": 775833
+    },
+    {
+      "name_of_issuer": "PULTE GROUP INC",
+      "title_of_class": "COM",
+      "cusip": "745867101",
+      "value_usd": 649278,
+      "shares": 4732
+    },
+    {
+      "name_of_issuer": "QUAKER HOUGHTON",
+      "title_of_class": "COM",
+      "cusip": "747316107",
+      "value_usd": 25891679,
+      "shares": 162974
+    },
+    {
+      "name_of_issuer": "QUANEX BLDG PRODS CORP",
+      "title_of_class": "COM",
+      "cusip": "747619104",
+      "value_usd": 8829809,
+      "shares": 474211
+    },
+    {
+      "name_of_issuer": "QUANTA SVCS INC",
+      "title_of_class": "COM",
+      "cusip": "74762E102",
+      "value_usd": 1332074,
+      "shares": 1850
+    },
+    {
+      "name_of_issuer": "QUANTERIX CORP",
+      "title_of_class": "COM",
+      "cusip": "74766Q101",
+      "value_usd": 11893673,
+      "shares": 2753165
+    },
+    {
+      "name_of_issuer": "QUEST DIAGNOSTICS INC",
+      "title_of_class": "COM",
+      "cusip": "74834L100",
+      "value_usd": 1612092,
+      "shares": 7606
+    },
+    {
+      "name_of_issuer": "QXO INC",
+      "title_of_class": "COM NEW",
+      "cusip": "82846H405",
+      "value_usd": 11454808,
+      "shares": 662894
+    },
+    {
+      "name_of_issuer": "RADIAN GROUP INC",
+      "title_of_class": "COM",
+      "cusip": "750236101",
+      "value_usd": 8656604,
+      "shares": 229801
+    },
+    {
+      "name_of_issuer": "RADIANT LOGISTICS INC",
+      "title_of_class": "COM",
+      "cusip": "75025X100",
+      "value_usd": 5226716,
+      "shares": 552507
+    },
+    {
+      "name_of_issuer": "RADNET INC",
+      "title_of_class": "COM",
+      "cusip": "750491102",
+      "value_usd": 12027870,
+      "shares": 195036
+    },
+    {
+      "name_of_issuer": "RAMACO RES INC",
+      "title_of_class": "COM CL B",
+      "cusip": "75134P501",
+      "value_usd": 5233096,
+      "shares": 612058
+    },
+    {
+      "name_of_issuer": "RANPAK HOLDINGS CORP",
+      "title_of_class": "COM CL A",
+      "cusip": "75321W103",
+      "value_usd": 7808264,
+      "shares": 1068162
+    },
+    {
+      "name_of_issuer": "RAYMOND JAMES FINL INC",
+      "title_of_class": "COM",
+      "cusip": "754730109",
+      "value_usd": 320783,
+      "shares": 2110
+    },
+    {
+      "name_of_issuer": "RED RIVER BANCSHARES INC",
+      "title_of_class": "COM",
+      "cusip": "75686R202",
+      "value_usd": 13632577,
+      "shares": 149349
+    },
+    {
+      "name_of_issuer": "REGAL REXNORD CORPORATION",
+      "title_of_class": "COM",
+      "cusip": "758750103",
+      "value_usd": 859866,
+      "shares": 3610
+    },
+    {
+      "name_of_issuer": "REINSURANCE GROUP AMER INC",
+      "title_of_class": "COM NEW",
+      "cusip": "759351604",
+      "value_usd": 18926,
+      "shares": 89
+    },
+    {
+      "name_of_issuer": "RELIANCE INC",
+      "title_of_class": "COM",
+      "cusip": "759509102",
+      "value_usd": 544709,
+      "shares": 1458
+    },
+    {
+      "name_of_issuer": "RELX PLC",
+      "title_of_class": "SPONSORED ADR",
+      "cusip": "759530108",
+      "value_usd": 32964875,
+      "shares": 1040886
+    },
+    {
+      "name_of_issuer": "REMITLY GLOBAL INC",
+      "title_of_class": "COM",
+      "cusip": "75960P104",
+      "value_usd": 24040417,
+      "shares": 1072754
+    },
+    {
+      "name_of_issuer": "RICHARDSON ELECTRS LTD",
+      "title_of_class": "COM",
+      "cusip": "763165107",
+      "value_usd": 2756450,
+      "shares": 145000
+    },
+    {
+      "name_of_issuer": "RILEY EXPLORATION PERMIAN IN",
+      "title_of_class": "COM",
+      "cusip": "76665T102",
+      "value_usd": 14203980,
+      "shares": 430946
+    },
+    {
+      "name_of_issuer": "ROCKET COS INC",
+      "title_of_class": "COM CL A",
+      "cusip": "77311W101",
+      "value_usd": 1063125,
+      "shares": 67500
+    },
+    {
+      "name_of_issuer": "ROGERS CORP",
+      "title_of_class": "COM",
+      "cusip": "775133101",
+      "value_usd": 30825120,
+      "shares": 188268
+    },
+    {
+      "name_of_issuer": "ROSS STORES INC",
+      "title_of_class": "COM",
+      "cusip": "778296103",
+      "value_usd": 3581840,
+      "shares": 16828
+    },
+    {
+      "name_of_issuer": "ROYAL GOLD INC",
+      "title_of_class": "COM",
+      "cusip": "780287108",
+      "value_usd": 172021103,
+      "shares": 861786
+    },
+    {
+      "name_of_issuer": "RPC INC",
+      "title_of_class": "COM",
+      "cusip": "749660106",
+      "value_usd": 3175304,
+      "shares": 544649
+    },
+    {
+      "name_of_issuer": "RPM INTL INC",
+      "title_of_class": "COM",
+      "cusip": "749685103",
+      "value_usd": 192401,
+      "shares": 1731
+    },
+    {
+      "name_of_issuer": "RYMAN HOSPITALITY PPTYS INC",
+      "title_of_class": "COM",
+      "cusip": "78377T107",
+      "value_usd": 1312239,
+      "shares": 10208
+    },
+    {
+      "name_of_issuer": "SALESFORCE INC",
+      "title_of_class": "COM",
+      "cusip": "79466L302",
+      "value_usd": 1144563308,
+      "shares": 7306034
+    },
+    {
+      "name_of_issuer": "SANMINA CORP",
+      "title_of_class": "COM",
+      "cusip": "801056102",
+      "value_usd": 809856,
+      "shares": 3200
+    },
+    {
+      "name_of_issuer": "SCORPIO TANKERS INC",
+      "title_of_class": "SHS",
+      "cusip": "Y7542C130",
+      "value_usd": 15841009,
+      "shares": 228718
+    },
+    {
+      "name_of_issuer": "SEACOAST BKG CORP FLA",
+      "title_of_class": "COM NEW",
+      "cusip": "811707801",
+      "value_usd": 21531536,
+      "shares": 647565
+    },
+    {
+      "name_of_issuer": "SEACOR MARINE HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "78413P101",
+      "value_usd": 7910016,
+      "shares": 1033989
+    },
+    {
+      "name_of_issuer": "SEADRILL LTD",
+      "title_of_class": "COM",
+      "cusip": "G7997W102",
+      "value_usd": 6762519,
+      "shares": 178808
+    },
+    {
+      "name_of_issuer": "SHARKNINJA INC",
+      "title_of_class": "COM SHS",
+      "cusip": "G8068L108",
+      "value_usd": 1241762,
+      "shares": 8155
+    },
+    {
+      "name_of_issuer": "SHELL PLC",
+      "title_of_class": "SPON ADS",
+      "cusip": "780259305",
+      "value_usd": 83220937,
+      "shares": 1073265
+    },
+    {
+      "name_of_issuer": "SI BONE INC",
+      "title_of_class": "COM",
+      "cusip": "825704109",
+      "value_usd": 12549117,
+      "shares": 768941
+    },
+    {
+      "name_of_issuer": "SILICON MOTION TECHNOLOGY CO",
+      "title_of_class": "SPONSORED ADR",
+      "cusip": "82706C108",
+      "value_usd": 41911914,
+      "shares": 125737
+    },
+    {
+      "name_of_issuer": "SIMULATIONS PLUS INC",
+      "title_of_class": "COM",
+      "cusip": "829214105",
+      "value_usd": 19602356,
+      "shares": 1070582
+    },
+    {
+      "name_of_issuer": "SLB LIMITED",
+      "title_of_class": "COM STK",
+      "cusip": "806857108",
+      "value_usd": 1344199454,
+      "shares": 28913733
+    },
+    {
+      "name_of_issuer": "SMARTFINANCIAL INC",
+      "title_of_class": "COM NEW",
+      "cusip": "83190L208",
+      "value_usd": 14983386,
+      "shares": 319339
+    },
+    {
+      "name_of_issuer": "SMITH DOUGLAS HOMES CORP",
+      "title_of_class": "COM SHS CL A",
+      "cusip": "83207R107",
+      "value_usd": 6282418,
+      "shares": 404274
+    },
+    {
+      "name_of_issuer": "SONIDA SENIOR LIVING INC",
+      "title_of_class": "COM",
+      "cusip": "140475203",
+      "value_usd": 2346000,
+      "shares": 57500
+    },
+    {
+      "name_of_issuer": "SONOS INC",
+      "title_of_class": "COM",
+      "cusip": "83570H108",
+      "value_usd": 14286678,
+      "shares": 1055926
+    },
+    {
+      "name_of_issuer": "SOUTHWEST AIRLS CO",
+      "title_of_class": "COM",
+      "cusip": "844741108",
+      "value_usd": 359940,
+      "shares": 7000
+    },
+    {
+      "name_of_issuer": "SPDR GOLD TR",
+      "title_of_class": "GOLD SHS",
+      "cusip": "78463V107",
+      "value_usd": 917863912,
+      "shares": 2491623
+    },
+    {
+      "name_of_issuer": "SPDR SERIES TRUST",
+      "title_of_class": "ST STR SP REGBNK",
+      "cusip": "78464A698",
+      "value_usd": 17707190,
+      "shares": 236569
+    },
+    {
+      "name_of_issuer": "SPDR SERIES TRUST",
+      "title_of_class": "ST STR BLO 1 ETF",
+      "cusip": "78468R663",
+      "value_usd": 98710529,
+      "shares": 1077155
+    },
+    {
+      "name_of_issuer": "SPECTRUM BRANDS HOLDINGS INC",
+      "title_of_class": "COM",
+      "cusip": "84790A105",
+      "value_usd": 24792212,
+      "shares": 289122
+    },
+    {
+      "name_of_issuer": "STAR BULK CARRIERS CORP.",
+      "title_of_class": "SHS PAR",
+      "cusip": "Y8162K204",
+      "value_usd": 12859550,
+      "shares": 515000
+    },
+    {
+      "name_of_issuer": "STARBUCKS CORP",
+      "title_of_class": "COM",
+      "cusip": "855244109",
+      "value_usd": 1737434,
+      "shares": 17002
+    },
+    {
+      "name_of_issuer": "STERIS PLC",
+      "title_of_class": "SHS USD",
+      "cusip": "G8473T100",
+      "value_usd": 20005,
+      "shares": 95
+    },
+    {
+      "name_of_issuer": "STEVANATO GROUP S P A",
+      "title_of_class": "ORD SHS",
+      "cusip": "T9224W109",
+      "value_usd": 11045938,
+      "shares": 611286
+    },
+    {
+      "name_of_issuer": "STEWART INFORMATION SVCS COR",
+      "title_of_class": "COM",
+      "cusip": "860372101",
+      "value_usd": 8128250,
+      "shares": 123118
+    },
+    {
+      "name_of_issuer": "STRATA CRITICAL MEDICAL INC",
+      "title_of_class": "CL A COM",
+      "cusip": "092667104",
+      "value_usd": 12198016,
+      "shares": 2314614
+    },
+    {
+      "name_of_issuer": "STRATEGY INC",
+      "title_of_class": "NOTE12/0",
+      "cusip": "594972AS0",
+      "value_usd": 17236000,
+      "shares": 20000000
+    },
+    {
+      "name_of_issuer": "STRAWBERRY FIELDS REIT INC",
+      "title_of_class": "COM",
+      "cusip": "863182101",
+      "value_usd": 5567238,
+      "shares": 404890
+    },
+    {
+      "name_of_issuer": "STRIDE INC",
+      "title_of_class": "COM",
+      "cusip": "86333M108",
+      "value_usd": 14470986,
+      "shares": 167799
+    },
+    {
+      "name_of_issuer": "SUNBELT RENTALS HOLDINGS INC",
+      "title_of_class": "SHS",
+      "cusip": "866966104",
+      "value_usd": 136145,
+      "shares": 1868
+    },
+    {
+      "name_of_issuer": "SYNAPTICS INC",
+      "title_of_class": "COM",
+      "cusip": "87157D109",
+      "value_usd": 13994012,
+      "shares": 112646
+    },
+    {
+      "name_of_issuer": "TAIWAN SEMICONDUCTOR MANUFAC",
+      "title_of_class": "SPONSORED ADS",
+      "cusip": "874039100",
+      "value_usd": 1788784535,
+      "shares": 3745597
+    },
+    {
+      "name_of_issuer": "TALKSPACE INC",
+      "title_of_class": "COM",
+      "cusip": "87427V103",
+      "value_usd": 3140899,
+      "shares": 604019
+    },
+    {
+      "name_of_issuer": "TALOS ENERGY INC",
+      "title_of_class": "COM",
+      "cusip": "87484T108",
+      "value_usd": 14553443,
+      "shares": 1127300
+    },
+    {
+      "name_of_issuer": "TANGER INC",
+      "title_of_class": "COM",
+      "cusip": "875465106",
+      "value_usd": 10314498,
+      "shares": 261325
+    },
+    {
+      "name_of_issuer": "TARGA RES CORP",
+      "title_of_class": "COM",
+      "cusip": "87612G101",
+      "value_usd": 27082,
+      "shares": 101
+    },
+    {
+      "name_of_issuer": "TAYLOR MORRISON HOME CORP",
+      "title_of_class": "COM",
+      "cusip": "87724P106",
+      "value_usd": 16328096,
+      "shares": 227601
+    },
+    {
+      "name_of_issuer": "TE CONNECTIVITY PLC",
+      "title_of_class": "ORD SHS",
+      "cusip": "G87052109",
+      "value_usd": 22144640,
+      "shares": 109839
+    },
+    {
+      "name_of_issuer": "TELEDYNE TECHNOLOGIES INC",
+      "title_of_class": "COM",
+      "cusip": "879360105",
+      "value_usd": 22007,
+      "shares": 33
+    },
+    {
+      "name_of_issuer": "TENET HEALTHCARE CORP",
+      "title_of_class": "COM NEW",
+      "cusip": "88033G407",
+      "value_usd": 1708601,
+      "shares": 9133
+    },
+    {
+      "name_of_issuer": "TENNANT CO",
+      "title_of_class": "COM",
+      "cusip": "880345103",
+      "value_usd": 11630302,
+      "shares": 132857
+    },
+    {
+      "name_of_issuer": "TERADATA CORP DEL",
+      "title_of_class": "COM",
+      "cusip": "88076W103",
+      "value_usd": 6941850,
+      "shares": 200342
+    },
+    {
+      "name_of_issuer": "TEXAS INSTRS INC",
+      "title_of_class": "COM",
+      "cusip": "882508104",
+      "value_usd": 15638028,
+      "shares": 52464
+    },
+    {
+      "name_of_issuer": "TEXAS ROADHOUSE INC",
+      "title_of_class": "COM",
+      "cusip": "882681109",
+      "value_usd": 489645,
+      "shares": 2534
+    },
+    {
+      "name_of_issuer": "TIMKEN CO",
+      "title_of_class": "COM",
+      "cusip": "887389104",
+      "value_usd": 20678600,
+      "shares": 142297
+    },
+    {
+      "name_of_issuer": "TITAN AMER SA",
+      "title_of_class": "COMMON SHARES",
+      "cusip": "B9151N105",
+      "value_usd": 6940531,
+      "shares": 371947
+    },
+    {
+      "name_of_issuer": "TITAN INTL INC ILL",
+      "title_of_class": "COM",
+      "cusip": "88830M102",
+      "value_usd": 6018727,
+      "shares": 780639
+    },
+    {
+      "name_of_issuer": "TITAN MACHY INC",
+      "title_of_class": "COM",
+      "cusip": "88830R101",
+      "value_usd": 16619307,
+      "shares": 786899
+    },
+    {
+      "name_of_issuer": "TOLL BROTHERS INC",
+      "title_of_class": "COM",
+      "cusip": "889478103",
+      "value_usd": 988500,
+      "shares": 6000
+    },
+    {
+      "name_of_issuer": "TRANSALTA CORP",
+      "title_of_class": "COM",
+      "cusip": "89346D107",
+      "value_usd": 281377,
+      "shares": 20360
+    },
+    {
+      "name_of_issuer": "TRANSCAT INC",
+      "title_of_class": "COM",
+      "cusip": "893529107",
+      "value_usd": 16113871,
+      "shares": 173697
+    },
+    {
+      "name_of_issuer": "TRIMAS CORP",
+      "title_of_class": "COM NEW",
+      "cusip": "896215209",
+      "value_usd": 14929967,
+      "shares": 331556
+    },
+    {
+      "name_of_issuer": "TRINITY INDS INC",
+      "title_of_class": "COM",
+      "cusip": "896522109",
+      "value_usd": 16021571,
+      "shares": 463319
+    },
+    {
+      "name_of_issuer": "TRIVAGO N V",
+      "title_of_class": "SPON ADS A SHS N",
+      "cusip": "89686D303",
+      "value_usd": 1550439,
+      "shares": 283444
+    },
+    {
+      "name_of_issuer": "TTM TECHNOLOGIES INC",
+      "title_of_class": "COM",
+      "cusip": "87305R109",
+      "value_usd": 29439567,
+      "shares": 157414
+    },
+    {
+      "name_of_issuer": "UGI CORP NEW",
+      "title_of_class": "COM",
+      "cusip": "902681105",
+      "value_usd": 394481,
+      "shares": 11421
+    },
+    {
+      "name_of_issuer": "ULTRA CLEAN HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "90385V107",
+      "value_usd": 49611339,
+      "shares": 347930
+    },
+    {
+      "name_of_issuer": "UMH PPTYS INC",
+      "title_of_class": "COM",
+      "cusip": "903002103",
+      "value_usd": 12614936,
+      "shares": 833219
+    },
+    {
+      "name_of_issuer": "UNILEVER PLC",
+      "title_of_class": "SPON ADR NEW",
+      "cusip": "904767803",
+      "value_usd": 50651521,
+      "shares": 842507
+    },
+    {
+      "name_of_issuer": "UNITED RENTALS INC",
+      "title_of_class": "COM",
+      "cusip": "911363109",
+      "value_usd": 471282,
+      "shares": 416
+    },
+    {
+      "name_of_issuer": "UNITEDHEALTH GROUP INC",
+      "title_of_class": "COM",
+      "cusip": "91324P102",
+      "value_usd": 17607749,
+      "shares": 42364
+    },
+    {
+      "name_of_issuer": "UNIVERSAL HLTH SVCS INC",
+      "title_of_class": "CL B",
+      "cusip": "913903100",
+      "value_usd": 677233918,
+      "shares": 4554670
+    },
+    {
+      "name_of_issuer": "UNIVERSAL TECHNICAL INST INC",
+      "title_of_class": "COM",
+      "cusip": "913915104",
+      "value_usd": 24388951,
+      "shares": 570235
+    },
+    {
+      "name_of_issuer": "US BANCORP",
+      "title_of_class": "COM NEW",
+      "cusip": "902973304",
+      "value_usd": 551032694,
+      "shares": 9123058
+    },
+    {
+      "name_of_issuer": "UTZ BRANDS INC",
+      "title_of_class": "COM CL A",
+      "cusip": "918090101",
+      "value_usd": 10154375,
+      "shares": 1318750
+    },
+    {
+      "name_of_issuer": "VAIL RESORTS INC",
+      "title_of_class": "COM",
+      "cusip": "91879Q109",
+      "value_usd": 3236149,
+      "shares": 23769
+    },
+    {
+      "name_of_issuer": "VALLEY NATL BANCORP",
+      "title_of_class": "COM",
+      "cusip": "919794107",
+      "value_usd": 16378700,
+      "shares": 1118000
+    },
+    {
+      "name_of_issuer": "VAREX IMAGING CORP",
+      "title_of_class": "COM",
+      "cusip": "92214X106",
+      "value_usd": 1872195,
+      "shares": 179501
+    },
+    {
+      "name_of_issuer": "VEECO INSTRS INC DEL",
+      "title_of_class": "COM",
+      "cusip": "922417100",
+      "value_usd": 35160058,
+      "shares": 463853
+    },
+    {
+      "name_of_issuer": "VIAVI SOLUTIONS INC",
+      "title_of_class": "COM",
+      "cusip": "925550105",
+      "value_usd": 10165975,
+      "shares": 212900
+    },
+    {
+      "name_of_issuer": "VIEMED HEALTHCARE INC",
+      "title_of_class": "COM",
+      "cusip": "92663R105",
+      "value_usd": 6100790,
+      "shares": 535157
+    },
+    {
+      "name_of_issuer": "VISHAY INTERTECHNOLOGY INC",
+      "title_of_class": "COM",
+      "cusip": "928298108",
+      "value_usd": 43895935,
+      "shares": 816213
+    },
+    {
+      "name_of_issuer": "VISHAY PRECISION GROUP INC",
+      "title_of_class": "COM",
+      "cusip": "92835K103",
+      "value_usd": 10343790,
+      "shares": 69000
+    },
+    {
+      "name_of_issuer": "VITAL FARMS INC",
+      "title_of_class": "COM",
+      "cusip": "92847W103",
+      "value_usd": 7035685,
+      "shares": 604960
+    },
+    {
+      "name_of_issuer": "VOYA FINANCIAL INC",
+      "title_of_class": "COM",
+      "cusip": "929089100",
+      "value_usd": 1357950,
+      "shares": 15000
+    },
+    {
+      "name_of_issuer": "VSE CORP",
+      "title_of_class": "COM",
+      "cusip": "918284100",
+      "value_usd": 10378927,
+      "shares": 45422
+    },
+    {
+      "name_of_issuer": "WABASH NATL CORP",
+      "title_of_class": "COM",
+      "cusip": "929566107",
+      "value_usd": 1895738,
+      "shares": 140425
+    },
+    {
+      "name_of_issuer": "WARBY PARKER INC",
+      "title_of_class": "CL A COM",
+      "cusip": "93403J106",
+      "value_usd": 8737920,
+      "shares": 288000
+    },
+    {
+      "name_of_issuer": "WARRIOR MET COAL INC",
+      "title_of_class": "COM",
+      "cusip": "93627C101",
+      "value_usd": 314824367,
+      "shares": 3879058
+    },
+    {
+      "name_of_issuer": "WATERS CORP",
+      "title_of_class": "COM",
+      "cusip": "941848103",
+      "value_usd": 500718821,
+      "shares": 1335108
+    },
+    {
+      "name_of_issuer": "WELLS FARGO & CO",
+      "title_of_class": "PERP PFD CNV A",
+      "cusip": "949746804",
+      "value_usd": 29782337,
+      "shares": 25741
+    },
+    {
+      "name_of_issuer": "WENDYS CO",
+      "title_of_class": "COM",
+      "cusip": "95058W100",
+      "value_usd": 2926561,
+      "shares": 353023
+    },
+    {
+      "name_of_issuer": "WESCO INTL INC",
+      "title_of_class": "COM",
+      "cusip": "95082P105",
+      "value_usd": 18220742,
+      "shares": 52748
+    },
+    {
+      "name_of_issuer": "WESTLAKE CORPORATION",
+      "title_of_class": "COM",
+      "cusip": "960413102",
+      "value_usd": 206955,
+      "shares": 2835
+    },
+    {
+      "name_of_issuer": "WEYERHAEUSER CO",
+      "title_of_class": "COM NEW",
+      "cusip": "962166104",
+      "value_usd": 1225232016,
+      "shares": 51179282
+    },
+    {
+      "name_of_issuer": "WHEATON PRECIOUS METALS CORP",
+      "title_of_class": "COM",
+      "cusip": "962879102",
+      "value_usd": 1596645669,
+      "shares": 14215147
+    },
+    {
+      "name_of_issuer": "WHITESTONE REIT",
+      "title_of_class": "COM",
+      "cusip": "966084204",
+      "value_usd": 13219670,
+      "shares": 697240
+    },
+    {
+      "name_of_issuer": "WILLIAMS COS INC",
+      "title_of_class": "COM",
+      "cusip": "969457100",
+      "value_usd": 314533,
+      "shares": 4231
+    },
+    {
+      "name_of_issuer": "WILLIS TOWERS WATSON PLC LTD",
+      "title_of_class": "SHS",
+      "cusip": "G96629103",
+      "value_usd": 1169855476,
+      "shares": 4475860
+    },
+    {
+      "name_of_issuer": "WORKDAY INC",
+      "title_of_class": "CL A",
+      "cusip": "98138H101",
+      "value_usd": 1080297413,
+      "shares": 8824517
+    },
+    {
+      "name_of_issuer": "WP CAREY INC",
+      "title_of_class": "COM",
+      "cusip": "92936U109",
+      "value_usd": 19377,
+      "shares": 271
+    },
+    {
+      "name_of_issuer": "XPO INC",
+      "title_of_class": "COM",
+      "cusip": "983793100",
+      "value_usd": 673557,
+      "shares": 3281
+    }
+  ]
+}

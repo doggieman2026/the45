@@ -1,0 +1,216 @@
+{
+  "fund_id": "softbank",
+  "filing_date": "2026-08-14",
+  "holdings": [
+    {
+      "name_of_issuer": "INTEL CORP",
+      "title_of_class": "COM",
+      "cusip": "458140100",
+      "value_usd": 12141739167,
+      "shares": 86956522
+    },
+    {
+      "name_of_issuer": "AFYA LTD",
+      "title_of_class": "CL A COM",
+      "cusip": "G01125106",
+      "value_usd": 36110513,
+      "shares": 2433323
+    },
+    {
+      "name_of_issuer": "VTEX",
+      "title_of_class": "SHS CL A",
+      "cusip": "G9470A102",
+      "value_usd": 153738348,
+      "shares": 38434587
+    },
+    {
+      "name_of_issuer": "SATELLOGIC",
+      "title_of_class": "COM CL A",
+      "cusip": "80401C100",
+      "value_usd": 13885580,
+      "shares": 2427549
+    },
+    {
+      "name_of_issuer": "CAPITAL ONE FINL CORP",
+      "title_of_class": "COM",
+      "cusip": "14040H105",
+      "value_usd": 55533823,
+      "shares": 276811
+    },
+    {
+      "name_of_issuer": "INTER & CO I",
+      "title_of_class": "CLASS A CO",
+      "cusip": "G4R20B107",
+      "value_usd": 328551033,
+      "shares": 60506636
+    },
+    {
+      "name_of_issuer": "NU HLDGS L",
+      "title_of_class": "ORD SHS CL",
+      "cusip": "G6683N103",
+      "value_usd": 238370670,
+      "shares": 17842116
+    },
+    {
+      "name_of_issuer": "BETTER HOME & FINANCE HOLDIN",
+      "title_of_class": "COM NEW CL A",
+      "cusip": "08774B508",
+      "value_usd": 17285208,
+      "shares": 628553
+    },
+    {
+      "name_of_issuer": "DINGDONG CAYMAN LTD",
+      "title_of_class": "ADS",
+      "cusip": "25445D101",
+      "value_usd": 2026500,
+      "shares": 1050000
+    },
+    {
+      "name_of_issuer": "FULL TRUCK ALLIANCE CO LTD",
+      "title_of_class": "SPONSORED ADS",
+      "cusip": "35969L108",
+      "value_usd": 31542002,
+      "shares": 3884483
+    },
+    {
+      "name_of_issuer": "GLOBALSTAR INC",
+      "title_of_class": "COM",
+      "cusip": "378973507",
+      "value_usd": 26094334,
+      "shares": 321003
+    },
+    {
+      "name_of_issuer": "RECURSION PHARMACEUTICALS IN",
+      "title_of_class": "CL A",
+      "cusip": "75629V104",
+      "value_usd": 50046010,
+      "shares": 13636515
+    },
+    {
+      "name_of_issuer": "NEUMORA THERAPEUTICS INC.",
+      "title_of_class": "COM",
+      "cusip": "640979100",
+      "value_usd": 10353512,
+      "shares": 6090301
+    },
+    {
+      "name_of_issuer": "SEER INC",
+      "title_of_class": "COM CL A",
+      "cusip": "81578P106",
+      "value_usd": 8524736,
+      "shares": 5135383
+    },
+    {
+      "name_of_issuer": "SYMBOTIC INC",
+      "title_of_class": "CLASS A COM",
+      "cusip": "87151X101",
+      "value_usd": 1790147774,
+      "shares": 39825312
+    },
+    {
+      "name_of_issuer": "CHIME FINL INC",
+      "title_of_class": "COM SHS CL A",
+      "cusip": "16935C109",
+      "value_usd": 103779041,
+      "shares": 5067336
+    },
+    {
+      "name_of_issuer": "eToro Group Ltd",
+      "title_of_class": "SHS CL A",
+      "cusip": "G32089107",
+      "value_usd": 31417962,
+      "shares": 795996
+    },
+    {
+      "name_of_issuer": "Klarna Group PLC",
+      "title_of_class": "SHS",
+      "cusip": "G5279N105",
+      "value_usd": 311700534,
+      "shares": 15400224
+    },
+    {
+      "name_of_issuer": "T-MOBILE US",
+      "title_of_class": "COM",
+      "cusip": "872590104",
+      "value_usd": 1677300000,
+      "shares": 10000000
+    },
+    {
+      "name_of_issuer": "TEMPUS AI INC",
+      "title_of_class": "CL A",
+      "cusip": "88023B103",
+      "value_usd": 313135170,
+      "shares": 5405406
+    },
+    {
+      "name_of_issuer": "QXO INC",
+      "title_of_class": "COM NEW",
+      "cusip": "82846H405",
+      "value_usd": 94529532,
+      "shares": 5470459
+    },
+    {
+      "name_of_issuer": "ETHOS TECHNOLOGIES INC",
+      "title_of_class": "CL A",
+      "cusip": "29765A101",
+      "value_usd": 56758282,
+      "shares": 3128902
+    },
+    {
+      "name_of_issuer": "ESS TECH IN",
+      "title_of_class": "COM NEW",
+      "cusip": "26916J205",
+      "value_usd": 2277131,
+      "shares": 2396980
+    },
+    {
+      "name_of_issuer": "PACIFIC BIOSCIENCES CALIF IN",
+      "title_of_class": "COM",
+      "cusip": "69404D108",
+      "value_usd": 34358638,
+      "shares": 20451570
+    },
+    {
+      "name_of_issuer": "TAIWAN SEMICONDUCTOR MFG LTD",
+      "title_of_class": "SPONSORED ADS",
+      "cusip": "874039100",
+      "value_usd": 269827050,
+      "shares": 565000
+    },
+    {
+      "name_of_issuer": "CONCORDE INTL GROUP LTD",
+      "title_of_class": "ORD SHS CL A",
+      "cusip": "G2452S100",
+      "value_usd": 199493,
+      "shares": 259082
+    },
+    {
+      "name_of_issuer": "AMBIQ MICRO INC",
+      "title_of_class": "COMMON STOCK",
+      "cusip": "023193105",
+      "value_usd": 13151314,
+      "shares": 148939
+    },
+    {
+      "name_of_issuer": "WEBTOON ENTMT INC",
+      "title_of_class": "COM",
+      "cusip": "94845U105",
+      "value_usd": 358958922,
+      "shares": 31432480
+    },
+    {
+      "name_of_issuer": "AbCellera Biologics Inc",
+      "title_of_class": "COM",
+      "cusip": "00288U106",
+      "value_usd": 2709514,
+      "shares": 345161
+    },
+    {
+      "name_of_issuer": "LIFE360 INC",
+      "title_of_class": "COM",
+      "cusip": "532206109",
+      "value_usd": 488544,
+      "shares": 10178
+    }
+  ]
+}

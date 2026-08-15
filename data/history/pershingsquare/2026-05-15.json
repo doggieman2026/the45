@@ -1,0 +1,83 @@
+{
+  "fund_id": "pershingsquare",
+  "filing_date": "2026-05-15",
+  "holdings": [
+    {
+      "name_of_issuer": "ALPHABET INC",
+      "title_of_class": "CAP STK CL A",
+      "cusip": "02079K305",
+      "value_usd": 9310043,
+      "shares": 32376
+    },
+    {
+      "name_of_issuer": "ALPHABET INC",
+      "title_of_class": "CAP STK CL C",
+      "cusip": "02079K107",
+      "value_usd": 89421720,
+      "shares": 311726
+    },
+    {
+      "name_of_issuer": "AMAZON COM INC",
+      "title_of_class": "COM",
+      "cusip": "023135106",
+      "value_usd": 2385104083,
+      "shares": 11451981
+    },
+    {
+      "name_of_issuer": "BROOKFIELD CORP",
+      "title_of_class": "CL A LTD VT SH",
+      "cusip": "11271J107",
+      "value_usd": 2415946008,
+      "shares": 59697208
+    },
+    {
+      "name_of_issuer": "HERTZ GLOBAL HLDGS INC",
+      "title_of_class": "COM NEW",
+      "cusip": "42806J700",
+      "value_usd": 70261595,
+      "shares": 15241127
+    },
+    {
+      "name_of_issuer": "HOWARD HUGHES HOLDINGS INC",
+      "title_of_class": "COM",
+      "cusip": "44267T102",
+      "value_usd": 1192581569,
+      "shares": 18852064
+    },
+    {
+      "name_of_issuer": "META PLATFORMS INC",
+      "title_of_class": "CL A",
+      "cusip": "30303M102",
+      "value_usd": 1522358404,
+      "shares": 2660861
+    },
+    {
+      "name_of_issuer": "MICROSOFT CORP",
+      "title_of_class": "COM",
+      "cusip": "594918104",
+      "value_usd": 2092970053,
+      "shares": 5654078
+    },
+    {
+      "name_of_issuer": "RESTAURANT BRANDS INTL INC",
+      "title_of_class": "COM",
+      "cusip": "76131D103",
+      "value_usd": 1673501194,
+      "shares": 22645483
+    },
+    {
+      "name_of_issuer": "SEAPORT ENTMT GROUP INC",
+      "title_of_class": "COMMON STOCK",
+      "cusip": "812215200",
+      "value_usd": 107910794,
+      "shares": 5023780
+    },
+    {
+      "name_of_issuer": "UBER TECHNOLOGIES INC",
+      "title_of_class": "COM",
+      "cusip": "90353T100",
+      "value_usd": 2154934398,
+      "shares": 29958771
+    }
+  ]
+}

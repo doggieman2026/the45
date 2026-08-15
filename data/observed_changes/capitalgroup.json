@@ -1,4 +1,6509 @@
 {
   "fund_id": "capitalgroup",
-  "changes": []
+  "changes": [
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Fifth Third Bancorp",
+      "cusip": "316773100",
+      "prior_value_usd": 232300000,
+      "current_value_usd": 0,
+      "delta_usd": -232300000,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Medtronic Plc",
+      "cusip": "G5960L103",
+      "prior_value_usd": 3632933978,
+      "current_value_usd": 1037443303,
+      "delta_usd": -2595490675,
+      "delta_pct": -71.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Astrazeneca Plc",
+      "cusip": "G0593M107",
+      "prior_value_usd": 901834705,
+      "current_value_usd": 787343259,
+      "delta_usd": -114491446,
+      "delta_pct": -12.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Centerpoint Energy Inc",
+      "cusip": "15189T107",
+      "prior_value_usd": 3119381240,
+      "current_value_usd": 3143883513,
+      "delta_usd": 24502273,
+      "delta_pct": 0.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Corning Inc",
+      "cusip": "219350105",
+      "prior_value_usd": 2970561498,
+      "current_value_usd": 6308791146,
+      "delta_usd": 3338229648,
+      "delta_pct": 112.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Keurig Dr Pepper Inc",
+      "cusip": "49271V100",
+      "prior_value_usd": 14158431,
+      "current_value_usd": 0,
+      "delta_usd": -14158431,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Sprott Inc",
+      "cusip": "852066208",
+      "prior_value_usd": 64943197,
+      "current_value_usd": 34380239,
+      "delta_usd": -30562958,
+      "delta_pct": -47.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Solstice Advanced Matls Inc",
+      "cusip": "83443Q103",
+      "prior_value_usd": 8581176,
+      "current_value_usd": 0,
+      "delta_usd": -8581176,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Crowdstrike Hldgs Inc",
+      "cusip": "22788C105",
+      "prior_value_usd": 417606698,
+      "current_value_usd": 825508109,
+      "delta_usd": 407901411,
+      "delta_pct": 97.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Builders Firstsource Inc",
+      "cusip": "12008R107",
+      "prior_value_usd": 0,
+      "current_value_usd": 53191131,
+      "delta_usd": 53191131,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Prologis Inc.",
+      "cusip": "74340W103",
+      "prior_value_usd": 2239184451,
+      "current_value_usd": 2156110902,
+      "delta_usd": -83073549,
+      "delta_pct": -3.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Lattice Semiconductor Corp",
+      "cusip": "518415104",
+      "prior_value_usd": 402295204,
+      "current_value_usd": 756967533,
+      "delta_usd": 354672329,
+      "delta_pct": 88.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Honeywell Intl Inc",
+      "cusip": "438516106",
+      "prior_value_usd": 1334747642,
+      "current_value_usd": 0,
+      "delta_usd": -1334747642,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Cava Group Inc",
+      "cusip": "148929102",
+      "prior_value_usd": 496469383,
+      "current_value_usd": 113366527,
+      "delta_usd": -383102856,
+      "delta_pct": -77.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Mohawk Inds Inc",
+      "cusip": "608190104",
+      "prior_value_usd": 0,
+      "current_value_usd": 1188185,
+      "delta_usd": 1188185,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Rogers Corp",
+      "cusip": "775133101",
+      "prior_value_usd": 163038563,
+      "current_value_usd": 182364602,
+      "delta_usd": 19326039,
+      "delta_pct": 11.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Servicenow Inc",
+      "cusip": "81762P102",
+      "prior_value_usd": 4460756,
+      "current_value_usd": 0,
+      "delta_usd": -4460756,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Icf Intl Inc",
+      "cusip": "44925C103",
+      "prior_value_usd": 104759372,
+      "current_value_usd": 17719698,
+      "delta_usd": -87039674,
+      "delta_pct": -83.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Sysco Corp",
+      "cusip": "871829107",
+      "prior_value_usd": 633146408,
+      "current_value_usd": 436930665,
+      "delta_usd": -196215743,
+      "delta_pct": -31.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Brightspring Health Svcs Inc",
+      "cusip": "10950A106",
+      "prior_value_usd": 0,
+      "current_value_usd": 69786307,
+      "delta_usd": 69786307,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Newmont Corp",
+      "cusip": "651639106",
+      "prior_value_usd": 327192986,
+      "current_value_usd": 193500236,
+      "delta_usd": -133692750,
+      "delta_pct": -40.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Agilysys Inc",
+      "cusip": "00847J105",
+      "prior_value_usd": 31210327,
+      "current_value_usd": 43261328,
+      "delta_usd": 12051001,
+      "delta_pct": 38.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Alphabet Inc",
+      "cusip": "02079K602",
+      "prior_value_usd": 0,
+      "current_value_usd": 922028023,
+      "delta_usd": 922028023,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Udr Inc",
+      "cusip": "902653104",
+      "prior_value_usd": 865670230,
+      "current_value_usd": 1020660229,
+      "delta_usd": 154989999,
+      "delta_pct": 17.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Macom Tech Solutions Hldgs I",
+      "cusip": "55405Y100",
+      "prior_value_usd": 271518771,
+      "current_value_usd": 413138495,
+      "delta_usd": 141619724,
+      "delta_pct": 52.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Cadre Hldgs Inc",
+      "cusip": "12763L105",
+      "prior_value_usd": 18048737,
+      "current_value_usd": 19558715,
+      "delta_usd": 1509978,
+      "delta_pct": 8.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Houlihan Lokey Inc",
+      "cusip": "441593100",
+      "prior_value_usd": 188813480,
+      "current_value_usd": 70668805,
+      "delta_usd": -118144675,
+      "delta_pct": -62.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Maxlinear Inc",
+      "cusip": "57776J100",
+      "prior_value_usd": 0,
+      "current_value_usd": 106277191,
+      "delta_usd": 106277191,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Klaviyo Inc",
+      "cusip": "49845K101",
+      "prior_value_usd": 26240740,
+      "current_value_usd": 0,
+      "delta_usd": -26240740,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Wolfspeed Inc",
+      "cusip": "977852AP7",
+      "prior_value_usd": 9689563,
+      "current_value_usd": 24259356,
+      "delta_usd": 14569793,
+      "delta_pct": 150.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Lyondellbasell Industries Nv",
+      "cusip": "N53745100",
+      "prior_value_usd": 822166681,
+      "current_value_usd": 84854583,
+      "delta_usd": -737312098,
+      "delta_pct": -89.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Csx Corp",
+      "cusip": "126408103",
+      "prior_value_usd": 807449470,
+      "current_value_usd": 961114490,
+      "delta_usd": 153665020,
+      "delta_pct": 19.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Royal Gold Inc",
+      "cusip": "780287108",
+      "prior_value_usd": 217868126,
+      "current_value_usd": 289878233,
+      "delta_usd": 72010107,
+      "delta_pct": 33.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Camping World Hldgs Inc",
+      "cusip": "13462K109",
+      "prior_value_usd": 8149857,
+      "current_value_usd": 0,
+      "delta_usd": -8149857,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Sterling Infrastructure Inc",
+      "cusip": "859241101",
+      "prior_value_usd": 137662555,
+      "current_value_usd": 163126259,
+      "delta_usd": 25463704,
+      "delta_pct": 18.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Meta Platforms Inc",
+      "cusip": "30303M102",
+      "prior_value_usd": 17681587406,
+      "current_value_usd": 22317365701,
+      "delta_usd": 4635778295,
+      "delta_pct": 26.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Waters Corp",
+      "cusip": "941848103",
+      "prior_value_usd": 0,
+      "current_value_usd": 134338578,
+      "delta_usd": 134338578,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Tesla Inc",
+      "cusip": "88160R101",
+      "prior_value_usd": 3206141658,
+      "current_value_usd": 3574708522,
+      "delta_usd": 368566864,
+      "delta_pct": 11.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Illinois Tool Wks Inc",
+      "cusip": "452308109",
+      "prior_value_usd": 1238531355,
+      "current_value_usd": 1319685960,
+      "delta_usd": 81154605,
+      "delta_pct": 6.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Franco Nev Corp",
+      "cusip": "351858105",
+      "prior_value_usd": 400640655,
+      "current_value_usd": 332750686,
+      "delta_usd": -67889969,
+      "delta_pct": -16.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Jbs N.V.",
+      "cusip": "N4732M103",
+      "prior_value_usd": 2501705,
+      "current_value_usd": 1706622,
+      "delta_usd": -795083,
+      "delta_pct": -31.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Credo Technology Group Holdi",
+      "cusip": "G25457105",
+      "prior_value_usd": 110979122,
+      "current_value_usd": 314385894,
+      "delta_usd": 203406772,
+      "delta_pct": 183.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Vanguard Star Fds",
+      "cusip": "921909768",
+      "prior_value_usd": 225606,
+      "current_value_usd": 0,
+      "delta_usd": -225606,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Costar Group Inc",
+      "cusip": "22160N109",
+      "prior_value_usd": 176443832,
+      "current_value_usd": 118785369,
+      "delta_usd": -57658463,
+      "delta_pct": -32.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Watsco Inc",
+      "cusip": "942622200",
+      "prior_value_usd": 690677015,
+      "current_value_usd": 792709378,
+      "delta_usd": 102032363,
+      "delta_pct": 14.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Synopsys Inc",
+      "cusip": "871607107",
+      "prior_value_usd": 817805532,
+      "current_value_usd": 1016990376,
+      "delta_usd": 199184844,
+      "delta_pct": 24.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Church & Dwight Co Inc",
+      "cusip": "171340102",
+      "prior_value_usd": 9934636,
+      "current_value_usd": 0,
+      "delta_usd": -9934636,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "T-Mobile Us Inc",
+      "cusip": "872590104",
+      "prior_value_usd": 381120621,
+      "current_value_usd": 227560861,
+      "delta_usd": -153559760,
+      "delta_pct": -40.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Denali Therapeutics Inc",
+      "cusip": "24823R105",
+      "prior_value_usd": 48280090,
+      "current_value_usd": 65992813,
+      "delta_usd": 17712723,
+      "delta_pct": 36.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Exelon Corp",
+      "cusip": "30161N101",
+      "prior_value_usd": 161819383,
+      "current_value_usd": 155792432,
+      "delta_usd": -6026951,
+      "delta_pct": -3.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Coca Cola Co",
+      "cusip": "191216100",
+      "prior_value_usd": 2241720479,
+      "current_value_usd": 1813253266,
+      "delta_usd": -428467213,
+      "delta_pct": -19.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Modine Mfg Co",
+      "cusip": "607828100",
+      "prior_value_usd": 370493484,
+      "current_value_usd": 396250737,
+      "delta_usd": 25757253,
+      "delta_pct": 7.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Vanguard Index Fds",
+      "cusip": "922908637",
+      "prior_value_usd": 214792,
+      "current_value_usd": 0,
+      "delta_usd": -214792,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Pnc Finl Svcs Group Inc",
+      "cusip": "693475105",
+      "prior_value_usd": 1817651860,
+      "current_value_usd": 1894589147,
+      "delta_usd": 76937287,
+      "delta_pct": 4.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Eastman Chem Co",
+      "cusip": "277432100",
+      "prior_value_usd": 369717510,
+      "current_value_usd": 146710849,
+      "delta_usd": -223006661,
+      "delta_pct": -60.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Gfl Environmental Inc",
+      "cusip": "36168Q104",
+      "prior_value_usd": 965900606,
+      "current_value_usd": 806415315,
+      "delta_usd": -159485291,
+      "delta_pct": -16.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Cytokinetics Inc",
+      "cusip": "23282W605",
+      "prior_value_usd": 50816544,
+      "current_value_usd": 143683584,
+      "delta_usd": 92867040,
+      "delta_pct": 182.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Salesforce Inc",
+      "cusip": "79466L302",
+      "prior_value_usd": 2558286322,
+      "current_value_usd": 1839666446,
+      "delta_usd": -718619876,
+      "delta_pct": -28.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Dt Midstream Inc",
+      "cusip": "23345M107",
+      "prior_value_usd": 153114807,
+      "current_value_usd": 168488922,
+      "delta_usd": 15374115,
+      "delta_pct": 10.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Accenture Plc Ireland",
+      "cusip": "G1151C101",
+      "prior_value_usd": 1136828190,
+      "current_value_usd": 680710034,
+      "delta_usd": -456118156,
+      "delta_pct": -40.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Umh Pptys Inc",
+      "cusip": "903002103",
+      "prior_value_usd": 37626037,
+      "current_value_usd": 45945101,
+      "delta_usd": 8319064,
+      "delta_pct": 22.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Topbuild Cor",
+      "cusip": "89055F103",
+      "prior_value_usd": 1438475445,
+      "current_value_usd": 553824761,
+      "delta_usd": -884650684,
+      "delta_pct": -61.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Royal Caribbean Group",
+      "cusip": "V7780T103",
+      "prior_value_usd": 7774131558,
+      "current_value_usd": 10877491447,
+      "delta_usd": 3103359889,
+      "delta_pct": 39.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "British Amern Tob Plc",
+      "cusip": "110448107",
+      "prior_value_usd": 1810382598,
+      "current_value_usd": 1873324986,
+      "delta_usd": 62942388,
+      "delta_pct": 3.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Silicon Laboratories Inc",
+      "cusip": "826919102",
+      "prior_value_usd": 169004687,
+      "current_value_usd": 103061094,
+      "delta_usd": -65943593,
+      "delta_pct": -39.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Asml Hldg Nv",
+      "cusip": "N07059210",
+      "prior_value_usd": 205668029,
+      "current_value_usd": 310628624,
+      "delta_usd": 104960595,
+      "delta_pct": 51.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Howmet Aerospace Inc",
+      "cusip": "443201108",
+      "prior_value_usd": 599214035,
+      "current_value_usd": 656188005,
+      "delta_usd": 56973970,
+      "delta_pct": 9.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Champion Homes Inc",
+      "cusip": "830830105",
+      "prior_value_usd": 102371867,
+      "current_value_usd": 0,
+      "delta_usd": -102371867,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Ge Vernova Inc",
+      "cusip": "36828A101",
+      "prior_value_usd": 12618411,
+      "current_value_usd": 16971457,
+      "delta_usd": 4353046,
+      "delta_pct": 34.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Insulet Corp",
+      "cusip": "45784P101",
+      "prior_value_usd": 350329955,
+      "current_value_usd": 23646404,
+      "delta_usd": -326683551,
+      "delta_pct": -93.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Duke Energy Corp New",
+      "cusip": "26441C204",
+      "prior_value_usd": 587365414,
+      "current_value_usd": 569537090,
+      "delta_usd": -17828324,
+      "delta_pct": -3.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Dow Hldgs Inc",
+      "cusip": "260557103",
+      "prior_value_usd": 380934649,
+      "current_value_usd": 0,
+      "delta_usd": -380934649,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Ideaya Biosciences Inc",
+      "cusip": "45166A102",
+      "prior_value_usd": 172049253,
+      "current_value_usd": 199197006,
+      "delta_usd": 27147753,
+      "delta_pct": 15.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Unity Software Inc",
+      "cusip": "91332U101",
+      "prior_value_usd": 112383531,
+      "current_value_usd": 126210158,
+      "delta_usd": 13826627,
+      "delta_pct": 12.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Grupo Aeroportunario Del Pac",
+      "cusip": "400506101",
+      "prior_value_usd": 5726890,
+      "current_value_usd": 0,
+      "delta_usd": -5726890,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Trane Technologies Plc",
+      "cusip": "G8994E103",
+      "prior_value_usd": 777050614,
+      "current_value_usd": 691911176,
+      "delta_usd": -85139438,
+      "delta_pct": -11.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Strategy Inc",
+      "cusip": "594972408",
+      "prior_value_usd": 950421828,
+      "current_value_usd": 260251581,
+      "delta_usd": -690170247,
+      "delta_pct": -72.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Versant Media Group Inc",
+      "cusip": "925283103",
+      "prior_value_usd": 43225589,
+      "current_value_usd": 42601991,
+      "delta_usd": -623598,
+      "delta_pct": -1.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Western Digital Corp",
+      "cusip": "958102105",
+      "prior_value_usd": 895126243,
+      "current_value_usd": 1799092582,
+      "delta_usd": 903966339,
+      "delta_pct": 101.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Extra Space Storage Inc",
+      "cusip": "30225T102",
+      "prior_value_usd": 820111672,
+      "current_value_usd": 915406128,
+      "delta_usd": 95294456,
+      "delta_pct": 11.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Amphenol Corp",
+      "cusip": "032095101",
+      "prior_value_usd": 3364162320,
+      "current_value_usd": 5198251779,
+      "delta_usd": 1834089459,
+      "delta_pct": 54.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Casella Waste Sys Inc",
+      "cusip": "147448104",
+      "prior_value_usd": 184875291,
+      "current_value_usd": 196717803,
+      "delta_usd": 11842512,
+      "delta_pct": 6.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Viking Holdings Ltd",
+      "cusip": "G93A5A101",
+      "prior_value_usd": 1666642850,
+      "current_value_usd": 2671531211,
+      "delta_usd": 1004888361,
+      "delta_pct": 60.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Skyworks Solutions Inc",
+      "cusip": "83088M102",
+      "prior_value_usd": 108281688,
+      "current_value_usd": 297341578,
+      "delta_usd": 189059890,
+      "delta_pct": 174.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Applovin Corp",
+      "cusip": "03831W108",
+      "prior_value_usd": 1050192941,
+      "current_value_usd": 981607414,
+      "delta_usd": -68585527,
+      "delta_pct": -6.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Ezcorp Inc",
+      "cusip": "302301106",
+      "prior_value_usd": 89152605,
+      "current_value_usd": 121929116,
+      "delta_usd": 32776511,
+      "delta_pct": 36.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Palantir Technologies Inc",
+      "cusip": "69608A108",
+      "prior_value_usd": 183914041,
+      "current_value_usd": 102237921,
+      "delta_usd": -81676120,
+      "delta_pct": -44.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Aar Corp",
+      "cusip": "000361105",
+      "prior_value_usd": 133898040,
+      "current_value_usd": 165808662,
+      "delta_usd": 31910622,
+      "delta_pct": 23.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Digital Rlty Tr Inc",
+      "cusip": "253868103",
+      "prior_value_usd": 288355741,
+      "current_value_usd": 138091472,
+      "delta_usd": -150264269,
+      "delta_pct": -52.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Heico Corp New",
+      "cusip": "422806208",
+      "prior_value_usd": 39368918,
+      "current_value_usd": 48900768,
+      "delta_usd": 9531850,
+      "delta_pct": 24.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Home Bancshares Inc",
+      "cusip": "436893200",
+      "prior_value_usd": 153191897,
+      "current_value_usd": 146650101,
+      "delta_usd": -6541796,
+      "delta_pct": -4.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Baker Hughes Company",
+      "cusip": "05722G100",
+      "prior_value_usd": 1340871931,
+      "current_value_usd": 1222804135,
+      "delta_usd": -118067796,
+      "delta_pct": -8.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Regeneron Pharmaceuticals",
+      "cusip": "75886F107",
+      "prior_value_usd": 78724785,
+      "current_value_usd": 0,
+      "delta_usd": -78724785,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Atmos Energy Corp",
+      "cusip": "049560105",
+      "prior_value_usd": 740838082,
+      "current_value_usd": 259885813,
+      "delta_usd": -480952269,
+      "delta_pct": -64.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Brown & Brown Inc",
+      "cusip": "115236101",
+      "prior_value_usd": 253775279,
+      "current_value_usd": 251020361,
+      "delta_usd": -2754918,
+      "delta_pct": -1.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Ftai Aviation Ltd",
+      "cusip": "G3730V105",
+      "prior_value_usd": 703420479,
+      "current_value_usd": 782097262,
+      "delta_usd": 78676783,
+      "delta_pct": 11.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "St Joe Co",
+      "cusip": "790148100",
+      "prior_value_usd": 32260172,
+      "current_value_usd": 0,
+      "delta_usd": -32260172,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Oshkosh Corp",
+      "cusip": "688239201",
+      "prior_value_usd": 205997872,
+      "current_value_usd": 266571738,
+      "delta_usd": 60573866,
+      "delta_pct": 29.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Floor & Decor Hldgs Inc",
+      "cusip": "339750101",
+      "prior_value_usd": 6471412,
+      "current_value_usd": 0,
+      "delta_usd": -6471412,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Csw Industrials Inc",
+      "cusip": "126402106",
+      "prior_value_usd": 22650917,
+      "current_value_usd": 24848294,
+      "delta_usd": 2197377,
+      "delta_pct": 9.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "South Bow Corp",
+      "cusip": "83671M105",
+      "prior_value_usd": 341947354,
+      "current_value_usd": 0,
+      "delta_usd": -341947354,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Uber Technologies Inc",
+      "cusip": "90353TAS9",
+      "prior_value_usd": 0,
+      "current_value_usd": 80969000,
+      "delta_usd": 80969000,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Mcgrath Rentcorp",
+      "cusip": "580589109",
+      "prior_value_usd": 33645766,
+      "current_value_usd": 37447408,
+      "delta_usd": 3801642,
+      "delta_pct": 11.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Ciena Corp",
+      "cusip": "171779309",
+      "prior_value_usd": 1067534801,
+      "current_value_usd": 322078753,
+      "delta_usd": -745456048,
+      "delta_pct": -69.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Affirm Hldgs Inc",
+      "cusip": "00827B106",
+      "prior_value_usd": 1126672456,
+      "current_value_usd": 2120360482,
+      "delta_usd": 993688026,
+      "delta_pct": 88.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Pinnacle West Cap Corp",
+      "cusip": "723484101",
+      "prior_value_usd": 1656017071,
+      "current_value_usd": 1764873729,
+      "delta_usd": 108856658,
+      "delta_pct": 6.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Alphabet Inc",
+      "cusip": "02079K404",
+      "prior_value_usd": 0,
+      "current_value_usd": 932848153,
+      "delta_usd": 932848153,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Encompass Health Corp",
+      "cusip": "29261A100",
+      "prior_value_usd": 78712296,
+      "current_value_usd": 88196343,
+      "delta_usd": 9484047,
+      "delta_pct": 12.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Exxon Mobil Corp",
+      "cusip": "30231G102",
+      "prior_value_usd": 5717821644,
+      "current_value_usd": 4558514327,
+      "delta_usd": -1159307317,
+      "delta_pct": -20.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Wolfspeed Inc",
+      "cusip": "97785W106",
+      "prior_value_usd": 21873549,
+      "current_value_usd": 0,
+      "delta_usd": -21873549,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Entergy Corp New",
+      "cusip": "29364G103",
+      "prior_value_usd": 566383389,
+      "current_value_usd": 601532617,
+      "delta_usd": 35149228,
+      "delta_pct": 6.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Restaurant Brands Intl Inc",
+      "cusip": "76131D103",
+      "prior_value_usd": 185414065,
+      "current_value_usd": 182311820,
+      "delta_usd": -3102245,
+      "delta_pct": -1.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Genedx Holdings Corp",
+      "cusip": "81663L200",
+      "prior_value_usd": 9700752,
+      "current_value_usd": 0,
+      "delta_usd": -9700752,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Oracle Corp",
+      "cusip": "68389X204",
+      "prior_value_usd": 489878848,
+      "current_value_usd": 843594315,
+      "delta_usd": 353715467,
+      "delta_pct": 72.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Comcast Corp New",
+      "cusip": "20030N101",
+      "prior_value_usd": 2571689927,
+      "current_value_usd": 2850576194,
+      "delta_usd": 278886267,
+      "delta_pct": 10.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Waterbridge Infrastructure L",
+      "cusip": "940923105",
+      "prior_value_usd": 0,
+      "current_value_usd": 51321347,
+      "delta_usd": 51321347,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Chubb Limited",
+      "cusip": "H1467J104",
+      "prior_value_usd": 2052549565,
+      "current_value_usd": 1200209572,
+      "delta_usd": -852339993,
+      "delta_pct": -41.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Pepsico Inc",
+      "cusip": "713448108",
+      "prior_value_usd": 767959516,
+      "current_value_usd": 672910744,
+      "delta_usd": -95048772,
+      "delta_pct": -12.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Fair Isaac Corp",
+      "cusip": "303250104",
+      "prior_value_usd": 1195004474,
+      "current_value_usd": 1549415497,
+      "delta_usd": 354411023,
+      "delta_pct": 29.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Semtech Corp",
+      "cusip": "816850101",
+      "prior_value_usd": 319253585,
+      "current_value_usd": 478174819,
+      "delta_usd": 158921234,
+      "delta_pct": 49.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Morgan Stanley",
+      "cusip": "617446448",
+      "prior_value_usd": 3335450432,
+      "current_value_usd": 3777544254,
+      "delta_usd": 442093822,
+      "delta_pct": 13.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Bruker Corp",
+      "cusip": "116794108",
+      "prior_value_usd": 38614700,
+      "current_value_usd": 0,
+      "delta_usd": -38614700,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Paypal Hldgs Inc",
+      "cusip": "70450Y103",
+      "prior_value_usd": 1128037,
+      "current_value_usd": 0,
+      "delta_usd": -1128037,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Cvs Health Corp",
+      "cusip": "126650100",
+      "prior_value_usd": 1437276043,
+      "current_value_usd": 2516851376,
+      "delta_usd": 1079575333,
+      "delta_pct": 75.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "United Airls Hldgs Inc",
+      "cusip": "910047109",
+      "prior_value_usd": 119563077,
+      "current_value_usd": 388841924,
+      "delta_usd": 269278847,
+      "delta_pct": 225.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Constellation Brands Inc",
+      "cusip": "21036P108",
+      "prior_value_usd": 323212098,
+      "current_value_usd": 106097435,
+      "delta_usd": -217114663,
+      "delta_pct": -67.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Chefs Whse Inc",
+      "cusip": "163086101",
+      "prior_value_usd": 0,
+      "current_value_usd": 33356694,
+      "delta_usd": 33356694,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Home Depot Inc",
+      "cusip": "437076102",
+      "prior_value_usd": 4928658461,
+      "current_value_usd": 5925852861,
+      "delta_usd": 997194400,
+      "delta_pct": 20.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Verizon Communications Inc",
+      "cusip": "92343V104",
+      "prior_value_usd": 585469096,
+      "current_value_usd": 483806478,
+      "delta_usd": -101662618,
+      "delta_pct": -17.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Root Inc",
+      "cusip": "77664L207",
+      "prior_value_usd": 21074567,
+      "current_value_usd": 4335645,
+      "delta_usd": -16738922,
+      "delta_pct": -79.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Booking Holdings Inc",
+      "cusip": "09857L108",
+      "prior_value_usd": 564843900,
+      "current_value_usd": 1597691314,
+      "delta_usd": 1032847414,
+      "delta_pct": 182.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Canadian Nat Res Ltd Med Ter",
+      "cusip": "136385101",
+      "prior_value_usd": 8020822471,
+      "current_value_usd": 4592003680,
+      "delta_usd": -3428818791,
+      "delta_pct": -42.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Agnico Eagle Mines Ltd",
+      "cusip": "008474108",
+      "prior_value_usd": 117843753,
+      "current_value_usd": 172018773,
+      "delta_usd": 54175020,
+      "delta_pct": 46.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Alibaba Group Hldg Ltd",
+      "cusip": "01609W102",
+      "prior_value_usd": 53184627,
+      "current_value_usd": 0,
+      "delta_usd": -53184627,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Idacorp Inc",
+      "cusip": "451107106",
+      "prior_value_usd": 65766200,
+      "current_value_usd": 77726290,
+      "delta_usd": 11960090,
+      "delta_pct": 18.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Procter & Gamble Co",
+      "cusip": "742718109",
+      "prior_value_usd": 1218111370,
+      "current_value_usd": 1005236383,
+      "delta_usd": -212874987,
+      "delta_pct": -17.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Eldorado Gold Corp New",
+      "cusip": "284902509",
+      "prior_value_usd": 356509330,
+      "current_value_usd": 562168905,
+      "delta_usd": 205659575,
+      "delta_pct": 57.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Kymera Therapeutics Inc",
+      "cusip": "501575104",
+      "prior_value_usd": 139367075,
+      "current_value_usd": 159262984,
+      "delta_usd": 19895909,
+      "delta_pct": 14.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "At&T Inc",
+      "cusip": "00206R102",
+      "prior_value_usd": 1784983383,
+      "current_value_usd": 928063697,
+      "delta_usd": -856919686,
+      "delta_pct": -48.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Robinhood Mkts Inc",
+      "cusip": "770700102",
+      "prior_value_usd": 21709195,
+      "current_value_usd": 0,
+      "delta_usd": -21709195,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Blue Owl Capital Inc",
+      "cusip": "09581B103",
+      "prior_value_usd": 530233560,
+      "current_value_usd": 377971020,
+      "delta_usd": -152262540,
+      "delta_pct": -28.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Zoetis Inc",
+      "cusip": "98978V103",
+      "prior_value_usd": 166510251,
+      "current_value_usd": 70481078,
+      "delta_usd": -96029173,
+      "delta_pct": -57.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Seagate Technology Hldngs Pl",
+      "cusip": "G7997R103",
+      "prior_value_usd": 2247162783,
+      "current_value_usd": 4175343665,
+      "delta_usd": 1928180882,
+      "delta_pct": 85.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Sap Se",
+      "cusip": "803054204",
+      "prior_value_usd": 1075125,
+      "current_value_usd": 726875,
+      "delta_usd": -348250,
+      "delta_pct": -32.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Yum Brands Inc",
+      "cusip": "988498101",
+      "prior_value_usd": 213798466,
+      "current_value_usd": 197134077,
+      "delta_usd": -16664389,
+      "delta_pct": -7.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Equinix Inc",
+      "cusip": "29444U700",
+      "prior_value_usd": 573237426,
+      "current_value_usd": 425975886,
+      "delta_usd": -147261540,
+      "delta_pct": -25.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Capital Group Core Equity Et",
+      "cusip": "14020V108",
+      "prior_value_usd": 557628,
+      "current_value_usd": 0,
+      "delta_usd": -557628,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Masimo Corp",
+      "cusip": "574795100",
+      "prior_value_usd": 63865646,
+      "current_value_usd": 0,
+      "delta_usd": -63865646,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Shell Plc",
+      "cusip": "780259305",
+      "prior_value_usd": 68772105,
+      "current_value_usd": 57396581,
+      "delta_usd": -11375524,
+      "delta_pct": -16.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Alignment Healthcare Inc",
+      "cusip": "01625V104",
+      "prior_value_usd": 63318809,
+      "current_value_usd": 104748023,
+      "delta_usd": 41429214,
+      "delta_pct": 65.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Nike Inc",
+      "cusip": "654106103",
+      "prior_value_usd": 373880754,
+      "current_value_usd": 53612834,
+      "delta_usd": -320267920,
+      "delta_pct": -85.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Bitdeer Technologies Group",
+      "cusip": "G11448100",
+      "prior_value_usd": 4636720,
+      "current_value_usd": 0,
+      "delta_usd": -4636720,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Kimco Realty Corp",
+      "cusip": "49446R109",
+      "prior_value_usd": 6830835,
+      "current_value_usd": 7706349,
+      "delta_usd": 875514,
+      "delta_pct": 12.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Intel Corp",
+      "cusip": "458140100",
+      "prior_value_usd": 3411206879,
+      "current_value_usd": 10297284321,
+      "delta_usd": 6886077442,
+      "delta_pct": 201.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Carvana Co",
+      "cusip": "146869102",
+      "prior_value_usd": 3410848025,
+      "current_value_usd": 4174272760,
+      "delta_usd": 763424735,
+      "delta_pct": 22.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Glacier Bancorp Inc New",
+      "cusip": "37637Q105",
+      "prior_value_usd": 172940352,
+      "current_value_usd": 188808693,
+      "delta_usd": 15868341,
+      "delta_pct": 9.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Ingersoll Rand Inc",
+      "cusip": "45687V106",
+      "prior_value_usd": 2360737403,
+      "current_value_usd": 2067341711,
+      "delta_usd": -293395692,
+      "delta_pct": -12.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Hdfc Bank Ltd",
+      "cusip": "40415F101",
+      "prior_value_usd": 29679053,
+      "current_value_usd": 30821635,
+      "delta_usd": 1142582,
+      "delta_pct": 3.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Schwab Charles Corp",
+      "cusip": "808513105",
+      "prior_value_usd": 30973271,
+      "current_value_usd": 0,
+      "delta_usd": -30973271,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Thor Inds Inc",
+      "cusip": "885160101",
+      "prior_value_usd": 123716935,
+      "current_value_usd": 106499240,
+      "delta_usd": -17217695,
+      "delta_pct": -13.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Motorola Solutions Inc",
+      "cusip": "620076307",
+      "prior_value_usd": 0,
+      "current_value_usd": 543219669,
+      "delta_usd": 543219669,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Micron Technology Inc",
+      "cusip": "595112103",
+      "prior_value_usd": 1404036123,
+      "current_value_usd": 4417941985,
+      "delta_usd": 3013905862,
+      "delta_pct": 214.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Trip Com Group Ltd",
+      "cusip": "89677Q107",
+      "prior_value_usd": 78674225,
+      "current_value_usd": 38790654,
+      "delta_usd": -39883571,
+      "delta_pct": -50.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Iren Limited",
+      "cusip": "Q4982L109",
+      "prior_value_usd": 67651683,
+      "current_value_usd": 23728748,
+      "delta_usd": -43922935,
+      "delta_pct": -64.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Deere & Co",
+      "cusip": "244199105",
+      "prior_value_usd": 78776926,
+      "current_value_usd": 0,
+      "delta_usd": -78776926,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Oneok Inc New",
+      "cusip": "682680103",
+      "prior_value_usd": 566555959,
+      "current_value_usd": 549594109,
+      "delta_usd": -16961850,
+      "delta_pct": -3.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Weatherford Intl Plc",
+      "cusip": "G48833118",
+      "prior_value_usd": 213879618,
+      "current_value_usd": 128963726,
+      "delta_usd": -84915892,
+      "delta_pct": -39.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Texas Instrs Inc",
+      "cusip": "882508104",
+      "prior_value_usd": 1730006742,
+      "current_value_usd": 1684827017,
+      "delta_usd": -45179725,
+      "delta_pct": -2.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Conmed Corp",
+      "cusip": "207410101",
+      "prior_value_usd": 32723841,
+      "current_value_usd": 26957606,
+      "delta_usd": -5766235,
+      "delta_pct": -17.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Energy Fuels Inc",
+      "cusip": "292671708",
+      "prior_value_usd": 56064091,
+      "current_value_usd": 0,
+      "delta_usd": -56064091,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Boeing Co",
+      "cusip": "097023204",
+      "prior_value_usd": 190603166,
+      "current_value_usd": 206917215,
+      "delta_usd": 16314049,
+      "delta_pct": 8.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Kimberly-Clark Corp",
+      "cusip": "494368103",
+      "prior_value_usd": 154124813,
+      "current_value_usd": 175673748,
+      "delta_usd": 21548935,
+      "delta_pct": 14.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Fedex Corp",
+      "cusip": "31428X106",
+      "prior_value_usd": 36580465,
+      "current_value_usd": 32169498,
+      "delta_usd": -4410967,
+      "delta_pct": -12.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Ul Solutions Inc",
+      "cusip": "903731107",
+      "prior_value_usd": 313149213,
+      "current_value_usd": 343000869,
+      "delta_usd": 29851656,
+      "delta_pct": 9.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Nvidia Corporation",
+      "cusip": "67066G104",
+      "prior_value_usd": 33663867426,
+      "current_value_usd": 40564718793,
+      "delta_usd": 6900851367,
+      "delta_pct": 20.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Futu Hldgs Ltd",
+      "cusip": "36118L106",
+      "prior_value_usd": 90168330,
+      "current_value_usd": 0,
+      "delta_usd": -90168330,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Advanced Micro Devices Inc",
+      "cusip": "007903107",
+      "prior_value_usd": 352062671,
+      "current_value_usd": 629961079,
+      "delta_usd": 277898408,
+      "delta_pct": 78.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Matson Inc",
+      "cusip": "57686G105",
+      "prior_value_usd": 104117146,
+      "current_value_usd": 130657001,
+      "delta_usd": 26539855,
+      "delta_pct": 25.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Draftkings Inc New",
+      "cusip": "26142V105",
+      "prior_value_usd": 38456921,
+      "current_value_usd": 0,
+      "delta_usd": -38456921,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "E L F Beauty Inc",
+      "cusip": "26856L103",
+      "prior_value_usd": 37021558,
+      "current_value_usd": 53087082,
+      "delta_usd": 16065524,
+      "delta_pct": 43.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Nextera Energy Inc",
+      "cusip": "65339F101",
+      "prior_value_usd": 3312089783,
+      "current_value_usd": 1764227733,
+      "delta_usd": -1547862050,
+      "delta_pct": -46.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Teradyne Inc",
+      "cusip": "880770102",
+      "prior_value_usd": 20777399,
+      "current_value_usd": 33773000,
+      "delta_usd": 12995601,
+      "delta_pct": 62.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Installed Bldg Prods Inc",
+      "cusip": "45780R101",
+      "prior_value_usd": 47364010,
+      "current_value_usd": 48017713,
+      "delta_usd": 653703,
+      "delta_pct": 1.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Novo-Nordisk A S",
+      "cusip": "670100205",
+      "prior_value_usd": 3490682,
+      "current_value_usd": 4981861,
+      "delta_usd": 1491179,
+      "delta_pct": 42.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "American Tower Corp",
+      "cusip": "03027X100",
+      "prior_value_usd": 708156661,
+      "current_value_usd": 478039704,
+      "delta_usd": -230116957,
+      "delta_pct": -32.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Black Hills Corp",
+      "cusip": "092113109",
+      "prior_value_usd": 157971746,
+      "current_value_usd": 135851498,
+      "delta_usd": -22120248,
+      "delta_pct": -14.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Ge Aerospace",
+      "cusip": "369604301",
+      "prior_value_usd": 9852615260,
+      "current_value_usd": 11564216260,
+      "delta_usd": 1711601000,
+      "delta_pct": 17.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Abbvie Inc",
+      "cusip": "00287Y109",
+      "prior_value_usd": 6797322062,
+      "current_value_usd": 7574798407,
+      "delta_usd": 777476345,
+      "delta_pct": 11.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Philip Morris Intl Inc",
+      "cusip": "718172109",
+      "prior_value_usd": 13197873980,
+      "current_value_usd": 15242589518,
+      "delta_usd": 2044715538,
+      "delta_pct": 15.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Lumentum Hldgs Inc",
+      "cusip": "55024U109",
+      "prior_value_usd": 373441745,
+      "current_value_usd": 230903088,
+      "delta_usd": -142538657,
+      "delta_pct": -38.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Gap Inc",
+      "cusip": "364760108",
+      "prior_value_usd": 0,
+      "current_value_usd": 54310792,
+      "delta_usd": 54310792,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Via Transn Inc",
+      "cusip": "92556W104",
+      "prior_value_usd": 32103000,
+      "current_value_usd": 0,
+      "delta_usd": -32103000,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Cipher Digital Inc",
+      "cusip": "17253J106",
+      "prior_value_usd": 55801308,
+      "current_value_usd": 106453015,
+      "delta_usd": 50651707,
+      "delta_pct": 90.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Diamondback Energy Inc",
+      "cusip": "25278X109",
+      "prior_value_usd": 606885386,
+      "current_value_usd": 258938354,
+      "delta_usd": -347947032,
+      "delta_pct": -57.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Nextera Energy Inc",
+      "cusip": "65339F119",
+      "prior_value_usd": 224113153,
+      "current_value_usd": 212297128,
+      "delta_usd": -11816025,
+      "delta_pct": -5.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Blackstone Inc",
+      "cusip": "09260D107",
+      "prior_value_usd": 1694991345,
+      "current_value_usd": 1552603271,
+      "delta_usd": -142388074,
+      "delta_pct": -8.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Carrier Global Corporation",
+      "cusip": "14448C104",
+      "prior_value_usd": 6553683595,
+      "current_value_usd": 7779908643,
+      "delta_usd": 1226225048,
+      "delta_pct": 18.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Cencora Inc",
+      "cusip": "03073E105",
+      "prior_value_usd": 615604451,
+      "current_value_usd": 560283987,
+      "delta_usd": -55320464,
+      "delta_pct": -9.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Saia Inc",
+      "cusip": "78709Y105",
+      "prior_value_usd": 57132530,
+      "current_value_usd": 206750392,
+      "delta_usd": 149617862,
+      "delta_pct": 261.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Assurant Inc",
+      "cusip": "04621X108",
+      "prior_value_usd": 1735946,
+      "current_value_usd": 2561508,
+      "delta_usd": 825562,
+      "delta_pct": 47.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Applied Matls Inc",
+      "cusip": "038222105",
+      "prior_value_usd": 10066964986,
+      "current_value_usd": 16020269437,
+      "delta_usd": 5953304451,
+      "delta_pct": 59.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Sprouts Fmrs Mkt Inc",
+      "cusip": "85208M102",
+      "prior_value_usd": 33855519,
+      "current_value_usd": 38750158,
+      "delta_usd": 4894639,
+      "delta_pct": 14.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Bridgebio Pharma Inc",
+      "cusip": "10806X102",
+      "prior_value_usd": 56712511,
+      "current_value_usd": 52143969,
+      "delta_usd": -4568542,
+      "delta_pct": -8.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Qorvo Inc",
+      "cusip": "74736K101",
+      "prior_value_usd": 43377592,
+      "current_value_usd": 0,
+      "delta_usd": -43377592,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Addus Homecare Corp",
+      "cusip": "006739106",
+      "prior_value_usd": 143783093,
+      "current_value_usd": 139643956,
+      "delta_usd": -4139137,
+      "delta_pct": -2.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Ishares Tr",
+      "cusip": "464287614",
+      "prior_value_usd": 507708,
+      "current_value_usd": 461935,
+      "delta_usd": -45773,
+      "delta_pct": -9.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Fabrinet",
+      "cusip": "G3323L100",
+      "prior_value_usd": 178466752,
+      "current_value_usd": 76209617,
+      "delta_usd": -102257135,
+      "delta_pct": -57.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Lockheed Martin Corp",
+      "cusip": "539830109",
+      "prior_value_usd": 885428328,
+      "current_value_usd": 630985060,
+      "delta_usd": -254443268,
+      "delta_pct": -28.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "State Str Corp",
+      "cusip": "857477103",
+      "prior_value_usd": 55029339,
+      "current_value_usd": 0,
+      "delta_usd": -55029339,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "American Elec Pwr Co Inc",
+      "cusip": "025537101",
+      "prior_value_usd": 195456927,
+      "current_value_usd": 206123555,
+      "delta_usd": 10666628,
+      "delta_pct": 5.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Aurora Innovation Inc",
+      "cusip": "051774107",
+      "prior_value_usd": 340886550,
+      "current_value_usd": 566394760,
+      "delta_usd": 225508210,
+      "delta_pct": 66.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Stepstone Group Inc",
+      "cusip": "85914M107",
+      "prior_value_usd": 37931817,
+      "current_value_usd": 50952335,
+      "delta_usd": 13020518,
+      "delta_pct": 34.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Netskope Inc",
+      "cusip": "64119N608",
+      "prior_value_usd": 19199439,
+      "current_value_usd": 0,
+      "delta_usd": -19199439,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Fervo Energy Co",
+      "cusip": "31556C106",
+      "prior_value_usd": 0,
+      "current_value_usd": 175517439,
+      "delta_usd": 175517439,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Chevron Corporation",
+      "cusip": "166764100",
+      "prior_value_usd": 538387370,
+      "current_value_usd": 386380188,
+      "delta_usd": -152007182,
+      "delta_pct": -28.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Ollies Bargain Outlet Hldgs",
+      "cusip": "681116109",
+      "prior_value_usd": 125887802,
+      "current_value_usd": 186262865,
+      "delta_usd": 60375063,
+      "delta_pct": 48.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Automatic Data Processing In",
+      "cusip": "053015103",
+      "prior_value_usd": 1738436101,
+      "current_value_usd": 1853838725,
+      "delta_usd": 115402624,
+      "delta_pct": 6.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Cnx Res Corp",
+      "cusip": "12653C108",
+      "prior_value_usd": 31419753,
+      "current_value_usd": 21760530,
+      "delta_usd": -9659223,
+      "delta_pct": -30.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Stellantis N.V",
+      "cusip": "N82405106",
+      "prior_value_usd": 30910749,
+      "current_value_usd": 33623816,
+      "delta_usd": 2713067,
+      "delta_pct": 8.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Tractor Supply Co",
+      "cusip": "892356106",
+      "prior_value_usd": 481764760,
+      "current_value_usd": 948972395,
+      "delta_usd": 467207635,
+      "delta_pct": 97.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Alnylam Pharmaceuticals Inc",
+      "cusip": "02043Q107",
+      "prior_value_usd": 3133497254,
+      "current_value_usd": 2935115324,
+      "delta_usd": -198381930,
+      "delta_pct": -6.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Truist Finl Corp",
+      "cusip": "89832Q109",
+      "prior_value_usd": 467497532,
+      "current_value_usd": 507052828,
+      "delta_usd": 39555296,
+      "delta_pct": 8.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Copa Holdings Sa",
+      "cusip": "P31076105",
+      "prior_value_usd": 117177127,
+      "current_value_usd": 162233219,
+      "delta_usd": 45056092,
+      "delta_pct": 38.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Steel Dynamics Inc",
+      "cusip": "858119100",
+      "prior_value_usd": 653551560,
+      "current_value_usd": 835206406,
+      "delta_usd": 181654846,
+      "delta_pct": 27.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Old Dominion Freight Line In",
+      "cusip": "679580100",
+      "prior_value_usd": 104985795,
+      "current_value_usd": 118275767,
+      "delta_usd": 13289972,
+      "delta_pct": 12.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Irhythm Holdings Inc",
+      "cusip": "450056106",
+      "prior_value_usd": 60141812,
+      "current_value_usd": 39873111,
+      "delta_usd": -20268701,
+      "delta_pct": -33.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Banco Santander Sa",
+      "cusip": "05964H105",
+      "prior_value_usd": 2060530,
+      "current_value_usd": 2647985,
+      "delta_usd": 587455,
+      "delta_pct": 28.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Crane Company",
+      "cusip": "224408104",
+      "prior_value_usd": 17608725,
+      "current_value_usd": 136467311,
+      "delta_usd": 118858586,
+      "delta_pct": 675.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "West Pharmaceutical Svsc Inc",
+      "cusip": "955306105",
+      "prior_value_usd": 151389317,
+      "current_value_usd": 218710339,
+      "delta_usd": 67321022,
+      "delta_pct": 44.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Vaxcyte Inc",
+      "cusip": "92243G108",
+      "prior_value_usd": 53036300,
+      "current_value_usd": 48640917,
+      "delta_usd": -4395383,
+      "delta_pct": -8.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Revvity Inc",
+      "cusip": "714046109",
+      "prior_value_usd": 917277,
+      "current_value_usd": 1367830,
+      "delta_usd": 450553,
+      "delta_pct": 49.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Alaska Air Group Inc",
+      "cusip": "011659109",
+      "prior_value_usd": 17483373,
+      "current_value_usd": 27577260,
+      "delta_usd": 10093887,
+      "delta_pct": 57.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Southern Co",
+      "cusip": "842587107",
+      "prior_value_usd": 252355401,
+      "current_value_usd": 0,
+      "delta_usd": -252355401,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Qiagen Nv",
+      "cusip": "N72482156",
+      "prior_value_usd": 4735555,
+      "current_value_usd": 0,
+      "delta_usd": -4735555,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Arrow Electrs Inc",
+      "cusip": "042735100",
+      "prior_value_usd": 755484,
+      "current_value_usd": 1075586,
+      "delta_usd": 320102,
+      "delta_pct": 42.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Biohaven Ltd",
+      "cusip": "G1110E107",
+      "prior_value_usd": 11275420,
+      "current_value_usd": 17849230,
+      "delta_usd": 6573810,
+      "delta_pct": 58.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Shinhan Financial Group Co L",
+      "cusip": "824596100",
+      "prior_value_usd": 1717147,
+      "current_value_usd": 1562382,
+      "delta_usd": -154765,
+      "delta_pct": -9.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Slm Corp",
+      "cusip": "78442P106",
+      "prior_value_usd": 113660145,
+      "current_value_usd": 121315518,
+      "delta_usd": 7655373,
+      "delta_pct": 6.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Rtx Corporation",
+      "cusip": "75513E101",
+      "prior_value_usd": 10095317574,
+      "current_value_usd": 9931589851,
+      "delta_usd": -163727723,
+      "delta_pct": -1.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Vertex Pharmaceuticals Inc",
+      "cusip": "92532F100",
+      "prior_value_usd": 9433408963,
+      "current_value_usd": 9681703171,
+      "delta_usd": 248294208,
+      "delta_pct": 2.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Berkshire Hathaway Inc Del",
+      "cusip": "084670702",
+      "prior_value_usd": 924263970,
+      "current_value_usd": 784840053,
+      "delta_usd": -139423917,
+      "delta_pct": -15.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Freeport Mcmoran Inc",
+      "cusip": "35671D857",
+      "prior_value_usd": 2400593769,
+      "current_value_usd": 2610093764,
+      "delta_usd": 209499995,
+      "delta_pct": 8.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Palo Alto Networks Inc",
+      "cusip": "697435105",
+      "prior_value_usd": 314405242,
+      "current_value_usd": 353666374,
+      "delta_usd": 39261132,
+      "delta_pct": 12.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Kardigan Inc",
+      "cusip": "485925101",
+      "prior_value_usd": 0,
+      "current_value_usd": 85834767,
+      "delta_usd": 85834767,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Kt Corp",
+      "cusip": "48268K101",
+      "prior_value_usd": 123163927,
+      "current_value_usd": 127742089,
+      "delta_usd": 4578162,
+      "delta_pct": 3.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Itau Unibanco Hldg S A",
+      "cusip": "465562106",
+      "prior_value_usd": 708876915,
+      "current_value_usd": 775835276,
+      "delta_usd": 66958361,
+      "delta_pct": 9.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Par Technology Corp",
+      "cusip": "698884103",
+      "prior_value_usd": 19665322,
+      "current_value_usd": 17904067,
+      "delta_usd": -1761255,
+      "delta_pct": -9.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Sanofi Sa",
+      "cusip": "80105N105",
+      "prior_value_usd": 80067307,
+      "current_value_usd": 71557841,
+      "delta_usd": -8509466,
+      "delta_pct": -10.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Alphabet Inc",
+      "cusip": "02079K305",
+      "prior_value_usd": 16547805429,
+      "current_value_usd": 22345263432,
+      "delta_usd": 5797458003,
+      "delta_pct": 35.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Ishares Tr",
+      "cusip": "464287622",
+      "prior_value_usd": 462111,
+      "current_value_usd": 248255,
+      "delta_usd": -213856,
+      "delta_pct": -46.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Brookfield Corp",
+      "cusip": "11271J107",
+      "prior_value_usd": 173753774,
+      "current_value_usd": 159345603,
+      "delta_usd": -14408171,
+      "delta_pct": -8.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Paychex Inc",
+      "cusip": "704326107",
+      "prior_value_usd": 193375182,
+      "current_value_usd": 0,
+      "delta_usd": -193375182,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Vici Pptys Inc",
+      "cusip": "925652109",
+      "prior_value_usd": 490846365,
+      "current_value_usd": 237012354,
+      "delta_usd": -253834011,
+      "delta_pct": -51.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Heico Corp New",
+      "cusip": "422806109",
+      "prior_value_usd": 54736791,
+      "current_value_usd": 71012409,
+      "delta_usd": 16275618,
+      "delta_pct": 29.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Inhibrx Biosciences Inc",
+      "cusip": "45720N103",
+      "prior_value_usd": 26411104,
+      "current_value_usd": 34398988,
+      "delta_usd": 7987884,
+      "delta_pct": 30.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Establishment Labs Hldgs Inc",
+      "cusip": "G31249108",
+      "prior_value_usd": 5842378,
+      "current_value_usd": 16220578,
+      "delta_usd": 10378200,
+      "delta_pct": 177.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Banco Bilbao Vizcaya Argenta",
+      "cusip": "05946K101",
+      "prior_value_usd": 4402109,
+      "current_value_usd": 5229372,
+      "delta_usd": 827263,
+      "delta_pct": 18.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Bbb Foods Inc",
+      "cusip": "G0896C103",
+      "prior_value_usd": 206748792,
+      "current_value_usd": 225972201,
+      "delta_usd": 19223409,
+      "delta_pct": 9.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Goldman Sachs Group Inc",
+      "cusip": "38141G104",
+      "prior_value_usd": 218560671,
+      "current_value_usd": 277749509,
+      "delta_usd": 59188838,
+      "delta_pct": 27.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Northrop Grumman Corp",
+      "cusip": "666807102",
+      "prior_value_usd": 830123842,
+      "current_value_usd": 240699650,
+      "delta_usd": -589424192,
+      "delta_pct": -71.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Cactus Inc",
+      "cusip": "127203107",
+      "prior_value_usd": 31253731,
+      "current_value_usd": 70725781,
+      "delta_usd": 39472050,
+      "delta_pct": 126.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Xpo Inc",
+      "cusip": "983793100",
+      "prior_value_usd": 1865168685,
+      "current_value_usd": 1698138659,
+      "delta_usd": -167030026,
+      "delta_pct": -9.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Pinnacle Finl Partners Inc",
+      "cusip": "72348N109",
+      "prior_value_usd": 26381150,
+      "current_value_usd": 0,
+      "delta_usd": -26381150,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Robert Half Inc.",
+      "cusip": "770323103",
+      "prior_value_usd": 30742865,
+      "current_value_usd": 37242477,
+      "delta_usd": 6499612,
+      "delta_pct": 21.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Argenx Se",
+      "cusip": "04016X101",
+      "prior_value_usd": 0,
+      "current_value_usd": 82117850,
+      "delta_usd": 82117850,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Otis Worldwide Corp",
+      "cusip": "68902V107",
+      "prior_value_usd": 221442670,
+      "current_value_usd": 207412885,
+      "delta_usd": -14029785,
+      "delta_pct": -6.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Welltower Inc",
+      "cusip": "95040Q104",
+      "prior_value_usd": 1291814103,
+      "current_value_usd": 1563681433,
+      "delta_usd": 271867330,
+      "delta_pct": 21.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Stanley Black & Decker Inc",
+      "cusip": "854502101",
+      "prior_value_usd": 922036953,
+      "current_value_usd": 1234649276,
+      "delta_usd": 312612323,
+      "delta_pct": 33.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Abbott Laboratories",
+      "cusip": "002824100",
+      "prior_value_usd": 5110322629,
+      "current_value_usd": 3349205208,
+      "delta_usd": -1761117421,
+      "delta_pct": -34.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Fedex Fght Hldg Co Inc",
+      "cusip": "314352105",
+      "prior_value_usd": 0,
+      "current_value_usd": 7755024,
+      "delta_usd": 7755024,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Apollo Global Mgmt Inc",
+      "cusip": "03769M304",
+      "prior_value_usd": 79582533,
+      "current_value_usd": 82931371,
+      "delta_usd": 3348838,
+      "delta_pct": 4.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Allegro Microsystems Inc",
+      "cusip": "01749D105",
+      "prior_value_usd": 392093144,
+      "current_value_usd": 835885290,
+      "delta_usd": 443792146,
+      "delta_pct": 113.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Constellation Energy Corp",
+      "cusip": "21037T109",
+      "prior_value_usd": 1339520873,
+      "current_value_usd": 1429529897,
+      "delta_usd": 90009024,
+      "delta_pct": 6.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Nvr Inc",
+      "cusip": "62944T105",
+      "prior_value_usd": 1073911646,
+      "current_value_usd": 1116334710,
+      "delta_usd": 42423064,
+      "delta_pct": 4.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Vse Corp",
+      "cusip": "918284100",
+      "prior_value_usd": 172667550,
+      "current_value_usd": 189472429,
+      "delta_usd": 16804879,
+      "delta_pct": 9.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Spotify Technology S A",
+      "cusip": "L8681T102",
+      "prior_value_usd": 126642045,
+      "current_value_usd": 0,
+      "delta_usd": -126642045,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Icici Bank Limited",
+      "cusip": "45104G104",
+      "prior_value_usd": 287005,
+      "current_value_usd": 332853,
+      "delta_usd": 45848,
+      "delta_pct": 16.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Halliburton Co",
+      "cusip": "406216101",
+      "prior_value_usd": 2196666293,
+      "current_value_usd": 293735367,
+      "delta_usd": -1902930926,
+      "delta_pct": -86.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Kkr & Co Inc",
+      "cusip": "48251W500",
+      "prior_value_usd": 143513446,
+      "current_value_usd": 142193208,
+      "delta_usd": -1320238,
+      "delta_pct": -0.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Tjx Cos Inc New",
+      "cusip": "872540109",
+      "prior_value_usd": 941290691,
+      "current_value_usd": 814459168,
+      "delta_usd": -126831523,
+      "delta_pct": -13.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Denison Mines Corp",
+      "cusip": "248356107",
+      "prior_value_usd": 48439511,
+      "current_value_usd": 0,
+      "delta_usd": -48439511,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Qualcomm Inc",
+      "cusip": "747525103",
+      "prior_value_usd": 184661119,
+      "current_value_usd": 216543759,
+      "delta_usd": 31882640,
+      "delta_pct": 17.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Knife River Corp",
+      "cusip": "498894104",
+      "prior_value_usd": 143570747,
+      "current_value_usd": 107848439,
+      "delta_usd": -35722308,
+      "delta_pct": -24.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Gallagher Arthur J & Co",
+      "cusip": "363576109",
+      "prior_value_usd": 645434734,
+      "current_value_usd": 593625531,
+      "delta_usd": -51809203,
+      "delta_pct": -8.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Henry Jack & Assoc Inc",
+      "cusip": "426281101",
+      "prior_value_usd": 10362642,
+      "current_value_usd": 8054848,
+      "delta_usd": -2307794,
+      "delta_pct": -22.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Adobe Inc",
+      "cusip": "00724F101",
+      "prior_value_usd": 176569644,
+      "current_value_usd": 91737026,
+      "delta_usd": -84832618,
+      "delta_pct": -48.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Merck & Co Inc",
+      "cusip": "58933Y105",
+      "prior_value_usd": 247986376,
+      "current_value_usd": 247364171,
+      "delta_usd": -622205,
+      "delta_pct": -0.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Waste Mgmt Inc Del",
+      "cusip": "94106L109",
+      "prior_value_usd": 2006536481,
+      "current_value_usd": 2326456418,
+      "delta_usd": 319919937,
+      "delta_pct": 15.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Humana Inc",
+      "cusip": "444859102",
+      "prior_value_usd": 190550105,
+      "current_value_usd": 443462035,
+      "delta_usd": 252911930,
+      "delta_pct": 132.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "The Baldwin Insurance Grp In",
+      "cusip": "05589G102",
+      "prior_value_usd": 33850107,
+      "current_value_usd": 34772036,
+      "delta_usd": 921929,
+      "delta_pct": 2.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Dominion Energy Inc",
+      "cusip": "25746U109",
+      "prior_value_usd": 3027699683,
+      "current_value_usd": 5043640462,
+      "delta_usd": 2015940779,
+      "delta_pct": 66.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Spdr Series Trust",
+      "cusip": "78468R663",
+      "prior_value_usd": 47309420,
+      "current_value_usd": 13686456,
+      "delta_usd": -33622964,
+      "delta_pct": -71.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Cameco Corp",
+      "cusip": "13321L108",
+      "prior_value_usd": 43323325,
+      "current_value_usd": 40592285,
+      "delta_usd": -2731040,
+      "delta_pct": -6.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Firstcash Holdings Inc",
+      "cusip": "33768G107",
+      "prior_value_usd": 105178668,
+      "current_value_usd": 158286536,
+      "delta_usd": 53107868,
+      "delta_pct": 50.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Boot Barn Hldgs Inc",
+      "cusip": "099406100",
+      "prior_value_usd": 2927200,
+      "current_value_usd": 0,
+      "delta_usd": -2927200,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Amazon Com Inc",
+      "cusip": "023135106",
+      "prior_value_usd": 24663743959,
+      "current_value_usd": 28745397548,
+      "delta_usd": 4081653589,
+      "delta_pct": 16.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Microsoft Corp",
+      "cusip": "594918104",
+      "prior_value_usd": 35567494203,
+      "current_value_usd": 35342477923,
+      "delta_usd": -225016280,
+      "delta_pct": -0.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Patrick Inds Inc",
+      "cusip": "703343103",
+      "prior_value_usd": 151114067,
+      "current_value_usd": 125850641,
+      "delta_usd": -25263426,
+      "delta_pct": -16.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "General Dynamics Corp",
+      "cusip": "369550108",
+      "prior_value_usd": 1347497673,
+      "current_value_usd": 1313641122,
+      "delta_usd": -33856551,
+      "delta_pct": -2.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Cisco Sys Inc",
+      "cusip": "17275R102",
+      "prior_value_usd": 4961797384,
+      "current_value_usd": 7890299515,
+      "delta_usd": 2928502131,
+      "delta_pct": 59.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Lazard Inc",
+      "cusip": "52110M109",
+      "prior_value_usd": 104361720,
+      "current_value_usd": 94039588,
+      "delta_usd": -10322132,
+      "delta_pct": -9.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Entegris Inc",
+      "cusip": "29362U104",
+      "prior_value_usd": 1332841743,
+      "current_value_usd": 2015623367,
+      "delta_usd": 682781624,
+      "delta_pct": 51.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Smurfit Westrock Plc",
+      "cusip": "G8267P108",
+      "prior_value_usd": 1553024277,
+      "current_value_usd": 1972263342,
+      "delta_usd": 419239065,
+      "delta_pct": 27.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Sherwin Williams Co",
+      "cusip": "824348106",
+      "prior_value_usd": 1158135910,
+      "current_value_usd": 995868282,
+      "delta_usd": -162267628,
+      "delta_pct": -14.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Broadcom Inc",
+      "cusip": "11135F101",
+      "prior_value_usd": 35905127498,
+      "current_value_usd": 42731528140,
+      "delta_usd": 6826400642,
+      "delta_pct": 19.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Mongodb Inc",
+      "cusip": "60937P106",
+      "prior_value_usd": 16922390,
+      "current_value_usd": 0,
+      "delta_usd": -16922390,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Waste Connections Inc",
+      "cusip": "94106B101",
+      "prior_value_usd": 107751231,
+      "current_value_usd": 20640582,
+      "delta_usd": -87110649,
+      "delta_pct": -80.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Magnite Inc",
+      "cusip": "55955D100",
+      "prior_value_usd": 59641033,
+      "current_value_usd": 73436638,
+      "delta_usd": 13795605,
+      "delta_pct": 23.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Molina Healthcare Inc",
+      "cusip": "60855R100",
+      "prior_value_usd": 145004407,
+      "current_value_usd": 249797804,
+      "delta_usd": 104793397,
+      "delta_pct": 72.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Space Exploration Techn Corp",
+      "cusip": "84615Q103",
+      "prior_value_usd": 0,
+      "current_value_usd": 1783463529,
+      "delta_usd": 1783463529,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Cabot Corp",
+      "cusip": "127055101",
+      "prior_value_usd": 34845259,
+      "current_value_usd": 38673790,
+      "delta_usd": 3828531,
+      "delta_pct": 11.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Nutrien Ltd",
+      "cusip": "67077M108",
+      "prior_value_usd": 87468101,
+      "current_value_usd": 0,
+      "delta_usd": -87468101,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Ast Spacemobile Inc",
+      "cusip": "00217D100",
+      "prior_value_usd": 42749815,
+      "current_value_usd": 0,
+      "delta_usd": -42749815,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Wyndham Hotels & Resorts Inc",
+      "cusip": "98311A105",
+      "prior_value_usd": 182645493,
+      "current_value_usd": 185537788,
+      "delta_usd": 2892295,
+      "delta_pct": 1.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "American Express Co",
+      "cusip": "025816109",
+      "prior_value_usd": 959015890,
+      "current_value_usd": 250861083,
+      "delta_usd": -708154807,
+      "delta_pct": -73.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Ferguson Enterprises Inc",
+      "cusip": "31488V107",
+      "prior_value_usd": 488586692,
+      "current_value_usd": 502268754,
+      "delta_usd": 13682062,
+      "delta_pct": 2.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Flutter Entmt Plc",
+      "cusip": "G3643J108",
+      "prior_value_usd": 397117171,
+      "current_value_usd": 398008992,
+      "delta_usd": 891821,
+      "delta_pct": 0.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Conocophillips",
+      "cusip": "20825C104",
+      "prior_value_usd": 812197892,
+      "current_value_usd": 462458573,
+      "delta_usd": -349739319,
+      "delta_pct": -43.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Lowes Cos Inc",
+      "cusip": "548661107",
+      "prior_value_usd": 77880723,
+      "current_value_usd": 0,
+      "delta_usd": -77880723,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Credicorp Ltd",
+      "cusip": "G2519Y108",
+      "prior_value_usd": 155831163,
+      "current_value_usd": 162084759,
+      "delta_usd": 6253596,
+      "delta_pct": 4.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Oracle Corp",
+      "cusip": "68389X105",
+      "prior_value_usd": 4727797520,
+      "current_value_usd": 5824847174,
+      "delta_usd": 1097049654,
+      "delta_pct": 23.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Idexx Labs Inc",
+      "cusip": "45168D104",
+      "prior_value_usd": 439007277,
+      "current_value_usd": 415467340,
+      "delta_usd": -23539937,
+      "delta_pct": -5.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "State Str Spdr S&P 500 Etf T",
+      "cusip": "78462F103",
+      "prior_value_usd": 26673501,
+      "current_value_usd": 13480982,
+      "delta_usd": -13192519,
+      "delta_pct": -49.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Honeywell Intl Inc",
+      "cusip": "438516205",
+      "prior_value_usd": 0,
+      "current_value_usd": 738855506,
+      "delta_usd": 738855506,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Bank Of Amer Corp",
+      "cusip": "060505104",
+      "prior_value_usd": 228766688,
+      "current_value_usd": 255468747,
+      "delta_usd": 26702059,
+      "delta_pct": 11.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Thermo Fisher Scientific Inc",
+      "cusip": "883556102",
+      "prior_value_usd": 2169814556,
+      "current_value_usd": 2079461815,
+      "delta_usd": -90352741,
+      "delta_pct": -4.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Galaxy Digital Inc.",
+      "cusip": "36317J209",
+      "prior_value_usd": 336066676,
+      "current_value_usd": 501198766,
+      "delta_usd": 165132090,
+      "delta_pct": 49.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Msa Safety Inc",
+      "cusip": "553498106",
+      "prior_value_usd": 0,
+      "current_value_usd": 53474901,
+      "delta_usd": 53474901,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Hawkeye 360 Inc",
+      "cusip": "420201105",
+      "prior_value_usd": 0,
+      "current_value_usd": 14154000,
+      "delta_usd": 14154000,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Nebius Group N.V.",
+      "cusip": "N97284108",
+      "prior_value_usd": 348417935,
+      "current_value_usd": 0,
+      "delta_usd": -348417935,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Cognizant Technology Solutio",
+      "cusip": "192446102",
+      "prior_value_usd": 583494022,
+      "current_value_usd": 358247852,
+      "delta_usd": -225246170,
+      "delta_pct": -38.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Marvell Technology Inc",
+      "cusip": "573874104",
+      "prior_value_usd": 435669026,
+      "current_value_usd": 919159084,
+      "delta_usd": 483490058,
+      "delta_pct": 111.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Ionis Pharmaceuticals Inc",
+      "cusip": "462222100",
+      "prior_value_usd": 24255196,
+      "current_value_usd": 26319205,
+      "delta_usd": 2064009,
+      "delta_pct": 8.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Savers Value Vlg Inc",
+      "cusip": "80517M109",
+      "prior_value_usd": 13174945,
+      "current_value_usd": 35497579,
+      "delta_usd": 22322634,
+      "delta_pct": 169.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Johnson & Johnson",
+      "cusip": "478160104",
+      "prior_value_usd": 2136397666,
+      "current_value_usd": 2073562156,
+      "delta_usd": -62835510,
+      "delta_pct": -2.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Siriuspoint Ltd",
+      "cusip": "G8192H106",
+      "prior_value_usd": 16111231,
+      "current_value_usd": 32663400,
+      "delta_usd": 16552169,
+      "delta_pct": 102.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "James Hardie Inds Plc",
+      "cusip": "G4253H101",
+      "prior_value_usd": 0,
+      "current_value_usd": 94495349,
+      "delta_usd": 94495349,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Standex Intl Corp",
+      "cusip": "854231107",
+      "prior_value_usd": 63358961,
+      "current_value_usd": 112550523,
+      "delta_usd": 49191562,
+      "delta_pct": 77.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Rocket Cos Inc",
+      "cusip": "77311W101",
+      "prior_value_usd": 0,
+      "current_value_usd": 168578786,
+      "delta_usd": 168578786,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Walmart Inc",
+      "cusip": "931142103",
+      "prior_value_usd": 171857740,
+      "current_value_usd": 140792260,
+      "delta_usd": -31065480,
+      "delta_pct": -18.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Lkq Corp",
+      "cusip": "501889208",
+      "prior_value_usd": 22775671,
+      "current_value_usd": 0,
+      "delta_usd": -22775671,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Blackrock Inc",
+      "cusip": "09290D101",
+      "prior_value_usd": 4433885095,
+      "current_value_usd": 4286838331,
+      "delta_usd": -147046764,
+      "delta_pct": -3.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Enpro Inc",
+      "cusip": "29355X107",
+      "prior_value_usd": 21482710,
+      "current_value_usd": 33179263,
+      "delta_usd": 11696553,
+      "delta_pct": 54.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Celanese Corp Del",
+      "cusip": "150870103",
+      "prior_value_usd": 308916165,
+      "current_value_usd": 172608376,
+      "delta_usd": -136307789,
+      "delta_pct": -44.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Fidelity Natl Information Sv",
+      "cusip": "31620M106",
+      "prior_value_usd": 886690815,
+      "current_value_usd": 704374966,
+      "delta_usd": -182315849,
+      "delta_pct": -20.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Grand Canyon Ed Inc",
+      "cusip": "38526M106",
+      "prior_value_usd": 38134498,
+      "current_value_usd": 29635791,
+      "delta_usd": -8498707,
+      "delta_pct": -22.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Alphabet Inc",
+      "cusip": "02079K107",
+      "prior_value_usd": 11558095195,
+      "current_value_usd": 15154256971,
+      "delta_usd": 3596161776,
+      "delta_pct": 31.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Copart Inc",
+      "cusip": "217204106",
+      "prior_value_usd": 156442734,
+      "current_value_usd": 121667612,
+      "delta_usd": -34775122,
+      "delta_pct": -22.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Emerson Elec Co",
+      "cusip": "291011104",
+      "prior_value_usd": 92649483,
+      "current_value_usd": 0,
+      "delta_usd": -92649483,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Paccar Inc",
+      "cusip": "693718108",
+      "prior_value_usd": 35046627,
+      "current_value_usd": 36402366,
+      "delta_usd": 1355739,
+      "delta_pct": 3.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Union Pac Corp",
+      "cusip": "907818108",
+      "prior_value_usd": 4101824145,
+      "current_value_usd": 4654580722,
+      "delta_usd": 552756577,
+      "delta_pct": 13.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Marsh & Mclennan Cos Inc",
+      "cusip": "571748102",
+      "prior_value_usd": 1960349747,
+      "current_value_usd": 1828982920,
+      "delta_usd": -131366827,
+      "delta_pct": -6.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Mondelez Intl Inc",
+      "cusip": "609207105",
+      "prior_value_usd": 3937261241,
+      "current_value_usd": 4030100719,
+      "delta_usd": 92839478,
+      "delta_pct": 2.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Cavco Inds Inc Del",
+      "cusip": "149568107",
+      "prior_value_usd": 22768410,
+      "current_value_usd": 29670253,
+      "delta_usd": 6901843,
+      "delta_pct": 30.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Pg&E Corp",
+      "cusip": "69331C108",
+      "prior_value_usd": 304894747,
+      "current_value_usd": 201615999,
+      "delta_usd": -103278748,
+      "delta_pct": -33.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Applied Indl Technologies In",
+      "cusip": "03820C105",
+      "prior_value_usd": 130751288,
+      "current_value_usd": 156277713,
+      "delta_usd": 25526425,
+      "delta_pct": 19.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Mcdonalds Corp",
+      "cusip": "580135101",
+      "prior_value_usd": 2142653795,
+      "current_value_usd": 2422354866,
+      "delta_usd": 279701071,
+      "delta_pct": 13.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Materion Corp",
+      "cusip": "576690101",
+      "prior_value_usd": 114255129,
+      "current_value_usd": 297525610,
+      "delta_usd": 183270481,
+      "delta_pct": 160.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Innio Nv",
+      "cusip": "N52A8C105",
+      "prior_value_usd": 0,
+      "current_value_usd": 339562932,
+      "delta_usd": 339562932,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Wheaton Precious Metals Corp",
+      "cusip": "962879102",
+      "prior_value_usd": 187790755,
+      "current_value_usd": 144348473,
+      "delta_usd": -43442282,
+      "delta_pct": -23.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Ensign Group Inc",
+      "cusip": "29358P101",
+      "prior_value_usd": 282524762,
+      "current_value_usd": 323758872,
+      "delta_usd": 41234110,
+      "delta_pct": 14.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Adeia Inc",
+      "cusip": "00676P107",
+      "prior_value_usd": 0,
+      "current_value_usd": 30165362,
+      "delta_usd": 30165362,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Xp Inc",
+      "cusip": "G98239109",
+      "prior_value_usd": 95222505,
+      "current_value_usd": 81918758,
+      "delta_usd": -13303747,
+      "delta_pct": -14.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "East West Bancorp Inc",
+      "cusip": "27579R104",
+      "prior_value_usd": 197726459,
+      "current_value_usd": 241816939,
+      "delta_usd": 44090480,
+      "delta_pct": 22.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Sea Ltd",
+      "cusip": "81141R100",
+      "prior_value_usd": 187742491,
+      "current_value_usd": 426245841,
+      "delta_usd": 238503350,
+      "delta_pct": 127.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Waystar Hldg Corp",
+      "cusip": "946784105",
+      "prior_value_usd": 38811675,
+      "current_value_usd": 30082588,
+      "delta_usd": -8729087,
+      "delta_pct": -22.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Ge Healthcare Technologies I",
+      "cusip": "36266G107",
+      "prior_value_usd": 1502498724,
+      "current_value_usd": 25229418,
+      "delta_usd": -1477269306,
+      "delta_pct": -98.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Charter Communications Inc",
+      "cusip": "16119P108",
+      "prior_value_usd": 1142802242,
+      "current_value_usd": 0,
+      "delta_usd": -1142802242,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Louisiana Pac Corp",
+      "cusip": "546347105",
+      "prior_value_usd": 22806907,
+      "current_value_usd": 25313103,
+      "delta_usd": 2506196,
+      "delta_pct": 11.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Moog Inc",
+      "cusip": "615394202",
+      "prior_value_usd": 42093630,
+      "current_value_usd": 30008296,
+      "delta_usd": -12085334,
+      "delta_pct": -28.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Medline Inc",
+      "cusip": "58507V107",
+      "prior_value_usd": 1030634355,
+      "current_value_usd": 1576182798,
+      "delta_usd": 545548443,
+      "delta_pct": 52.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Dte Energy Co",
+      "cusip": "233331107",
+      "prior_value_usd": 2077964774,
+      "current_value_usd": 1904073304,
+      "delta_usd": -173891470,
+      "delta_pct": -8.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Rh",
+      "cusip": "74967X103",
+      "prior_value_usd": 47611926,
+      "current_value_usd": 0,
+      "delta_usd": -47611926,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Mercadolibre  Inc",
+      "cusip": "58733R102",
+      "prior_value_usd": 4697704065,
+      "current_value_usd": 5326408105,
+      "delta_usd": 628704040,
+      "delta_pct": 13.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Patria Investments Limited",
+      "cusip": "G69451105",
+      "prior_value_usd": 107387973,
+      "current_value_usd": 85551856,
+      "delta_usd": -21836117,
+      "delta_pct": -20.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Shopify Inc",
+      "cusip": "82509L107",
+      "prior_value_usd": 1380185242,
+      "current_value_usd": 855402889,
+      "delta_usd": -524782353,
+      "delta_pct": -38.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Lam Research Corp",
+      "cusip": "512807306",
+      "prior_value_usd": 556408867,
+      "current_value_usd": 737790088,
+      "delta_usd": 181381221,
+      "delta_pct": 32.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Bio Rad Labs Inc",
+      "cusip": "090572207",
+      "prior_value_usd": 107480146,
+      "current_value_usd": 130211044,
+      "delta_usd": 22730898,
+      "delta_pct": 21.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Taiwan Semiconductor Manufac",
+      "cusip": "874039100",
+      "prior_value_usd": 3373530303,
+      "current_value_usd": 4999288007,
+      "delta_usd": 1625757704,
+      "delta_pct": 48.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Cme Group Inc",
+      "cusip": "12572Q105",
+      "prior_value_usd": 984824223,
+      "current_value_usd": 263642640,
+      "delta_usd": -721181583,
+      "delta_pct": -73.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Comfort Sys Usa Inc",
+      "cusip": "199908104",
+      "prior_value_usd": 211866645,
+      "current_value_usd": 190219633,
+      "delta_usd": -21647012,
+      "delta_pct": -10.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Netflix Inc.",
+      "cusip": "64110L106",
+      "prior_value_usd": 6542269570,
+      "current_value_usd": 4905520791,
+      "delta_usd": -1636748779,
+      "delta_pct": -25.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Rhythm Pharmaceuticals Inc",
+      "cusip": "76243J105",
+      "prior_value_usd": 97011556,
+      "current_value_usd": 170131602,
+      "delta_usd": 73120046,
+      "delta_pct": 75.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Mizuho Financial Group Inc",
+      "cusip": "60687Y109",
+      "prior_value_usd": 0,
+      "current_value_usd": 2784753,
+      "delta_usd": 2784753,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Amgen Inc",
+      "cusip": "031162100",
+      "prior_value_usd": 2447115397,
+      "current_value_usd": 2271437158,
+      "delta_usd": -175678239,
+      "delta_pct": -7.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Honeywell Aerospace Inc",
+      "cusip": "43849R105",
+      "prior_value_usd": 0,
+      "current_value_usd": 729532779,
+      "delta_usd": 729532779,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Caterpillar Inc",
+      "cusip": "149123101",
+      "prior_value_usd": 2267518470,
+      "current_value_usd": 2341412147,
+      "delta_usd": 73893677,
+      "delta_pct": 3.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Arxis Inc",
+      "cusip": "04339D105",
+      "prior_value_usd": 0,
+      "current_value_usd": 165877130,
+      "delta_usd": 165877130,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Tetra Tech Inc New",
+      "cusip": "88162G103",
+      "prior_value_usd": 33205794,
+      "current_value_usd": 29486665,
+      "delta_usd": -3719129,
+      "delta_pct": -11.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Intuitive Surgical Inc",
+      "cusip": "46120E602",
+      "prior_value_usd": 445610913,
+      "current_value_usd": 617065740,
+      "delta_usd": 171454827,
+      "delta_pct": 38.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Te Connectivity Plc",
+      "cusip": "G87052109",
+      "prior_value_usd": 70856526,
+      "current_value_usd": 0,
+      "delta_usd": -70856526,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Linde Plc",
+      "cusip": "G54950103",
+      "prior_value_usd": 7958106621,
+      "current_value_usd": 9045038560,
+      "delta_usd": 1086931939,
+      "delta_pct": 13.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Quantinuum Inc",
+      "cusip": "74768A104",
+      "prior_value_usd": 0,
+      "current_value_usd": 143398526,
+      "delta_usd": 143398526,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Eli Lilly & Co",
+      "cusip": "532457108",
+      "prior_value_usd": 22654650101,
+      "current_value_usd": 25037481632,
+      "delta_usd": 2382831531,
+      "delta_pct": 10.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Pjt Partners Inc",
+      "cusip": "69343T107",
+      "prior_value_usd": 27944000,
+      "current_value_usd": 0,
+      "delta_usd": -27944000,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Air Products And Chemicals I",
+      "cusip": "009158106",
+      "prior_value_usd": 3024154014,
+      "current_value_usd": 3108228298,
+      "delta_usd": 84074284,
+      "delta_pct": 2.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Kanzhun Limited",
+      "cusip": "48553T106",
+      "prior_value_usd": 111054451,
+      "current_value_usd": 0,
+      "delta_usd": -111054451,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Simon Ppty Group Inc New",
+      "cusip": "828806109",
+      "prior_value_usd": 154225242,
+      "current_value_usd": 221307266,
+      "delta_usd": 67082024,
+      "delta_pct": 43.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Kenvue Inc",
+      "cusip": "49177J102",
+      "prior_value_usd": 27451614,
+      "current_value_usd": 0,
+      "delta_usd": -27451614,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Stifel Finl Corp",
+      "cusip": "860630102",
+      "prior_value_usd": 206824834,
+      "current_value_usd": 187247610,
+      "delta_usd": -19577224,
+      "delta_pct": -9.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Danaher Corp Del",
+      "cusip": "235851102",
+      "prior_value_usd": 1686537066,
+      "current_value_usd": 2060650455,
+      "delta_usd": 374113389,
+      "delta_pct": 22.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Fiserv Inc",
+      "cusip": "337738108",
+      "prior_value_usd": 20820592,
+      "current_value_usd": 0,
+      "delta_usd": -20820592,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Hershey Co",
+      "cusip": "427866108",
+      "prior_value_usd": 495346183,
+      "current_value_usd": 473589727,
+      "delta_usd": -21756456,
+      "delta_pct": -4.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Terex Corp New",
+      "cusip": "880779103",
+      "prior_value_usd": 65274236,
+      "current_value_usd": 55982734,
+      "delta_usd": -9291502,
+      "delta_pct": -14.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Arista Networks Inc",
+      "cusip": "040413205",
+      "prior_value_usd": 1811962097,
+      "current_value_usd": 2236166516,
+      "delta_usd": 424204419,
+      "delta_pct": 23.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "First Amern Finl Corp",
+      "cusip": "31847R102",
+      "prior_value_usd": 93197789,
+      "current_value_usd": 0,
+      "delta_usd": -93197789,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Wells Fargo & Co",
+      "cusip": "949746101",
+      "prior_value_usd": 5802987285,
+      "current_value_usd": 6313388526,
+      "delta_usd": 510401241,
+      "delta_pct": 8.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Q2 Hldgs Inc",
+      "cusip": "74736L109",
+      "prior_value_usd": 76645298,
+      "current_value_usd": 71189684,
+      "delta_usd": -5455614,
+      "delta_pct": -7.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Slb Limited",
+      "cusip": "806857108",
+      "prior_value_usd": 102671875,
+      "current_value_usd": 24076241,
+      "delta_usd": -78595634,
+      "delta_pct": -76.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Costco Wholesale Corporation",
+      "cusip": "22160K105",
+      "prior_value_usd": 605052525,
+      "current_value_usd": 426737638,
+      "delta_usd": -178314887,
+      "delta_pct": -29.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Western Un Co",
+      "cusip": "959802109",
+      "prior_value_usd": 127864355,
+      "current_value_usd": 112982832,
+      "delta_usd": -14881523,
+      "delta_pct": -11.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Uber Technologies Inc",
+      "cusip": "90353T100",
+      "prior_value_usd": 8368023293,
+      "current_value_usd": 9429141346,
+      "delta_usd": 1061118053,
+      "delta_pct": 12.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Biomarin Pharmaceutical Inc",
+      "cusip": "09061G101",
+      "prior_value_usd": 197228395,
+      "current_value_usd": 200521024,
+      "delta_usd": 3292629,
+      "delta_pct": 1.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Unitedhealth Group Inc",
+      "cusip": "91324P102",
+      "prior_value_usd": 4629794298,
+      "current_value_usd": 4378631657,
+      "delta_usd": -251162641,
+      "delta_pct": -5.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Vale S A",
+      "cusip": "91912E105",
+      "prior_value_usd": 136993421,
+      "current_value_usd": 368253513,
+      "delta_usd": 231260092,
+      "delta_pct": 168.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Adma Biologics Inc",
+      "cusip": "000899104",
+      "prior_value_usd": 100831955,
+      "current_value_usd": 73290850,
+      "delta_usd": -27541105,
+      "delta_pct": -27.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Xcel Energy Inc",
+      "cusip": "98389B100",
+      "prior_value_usd": 2165417147,
+      "current_value_usd": 2352947790,
+      "delta_usd": 187530643,
+      "delta_pct": 8.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Boston Scientific Corp",
+      "cusip": "101137107",
+      "prior_value_usd": 444327432,
+      "current_value_usd": 605255716,
+      "delta_usd": 160928284,
+      "delta_pct": 36.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Bio-Techne Corp",
+      "cusip": "09073M104",
+      "prior_value_usd": 166615855,
+      "current_value_usd": 185236529,
+      "delta_usd": 18620674,
+      "delta_pct": 11.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Ferrari N V",
+      "cusip": "N3167Y103",
+      "prior_value_usd": 121625963,
+      "current_value_usd": 115560446,
+      "delta_usd": -6065517,
+      "delta_pct": -5.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Gilead Sciences Inc",
+      "cusip": "375558103",
+      "prior_value_usd": 3780727903,
+      "current_value_usd": 2450148913,
+      "delta_usd": -1330578990,
+      "delta_pct": -35.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Moodys Corp",
+      "cusip": "615369105",
+      "prior_value_usd": 282254,
+      "current_value_usd": 293039,
+      "delta_usd": 10785,
+      "delta_pct": 3.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "First Solar Inc",
+      "cusip": "336433107",
+      "prior_value_usd": 80259176,
+      "current_value_usd": 0,
+      "delta_usd": -80259176,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Public Storage",
+      "cusip": "74460D109",
+      "prior_value_usd": 327111745,
+      "current_value_usd": 424242189,
+      "delta_usd": 97130444,
+      "delta_pct": 29.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "S&P Global Inc",
+      "cusip": "78409V104",
+      "prior_value_usd": 120073374,
+      "current_value_usd": 2265025,
+      "delta_usd": -117808349,
+      "delta_pct": -98.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Starbucks Corp",
+      "cusip": "855244109",
+      "prior_value_usd": 9169066247,
+      "current_value_usd": 11205315257,
+      "delta_usd": 2036249010,
+      "delta_pct": 22.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "The Cigna Group",
+      "cusip": "125523100",
+      "prior_value_usd": 352482383,
+      "current_value_usd": 340312625,
+      "delta_usd": -12169758,
+      "delta_pct": -3.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Kkr & Co Inc",
+      "cusip": "48251W104",
+      "prior_value_usd": 1551964185,
+      "current_value_usd": 1349916410,
+      "delta_usd": -202047775,
+      "delta_pct": -13.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Public Svc Enterprise Group",
+      "cusip": "744573106",
+      "prior_value_usd": 855688414,
+      "current_value_usd": 869957980,
+      "delta_usd": 14269566,
+      "delta_pct": 1.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Monster Beverage Corp New",
+      "cusip": "61174X109",
+      "prior_value_usd": 453050267,
+      "current_value_usd": 575011444,
+      "delta_usd": 121961177,
+      "delta_pct": 26.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Ishares Tr",
+      "cusip": "464288257",
+      "prior_value_usd": 1935422,
+      "current_value_usd": 1944166,
+      "delta_usd": 8744,
+      "delta_pct": 0.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Suncor Energy Inc New",
+      "cusip": "867224107",
+      "prior_value_usd": 330083279,
+      "current_value_usd": 0,
+      "delta_usd": -330083279,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Mara Holdings Inc",
+      "cusip": "565788106",
+      "prior_value_usd": 27066255,
+      "current_value_usd": 0,
+      "delta_usd": -27066255,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "D R Horton Inc",
+      "cusip": "23331A109",
+      "prior_value_usd": 639100651,
+      "current_value_usd": 926250539,
+      "delta_usd": 287149888,
+      "delta_pct": 44.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Jbt Marel Corporation",
+      "cusip": "477839104",
+      "prior_value_usd": 0,
+      "current_value_usd": 27629170,
+      "delta_usd": 27629170,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Visa Inc",
+      "cusip": "92826C839",
+      "prior_value_usd": 1819891345,
+      "current_value_usd": 1398729974,
+      "delta_usd": -421161371,
+      "delta_pct": -23.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Analog Devices Inc",
+      "cusip": "032654105",
+      "prior_value_usd": 36713115,
+      "current_value_usd": 0,
+      "delta_usd": -36713115,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Intuit",
+      "cusip": "461202103",
+      "prior_value_usd": 206255205,
+      "current_value_usd": 84547296,
+      "delta_usd": -121707909,
+      "delta_pct": -59.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Autodesk Inc",
+      "cusip": "052769106",
+      "prior_value_usd": 24211589,
+      "current_value_usd": 0,
+      "delta_usd": -24211589,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Enersys",
+      "cusip": "29275Y102",
+      "prior_value_usd": 0,
+      "current_value_usd": 48057258,
+      "delta_usd": 48057258,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Mastercard Incorporated",
+      "cusip": "57636Q104",
+      "prior_value_usd": 6937429037,
+      "current_value_usd": 5971175786,
+      "delta_usd": -966253251,
+      "delta_pct": -13.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Doordash Inc",
+      "cusip": "25809K105",
+      "prior_value_usd": 766431516,
+      "current_value_usd": 2019671813,
+      "delta_usd": 1253240297,
+      "delta_pct": 163.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Tc Energy Corp",
+      "cusip": "87807B107",
+      "prior_value_usd": 2808163283,
+      "current_value_usd": 2883026432,
+      "delta_usd": 74863149,
+      "delta_pct": 2.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Kb Finl Group Inc",
+      "cusip": "48241A105",
+      "prior_value_usd": 5898825,
+      "current_value_usd": 5404815,
+      "delta_usd": -494010,
+      "delta_pct": -8.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Sempra",
+      "cusip": "816851109",
+      "prior_value_usd": 513645716,
+      "current_value_usd": 0,
+      "delta_usd": -513645716,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Ecolab Inc",
+      "cusip": "278865100",
+      "prior_value_usd": 817297638,
+      "current_value_usd": 797753203,
+      "delta_usd": -19544435,
+      "delta_pct": -2.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Hilton Worldwide Hldgs Inc",
+      "cusip": "43300A203",
+      "prior_value_usd": 286268426,
+      "current_value_usd": 283677242,
+      "delta_usd": -2591184,
+      "delta_pct": -0.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Toronto Dominion Bk Ont",
+      "cusip": "891160509",
+      "prior_value_usd": 276039924,
+      "current_value_usd": 359647672,
+      "delta_usd": 83607748,
+      "delta_pct": 30.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Jpmorgan Chase & Co",
+      "cusip": "46625H100",
+      "prior_value_usd": 8063379367,
+      "current_value_usd": 9082316516,
+      "delta_usd": 1018937149,
+      "delta_pct": 12.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "L3Harris Technologies Inc",
+      "cusip": "502431109",
+      "prior_value_usd": 0,
+      "current_value_usd": 72868058,
+      "delta_usd": 72868058,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Cenovus Energy Inc",
+      "cusip": "15135U109",
+      "prior_value_usd": 2793243900,
+      "current_value_usd": 1483103808,
+      "delta_usd": -1310140092,
+      "delta_pct": -46.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Ovintiv Inc",
+      "cusip": "69047Q102",
+      "prior_value_usd": 318241722,
+      "current_value_usd": 1023815526,
+      "delta_usd": 705573804,
+      "delta_pct": 221.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Hycroft Mining Holding Corp",
+      "cusip": "44862P208",
+      "prior_value_usd": 0,
+      "current_value_usd": 34793530,
+      "delta_usd": 34793530,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Woodward Inc",
+      "cusip": "980745103",
+      "prior_value_usd": 98922264,
+      "current_value_usd": 0,
+      "delta_usd": -98922264,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Eog Res Inc",
+      "cusip": "26875P101",
+      "prior_value_usd": 3767098678,
+      "current_value_usd": 2791343715,
+      "delta_usd": -975754963,
+      "delta_pct": -25.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "American Intl Group Inc",
+      "cusip": "026874784",
+      "prior_value_usd": 548862514,
+      "current_value_usd": 337361014,
+      "delta_usd": -211501500,
+      "delta_pct": -38.5,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Transdigm Group Inc",
+      "cusip": "893641100",
+      "prior_value_usd": 3642668112,
+      "current_value_usd": 4155104974,
+      "delta_usd": 512436862,
+      "delta_pct": 14.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "International Paper Co",
+      "cusip": "460146103",
+      "prior_value_usd": 2802273488,
+      "current_value_usd": 2989682674,
+      "delta_usd": 187409186,
+      "delta_pct": 6.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Talen Energy Corp",
+      "cusip": "87422Q109",
+      "prior_value_usd": 102950717,
+      "current_value_usd": 167380582,
+      "delta_usd": 64429865,
+      "delta_pct": 62.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Arm Holdings Plc",
+      "cusip": "042068205",
+      "prior_value_usd": 638050188,
+      "current_value_usd": 851368783,
+      "delta_usd": 213318595,
+      "delta_pct": 33.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Apple Inc",
+      "cusip": "037833100",
+      "prior_value_usd": 16250462013,
+      "current_value_usd": 17184944157,
+      "delta_usd": 934482144,
+      "delta_pct": 5.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Ati Inc",
+      "cusip": "01741R102",
+      "prior_value_usd": 895961750,
+      "current_value_usd": 1003985098,
+      "delta_usd": 108023348,
+      "delta_pct": 12.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Stryker Corporation",
+      "cusip": "863667101",
+      "prior_value_usd": 1844170887,
+      "current_value_usd": 509151692,
+      "delta_usd": -1335019195,
+      "delta_pct": -72.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Wesco Intl Inc",
+      "cusip": "95082P105",
+      "prior_value_usd": 74859696,
+      "current_value_usd": 89985551,
+      "delta_usd": 15125855,
+      "delta_pct": 20.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Us Bancorp",
+      "cusip": "902973304",
+      "prior_value_usd": 614821756,
+      "current_value_usd": 551501407,
+      "delta_usd": -63320349,
+      "delta_pct": -10.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Boeing Co",
+      "cusip": "097023105",
+      "prior_value_usd": 809842062,
+      "current_value_usd": 1953234904,
+      "delta_usd": 1143392842,
+      "delta_pct": 141.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Nu Hldgs Ltd",
+      "cusip": "G6683N103",
+      "prior_value_usd": 1845753900,
+      "current_value_usd": 1907223232,
+      "delta_usd": 61469332,
+      "delta_pct": 3.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Southern Copper Corp",
+      "cusip": "84265V105",
+      "prior_value_usd": 219248831,
+      "current_value_usd": 125667250,
+      "delta_usd": -93581581,
+      "delta_pct": -42.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Dpc Holdings Plc",
+      "cusip": "G2R11M108",
+      "prior_value_usd": 0,
+      "current_value_usd": 39983900,
+      "delta_usd": 39983900,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Viper Energy Inc",
+      "cusip": "64361Q101",
+      "prior_value_usd": 58311160,
+      "current_value_usd": 54068522,
+      "delta_usd": -4242638,
+      "delta_pct": -7.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Takeda Pharmaceutical Co Ltd",
+      "cusip": "874060205",
+      "prior_value_usd": 353810136,
+      "current_value_usd": 309341810,
+      "delta_usd": -44468326,
+      "delta_pct": -12.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Esab Corporation",
+      "cusip": "29605J106",
+      "prior_value_usd": 59784403,
+      "current_value_usd": 183725005,
+      "delta_usd": 123940602,
+      "delta_pct": 207.3,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Expand Energy Corporation",
+      "cusip": "165167735",
+      "prior_value_usd": 746380506,
+      "current_value_usd": 605815160,
+      "delta_usd": -140565346,
+      "delta_pct": -18.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Api Group Corp",
+      "cusip": "00187Y100",
+      "prior_value_usd": 186090572,
+      "current_value_usd": 294808006,
+      "delta_usd": 108717434,
+      "delta_pct": 58.4,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Altria Group Inc",
+      "cusip": "02209S103",
+      "prior_value_usd": 1694634609,
+      "current_value_usd": 4220174233,
+      "delta_usd": 2525539624,
+      "delta_pct": 149.0,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Pulte Group Inc",
+      "cusip": "745867101",
+      "prior_value_usd": 0,
+      "current_value_usd": 117377255,
+      "delta_usd": 117377255,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Southstate Bk Corp",
+      "cusip": "84472E102",
+      "prior_value_usd": 89560748,
+      "current_value_usd": 27246127,
+      "delta_usd": -62314621,
+      "delta_pct": -69.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Progressive Corp",
+      "cusip": "743315103",
+      "prior_value_usd": 4475297409,
+      "current_value_usd": 5799694510,
+      "delta_usd": 1324397101,
+      "delta_pct": 29.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "United Rentals Inc",
+      "cusip": "911363109",
+      "prior_value_usd": 1985571697,
+      "current_value_usd": 2178339311,
+      "delta_usd": 192767614,
+      "delta_pct": 9.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Kla Corp",
+      "cusip": "482480100",
+      "prior_value_usd": 1435255284,
+      "current_value_usd": 2936782949,
+      "delta_usd": 1501527665,
+      "delta_pct": 104.6,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Berkshire Hathaway Inc Del",
+      "cusip": "084670108",
+      "prior_value_usd": 165172200,
+      "current_value_usd": 0,
+      "delta_usd": -165172200,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Federal Signal Corp",
+      "cusip": "313855108",
+      "prior_value_usd": 19133751,
+      "current_value_usd": 23353700,
+      "delta_usd": 4219949,
+      "delta_pct": 22.1,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Apollo Global Mgmt Inc",
+      "cusip": "03769M106",
+      "prior_value_usd": 2917229517,
+      "current_value_usd": 2836137108,
+      "delta_usd": -81092409,
+      "delta_pct": -2.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Elevance Health Inc Formerly",
+      "cusip": "036752103",
+      "prior_value_usd": 34859671,
+      "current_value_usd": 0,
+      "delta_usd": -34859671,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "H World Group Ltd",
+      "cusip": "44332N106",
+      "prior_value_usd": 50592645,
+      "current_value_usd": 70655115,
+      "delta_usd": 20062470,
+      "delta_pct": 39.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Cloudflare Inc",
+      "cusip": "18915M107",
+      "prior_value_usd": 66387006,
+      "current_value_usd": 0,
+      "delta_usd": -66387006,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "exited",
+      "security_name": "Prestige Consmr Healthcare I",
+      "cusip": "74112D101",
+      "prior_value_usd": 53027624,
+      "current_value_usd": 0,
+      "delta_usd": -53027624,
+      "delta_pct": -100.0
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Gpgi Inc",
+      "cusip": "20459V105",
+      "prior_value_usd": 192558192,
+      "current_value_usd": 183076693,
+      "delta_usd": -9481499,
+      "delta_pct": -4.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Bwx Technologies Inc",
+      "cusip": "05605H100",
+      "prior_value_usd": 51295294,
+      "current_value_usd": 50166561,
+      "delta_usd": -1128733,
+      "delta_pct": -2.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "new",
+      "security_name": "Cerebras Systems Inc",
+      "cusip": "15675D103",
+      "prior_value_usd": 0,
+      "current_value_usd": 195143000,
+      "delta_usd": 195143000,
+      "delta_pct": null
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Totalenergies Se",
+      "cusip": "F92124100",
+      "prior_value_usd": 1075498,
+      "current_value_usd": 970766,
+      "delta_usd": -104732,
+      "delta_pct": -9.7,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "increased",
+      "security_name": "Chime Finl Inc",
+      "cusip": "16935C109",
+      "prior_value_usd": 114513066,
+      "current_value_usd": 115873260,
+      "delta_usd": 1360194,
+      "delta_pct": 1.2,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Vista Energy S.A.B. De C.V.",
+      "cusip": "92837L109",
+      "prior_value_usd": 355229517,
+      "current_value_usd": 295711022,
+      "delta_usd": -59518495,
+      "delta_pct": -16.8,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    },
+    {
+      "filing_date": "2026-08-12",
+      "type": "decreased",
+      "security_name": "Omnicom Group Inc",
+      "cusip": "681919106",
+      "prior_value_usd": 504215437,
+      "current_value_usd": 489619630,
+      "delta_usd": -14595807,
+      "delta_pct": -2.9,
+      "span": {
+        "first_quarter_observed": "2026-Q2",
+        "consecutive_quarters": 1
+      }
+    }
+  ]
 }

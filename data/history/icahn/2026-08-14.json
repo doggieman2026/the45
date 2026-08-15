@@ -1,0 +1,90 @@
+{
+  "fund_id": "icahn",
+  "filing_date": "2026-08-14",
+  "holdings": [
+    {
+      "name_of_issuer": "American Electric Power Company",
+      "title_of_class": "COM",
+      "cusip": "025537101",
+      "value_usd": 59472675,
+      "shares": 434710
+    },
+    {
+      "name_of_issuer": "Bausch Plus Lomb Corp.",
+      "title_of_class": "COMMON SHARES",
+      "cusip": "071705107",
+      "value_usd": 57960000,
+      "shares": 3500000
+    },
+    {
+      "name_of_issuer": "Caesars Entertainment, Inc.",
+      "title_of_class": "COM",
+      "cusip": "12769G100",
+      "value_usd": 73642490,
+      "shares": 2440109
+    },
+    {
+      "name_of_issuer": "Centuri Holdings, Inc.",
+      "title_of_class": "COM SHS",
+      "cusip": "155923105",
+      "value_usd": 433521971,
+      "shares": 14336044
+    },
+    {
+      "name_of_issuer": "CVR Energy Inc",
+      "title_of_class": "COM",
+      "cusip": "12662P108",
+      "value_usd": 1960899637,
+      "shares": 71201875
+    },
+    {
+      "name_of_issuer": "CVR Partners, LP",
+      "title_of_class": "COM",
+      "cusip": "126633205",
+      "value_usd": 464233266,
+      "shares": 4164274
+    },
+    {
+      "name_of_issuer": "EchoStar Corporation",
+      "title_of_class": "CL A",
+      "cusip": "278768106",
+      "value_usd": 142561013,
+      "shares": 1404542
+    },
+    {
+      "name_of_issuer": "Icahn Enterprises LP",
+      "title_of_class": "DEPOSITARY UNIT",
+      "cusip": "451100101",
+      "value_usd": 4458616003,
+      "shares": 618393343
+    },
+    {
+      "name_of_issuer": "International Flavors and Fragrances Inc.",
+      "title_of_class": "COM",
+      "cusip": "459506101",
+      "value_usd": 338665500,
+      "shares": 4275000
+    },
+    {
+      "name_of_issuer": "Monro, Inc.",
+      "title_of_class": "COM",
+      "cusip": "610236101",
+      "value_usd": 86894384,
+      "shares": 5078573
+    },
+    {
+      "name_of_issuer": "JetBlue Airways Corp.",
+      "title_of_class": "COM",
+      "cusip": "477143101",
+      "value_usd": 118371366,
+      "shares": 20658179
+    },
+    {
+      "name_of_issuer": "SandRidge Energy, Inc.",
+      "title_of_class": "COM NEW",
+      "cusip": "80007P869",
+      "value_usd": 69252220,
+      "shares": 5054907
+    }
+  ]
+}

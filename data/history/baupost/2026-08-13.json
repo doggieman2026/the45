@@ -1,0 +1,167 @@
+{
+  "fund_id": "baupost",
+  "filing_date": "2026-08-13",
+  "holdings": [
+    {
+      "name_of_issuer": "ALPHABET INC",
+      "title_of_class": "CAP STK CL C",
+      "cusip": "02079K107",
+      "value_usd": 484744,
+      "shares": 1371931
+    },
+    {
+      "name_of_issuer": "AMAZON COM INC",
+      "title_of_class": "COM",
+      "cusip": "023135106",
+      "value_usd": 892310,
+      "shares": 3743854
+    },
+    {
+      "name_of_issuer": "AMERICOLD REALTY TRUST INC",
+      "title_of_class": "COM",
+      "cusip": "03064D108",
+      "value_usd": 107371,
+      "shares": 6830230
+    },
+    {
+      "name_of_issuer": "AON PLC",
+      "title_of_class": "SHS CL A",
+      "cusip": "G0403H108",
+      "value_usd": 227871,
+      "shares": 687000
+    },
+    {
+      "name_of_issuer": "AXALTA COATING SYS LTD",
+      "title_of_class": "COM",
+      "cusip": "G0750C108",
+      "value_usd": 43608,
+      "shares": 1274356
+    },
+    {
+      "name_of_issuer": "CME GROUP INC",
+      "title_of_class": "COM",
+      "cusip": "12572Q105",
+      "value_usd": 136694,
+      "shares": 619000
+    },
+    {
+      "name_of_issuer": "DNOW INC",
+      "title_of_class": "COM",
+      "cusip": "67011P100",
+      "value_usd": 36160,
+      "shares": 2788000
+    },
+    {
+      "name_of_issuer": "EAGLE MATLS INC",
+      "title_of_class": "COM",
+      "cusip": "26969P108",
+      "value_usd": 119422,
+      "shares": 530763
+    },
+    {
+      "name_of_issuer": "ELEVANCE HEALTH INC FORMERLY",
+      "title_of_class": "COM",
+      "cusip": "036752103",
+      "value_usd": 493140,
+      "shares": 1275154
+    },
+    {
+      "name_of_issuer": "FERGUSON ENTERPRISES INC",
+      "title_of_class": "COMMON STOCK NEW",
+      "cusip": "31488V107",
+      "value_usd": 344269,
+      "shares": 1450594
+    },
+    {
+      "name_of_issuer": "GDS HLDGS LTD",
+      "title_of_class": "SPONSORED ADS",
+      "cusip": "36165L108",
+      "value_usd": 113208,
+      "shares": 3769818
+    },
+    {
+      "name_of_issuer": "GENUINE PARTS CO",
+      "title_of_class": "COM",
+      "cusip": "372460105",
+      "value_usd": 332253,
+      "shares": 2816178
+    },
+    {
+      "name_of_issuer": "GRUPO AEROMEXICO SAB DE CV",
+      "title_of_class": "SPONSORED ADS",
+      "cusip": "40054J109",
+      "value_usd": 87843,
+      "shares": 4880188
+    },
+    {
+      "name_of_issuer": "HERBALIFE LTD",
+      "title_of_class": "COM SHS",
+      "cusip": "G4412G101",
+      "value_usd": 121767,
+      "shares": 9259844
+    },
+    {
+      "name_of_issuer": "LIBERTY GLOBAL LTD",
+      "title_of_class": "COM CL C",
+      "cusip": "G61188127",
+      "value_usd": 93975,
+      "shares": 8543161
+    },
+    {
+      "name_of_issuer": "MOLINA HEALTHCARE INC",
+      "title_of_class": "COM",
+      "cusip": "60855R100",
+      "value_usd": 144906,
+      "shares": 633609
+    },
+    {
+      "name_of_issuer": "NORWEGIAN CRUISE LINE HLDGS",
+      "title_of_class": "SHS",
+      "cusip": "G66721104",
+      "value_usd": 163180,
+      "shares": 7730000
+    },
+    {
+      "name_of_issuer": "PERSHING SQUARE INC",
+      "title_of_class": "COMMON STOCK",
+      "cusip": "71531U102",
+      "value_usd": 12881,
+      "shares": 392000
+    },
+    {
+      "name_of_issuer": "RESTAURANT BRANDS INTL INC",
+      "title_of_class": "COM",
+      "cusip": "76131D103",
+      "value_usd": 489612,
+      "shares": 6753112
+    },
+    {
+      "name_of_issuer": "TELEFLEX INCORPORATED",
+      "title_of_class": "COM",
+      "cusip": "879369106",
+      "value_usd": 178605,
+      "shares": 1409000
+    },
+    {
+      "name_of_issuer": "UNION PAC CORP",
+      "title_of_class": "COM",
+      "cusip": "907818108",
+      "value_usd": 322427,
+      "shares": 1185395
+    },
+    {
+      "name_of_issuer": "VISA INC",
+      "title_of_class": "COM CL A",
+      "cusip": "92826C839",
+      "value_usd": 240628,
+      "shares": 701355
+    },
+    {
+      "name_of_issuer": "WESCO INTL INC",
+      "title_of_class": "COM",
+      "cusip": "95082P105",
+      "value_usd": 228979,
+      "shares": 662881
+    }
+  ]
+}

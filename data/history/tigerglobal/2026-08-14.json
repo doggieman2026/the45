@@ -1,0 +1,328 @@
+{
+  "fund_id": "tigerglobal",
+  "filing_date": "2026-08-14",
+  "holdings": [
+    {
+      "name_of_issuer": "ACCELERANT HOLDINGS",
+      "title_of_class": "CL A",
+      "cusip": "G00894108",
+      "value_usd": 879000,
+      "shares": 75000
+    },
+    {
+      "name_of_issuer": "ADVANCED MICRO DEVICES INC",
+      "title_of_class": "COM",
+      "cusip": "007903107",
+      "value_usd": 391955662,
+      "shares": 674727
+    },
+    {
+      "name_of_issuer": "ALPHABET INC",
+      "title_of_class": "CAP STK CL A",
+      "cusip": "02079K305",
+      "value_usd": 2074778363,
+      "shares": 5805687
+    },
+    {
+      "name_of_issuer": "AMAZON COM INC",
+      "title_of_class": "COM",
+      "cusip": "023135106",
+      "value_usd": 2307979214,
+      "shares": 9683558
+    },
+    {
+      "name_of_issuer": "APOLLO GLOBAL MGMT INC",
+      "title_of_class": "COM",
+      "cusip": "03769M106",
+      "value_usd": 322171145,
+      "shares": 2723110
+    },
+    {
+      "name_of_issuer": "APPLIED DIGITAL CORP",
+      "title_of_class": "COM NEW",
+      "cusip": "038169207",
+      "value_usd": 33010500,
+      "shares": 885000
+    },
+    {
+      "name_of_issuer": "APPLIED MATLS INC",
+      "title_of_class": "COM",
+      "cusip": "038222105",
+      "value_usd": 1180087830,
+      "shares": 1632210
+    },
+    {
+      "name_of_issuer": "ATRENEW INC",
+      "title_of_class": "SPONSORED ADS",
+      "cusip": "00138L108",
+      "value_usd": 38046814,
+      "shares": 9831218
+    },
+    {
+      "name_of_issuer": "BLOCK INC",
+      "title_of_class": "CL A",
+      "cusip": "852234103",
+      "value_usd": 347776532,
+      "shares": 4576007
+    },
+    {
+      "name_of_issuer": "BROADCOM INC",
+      "title_of_class": "COM",
+      "cusip": "11135F101",
+      "value_usd": 662596921,
+      "shares": 1754062
+    },
+    {
+      "name_of_issuer": "CEREBRAS SYSTEMS INC",
+      "title_of_class": "COM CL A",
+      "cusip": "15675D103",
+      "value_usd": 662779000,
+      "shares": 2999000
+    },
+    {
+      "name_of_issuer": "CHIME FINL INC",
+      "title_of_class": "COM SHS CL A",
+      "cusip": "16935C109",
+      "value_usd": 108217240,
+      "shares": 5284045
+    },
+    {
+      "name_of_issuer": "CIPHER DIGITAL INC",
+      "title_of_class": "COM",
+      "cusip": "17253J106",
+      "value_usd": 22711500,
+      "shares": 927000
+    },
+    {
+      "name_of_issuer": "CORE SCIENTIFIC INC NEW",
+      "title_of_class": "COM",
+      "cusip": "21874A106",
+      "value_usd": 20907030,
+      "shares": 817000
+    },
+    {
+      "name_of_issuer": "CORPAY INC",
+      "title_of_class": "COM SHS",
+      "cusip": "219948106",
+      "value_usd": 716489508,
+      "shares": 2149877
+    },
+    {
+      "name_of_issuer": "COUPANG INC",
+      "title_of_class": "CL A",
+      "cusip": "22266T109",
+      "value_usd": 633448674,
+      "shares": 36467972
+    },
+    {
+      "name_of_issuer": "DANAHER CORP DEL",
+      "title_of_class": "COM",
+      "cusip": "235851102",
+      "value_usd": 86858880,
+      "shares": 456000
+    },
+    {
+      "name_of_issuer": "DOORDASH INC",
+      "title_of_class": "CL A",
+      "cusip": "25809K105",
+      "value_usd": 4675437,
+      "shares": 25337
+    },
+    {
+      "name_of_issuer": "EQUIPMENTSHARE COM INC",
+      "title_of_class": "COM CL A",
+      "cusip": "29445S100",
+      "value_usd": 90035840,
+      "shares": 4579646
+    },
+    {
+      "name_of_issuer": "GE VERNOVA INC",
+      "title_of_class": "COM",
+      "cusip": "36828A101",
+      "value_usd": 936963773,
+      "shares": 797511
+    },
+    {
+      "name_of_issuer": "GEMINI SPACE STA INC",
+      "title_of_class": "CL A COM",
+      "cusip": "36866J105",
+      "value_usd": 298200,
+      "shares": 70000
+    },
+    {
+      "name_of_issuer": "INTEL CORP",
+      "title_of_class": "COM",
+      "cusip": "458140100",
+      "value_usd": 593803105,
+      "shares": 4252690
+    },
+    {
+      "name_of_issuer": "JD.COM INC",
+      "title_of_class": "SPON ADS CL A",
+      "cusip": "47215P106",
+      "value_usd": 5134220,
+      "shares": 201500
+    },
+    {
+      "name_of_issuer": "LAM RESEARCH CORP",
+      "title_of_class": "COM NEW",
+      "cusip": "512807306",
+      "value_usd": 1370837288,
+      "shares": 3163495
+    },
+    {
+      "name_of_issuer": "LIBERTY MEDIA CORP DEL",
+      "title_of_class": "COM LBTY ONE S C",
+      "cusip": "531229755",
+      "value_usd": 216781723,
+      "shares": 2278555
+    },
+    {
+      "name_of_issuer": "MERCADOLIBRE INC",
+      "title_of_class": "COM",
+      "cusip": "58733R102",
+      "value_usd": 259914541,
+      "shares": 153126
+    },
+    {
+      "name_of_issuer": "META PLATFORMS INC",
+      "title_of_class": "CL A",
+      "cusip": "30303M102",
+      "value_usd": 1590269062,
+      "shares": 2823180
+    },
+    {
+      "name_of_issuer": "MICROSOFT CORP",
+      "title_of_class": "COM",
+      "cusip": "594918104",
+      "value_usd": 845603887,
+      "shares": 2266913
+    },
+    {
+      "name_of_issuer": "MNTN INC",
+      "title_of_class": "CL A",
+      "cusip": "55318A108",
+      "value_usd": 184000,
+      "shares": 20000
+    },
+    {
+      "name_of_issuer": "NU HLDGS LTD",
+      "title_of_class": "ORD SHS CL A",
+      "cusip": "G6683N103",
+      "value_usd": 147394937,
+      "shares": 11032555
+    },
+    {
+      "name_of_issuer": "NVIDIA CORPORATION",
+      "title_of_class": "COM",
+      "cusip": "67066G104",
+      "value_usd": 2240762490,
+      "shares": 11198773
+    },
+    {
+      "name_of_issuer": "PONY AI INC",
+      "title_of_class": "SPONSORED ADS",
+      "cusip": "732908108",
+      "value_usd": 2156495,
+      "shares": 310287
+    },
+    {
+      "name_of_issuer": "REDDIT INC",
+      "title_of_class": "CL A",
+      "cusip": "75734B100",
+      "value_usd": 438952402,
+      "shares": 2528819
+    },
+    {
+      "name_of_issuer": "SEA LTD",
+      "title_of_class": "SPONSORD ADS",
+      "cusip": "81141R100",
+      "value_usd": 1203543536,
+      "shares": 12559152
+    },
+    {
+      "name_of_issuer": "SEAGATE TECHNOLOGY HLDNGS PL",
+      "title_of_class": "ORD SHS",
+      "cusip": "G7997R103",
+      "value_usd": 275121500,
+      "shares": 285100
+    },
+    {
+      "name_of_issuer": "SERVICENOW INC",
+      "title_of_class": "COM",
+      "cusip": "81762P102",
+      "value_usd": 86719591,
+      "shares": 873485
+    },
+    {
+      "name_of_issuer": "SHERWIN WILLIAMS CO",
+      "title_of_class": "COM",
+      "cusip": "824348106",
+      "value_usd": 88518819,
+      "shares": 257083
+    },
+    {
+      "name_of_issuer": "SPACE EXPLORATION TECHN CORP",
+      "title_of_class": "CLASS A COM STK",
+      "cusip": "84615Q103",
+      "value_usd": 64072500,
+      "shares": 375000
+    },
+    {
+      "name_of_issuer": "SPOTIFY TECHNOLOGY S A",
+      "title_of_class": "SHS",
+      "cusip": "L8681T102",
+      "value_usd": 537837279,
+      "shares": 1171427
+    },
+    {
+      "name_of_issuer": "TAIWAN SEMICONDUCTOR MANUFAC",
+      "title_of_class": "SPONSORED ADS",
+      "cusip": "874039100",
+      "value_usd": 2331022991,
+      "shares": 4881008
+    },
+    {
+      "name_of_issuer": "TAKE-TWO INTERACTIVE SOFTWAR",
+      "title_of_class": "COM",
+      "cusip": "874054109",
+      "value_usd": 452300813,
+      "shares": 1809348
+    },
+    {
+      "name_of_issuer": "UBER TECHNOLOGIES INC",
+      "title_of_class": "COM",
+      "cusip": "90353T100",
+      "value_usd": 10909004,
+      "shares": 151178
+    },
+    {
+      "name_of_issuer": "UNITEDHEALTH GROUP INC",
+      "title_of_class": "COM",
+      "cusip": "91324P102",
+      "value_usd": 123629974,
+      "shares": 297452
+    },
+    {
+      "name_of_issuer": "VISA INC",
+      "title_of_class": "COM CL A",
+      "cusip": "92826C839",
+      "value_usd": 274024954,
+      "shares": 798697
+    },
+    {
+      "name_of_issuer": "WEALTHFRONT CORP",
+      "title_of_class": "COM",
+      "cusip": "947002101",
+      "value_usd": 135502480,
+      "shares": 15156877
+    },
+    {
+      "name_of_issuer": "WEBULL CORP",
+      "title_of_class": "ORD SHS",
+      "cusip": "G9572D103",
+      "value_usd": 43841373,
+      "shares": 6724137
+    }
+  ]
+}

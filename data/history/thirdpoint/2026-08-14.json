@@ -1,0 +1,307 @@
+{
+  "fund_id": "thirdpoint",
+  "filing_date": "2026-08-14",
+  "holdings": [
+    {
+      "name_of_issuer": "ALPHABET INC",
+      "title_of_class": "CAP STK CL A",
+      "cusip": "02079K305",
+      "value_usd": 366304250,
+      "shares": 1025000
+    },
+    {
+      "name_of_issuer": "ALPHABET INC",
+      "title_of_class": "DEP SHS RP1/20 A",
+      "cusip": "02079K404",
+      "value_usd": 66157000,
+      "shares": 1300000
+    },
+    {
+      "name_of_issuer": "ALPHABET INC",
+      "title_of_class": "DEP SHS RP1/20 B",
+      "cusip": "02079K602",
+      "value_usd": 10060000,
+      "shares": 200000
+    },
+    {
+      "name_of_issuer": "AMAZON COM INC",
+      "title_of_class": "COM",
+      "cusip": "023135106",
+      "value_usd": 417095000,
+      "shares": 1750000
+    },
+    {
+      "name_of_issuer": "API GROUP CORP",
+      "title_of_class": "COM STK",
+      "cusip": "00187Y100",
+      "value_usd": 121332750,
+      "shares": 2865000
+    },
+    {
+      "name_of_issuer": "APPLIED DIGITAL CORP",
+      "title_of_class": "COM NEW",
+      "cusip": "038169207",
+      "value_usd": 820600,
+      "shares": 22000
+    },
+    {
+      "name_of_issuer": "ARES MANAGEMENT CORPORATION",
+      "title_of_class": "CL A COM STK",
+      "cusip": "03990B101",
+      "value_usd": 41741250,
+      "shares": 375000
+    },
+    {
+      "name_of_issuer": "ARS PHARMACEUTICALS INC",
+      "title_of_class": "COM",
+      "cusip": "82835W108",
+      "value_usd": 8010000,
+      "shares": 1000000
+    },
+    {
+      "name_of_issuer": "ASML HLDG NV",
+      "title_of_class": "N Y REGISTRY SHS",
+      "cusip": "N07059210",
+      "value_usd": 59606160,
+      "shares": 30000
+    },
+    {
+      "name_of_issuer": "AURORA INNOVATION INC",
+      "title_of_class": "*W EXP 11/03/202",
+      "cusip": "051774115",
+      "value_usd": 587384,
+      "shares": 1835000
+    },
+    {
+      "name_of_issuer": "AURORA INNOVATION INC",
+      "title_of_class": "CLASS A COM",
+      "cusip": "051774107",
+      "value_usd": 7041398,
+      "shares": 1032463
+    },
+    {
+      "name_of_issuer": "BAUSCH PLUS LOMB CORP",
+      "title_of_class": "COMMON SHARES",
+      "cusip": "071705107",
+      "value_usd": 1407600,
+      "shares": 85000
+    },
+    {
+      "name_of_issuer": "BLOCK INC",
+      "title_of_class": "CL A",
+      "cusip": "852234103",
+      "value_usd": 194479668,
+      "shares": 2558943
+    },
+    {
+      "name_of_issuer": "CAPITAL ONE FINL CORP",
+      "title_of_class": "COM",
+      "cusip": "14040H105",
+      "value_usd": 165511500,
+      "shares": 825000
+    },
+    {
+      "name_of_issuer": "CARPENTER TECHNOLOGY CORP",
+      "title_of_class": "COM",
+      "cusip": "144285103",
+      "value_usd": 132620600,
+      "shares": 215000
+    },
+    {
+      "name_of_issuer": "CORE SCIENTIFIC INC NEW",
+      "title_of_class": "COM",
+      "cusip": "21874A106",
+      "value_usd": 1381860,
+      "shares": 54000
+    },
+    {
+      "name_of_issuer": "CRH PLC",
+      "title_of_class": "ORD",
+      "cusip": "G25508105",
+      "value_usd": 234865000,
+      "shares": 2195000
+    },
+    {
+      "name_of_issuer": "DANAHER CORP DEL",
+      "title_of_class": "COM",
+      "cusip": "235851102",
+      "value_usd": 102859200,
+      "shares": 540000
+    },
+    {
+      "name_of_issuer": "EROCK INC",
+      "title_of_class": "CL A COM",
+      "cusip": "296013105",
+      "value_usd": 1203935,
+      "shares": 83030
+    },
+    {
+      "name_of_issuer": "FLEX LTD",
+      "title_of_class": "ORD",
+      "cusip": "Y2573F102",
+      "value_usd": 166932100,
+      "shares": 1030000
+    },
+    {
+      "name_of_issuer": "FLYEXCLUSIVE INC",
+      "title_of_class": "*W EXP 99/99/999",
+      "cusip": "343928115",
+      "value_usd": 77175,
+      "shares": 367499
+    },
+    {
+      "name_of_issuer": "FLYEXCLUSIVE INC",
+      "title_of_class": "COM CL A",
+      "cusip": "343928107",
+      "value_usd": 2044000,
+      "shares": 1022000
+    },
+    {
+      "name_of_issuer": "HERTZ GLOBAL HLDGS INC",
+      "title_of_class": "*W EXP 06/30/205",
+      "cusip": "42806J148",
+      "value_usd": 4327300,
+      "shares": 3970000
+    },
+    {
+      "name_of_issuer": "HUT 8 CORP",
+      "title_of_class": "COM",
+      "cusip": "44812J104",
+      "value_usd": 151810175,
+      "shares": 1315000
+    },
+    {
+      "name_of_issuer": "KEYSIGHT TECHNOLOGIES INC",
+      "title_of_class": "COM",
+      "cusip": "49338L103",
+      "value_usd": 204790950,
+      "shares": 585000
+    },
+    {
+      "name_of_issuer": "LITHIUM ARGENTINA AG",
+      "title_of_class": "NOTE 1.750% 1/1",
+      "cusip": "53680QAA6",
+      "value_usd": 611750,
+      "shares": 625000
+    },
+    {
+      "name_of_issuer": "LIVE NATION ENTERTAINMENT IN",
+      "title_of_class": "COM",
+      "cusip": "538034109",
+      "value_usd": 207829850,
+      "shares": 1135000
+    },
+    {
+      "name_of_issuer": "MASTEC INC",
+      "title_of_class": "COM",
+      "cusip": "576323109",
+      "value_usd": 120657400,
+      "shares": 290000
+    },
+    {
+      "name_of_issuer": "NORFOLK SOUTHN CORP",
+      "title_of_class": "COM",
+      "cusip": "655844108",
+      "value_usd": 188754000,
+      "shares": 600000
+    },
+    {
+      "name_of_issuer": "PERFORMANCE FOOD GROUP CO",
+      "title_of_class": "COM",
+      "cusip": "71377A103",
+      "value_usd": 75458250,
+      "shares": 675000
+    },
+    {
+      "name_of_issuer": "RIOT PLATFORMS INC",
+      "title_of_class": "NOTE 0.750% 1/1",
+      "cusip": "767292AB1",
+      "value_usd": 7033950,
+      "shares": 3500000
+    },
+    {
+      "name_of_issuer": "SOMNIGROUP INTERNATIONAL INC",
+      "title_of_class": "COM",
+      "cusip": "88023U101",
+      "value_usd": 201548290,
+      "shares": 2570769
+    },
+    {
+      "name_of_issuer": "SPACE EXPLORATION TECHN CORP",
+      "title_of_class": "CLASS A COM STK",
+      "cusip": "84615Q103",
+      "value_usd": 30825707,
+      "shares": 180415
+    },
+    {
+      "name_of_issuer": "STATE STR SPDR S&P 500 ETF T",
+      "title_of_class": "TR UNIT",
+      "cusip": "78462F103",
+      "value_usd": 28800000,
+      "shares": 40000
+    },
+    {
+      "name_of_issuer": "STRATA CRITICAL MEDICAL INC",
+      "title_of_class": "CL A COM",
+      "cusip": "092667104",
+      "value_usd": 26350000,
+      "shares": 5000000
+    },
+    {
+      "name_of_issuer": "SYSCO CORP",
+      "title_of_class": "COM",
+      "cusip": "871829107",
+      "value_usd": 48157226,
+      "shares": 580000
+    },
+    {
+      "name_of_issuer": "TAIWAN SEMICONDUCTOR MANUFAC",
+      "title_of_class": "SPONSORED ADS",
+      "cusip": "874039100",
+      "value_usd": 219682200,
+      "shares": 460000
+    },
+    {
+      "name_of_issuer": "TELEPHONE & DATA SYS INC",
+      "title_of_class": "COM NEW",
+      "cusip": "879433829",
+      "value_usd": 232237750,
+      "shares": 6275000
+    },
+    {
+      "name_of_issuer": "TRANSDIGM GROUP INC",
+      "title_of_class": "COM",
+      "cusip": "893641100",
+      "value_usd": 105231160,
+      "shares": 79000
+    },
+    {
+      "name_of_issuer": "TTM TECHNOLOGIES INC",
+      "title_of_class": "COM",
+      "cusip": "87305R109",
+      "value_usd": 94445100,
+      "shares": 505000
+    },
+    {
+      "name_of_issuer": "UNION PAC CORP",
+      "title_of_class": "COM",
+      "cusip": "907818108",
+      "value_usd": 95200000,
+      "shares": 350000
+    },
+    {
+      "name_of_issuer": "WARNER BROS DISCOVERY INC",
+      "title_of_class": "COM SER A",
+      "cusip": "934423104",
+      "value_usd": 533200000,
+      "shares": 20000000
+    },
+    {
+      "name_of_issuer": "WOLFSPEED INC",
+      "title_of_class": "COMMON STOCK",
+      "cusip": "97785W106",
+      "value_usd": 482500,
+      "shares": 10000
+    }
+  ]
+}

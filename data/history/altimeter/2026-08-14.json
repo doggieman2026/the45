@@ -1,0 +1,146 @@
+{
+  "fund_id": "altimeter",
+  "filing_date": "2026-08-14",
+  "holdings": [
+    {
+      "name_of_issuer": "APPLIED MATLS INC",
+      "title_of_class": "COM",
+      "cusip": "038222105",
+      "value_usd": 189389850,
+      "shares": 261950
+    },
+    {
+      "name_of_issuer": "AMAZON COM INC",
+      "title_of_class": "COM",
+      "cusip": "023135106",
+      "value_usd": 578058158,
+      "shares": 2425351
+    },
+    {
+      "name_of_issuer": "ARM HOLDINGS PLC",
+      "title_of_class": "SPONSORED ADS",
+      "cusip": "042068205",
+      "value_usd": 582194012,
+      "shares": 1641972
+    },
+    {
+      "name_of_issuer": "CEREBRAS SYSTEMS INC",
+      "title_of_class": "COM CL A",
+      "cusip": "15675d103",
+      "value_usd": 1596733177,
+      "shares": 7225037
+    },
+    {
+      "name_of_issuer": "COREWEAVE INC",
+      "title_of_class": "COM CL A",
+      "cusip": "21873S108",
+      "value_usd": 604575601,
+      "shares": 6073695
+    },
+    {
+      "name_of_issuer": "ALPHABET INC",
+      "title_of_class": "CAP STK CL A",
+      "cusip": "02079K305",
+      "value_usd": 62604076,
+      "shares": 175180
+    },
+    {
+      "name_of_issuer": "GRAB HOLDINGS LIMITED",
+      "title_of_class": "W EXP 12/1/202",
+      "cusip": "G4124C117",
+      "value_usd": 150586,
+      "shares": 3502000
+    },
+    {
+      "name_of_issuer": "ROBINHOOD MKTS INC",
+      "title_of_class": "COM CL A",
+      "cusip": "770700102",
+      "value_usd": 90221013,
+      "shares": 899691
+    },
+    {
+      "name_of_issuer": "KLA CORP",
+      "title_of_class": "COM NEW",
+      "cusip": "482480100",
+      "value_usd": 174457773,
+      "shares": 578230
+    },
+    {
+      "name_of_issuer": "LAM RESEARCH CORP",
+      "title_of_class": "COM NEW",
+      "cusip": "512807306",
+      "value_usd": 170766686,
+      "shares": 394080
+    },
+    {
+      "name_of_issuer": "META PLATFORMS INC",
+      "title_of_class": "CL A",
+      "cusip": "30303M102",
+      "value_usd": 763252318,
+      "shares": 1354990
+    },
+    {
+      "name_of_issuer": "MICROSOFT CORP",
+      "title_of_class": "COM",
+      "cusip": "594918104",
+      "value_usd": 473019948,
+      "shares": 1268082
+    },
+    {
+      "name_of_issuer": "MICRON TECHNOLOGY INC",
+      "title_of_class": "COM",
+      "cusip": "595112103",
+      "value_usd": 241846841,
+      "shares": 209520
+    },
+    {
+      "name_of_issuer": "QUALCOMM INC",
+      "title_of_class": "COM",
+      "cusip": "747525103",
+      "value_usd": 347865327,
+      "shares": 1882490
+    },
+    {
+      "name_of_issuer": "NVIDIA CORPORATION",
+      "title_of_class": "COM",
+      "cusip": "67066G104",
+      "value_usd": 1883565023,
+      "shares": 9413589
+    },
+    {
+      "name_of_issuer": "SNOWFLAKE INC",
+      "title_of_class": "COM SHS",
+      "cusip": "833445109",
+      "value_usd": 490230625,
+      "shares": 1926250
+    },
+    {
+      "name_of_issuer": "SYNOPSYS INC",
+      "title_of_class": "COM",
+      "cusip": "871607107",
+      "value_usd": 62602803,
+      "shares": 140343
+    },
+    {
+      "name_of_issuer": "SPACE EXPLORATION TECHN CORP",
+      "title_of_class": "CLASS A COM STK",
+      "cusip": "84615Q103",
+      "value_usd": 303530227,
+      "shares": 1776485
+    },
+    {
+      "name_of_issuer": "TAIWAN SEMICONDUCTOR MFG LTD",
+      "title_of_class": "SPONSORED ADS",
+      "cusip": "874039100",
+      "value_usd": 682617068,
+      "shares": 1429355
+    },
+    {
+      "name_of_issuer": "UBER TECHNOLOGIES INC",
+      "title_of_class": "COM",
+      "cusip": "90353T100",
+      "value_usd": 531995271,
+      "shares": 7372440
+    }
+  ]
+}

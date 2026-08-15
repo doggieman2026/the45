@@ -1,0 +1,153 @@
+{
+  "fund_id": "starboard",
+  "filing_date": "2026-08-14",
+  "holdings": [
+    {
+      "name_of_issuer": "ACACIA RESH CORP",
+      "title_of_class": "ACACIA TCH COM",
+      "cusip": "003881307",
+      "value_usd": 284835953,
+      "shares": 61123595
+    },
+    {
+      "name_of_issuer": "ALGONQUIN POWER & UTILITIES",
+      "title_of_class": "COM",
+      "cusip": "015857105",
+      "value_usd": 335130001,
+      "shares": 57189420
+    },
+    {
+      "name_of_issuer": "BILL HOLDINGS INC",
+      "title_of_class": "COM",
+      "cusip": "090043100",
+      "value_usd": 254051048,
+      "shares": 7025748
+    },
+    {
+      "name_of_issuer": "BITCOIN INFRASTRUCTURE ACQUI",
+      "title_of_class": "USD CL A ORD SHS",
+      "cusip": "G1143H101",
+      "value_usd": 2998500,
+      "shares": 300000
+    },
+    {
+      "name_of_issuer": "BITCOIN INFRASTRUCTURE ACQUI",
+      "title_of_class": "*W EXP 11/06/203",
+      "cusip": "G1143H119",
+      "value_usd": 47460,
+      "shares": 149999
+    },
+    {
+      "name_of_issuer": "BLOOMIN BRANDS INC",
+      "title_of_class": "COM",
+      "cusip": "094235108",
+      "value_usd": 38214267,
+      "shares": 4180992
+    },
+    {
+      "name_of_issuer": "CARMAX INC",
+      "title_of_class": "COM",
+      "cusip": "143130102",
+      "value_usd": 169588506,
+      "shares": 3206438
+    },
+    {
+      "name_of_issuer": "DYNATRACE INC",
+      "title_of_class": "COM NEW",
+      "cusip": "268150109",
+      "value_usd": 389336446,
+      "shares": 8866692
+    },
+    {
+      "name_of_issuer": "FLOWSERVE CORP",
+      "title_of_class": "COM",
+      "cusip": "34354P105",
+      "value_usd": 106909056,
+      "shares": 1441600
+    },
+    {
+      "name_of_issuer": "FLUOR CORP",
+      "title_of_class": "COM",
+      "cusip": "343412102",
+      "value_usd": 83107672,
+      "shares": 1586327
+    },
+    {
+      "name_of_issuer": "GPGI INC",
+      "title_of_class": "COM CL A",
+      "cusip": "20459V105",
+      "value_usd": 79678394,
+      "shares": 5027028
+    },
+    {
+      "name_of_issuer": "HEALTHCARE RLTY TR",
+      "title_of_class": "CL A COM",
+      "cusip": "42226K105",
+      "value_usd": 39054505,
+      "shares": 1936267
+    },
+    {
+      "name_of_issuer": "ISHARES TR",
+      "title_of_class": "CORE S&P MCP ETF",
+      "cusip": "464287507",
+      "value_usd": 684565693,
+      "shares": 8877781
+    },
+    {
+      "name_of_issuer": "KENVUE INC",
+      "title_of_class": "COM",
+      "cusip": "49177J102",
+      "value_usd": 521848848,
+      "shares": 27307632
+    },
+    {
+      "name_of_issuer": "LAMB WESTON HLDGS INC",
+      "title_of_class": "COM",
+      "cusip": "513272104",
+      "value_usd": 247593343,
+      "shares": 5733982
+    },
+    {
+      "name_of_issuer": "MATCH GROUP INC NEW",
+      "title_of_class": "COM",
+      "cusip": "57667L107",
+      "value_usd": 295843506,
+      "shares": 7775125
+    },
+    {
+      "name_of_issuer": "NEWS CORP NEW",
+      "title_of_class": "CL B",
+      "cusip": "65249B208",
+      "value_usd": 68216133,
+      "shares": 2431081
+    },
+    {
+      "name_of_issuer": "NEWS CORP NEW",
+      "title_of_class": "CL A",
+      "cusip": "65249B109",
+      "value_usd": 50655683,
+      "shares": 2040100
+    },
+    {
+      "name_of_issuer": "QORVO INC",
+      "title_of_class": "COM",
+      "cusip": "74736K101",
+      "value_usd": 523387030,
+      "shares": 5611526
+    },
+    {
+      "name_of_issuer": "RIOT PLATFORMS INC",
+      "title_of_class": "COM",
+      "cusip": "767292105",
+      "value_usd": 278855609,
+      "shares": 12537976
+    },
+    {
+      "name_of_issuer": "TRIPADVISOR INC",
+      "title_of_class": "COM",
+      "cusip": "896945201",
+      "value_usd": 69879815,
+      "shares": 5096996
+    }
+  ]
+}

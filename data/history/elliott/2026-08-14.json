@@ -1,0 +1,202 @@
+{
+  "fund_id": "elliott",
+  "filing_date": "2026-08-14",
+  "holdings": [
+    {
+      "name_of_issuer": "EQUINIX INC",
+      "title_of_class": "COM",
+      "cusip": "29444U700",
+      "value_usd": 156358500,
+      "shares": 150000
+    },
+    {
+      "name_of_issuer": "ETSY INC",
+      "title_of_class": "COM",
+      "cusip": "29786A106",
+      "value_usd": 376650000,
+      "shares": 5000000
+    },
+    {
+      "name_of_issuer": "HDFC BANK LTD",
+      "title_of_class": "SPONSORED ADS",
+      "cusip": "40415F101",
+      "value_usd": 20588706,
+      "shares": 797085
+    },
+    {
+      "name_of_issuer": "HEWLETT PACKARD ENTERPRISE C",
+      "title_of_class": "COM",
+      "cusip": "42824C109",
+      "value_usd": 1455789243,
+      "shares": 32271985
+    },
+    {
+      "name_of_issuer": "INVESCO EXCHANGE TRADED FD T",
+      "title_of_class": "S&P500 EQL WGT",
+      "cusip": "46137V357",
+      "value_usd": 84044150,
+      "shares": 395000
+    },
+    {
+      "name_of_issuer": "INVESCO QQQ TR",
+      "title_of_class": "UNIT SER 1",
+      "cusip": "46090E103",
+      "value_usd": 2562672000,
+      "shares": 3480000
+    },
+    {
+      "name_of_issuer": "ISHARES TR",
+      "title_of_class": "EXPANDED TECH",
+      "cusip": "464287515",
+      "value_usd": 1426950000,
+      "shares": 15750000
+    },
+    {
+      "name_of_issuer": "ISHARES TR",
+      "title_of_class": "RUSSELL 2000 ETF",
+      "cusip": "464287655",
+      "value_usd": 75112500,
+      "shares": 250000
+    },
+    {
+      "name_of_issuer": "ISHARES TR",
+      "title_of_class": "U.S. MED DVC ETF",
+      "cusip": "464288810",
+      "value_usd": 686799000,
+      "shares": 13900000
+    },
+    {
+      "name_of_issuer": "NORWEGIAN CRUISE LINE HLDGS",
+      "title_of_class": "SHS",
+      "cusip": "G66721104",
+      "value_usd": 310021460,
+      "shares": 14686000
+    },
+    {
+      "name_of_issuer": "OR ROYALTIES INC.",
+      "title_of_class": "COM SHS",
+      "cusip": "68390D106",
+      "value_usd": 98400930,
+      "shares": 3111000
+    },
+    {
+      "name_of_issuer": "PEPSICO INC",
+      "title_of_class": "COM",
+      "cusip": "713448108",
+      "value_usd": 172635000,
+      "shares": 1275000
+    },
+    {
+      "name_of_issuer": "PHILLIPS 66",
+      "title_of_class": "COM",
+      "cusip": "718546104",
+      "value_usd": 3254381550,
+      "shares": 19251000
+    },
+    {
+      "name_of_issuer": "PINTEREST INC",
+      "title_of_class": "CL A",
+      "cusip": "72352L106",
+      "value_usd": 588840000,
+      "shares": 28000000
+    },
+    {
+      "name_of_issuer": "QUANTINUUM INC",
+      "title_of_class": "CL A COM",
+      "cusip": "74768A104",
+      "value_usd": 12261000,
+      "shares": 150000
+    },
+    {
+      "name_of_issuer": "SEADRILL LTD",
+      "title_of_class": "COM",
+      "cusip": "G7997W102",
+      "value_usd": 167908735,
+      "shares": 4439681
+    },
+    {
+      "name_of_issuer": "SELECT SECTOR SPDR TR",
+      "title_of_class": "ST STR DISCR ETF",
+      "cusip": "81369Y407",
+      "value_usd": 832688000,
+      "shares": 7100000
+    },
+    {
+      "name_of_issuer": "SELECT SECTOR SPDR TR",
+      "title_of_class": "ST STR INDL ETF",
+      "cusip": "81369Y704",
+      "value_usd": 958565250,
+      "shares": 5175000
+    },
+    {
+      "name_of_issuer": "SELECT SECTOR SPDR TR",
+      "title_of_class": "ST STR STAPL ETF",
+      "cusip": "81369Y308",
+      "value_usd": 799548750,
+      "shares": 9625000
+    },
+    {
+      "name_of_issuer": "SOUTHWEST AIRLS CO",
+      "title_of_class": "COM",
+      "cusip": "844741108",
+      "value_usd": 1249917360,
+      "shares": 24308000
+    },
+    {
+      "name_of_issuer": "SPDR SERIES TRUST",
+      "title_of_class": "ST STR SP METAL",
+      "cusip": "78464A755",
+      "value_usd": 96237000,
+      "shares": 900000
+    },
+    {
+      "name_of_issuer": "SUNCOR ENERGY INC NEW",
+      "title_of_class": "COM",
+      "cusip": "867224107",
+      "value_usd": 1581090720,
+      "shares": 29454000
+    },
+    {
+      "name_of_issuer": "SYNOPSYS INC",
+      "title_of_class": "COM",
+      "cusip": "871607107",
+      "value_usd": 101480925,
+      "shares": 227500
+    },
+    {
+      "name_of_issuer": "TRANSOCEAN LTD",
+      "title_of_class": "REGISTERED SHS",
+      "cusip": "H8817H100",
+      "value_usd": 76415218,
+      "shares": 15626834
+    },
+    {
+      "name_of_issuer": "TRIPLE FLAG PRECIOUS METAL",
+      "title_of_class": "COM",
+      "cusip": "89679M104",
+      "value_usd": 3993248804,
+      "shares": 133241535
+    },
+    {
+      "name_of_issuer": "UNITI GROUP LLC",
+      "title_of_class": "COM SHS",
+      "cusip": "912932100",
+      "value_usd": 676870152,
+      "shares": 59012219
+    },
+    {
+      "name_of_issuer": "VANECK ETF TRUST",
+      "title_of_class": "GOLD MINERS ETF",
+      "cusip": "92189F106",
+      "value_usd": 690367500,
+      "shares": 9150000
+    },
+    {
+      "name_of_issuer": "VANECK ETF TRUST",
+      "title_of_class": "SEMICONDUCTR ETF",
+      "cusip": "92189F676",
+      "value_usd": 163972500,
+      "shares": 250000
+    }
+  ]
+}
