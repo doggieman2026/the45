@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE 45 — 45 Capital Movers</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --bg: #0D1113; --surface: #141A1C; --surface2: #1B2325; --border: #263033;
+  --accent: #4FB8B8; --accent2: #6FD0D0; --text: #D8E6E6; --muted: #6B8585;
+  --red: #D9697E; --violet: #9B8FFF; --violet-dim: #6B62A8;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text);
+  font-family:'Inter',sans-serif; min-height:100vh; overflow-x:hidden; line-height:1.7;
+}
+body::before {
+  content:''; position:fixed; inset:0;
+  background:radial-gradient(ellipse 80% 50% at 50% -10%, rgba(79,184,184,0.06) 0%, transparent 60%);
+  pointer-events:none; z-index:0;
+}
+body::after {
+  content:''; position:fixed; inset:0;
+  background-image:linear-gradient(rgba(79,184,184,0.02) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(79,184,184,0.02) 1px,transparent 1px);
+  background-size:48px 48px; pointer-events:none; z-index:0;
+}
+
+.file-nav {
+  position:sticky; top:0; z-index:100;
+  background:rgba(13,17,19,0.95); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border); height:34px; display:flex; align-items:center;
+}
+.file-nav-inner {
+  max-width:820px; margin:0 auto; padding:0 20px; width:100%;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.nav-left {
+  font-family:'JetBrains Mono',monospace; font-size:9.5px;
+  letter-spacing:0.12em; color:var(--muted);
+}
+.nav-right {
+  font-family:'JetBrains Mono',monospace; font-size:9px;
+  letter-spacing:0.16em; color:var(--muted); opacity:0.4;
+}
+@media(max-width:600px){ .nav-right{ display:none; } }
+
+.container { max-width:820px; margin:0 auto; padding:0 20px; position:relative; z-index:1; }
+
+/* ===== HERO ===== */
+.hero { padding:88px 0 40px; text-align:center; }
+.hero-logo { font-size:clamp(48px,10vw,88px); font-weight:700; letter-spacing:-0.02em; line-height:1; color:var(--text); margin-bottom:18px; }
+.hero-tags {
+  display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap;
+  font-family:'JetBrains Mono',monospace; font-size:clamp(11px,2vw,14px);
+  letter-spacing:0.18em; color:var(--accent2); margin-bottom:36px;
+}
+.hero-tags .dot { width:3px; height:3px; border-radius:50%; background:var(--muted); opacity:0.5; }
+.hero-line { font-size:clamp(16px,3vw,20px); color:var(--text); line-height:1.8; margin-bottom:28px; }
+.hero-sub {
+  font-size:13.5px; color:var(--muted); max-width:440px; margin:0 auto; line-height:1.9;
+}
+
+/* ===== SECTION SHARED ===== */
+.section { padding:56px 0; border-top:1px solid var(--border); }
+.section-eyebrow {
+  font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.24em;
+  color:var(--accent2); text-transform:uppercase; margin-bottom:14px; opacity:0.85;
+}
+.section-title { font-size:clamp(20px,4vw,26px); font-weight:700; letter-spacing:-0.01em; margin-bottom:14px; }
+.section-desc { font-size:14px; line-height:1.8; color:var(--muted); max-width:520px; margin-bottom:28px; }
+
+/* ===== OBSERVE PREVIEW ===== */
+.preview-log { border-top:1px solid rgba(255,255,255,0.06); margin-bottom:24px; }
+.preview-entry {
+  padding:16px 0; border-bottom:1px solid rgba(255,255,255,0.05);
+}
+.preview-entry-header {
+  display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:6px;
+}
+.preview-fund { font-size:14px; font-weight:600; color:var(--text); }
+.preview-quarter { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); opacity:0.6; }
+.preview-change-row {
+  display:flex; align-items:baseline; justify-content:space-between; gap:14px;
+  font-family:'JetBrains Mono',monospace; font-size:12px;
+}
+.preview-security { color:var(--text); opacity:0.85; }
+.preview-type { font-size:11px; letter-spacing:0.04em; }
+.preview-type.new { color:var(--accent2); }
+.preview-type.increased { color:var(--accent2); opacity:0.75; }
+.preview-type.decreased { color:var(--muted); }
+.preview-type.exited { color:var(--red); }
+.preview-loading, .preview-empty {
+  padding:30px 0; text-align:center; color:var(--muted); font-size:12px;
+  font-family:'JetBrains Mono',monospace; opacity:0.5;
+}
+
+.cta-link {
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.08em;
+  color:var(--accent2); text-decoration:none; border:1px solid rgba(79,184,184,0.3);
+  padding:10px 20px; border-radius:4px; transition:border-color 0.15s, background 0.15s;
+}
+.cta-link:hover { border-color:var(--accent2); background:rgba(79,184,184,0.06); }
+
+/* ===== FILES ===== */
+.file-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:28px; }
+@media(max-width:600px){ .file-grid{ grid-template-columns:1fr; } }
+.file-card {
+  display:block; text-decoration:none; border:1px solid var(--border); border-radius:6px;
+  padding:20px; background:var(--surface); transition:border-color 0.15s;
+}
+.file-card:hover { border-color:rgba(79,184,184,0.3); }
+.file-card-stamp {
+  font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em;
+  color:var(--accent2); margin-bottom:10px;
+}
+.file-card-title { font-size:16px; font-weight:700; color:var(--text); line-height:1.5; }
+.file-card-title.pending { color:var(--muted); font-weight:500; font-size:14px; }
+
+/* ===== 45 CAPITAL MOVERS ===== */
+.movers-grid { display:flex; flex-direction:column; margin-bottom:28px; border-top:1px solid rgba(255,255,255,0.06); }
+.movers-row {
+  display:flex; align-items:baseline; justify-content:space-between;
+  padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.05);
+  font-family:'JetBrains Mono',monospace; font-size:12.5px;
+}
+.movers-label { color:var(--text); letter-spacing:0.04em; }
+.movers-count { color:var(--accent2); font-weight:600; }
+.movers-total {
+  display:flex; align-items:baseline; justify-content:space-between;
+  padding:16px 0 4px; font-family:'JetBrains Mono',monospace; font-size:14px;
+  color:var(--text); font-weight:700;
+}
+.movers-loading { padding:20px 0; text-align:center; color:var(--muted); font-size:12px; font-family:'JetBrains Mono',monospace; opacity:0.5; }
+
+.signature-line { text-align:center; font-size:13px; color:var(--muted); letter-spacing:0.03em; padding:44px 0 14px; opacity:0.8; }
+footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:center; font-size:10px; color:var(--muted); font-family:'JetBrains Mono',monospace; line-height:1.9; }
+</style>
+</head>
+<body>
+
+<nav class="file-nav">
+  <div class="file-nav-inner">
+    <div class="nav-left">THE 45</div>
+    <div class="nav-right">45 CAPITAL MOVERS OBSERVED</div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- ===== HERO ===== -->
+  <div class="hero">
+    <div class="hero-logo">THE 45</div>
+    <div class="hero-tags">
+      <span>45 CAPITAL MOVERS</span>
+      <span class="dot"></span>
+      <span>45 DAYS BEHIND</span>
+    </div>
+    <p class="hero-line">誰かが動いた。<br>その記録だけが、あとから残る。</p>
+    <p class="hero-sub">
+      45社ではなく、45の資金主体。<br>
+      その資金の動きは、公開書類を通じて後から姿を現す。
+    </p>
+  </div>
+
+  <!-- ===== OBSERVE ===== -->
+  <div class="section">
+    <div class="section-eyebrow">OBSERVE</div>
+    <h2 class="section-title">観測ログ</h2>
+    <p class="section-desc">45の資金主体に残された、最新の記録。</p>
+
+    <div class="preview-log" id="preview-log">
+      <div class="preview-loading">記録を読み込んでいます…</div>
+    </div>
+
+    <a class="cta-link" href="observer.html">観測ログを見る →</a>
+  </div>
+
+  <!-- ===== FILES ===== -->
+  <div class="section">
+    <div class="section-eyebrow">FILES</div>
+    <h2 class="section-title">記録</h2>
+    <p class="section-desc">記録の中から、後になって意味を持った痕跡だけを、人間が編集した記録。</p>
+
+    <div class="file-grid">
+      <a class="file-card" href="file-001-berkshire-silence.html">
+        <div class="file-card-stamp">FILE-001</div>
+        <div class="file-card-title">バークシャーの沈黙</div>
+      </a>
+      <a class="file-card" href="file-002.html">
+        <div class="file-card-stamp">FILE-002</div>
+        <div class="file-card-title pending">（タイトル未定）</div>
+      </a>
+    </div>
+
+    <a class="cta-link" href="file-001-berkshire-silence.html">記録を読む →</a>
+  </div>
+
+  <!-- ===== 45 CAPITAL MOVERS ===== -->
+  <div class="section">
+    <div class="section-eyebrow">45 CAPITAL MOVERS</div>
+    <h2 class="section-title">観測対象</h2>
+    <p class="section-desc">45の資金主体を、継続して観測しています。</p>
+
+    <div class="movers-grid" id="movers-grid">
+      <div class="movers-loading">集計しています…</div>
+    </div>
+
+    <a class="cta-link" href="observer.html">観測対象を見る →</a>
+  </div>
+
+  <p class="signature-line">今日もまた、誰かの足跡が残る。</p>
+
+</div>
+
+<footer>
+  <div class="container">
+    <p>© 2026 THE 45 PROJECT.</p>
+    <p style="font-size:9px;margin-top:4px;opacity:0.4;">当サイトのデータはSEC公開書類に基づいています。投資勧誘を目的としたものではありません。</p>
+  </div>
+</footer>
+
+<script>
+const TYPE_LABELS = {
+  new: "New Position",
+  increased: "Increased",
+  decreased: "Decreased",
+  exited: "Exited",
+};
+
+// 45カテゴリ → トップページ表示用の5分類。
+// funds.json の category(A_passive等の接頭辞)から機械的に集計するだけで、
+// 並び順・グルーピング以外の編集判断は加えない。
+const GROUP_DEFS = [
+  { key: "giant", label: "GIANT INSTITUTIONS", prefixes: ["A", "H", "I", "J"] },
+  { key: "value_activist", label: "VALUE / ACTIVIST", prefixes: ["B", "E"] },
+  { key: "macro_hedge", label: "MACRO / HEDGE", prefixes: ["C", "D"] },
+  { key: "tech_growth", label: "TECH / GROWTH", prefixes: ["F"] },
+  { key: "strategic_other", label: "STRATEGIC / OTHER", prefixes: ["G", "K", "L"] },
+];
+
+function filingDateToQuarterLabel(filingDate) {
+  const [y, m] = filingDate.split("-");
+  const q = Math.floor((parseInt(m, 10) - 1) / 3) + 1;
+  return `${y} Q${q}`;
+}
+
+function escapeHtml(str) {
+  const div = document.createElement("div");
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+async function loadHomeData() {
+  let fundsData;
+  try {
+    const res = await fetch("funds.json");
+    fundsData = await res.json();
+  } catch (e) {
+    document.getElementById("preview-log").innerHTML = '<div class="preview-empty">記録を読み込めませんでした。</div>';
+    document.getElementById("movers-grid").innerHTML = '<div class="movers-loading">集計データを読み込めませんでした。</div>';
+    return;
+  }
+
+  const funds = fundsData.funds || [];
+
+  renderMoversSummary(funds);
+  await renderObserverPreview(funds);
+}
+
+function renderMoversSummary(funds) {
+  const grid = document.getElementById("movers-grid");
+
+  const counts = {};
+  for (const g of GROUP_DEFS) counts[g.key] = 0;
+
+  for (const fund of funds) {
+    const prefix = (fund.category || "").split("_")[0];
+    const group = GROUP_DEFS.find(g => g.prefixes.includes(prefix));
+    if (group) counts[group.key] += 1;
+  }
+
+  const total = funds.length;
+
+  let html = GROUP_DEFS.map(g => `
+    <div class="movers-row">
+      <span class="movers-label">${g.label}</span>
+      <span class="movers-count">${counts[g.key]}</span>
+    </div>
+  `).join("");
+
+  html += `
+    <div class="movers-total">
+      <span>45 CAPITAL MOVERS</span>
+      <span>${total}</span>
+    </div>
+  `;
+
+  grid.innerHTML = html;
+}
+
+async function renderObserverPreview(funds) {
+  const container = document.getElementById("preview-log");
+
+  // observer.html と同じ考え方: 変化がある主体だけ、実データを取得する。
+  const fetchTargets = funds.filter(f => (f.observed_changes_summary?.total_count || 0) > 0);
+
+  const entries = [];
+
+  await Promise.all(fetchTargets.map(async (fund) => {
+    const path = fund.observed_changes_summary.path;
+    let changes;
+    try {
+      const res = await fetch(path);
+      const json = await res.json();
+      changes = json.changes || [];
+    } catch (e) {
+      return;
+    }
+    if (changes.length === 0) return;
+
+    const latestFilingDate = changes.reduce((max, c) => c.filing_date > max ? c.filing_date : max, changes[0].filing_date);
+    const latestChanges = changes.filter(c => c.filing_date === latestFilingDate);
+
+    entries.push({
+      fund_name: fund.display_name_ja,
+      filing_date: latestFilingDate,
+      change: latestChanges[0], // トップページのプレビューは1主体につき1件だけ
+    });
+  }));
+
+  if (entries.length === 0) {
+    container.innerHTML = '<div class="preview-empty">現在、表示できる記録がありません。</div>';
+    return;
+  }
+
+  entries.sort((a, b) => {
+    if (a.filing_date !== b.filing_date) return b.filing_date.localeCompare(a.filing_date);
+    return a.fund_name.localeCompare(b.fund_name, "ja");
+  });
+
+  // トップページでは3件だけのプレビュー。全件は observer.html 側で見る。
+  const preview = entries.slice(0, 3);
+
+  container.innerHTML = preview.map(entry => {
+    const quarterLabel = filingDateToQuarterLabel(entry.filing_date);
+    const c = entry.change;
+    return `
+      <div class="preview-entry">
+        <div class="preview-entry-header">
+          <span class="preview-fund">${escapeHtml(entry.fund_name)}</span>
+          <span class="preview-quarter">${quarterLabel}</span>
+        </div>
+        <div class="preview-change-row">
+          <span class="preview-security">${escapeHtml(c.security_name)}</span>
+          <span class="preview-type ${c.type}">${TYPE_LABELS[c.type] || c.type}</span>
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+loadHomeData();
+</script>
+</body>
+</html>
