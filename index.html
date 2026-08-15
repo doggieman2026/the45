@@ -159,6 +159,10 @@ body::after {
 .discovery-tag.multiple_movers { color:var(--accent2); }
 .discovery-tag.pattern_found { color:var(--violet); }
 .discovery-body { font-size:14px; line-height:1.8; color:var(--text); margin-bottom:6px; }
+.discovery-fund-name {
+  font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; letter-spacing:0.06em;
+  color:var(--violet); text-transform:uppercase; margin-bottom:8px;
+}
 .discovery-body strong { color:var(--text); font-weight:600; }
 .discovery-sub { font-size:12px; color:var(--muted); line-height:1.7; margin-bottom:14px; }
 .discovery-pattern-block { margin:12px 0; padding:12px 14px; background:rgba(155,143,255,0.05); border-left:2px solid var(--violet-dim); border-radius:0 4px 4px 0; }
@@ -279,8 +283,6 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
       <div class="movers-closing-num">45</div>
       <div class="movers-closing-label">CAPITAL MOVERS</div>
     </div>
-
-    <a class="cta-link" href="observer.html">観測対象を見る →</a>
   </div>
 
   <p class="signature-line">今日もまた、誰かの足跡が残る。</p>
@@ -422,6 +424,8 @@ function renderObserverPreview(entries) {
 // 方針: 実データから機械的に導出できるものだけを表示する。
 // 断定的な因果関係（「予測した」「原因だった」）は一切使わない。
 // 該当データが無いカード（特にPATTERN FOUND）は無理に生成せず、非表示にする。
+// Discoveryはここで完結させる。Observerへの重複リンク（VIEW OBSERVATION等）は置かない。
+// Observerへの正式な入口は OBSERVE セクションの一箇所だけに絞る。
 
 async function renderDiscovery(funds, allEntries) {
   const cards = [];
@@ -432,8 +436,8 @@ async function renderDiscovery(funds, allEntries) {
   const multipleMoversCard = buildMultipleMoversCard(allEntries);
   if (multipleMoversCard) cards.push(multipleMoversCard);
 
-  const patternCard = await buildPatternFoundCard(funds);
-  if (patternCard) cards.push(patternCard);
+  const patternCards = await buildPatternFoundCards(funds); // 複数件（最大3件）
+  cards.push(...patternCards);
 
   if (cards.length === 0) return; // 該当データが無ければセクション自体を出さない
 
@@ -453,7 +457,6 @@ function buildNewPositionCard(entries) {
           <div class="discovery-body"><strong>${escapeHtml(entry.fund_name)}</strong> opened a new position in <strong>${escapeHtml(newChange.security_name)}</strong>.</div>
           <div class="discovery-sub">${entry.filing_date}</div>
           <div class="discovery-actions">
-            <a class="discovery-link" href="observer.html">VIEW OBSERVATION →</a>
             <button class="watch-btn" onclick="toggleWatch(this)">WATCH THIS</button>
           </div>
         </div>
@@ -491,9 +494,6 @@ function buildMultipleMoversCard(entries) {
       <div class="discovery-tag multiple_movers">MULTIPLE MOVERS</div>
       <div class="discovery-body"><strong>${best.funds.size} CAPITAL MOVERS</strong> moved into the same space: <strong>${escapeHtml(best.name)}</strong>.</div>
       <div class="discovery-sub">${Array.from(best.funds).join(" ／ ")}</div>
-      <div class="discovery-actions">
-        <a class="discovery-link" href="observer.html">VIEW OBSERVATION →</a>
-      </div>
     </div>
   `;
 }
@@ -502,62 +502,70 @@ function buildMultipleMoversCard(entries) {
 // 45 CAPITAL MOVERSと重なるIDの範囲でのみ再利用する。
 // 新しい類似度計算ロジックはここでは作らない（既存データの再利用のみ）。
 const PATTERN_EVENT_LABELS = {
-  covid_2020: "the 2020 market shock",
+  covid_2020: "COVID-19 shock",
   svb_2023: "the 2023 regional bank stress",
-  yen_carry_2024: "the 2024 carry trade unwind",
+  yen_carry_2024: "the 2024 yen carry trade unwind",
 };
 
-async function buildPatternFoundCard(funds) {
+const MAX_PATTERN_CARDS = 3;
+
+async function buildPatternFoundCards(funds) {
   let legacyData;
   try {
     const res = await fetch("data.json");
     legacyData = await res.json();
   } catch (e) {
-    return null; // data.json が無い/読めない場合は無理に生成しない
+    return []; // data.json が無い/読めない場合は無理に生成しない
   }
 
   const fundIds = new Set(funds.map(f => f.id));
   const legacyFunds = legacyData.funds || [];
 
-  let candidate = null;
+  // 45 CAPITAL MOVERSに含まれ、かつ実データ（pattern_similarity）を持つ主体をすべて集める。
+  const candidates = [];
   for (const lf of legacyFunds) {
-    if (!fundIds.has(lf.id)) continue; // 45 CAPITAL MOVERSに含まれる主体のみ対象
+    if (!fundIds.has(lf.id)) continue;
     const ps = lf.pattern_similarity;
     if (ps && ps.most_similar_event) {
-      candidate = { fundId: lf.id, ...ps };
-      break; // 最初に見つかった実データだけを使う（複数出し過ぎない）
+      candidates.push({ fundId: lf.id, ...ps });
     }
   }
 
-  if (!candidate) return null; // 類似性が確認できる実データが無ければ生成しない
+  if (candidates.length === 0) return [];
 
-  const fund = funds.find(f => f.id === candidate.fundId);
-  const fundName = fund ? fund.display_name_ja : candidate.fundId;
-  const ev = candidate.most_similar_event;
-  const eventLabel = PATTERN_EVENT_LABELS[ev.event_id] || ev.event_label;
-  const periodLabel = filingDateToQuarterLabel(ev.before_filing_date || ev.after_filing_date || "");
+  // 類似度が高い順に、最大3件だけをTOPに表示する（大量に並べない）。
+  candidates.sort((a, b) => b.similarity_pct - a.similarity_pct);
+  const selected = candidates.slice(0, MAX_PATTERN_CARDS);
 
-  return `
-    <div class="discovery-card pattern">
-      <div class="discovery-tag pattern_found">PATTERN FOUND</div>
-      <div class="discovery-body">A similar capital configuration in <strong>${escapeHtml(fundName)}</strong> was observed before <strong>${escapeHtml(eventLabel)}</strong>.</div>
-      <div class="discovery-pattern-block">
-        <div class="discovery-pattern-row">
-          <span class="discovery-pattern-label">PERIOD</span>
-          <span class="discovery-pattern-value">${periodLabel || "—"}</span>
+  return selected.map(candidate => {
+    const fund = funds.find(f => f.id === candidate.fundId);
+    const fundName = fund ? fund.display_name_ja : candidate.fundId;
+    const ev = candidate.most_similar_event;
+    const eventLabel = PATTERN_EVENT_LABELS[ev.event_id] || ev.event_label;
+    const periodLabel = filingDateToQuarterLabel(ev.before_filing_date || ev.after_filing_date || "");
+
+    return `
+      <div class="discovery-card pattern" data-watch-id="pattern_${candidate.fundId}_${ev.event_id}">
+        <div class="discovery-tag pattern_found">PATTERN FOUND</div>
+        <div class="discovery-fund-name">${escapeHtml(fundName)}</div>
+        <div class="discovery-body">Similar capital configuration observed in <strong>${periodLabel || "—"}</strong>.</div>
+        <div class="discovery-pattern-block">
+          <div class="discovery-pattern-row">
+            <span class="discovery-pattern-label">SIMILARITY</span>
+            <span class="discovery-pattern-value">${candidate.similarity_pct}%</span>
+          </div>
+          <div class="discovery-pattern-row">
+            <span class="discovery-pattern-label">AFTERWARD</span>
+            <span class="discovery-pattern-value">${escapeHtml(eventLabel)}</span>
+          </div>
         </div>
-        <div class="discovery-pattern-row">
-          <span class="discovery-pattern-label">CONFIGURATION</span>
-          <span class="discovery-pattern-value">${candidate.similarity_pct}% similarity to current positioning</span>
+        <div class="discovery-note">Observed retrospectively. Not a prediction.</div>
+        <div class="discovery-actions">
+          <button class="watch-btn" onclick="toggleWatch(this)">WATCH THIS</button>
         </div>
       </div>
-      <div class="discovery-note">Observed retrospectively. Not a prediction.</div>
-      <div class="discovery-actions">
-        <a class="discovery-link" href="observer.html">VIEW PATTERN →</a>
-        <button class="watch-btn" onclick="toggleWatch(this)">WATCH THIS</button>
-      </div>
-    </div>
-  `;
+    `;
+  });
 }
 
 // WATCH THIS: 現段階では通知機能を持たない、クライアント側のみの登録状態。
