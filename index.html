@@ -46,7 +46,7 @@ body::after {
 }
 .nav-right {
   font-family:'JetBrains Mono',monospace; font-size:9px;
-  letter-spacing:0.16em; color:var(--muted); opacity:0.4;
+  letter-spacing:0.18em; color:var(--muted); opacity:0.4;
 }
 @media(max-width:600px){ .nav-right{ display:none; } }
 
@@ -65,9 +65,15 @@ body::after {
 .hero-sub {
   font-size:13.5px; color:var(--muted); max-width:440px; margin:0 auto; line-height:1.9;
 }
+.hero-latest {
+  margin-top:36px; font-family:'JetBrains Mono',monospace; font-size:9.5px;
+  letter-spacing:0.12em; color:var(--muted); opacity:0.4;
+}
+.hero-rule { width:36px; height:1px; background:var(--border); margin:48px auto 0; }
 
 /* ===== SECTION SHARED ===== */
-.section { padding:56px 0; border-top:1px solid var(--border); }
+.section { padding:56px 0; }
+.section.bordered { border-top:1px solid var(--border); }
 .section-eyebrow {
   font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.24em;
   color:var(--accent2); text-transform:uppercase; margin-bottom:14px; opacity:0.85;
@@ -116,6 +122,10 @@ body::after {
   padding:20px; background:var(--surface); transition:border-color 0.15s;
 }
 .file-card:hover { border-color:rgba(79,184,184,0.3); }
+.file-card-tag {
+  font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em;
+  color:var(--muted); opacity:0.6; margin-bottom:10px;
+}
 .file-card-stamp {
   font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em;
   color:var(--accent2); margin-bottom:10px;
@@ -132,12 +142,17 @@ body::after {
 }
 .movers-label { color:var(--text); letter-spacing:0.04em; }
 .movers-count { color:var(--accent2); font-weight:600; }
-.movers-total {
-  display:flex; align-items:baseline; justify-content:space-between;
-  padding:16px 0 4px; font-family:'JetBrains Mono',monospace; font-size:14px;
-  color:var(--text); font-weight:700;
-}
 .movers-loading { padding:20px 0; text-align:center; color:var(--muted); font-size:12px; font-family:'JetBrains Mono',monospace; opacity:0.5; }
+
+.movers-closing { text-align:center; padding:40px 0 32px; }
+.movers-closing-num {
+  font-size:clamp(56px,12vw,96px); font-weight:700; letter-spacing:-0.02em;
+  color:var(--text); line-height:1; opacity:0.92;
+}
+.movers-closing-label {
+  font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.28em;
+  color:var(--accent2); margin-top:10px; opacity:0.8;
+}
 
 .signature-line { text-align:center; font-size:13px; color:var(--muted); letter-spacing:0.03em; padding:44px 0 14px; opacity:0.8; }
 footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:center; font-size:10px; color:var(--muted); font-family:'JetBrains Mono',monospace; line-height:1.9; }
@@ -148,7 +163,7 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
 <nav class="file-nav">
   <div class="file-nav-inner">
     <div class="nav-left">THE 45</div>
-    <div class="nav-right">45 CAPITAL MOVERS OBSERVED</div>
+    <div class="nav-right">OBSERVATION LOG</div>
   </div>
 </nav>
 
@@ -167,6 +182,8 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
       45社ではなく、45の資金主体。<br>
       その資金の動きは、公開書類を通じて後から姿を現す。
     </p>
+    <div class="hero-latest" id="hero-latest"></div>
+    <div class="hero-rule"></div>
   </div>
 
   <!-- ===== OBSERVE ===== -->
@@ -179,21 +196,23 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
       <div class="preview-loading">記録を読み込んでいます…</div>
     </div>
 
-    <a class="cta-link" href="observer.html">観測ログを見る →</a>
+    <a class="cta-link" href="observer.html">VIEW ALL OBSERVATIONS →</a>
   </div>
 
   <!-- ===== FILES ===== -->
-  <div class="section">
+  <div class="section bordered">
     <div class="section-eyebrow">FILES</div>
     <h2 class="section-title">記録</h2>
     <p class="section-desc">記録の中から、後になって意味を持った痕跡だけを、人間が編集した記録。</p>
 
     <div class="file-grid">
       <a class="file-card" href="file-001-berkshire-silence.html">
+        <div class="file-card-tag">OBSERVED → EDITED</div>
         <div class="file-card-stamp">FILE-001</div>
         <div class="file-card-title">バークシャーの沈黙</div>
       </a>
       <a class="file-card" href="file-002.html">
+        <div class="file-card-tag">OBSERVED → EDITED</div>
         <div class="file-card-stamp">FILE-002</div>
         <div class="file-card-title pending">（タイトル未定）</div>
       </a>
@@ -203,13 +222,18 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
   </div>
 
   <!-- ===== 45 CAPITAL MOVERS ===== -->
-  <div class="section">
+  <div class="section bordered">
     <div class="section-eyebrow">45 CAPITAL MOVERS</div>
     <h2 class="section-title">観測対象</h2>
     <p class="section-desc">45の資金主体を、継続して観測しています。</p>
 
     <div class="movers-grid" id="movers-grid">
       <div class="movers-loading">集計しています…</div>
+    </div>
+
+    <div class="movers-closing">
+      <div class="movers-closing-num">45</div>
+      <div class="movers-closing-label">CAPITAL MOVERS</div>
     </div>
 
     <a class="cta-link" href="observer.html">観測対象を見る →</a>
@@ -240,8 +264,8 @@ const TYPE_LABELS = {
 const GROUP_DEFS = [
   { key: "giant", label: "GIANT INSTITUTIONS", prefixes: ["A", "H", "I", "J"] },
   { key: "value_activist", label: "VALUE / ACTIVIST", prefixes: ["B", "E"] },
-  { key: "macro_hedge", label: "MACRO / HEDGE", prefixes: ["C", "D"] },
-  { key: "tech_growth", label: "TECH / GROWTH", prefixes: ["F"] },
+  { key: "macro_hedge", label: "MACRO / HEDGE", prefixes: ["C", "F"] },
+  { key: "quant_systematic", label: "QUANT / SYSTEMATIC", prefixes: ["D"] },
   { key: "strategic_other", label: "STRATEGIC / OTHER", prefixes: ["G", "K", "L"] },
 ];
 
@@ -295,23 +319,21 @@ function renderMoversSummary(funds) {
     </div>
   `).join("");
 
-  html += `
-    <div class="movers-total">
-      <span>45 CAPITAL MOVERS</span>
-      <span>${total}</span>
-    </div>
-  `;
-
   grid.innerHTML = html;
+
+  // 「45そのもの」を感じる締めの表示。合計は集計値をそのまま使う（ハードコードしない）。
+  document.querySelector(".movers-closing-num").textContent = total;
 }
 
 async function renderObserverPreview(funds) {
   const container = document.getElementById("preview-log");
+  const heroLatest = document.getElementById("hero-latest");
 
   // observer.html と同じ考え方: 変化がある主体だけ、実データを取得する。
   const fetchTargets = funds.filter(f => (f.observed_changes_summary?.total_count || 0) > 0);
 
   const entries = [];
+  let globalLatestDate = null;
 
   await Promise.all(fetchTargets.map(async (fund) => {
     const path = fund.observed_changes_summary.path;
@@ -328,12 +350,18 @@ async function renderObserverPreview(funds) {
     const latestFilingDate = changes.reduce((max, c) => c.filing_date > max ? c.filing_date : max, changes[0].filing_date);
     const latestChanges = changes.filter(c => c.filing_date === latestFilingDate);
 
+    if (!globalLatestDate || latestFilingDate > globalLatestDate) globalLatestDate = latestFilingDate;
+
     entries.push({
       fund_name: fund.display_name_ja,
       filing_date: latestFilingDate,
-      change: latestChanges[0], // トップページのプレビューは1主体につき1件だけ
+      changes: latestChanges, // トップページでは1主体につき最大2件まで表示
     });
   }));
+
+  if (globalLatestDate) {
+    heroLatest.textContent = `LATEST OBSERVATION — ${globalLatestDate}`;
+  }
 
   if (entries.length === 0) {
     container.innerHTML = '<div class="preview-empty">現在、表示できる記録がありません。</div>';
@@ -345,22 +373,25 @@ async function renderObserverPreview(funds) {
     return a.fund_name.localeCompare(b.fund_name, "ja");
   });
 
-  // トップページでは3件だけのプレビュー。全件は observer.html 側で見る。
+  // トップページでは3主体分だけのプレビュー。全件は observer.html 側で見る。
   const preview = entries.slice(0, 3);
 
   container.innerHTML = preview.map(entry => {
     const quarterLabel = filingDateToQuarterLabel(entry.filing_date);
-    const c = entry.change;
+    const rows = entry.changes.slice(0, 2).map(c => `
+      <div class="preview-change-row">
+        <span class="preview-security">${escapeHtml(c.security_name)}</span>
+        <span class="preview-type ${c.type}">${TYPE_LABELS[c.type] || c.type}</span>
+      </div>
+    `).join("");
+
     return `
       <div class="preview-entry">
         <div class="preview-entry-header">
           <span class="preview-fund">${escapeHtml(entry.fund_name)}</span>
           <span class="preview-quarter">${quarterLabel}</span>
         </div>
-        <div class="preview-change-row">
-          <span class="preview-security">${escapeHtml(c.security_name)}</span>
-          <span class="preview-type ${c.type}">${TYPE_LABELS[c.type] || c.type}</span>
-        </div>
+        ${rows}
       </div>
     `;
   }).join("");
