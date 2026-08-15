@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OBSERVER — THE 45</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --bg: #0D1113; --surface: #141A1C; --surface2: #1B2325; --border: #263033;
+  --accent: #4FB8B8; --accent2: #6FD0D0; --text: #D8E6E6; --muted: #6B8585;
+  --red: #D9697E; --violet: #9B8FFF; --violet-dim: #6B62A8;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text);
+  font-family:'Inter',sans-serif; min-height:100vh; line-height:1.7;
+}
+body::before {
+  content:''; position:fixed; inset:0;
+  background:radial-gradient(ellipse 80% 50% at 50% -10%, rgba(79,184,184,0.06) 0%, transparent 60%);
+  pointer-events:none; z-index:0;
+}
+
+.file-nav {
+  position:sticky; top:0; z-index:100;
+  background:rgba(13,17,19,0.95); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border); height:34px; display:flex; align-items:center;
+}
+.file-nav-inner {
+  max-width:760px; margin:0 auto; padding:0 20px; width:100%;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.nav-left {
+  font-family:'JetBrains Mono',monospace; font-size:9.5px;
+  letter-spacing:0.12em; color:var(--muted); display:flex; align-items:center; gap:12px;
+}
+.nav-left .nav-current { color:var(--text); opacity:0.65; }
+
+.page-header { padding:28px 0 20px; border-bottom:1px solid var(--border); }
+.page-header-inner {
+  max-width:760px; margin:0 auto; padding:0 20px;
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;
+}
+.logo { font-size:19px; font-weight:700; letter-spacing:0.12em; color:var(--text); display:flex; align-items:center; gap:10px; }
+.logo-num { color:var(--accent); }
+.logo-divider { width:1px; height:18px; background:var(--border); }
+.logo-sub { font-size:10px; color:var(--muted); letter-spacing:0.15em; font-weight:500; font-family:'JetBrains Mono',monospace; }
+.back-link { font-size:11px; color:var(--muted); text-decoration:none; font-family:'JetBrains Mono',monospace; letter-spacing:0.06em; }
+.back-link:hover { color:var(--accent2); }
+
+.container { max-width:760px; margin:0 auto; padding:0 20px; position:relative; z-index:1; }
+
+.observer-intro { padding:44px 0 32px; border-bottom:1px solid var(--border); }
+.observer-label {
+  font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.24em;
+  color:var(--accent2); text-transform:uppercase; margin-bottom:14px; opacity:0.85;
+}
+.observer-title { font-size:clamp(20px,4vw,26px); font-weight:700; letter-spacing:-0.01em; margin-bottom:14px; }
+.observer-desc { font-size:14px; line-height:1.8; color:var(--muted); max-width:520px; }
+
+.section-label {
+  font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.2em;
+  text-transform:uppercase; color:var(--muted); opacity:0.5;
+  padding:28px 0 14px;
+}
+
+.log-entry {
+  padding:20px 0; border-bottom:1px solid rgba(255,255,255,0.05);
+  display:flex; flex-direction:column; gap:8px;
+}
+.log-entry-header {
+  display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap;
+}
+.log-fund-name { font-size:15px; font-weight:600; color:var(--text); }
+.log-quarter {
+  font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--muted); opacity:0.6; letter-spacing:0.04em;
+}
+.log-changes { display:flex; flex-direction:column; gap:6px; }
+.log-change-row {
+  display:flex; align-items:baseline; justify-content:space-between; gap:14px;
+  font-family:'JetBrains Mono',monospace; font-size:12px;
+}
+.log-security { color:var(--text); opacity:0.85; }
+.log-type { letter-spacing:0.04em; font-size:11px; text-align:right; flex-shrink:0; }
+.log-type.new { color:var(--accent2); }
+.log-type.increased { color:var(--accent2); opacity:0.75; }
+.log-type.decreased { color:var(--muted); }
+.log-type.exited { color:var(--red); }
+
+.log-more {
+  font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--muted);
+  opacity:0.45; padding-top:2px;
+}
+
+.log-files { display:flex; gap:8px; margin-top:4px; flex-wrap:wrap; }
+.log-file-link {
+  font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em;
+  color:var(--accent2); text-decoration:none; border:1px solid rgba(79,184,184,0.25);
+  padding:3px 9px; border-radius:3px;
+}
+.log-file-link:hover { border-color:var(--accent2); }
+
+.empty-state, .loading-state {
+  padding:60px 0; text-align:center; color:var(--muted); font-size:13px;
+  font-family:'JetBrains Mono',monospace; letter-spacing:0.04em; opacity:0.5;
+}
+
+.signature-line { text-align:center; font-size:13px; color:var(--muted); letter-spacing:0.03em; padding:44px 0 14px; opacity:0.8; }
+footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:center; font-size:10px; color:var(--muted); font-family:'JetBrains Mono',monospace; line-height:1.9; }
+</style>
+</head>
+<body>
+
+<nav class="file-nav">
+  <div class="file-nav-inner">
+    <div class="nav-left">
+      <span>THE 45</span>
+      <span style="opacity:0.3">/</span>
+      <span class="nav-current">OBSERVER</span>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="logo"><span class="logo-num">THE 45</span><div class="logo-divider"></div><span class="logo-sub">OBSERVER</span></div>
+    <a class="back-link" href="index.html">← 観測トップへ戻る</a>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="observer-intro">
+    <div class="observer-label">OBSERVATION LOG</div>
+    <h1 class="observer-title">観測ログ</h1>
+    <p class="observer-desc">
+      45の資金主体に残された、直近の記録をそのまま並べています。<br>
+      評価はしていません。ここにあるのは、事実だけです。
+    </p>
+  </div>
+
+  <div id="log-container">
+    <div class="loading-state">記録を読み込んでいます…</div>
+  </div>
+
+  <p class="signature-line">今日もまた、誰かの足跡が残る。</p>
+
+</div>
+
+<footer>
+  <div class="container">
+    <p>© 2026 THE 45 PROJECT.</p>
+    <p style="font-size:9px;margin-top:4px;opacity:0.4;">当サイトのデータはSEC公開書類に基づいています。投資勧誘を目的としたものではありません。</p>
+  </div>
+</footer>
+
+<script>
+// ===== 表示ラベル（事実の名称そのもの。評価語は含まない） =====
+const TYPE_LABELS = {
+  new: "New Position",
+  increased: "Increased",
+  decreased: "Decreased",
+  exited: "Exited",
+};
+
+// 1主体あたり、ログに表示する変化の最大件数。
+// これは「重要な変化を選ぶ」基準ではなく、1エントリが際限なく長くならないための
+// 表示上の上限（超えた分は「ほか◯件」とだけ示す）。
+const MAX_CHANGES_PER_ENTRY = 6;
+
+function filingDateToQuarterLabel(filingDate) {
+  const [y, m] = filingDate.split("-");
+  const q = Math.floor((parseInt(m, 10) - 1) / 3) + 1;
+  return `${y} Q${q}`;
+}
+
+async function loadObserverLog() {
+  const container = document.getElementById("log-container");
+
+  let fundsData;
+  try {
+    const res = await fetch("funds.json");
+    fundsData = await res.json();
+  } catch (e) {
+    container.innerHTML = '<div class="empty-state">funds.jsonを読み込めませんでした。</div>';
+    return;
+  }
+
+  const funds = fundsData.funds || [];
+
+  // observed_changes_summary.total_count > 0 の主体だけ、実データファイルを取得する。
+  // 0件の主体まで律儀にフェッチする必要はない（事実として変化が無いだけなので）。
+  //
+  // NOTE（将来の改善予定・今回は未実装）:
+  // 現状は data/observed_changes/{fund_id}.json を「全件」取得してから、
+  // クライアント側で最新四半期分だけに絞り込んでいる。
+  // BlackRock・Vanguardのように数万〜数十万件規模の主体では、この全件ダウンロードが
+  // 将来的にページの読み込みを重くする可能性がある。
+  //
+  // 改善案: compute_observed_changes.py（データ取得基盤側）で、
+  //   data/observed_changes/{fund_id}.json      … 全期間（既存・変更なし）
+  //   data/observed_changes/latest/{fund_id}.json … 直近1〜2四半期分のみ（新規・軽量）
+  // の2種類を生成するようにし、Observer側は後者だけを読むようにする。
+  // データ層に「最新四半期だけの軽量版」という新しい成果物を追加する形になるので、
+  // 実施する際は「事実データの複製」であって「解釈の追加」ではないことを確認してから進める。
+  const fetchTargets = funds.filter(f => (f.observed_changes_summary?.total_count || 0) > 0);
+
+  const entries = [];
+
+  await Promise.all(fetchTargets.map(async (fund) => {
+    const path = fund.observed_changes_summary.path;
+    let changes;
+    try {
+      const res = await fetch(path);
+      const json = await res.json();
+      changes = json.changes || [];
+    } catch (e) {
+      return; // このファイルだけ読めなくても、他の主体の表示は止めない
+    }
+    if (changes.length === 0) return;
+
+    // この主体にとっての「最新四半期」＝ observed_changes 内で一番新しい filing_date。
+    // 過去何年分のバックフィルがあっても、直近1四半期分だけをログに載せる。
+    const latestFilingDate = changes.reduce((max, c) => c.filing_date > max ? c.filing_date : max, changes[0].filing_date);
+    const latestChanges = changes.filter(c => c.filing_date === latestFilingDate);
+
+    entries.push({
+      fund_id: fund.id,
+      fund_name: fund.display_name_ja,
+      filing_date: latestFilingDate,
+      changes: latestChanges,
+      related_files: fund.related_files || [],
+    });
+  }));
+
+  if (entries.length === 0) {
+    container.innerHTML = '<div class="empty-state">現在、表示できる観測記録がありません。</div>';
+    return;
+  }
+
+  // 表示ルール: 時系列（提出日が新しい順）→ ファンド名
+  entries.sort((a, b) => {
+    if (a.filing_date !== b.filing_date) return b.filing_date.localeCompare(a.filing_date);
+    return a.fund_name.localeCompare(b.fund_name, "ja");
+  });
+
+  let html = '<div class="section-label">最新四半期</div>';
+
+  for (const entry of entries) {
+    const quarterLabel = filingDateToQuarterLabel(entry.filing_date);
+    const shown = entry.changes.slice(0, MAX_CHANGES_PER_ENTRY);
+    const remaining = entry.changes.length - shown.length;
+
+    const changeRows = shown.map(c => `
+      <div class="log-change-row">
+        <span class="log-security">${escapeHtml(c.security_name)}</span>
+        <span class="log-type ${c.type}">${TYPE_LABELS[c.type] || c.type}</span>
+      </div>
+    `).join("");
+
+    const moreRow = remaining > 0
+      ? `<div class="log-more">ほか${remaining}件</div>`
+      : "";
+
+    const fileLinks = entry.related_files.length > 0
+      ? `<div class="log-files">${entry.related_files.map(fid => {
+          // href: 実ファイル名そのまま（file-001-berkshire-silence.html でも
+          //       file-002.html でも、related_files に入っている値をそのまま使う）。
+          // 表示テキスト: 先頭の "file-NNN" 部分だけを抜き出して "FILE-NNN" と表示する。
+          //   サフィックス付き（file-001-berkshire-silence）でも
+          //   サフィックスなし（file-002）でも、どちらの命名でも正しく短く表示できる。
+          const match = fid.match(/^file-(\d+)/i);
+          const label = match ? `FILE-${match[1]}` : fid.toUpperCase();
+          return `<a class="log-file-link" href="${fid}.html">${label}</a>`;
+        }).join("")}</div>`
+      : "";
+
+    html += `
+      <div class="log-entry">
+        <div class="log-entry-header">
+          <span class="log-fund-name">${escapeHtml(entry.fund_name)}</span>
+          <span class="log-quarter">${quarterLabel} — ${entry.filing_date}</span>
+        </div>
+        <div class="log-changes">
+          ${changeRows}
+          ${moreRow}
+        </div>
+        ${fileLinks}
+      </div>
+    `;
+  }
+
+  container.innerHTML = html;
+}
+
+function escapeHtml(str) {
+  const div = document.createElement("div");
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+loadObserverLog();
+</script>
+</body>
+</html>
