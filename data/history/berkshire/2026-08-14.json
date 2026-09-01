@@ -1,0 +1,209 @@
+{
+  "fund_id": "berkshire",
+  "filing_date": "2026-08-14",
+  "holdings": [
+    {
+      "name_of_issuer": "ALLY FINL INC",
+      "title_of_class": "COM",
+      "cusip": "02005N100",
+      "value_usd": 1240650000,
+      "shares": 27000000
+    },
+    {
+      "name_of_issuer": "ALPHABET INC",
+      "title_of_class": "CAP STK CL C",
+      "cusip": "02079K107",
+      "value_usd": 9606489032,
+      "shares": 27188433
+    },
+    {
+      "name_of_issuer": "ALPHABET INC",
+      "title_of_class": "CAP STK CL A",
+      "cusip": "02079K305",
+      "value_usd": 28157599351,
+      "shares": 78791167
+    },
+    {
+      "name_of_issuer": "AMERICAN EXPRESS CO",
+      "title_of_class": "COM",
+      "cusip": "025816109",
+      "value_usd": 51282319275,
+      "shares": 151610700
+    },
+    {
+      "name_of_issuer": "APPLE INC",
+      "title_of_class": "COM",
+      "cusip": "037833100",
+      "value_usd": 65950296923,
+      "shares": 227917808
+    },
+    {
+      "name_of_issuer": "BANK OF AMER CORP",
+      "title_of_class": "COM",
+      "cusip": "060505104",
+      "value_usd": 27543790975,
+      "shares": 483394015
+    },
+    {
+      "name_of_issuer": "CAPITAL ONE FINL CORP",
+      "title_of_class": "COM",
+      "cusip": "14040H105",
+      "value_usd": 601860000,
+      "shares": 3000000
+    },
+    {
+      "name_of_issuer": "CHEVRON CORPORATION",
+      "title_of_class": "COM",
+      "cusip": "166764100",
+      "value_usd": 13986141890,
+      "shares": 84375856
+    },
+    {
+      "name_of_issuer": "COCA COLA CO",
+      "title_of_class": "COM",
+      "cusip": "191216100",
+      "value_usd": 32508000000,
+      "shares": 400000000
+    },
+    {
+      "name_of_issuer": "D R HORTON INC",
+      "title_of_class": "COM",
+      "cusip": "23331A109",
+      "value_usd": 580504,
+      "shares": 3564
+    },
+    {
+      "name_of_issuer": "DAVITA INC",
+      "title_of_class": "COM",
+      "cusip": "23918K108",
+      "value_usd": 6425268898,
+      "shares": 28880209
+    },
+    {
+      "name_of_issuer": "DELTA AIR LINES INC",
+      "title_of_class": "COM NEW",
+      "cusip": "247361702",
+      "value_usd": 5368591200,
+      "shares": 57320000
+    },
+    {
+      "name_of_issuer": "JEFFERIES FINANCIAL GROUP IN",
+      "title_of_class": "COM",
+      "cusip": "47233W109",
+      "value_usd": 21669229,
+      "shares": 433558
+    },
+    {
+      "name_of_issuer": "KRAFT HEINZ CO",
+      "title_of_class": "COM",
+      "cusip": "500754106",
+      "value_usd": 7691494401,
+      "shares": 325634818
+    },
+    {
+      "name_of_issuer": "KROGER CO",
+      "title_of_class": "COM",
+      "cusip": "501044101",
+      "value_usd": 2165670000,
+      "shares": 39000000
+    },
+    {
+      "name_of_issuer": "LENNAR CORP",
+      "title_of_class": "CL A",
+      "cusip": "526057104",
+      "value_usd": 1186481443,
+      "shares": 13111741
+    },
+    {
+      "name_of_issuer": "LENNAR CORP",
+      "title_of_class": "CL B",
+      "cusip": "526057302",
+      "value_usd": 26445959,
+      "shares": 298117
+    },
+    {
+      "name_of_issuer": "LIBERTY LIVE HOLDINGS INC",
+      "title_of_class": "COM SER A",
+      "cusip": "530909100",
+      "value_usd": 504941901,
+      "shares": 4986588
+    },
+    {
+      "name_of_issuer": "LIBERTY LIVE HOLDINGS INC",
+      "title_of_class": "COM SHS SER C",
+      "cusip": "530909308",
+      "value_usd": 1118425787,
+      "shares": 10587143
+    },
+    {
+      "name_of_issuer": "LOUISIANA PAC CORP",
+      "title_of_class": "COM",
+      "cusip": "546347105",
+      "value_usd": 445592617,
+      "shares": 5664793
+    },
+    {
+      "name_of_issuer": "MACYS INC",
+      "title_of_class": "COM",
+      "cusip": "55616P104",
+      "value_usd": 173031882,
+      "shares": 7347426
+    },
+    {
+      "name_of_issuer": "MOODYS CORP",
+      "title_of_class": "COM",
+      "cusip": "615369105",
+      "value_usd": 11173435852,
+      "shares": 24669778
+    },
+    {
+      "name_of_issuer": "NVR INC",
+      "title_of_class": "COM",
+      "cusip": "62944T105",
+      "value_usd": 75710501,
+      "shares": 11112
+    },
+    {
+      "name_of_issuer": "NEW YORK TIMES CO MTN BE",
+      "title_of_class": "CL A",
+      "cusip": "650111107",
+      "value_usd": 1098686000,
+      "shares": 15700000
+    },
+    {
+      "name_of_issuer": "NUCOR CORP",
+      "title_of_class": "COM",
+      "cusip": "670346105",
+      "value_usd": 413814258,
+      "shares": 1857752
+    },
+    {
+      "name_of_issuer": "OCCIDENTAL PETE CORP",
+      "title_of_class": "COM",
+      "cusip": "674599105",
+      "value_usd": 12868205304,
+      "shares": 264941431
+    },
+    {
+      "name_of_issuer": "SIRIUSXM HOLDINGS INC",
+      "title_of_class": "COMMON STOCK",
+      "cusip": "829933100",
+      "value_usd": 3686802237,
+      "shares": 124807117
+    },
+    {
+      "name_of_issuer": "VERISIGN INC",
+      "title_of_class": "COM",
+      "cusip": "92343E102",
+      "value_usd": 2261494212,
+      "shares": 8989880
+    },
+    {
+      "name_of_issuer": "CHUBB LIMITED",
+      "title_of_class": "COM",
+      "cusip": "H1467J104",
+      "value_usd": 11670066615,
+      "shares": 34249183
+    }
+  ]
+}
