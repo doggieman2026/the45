@@ -2,7 +2,7 @@
   "_meta": {
     "schema_version": "1.0",
     "description": "THE 45 PROJECT データファイル。SEC EDGAR 13F-HR から GitHub Actions で自動更新される想定。",
-    "last_updated": "2026-09-01",
+    "last_updated": "2026-10-01",
     "data_source": "SEC EDGAR Form 13F-HR (https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany)",
     "disclaimer": "投資勧誘目的ではありません。歴史のファクトチェックを目的としています。"
   },
@@ -6943,14 +6943,14 @@
         "vanguard"
       ],
       "fund_values": {
-        "fidelity": "+約3.2兆円",
         "goldmansachs": "+約7970億円",
-        "capitalgroup": "+約8696億円",
         "vanguard": "+約6.0兆円",
-        "jpmorgan": "+約4.9兆円",
-        "statestreet": "+約3.1兆円",
-        "soros": "+約72億円",
+        "fidelity": "+約3.2兆円",
         "berkshire": "+約1.9兆円",
+        "soros": "+約72億円",
+        "capitalgroup": "+約8696億円",
+        "statestreet": "+約3.1兆円",
+        "jpmorgan": "+約4.9兆円",
         "blackrock": "+約2.1兆円"
       },
       "first_mover": {
@@ -7209,13 +7209,13 @@
         "vanguard"
       ],
       "fund_values": {
-        "fidelity": "+約1.8兆円",
         "goldmansachs": "+約4769億円",
-        "capitalgroup": "+約5394億円",
         "vanguard": "+約4.7兆円",
-        "jpmorgan": "+約7.3兆円",
-        "statestreet": "+約2.1兆円",
+        "fidelity": "+約1.8兆円",
         "berkshire": "+約1.3兆円",
+        "capitalgroup": "+約5394億円",
+        "statestreet": "+約2.1兆円",
+        "jpmorgan": "+約7.3兆円",
         "blackrock": "+約1.6兆円"
       },
       "first_mover": {
@@ -7469,13 +7469,13 @@
         "vanguard"
       ],
       "fund_values": {
-        "fidelity": "+約4.8兆円",
         "goldmansachs": "+約1.3兆円",
-        "capitalgroup": "+約1.0兆円",
         "vanguard": "+約1.2兆円",
-        "jpmorgan": "+約13.1兆円",
-        "statestreet": "+約4.3兆円",
+        "fidelity": "+約4.8兆円",
         "soros": "+約159億円",
+        "capitalgroup": "+約1.0兆円",
+        "statestreet": "+約4.3兆円",
+        "jpmorgan": "+約13.1兆円",
         "blackrock": "+約9.3兆円"
       },
       "first_mover": {
@@ -7728,12 +7728,12 @@
         "vanguard"
       ],
       "fund_values": {
-        "fidelity": "+約2.4兆円",
         "goldmansachs": "+約1.2兆円",
         "vanguard": "+約4.7兆円",
-        "jpmorgan": "+約9.7兆円",
-        "statestreet": "+約3.8兆円",
+        "fidelity": "+約2.4兆円",
         "berkshire": "+約1.2兆円",
+        "statestreet": "+約3.8兆円",
+        "jpmorgan": "+約9.7兆円",
         "blackrock": "+約6.6兆円"
       },
       "first_mover": {
@@ -7986,12 +7986,12 @@
         "vanguard"
       ],
       "fund_values": {
-        "fidelity": "+約6778億円",
         "goldmansachs": "+約5966億円",
-        "capitalgroup": "+約8930億円",
         "vanguard": "+約6119億円",
-        "jpmorgan": "+約1.4兆円",
+        "fidelity": "+約6778億円",
+        "capitalgroup": "+約8930億円",
         "statestreet": "+約2.2兆円",
+        "jpmorgan": "+約1.4兆円",
         "blackrock": "+約4941億円"
       },
       "first_mover": {
@@ -8235,12 +8235,12 @@
         "vanguard"
       ],
       "fund_values": {
-        "fidelity": "+約2.4兆円",
         "goldmansachs": "+約6387億円",
-        "capitalgroup": "+約1.0兆円",
         "vanguard": "+約1.4兆円",
-        "jpmorgan": "+約5.3兆円",
+        "fidelity": "+約2.4兆円",
+        "capitalgroup": "+約1.0兆円",
         "statestreet": "+約2.3兆円",
+        "jpmorgan": "+約5.3兆円",
         "blackrock": "+約1.3兆円"
       },
       "first_mover": {
@@ -8494,12 +8494,12 @@
         "vanguard"
       ],
       "fund_values": {
-        "fidelity": "+約1.5兆円",
         "goldmansachs": "+約5556億円",
-        "capitalgroup": "+約3574億円",
         "vanguard": "+約3.9兆円",
-        "jpmorgan": "+約2.3兆円",
+        "fidelity": "+約1.5兆円",
+        "capitalgroup": "+約3574億円",
         "statestreet": "+約1.6兆円",
+        "jpmorgan": "+約2.3兆円",
         "blackrock": "+約1.3兆円"
       },
       "first_mover": {
@@ -8743,12 +8743,12 @@
         "vanguard"
       ],
       "fund_values": {
-        "fidelity": "+約3.0兆円",
         "goldmansachs": "+約4.3兆円",
-        "capitalgroup": "+約4521億円",
         "vanguard": "+約1.9兆円",
-        "jpmorgan": "+約4.4兆円",
+        "fidelity": "+約3.0兆円",
+        "capitalgroup": "+約4521億円",
         "statestreet": "+約6.0兆円",
+        "jpmorgan": "+約4.4兆円",
         "blackrock": "+約2197億円"
       },
       "first_mover": {
@@ -8991,11 +8991,11 @@
         "vanguard"
       ],
       "fund_values": {
-        "fidelity": "+約4998億円",
         "goldmansachs": "+約3498億円",
         "vanguard": "+約6304億円",
-        "jpmorgan": "+約2.6兆円",
+        "fidelity": "+約4998億円",
         "statestreet": "+約1.0兆円",
+        "jpmorgan": "+約2.6兆円",
         "blackrock": "+約6507億円"
       },
       "first_mover": {
@@ -9245,10 +9245,10 @@
         "vanguard"
       ],
       "fund_values": {
-        "fidelity": "-約1256億円",
         "goldmansachs": "-約822億円",
-        "capitalgroup": "-約1285億円",
         "vanguard": "-約3235億円",
+        "fidelity": "-約1256億円",
+        "capitalgroup": "-約1285億円",
         "statestreet": "-約3354億円"
       },
       "first_mover": null,
@@ -9483,10 +9483,10 @@
         "vanguard"
       ],
       "fund_values": {
-        "fidelity": "+約5559億円",
         "goldmansachs": "+約3313億円",
-        "capitalgroup": "+約4393億円",
         "vanguard": "+約5568億円",
+        "fidelity": "+約5559億円",
+        "capitalgroup": "+約4393億円",
         "statestreet": "+約1.2兆円"
       },
       "first_mover": null,
@@ -9720,8 +9720,8 @@
         "statestreet"
       ],
       "fund_values": {
-        "fidelity": "+約9743億円",
         "goldmansachs": "+約5350億円",
+        "fidelity": "+約9743億円",
         "capitalgroup": "+約2252億円",
         "statestreet": "+約1.5兆円",
         "blackrock": "+約2419億円"
@@ -9957,11 +9957,11 @@
         "vanguard"
       ],
       "fund_values": {
-        "fidelity": "+約1.1兆円",
         "goldmansachs": "+約5528億円",
         "vanguard": "+約7378億円",
-        "jpmorgan": "+約2.8兆円",
-        "statestreet": "+約2.0兆円"
+        "fidelity": "+約1.1兆円",
+        "statestreet": "+約2.0兆円",
+        "jpmorgan": "+約2.8兆円"
       },
       "first_mover": null,
       "filing_date": "2026-08-14",
@@ -10185,10 +10185,10 @@
         "vanguard"
       ],
       "fund_values": {
-        "fidelity": "+約5172億円",
-        "statestreet": "+約1.8兆円",
+        "goldmansachs": "+約2626億円",
         "vanguard": "+約6976億円",
-        "goldmansachs": "+約2626億円"
+        "fidelity": "+約5172億円",
+        "statestreet": "+約1.8兆円"
       },
       "first_mover": null,
       "filing_date": "2026-08-14",
@@ -10417,10 +10417,10 @@
         "statestreet"
       ],
       "fund_values": {
-        "fidelity": "-約1345億円",
-        "statestreet": "-約3293億円",
+        "blackrock": "-約1985億円",
         "goldmansachs": "-約600億円",
-        "blackrock": "-約1985億円"
+        "statestreet": "-約3293億円",
+        "fidelity": "-約1345億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-14",
@@ -10651,9 +10651,9 @@
         "statestreet"
       ],
       "fund_values": {
+        "goldmansachs": "-約2510億円",
         "soros": "-約121億円",
         "capitalgroup": "-約2002億円",
-        "goldmansachs": "-約2510億円",
         "statestreet": "-約1.1兆円"
       },
       "first_mover": null,
@@ -10879,10 +10879,10 @@
         "statestreet"
       ],
       "fund_values": {
-        "fidelity": "+約8309億円",
-        "statestreet": "+約1.0兆円",
+        "blackrock": "+約2453億円",
         "goldmansachs": "+約2689億円",
-        "blackrock": "+約2453億円"
+        "statestreet": "+約1.0兆円",
+        "fidelity": "+約8309億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-14",
@@ -11109,10 +11109,10 @@
         "jpmorgan"
       ],
       "fund_values": {
-        "fidelity": "+約1.2兆円",
-        "jpmorgan": "+約1.6兆円",
+        "goldmansachs": "+約2.3兆円",
         "capitalgroup": "+約2439億円",
-        "goldmansachs": "+約2.3兆円"
+        "fidelity": "+約1.2兆円",
+        "jpmorgan": "+約1.6兆円"
       },
       "first_mover": null,
       "filing_date": "2026-08-14",
@@ -11345,10 +11345,10 @@
         "statestreet"
       ],
       "fund_values": {
-        "fidelity": "+約1.2兆円",
-        "jpmorgan": "+約1.7兆円",
         "goldmansachs": "+約3723億円",
-        "statestreet": "+約9319億円"
+        "fidelity": "+約1.2兆円",
+        "statestreet": "+約9319億円",
+        "jpmorgan": "+約1.7兆円"
       },
       "first_mover": null,
       "filing_date": "2026-08-14",
@@ -11577,10 +11577,10 @@
         "statestreet"
       ],
       "fund_values": {
-        "fidelity": "-約1282億円",
-        "statestreet": "-約2824億円",
+        "blackrock": "-約3114億円",
         "capitalgroup": "-約684億円",
-        "blackrock": "-約3114億円"
+        "fidelity": "-約1282億円",
+        "statestreet": "-約2824億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-13",
@@ -11807,10 +11807,10 @@
         "statestreet"
       ],
       "fund_values": {
-        "fidelity": "+約6997億円",
-        "statestreet": "+約8870億円",
+        "goldmansachs": "+約3149億円",
         "capitalgroup": "+約2892億円",
-        "goldmansachs": "+約3149億円"
+        "fidelity": "+約6997億円",
+        "statestreet": "+約8870億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-14",
@@ -12034,9 +12034,9 @@
         "statestreet"
       ],
       "fund_values": {
-        "statestreet": "-約1240億円",
+        "blackrock": "-約2335億円",
         "capitalgroup": "-約2642億円",
-        "blackrock": "-約2335億円"
+        "statestreet": "-約1240億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-12",
@@ -12261,9 +12261,9 @@
         "statestreet"
       ],
       "fund_values": {
+        "goldmansachs": "-約593億円",
         "fidelity": "-約4061億円",
-        "statestreet": "-約1911億円",
-        "goldmansachs": "-約593億円"
+        "statestreet": "-約1911億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-14",
@@ -12488,9 +12488,9 @@
         "statestreet"
       ],
       "fund_values": {
-        "statestreet": "-約1698億円",
+        "goldmansachs": "-約436億円",
         "capitalgroup": "-約1082億円",
-        "goldmansachs": "-約436億円"
+        "statestreet": "-約1698億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-14",
@@ -12715,8 +12715,8 @@
         "statestreet"
       ],
       "fund_values": {
-        "fidelity": "-約2116億円",
         "statestreet": "-約1.1兆円",
+        "fidelity": "-約2116億円",
         "berkshire": "-約5207億円"
       },
       "first_mover": null,
@@ -12946,9 +12946,9 @@
         "statestreet"
       ],
       "fund_values": {
+        "blackrock": "+約2865億円",
         "fidelity": "+約6968億円",
-        "statestreet": "+約6738億円",
-        "blackrock": "+約2865億円"
+        "statestreet": "+約6738億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-13",
@@ -13173,9 +13173,9 @@
         "statestreet"
       ],
       "fund_values": {
+        "capitalgroup": "+約2567億円",
         "fidelity": "+約5357億円",
-        "statestreet": "+約6737億円",
-        "capitalgroup": "+約2567億円"
+        "statestreet": "+約6737億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-13",
@@ -13400,9 +13400,9 @@
         "statestreet"
       ],
       "fund_values": {
-        "jpmorgan": "-約93億円",
         "soros": "-約115億円",
-        "statestreet": "-約1133億円"
+        "statestreet": "-約1133億円",
+        "jpmorgan": "-約93億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-14",
@@ -13623,9 +13623,9 @@
         "statestreet"
       ],
       "fund_values": {
+        "goldmansachs": "+約5614億円",
         "fidelity": "+約5938億円",
-        "statestreet": "+約1.5兆円",
-        "goldmansachs": "+約5614億円"
+        "statestreet": "+約1.5兆円"
       },
       "first_mover": null,
       "filing_date": "2026-08-14",
@@ -13850,9 +13850,9 @@
         "statestreet"
       ],
       "fund_values": {
-        "statestreet": "-約1889億円",
+        "blackrock": "-約2298億円",
         "goldmansachs": "-約683億円",
-        "blackrock": "-約2298億円"
+        "statestreet": "-約1889億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-14",
@@ -14077,9 +14077,9 @@
         "vanguard"
       ],
       "fund_values": {
-        "jpmorgan": "+約1.4兆円",
         "vanguard": "+約3659億円",
-        "statestreet": "+約6202億円"
+        "statestreet": "+約6202億円",
+        "jpmorgan": "+約1.4兆円"
       },
       "first_mover": null,
       "filing_date": "2026-08-12",
@@ -14304,9 +14304,9 @@
         "statestreet"
       ],
       "fund_values": {
+        "goldmansachs": "+約2.5兆円",
         "fidelity": "+約1.4兆円",
-        "statestreet": "+約1.5兆円",
-        "goldmansachs": "+約2.5兆円"
+        "statestreet": "+約1.5兆円"
       },
       "first_mover": null,
       "filing_date": "2026-08-14",
@@ -14523,9 +14523,9 @@
         "statestreet"
       ],
       "fund_values": {
-        "jpmorgan": "+約1.4兆円",
+        "blackrock": "+約2455億円",
         "statestreet": "+約7331億円",
-        "blackrock": "+約2455億円"
+        "jpmorgan": "+約1.4兆円"
       },
       "first_mover": null,
       "filing_date": "2026-08-12",
@@ -14749,8 +14749,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "berkshire": "+約3757億円",
-        "vanguard": "+約5137億円"
+        "vanguard": "+約5137億円",
+        "berkshire": "+約3757億円"
       },
       "first_mover": {
         "fund_id": "vanguard",
@@ -14991,8 +14991,8 @@
         "fidelity"
       ],
       "fund_values": {
-        "fidelity": "-約2943億円",
-        "blackrock": "-約2365億円"
+        "blackrock": "-約2365億円",
+        "fidelity": "-約2943億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-13",
@@ -15216,8 +15216,8 @@
         "statestreet"
       ],
       "fund_values": {
-        "statestreet": "-約2569億円",
-        "goldmansachs": "-約454億円"
+        "goldmansachs": "-約454億円",
+        "statestreet": "-約2569億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-14",
@@ -15430,8 +15430,8 @@
         "fidelity"
       ],
       "fund_values": {
-        "fidelity": "-約2420億円",
-        "capitalgroup": "-約5143億円"
+        "capitalgroup": "-約5143億円",
+        "fidelity": "-約2420億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-13",
@@ -15648,8 +15648,8 @@
         "statestreet"
       ],
       "fund_values": {
-        "statestreet": "-約1166億円",
-        "capitalgroup": "-約1714億円"
+        "capitalgroup": "-約1714億円",
+        "statestreet": "-約1166億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-12",
@@ -15874,8 +15874,8 @@
         "soros"
       ],
       "fund_values": {
-        "jpmorgan": "-約57億円",
-        "soros": "-約104億円"
+        "soros": "-約104億円",
+        "jpmorgan": "-約57億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-14",
@@ -16092,8 +16092,8 @@
         "soros"
       ],
       "fund_values": {
-        "soros": "-約239億円",
-        "goldmansachs": "-約776億円"
+        "goldmansachs": "-約776億円",
+        "soros": "-約239億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-14",
@@ -16306,8 +16306,8 @@
         "statestreet"
       ],
       "fund_values": {
-        "statestreet": "+約8354億円",
-        "capitalgroup": "+約5007億円"
+        "capitalgroup": "+約5007億円",
+        "statestreet": "+約8354億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-12",
@@ -16528,8 +16528,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "statestreet": "-約1285億円",
-        "vanguard": "-約2881億円"
+        "vanguard": "-約2881億円",
+        "statestreet": "-約1285億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-07",
@@ -16742,8 +16742,8 @@
         "statestreet"
       ],
       "fund_values": {
-        "statestreet": "+約5815億円",
-        "blackrock": "+約4648億円"
+        "blackrock": "+約4648億円",
+        "statestreet": "+約5815億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-07",
@@ -16963,8 +16963,8 @@
         "fidelity"
       ],
       "fund_values": {
-        "fidelity": "-約2360億円",
-        "capitalgroup": "-約1996億円"
+        "capitalgroup": "-約1996億円",
+        "fidelity": "-約2360億円"
       },
       "first_mover": null,
       "filing_date": "2026-08-13",
@@ -17185,8 +17185,8 @@
         "vanguard"
       ],
       "fund_values": {
-        "vanguard": "-約8324億円",
-        "blackrock": "-約3938億円"
+        "blackrock": "-約3938億円",
+        "vanguard": "-約8324億円"
       },
       "first_mover": {
         "fund_id": "vanguard",
