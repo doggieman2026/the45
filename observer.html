@@ -54,12 +54,12 @@ body::before {
 
 .container { max-width:760px; margin:0 auto; padding:0 20px; position:relative; z-index:1; }
 
-.observer-intro { padding:44px 0 32px; border-bottom:1px solid var(--border); }
+.observer-intro { padding:32px 0 22px; border-bottom:1px solid var(--border); }
 .observer-label {
   font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.24em;
   color:var(--accent2); text-transform:uppercase; margin-bottom:14px; opacity:0.85;
 }
-.observer-title { font-size:clamp(20px,4vw,26px); font-weight:700; letter-spacing:-0.01em; margin-bottom:14px; }
+.observer-title { font-size:clamp(20px,4vw,26px); font-weight:700; letter-spacing:-0.01em; margin-bottom:10px; }
 .observer-desc { font-size:14px; line-height:1.8; color:var(--muted); max-width:520px; }
 
 .section-label {
@@ -68,17 +68,29 @@ body::before {
   padding:28px 0 14px;
 }
 
-.log-entry {
-  padding:20px 0; border-bottom:1px solid rgba(255,255,255,0.05);
-  display:flex; flex-direction:column; gap:8px;
+.log-entry { padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.05); }
+.log-toggle {
+  width:100%; background:none; border:0; color:inherit; font:inherit; text-align:left; cursor:pointer;
+  display:grid; grid-template-columns:1fr auto; gap:4px 12px; align-items:start; padding:14px 0 10px;
 }
-.log-entry-header {
-  display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap;
-}
+.log-toggle:focus-visible { outline:1px solid var(--accent2); outline-offset:2px; }
+.lt-head { display:flex; flex-direction:column; gap:2px; grid-column:1; }
 .log-fund-name { font-size:15px; font-weight:600; color:var(--text); }
-.log-quarter {
-  font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--muted); opacity:0.6; letter-spacing:0.04em;
+.log-quarter { font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--muted); opacity:0.7; letter-spacing:0.04em; }
+.lt-counts { grid-column:1; display:flex; flex-wrap:wrap; gap:2px 12px; font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--muted); }
+.lt-counts .cnt-total { color:var(--text); opacity:0.75; }
+.lt-counts .cnt.new, .lt-counts .cnt.increased { color:var(--accent2); }
+.lt-counts .cnt.exited { color:var(--red); }
+.lt-chevron {
+  grid-column:2; grid-row:1 / span 2; align-self:center;
+  font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em; color:var(--muted);
+  display:flex; align-items:center; gap:6px; white-space:nowrap;
 }
+.lt-chevron .arrow { display:inline-block; transition:transform .15s ease; }
+.log-toggle[aria-expanded="true"] .lt-chevron .arrow { transform:rotate(180deg); }
+.log-toggle:hover .lt-chevron { color:var(--accent2); }
+.log-body { padding:2px 0 12px; }
+.log-body[hidden] { display:none; }
 .log-changes { display:flex; flex-direction:column; gap:6px; }
 .log-change-row {
   display:flex; align-items:baseline; justify-content:space-between; gap:14px;
@@ -91,12 +103,13 @@ body::before {
 .log-type.decreased { color:var(--muted); }
 .log-type.exited { color:var(--red); }
 
-.log-more {
-  font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--muted);
-  opacity:0.45; padding-top:2px;
+.log-more-btn {
+  margin-top:12px; background:none; border:1px solid var(--border); color:var(--muted); cursor:pointer;
+  font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.06em; padding:6px 12px; border-radius:3px;
 }
+.log-more-btn:hover { color:var(--accent2); border-color:var(--accent2); }
 
-.log-files { display:flex; gap:8px; margin-top:4px; flex-wrap:wrap; }
+.log-files { display:flex; gap:8px; padding:0 0 10px; flex-wrap:wrap; }
 .log-file-link {
   font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em;
   color:var(--accent2); text-decoration:none; border:1px solid rgba(79,184,184,0.25);
@@ -104,20 +117,24 @@ body::before {
 }
 .log-file-link:hover { border-color:var(--accent2); }
 
+.section-sub { font-size:12px; color:var(--muted); opacity:0.75; margin:-6px 0 12px; line-height:1.7; }
+
 .empty-state, .loading-state {
   padding:60px 0; text-align:center; color:var(--muted); font-size:13px;
   font-family:'JetBrains Mono',monospace; letter-spacing:0.04em; opacity:0.5;
 }
 
-/* ===== LEVEL 1: OVERVIEW ===== */
+/* ===== LEVEL 1: OVERVIEW（上段2つを主、下段2つを従にして強弱をつける） ===== */
 .overview-grid {
-  display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
-  background:var(--border); border:1px solid var(--border); margin-bottom:8px;
+  display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
+  background:var(--border); border:1px solid var(--border); margin:28px 0 0;
 }
-@media(max-width:520px){ .overview-grid{ grid-template-columns:repeat(2,1fr); } }
-.ov-stat { background:var(--bg); padding:20px 14px; text-align:center; }
-.ov-num { font-family:'JetBrains Mono',monospace; font-size:clamp(22px,5vw,30px); font-weight:700; color:var(--text); line-height:1; }
-.ov-label { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; color:var(--muted); opacity:0.6; margin-top:8px; }
+.ov-stat { background:var(--bg); padding:16px 14px; text-align:center; }
+.ov-stat.primary { padding:26px 14px; }
+.ov-num { font-family:'JetBrains Mono',monospace; font-size:clamp(20px,5vw,26px); font-weight:700; color:var(--text); line-height:1; }
+.ov-stat.primary .ov-num { font-size:clamp(32px,9vw,44px); }
+.ov-stat.pattern .ov-num { color:var(--violet); }
+.ov-label { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; color:var(--muted); opacity:0.7; margin-top:8px; }
 
 /* ===== LEVEL 2: CAPITAL MOVEMENT（CSSのみの横棒） ===== */
 .movement-bars { display:flex; flex-direction:column; gap:12px; margin:8px 0 4px; }
@@ -134,7 +151,8 @@ body::before {
 .overlap-list { display:flex; flex-direction:column; gap:9px; margin-bottom:12px; }
 .overlap-row { display:flex; align-items:center; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:12.5px; }
 .overlap-fund { color:var(--text); opacity:0.9; }
-.overlap-dir { letter-spacing:0.04em; }
+.overlap-q { display:block; color:var(--muted); opacity:0.6; font-size:10.5px; margin-top:1px; }
+.overlap-dir { letter-spacing:0.04em; white-space:nowrap; margin-left:12px; }
 .overlap-dir.new { color:var(--accent2); }
 .overlap-dir.increased { color:var(--accent2); opacity:0.8; }
 .overlap-dir.decreased { color:var(--muted); }
@@ -196,31 +214,32 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
     </p>
   </div>
 
-  <!-- LEVEL 1: OVERVIEW -->
-  <div id="overview-section">
+  <!-- LEVEL 1: OVERVIEW（読み込み完了まで非表示） -->
+  <div id="overview-section" style="display:none;">
     <div class="overview-grid" id="overview-grid">
-      <div class="ov-stat"><div class="ov-num">—</div><div class="ov-label">CAPITAL MOVERS</div></div>
+      <div class="ov-stat primary"><div class="ov-num">—</div><div class="ov-label">CAPITAL MOVERS</div></div>
+      <div class="ov-stat primary pattern"><div class="ov-num">—</div><div class="ov-label">PATTERN FOUND</div></div>
       <div class="ov-stat"><div class="ov-num">—</div><div class="ov-label">NEW POSITIONS</div></div>
-      <div class="ov-stat"><div class="ov-num">—</div><div class="ov-label">MULTIPLE MOVERS</div></div>
-      <div class="ov-stat"><div class="ov-num">—</div><div class="ov-label">PATTERN FOUND</div></div>
+      <div class="ov-stat"><div class="ov-num">—</div><div class="ov-label">OVERLAPPING SECURITIES</div></div>
     </div>
-    <div class="overview-caption" id="overview-caption" style="display:none;"></div>
-  </div>
-
-  <!-- LEVEL 2: CAPITAL MOVEMENT -->
-  <div id="movement-section" style="display:none;">
-    <div class="section-label">CAPITAL MOVEMENT</div>
-    <div class="movement-bars" id="movement-bars"></div>
-  </div>
-
-  <div id="overlap-outer" style="display:none;">
-    <div class="section-label">MULTIPLE MOVERS</div>
-    <div id="overlap-section"></div>
+    <div class="overview-caption" id="overview-caption"></div>
   </div>
 
   <div id="pattern-outer" style="display:none;">
     <div class="section-label">PATTERN FOUND</div>
+    <p class="section-sub">過去に観測されたパターンとの類似度です。</p>
     <div id="pattern-section"></div>
+  </div>
+
+  <div id="overlap-outer" style="display:none;">
+    <div class="section-label">MULTIPLE MOVERS</div>
+    <p class="section-sub">最新の提出分で、最も多くの主体に記録があった銘柄です。</p>
+    <div id="overlap-section"></div>
+  </div>
+
+  <div id="movement-section" style="display:none;">
+    <div class="section-label">CAPITAL MOVEMENT</div>
+    <div class="movement-bars" id="movement-bars"></div>
   </div>
 
   <div id="log-container">
@@ -247,10 +266,11 @@ const TYPE_LABELS = {
   exited: "Exited",
 };
 
-// 1主体あたり、ログに表示する変化の最大件数。
-// これは「重要な変化を選ぶ」基準ではなく、1エントリが際限なく長くならないための
-// 表示上の上限（超えた分は「ほか◯件」とだけ示す）。
-const MAX_CHANGES_PER_ENTRY = 6;
+// 主体の記録を開いたとき、最初に表示する行数と、「さらに表示」で追加する行数。
+// 記録は削除しない。BlackRock/Vanguardのように数千件ある主体でも、
+// 一度に大量のDOMを作らないための表示上の分割であり、最後まで開ける。
+const INITIAL_ROWS = 30;
+const ROWS_STEP = 50;
 
 function filingDateToQuarterLabel(filingDate) {
   const [y, m] = filingDate.split("-");
@@ -314,7 +334,6 @@ async function loadObserverLog() {
 
   if (entries.length === 0) {
     container.innerHTML = '<div class="empty-state">現在、表示できる観測記録がありません。</div>';
-    document.getElementById("overview-section").style.display = "none";
     return;
   }
 
@@ -336,22 +355,20 @@ async function loadObserverLog() {
 // ===== LEVEL 1: OVERVIEW =====
 function renderOverview(fundCount, entries, overlap, patternMatches) {
   const newCount = entries.reduce((sum, e) => sum + e.changes.filter(c => c.type === "new").length, 0);
-  const grid = document.getElementById("overview-grid");
-  const nums = grid.querySelectorAll(".ov-num");
+  const nums = document.getElementById("overview-grid").querySelectorAll(".ov-num");
   nums[0].textContent = fundCount;
-  nums[1].textContent = newCount;
-  nums[2].textContent = overlap.overlapCount;
-  nums[3].textContent = patternMatches.length;
+  nums[1].textContent = patternMatches.length;
+  nums[2].textContent = newCount;
+  nums[3].textContent = overlap.overlapCount;
 
-  // 数字だけでは単位が分からないため、Multiple Moversの意味を1行で補足する。
-  // 「4」が何を指すのか（重なった銘柄の件数）を明示する。
+  // 集計の基準は事実だけを書く。「同時に動いた」とは書かない。
+  // 主体ごとに最新の提出日が異なり、増減の向きも比較していないため。
   const caption = document.getElementById("overview-caption");
-  if (overlap.overlapCount > 0) {
-    caption.textContent = `MULTIPLE MOVERS — ${overlap.overlapCount} securities with overlapping capital movement.`;
-    caption.style.display = "";
-  } else {
-    caption.style.display = "none";
-  }
+  caption.textContent =
+    "Counts use each Capital Mover's latest filing; filing dates differ by entity. " +
+    "OVERLAPPING SECURITIES: securities recorded in the latest filings of 2 or more Capital Movers (direction not compared).";
+
+  document.getElementById("overview-section").style.display = "";
 }
 
 // ===== LEVEL 2: CAPITAL MOVEMENT（直近四半期の内訳・CSSのみの横棒） =====
@@ -391,7 +408,7 @@ function computeMultipleMoversOverlap(entries) {
     for (const c of entry.changes) {
       if (!c.cusip) continue;
       if (!cusipMap[c.cusip]) cusipMap[c.cusip] = { name: c.security_name, entries: [] };
-      cusipMap[c.cusip].entries.push({ fund_name: entry.fund_name, type: c.type });
+      cusipMap[c.cusip].entries.push({ fund_name: entry.fund_name, type: c.type, filing_date: entry.filing_date });
     }
   }
   let best = null;
@@ -402,7 +419,7 @@ function computeMultipleMoversOverlap(entries) {
     if (fundNames.length >= 2) {
       overlapCount++;
       if (!best || fundNames.length > best.funds.length) {
-        best = { name: e.name, funds: e.entries };
+        best = { name: e.name, funds: e.entries, fundCount: fundNames.length };
       }
     }
   }
@@ -417,7 +434,7 @@ function renderOverlap(overlap) {
   }
   const rows = best.funds.map(f => `
     <div class="overlap-row">
-      <span class="overlap-fund">${escapeHtml(f.fund_name)}</span>
+      <span class="overlap-fund">${escapeHtml(f.fund_name)}<span class="overlap-q">${filingDateToQuarterLabel(f.filing_date)}</span></span>
       <span class="overlap-dir ${f.type}">${TYPE_LABELS[f.type] || f.type}</span>
     </div>
   `).join("");
@@ -426,7 +443,7 @@ function renderOverlap(overlap) {
     <div class="overlap-card">
       <div class="overlap-security">${escapeHtml(best.name)}</div>
       <div class="overlap-list">${rows}</div>
-      <div class="overlap-total">${best.funds.length} CAPITAL MOVERS OVERLAP</div>
+      <div class="overlap-total">RECORDED IN ${best.fundCount} CAPITAL MOVERS' LATEST FILINGS</div>
     </div>
   `;
   document.getElementById("overlap-outer").style.display = "";
@@ -494,51 +511,95 @@ function renderPatternFound(matches) {
   document.getElementById("pattern-outer").style.display = "";
 }
 
-// ===== LEVEL 3: 個別の観測記録（既存ロジックのまま） =====
+// ===== LEVEL 3: 主体ごとの観測記録（閉じた状態は概要のみ。開くと既存の銘柄行を表示） =====
+const logState = {}; // index -> 表示済みの行数
+
+function changeRowsHtml(changes, from, to) {
+  return changes.slice(from, to).map(c => `
+    <div class="log-change-row">
+      <span class="log-security">${escapeHtml(c.security_name)}</span>
+      <span class="log-type ${c.type}">${TYPE_LABELS[c.type] || c.type}</span>
+    </div>
+  `).join("");
+}
+
 function renderLog(entries) {
   const container = document.getElementById("log-container");
-  let html = '<div class="section-label">OBSERVATIONS — 最新四半期</div>';
+  let html = `<div class="section-label">OBSERVATIONS — 最新四半期 · ${entries.length}主体</div>`;
 
-  for (const entry of entries) {
+  entries.forEach((entry, i) => {
     const quarterLabel = filingDateToQuarterLabel(entry.filing_date);
-    const shown = entry.changes.slice(0, MAX_CHANGES_PER_ENTRY);
-    const remaining = entry.changes.length - shown.length;
-
-    const changeRows = shown.map(c => `
-      <div class="log-change-row">
-        <span class="log-security">${escapeHtml(c.security_name)}</span>
-        <span class="log-type ${c.type}">${TYPE_LABELS[c.type] || c.type}</span>
-      </div>
-    `).join("");
-
-    const moreRow = remaining > 0
-      ? `<div class="log-more">ほか${remaining}件</div>`
-      : "";
+    const counts = { new: 0, increased: 0, decreased: 0, exited: 0 };
+    for (const c of entry.changes) if (counts[c.type] !== undefined) counts[c.type]++;
+    const countParts = ["new", "increased", "decreased", "exited"]
+      .filter(k => counts[k] > 0)
+      .map(k => `<span class="cnt ${k}">${TYPE_LABELS[k]} ${counts[k]}</span>`)
+      .join("");
 
     const fileLinks = entry.related_files.length > 0
       ? `<div class="log-files">${entry.related_files.map(fid => {
           const match = fid.match(/^file-(\d+)/i);
           const label = match ? `FILE-${match[1]}` : fid.toUpperCase();
-          return `<a class="log-file-link" href="${fid}.html">${label}</a>`;
+          return `<a class="log-file-link" href="${escapeHtml(fid)}.html">${label}</a>`;
         }).join("")}</div>`
       : "";
 
     html += `
       <div class="log-entry">
-        <div class="log-entry-header">
-          <span class="log-fund-name">${escapeHtml(entry.fund_name)}</span>
-          <span class="log-quarter">${quarterLabel} — ${entry.filing_date}</span>
-        </div>
-        <div class="log-changes">
-          ${changeRows}
-          ${moreRow}
-        </div>
+        <button type="button" class="log-toggle" data-index="${i}" aria-expanded="false" aria-controls="log-body-${i}">
+          <span class="lt-head">
+            <span class="log-fund-name">${escapeHtml(entry.fund_name)}</span>
+            <span class="log-quarter">${quarterLabel} — ${entry.filing_date}</span>
+          </span>
+          <span class="lt-counts"><span class="cnt-total">${entry.changes.length}件</span>${countParts}</span>
+          <span class="lt-chevron">詳細<span class="arrow" aria-hidden="true">▾</span></span>
+        </button>
         ${fileLinks}
+        <div class="log-body" id="log-body-${i}" hidden></div>
       </div>
     `;
-  }
+  });
 
   container.innerHTML = html;
+
+  container.addEventListener("click", (ev) => {
+    const more = ev.target.closest(".log-more-btn");
+    if (more) {
+      const i = Number(more.dataset.index);
+      showMoreRows(entries, i);
+      return;
+    }
+    const btn = ev.target.closest(".log-toggle");
+    if (!btn) return;
+    const i = Number(btn.dataset.index);
+    const body = document.getElementById(`log-body-${i}`);
+    const open = btn.getAttribute("aria-expanded") === "true";
+    if (open) {
+      btn.setAttribute("aria-expanded", "false");
+      body.hidden = true;
+      return;
+    }
+    if (logState[i] === undefined) {
+      body.innerHTML = '<div class="log-changes"></div><div class="log-more-slot"></div>';
+      logState[i] = 0;
+      showMoreRows(entries, i, INITIAL_ROWS);
+    }
+    btn.setAttribute("aria-expanded", "true");
+    body.hidden = false;
+  });
+}
+
+function showMoreRows(entries, i, step = ROWS_STEP) {
+  const changes = entries[i].changes;
+  const from = logState[i];
+  const to = Math.min(from + step, changes.length);
+  const body = document.getElementById(`log-body-${i}`);
+  body.querySelector(".log-changes").insertAdjacentHTML("beforeend", changeRowsHtml(changes, from, to));
+  logState[i] = to;
+  const remaining = changes.length - to;
+  body.querySelector(".log-more-slot").innerHTML = remaining > 0
+    ? `<button type="button" class="log-more-btn" data-index="${i}">さらに表示（残り${remaining}件）</button>`
+    : "";
 }
 
 function escapeHtml(str) {
