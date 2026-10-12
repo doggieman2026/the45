@@ -471,7 +471,7 @@ function buildMultipleMoversCard(entries) {
   for (const entry of entries) {
     for (const c of entry.changes) {
       if (!c.cusip) continue;
-      if (!cusipMap[c.cusip]) cusipMap[c.cusip] = { name: c.security_name, funds: new Set() };
+      if (!cusipMap[c.cusip]) cusipMap[c.cusip] = { name: c.security_name, funds: new Set(), cusip: c.cusip };
       cusipMap[c.cusip].funds.add(entry.fund_name);
     }
   }
@@ -479,7 +479,9 @@ function buildMultipleMoversCard(entries) {
   let best = null;
   for (const cusip in cusipMap) {
     const entry = cusipMap[cusip];
-    if (entry.funds.size >= 2 && (!best || entry.funds.size > best.funds.size)) {
+    // 同数の候補は CUSIP の昇順で決める（走査順に依存しない。Observer と同じ代表銘柄になる）
+    if (entry.funds.size >= 2 && (!best || entry.funds.size > best.funds.size ||
+        (entry.funds.size === best.funds.size && cusip < best.cusip))) {
       best = entry;
     }
   }

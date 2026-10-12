@@ -134,6 +134,7 @@ body::before {
 .ov-num { font-family:'JetBrains Mono',monospace; font-size:clamp(20px,5vw,26px); font-weight:700; color:var(--text); line-height:1; }
 .ov-stat.primary .ov-num { font-size:clamp(32px,9vw,44px); }
 .ov-stat.pattern .ov-num { color:var(--violet); }
+.ov-of { font-size:0.5em; opacity:0.6; letter-spacing:0.02em; }
 .ov-label { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; color:var(--muted); opacity:0.7; margin-top:8px; }
 
 /* ===== LEVEL 2: CAPITAL MOVEMENT（CSSのみの横棒） ===== */
@@ -173,6 +174,8 @@ body::before {
 .pr-detail { font-size:13px; color:var(--text); opacity:0.85; line-height:1.6; }
 .pr-detail .sep { color:var(--muted); opacity:0.35; margin:0 7px; }
 .pr-sim { color:var(--violet); font-weight:700; }
+.pr-flag { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); opacity:0.8; line-height:1.6; }
+.movement-note { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); opacity:0.6; line-height:1.7; margin:-4px 0 12px; }
 .pattern-note { font-family:'JetBrains Mono',monospace; font-size:9.5px; color:var(--muted); opacity:0.5; letter-spacing:0.04em; }
 
 /* ===== Overview補足キャプション（数字の単位が一目で分かるように） ===== */
@@ -218,7 +221,7 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
   <!-- LEVEL 1: OVERVIEW（読み込み完了まで非表示） -->
   <div id="overview-section" style="display:none;">
     <div class="overview-grid" id="overview-grid">
-      <div class="ov-stat primary"><div class="ov-num">—</div><div class="ov-label">CAPITAL MOVERS</div></div>
+      <div class="ov-stat primary"><div class="ov-num">—</div><div class="ov-label">CAPITAL MOVERS WITH DATA</div></div>
       <div class="ov-stat primary pattern"><div class="ov-num">—</div><div class="ov-label">PATTERN FOUND</div></div>
       <div class="ov-stat"><div class="ov-num">—</div><div class="ov-label">NEWLY REPORTED HOLDINGS</div></div>
       <div class="ov-stat"><div class="ov-num">—</div><div class="ov-label">OVERLAPPING SECURITIES</div></div>
@@ -228,7 +231,7 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
 
   <div id="pattern-outer" style="display:none;">
     <div class="section-label">PATTERN FOUND</div>
-    <p class="section-sub">過去に観測されたパターンとの類似度です。</p>
+    <p class="section-sub">上位5銘柄の評価額が全体に占める割合（top5集中度）の差から計算した簡易指標です。銘柄の中身やセクターは比較していません。</p>
     <div id="pattern-section"></div>
   </div>
 
@@ -241,6 +244,7 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
   <div id="movement-section" style="display:none;">
     <div class="section-label">CAPITAL MOVEMENT</div>
     <p class="section-sub">保有評価額の増減です。株数の増減を示すものではありません。</p>
+    <div class="movement-note" id="movement-note"></div>
     <div class="movement-bars" id="movement-bars"></div>
   </div>
 
@@ -341,18 +345,19 @@ async function loadObserverLog() {
   const overlap = computeMultipleMoversOverlap(entries);
   const patternMatches = await computePatternMatches(funds);
 
-  renderOverview(funds.length, entries, overlap, patternMatches);
-  renderMovementBars(entries);
+  renderOverview(funds.length, entries, overlap, patternMatches, fetchTargets.length);
+  renderMovementBars(entries, funds.length);
   renderOverlap(overlap);
   renderPatternFound(patternMatches);
   renderLog(entries);
 }
 
 // ===== LEVEL 1: OVERVIEW =====
-function renderOverview(fundCount, entries, overlap, patternMatches) {
+function renderOverview(fundCount, entries, overlap, patternMatches, targetCount) {
   const newCount = entries.reduce((sum, e) => sum + e.changes.filter(c => c.type === "new").length, 0);
   const nums = document.getElementById("overview-grid").querySelectorAll(".ov-num");
-  nums[0].textContent = fundCount;
+  // 実際に読み込めて集計に使われた主体数 / 追跡している総主体数
+  nums[0].innerHTML = `${entries.length}<span class="ov-of"> / ${fundCount}</span>`;
   nums[1].textContent = patternMatches.length;
   nums[2].textContent = newCount;
   nums[3].textContent = overlap.overlapCount;
@@ -361,7 +366,9 @@ function renderOverview(fundCount, entries, overlap, patternMatches) {
   // 主体ごとに最新の提出日が異なり、増減の向きも比較していないため。
   const caption = document.getElementById("overview-caption");
   caption.textContent =
-    "Counts use each Capital Mover's latest filing; filing dates differ by entity. " +
+    `CAPITAL MOVERS WITH DATA: ${entries.length} of ${fundCount} tracked entities have observation data loaded` +
+    (targetCount > entries.length ? ` (${targetCount - entries.length} failed to load)` : "") + ". " +
+    "NEWLY REPORTED HOLDINGS counts each entity's latest filing. " +
     "OVERLAPPING SECURITIES: securities recorded in the latest filings of 2 or more Capital Movers (direction not compared). " +
     "Dates are filing dates (FILED); the reporting period is not stored in the source data and is not shown.";
 
@@ -369,7 +376,7 @@ function renderOverview(fundCount, entries, overlap, patternMatches) {
 }
 
 // ===== LEVEL 2: CAPITAL MOVEMENT（直近四半期の内訳・CSSのみの横棒） =====
-function renderMovementBars(entries) {
+function renderMovementBars(entries, fundCount) {
   const counts = { new: 0, increased: 0, decreased: 0, exited: 0 };
   for (const entry of entries) {
     for (const c of entry.changes) {
@@ -393,6 +400,12 @@ function renderMovementBars(entries) {
     </div>
   `).join("");
 
+  const dates = entries.map(e => e.filing_date).sort();
+  const range = dates[0] === dates[dates.length - 1] ? dates[0] : `${dates[0]} – ${dates[dates.length - 1]}`;
+  document.getElementById("movement-note").textContent =
+    `Covers ${entries.length} of ${fundCount} Capital Movers (those with data), each entity's latest filing only. ` +
+    "Counts are change records (entity × security), not shares or amounts. " +
+    `Filing dates differ by entity (FILED: ${range}), so entities are not observed at the same point in time.`;
   document.getElementById("movement-section").style.display = "";
 }
 
@@ -415,8 +428,10 @@ function computeMultipleMoversOverlap(entries) {
     const fundNames = [...new Set(e.entries.map(x => x.fund_name))];
     if (fundNames.length >= 2) {
       overlapCount++;
-      if (!best || fundNames.length > best.funds.length) {
-        best = { name: e.name, funds: e.entries, fundCount: fundNames.length };
+      // 同数の候補は CUSIP の昇順で決める（走査順に依存しない）
+      if (!best || fundNames.length > best.fundCount ||
+          (fundNames.length === best.fundCount && cusip < best.cusip)) {
+        best = { name: e.name, funds: e.entries, fundCount: fundNames.length, cusip };
       }
     }
   }
@@ -470,7 +485,7 @@ async function computePatternMatches(funds) {
   for (const lf of legacyFunds) {
     if (!fundIds.has(lf.id)) continue;
     const ps = lf.pattern_similarity;
-    if (ps && ps.most_similar_event) candidates.push({ fundId: lf.id, ...ps });
+    if (ps && ps.most_similar_event) candidates.push({ fundId: lf.id, lastFilingDate: lf.last_filing_date || "", ...ps });
   }
   candidates.sort((a, b) => b.similarity_pct - a.similarity_pct);
 
@@ -488,24 +503,34 @@ function renderPatternFound(matches) {
 
   // 「代表2件だけ」ではなく、実データにある分（現状4件）を類似度順にすべて表示する。
   // ただし大型カードではなく、1行ずつのコンパクトな一覧にする。
+  const pct = v => (typeof v === "number" ? `${v}%` : "—");
   const rows = matches.map(m => {
     const ev = m.most_similar_event;
     const patternFiled = ev.before_filing_date || ev.after_filing_date || "";
     const eventLabel = PATTERN_EVENT_LABELS[ev.event_id] || ev.event_label;
+    // 現在の集中度に使った提出が、比較に使った提出と同じ場合は、その旨を明示する
+    const sameAfter = !!m.lastFilingDate && m.lastFilingDate === ev.after_filing_date;
+    const sameBefore = !!m.lastFilingDate && m.lastFilingDate === ev.before_filing_date;
+    const flagText = sameAfter
+      ? `Note: the latest filing is also the reference after-filing (FILED: ${m.lastFilingDate}). It is compared only with FILED: ${patternFiled || "—"}; this does not show a change after the event.`
+      : sameBefore
+        ? `Note: the latest filing is the reference filing itself (FILED: ${m.lastFilingDate}); both sides of this comparison are the same filing.`
+        : "";
     return `
       <div class="pattern-row">
         <span class="pr-mover">${escapeHtml(m.fundName)}</span>
-        <div class="pr-meta">FILED: ${patternFiled || "—"}</div>
+        <div class="pr-meta">TOP-5 CONCENTRATION ${pct(m.current_concentration_pct)} (latest filing, FILED: ${m.lastFilingDate || "—"}) vs ${pct(ev.before_concentration_pct)} (FILED: ${patternFiled || "—"})</div>
         <div class="pr-detail">
-          <span class="pr-sim">${m.similarity_pct}%</span> similarity<span class="sep">·</span>${escapeHtml(eventLabel)}
-        </div>
+          <span class="pr-sim">${m.similarity_pct}%</span> concentration closeness<span class="sep">·</span>reference: ${escapeHtml(eventLabel)}
+        </div>${flagText ? `
+        <div class="pr-flag">${flagText}</div>` : ""}
       </div>
     `;
   }).join("");
 
   document.getElementById("pattern-section").innerHTML = `
     <div class="pattern-list">${rows}</div>
-    <div class="pattern-note">Observed retrospectively. Not a prediction.</div>
+    <div class="pattern-note">Closeness = 100 − |gap| ÷ 20 points × 100 (0% at a 20-point gap). Top-5 share of reported 13F value only; holdings and sectors are not compared. Observed retrospectively. Not a prediction.</div>
   `;
   document.getElementById("pattern-outer").style.display = "";
 }
