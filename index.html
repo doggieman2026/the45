@@ -170,21 +170,14 @@ body::after {
 .discovery-pattern-row { display:flex; gap:10px; font-size:12.5px; line-height:1.8; }
 .discovery-pattern-label { color:var(--violet); opacity:0.8; min-width:96px; flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.04em; padding-top:2px; }
 .discovery-pattern-value { color:var(--text); }
+.discovery-flag { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); opacity:0.8; line-height:1.7; margin-top:10px; }
 .discovery-note { font-family:'JetBrains Mono',monospace; font-size:9.5px; color:var(--muted); opacity:0.5; letter-spacing:0.04em; margin-top:10px; }
-.discovery-actions { display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; }
 .discovery-link {
   font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.06em;
   color:var(--accent2); text-decoration:none; border:1px solid rgba(79,184,184,0.3);
   padding:8px 16px; border-radius:4px; transition:border-color 0.15s, background 0.15s;
 }
 .discovery-link:hover { border-color:var(--accent2); background:rgba(79,184,184,0.06); }
-.watch-btn {
-  font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.06em;
-  color:var(--muted); background:transparent; border:1px solid var(--border);
-  padding:8px 16px; border-radius:4px; cursor:pointer; transition:border-color 0.15s, color 0.15s;
-}
-.watch-btn:hover { border-color:var(--muted); color:var(--text); }
-.watch-btn.watching { color:var(--violet); border-color:rgba(155,143,255,0.4); }
 
 .movers-closing { text-align:center; padding:40px 0 32px; }
 .movers-closing-num {
@@ -233,7 +226,7 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
     <div class="section-eyebrow">CAPITAL MOVEMENT</div>
     <h2 class="section-title">発見</h2>
     <div class="discovery-grid" id="discovery-grid"></div>
-    <p class="derived-note">日付は提出日（FILED）です。報告対象期間は元データに保存されていないため、表示していません。</p>
+    <p class="derived-note">日付は提出日です。報告対象期間は元データに保存されていないため、表示していません。</p>
   </div>
 
   <!-- ===== OBSERVE ===== -->
@@ -246,9 +239,9 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
       <div class="preview-loading">記録を読み込んでいます…</div>
     </div>
 
-    <p class="derived-note">Value Increased / Decreased は保有評価額の増減です（株数の増減ではありません）。</p>
+    <p class="derived-note">「保有評価額が増加／減少」は、保有評価額の増減です。株数の増減を示すものではありません。</p>
 
-    <a class="cta-link" href="observer.html">VIEW ALL OBSERVATIONS →</a>
+    <a class="cta-link" href="observer.html">すべての観測記録を見る →</a>
   </div>
 
   <!-- ===== FILES ===== -->
@@ -302,22 +295,27 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
 
 <script>
 const TYPE_LABELS = {
-  new: "Newly Reported Holding",
-  increased: "Value Increased",
-  decreased: "Value Decreased",
-  exited: "No Longer Reported",
+  new: "新たに報告された保有",
+  increased: "保有評価額が増加",
+  decreased: "保有評価額が減少",
+  exited: "今回の提出では確認されない保有",
 };
 
 // 45カテゴリ → トップページ表示用の5分類。
 // funds.json の category(A_passive等の接頭辞)から機械的に集計するだけで、
 // 並び順・グルーピング以外の編集判断は加えない。
 const GROUP_DEFS = [
-  { key: "giant", label: "GIANT INSTITUTIONS", prefixes: ["A", "H", "I", "J"] },
-  { key: "value_activist", label: "VALUE / ACTIVIST", prefixes: ["B", "E"] },
-  { key: "macro_hedge", label: "MACRO / HEDGE", prefixes: ["C", "F"] },
-  { key: "quant_systematic", label: "QUANT / SYSTEMATIC", prefixes: ["D"] },
-  { key: "strategic_other", label: "STRATEGIC / OTHER", prefixes: ["G", "K", "L"] },
+  { key: "giant", label: "巨大機関", prefixes: ["A", "H", "I", "J"] },
+  { key: "value_activist", label: "バリュー／アクティビスト", prefixes: ["B", "E"] },
+  { key: "macro_hedge", label: "マクロ／ヘッジ", prefixes: ["C", "F"] },
+  { key: "quant_systematic", label: "クオンツ／システマティック", prefixes: ["D"] },
+  { key: "strategic_other", label: "戦略投資家・その他", prefixes: ["G", "K", "L"] },
 ];
+
+function jpDate(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || "");
+  return m ? `${m[1]}年${parseInt(m[2], 10)}月${parseInt(m[3], 10)}日` : (iso || "—");
+}
 
 function escapeHtml(str) {
   const div = document.createElement("div");
@@ -392,7 +390,7 @@ function renderObserverPreview(entries) {
   }
 
   const globalLatestDate = entries.reduce((max, e) => e.filing_date > max ? e.filing_date : max, entries[0].filing_date);
-  heroLatest.textContent = `LATEST OBSERVATION — FILED: ${globalLatestDate}`;
+  heroLatest.textContent = `最新の観測　提出日：${jpDate(globalLatestDate)}`;
 
   // トップページでは3主体分だけのプレビュー。全件は observer.html 側で見る。
   const preview = entries.slice(0, 3);
@@ -409,7 +407,7 @@ function renderObserverPreview(entries) {
       <div class="preview-entry">
         <div class="preview-entry-header">
           <span class="preview-fund">${escapeHtml(entry.fund_name)}</span>
-          <span class="preview-quarter">FILED: ${entry.filing_date}</span>
+          <span class="preview-quarter">提出日：${jpDate(entry.filing_date)}</span>
         </div>
         ${rows}
       </div>
@@ -440,7 +438,6 @@ async function renderDiscovery(funds, allEntries) {
 
   document.getElementById("discovery-section").style.display = "";
   document.getElementById("discovery-grid").innerHTML = cards.join("");
-  attachWatchButtonHandlers();
 }
 
 function buildNewPositionCard(entries) {
@@ -449,13 +446,10 @@ function buildNewPositionCard(entries) {
     const newChange = entry.changes.find(c => c.type === "new");
     if (newChange) {
       return `
-        <div class="discovery-card" data-watch-id="new_${entry.fund_id}_${newChange.cusip}">
-          <div class="discovery-tag new_position">NEWLY REPORTED HOLDING</div>
-          <div class="discovery-body"><strong>${escapeHtml(newChange.security_name)}</strong> is reported in <strong>${escapeHtml(entry.fund_name)}</strong>'s filing; it was not reported in the prior filing.</div>
-          <div class="discovery-sub">FILED: ${entry.filing_date}</div>
-          <div class="discovery-actions">
-            <button class="watch-btn" onclick="toggleWatch(this)">WATCH THIS</button>
-          </div>
+        <div class="discovery-card">
+          <div class="discovery-tag new_position">新たに報告された保有</div>
+          <div class="discovery-body"><strong>${escapeHtml(newChange.security_name)}</strong>は、<strong>${escapeHtml(entry.fund_name)}</strong>の今回の提出記録で報告された保有です。前回の提出記録では報告されていません。</div>
+          <div class="discovery-sub">提出日：${jpDate(entry.filing_date)}</div>
         </div>
       `;
     }
@@ -490,9 +484,9 @@ function buildMultipleMoversCard(entries) {
 
   return `
     <div class="discovery-card">
-      <div class="discovery-tag multiple_movers">MULTIPLE MOVERS</div>
-      <div class="discovery-body"><strong>${escapeHtml(best.name)}</strong> is reported in the latest filings of <strong>${best.funds.size} CAPITAL MOVERS</strong>.</div>
-      <div class="discovery-sub">${Array.from(best.funds).join(" ／ ")}<br>Filing dates differ by entity; direction is not compared.</div>
+      <div class="discovery-tag multiple_movers">複数主体で確認された銘柄</div>
+      <div class="discovery-body"><strong>${escapeHtml(best.name)}</strong>は、<strong>${best.funds.size}主体</strong>の最新の提出記録に載っています。</div>
+      <div class="discovery-sub">${Array.from(best.funds).join(" ／ ")}<br>提出日は主体ごとに異なります。増減の方向は比較していません。</div>
     </div>
   `;
 }
@@ -501,9 +495,9 @@ function buildMultipleMoversCard(entries) {
 // 45 CAPITAL MOVERSと重なるIDの範囲でのみ再利用する。
 // 新しい類似度計算ロジックはここでは作らない（既存データの再利用のみ）。
 const PATTERN_EVENT_LABELS = {
-  covid_2020: "COVID-19 shock",
-  svb_2023: "the 2023 regional bank stress",
-  yen_carry_2024: "the 2024 yen carry trade unwind",
+  covid_2020: "2020年のコロナショック",
+  svb_2023: "2023年の米地方銀行の経営不安（SVB破綻）",
+  yen_carry_2024: "2024年の円キャリートレードの巻き戻し",
 };
 
 const MAX_PATTERN_CARDS = 3;
@@ -526,7 +520,7 @@ async function buildPatternFoundCards(funds) {
     if (!fundIds.has(lf.id)) continue;
     const ps = lf.pattern_similarity;
     if (ps && ps.most_similar_event) {
-      candidates.push({ fundId: lf.id, ...ps });
+      candidates.push({ fundId: lf.id, lastFilingDate: lf.last_filing_date || "", ...ps });
     }
   }
 
@@ -542,59 +536,35 @@ async function buildPatternFoundCards(funds) {
     const ev = candidate.most_similar_event;
     const eventLabel = PATTERN_EVENT_LABELS[ev.event_id] || ev.event_label;
     const patternFiled = ev.before_filing_date || ev.after_filing_date || "";
+    // 最新の提出が、比較に使った提出と同じ場合だけ注意書きを出す（Observerと同じ条件）
+    const sameAfter = !!candidate.lastFilingDate && candidate.lastFilingDate === ev.after_filing_date;
+    const sameBefore = !!candidate.lastFilingDate && candidate.lastFilingDate === ev.before_filing_date;
+    const flagText = sameAfter
+      ? `注意：最新の提出記録（${jpDate(candidate.lastFilingDate)}）は、比較で「事件後側」として参照した記録と同じです。比較対象は${patternFiled ? jpDate(patternFiled) : "—"}の記録のみで、事件後の変化を示すものではありません。`
+      : sameBefore
+        ? `注意：最新の提出記録（${jpDate(candidate.lastFilingDate)}）は、比較の基準とした記録そのものです。`
+        : "";
 
     return `
-      <div class="discovery-card pattern" data-watch-id="pattern_${candidate.fundId}_${ev.event_id}">
+      <div class="discovery-card pattern">
         <div class="discovery-tag pattern_found">PATTERN FOUND</div>
         <div class="discovery-fund-name">${escapeHtml(fundName)}</div>
-        <div class="discovery-body">Similar capital configuration in the filing (FILED: <strong>${patternFiled || "—"}</strong>).</div>
+        <div class="discovery-body">上位5銘柄への集中度が近い提出記録です（提出日：<strong>${patternFiled ? jpDate(patternFiled) : "—"}</strong>）。</div>
         <div class="discovery-pattern-block">
           <div class="discovery-pattern-row">
-            <span class="discovery-pattern-label">SIMILARITY</span>
+            <span class="discovery-pattern-label">集中度の近さ</span>
             <span class="discovery-pattern-value">${candidate.similarity_pct}%</span>
           </div>
           <div class="discovery-pattern-row">
-            <span class="discovery-pattern-label">AFTERWARD</span>
+            <span class="discovery-pattern-label">関連する出来事</span>
             <span class="discovery-pattern-value">${escapeHtml(eventLabel)}</span>
           </div>
         </div>
-        <div class="discovery-note">Observed retrospectively. Not a prediction.</div>
-        <div class="discovery-actions">
-          <button class="watch-btn" onclick="toggleWatch(this)">WATCH THIS</button>
-        </div>
+        ${flagText ? `<div class="discovery-flag">${flagText}</div>` : ""}
+        <div class="discovery-note">Observed retrospectively. Not a prediction.<br>事後的に観測した記録であり、将来の予測ではありません。</div>
       </div>
     `;
   });
-}
-
-// WATCH THIS: 現段階では通知機能を持たない、クライアント側のみの登録状態。
-// localStorageに保存するだけで、サーバー・認証は使わない。
-function attachWatchButtonHandlers() {
-  document.querySelectorAll(".watch-btn").forEach(btn => {
-    const card = btn.closest(".discovery-card");
-    const watchId = card?.dataset?.watchId || btn.closest(".discovery-card")?.querySelector(".discovery-body")?.textContent;
-    if (watchId && localStorage.getItem("the45_watch_" + watchId) === "1") {
-      btn.textContent = "WATCHING";
-      btn.classList.add("watching");
-    }
-  });
-}
-
-function toggleWatch(btn) {
-  const card = btn.closest(".discovery-card");
-  const watchId = card?.dataset?.watchId || card?.querySelector(".discovery-body")?.textContent;
-  if (!watchId) return;
-  const key = "the45_watch_" + watchId;
-  const isWatching = btn.classList.contains("watching");
-  if (isWatching) {
-    localStorage.removeItem(key);
-    btn.textContent = "WATCH THIS";
-    btn.classList.remove("watching");
-  } else {
-    localStorage.setItem(key, "1");
-    btn.textContent = "WATCHING";
-    btn.classList.add("watching");
-  }
 }
 
 function renderMoversSummary(funds) {
