@@ -87,10 +87,11 @@ body::after {
   padding:16px 0; border-bottom:1px solid rgba(255,255,255,0.05);
 }
 .preview-entry-header {
-  display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:6px;
+  display:flex; flex-direction:column; gap:2px; margin-bottom:8px;
 }
 .preview-fund { font-size:14px; font-weight:600; color:var(--text); }
-.preview-quarter { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); opacity:0.6; }
+.preview-quarter { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); opacity:0.6; line-height:1.5; }
+.derived-note { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); opacity:0.55; line-height:1.7; margin:2px 0 22px; }
 .preview-change-row {
   display:flex; align-items:baseline; justify-content:space-between; gap:14px;
   font-family:'JetBrains Mono',monospace; font-size:12px;
@@ -232,6 +233,7 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
     <div class="section-eyebrow">CAPITAL MOVEMENT</div>
     <h2 class="section-title">発見</h2>
     <div class="discovery-grid" id="discovery-grid"></div>
+    <p class="derived-note">日付は提出日（FILED）です。報告対象期間は元データに保存されていないため、表示していません。</p>
   </div>
 
   <!-- ===== OBSERVE ===== -->
@@ -243,6 +245,8 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
     <div class="preview-log" id="preview-log">
       <div class="preview-loading">記録を読み込んでいます…</div>
     </div>
+
+    <p class="derived-note">Value Increased / Decreased は保有評価額の増減です（株数の増減ではありません）。</p>
 
     <a class="cta-link" href="observer.html">VIEW ALL OBSERVATIONS →</a>
   </div>
@@ -298,10 +302,10 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
 
 <script>
 const TYPE_LABELS = {
-  new: "New Position",
-  increased: "Increased",
-  decreased: "Decreased",
-  exited: "Exited",
+  new: "Newly Reported Holding",
+  increased: "Value Increased",
+  decreased: "Value Decreased",
+  exited: "No Longer Reported",
 };
 
 // 45カテゴリ → トップページ表示用の5分類。
@@ -314,12 +318,6 @@ const GROUP_DEFS = [
   { key: "quant_systematic", label: "QUANT / SYSTEMATIC", prefixes: ["D"] },
   { key: "strategic_other", label: "STRATEGIC / OTHER", prefixes: ["G", "K", "L"] },
 ];
-
-function filingDateToQuarterLabel(filingDate) {
-  const [y, m] = filingDate.split("-");
-  const q = Math.floor((parseInt(m, 10) - 1) / 3) + 1;
-  return `${y} Q${q}`;
-}
 
 function escapeHtml(str) {
   const div = document.createElement("div");
@@ -394,13 +392,12 @@ function renderObserverPreview(entries) {
   }
 
   const globalLatestDate = entries.reduce((max, e) => e.filing_date > max ? e.filing_date : max, entries[0].filing_date);
-  heroLatest.textContent = `LATEST OBSERVATION — ${globalLatestDate}`;
+  heroLatest.textContent = `LATEST OBSERVATION — FILED: ${globalLatestDate}`;
 
   // トップページでは3主体分だけのプレビュー。全件は observer.html 側で見る。
   const preview = entries.slice(0, 3);
 
   container.innerHTML = preview.map(entry => {
-    const quarterLabel = filingDateToQuarterLabel(entry.filing_date);
     const rows = entry.changes.slice(0, 2).map(c => `
       <div class="preview-change-row">
         <span class="preview-security">${escapeHtml(c.security_name)}</span>
@@ -412,7 +409,7 @@ function renderObserverPreview(entries) {
       <div class="preview-entry">
         <div class="preview-entry-header">
           <span class="preview-fund">${escapeHtml(entry.fund_name)}</span>
-          <span class="preview-quarter">${quarterLabel}</span>
+          <span class="preview-quarter">FILED: ${entry.filing_date}</span>
         </div>
         ${rows}
       </div>
@@ -453,9 +450,9 @@ function buildNewPositionCard(entries) {
     if (newChange) {
       return `
         <div class="discovery-card" data-watch-id="new_${entry.fund_id}_${newChange.cusip}">
-          <div class="discovery-tag new_position">NEW POSITION</div>
-          <div class="discovery-body"><strong>${escapeHtml(entry.fund_name)}</strong> opened a new position in <strong>${escapeHtml(newChange.security_name)}</strong>.</div>
-          <div class="discovery-sub">${entry.filing_date}</div>
+          <div class="discovery-tag new_position">NEWLY REPORTED HOLDING</div>
+          <div class="discovery-body"><strong>${escapeHtml(newChange.security_name)}</strong> is reported in <strong>${escapeHtml(entry.fund_name)}</strong>'s filing; it was not reported in the prior filing.</div>
+          <div class="discovery-sub">FILED: ${entry.filing_date}</div>
           <div class="discovery-actions">
             <button class="watch-btn" onclick="toggleWatch(this)">WATCH THIS</button>
           </div>
@@ -492,8 +489,8 @@ function buildMultipleMoversCard(entries) {
   return `
     <div class="discovery-card">
       <div class="discovery-tag multiple_movers">MULTIPLE MOVERS</div>
-      <div class="discovery-body"><strong>${best.funds.size} CAPITAL MOVERS</strong> moved into the same space: <strong>${escapeHtml(best.name)}</strong>.</div>
-      <div class="discovery-sub">${Array.from(best.funds).join(" ／ ")}</div>
+      <div class="discovery-body"><strong>${escapeHtml(best.name)}</strong> is reported in the latest filings of <strong>${best.funds.size} CAPITAL MOVERS</strong>.</div>
+      <div class="discovery-sub">${Array.from(best.funds).join(" ／ ")}<br>Filing dates differ by entity; direction is not compared.</div>
     </div>
   `;
 }
@@ -542,13 +539,13 @@ async function buildPatternFoundCards(funds) {
     const fundName = fund ? fund.display_name_ja : candidate.fundId;
     const ev = candidate.most_similar_event;
     const eventLabel = PATTERN_EVENT_LABELS[ev.event_id] || ev.event_label;
-    const periodLabel = filingDateToQuarterLabel(ev.before_filing_date || ev.after_filing_date || "");
+    const patternFiled = ev.before_filing_date || ev.after_filing_date || "";
 
     return `
       <div class="discovery-card pattern" data-watch-id="pattern_${candidate.fundId}_${ev.event_id}">
         <div class="discovery-tag pattern_found">PATTERN FOUND</div>
         <div class="discovery-fund-name">${escapeHtml(fundName)}</div>
-        <div class="discovery-body">Similar capital configuration observed in <strong>${periodLabel || "—"}</strong>.</div>
+        <div class="discovery-body">Similar capital configuration in the filing (FILED: <strong>${patternFiled || "—"}</strong>).</div>
         <div class="discovery-pattern-block">
           <div class="discovery-pattern-row">
             <span class="discovery-pattern-label">SIMILARITY</span>

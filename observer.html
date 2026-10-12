@@ -138,7 +138,7 @@ body::before {
 
 /* ===== LEVEL 2: CAPITAL MOVEMENT（CSSのみの横棒） ===== */
 .movement-bars { display:flex; flex-direction:column; gap:12px; margin:8px 0 4px; }
-.mv-row { display:grid; grid-template-columns:88px 1fr 34px; align-items:center; gap:10px; }
+.mv-row { display:grid; grid-template-columns:132px 1fr 34px; align-items:center; gap:10px; }
 .mv-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.06em; color:var(--muted); }
 .mv-track { height:6px; background:rgba(255,255,255,0.05); border-radius:3px; overflow:hidden; }
 .mv-fill { height:100%; background:var(--accent2); opacity:0.55; border-radius:3px; }
@@ -149,9 +149,9 @@ body::before {
 .overlap-card { border:1px solid var(--border); border-radius:6px; padding:20px 22px; background:var(--surface); }
 .overlap-security { font-size:16px; font-weight:700; color:var(--text); margin-bottom:14px; }
 .overlap-list { display:flex; flex-direction:column; gap:9px; margin-bottom:12px; }
-.overlap-row { display:flex; align-items:center; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:12.5px; }
+.overlap-row { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; row-gap:2px; font-family:'JetBrains Mono',monospace; font-size:12.5px; }
 .overlap-fund { color:var(--text); opacity:0.9; }
-.overlap-q { display:block; color:var(--muted); opacity:0.6; font-size:10.5px; margin-top:1px; }
+.overlap-q { flex-basis:100%; color:var(--muted); opacity:0.6; font-size:10px; }
 .overlap-dir { letter-spacing:0.04em; white-space:nowrap; margin-left:12px; }
 .overlap-dir.new { color:var(--accent2); }
 .overlap-dir.increased { color:var(--accent2); opacity:0.8; }
@@ -169,6 +169,7 @@ body::before {
   font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:700;
   letter-spacing:0.06em; color:var(--violet); text-transform:uppercase;
 }
+.pr-meta { font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--muted); opacity:0.75; letter-spacing:0.02em; }
 .pr-detail { font-size:13px; color:var(--text); opacity:0.85; line-height:1.6; }
 .pr-detail .sep { color:var(--muted); opacity:0.35; margin:0 7px; }
 .pr-sim { color:var(--violet); font-weight:700; }
@@ -219,7 +220,7 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
     <div class="overview-grid" id="overview-grid">
       <div class="ov-stat primary"><div class="ov-num">—</div><div class="ov-label">CAPITAL MOVERS</div></div>
       <div class="ov-stat primary pattern"><div class="ov-num">—</div><div class="ov-label">PATTERN FOUND</div></div>
-      <div class="ov-stat"><div class="ov-num">—</div><div class="ov-label">NEW POSITIONS</div></div>
+      <div class="ov-stat"><div class="ov-num">—</div><div class="ov-label">NEWLY REPORTED HOLDINGS</div></div>
       <div class="ov-stat"><div class="ov-num">—</div><div class="ov-label">OVERLAPPING SECURITIES</div></div>
     </div>
     <div class="overview-caption" id="overview-caption"></div>
@@ -239,6 +240,7 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
 
   <div id="movement-section" style="display:none;">
     <div class="section-label">CAPITAL MOVEMENT</div>
+    <p class="section-sub">保有評価額の増減です。株数の増減を示すものではありません。</p>
     <div class="movement-bars" id="movement-bars"></div>
   </div>
 
@@ -260,10 +262,10 @@ footer { border-top:1px solid var(--border); padding:20px 0 26px; text-align:cen
 <script>
 // ===== 表示ラベル（事実の名称そのもの。評価語は含まない） =====
 const TYPE_LABELS = {
-  new: "New Position",
-  increased: "Increased",
-  decreased: "Decreased",
-  exited: "Exited",
+  new: "Newly Reported Holding",
+  increased: "Value Increased",
+  decreased: "Value Decreased",
+  exited: "No Longer Reported",
 };
 
 // 主体の記録を開いたとき、最初に表示する行数と、「さらに表示」で追加する行数。
@@ -271,12 +273,6 @@ const TYPE_LABELS = {
 // 一度に大量のDOMを作らないための表示上の分割であり、最後まで開ける。
 const INITIAL_ROWS = 30;
 const ROWS_STEP = 50;
-
-function filingDateToQuarterLabel(filingDate) {
-  const [y, m] = filingDate.split("-");
-  const q = Math.floor((parseInt(m, 10) - 1) / 3) + 1;
-  return `${y} Q${q}`;
-}
 
 async function loadObserverLog() {
   const container = document.getElementById("log-container");
@@ -366,7 +362,8 @@ function renderOverview(fundCount, entries, overlap, patternMatches) {
   const caption = document.getElementById("overview-caption");
   caption.textContent =
     "Counts use each Capital Mover's latest filing; filing dates differ by entity. " +
-    "OVERLAPPING SECURITIES: securities recorded in the latest filings of 2 or more Capital Movers (direction not compared).";
+    "OVERLAPPING SECURITIES: securities recorded in the latest filings of 2 or more Capital Movers (direction not compared). " +
+    "Dates are filing dates (FILED); the reporting period is not stored in the source data and is not shown.";
 
   document.getElementById("overview-section").style.display = "";
 }
@@ -381,10 +378,10 @@ function renderMovementBars(entries) {
   }
   const total = counts.new + counts.increased + counts.decreased || 1;
   const rows = [
-    ["NEW", "new", counts.new],
-    ["INCREASED", "increased", counts.increased],
-    ["DECREASED", "decreased", counts.decreased],
-    ["EXITED", "exited", counts.exited],
+    ["NEWLY REPORTED", "new", counts.new],
+    ["VALUE INCREASED", "increased", counts.increased],
+    ["VALUE DECREASED", "decreased", counts.decreased],
+    ["NO LONGER REPORTED", "exited", counts.exited],
   ];
   const maxCount = Math.max(counts.new, counts.increased, counts.decreased, counts.exited, 1);
 
@@ -434,8 +431,9 @@ function renderOverlap(overlap) {
   }
   const rows = best.funds.map(f => `
     <div class="overlap-row">
-      <span class="overlap-fund">${escapeHtml(f.fund_name)}<span class="overlap-q">${filingDateToQuarterLabel(f.filing_date)}</span></span>
+      <span class="overlap-fund">${escapeHtml(f.fund_name)}</span>
       <span class="overlap-dir ${f.type}">${TYPE_LABELS[f.type] || f.type}</span>
+      <span class="overlap-q">FILED: ${f.filing_date}</span>
     </div>
   `).join("");
 
@@ -492,13 +490,14 @@ function renderPatternFound(matches) {
   // ただし大型カードではなく、1行ずつのコンパクトな一覧にする。
   const rows = matches.map(m => {
     const ev = m.most_similar_event;
-    const periodLabel = filingDateToQuarterLabel(ev.before_filing_date || ev.after_filing_date || "");
+    const patternFiled = ev.before_filing_date || ev.after_filing_date || "";
     const eventLabel = PATTERN_EVENT_LABELS[ev.event_id] || ev.event_label;
     return `
       <div class="pattern-row">
         <span class="pr-mover">${escapeHtml(m.fundName)}</span>
+        <div class="pr-meta">FILED: ${patternFiled || "—"}</div>
         <div class="pr-detail">
-          ${periodLabel}<span class="sep">·</span><span class="pr-sim">${m.similarity_pct}%</span> similarity<span class="sep">·</span>${escapeHtml(eventLabel)}
+          <span class="pr-sim">${m.similarity_pct}%</span> similarity<span class="sep">·</span>${escapeHtml(eventLabel)}
         </div>
       </div>
     `;
@@ -525,10 +524,9 @@ function changeRowsHtml(changes, from, to) {
 
 function renderLog(entries) {
   const container = document.getElementById("log-container");
-  let html = `<div class="section-label">OBSERVATIONS — 最新四半期 · ${entries.length}主体</div>`;
+  let html = `<div class="section-label">OBSERVATIONS — 各主体の最新の提出 · ${entries.length}主体</div>`;
 
   entries.forEach((entry, i) => {
-    const quarterLabel = filingDateToQuarterLabel(entry.filing_date);
     const counts = { new: 0, increased: 0, decreased: 0, exited: 0 };
     for (const c of entry.changes) if (counts[c.type] !== undefined) counts[c.type]++;
     const countParts = ["new", "increased", "decreased", "exited"]
@@ -549,7 +547,7 @@ function renderLog(entries) {
         <button type="button" class="log-toggle" data-index="${i}" aria-expanded="false" aria-controls="log-body-${i}">
           <span class="lt-head">
             <span class="log-fund-name">${escapeHtml(entry.fund_name)}</span>
-            <span class="log-quarter">${quarterLabel} — ${entry.filing_date}</span>
+            <span class="log-quarter">FILED: ${entry.filing_date}</span>
           </span>
           <span class="lt-counts"><span class="cnt-total">${entry.changes.length}件</span>${countParts}</span>
           <span class="lt-chevron">詳細<span class="arrow" aria-hidden="true">▾</span></span>
